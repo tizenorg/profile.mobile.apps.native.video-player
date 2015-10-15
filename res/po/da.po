@@ -1,0 +1,390 @@
+msgid "IDS_VIDEO_OPT_DOWNLOAD"
+msgstr "Download"
+
+msgid "IDS_VIDEO_POP_1_FOLDER_WILL_BE_DOWNLOADED"
+msgstr "Der vil blive downloadet 1 mappe."
+
+msgid "IDS_VIDEO_POP_1_VIDEO_WILL_BE_DOWNLOADED"
+msgstr "Der vil blive downloadet 1 video."
+
+msgid "IDS_VIDEO_POP_ALL_FOLDERS_WILL_BE_DOWNLOADED"
+msgstr "Alle mapper vil blive downloadet."
+
+msgid "IDS_VIDEO_POP_ALL_VIDEOS_WILL_BE_DOWNLOADED"
+msgstr "Alle videoer vil blive downloadet."
+
+msgid "IDS_VIDEO_POP_PD_FOLDERS_WILL_BE_DOWNLOADED"
+msgstr "Der vil blive downloadet %d mapper."
+
+msgid "IDS_VIDEO_POP_PD_VIDEOS_WILL_BE_DOWNLOADED"
+msgstr "Der vil blive downloadet %d videoer."
+
+msgid "IDS_VIDEO_TPOP_MOBILE_DATA_TURNED_OFF_CONNECT_TO_WI_FI_NETWORK_INSTEAD_OR_TURN_ON_MOBILE_DATA_AND_TRY_AGAIN"
+msgstr "Mobile data er slået fra. Opret forbindelse til et Wi-Fi-netværk i stedet, eller slå Mobile data til, og prøv igen."
+
+msgid "IDS_GALLERY_OPT_PRIVATE_M_CONTENT"
+msgstr "Privat"
+
+msgid "IDS_VIDEO_BODY_B"
+msgstr "B"
+
+msgid "IDS_VIDEO_BODY_GB"
+msgstr "GB"
+
+msgid "IDS_VIDEO_BODY_KB"
+msgstr "KB"
+
+msgid "IDS_VIDEO_BODY_LOCATION"
+msgstr "Placering"
+
+msgid "IDS_VIDEO_BODY_MB"
+msgstr "MB"
+
+msgid "IDS_VIDEO_BODY_UNKNOWN"
+msgstr "Ukendt"
+
+msgid "IDS_VIDEO_BUTTON_OK"
+msgstr "OK"
+
+msgid "IDS_VIDEO_HEADER_1_FOLDER"
+msgstr "1 mappe"
+
+msgid "IDS_VIDEO_HEADER_1_VIDEO"
+msgstr "1 video"
+
+msgid "IDS_VIDEO_HEADER_ALL"
+msgstr "Alle"
+
+msgid "IDS_VIDEO_HEADER_FROM_DEVICE"
+msgstr "Fra enhed"
+
+msgid "IDS_VIDEO_HEADER_FROM_DROPBOX"
+msgstr "Fra Dropbox"
+
+msgid "IDS_VIDEO_HEADER_LAST_MODIFIED_M_DATE"
+msgstr "Sidst ændret"
+
+msgid "IDS_VIDEO_OPT_CONTENT_TO_DISPLAY"
+msgstr "Indhold, du vil vise"
+
+msgid "IDS_VIDEO_OPT_SEARCH"
+msgstr "Søg"
+
+msgid "IDS_VIDEO_OPT_SHARE"
+msgstr "Del"
+
+msgid "IDS_VIDEO_POP_1_FOLDER_WILL_BE_DELETED"
+msgstr "Der vil blive slettet 1 mappe."
+
+msgid "IDS_VIDEO_TPOP_DELETING_ING"
+msgstr "Sletter ..."
+
+msgid "IDS_VIDEO_BODY_AFTER_YOU_RECORD_VIDEOS_USING_THE_CAMERA_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Når du har optaget videoer ved hjælp af kameraet, vil de blive vist her."
+
+msgid "IDS_VIDEO_HEADER_PD_VIDEOS"
+msgstr "%d videoer"
+
+msgid "IDS_VIDEO_HEADER_VIDEO"
+msgstr "Videoklip"
+
+msgid "IDS_VIDEO_NPBODY_NO_VIDEOS"
+msgstr "Ingen videoer"
+
+msgid "IDS_VIDEO_OPT_DETAILS"
+msgstr "Detaljer"
+
+msgid "IDS_VIDEO_OPT_FOLDER"
+msgstr "Mappe"
+
+msgid "IDS_VIDEO_OPT_LIST"
+msgstr "Liste"
+
+msgid "IDS_VIDEO_OPT_RECENTLY_ADDED_ABB"
+msgstr "Nyligt tilføjet"
+
+msgid "IDS_VIDEO_OPT_RECENTLY_VIEWED_ABB"
+msgstr "Senest set"
+
+msgid "IDS_VIDEO_OPT_RENAME"
+msgstr "Omdøb"
+
+msgid "IDS_VIDEO_OPT_SIZE"
+msgstr "Størrelse"
+
+msgid "IDS_VIDEO_OPT_SORT_BY"
+msgstr "Sortér efter"
+
+msgid "IDS_VIDEO_OPT_TITLE"
+msgstr "Titel"
+
+msgid "IDS_VIDEO_OPT_TYPE"
+msgstr "Type"
+
+msgid "IDS_VIDEO_OPT_VIEW_AS"
+msgstr "Se som"
+
+msgid "IDS_VIDEO_POP_ALL_VIDEOS_WILL_BE_DELETED"
+msgstr "Alle videoer vil blive slettet."
+
+msgid "IDS_VIDEO_POP_PD_FOLDERS_WILL_BE_DELETED"
+msgstr "%d mapper bliver slettet."
+
+msgid "IDS_VIDEO_POP_PD_VIDEOS_WILL_BE_DELETED"
+msgstr "%d videoer vil blive slettet."
+
+msgid "IDS_VIDEO_POP_THIS_FOLDER_WILL_BE_DELETED"
+msgstr "Denne mappe vil blive slettet."
+
+msgid "IDS_VIDEO_HEADER_PD_FOLDERS"
+msgstr "%d mapper"
+
+msgid "IDS_VIDEO_HEADER_SETTINGS"
+msgstr "Indstillinger"
+
+msgid "IDS_VIDEO_HEADER_UNABLE_TO_PLAY_VIDEO_ABB"
+msgstr "Kan ej afspille video"
+
+msgid "IDS_VIDEO_MBODY_ALIGNMENT"
+msgstr "Justering"
+
+msgid "IDS_VIDEO_MBODY_FONT_SIZE"
+msgstr "Skriftstørrelse"
+
+msgid "IDS_VIDEO_OPT_REPEAT_SETTING_ABB"
+msgstr "Gentag indstilling"
+
+msgid "IDS_VIDEO_OPT_SUBTITLES_HCC_ABB"
+msgstr "Undertekster (CC)"
+
+msgid "IDS_VIDEO_POP_ALL_FOLDERS_WILL_BE_DELETED"
+msgstr "Alle mapper bliver slettet."
+
+msgid "IDS_VIDEO_SBODY_CENTRE_M_STATUS"
+msgstr "Centrer"
+
+msgid "IDS_VIDEO_SBODY_LARGE_M_STATUS"
+msgstr "Stor"
+
+msgid "IDS_VIDEO_SBODY_LEFT_M_STATUS"
+msgstr "Venstre"
+
+msgid "IDS_VIDEO_SBODY_MEDIUM_M_STATUS"
+msgstr "Mellem"
+
+msgid "IDS_VIDEO_SBODY_RIGHT_M_STATUS"
+msgstr "Højre"
+
+msgid "IDS_VIDEO_SBODY_SMALL_M_STATUS"
+msgstr "Lille"
+
+msgid "IDS_VIDEO_TPOP_FILE_NAME_ALREADY_IN_USE"
+msgstr "Filnavn allerede i brug."
+
+msgid "IDS_GALLERY_OPT_REMOVE_FROM_PRIVATE"
+msgstr "Fjern fra Privat"
+
+msgid "IDS_GALLERY_OPT_MOVE_TO_PRIVATE"
+msgstr "Flyt til Privat"
+
+msgid "IDS_IV_POP_ENTRY_IS_EMPTY"
+msgstr "Posten er tom."
+
+msgid "IDS_VPL_OPT_FORMAT"
+msgstr "Format"
+
+msgid "IDS_VPL_BODY_UNABLE_TO_PLAY_VIDEO_DURING_CALL"
+msgstr "Kan ikke afspille videoen under samtale."
+
+msgid "IDS_CLOUD_BODY_DROPBOX_ABB"
+msgstr "Dropbox"
+
+msgid "IDS_VIDEO_POP_THIS_FILE_IS_UNAVAILABLE_WHILE_OFFLINE_CHECK_NETWORK_CONNECTION_AND_TRY_AGAIN"
+msgstr "Denne fil er ikke tilgængelig, mens du er offline. Kontrollér netværksforbindelsen, og prøv igen."
+
+msgid "IDS_VIDEO_POP_THE_SELECTED_ITEM_WILL_BE_MOVED_TO_PS"
+msgstr "Det valgte element vil blive flyttet til %s."
+
+msgid "IDS_VIDEO_POP_THE_SELECTED_ITEMS_WILL_BE_MOVED_TO_PS"
+msgstr "De valgte elementer vil blive flyttet til %s."
+
+msgid "IDS_VIDEO_POP_REMOVING_ING"
+msgstr "Fjerner..."
+
+msgid "IDS_VIDEO_POP_MOVING_ING"
+msgstr "Flytter ..."
+
+msgid "IDS_VIDEO_POP_FAILED_TO_MOVE_TO_PERSONAL_STORAGE"
+msgstr "Kunne ikke flytte til personligt lager."
+
+msgid "IDS_VIDEO_POP_FAILED_TO_MOVE_TO_NORMAL_STORAGE"
+msgstr "Kunne ikke flytte til normalt lager."
+
+msgid "IDS_VIDEO_OPT_MESSAGE_ABB"
+msgstr "Besked"
+
+msgid "IDS_VIDEO_OPT_FOLDERS_ABB"
+msgstr "Mapper"
+
+msgid "IDS_VIDEO_OPT_EMAIL_ABB"
+msgstr "E-mail"
+
+msgid "IDS_VIDEO_OPT_DATE_HMOST_RECENT_ABB"
+msgstr "Dato (nyeste)"
+
+msgid "IDS_VIDEO_HEADER_PD_SELECTED"
+msgstr "%d valgt"
+
+msgid "IDS_VIDEO_HEADER_DELETE_VIDEOS"
+msgstr "Slet videoer"
+
+msgid "IDS_VIDEO_HEADER_DELETE_VIDEO"
+msgstr "Slet videoklip"
+
+msgid "IDS_VIDEO_BUTTON_MOVE_ABB"
+msgstr "Flyt"
+
+msgid "IDS_VIDEO_BODY_LONGITUDE"
+msgstr "Længdegrad"
+
+msgid "IDS_VIDEO_BODY_LATITUDE"
+msgstr "Breddegrad"
+
+msgid "IDS_VIDEO_BODY_AFTER_YOU_RECORD_VIDEOS_USING_THE_CAMERA_VIDEOS_WILL_BE_SHOWN"
+msgstr "Når du har optaget videoer ved hjælp af kameraet, vises videoerne."
+
+msgid "IDS_VIDEO_SK_CANCEL_ABB"
+msgstr "Afbr."
+
+msgid "IDS_VIDEO_OPT_STOP_AFTER_ALL_ABB"
+msgstr "Stop efter alle"
+
+msgid "IDS_VIDEO_OPT_REPEAT_CURRENT_ABB"
+msgstr "Gentag aktuel"
+
+msgid "IDS_VIDEO_OPT_REPEAT_ALL_ABB"
+msgstr "Gentag alle"
+
+msgid "IDS_VIDEO_BODY_RESOLUTION"
+msgstr "Opløsning"
+
+msgid "IDS_VIDEO_BUTTON_DELETE"
+msgstr "Slet"
+
+msgid "IDS_ST_OPT_DELETE_ALL"
+msgstr "Slet alle"
+
+msgid "IDS_VPL_TPOP_ONLY_AUDIO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_AUDIO"
+msgstr "Kun lyddata understøttes af denne fil. Spiller lyd nu."
+
+msgid "IDS_VPL_TPOP_ONLY_VIDEO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_VIDEO"
+msgstr "Kun videodata understøttes af denne fil. Spiller video nu."
+
+msgid "IDS_MUSIC_OPT_RENAME"
+msgstr "Omdøb"
+
+msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
+msgstr "Høretelefoner"
+
+msgid "IDS_VIDEO_BUTTON_DOWNLOAD"
+msgstr "Download"
+
+msgid "IDS_TPLATFORM_BODY_OFF"
+msgstr "Fra"
+
+msgid "IDS_TPLATFORM_BODY_ON"
+msgstr "Til"
+
+msgid "IDS_VIDEO_POP_1_VIDEO_WILL_BE_DELETED"
+msgstr "1 video bliver slettet."
+
+msgid "IDS_SWALL_HEADER_INVALID_CHARACTER"
+msgstr "Ugyldigt tegn"
+
+msgid "IDS_VIDEO_BODY_NO_SEARCH_RESULTS"
+msgstr "Ingen søgeresultater"
+
+msgid "IDS_GALLERY_HEADER_SELECT"
+msgstr "Vælg"
+
+msgid "IDS_VIDEO_BODY_LAST_MODIFIED_M_DATE_ABB"
+msgstr "Sidst ændret"
+
+msgid "IDS_VIDEO_BUTTON_DONE"
+msgstr "Udført"
+
+msgid "IDS_VIDEO_HEADER_DATE"
+msgstr "Dato"
+
+msgid "IDS_VIDEO_HEADER_LATITUDE"
+msgstr "Breddegrad"
+
+msgid "IDS_VIDEO_OPT_NAME"
+msgstr "Navn"
+
+msgid "IDS_VIDEO_OPT_NAME_HA_Z_ABB"
+msgstr "Navn (A-Z)"
+
+msgid "IDS_VIDEO_OPT_VIDEOS"
+msgstr "Video"
+
+msgid "IDS_VIDEO_TPOP_MAXIMUM_NUMBER_OF_ATTACHMENTS_HPD_EXCEEDED"
+msgstr "Det maksimale antal vedhæftede filer (%d) er overskredet."
+
+msgid "IDS_VIDEO_HEADER_SELECT_ALL"
+msgstr "Vælg alle"
+
+msgid "IDS_VIDEO_SBODY_DEVICE_STORAGE"
+msgstr "Enhedslager"
+
+msgid "IDS_VIDEO_SBODY_SD_CARD"
+msgstr "SD-kort"
+
+msgid "IDS_VIDEO_OPT_SHARE_VIA"
+msgstr "Del via"
+
+msgid "IDS_VIDEO_POP_A_NETWORK_ERROR_HAS_OCCURRED_TRY_AGAIN"
+msgstr "Der opstod en netværksfejl. Prøv igen."
+
+msgid "IDS_VPL_OPT_AUTO_PLAY_NEXT_ABB"
+msgstr "Autospil næste"
+
+msgid "IDS_VPL_POP_PROCESSING_ING"
+msgstr "Behandler ..."
+
+msgid "IDS_MEMO_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Det maksimale antal tegn er nået."
+
+msgid "IDS_MUSIC_OPT_DELETE"
+msgstr "Slet"
+
+msgid "IDS_MUSIC_OPT_DELETE_ALL"
+msgstr "Slet alle"
+
+msgid "IDS_PB_BODY_NO_SEARCH_RESULT"
+msgstr "Intet søgeresultat"
+
+msgid "IDS_VIDEO_HEADER_SELECT_ITEM"
+msgstr "Vælg element"
+
+msgid "IDS_VIDEO_HEADER_SELECT_ITEMS"
+msgstr "Vælg elementer"
+
+msgid "IDS_CLOCK_BUTTON_CANCEL"
+msgstr "Annullér"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "UDFØRT"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "ANNULLER"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DELETE_ABB"
+msgstr "SLET"
+
+msgid "IDS_TPLATFORM_MBODY_STORAGE_LOCATION"
+msgstr "Lagerplacering"
+
+msgid "IDS_GALLERY_HEADER_SELECT_VIDEO"
+msgstr "Vælg video"
+

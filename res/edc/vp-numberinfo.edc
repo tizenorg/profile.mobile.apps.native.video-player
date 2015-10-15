@@ -1,0 +1,689 @@
+/*
+* Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+#define NUMBER_INFO_BACKGROUND_COLOR_INC			189 187 181 255
+#define NUMBER_INFO_TEXT_COLOR_INC					77 77 77 255//248 246 239 255
+#define NUMBER_INFO_VER_PADDING_INC 				50
+#define NUMBER_INFO_LEFT_PADDING_INC 				16
+#define NUMBER_INFO_TEXT_FONT_SIZE_INC				30
+#define GROUP_INDEX_HEIGHT					51//28
+#define GROUP_INDEX_PADDING_H					7
+#define GROUP_INDEX_PADDING_W					15
+
+#define SELECT_ALL_PART_H										84
+#define SELECT_ALL_PART_PADDING_L                               15
+#define SELECT_ALL_PART_PADDING_R                               15
+#define SELECT_ALL_TXT_PADDING_R                               	15
+#define SELECT_ALL_ICON_SIZE                               		40
+#define SELECT_ALL_PART_PADDING_T                               0
+#define SELECT_ALL_PART_PADDING_B                               0
+#define SELECT_ALL_PART_INDEX_H                               	1
+
+
+sounds {
+	sample {
+		name: "button-pressed" RAW;
+		source: "button-pressed.wav";
+	}
+}
+
+group {
+	name: "count_info_groupindex";
+
+	parts {
+		part {
+			name: "bg";
+			type: RECT;
+			scale: 1;
+			mouse_events: 0;
+			description {
+				state: "default" 0.0;
+				min: 0 32;
+				max: 480 51;
+				rel1 { relative: 0.0 0.0; }
+				rel2 { relative: 1.0 1.0; }
+				visible: 1;
+				color: 179 179 179 255;
+			}
+		}
+		part {
+			name: "elm.swallow.groupindex";
+			type: SWALLOW;
+			scale: 1;
+			mouse_events: 0;
+			description {
+				state: "default" 0.0;
+				rel1 { relative: 0.0 0.0; to: "bg"; }
+				rel2 { relative: 1.0 1.0; to: "bg"; }
+			}
+		}
+	}
+}
+
+group {
+	name: "count_info";
+
+	parts {
+		part {
+			name: "base";
+			type: RECT;
+			scale: 1;
+			mouse_events: 0;
+			description {
+				state: "default" 0.0;
+				min: 0 GROUP_INDEX_HEIGHT;
+				max: -1 GROUP_INDEX_HEIGHT;
+				align: 0.5 0.0;
+				rel1 { relative: 0.0 0.0; }
+				rel2 { relative: 1.0 0.0; }
+				visible: 1;
+				color: 179 179 179 255;
+			}
+		}
+		part {
+			name: "text.bg";
+			type: RECT;
+			scale : 1;
+			description {
+			   state: "default" 0.0;
+			   //fixed: 0 1;
+			   align: 0.5 0.5;
+			   color: 21 108 148 255;
+			   rel1 { relative: 0.0 0.0; to: "base"; }
+			   rel2 { relative: 1.0 1.0; to: "base"; }
+			}
+		}
+		part { name: "pad.left";
+			type: RECT;
+			scale: 1;
+			mouse_events: 0;
+			description {
+				state: "default" 0.0;
+				min: GROUP_INDEX_PADDING_W 0;
+				max: GROUP_INDEX_PADDING_W -1;
+				fixed: 1 0;
+				align: 0.0 0.5;
+				//rel2.relative: 0.0 1.0;
+				rel1 { relative: 0.0 0.0; to: "text.bg"; }
+				rel2 { relative: 0.0 1.0; to: "text.bg"; }
+				visible: 0;
+			}
+		}
+		part { name: "pad.right";
+			type: RECT;
+			scale: 1;
+			mouse_events: 0;
+			description {
+				state: "default" 0.0;
+				min: GROUP_INDEX_PADDING_W 0;
+				max: GROUP_INDEX_PADDING_W -1;
+				fixed: 1 0;
+				align: 1.0 0.5;
+				//rel1.relative: 1 0;
+				rel1 { relative: 1.0 0.0; to: "text.bg"; }
+				rel2 { relative: 1.0 1.0; to: "text.bg"; }
+				visible: 0;
+			}
+		}
+		part { name: "pad.top";
+			type: RECT;
+			scale: 1;
+			mouse_events: 0;
+			description {
+				state: "default" 0.0;
+				min: 0 GROUP_INDEX_PADDING_H;
+				max: -1 GROUP_INDEX_PADDING_H;
+				fixed: 0 1;
+				align: 0.5 0.0;
+				//rel2.relative: 1.0 0.0;
+				rel1 { relative: 0.0 0.0; to: "text.bg"; }
+				rel2 { relative: 1.0 0.0; to: "text.bg"; }
+				visible: 0;
+			}
+		}
+		part { name: "pad.bottom";
+			type: RECT;
+			scale: 1;
+			mouse_events: 0;
+			description {
+				state: "default" 0.0;
+				min: 0 GROUP_INDEX_PADDING_H;
+				max: -1 GROUP_INDEX_PADDING_H;
+				fixed: 0 1;
+				align: 0.5 1.0;
+				//rel1.relative: 0.0 1.0;
+				rel1 { relative: 0.0 1.0; to: "text.bg"; }
+				rel2 { relative: 1.0 1.0; to: "text.bg"; }
+				visible: 0;
+			}
+		}
+		part {
+			name: "elm.text";
+			type: TEXT;
+			mouse_events: 0;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				align: 0.0 0.0;
+				fixed: 1 0;
+				rel1 {	relative: 1 1;
+						to_x: "pad.left";
+			       		to_y: "pad.top";
+				}
+				rel2 {	relative: 0 0;
+						to_x: "pad.right";
+						to_y: "pad.bottom";
+				}
+				//rel1 { relative: 0.0 0.0; to: "pad.right"; }
+				//rel2 { relative: 1.0 1.0; to: "pad.bottom"; }
+
+				color: 21 108 148 255;
+
+				text {
+					align: 0.0 0.5;
+					min: 0 1;
+					size: 27;
+				}
+			}
+		}
+		part {
+			name: "index.bar";
+			type: RECT;
+			scale : 1;
+			description {
+			   state: "default" 0.0;
+			   min: 0 2;
+			   max: -1 2;
+			   fixed: 0 1;
+			   align: 0.5 1.0;
+			   color: 217 217 217 255;
+			   rel1 { relative: 0.0 1.0; to: "text.bg";}
+			   rel2 { relative: 1.0 1.0; to: "base";}
+			   visible: 1;
+			}
+		}
+	}
+}
+
+
+group {
+	name: "device.count_info";
+
+	parts {
+		part {
+			name: "base";
+			type: RECT;
+			scale: 1;
+			mouse_events: 0;
+			description {
+				state: "default" 0.0;
+				min: 0 76;
+				max: -1 76;
+				align: 0.5 0.0;
+				rel1 { relative: 0.0 0.0; }
+				rel2 { relative: 1.0 0.0; }
+				visible: 0;
+			}
+		}
+		part {
+			name: "text.bg";
+			type: RECT;
+			scale : 1;
+			description {
+			   state: "default" 0.0;
+			   min: 0 72;
+			   max: -1 72;
+			   //fixed: 0 1;
+			   align: 0.5 0.5;
+			   color: 21 108 148 255;
+			   rel1 { relative: 0.0 0.0; to: "base"; }
+			   rel2 { relative: 1.0 1.0; to: "base"; }
+			}
+		}
+		part { name: "pad.left";
+			type: RECT;
+			scale: 1;
+			mouse_events: 0;
+			description {
+				state: "default" 0.0;
+				min: GROUP_INDEX_PADDING_W 0;
+				max: GROUP_INDEX_PADDING_W -1;
+				fixed: 1 0;
+				align: 0.0 0.5;
+				//rel2.relative: 0.0 1.0;
+				rel1 { relative: 0.0 0.0; to: "text.bg"; }
+				rel2 { relative: 0.0 1.0; to: "text.bg"; }
+				visible: 0;
+			}
+		}
+		part { name: "pad.right";
+			type: RECT;
+			scale: 1;
+			mouse_events: 0;
+			description {
+				state: "default" 0.0;
+				min: GROUP_INDEX_PADDING_W 0;
+				max: GROUP_INDEX_PADDING_W -1;
+				fixed: 1 0;
+				align: 1.0 0.5;
+				//rel1.relative: 1 0;
+				rel1 { relative: 1.0 0.0; to: "text.bg"; }
+				rel2 { relative: 1.0 1.0; to: "text.bg"; }
+				visible: 0;
+			}
+		}
+		part { name: "pad.top";
+			type: RECT;
+			scale: 1;
+			mouse_events: 0;
+			description {
+				state: "default" 0.0;
+				min: 0 GROUP_INDEX_PADDING_H;
+				max: -1 GROUP_INDEX_PADDING_H;
+				fixed: 0 1;
+				align: 0.5 0.0;
+				//rel2.relative: 1.0 0.0;
+				rel1 { relative: 0.0 0.0; to: "text.bg"; }
+				rel2 { relative: 1.0 0.0; to: "text.bg"; }
+				visible: 0;
+			}
+		}
+		part { name: "pad.bottom";
+			type: RECT;
+			scale: 1;
+			mouse_events: 0;
+			description {
+				state: "default" 0.0;
+				min: 0 GROUP_INDEX_PADDING_H;
+				max: -1 GROUP_INDEX_PADDING_H;
+				fixed: 0 1;
+				align: 0.5 1.0;
+				//rel1.relative: 0.0 1.0;
+				rel1 { relative: 0.0 1.0; to: "text.bg"; }
+				rel2 { relative: 1.0 1.0; to: "text.bg"; }
+				visible: 0;
+			}
+		}
+		part { name: "pad.icon.top";
+			type: RECT;
+			scale: 1;
+			mouse_events: 0;
+			description {
+				state: "default" 0.0;
+				min: 0 GROUP_INDEX_PADDING_H;
+				max: -1 GROUP_INDEX_PADDING_H;
+				fixed: 0 1;
+				align: 0.5 0.0;
+				//rel2.relative: 1.0 0.0;
+				rel1 { relative: 0.0 0.0; to: "text.bg"; }
+				rel2 { relative: 1.0 0.0; to: "text.bg"; }
+				visible: 0;
+			}
+		}
+		part { name: "pad.icon.bottom";
+			type: RECT;
+			scale: 1;
+			mouse_events: 0;
+			description {
+				state: "default" 0.0;
+				min: 0 GROUP_INDEX_PADDING_H;
+				max: -1 GROUP_INDEX_PADDING_H;
+				fixed: 0 1;
+				align: 0.5 1.0;
+				//rel1.relative: 0.0 1.0;
+				rel1 { relative: 0.0 1.0; to: "text.bg"; }
+				rel2 { relative: 1.0 1.0; to: "text.bg"; }
+				visible: 0;
+			}
+		}
+		part {
+			name: "elm.swallow.bg";
+			type: RECT;
+			mouse_events: 0;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				//min: 63 63;
+				//max: 63 63;
+				fixed: 1 1;
+				align: 1.0 0.0;
+				rel1 {	relative: 0 1;
+						to_x: "pad.right";
+			       		to_y: "pad.icon.top";
+				}
+				rel2 {	relative: 0 0;
+						to_x: "pad.right";
+						to_y: "pad.icon.bottom";
+				}
+				visible: 0;
+			}
+		}
+		part {
+			name: "elm.swallow.icon";
+			type: SWALLOW;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				align: 0.5 0.5;
+				rel1 { relative: 0.0 0.0; to: "elm.swallow.bg"; }
+				rel2 { relative: 1.0 1.0; to: "elm.swallow.bg"; }
+			}
+		}
+		part {
+			name: "elm.swallow.progress";
+			type: SWALLOW;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				align: 0.5 0.5;
+				rel1 { relative: 0.0 0.0; to: "elm.swallow.bg"; }
+				rel2 { relative: 1.0 1.0; to: "elm.swallow.bg"; }
+			}
+		}
+		part {
+			name: "elm.text";
+			type: TEXT;
+			mouse_events: 0;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				align: 0.0 0.0;
+				fixed: 1 0;
+				rel1 {	relative: 1 1;
+						to_x: "pad.left";
+			       		to_y: "pad.top";
+				}
+				rel2 {	relative: 0 0;
+						to_x: "elm.swallow.bg";
+						to_y: "pad.bottom";
+				}
+
+				color: 21 108 148 255;
+
+				text {
+					align: 0.0 0.5;
+					min: 0 1;
+					size: 27;
+				}
+			}
+		}
+		part {
+			name: "index.bar";
+			type: RECT;
+			scale : 1;
+			description {
+			   state: "default" 0.0;
+			   min: 0 4;
+			   max: -1 4;
+			   fixed: 0 1;
+			   align: 0.5 1.0;
+			   color: 217 217 217 255;
+			   rel1 { relative: 0.0 1.0; to: "text.bg";}
+			   rel2 { relative: 1.0 1.0; to: "base";}
+			   visible: 1;
+			}
+		}
+	}
+	programs {
+		program { name: "image_clicked";
+			source: "elm.swallow.icon";
+			signal: "mouse,clicked,1";
+			action: PLAY_SAMPLE "button-pressed" 1.0;
+		}
+	}
+}
+
+group {
+	name: "number_info";
+	parts {
+		part {
+			name: "bg";
+			type: RECT;
+			scale : 1;
+			description {
+			   state: "default" 0.0;
+			   min: 0 NUMBER_INFO_VER_PADDING_INC;
+			   fixed: 0 1;
+			   align: 0.5 0.5;
+//			   color: NUMBER_INFO_BACKGROUND_COLOR_INC;
+			   color: 255 255 255 255;
+			   rel1 { relative: 0.0 0.0; }
+			   rel2 { relative: 1.0 1.0; }
+			}
+		}
+		part { name: "padding_left";
+			scale: 1;
+			mouse_events: 0;
+			description {
+			   state: "default" 0.0;
+			   min: 27 0;
+			   align: 0.0 0.5;
+			   rel1.to: "bg";
+			   rel2 {
+				  to: "bg";
+				  relative: 0.0 1.0;
+			   }
+			   fixed: 1 0;
+			   visible: 0;
+			}
+		 }
+		 part {
+			name: "elm.text";
+			type: TEXT;
+			mouse_events: 0;
+			scale: 1;
+			description {
+			   state: "default" 0.0;
+			   rel1 { relative: 0.0 0.0; to: "bg"; }
+			   rel2 { relative: 1.0 1.0; to: "bg"; }
+//			   color: NUMBER_INFO_TEXT_COLOR_INC;
+			   color: 240 240 240 255;
+			   text {
+				size: 24;
+			   }
+			}
+		}
+	}
+}
+
+group {
+	name: "select.all.layout";
+
+	parts {
+		part {
+			name: "base";
+			type: RECT;
+			scale: 1;
+			mouse_events: 0;
+			description {
+				state: "default" 0.0;
+				min: 0 SELECT_ALL_PART_H;
+				max: -1 SELECT_ALL_PART_H;
+				align: 0.5 0.0;
+				rel1 { relative: 0.0 0.0; }
+				rel2 { relative: 1.0 0.0; }
+				visible: 0;
+			}
+		}
+		part {
+			name: "text.bg";
+			type: RECT;
+			scale : 1;
+			description {
+				state: "default" 0.0;
+				fixed: 0 1;
+				min: 0 (SELECT_ALL_PART_H-SELECT_ALL_PART_INDEX_H);
+				max: -1 (SELECT_ALL_PART_H-SELECT_ALL_PART_INDEX_H);
+				align: 0.5 0.5;
+				color: 255 255 255 255;
+				rel1 { relative: 0.0 0.0; to: "base"; }
+				rel2 { relative: 1.0 1.0; to: "base"; }
+			}
+		}
+		part { name: "pad.left";
+			type: RECT;
+			scale: 1;
+			mouse_events: 0;
+			description {
+				state: "default" 0.0;
+				min: SELECT_ALL_PART_PADDING_L 0;
+				max: SELECT_ALL_PART_PADDING_L -1;
+				fixed: 1 0;
+				align: 0.0 0.5;
+				//rel2.relative: 0.0 1.0;
+				rel1 { relative: 0.0 0.0; to: "text.bg"; }
+				rel2 { relative: 0.0 1.0; to: "text.bg"; }
+				visible: 0;
+			}
+		}
+		part { name: "pad.right";
+			type: RECT;
+			scale: 1;
+			mouse_events: 0;
+			description {
+				state: "default" 0.0;
+				min: SELECT_ALL_PART_PADDING_R 0;
+				max: SELECT_ALL_PART_PADDING_R -1;
+				fixed: 1 0;
+				align: 1.0 0.5;
+				//rel1.relative: 1 0;
+				rel1 { relative: 1.0 0.0; to: "text.bg"; }
+				rel2 { relative: 1.0 1.0; to: "text.bg"; }
+				visible: 0;
+			}
+		}
+		part { name: "pad.top";
+			type: RECT;
+			scale: 1;
+			mouse_events: 0;
+			description {
+				state: "default" 0.0;
+				min: 0 SELECT_ALL_PART_PADDING_T;
+				max: -1 SELECT_ALL_PART_PADDING_T;
+				fixed: 0 1;
+				align: 0.5 0.0;
+				//rel2.relative: 1.0 0.0;
+				rel1 { relative: 0.0 0.0; to: "text.bg"; }
+				rel2 { relative: 1.0 0.0; to: "text.bg"; }
+				visible: 0;
+			}
+		}
+		part { name: "pad.bottom";
+			type: RECT;
+			scale: 1;
+			mouse_events: 0;
+			description {
+				state: "default" 0.0;
+				min: 0 SELECT_ALL_PART_PADDING_B;
+				max: -1 SELECT_ALL_PART_PADDING_B;
+				fixed: 0 1;
+				align: 0.5 1.0;
+				//rel1.relative: 0.0 1.0;
+				rel1 { relative: 0.0 1.0; to: "text.bg"; }
+				rel2 { relative: 1.0 1.0; to: "text.bg"; }
+				visible: 0;
+			}
+		}
+
+		part {
+			name: "elm.swallow.bg";
+			type: RECT;
+			mouse_events: 0;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				min: SELECT_ALL_ICON_SIZE SELECT_ALL_ICON_SIZE;
+				max: SELECT_ALL_ICON_SIZE SELECT_ALL_ICON_SIZE;
+				fixed: 1 1;
+				align: 1.0 0.5;
+				rel1 {	relative: 0 1.0;
+						to_x: "pad.right";
+			       		to_y: "pad.top";
+				}
+				rel2 {	relative: 0 0.0;
+						to_x: "pad.right";
+						to_y: "pad.bottom";
+				}
+				visible: 0;
+			}
+		}
+		part {
+			name: "elm.icon";
+			type: SWALLOW;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				align: 0.5 0.5;
+				rel1 { relative: 0.0 0.0; to: "elm.swallow.bg"; }
+				rel2 { relative: 1.0 1.0; to: "elm.swallow.bg"; }
+			}
+		}
+
+		part {
+			name: "elm.text";
+			type: TEXT;
+			mouse_events: 0;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				align: 0.0 0.5;
+				fixed: 1 0;
+				rel1 {	relative: 1 1;
+						to_x: "pad.left";
+			       		to_y: "pad.top";
+				}
+				rel2 {	relative: 0 0;
+						to_x: "elm.swallow.bg";
+						to_y: "pad.bottom";
+				}
+
+				color: 8 8 8 255;
+
+				text {
+					align: 0.0 0.5;
+					min: 0 1;
+					size: 30;
+				}
+			}
+		}
+
+		part {
+			name: "index.bar";
+			type: RECT;
+			scale : 1;
+			description {
+			   state: "default" 0.0;
+			   min: 0 SELECT_ALL_PART_INDEX_H;
+			   max: -1 SELECT_ALL_PART_INDEX_H;
+			   fixed: 0 1;
+			   align: 0.5 1.0;
+			   color: 217 217 217 255;
+			   rel1 { relative: 0.0 1.0; to: "text.bg";}
+			   rel2 { relative: 1.0 1.0; to: "base";}
+			   visible: 1;
+			}
+		}
+
+	}
+	/*programs {
+		program { name: "image_clicked";
+			source: "elm.icon";
+			signal: "mouse,clicked,1";
+			action: PLAY_SAMPLE "button-pressed" 1.0;
+		}
+	}*/
+}
+

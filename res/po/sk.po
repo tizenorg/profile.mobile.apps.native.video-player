@@ -1,0 +1,390 @@
+msgid "IDS_VIDEO_OPT_DOWNLOAD"
+msgstr "Stiahnuť"
+
+msgid "IDS_VIDEO_POP_1_FOLDER_WILL_BE_DOWNLOADED"
+msgstr "Stiahne sa 1 priečinok."
+
+msgid "IDS_VIDEO_POP_1_VIDEO_WILL_BE_DOWNLOADED"
+msgstr "Stiahne sa 1 video."
+
+msgid "IDS_VIDEO_POP_ALL_FOLDERS_WILL_BE_DOWNLOADED"
+msgstr "Stiahnu sa všetky priečinky."
+
+msgid "IDS_VIDEO_POP_ALL_VIDEOS_WILL_BE_DOWNLOADED"
+msgstr "Stiahnu sa všetky videá."
+
+msgid "IDS_VIDEO_POP_PD_FOLDERS_WILL_BE_DOWNLOADED"
+msgstr "Vykoná sa stiahnutie %d priečinkov."
+
+msgid "IDS_VIDEO_POP_PD_VIDEOS_WILL_BE_DOWNLOADED"
+msgstr "Vykoná sa stiahnutie %d videí."
+
+msgid "IDS_VIDEO_TPOP_MOBILE_DATA_TURNED_OFF_CONNECT_TO_WI_FI_NETWORK_INSTEAD_OR_TURN_ON_MOBILE_DATA_AND_TRY_AGAIN"
+msgstr "Mobilné dátové pripojenie je vypnuté. Pripojte sa namiesto toho k sieti Wi-Fi alebo zapnite mobilné dátové pripojenie a skúste to znova."
+
+msgid "IDS_GALLERY_OPT_PRIVATE_M_CONTENT"
+msgstr "Súkromné"
+
+msgid "IDS_VIDEO_BODY_B"
+msgstr "B"
+
+msgid "IDS_VIDEO_BODY_GB"
+msgstr "GB"
+
+msgid "IDS_VIDEO_BODY_KB"
+msgstr "kB"
+
+msgid "IDS_VIDEO_BODY_LOCATION"
+msgstr "GPS"
+
+msgid "IDS_VIDEO_BODY_MB"
+msgstr "MB"
+
+msgid "IDS_VIDEO_BODY_UNKNOWN"
+msgstr "Neznáme"
+
+msgid "IDS_VIDEO_BUTTON_OK"
+msgstr "OK"
+
+msgid "IDS_VIDEO_HEADER_1_FOLDER"
+msgstr "1 priečinok"
+
+msgid "IDS_VIDEO_HEADER_1_VIDEO"
+msgstr "1 video"
+
+msgid "IDS_VIDEO_HEADER_ALL"
+msgstr "Všetky"
+
+msgid "IDS_VIDEO_HEADER_FROM_DEVICE"
+msgstr "Zo zariadenia"
+
+msgid "IDS_VIDEO_HEADER_FROM_DROPBOX"
+msgstr "Zo služby Dropbox"
+
+msgid "IDS_VIDEO_HEADER_LAST_MODIFIED_M_DATE"
+msgstr "Naposledy upravené"
+
+msgid "IDS_VIDEO_OPT_CONTENT_TO_DISPLAY"
+msgstr "Obsah na zobrazenie"
+
+msgid "IDS_VIDEO_OPT_SEARCH"
+msgstr "Vyhľadávanie"
+
+msgid "IDS_VIDEO_OPT_SHARE"
+msgstr "Zdieľať"
+
+msgid "IDS_VIDEO_POP_1_FOLDER_WILL_BE_DELETED"
+msgstr "Odstráni sa 1 priečinok."
+
+msgid "IDS_VIDEO_TPOP_DELETING_ING"
+msgstr "Odstraňuje sa..."
+
+msgid "IDS_VIDEO_BODY_AFTER_YOU_RECORD_VIDEOS_USING_THE_CAMERA_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Po nahratí videí použitím fotoaparátu sa zobrazia tu."
+
+msgid "IDS_VIDEO_HEADER_PD_VIDEOS"
+msgstr "Počet videí: %d"
+
+msgid "IDS_VIDEO_HEADER_VIDEO"
+msgstr "Video"
+
+msgid "IDS_VIDEO_NPBODY_NO_VIDEOS"
+msgstr "Žiadne videá"
+
+msgid "IDS_VIDEO_OPT_DETAILS"
+msgstr "Podrobnosti"
+
+msgid "IDS_VIDEO_OPT_FOLDER"
+msgstr "Priečinok"
+
+msgid "IDS_VIDEO_OPT_LIST"
+msgstr "Zoznam"
+
+msgid "IDS_VIDEO_OPT_RECENTLY_ADDED_ABB"
+msgstr "Naposl. pridané"
+
+msgid "IDS_VIDEO_OPT_RECENTLY_VIEWED_ABB"
+msgstr "Nedávno zobrazené"
+
+msgid "IDS_VIDEO_OPT_RENAME"
+msgstr "Premenovať"
+
+msgid "IDS_VIDEO_OPT_SIZE"
+msgstr "Veľkosť"
+
+msgid "IDS_VIDEO_OPT_SORT_BY"
+msgstr "Zoradiť podľa"
+
+msgid "IDS_VIDEO_OPT_TITLE"
+msgstr "Názov"
+
+msgid "IDS_VIDEO_OPT_TYPE"
+msgstr "Typ"
+
+msgid "IDS_VIDEO_OPT_VIEW_AS"
+msgstr "Zobraziť ako"
+
+msgid "IDS_VIDEO_POP_ALL_VIDEOS_WILL_BE_DELETED"
+msgstr "Všetky videá sa odstránia."
+
+msgid "IDS_VIDEO_POP_PD_FOLDERS_WILL_BE_DELETED"
+msgstr "%d priečinky sa odstránia."
+
+msgid "IDS_VIDEO_POP_PD_VIDEOS_WILL_BE_DELETED"
+msgstr "Odstránia sa videá v počte %d."
+
+msgid "IDS_VIDEO_POP_THIS_FOLDER_WILL_BE_DELETED"
+msgstr "Tento priečinok sa odstráni."
+
+msgid "IDS_VIDEO_HEADER_PD_FOLDERS"
+msgstr "Počet priečinkov: %d"
+
+msgid "IDS_VIDEO_HEADER_SETTINGS"
+msgstr "Nastavenia"
+
+msgid "IDS_VIDEO_HEADER_UNABLE_TO_PLAY_VIDEO_ABB"
+msgstr "Nedá sa prehrať video"
+
+msgid "IDS_VIDEO_MBODY_ALIGNMENT"
+msgstr "Zarovnanie"
+
+msgid "IDS_VIDEO_MBODY_FONT_SIZE"
+msgstr "Veľkosť písma"
+
+msgid "IDS_VIDEO_OPT_REPEAT_SETTING_ABB"
+msgstr "Nastavenie opakovania"
+
+msgid "IDS_VIDEO_OPT_SUBTITLES_HCC_ABB"
+msgstr "Titulky (skryté)"
+
+msgid "IDS_VIDEO_POP_ALL_FOLDERS_WILL_BE_DELETED"
+msgstr "Všetky priečinky sa odstránia."
+
+msgid "IDS_VIDEO_SBODY_CENTRE_M_STATUS"
+msgstr "Stred"
+
+msgid "IDS_VIDEO_SBODY_LARGE_M_STATUS"
+msgstr "Veľké"
+
+msgid "IDS_VIDEO_SBODY_LEFT_M_STATUS"
+msgstr "Vľavo"
+
+msgid "IDS_VIDEO_SBODY_MEDIUM_M_STATUS"
+msgstr "Stredné"
+
+msgid "IDS_VIDEO_SBODY_RIGHT_M_STATUS"
+msgstr "Vpravo"
+
+msgid "IDS_VIDEO_SBODY_SMALL_M_STATUS"
+msgstr "Malé"
+
+msgid "IDS_VIDEO_TPOP_FILE_NAME_ALREADY_IN_USE"
+msgstr "Názov súboru sa už používa."
+
+msgid "IDS_GALLERY_OPT_REMOVE_FROM_PRIVATE"
+msgstr "Odstrániť z priečinka Súkromné"
+
+msgid "IDS_GALLERY_OPT_MOVE_TO_PRIVATE"
+msgstr "Premiestniť do priečinka Súkromné"
+
+msgid "IDS_IV_POP_ENTRY_IS_EMPTY"
+msgstr "Prázdna položka."
+
+msgid "IDS_VPL_OPT_FORMAT"
+msgstr "Formát"
+
+msgid "IDS_VPL_BODY_UNABLE_TO_PLAY_VIDEO_DURING_CALL"
+msgstr "Počas hovoru sa nedá prehrávať video."
+
+msgid "IDS_CLOUD_BODY_DROPBOX_ABB"
+msgstr "Dropbox"
+
+msgid "IDS_VIDEO_POP_THIS_FILE_IS_UNAVAILABLE_WHILE_OFFLINE_CHECK_NETWORK_CONNECTION_AND_TRY_AGAIN"
+msgstr "Tento súbor nie je k dispozícii v režime offline. Skontrolujte sieťové pripojenie a skúste to znova."
+
+msgid "IDS_VIDEO_POP_THE_SELECTED_ITEM_WILL_BE_MOVED_TO_PS"
+msgstr "Vybratá položka sa premiestni do priečinka %s."
+
+msgid "IDS_VIDEO_POP_THE_SELECTED_ITEMS_WILL_BE_MOVED_TO_PS"
+msgstr "Vybraté položky sa premiestnia do priečinka %s."
+
+msgid "IDS_VIDEO_POP_REMOVING_ING"
+msgstr "Odstraňovanie..."
+
+msgid "IDS_VIDEO_POP_MOVING_ING"
+msgstr "Presúvanie..."
+
+msgid "IDS_VIDEO_POP_FAILED_TO_MOVE_TO_PERSONAL_STORAGE"
+msgstr "Nepodarilo sa premiestniť do osobného úložného priestoru."
+
+msgid "IDS_VIDEO_POP_FAILED_TO_MOVE_TO_NORMAL_STORAGE"
+msgstr "Nepodarilo sa premiestniť do normálneho úložného priestoru."
+
+msgid "IDS_VIDEO_OPT_MESSAGE_ABB"
+msgstr "Správa"
+
+msgid "IDS_VIDEO_OPT_FOLDERS_ABB"
+msgstr "Priečinky"
+
+msgid "IDS_VIDEO_OPT_EMAIL_ABB"
+msgstr "E-mail"
+
+msgid "IDS_VIDEO_OPT_DATE_HMOST_RECENT_ABB"
+msgstr "Dátum (najnovšie)"
+
+msgid "IDS_VIDEO_HEADER_PD_SELECTED"
+msgstr "Vybraté: %d"
+
+msgid "IDS_VIDEO_HEADER_DELETE_VIDEOS"
+msgstr "Odstrániť videá"
+
+msgid "IDS_VIDEO_HEADER_DELETE_VIDEO"
+msgstr "Odstrániť video"
+
+msgid "IDS_VIDEO_BUTTON_MOVE_ABB"
+msgstr "Premiestniť"
+
+msgid "IDS_VIDEO_BODY_LONGITUDE"
+msgstr "Zemepisná dĺžka"
+
+msgid "IDS_VIDEO_BODY_LATITUDE"
+msgstr "Zemepisná šírka"
+
+msgid "IDS_VIDEO_BODY_AFTER_YOU_RECORD_VIDEOS_USING_THE_CAMERA_VIDEOS_WILL_BE_SHOWN"
+msgstr "Po nahratí videí použitím fotoaparátu sa zobrazia videá."
+
+msgid "IDS_VIDEO_SK_CANCEL_ABB"
+msgstr "Zruš."
+
+msgid "IDS_VIDEO_OPT_STOP_AFTER_ALL_ABB"
+msgstr "Zastaviť po všetkých"
+
+msgid "IDS_VIDEO_OPT_REPEAT_CURRENT_ABB"
+msgstr "Opakovať aktuálne"
+
+msgid "IDS_VIDEO_OPT_REPEAT_ALL_ABB"
+msgstr "Opakovať všetko"
+
+msgid "IDS_VIDEO_BODY_RESOLUTION"
+msgstr "Rozlíšenie"
+
+msgid "IDS_VIDEO_BUTTON_DELETE"
+msgstr "Vymaz."
+
+msgid "IDS_ST_OPT_DELETE_ALL"
+msgstr "Odstrániť všetko"
+
+msgid "IDS_VPL_TPOP_ONLY_AUDIO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_AUDIO"
+msgstr "Tento súbor podporuje iba zvukové údaje. Teraz sa prehráva zvuk."
+
+msgid "IDS_VPL_TPOP_ONLY_VIDEO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_VIDEO"
+msgstr "Tento súbor podporuje iba obrazové údaje. Teraz sa prehráva video."
+
+msgid "IDS_MUSIC_OPT_RENAME"
+msgstr "Premenovať"
+
+msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
+msgstr "Slúchadlá"
+
+msgid "IDS_VIDEO_BUTTON_DOWNLOAD"
+msgstr "Stiahnuť"
+
+msgid "IDS_TPLATFORM_BODY_OFF"
+msgstr "Vyp."
+
+msgid "IDS_TPLATFORM_BODY_ON"
+msgstr "Zap."
+
+msgid "IDS_VIDEO_POP_1_VIDEO_WILL_BE_DELETED"
+msgstr "1 video sa odstráni."
+
+msgid "IDS_SWALL_HEADER_INVALID_CHARACTER"
+msgstr "Neplatný znak"
+
+msgid "IDS_VIDEO_BODY_NO_SEARCH_RESULTS"
+msgstr "Žiadne výsledky vyhľadávania"
+
+msgid "IDS_GALLERY_HEADER_SELECT"
+msgstr "Vyberte"
+
+msgid "IDS_VIDEO_BODY_LAST_MODIFIED_M_DATE_ABB"
+msgstr "Naposledy upravené"
+
+msgid "IDS_VIDEO_BUTTON_DONE"
+msgstr "Hotovo"
+
+msgid "IDS_VIDEO_HEADER_DATE"
+msgstr "Dátum"
+
+msgid "IDS_VIDEO_HEADER_LATITUDE"
+msgstr "Zemepisná šírka"
+
+msgid "IDS_VIDEO_OPT_NAME"
+msgstr "Meno"
+
+msgid "IDS_VIDEO_OPT_NAME_HA_Z_ABB"
+msgstr "Názov (A – Z)"
+
+msgid "IDS_VIDEO_OPT_VIDEOS"
+msgstr "Videá"
+
+msgid "IDS_VIDEO_TPOP_MAXIMUM_NUMBER_OF_ATTACHMENTS_HPD_EXCEEDED"
+msgstr "Prekročil sa maximálny počet príloh (%d)."
+
+msgid "IDS_VIDEO_HEADER_SELECT_ALL"
+msgstr "Vybrať všetko"
+
+msgid "IDS_VIDEO_SBODY_DEVICE_STORAGE"
+msgstr "Úložisko zariadenia"
+
+msgid "IDS_VIDEO_SBODY_SD_CARD"
+msgstr "Karta SD"
+
+msgid "IDS_VIDEO_OPT_SHARE_VIA"
+msgstr "Zdieľať cez"
+
+msgid "IDS_VIDEO_POP_A_NETWORK_ERROR_HAS_OCCURRED_TRY_AGAIN"
+msgstr "Vyskytla sa chyba siete. Skúste to znova."
+
+msgid "IDS_VPL_OPT_AUTO_PLAY_NEXT_ABB"
+msgstr "Aut. preh. ďalšiu"
+
+msgid "IDS_VPL_POP_PROCESSING_ING"
+msgstr "Prebieha spracovanie..."
+
+msgid "IDS_MEMO_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Dosiahol sa maximálny počet znakov."
+
+msgid "IDS_MUSIC_OPT_DELETE"
+msgstr "Odstrániť"
+
+msgid "IDS_MUSIC_OPT_DELETE_ALL"
+msgstr "Odstrániť všetko"
+
+msgid "IDS_PB_BODY_NO_SEARCH_RESULT"
+msgstr "Žiadny výsledok hľadania"
+
+msgid "IDS_VIDEO_HEADER_SELECT_ITEM"
+msgstr "Vybrať položku"
+
+msgid "IDS_VIDEO_HEADER_SELECT_ITEMS"
+msgstr "Vybrať položky"
+
+msgid "IDS_CLOCK_BUTTON_CANCEL"
+msgstr "Zrušiť"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "HOTOVO"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "ZRUŠIŤ"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DELETE_ABB"
+msgstr "ODSTRÁNIŤ"
+
+msgid "IDS_TPLATFORM_MBODY_STORAGE_LOCATION"
+msgstr "Umiest. úlož. priestoru"
+
+msgid "IDS_GALLERY_HEADER_SELECT_VIDEO"
+msgstr "Vyberte video"
+

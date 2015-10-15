@@ -1,0 +1,16 @@
+<manifest>
+        <define>
+              <domain name="org.tizen.videos" />
+        </define>
+        <assign>
+		<filesystem path="/usr/share/icons/default/small/org.tizen.videos.png" label="_" />
+		<filesystem path="/usr/ug/lib/*" label="_" />
+		<filesystem path="/usr/ug/res/*" label="_" />
+		<filesystem path="/usr/ug/bin/*" label="_" exec_label="_" />
+		<filesystem path="/etc/nsswitch.conf" label="_" />
+		<filesystem path="/opt/usr/apps/org.tizen.videos/data/.video-store.db*" label="_"/>
+	</assign>
+	<request>
+		<domain name="org.tizen.videos" />
+	</request>
+</manifest>

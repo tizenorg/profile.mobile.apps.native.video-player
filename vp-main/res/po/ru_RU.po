@@ -1,0 +1,489 @@
+msgid "IDS_VIDEO_OPT_BRIGHTNESS"
+msgstr "Яркость"
+
+msgid "IDS_VIDEO_OPT_MUSIC_M_SOUNDALIVE"
+msgstr "Музыка"
+
+msgid "IDS_VIDEO_OPT_VOICES_M_PERSON"
+msgstr "Голоса"
+
+msgid "IDS_VIDEO_BODY_B"
+msgstr "б"
+
+msgid "IDS_VIDEO_BODY_GB"
+msgstr "Гб"
+
+msgid "IDS_VIDEO_BODY_KB"
+msgstr "КБ"
+
+msgid "IDS_VIDEO_BODY_LOCATION"
+msgstr "Местоположение"
+
+msgid "IDS_VIDEO_BODY_MB"
+msgstr "МБ"
+
+msgid "IDS_VIDEO_BUTTON_OK"
+msgstr "ОК"
+
+msgid "IDS_VIDEO_HEADER_LAST_MODIFIED_M_DATE"
+msgstr "Последнее изменение"
+
+msgid "IDS_VIDEO_OPT_SHARE"
+msgstr "Отправить"
+
+msgid "IDS_VIDEO_HEADER_CANNOT_PLAY_VIDEO_ABB"
+msgstr "Невозможно воспроизвести видео"
+
+msgid "IDS_VIDEO_POP_AN_ERROR_OCCURRED_WITH_THE_SUBTITLES"
+msgstr "Возникла ошибка с субтитрами."
+
+msgid "IDS_VIDEO_POP_THE_FILE_IS_CORRUPTED_OR_THE_SD_CARD_HAS_BEEN_REMOVED"
+msgstr "Файл поврежден или карта памяти SD извлечена."
+
+msgid "IDS_VIDEO_OPT_DETAILS"
+msgstr "Свойства"
+
+msgid "IDS_VIDEO_OPT_TITLE"
+msgstr "Название"
+
+msgid "IDS_VIDEO_POP_THIS_VIDEO_WILL_BE_DELETED"
+msgstr "Это видео будет удалено."
+
+msgid "IDS_VIDEO_HEADER_SETTINGS"
+msgstr "Настройки"
+
+msgid "IDS_VIDEO_HEADER_UNABLE_TO_PLAY_VIDEO_ABB"
+msgstr "Невозможно воспроизвести видео"
+
+msgid "IDS_VIDEO_MBODY_ALIGNMENT"
+msgstr "Выравнивание"
+
+msgid "IDS_VIDEO_MBODY_FONT_SIZE"
+msgstr "Размер шрифта"
+
+msgid "IDS_VIDEO_OPT_REPEAT_SETTING_ABB"
+msgstr "Параметры повторения"
+
+msgid "IDS_VIDEO_OPT_SUBTITLES_HCC_ABB"
+msgstr "Субтитры"
+
+msgid "IDS_VIDEO_SBODY_CENTRE_M_STATUS"
+msgstr "По центру"
+
+msgid "IDS_VIDEO_SBODY_LARGE_M_STATUS"
+msgstr "Крупный"
+
+msgid "IDS_VIDEO_SBODY_LEFT_M_STATUS"
+msgstr "Слева"
+
+msgid "IDS_VIDEO_SBODY_MEDIUM_M_STATUS"
+msgstr "Средний"
+
+msgid "IDS_VIDEO_SBODY_RIGHT_M_STATUS"
+msgstr "Справа"
+
+msgid "IDS_VIDEO_SBODY_SMALL_M_STATUS"
+msgstr "Мелкий"
+
+msgid "IDS_BR_SK_NEXT"
+msgstr "Далее"
+
+msgid "IDS_BR_SK_PREVIOUS"
+msgstr "Назад"
+
+msgid "IDS_VPL_POP_DRM_FILES_CANNOT_BE_SHARED"
+msgstr "Невозможно поделиться DRM-файлами."
+
+msgid "IDS_VPL_OPT_FORMAT"
+msgstr "Формат"
+
+msgid "IDS_VPL_BODY_UNABLE_TO_PLAY_VIDEO_DURING_CALL"
+msgstr "Воспроизведение видео во время вызова невозможно."
+
+msgid "IDS_VIDEO_OPT_MESSAGE_ABB"
+msgstr "Сообщение"
+
+msgid "IDS_VIDEO_OPT_FILE_TRANSFER_ABB"
+msgstr "Передача файлов"
+
+msgid "IDS_VIDEO_OPT_EMAIL_ABB"
+msgstr "Эл. почта"
+
+msgid "IDS_VIDEO_BODY_LONGITUDE"
+msgstr "Долгота"
+
+msgid "IDS_VIDEO_BODY_LATITUDE"
+msgstr "Широта"
+
+msgid "IDS_MUSIC_BUTTON_ENABLE_MOTION"
+msgstr "Вкл. движение"
+
+msgid "IDS_VPL_TPOP_SCRUBBING_AT_PSX_SPEED"
+msgstr "Перемотка на скорости %sx."
+
+msgid "IDS_VPL_TAB_EXTERNAL_STORAGE"
+msgstr "Внешний носитель"
+
+msgid "IDS_VPL_POP_VOLUME_M_SOUND"
+msgstr "Громкость"
+
+msgid "IDS_VPL_POP_UNSUPPORTED_VIDEO_FORMAT"
+msgstr "Неподдерживаемый формат видео"
+
+msgid "IDS_VPL_POP_UNSUPPORTED_FILE_TYPE"
+msgstr "Неподдерживаемый тип файла"
+
+msgid "IDS_VPL_POP_UNSUPPORTED_AUDIO_FORMAT"
+msgstr "Неподдерживаемый формат аудио"
+
+msgid "IDS_VPL_POP_UNABLE_TO_USE_FAST_FORWARD_AND_REWIND_WHEN_NEARBY_DEVICES_ARE_ENABLED"
+msgstr "Если включена функция устройств поблизости, использовать перемотку вперед и назад невозможно."
+
+msgid "IDS_VPL_POP_UNABLE_TO_CAPTURE"
+msgstr "Не удалось сохранить."
+
+msgid "IDS_VPL_POP_ROTATE"
+msgstr "Повернуть"
+
+msgid "IDS_VPL_POP_PRESS_THE_BACK_KEY_AGAIN_TO_RETURN_TO_PREVIOUS_SCREEN"
+msgstr "Чтобы вернуться на предыдущий экран, нажмите клавишу возврата еще раз."
+
+msgid "IDS_VPL_POP_NOT_ENOUGH_MEMORY_DELETE_SOME_ITEMS"
+msgstr "Недостаточно памяти. Удалите некоторые элементы"
+
+msgid "IDS_VPL_POP_BOOKMARK_LIST_FULL_DELETE_SOME_BOOKMARKS"
+msgstr "Список закладок заполнен.\nУдалите некоторые закладки."
+
+msgid "IDS_VPL_OPT_YELLOW_M_COLOUR"
+msgstr "Желтый"
+
+msgid "IDS_VPL_OPT_VIRTUAL_71_CH"
+msgstr "Эмуляция 7.1"
+
+msgid "IDS_VPL_OPT_SUBTITLES_HCC_ABB"
+msgstr "Субтитры"
+
+msgid "IDS_VPL_OPT_SOUNDALIVE"
+msgstr "SoundAlive"
+
+msgid "IDS_VPL_OPT_REPEAT_MODE"
+msgstr "Режим повтора"
+
+msgid "IDS_VPL_OPT_NO_REPEAT"
+msgstr "Повтор выключен"
+
+msgid "IDS_VPL_OPT_MAGENTA_M_COLOUR"
+msgstr "Пурпурный"
+
+msgid "IDS_VPL_OPT_GREEN"
+msgstr "Зеленый"
+
+msgid "IDS_VPL_OPT_CYAN_M_COLOUR"
+msgstr "Голубой"
+
+msgid "IDS_VPL_OPT_CUSTOM"
+msgstr "Пользовательский"
+
+msgid "IDS_VPL_OPT_CURRENT_VIDEO_HONCE_ABB"
+msgstr "Данное видео (1 раз)"
+
+msgid "IDS_VPL_OPT_CONNECTION_INFO_ABB"
+msgstr "Сведения о подключ."
+
+msgid "IDS_VPL_OPT_CHANGE_PLAYER"
+msgstr "Изменить проигрыватель"
+
+msgid "IDS_VPL_OPT_CAPTURE"
+msgstr "Съемка"
+
+msgid "IDS_VPL_OPT_ALLSHARE"
+msgstr "AllShare"
+
+msgid "IDS_VPL_HEADER_SELECT_DEVICE_ABB"
+msgstr "Выбрать устройство"
+
+msgid "IDS_VPL_HEADER_AVAILABLE_DEVICES_ABB"
+msgstr "Доступные устройства"
+
+msgid "IDS_VPL_BUTTON_SPEAKER_ABB"
+msgstr "Динамик"
+
+msgid "IDS_VPL_BODY_WHITE"
+msgstr "Белый"
+
+msgid "IDS_VPL_BODY_UDRGOTHICM_M_FONT"
+msgstr "UDRGothicM"
+
+msgid "IDS_VPL_BODY_UDMINCHO_M_FONT"
+msgstr "UDMincho"
+
+msgid "IDS_VPL_BODY_ROSEMARY_M_FONT"
+msgstr "Rosemary"
+
+msgid "IDS_VPL_BODY_RED_ABB"
+msgstr "Красный"
+
+msgid "IDS_VPL_BODY_PS_SECONDS"
+msgstr "%s сек."
+
+msgid "IDS_VPL_BODY_POP_M_FONT"
+msgstr "POP"
+
+msgid "IDS_VPL_BODY_PLAY_SPEED"
+msgstr "Скорость воспроизведения"
+
+msgid "IDS_VPL_BODY_PD_SECS"
+msgstr "%d сек"
+
+msgid "IDS_VPL_BODY_OFF"
+msgstr "Выключено"
+
+msgid "IDS_VPL_BODY_NO_TITLE"
+msgstr "Нет названия"
+
+msgid "IDS_VPL_BODY_MY_DEVICE"
+msgstr "Мое устройство"
+
+msgid "IDS_VPL_BODY_DEFAULT_FONT"
+msgstr "Шрифт по умолчанию"
+
+msgid "IDS_VPL_BODY_COOL_JAZZ_M_FONT"
+msgstr "Cool jazz"
+
+msgid "IDS_VPL_BODY_CHOCO_COOKY_M_FONT"
+msgstr "Choco cooky"
+
+msgid "IDS_VPL_BODY_BLUE"
+msgstr "Синий"
+
+msgid "IDS_VPL_BODY_BLACK"
+msgstr "Черный"
+
+msgid "IDS_VPL_BODY_ACTIVATION"
+msgstr "Активация"
+
+msgid "IDS_SMEMO_POP_CLOSE_APPLICATION_Q"
+msgstr "Закрыть приложение?"
+
+msgid "IDS_VIDEO_SK_CANCEL_ABB"
+msgstr "Отмена"
+
+msgid "IDS_VIDEO_OPT_STOP_AFTER_ALL_ABB"
+msgstr "Останов. после всех"
+
+msgid "IDS_VIDEO_OPT_REPEAT_CURRENT_ABB"
+msgstr "Повторить текущее"
+
+msgid "IDS_VIDEO_OPT_REPEAT_ALL_ABB"
+msgstr "Повторять все"
+
+msgid "IDS_VIDEO_BODY_RESOLUTION"
+msgstr "Разрешение"
+
+msgid "IDS_VIDEO_BODY_PS_SOUND_EFFECTS_NOT_SUPPORTED_BY_SPEAKER"
+msgstr "Звуковые эффекты %s не поддерживаются динамиком."
+
+msgid "IDS_MUSIC_BODY_TURN_PHONE_OVER_TO_MUTE_INCOMING_CALLS_MESSAGE_ALERTS_AND_ALARMS"
+msgstr "Чтобы отключить сигнал входящего вызова, сообщения или будильника, переверните телефон."
+
+msgid "IDS_ST_BODY_SD_CARD"
+msgstr "Карта памяти"
+
+msgid "IDS_VPL_TPOP_ONLY_AUDIO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_AUDIO"
+msgstr "Только звук, поддерживаемый этим файлом. Текущий воспроизводимый аудиофайл."
+
+msgid "IDS_VPL_TPOP_ONLY_VIDEO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_VIDEO"
+msgstr "Только видео, поддерживаемое этим файлом. Текущий воспроизводимый видеофайл."
+
+msgid "IDS_ST_BODY_PRIVATE_STORAGE"
+msgstr "Приватное хранилище"
+
+msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
+msgstr "Наушники"
+
+msgid "IDS_MUSIC_OPT_SPEAKER"
+msgstr "Громкая связь"
+
+msgid "IDS_MUSIC_OPT_PAUSE"
+msgstr "Пауза"
+
+msgid "IDS_VIDEO_BUTTON_DOWNLOAD"
+msgstr "Загрузить"
+
+msgid "IDS_VIDEO_MBODY_SELECT_SUBTITLES_HCC"
+msgstr "Выбор субтитров"
+
+msgid "IDS_VIDEO_NPBODY_PREVIEW_SUBTITLES_HCC_ABB"
+msgstr "Просмотреть субтитры"
+
+msgid "IDS_VIDEO_OPT_REPEAT_MODE_ABB"
+msgstr "Режим повтора"
+
+msgid "IDS_VIDEO_POP_UNSUPPORTED_FILE_TYPE"
+msgstr "Неподдерживаемый тип файла"
+
+msgid "IDS_VIDEO_OPT_NORMAL_M_SOUND_ABB"
+msgstr "Обычный"
+
+msgid "IDS_VIDEO_BODY_VOICE"
+msgstr "Голос"
+
+msgid "IDS_VIDEO_BODY_MOVIES"
+msgstr "Фильмы"
+
+msgid "IDS_VIDEO_OPT_AUDIO_TRACK_ABB"
+msgstr "Звуковая дорожка"
+
+msgid "IDS_VIDEO_BODY_BUFFERING_ING_ABB"
+msgstr "Буферизация"
+
+msgid "IDS_VIDEO_BODY_FILE_FORMAT"
+msgstr "Формат файла"
+
+msgid "IDS_VIDEO_BODY_LANGUAGE"
+msgstr "Язык"
+
+msgid "IDS_VIDEO_BODY_NO_VIDEOS"
+msgstr "Нет видео"
+
+msgid "IDS_VIDEO_BODY_SIZE"
+msgstr "Размер"
+
+msgid "IDS_VIDEO_BUTTON_DONE"
+msgstr "Готово"
+
+msgid "IDS_VIDEO_BUTTON_REFRESH"
+msgstr "Обновить"
+
+msgid "IDS_VIDEO_HEADER_DATE"
+msgstr "Дата"
+
+msgid "IDS_VIDEO_HEADER_LOADING_ING_ABB"
+msgstr "Загрузка..."
+
+msgid "IDS_VIDEO_HEADER_SUBTITLES_HCC_ABB2"
+msgstr "Субтитры"
+
+msgid "IDS_VIDEO_IOPT3_DELETE"
+msgstr "Удалить"
+
+msgid "IDS_VIDEO_OPT_ADD_TO_HOME_SCREEN_ABB"
+msgstr "Добавить на главный экран"
+
+msgid "IDS_VIDEO_OPT_FACEBOOK_ABB"
+msgstr "Facebook"
+
+msgid "IDS_VIDEO_OPT_HDMI"
+msgstr "HDMI"
+
+msgid "IDS_VIDEO_OPT_NAME"
+msgstr "Имя"
+
+msgid "IDS_VIDEO_OPT_SOUNDALIVE_ABB2"
+msgstr "SoundAlive"
+
+msgid "IDS_VIDEO_OPT_YOUTUBE_ABB"
+msgstr "YouTube"
+
+msgid "IDS_VIDEO_POP_UNABLE_TO_PLAY_VIDEO"
+msgstr "Невозможно воспроизвести видео."
+
+msgid "IDS_VIDEO_SBODY_NO_SUBTITLES_AVAILABLE_M_STATUS"
+msgstr "Нет доступных субтитров"
+
+msgid "IDS_VIDEO_SK3_PLAY"
+msgstr "Воспроизвести"
+
+msgid "IDS_VIDEO_SK_CLOSE"
+msgstr "Закрыть"
+
+msgid "IDS_VPL_POP_INVALID_URL"
+msgstr "Неправильный URL"
+
+msgid "IDS_CHATON_HEADER_ERROR_ABB"
+msgstr "Ошибка"
+
+msgid "IDS_VIDEO_SBODY_DEVICE_STORAGE"
+msgstr "Память устройства"
+
+msgid "IDS_COM_BODY_VIDEO_PLAYER_T_MAINMENU"
+msgstr "Видео"
+
+msgid "IDS_VIDEO_OPT_SHARE_VIA"
+msgstr "Отправить через"
+
+msgid "IDS_VIDEO_POP_A_NETWORK_ERROR_HAS_OCCURRED_TRY_AGAIN"
+msgstr "Произошла ошибка сети. Повторите попытку."
+
+msgid "IDS_VIDEO_TPOP_ONLY_AUDIO_DATA_SUPPORTED_BY_THIS_FILE_FORMAT_NOW_PLAYING_AUDIO"
+msgstr "Этот формат файла поддерживает только звуковые данные. Воспроизводится звук."
+
+msgid "IDS_VIDEO_TPOP_ONLY_VIDEO_DATA_SUPPORTED_BY_THIS_FILE_FORMAT_NOW_PLAYING_VIDEO"
+msgstr "Этот формат файла поддерживает только видеоданные. Будет выполнено воспроизведение видео."
+
+msgid "IDS_VPL_BODY_CENTRE"
+msgstr "По центру"
+
+msgid "IDS_VPL_BODY_ON"
+msgstr "Включено"
+
+msgid "IDS_VPL_BODY_SETTINGS"
+msgstr "Настройки"
+
+msgid "IDS_VPL_BODY_VIDEOS_T_MAINMENU"
+msgstr "Видео"
+
+msgid "IDS_VPL_BUTTON_SHARE"
+msgstr "Отправ."
+
+msgid "IDS_VPL_HEADER_DETAILS"
+msgstr "Свойства"
+
+msgid "IDS_VPL_OPT_DELETE"
+msgstr "Удалить"
+
+msgid "IDS_VPL_POP_BUFFERING_PDP"
+msgstr "Буферизация: %d%"
+
+msgid "IDS_VIDEO_OPT_NONE"
+msgstr "Нет"
+
+msgid "IDS_VIDEO_BODY_PD_SECS_ABB3"
+msgstr "%d сек."
+
+msgid "IDS_MUSIC_HEADER_SOUNDALIVE_ABB3"
+msgstr "SoundAlive"
+
+msgid "IDS_MP_HEADER_SELECT_AUDIO_DEVICE"
+msgstr "Выберите аудиоустройство"
+
+msgid "IDS_MUSIC_OPT_DELETE"
+msgstr "Удалить"
+
+msgid "IDS_CLOCK_BUTTON_CANCEL"
+msgstr "Отмена"
+
+msgid "IDS_VIDEO_POP_AN_UNKNOWN_ERROR_HAS_OCCURRED_OR_THE_FILE_MAY_BE_CORRUPT"
+msgstr "Произошла неизвестная ошибка, или файл поврежден."
+
+msgid "IDS_VIDEO_POP_THIS_FILE_TYPE_IS_NOT_SUPPORTED"
+msgstr "Этот тип файла не поддерживается."
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "ГОТОВО"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "ОТМЕНА"
+
+msgid "IDS_TPLATFORM_MBODY_STORAGE_LOCATION"
+msgstr "Место хранения"
+
+msgid "IDS_GP_BODY_SUBTITLES_HCC"
+msgstr "Субтитры (копия)"
+
+msgid "IDS_GALLERY_BODY_PERSONAL_STORAGE"
+msgstr "Личное хранилище"
+
+msgid "IDS_ACCS_BODY_CAPTIONS_WILL_LOOK_LIKE_THIS"
+msgstr "Подписи будут выглядеть так."
+

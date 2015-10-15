@@ -1,0 +1,489 @@
+msgid "IDS_VIDEO_OPT_BRIGHTNESS"
+msgstr "चमक"
+
+msgid "IDS_VIDEO_OPT_MUSIC_M_SOUNDALIVE"
+msgstr "संगीत"
+
+msgid "IDS_VIDEO_OPT_VOICES_M_PERSON"
+msgstr "वॉइस"
+
+msgid "IDS_VIDEO_BODY_B"
+msgstr "B"
+
+msgid "IDS_VIDEO_BODY_GB"
+msgstr "GB"
+
+msgid "IDS_VIDEO_BODY_KB"
+msgstr "KB"
+
+msgid "IDS_VIDEO_BODY_LOCATION"
+msgstr "स्थान"
+
+msgid "IDS_VIDEO_BODY_MB"
+msgstr "MB"
+
+msgid "IDS_VIDEO_BUTTON_OK"
+msgstr "ओके"
+
+msgid "IDS_VIDEO_HEADER_LAST_MODIFIED_M_DATE"
+msgstr "अंतिम बार संशोधित"
+
+msgid "IDS_VIDEO_OPT_SHARE"
+msgstr "साझा करें"
+
+msgid "IDS_VIDEO_HEADER_CANNOT_PLAY_VIDEO_ABB"
+msgstr "वीडियो नहीं चला सकता"
+
+msgid "IDS_VIDEO_POP_AN_ERROR_OCCURRED_WITH_THE_SUBTITLES"
+msgstr "उपशीर्षक में कोई त्रुटि उत्पन्न हुई।"
+
+msgid "IDS_VIDEO_POP_THE_FILE_IS_CORRUPTED_OR_THE_SD_CARD_HAS_BEEN_REMOVED"
+msgstr "फ़ाइल दूषित है या SD कार्ड निकाल दिया गया है।"
+
+msgid "IDS_VIDEO_OPT_DETAILS"
+msgstr "विवरण"
+
+msgid "IDS_VIDEO_OPT_TITLE"
+msgstr "शीर्षक"
+
+msgid "IDS_VIDEO_POP_THIS_VIDEO_WILL_BE_DELETED"
+msgstr "यह वीडियो हटाया जाएगा"
+
+msgid "IDS_VIDEO_HEADER_SETTINGS"
+msgstr "सेटिंग्स"
+
+msgid "IDS_VIDEO_HEADER_UNABLE_TO_PLAY_VIDEO_ABB"
+msgstr "वीडियो चलाने में असमर्थ"
+
+msgid "IDS_VIDEO_MBODY_ALIGNMENT"
+msgstr "संरेखण"
+
+msgid "IDS_VIDEO_MBODY_FONT_SIZE"
+msgstr "फॉन्ट आकार"
+
+msgid "IDS_VIDEO_OPT_REPEAT_SETTING_ABB"
+msgstr "दोहराव सेटिंग"
+
+msgid "IDS_VIDEO_OPT_SUBTITLES_HCC_ABB"
+msgstr "उपशीर्षक (CC)"
+
+msgid "IDS_VIDEO_SBODY_CENTRE_M_STATUS"
+msgstr "केंद्र"
+
+msgid "IDS_VIDEO_SBODY_LARGE_M_STATUS"
+msgstr "बड़ा"
+
+msgid "IDS_VIDEO_SBODY_LEFT_M_STATUS"
+msgstr "बाएँ"
+
+msgid "IDS_VIDEO_SBODY_MEDIUM_M_STATUS"
+msgstr "मध्यम"
+
+msgid "IDS_VIDEO_SBODY_RIGHT_M_STATUS"
+msgstr "दाएँ"
+
+msgid "IDS_VIDEO_SBODY_SMALL_M_STATUS"
+msgstr "छोटा"
+
+msgid "IDS_BR_SK_NEXT"
+msgstr "अगला"
+
+msgid "IDS_BR_SK_PREVIOUS"
+msgstr "पिछला"
+
+msgid "IDS_VPL_POP_DRM_FILES_CANNOT_BE_SHARED"
+msgstr "DRM फ़ाइलें साझा नहीं की जा सकतीं।"
+
+msgid "IDS_VPL_OPT_FORMAT"
+msgstr "फॉर्मेट"
+
+msgid "IDS_VPL_BODY_UNABLE_TO_PLAY_VIDEO_DURING_CALL"
+msgstr "कॉल के दौरान वीडियो चलाने में असमर्थ।"
+
+msgid "IDS_VIDEO_OPT_MESSAGE_ABB"
+msgstr "सन्देश"
+
+msgid "IDS_VIDEO_OPT_FILE_TRANSFER_ABB"
+msgstr "फ़ाइल स्थानांतरण"
+
+msgid "IDS_VIDEO_OPT_EMAIL_ABB"
+msgstr "ईमेल"
+
+msgid "IDS_VIDEO_BODY_LONGITUDE"
+msgstr "देशांतर"
+
+msgid "IDS_VIDEO_BODY_LATITUDE"
+msgstr "अक्षांश"
+
+msgid "IDS_MUSIC_BUTTON_ENABLE_MOTION"
+msgstr "गति सक्षम करे"
+
+msgid "IDS_VPL_TPOP_SCRUBBING_AT_PSX_SPEED"
+msgstr "%sx गति पर स्क्रबिंग।"
+
+msgid "IDS_VPL_TAB_EXTERNAL_STORAGE"
+msgstr "बाह्य स्टोरेज"
+
+msgid "IDS_VPL_POP_VOLUME_M_SOUND"
+msgstr "वॉल्यूम"
+
+msgid "IDS_VPL_POP_UNSUPPORTED_VIDEO_FORMAT"
+msgstr "असमर्थित वीडियो फ़ॉर्मेट।"
+
+msgid "IDS_VPL_POP_UNSUPPORTED_FILE_TYPE"
+msgstr "असमर्थित फाइल प्रकार।"
+
+msgid "IDS_VPL_POP_UNSUPPORTED_AUDIO_FORMAT"
+msgstr "असमर्थित ऑडियो फ़ॉर्मेट।"
+
+msgid "IDS_VPL_POP_UNABLE_TO_USE_FAST_FORWARD_AND_REWIND_WHEN_NEARBY_DEVICES_ARE_ENABLED"
+msgstr "निकटवर्ती डिवाइसेस सक्षम होने पर आगे करने और पीछे करने का उपयोग करने में असमर्थ।"
+
+msgid "IDS_VPL_POP_UNABLE_TO_CAPTURE"
+msgstr "कैप्चर करने में असमर्थ।"
+
+msgid "IDS_VPL_POP_ROTATE"
+msgstr "घुमाएँ"
+
+msgid "IDS_VPL_POP_PRESS_THE_BACK_KEY_AGAIN_TO_RETURN_TO_PREVIOUS_SCREEN"
+msgstr "पिछली स्क्रीन पर लौटने के लिए फिर से पीछे कुंजी दबाएँ।"
+
+msgid "IDS_VPL_POP_NOT_ENOUGH_MEMORY_DELETE_SOME_ITEMS"
+msgstr "पर्याप्त मेमोरी नहीं। कुछ मदें हटाएँ।"
+
+msgid "IDS_VPL_POP_BOOKMARK_LIST_FULL_DELETE_SOME_BOOKMARKS"
+msgstr "बुकमार्क सूची पूर्ण। कुछ बुकमार्क हटाएँ।"
+
+msgid "IDS_VPL_OPT_YELLOW_M_COLOUR"
+msgstr "पीला"
+
+msgid "IDS_VPL_OPT_VIRTUAL_71_CH"
+msgstr "वर्चुअल 7.1 ch"
+
+msgid "IDS_VPL_OPT_SUBTITLES_HCC_ABB"
+msgstr "उपशीर्षक (CC)"
+
+msgid "IDS_VPL_OPT_SOUNDALIVE"
+msgstr "SoundAlive"
+
+msgid "IDS_VPL_OPT_REPEAT_MODE"
+msgstr "दोहराव मोड"
+
+msgid "IDS_VPL_OPT_NO_REPEAT"
+msgstr "कोई दोहराव नहीं"
+
+msgid "IDS_VPL_OPT_MAGENTA_M_COLOUR"
+msgstr "मैजंटा"
+
+msgid "IDS_VPL_OPT_GREEN"
+msgstr "हरा"
+
+msgid "IDS_VPL_OPT_CYAN_M_COLOUR"
+msgstr "सियान"
+
+msgid "IDS_VPL_OPT_CUSTOM"
+msgstr "कस्टम"
+
+msgid "IDS_VPL_OPT_CURRENT_VIDEO_HONCE_ABB"
+msgstr "वर्तमान वीडियो (एक बार)"
+
+msgid "IDS_VPL_OPT_CONNECTION_INFO_ABB"
+msgstr "कनेक्शन जानकारी"
+
+msgid "IDS_VPL_OPT_CHANGE_PLAYER"
+msgstr "प्लेयर बदलें"
+
+msgid "IDS_VPL_OPT_CAPTURE"
+msgstr "कैप्चर करें"
+
+msgid "IDS_VPL_OPT_ALLSHARE"
+msgstr "ऑलशेयर"
+
+msgid "IDS_VPL_HEADER_SELECT_DEVICE_ABB"
+msgstr "डिवाइस चुनें"
+
+msgid "IDS_VPL_HEADER_AVAILABLE_DEVICES_ABB"
+msgstr "उपलब्‍ध डिवाइसेस"
+
+msgid "IDS_VPL_BUTTON_SPEAKER_ABB"
+msgstr "स्पीकर"
+
+msgid "IDS_VPL_BODY_WHITE"
+msgstr "सफेद"
+
+msgid "IDS_VPL_BODY_UDRGOTHICM_M_FONT"
+msgstr "UDRGothicM"
+
+msgid "IDS_VPL_BODY_UDMINCHO_M_FONT"
+msgstr "UDMincho"
+
+msgid "IDS_VPL_BODY_ROSEMARY_M_FONT"
+msgstr "रोजमेरी"
+
+msgid "IDS_VPL_BODY_RED_ABB"
+msgstr "लाल"
+
+msgid "IDS_VPL_BODY_PS_SECONDS"
+msgstr "%s सेकंड"
+
+msgid "IDS_VPL_BODY_POP_M_FONT"
+msgstr "पॉप"
+
+msgid "IDS_VPL_BODY_PLAY_SPEED"
+msgstr "चलाने की गति"
+
+msgid "IDS_VPL_BODY_PD_SECS"
+msgstr "%d सेकंड"
+
+msgid "IDS_VPL_BODY_OFF"
+msgstr "बंद"
+
+msgid "IDS_VPL_BODY_NO_TITLE"
+msgstr "कोई शीर्षक नहीं"
+
+msgid "IDS_VPL_BODY_MY_DEVICE"
+msgstr "मेरा डिवाइस"
+
+msgid "IDS_VPL_BODY_DEFAULT_FONT"
+msgstr "डिफॉल्ट फॉन्ट"
+
+msgid "IDS_VPL_BODY_COOL_JAZZ_M_FONT"
+msgstr "कूल जैज"
+
+msgid "IDS_VPL_BODY_CHOCO_COOKY_M_FONT"
+msgstr "चोको कुकी"
+
+msgid "IDS_VPL_BODY_BLUE"
+msgstr "नीला"
+
+msgid "IDS_VPL_BODY_BLACK"
+msgstr "काला"
+
+msgid "IDS_VPL_BODY_ACTIVATION"
+msgstr "सक्रियण"
+
+msgid "IDS_SMEMO_POP_CLOSE_APPLICATION_Q"
+msgstr "एप्लीकेशन बंद करें?"
+
+msgid "IDS_VIDEO_SK_CANCEL_ABB"
+msgstr "रद्द"
+
+msgid "IDS_VIDEO_OPT_STOP_AFTER_ALL_ABB"
+msgstr "सब के बाद रोकें"
+
+msgid "IDS_VIDEO_OPT_REPEAT_CURRENT_ABB"
+msgstr "वर्तमान को दोहराएँ"
+
+msgid "IDS_VIDEO_OPT_REPEAT_ALL_ABB"
+msgstr "सभी दोहराएँ"
+
+msgid "IDS_VIDEO_BODY_RESOLUTION"
+msgstr "रिजॉल्यूशन"
+
+msgid "IDS_VIDEO_BODY_PS_SOUND_EFFECTS_NOT_SUPPORTED_BY_SPEAKER"
+msgstr "%s ध्‍वनि प्रभाव स्पीकर द्वारा समर्थित नहीं है"
+
+msgid "IDS_MUSIC_BODY_TURN_PHONE_OVER_TO_MUTE_INCOMING_CALLS_MESSAGE_ALERTS_AND_ALARMS"
+msgstr "आने वाली कॉल्‍स, संदेश सतर्क, और अलार्म्स मूक करने के लिए फ़ोन घुमाएँ"
+
+msgid "IDS_ST_BODY_SD_CARD"
+msgstr "SD कार्ड"
+
+msgid "IDS_VPL_TPOP_ONLY_AUDIO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_AUDIO"
+msgstr "इस फाइल के द्वारा केवल ऑडियो डाटा समर्थित है। अब ऑडियो चलाया जा रहा है।"
+
+msgid "IDS_VPL_TPOP_ONLY_VIDEO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_VIDEO"
+msgstr "इस फ़ाइल के द्वारा केवल वीडियो डाटा समर्थित है। अब वीडियो चलाया जा रहा है।"
+
+msgid "IDS_ST_BODY_PRIVATE_STORAGE"
+msgstr "निजी स्टोरेज"
+
+msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
+msgstr "हेडफोन्‍स"
+
+msgid "IDS_MUSIC_OPT_SPEAKER"
+msgstr "स्पीकर"
+
+msgid "IDS_MUSIC_OPT_PAUSE"
+msgstr "विराम"
+
+msgid "IDS_VIDEO_BUTTON_DOWNLOAD"
+msgstr "डाउनलोड करें"
+
+msgid "IDS_VIDEO_MBODY_SELECT_SUBTITLES_HCC"
+msgstr "उपशीर्षक (CC) चुनें"
+
+msgid "IDS_VIDEO_NPBODY_PREVIEW_SUBTITLES_HCC_ABB"
+msgstr "पूर्वावलोकन उपशीर्षक (CC)"
+
+msgid "IDS_VIDEO_OPT_REPEAT_MODE_ABB"
+msgstr "दोहराव मोड"
+
+msgid "IDS_VIDEO_POP_UNSUPPORTED_FILE_TYPE"
+msgstr "असमर्थित फाइल प्रकार।"
+
+msgid "IDS_VIDEO_OPT_NORMAL_M_SOUND_ABB"
+msgstr "सामान्य"
+
+msgid "IDS_VIDEO_BODY_VOICE"
+msgstr "आवाज"
+
+msgid "IDS_VIDEO_BODY_MOVIES"
+msgstr "मूवीज"
+
+msgid "IDS_VIDEO_OPT_AUDIO_TRACK_ABB"
+msgstr "ऑडियो ट्रैक"
+
+msgid "IDS_VIDEO_BODY_BUFFERING_ING_ABB"
+msgstr "बफरिंग..."
+
+msgid "IDS_VIDEO_BODY_FILE_FORMAT"
+msgstr "फ़ाइल फॉर्मेट"
+
+msgid "IDS_VIDEO_BODY_LANGUAGE"
+msgstr "भाषा"
+
+msgid "IDS_VIDEO_BODY_NO_VIDEOS"
+msgstr "कोई वीडियो नहीं"
+
+msgid "IDS_VIDEO_BODY_SIZE"
+msgstr "आकार"
+
+msgid "IDS_VIDEO_BUTTON_DONE"
+msgstr "पूर्ण"
+
+msgid "IDS_VIDEO_BUTTON_REFRESH"
+msgstr "रीफ्रेश"
+
+msgid "IDS_VIDEO_HEADER_DATE"
+msgstr "तिथि"
+
+msgid "IDS_VIDEO_HEADER_LOADING_ING_ABB"
+msgstr "लोड हो रहा है..."
+
+msgid "IDS_VIDEO_HEADER_SUBTITLES_HCC_ABB2"
+msgstr "उपशीर्षक (CC)"
+
+msgid "IDS_VIDEO_IOPT3_DELETE"
+msgstr "हटाएँ"
+
+msgid "IDS_VIDEO_OPT_ADD_TO_HOME_SCREEN_ABB"
+msgstr "होम स्क्रीन पर जोड़े"
+
+msgid "IDS_VIDEO_OPT_FACEBOOK_ABB"
+msgstr "फेसबुक"
+
+msgid "IDS_VIDEO_OPT_HDMI"
+msgstr "HDMI"
+
+msgid "IDS_VIDEO_OPT_NAME"
+msgstr "नाम"
+
+msgid "IDS_VIDEO_OPT_SOUNDALIVE_ABB2"
+msgstr "SoundAlive"
+
+msgid "IDS_VIDEO_OPT_YOUTUBE_ABB"
+msgstr "यूट्यूब"
+
+msgid "IDS_VIDEO_POP_UNABLE_TO_PLAY_VIDEO"
+msgstr "वीडियो चलाने में अक्षम।"
+
+msgid "IDS_VIDEO_SBODY_NO_SUBTITLES_AVAILABLE_M_STATUS"
+msgstr "कोई उपशीर्षक उपलब्ध नहीं"
+
+msgid "IDS_VIDEO_SK3_PLAY"
+msgstr "चलाएँ"
+
+msgid "IDS_VIDEO_SK_CLOSE"
+msgstr "बंद"
+
+msgid "IDS_VPL_POP_INVALID_URL"
+msgstr "अमान्य वेब पता।"
+
+msgid "IDS_CHATON_HEADER_ERROR_ABB"
+msgstr "त्रुटि"
+
+msgid "IDS_VIDEO_SBODY_DEVICE_STORAGE"
+msgstr "डिवाइस स्टोरेज"
+
+msgid "IDS_COM_BODY_VIDEO_PLAYER_T_MAINMENU"
+msgstr "वीडियो प्‍लेयर"
+
+msgid "IDS_VIDEO_OPT_SHARE_VIA"
+msgstr "इसके द्वारा साझा करें"
+
+msgid "IDS_VIDEO_POP_A_NETWORK_ERROR_HAS_OCCURRED_TRY_AGAIN"
+msgstr "नेटवर्क त्रुटि उत्पन्न हुई है। फिर से प्रयास करें।"
+
+msgid "IDS_VIDEO_TPOP_ONLY_AUDIO_DATA_SUPPORTED_BY_THIS_FILE_FORMAT_NOW_PLAYING_AUDIO"
+msgstr "इस फाइल फॉर्मेट द्वारा केवल ऑडियो डाटा समर्थित है। अब ऑडियो चला रहा है।"
+
+msgid "IDS_VIDEO_TPOP_ONLY_VIDEO_DATA_SUPPORTED_BY_THIS_FILE_FORMAT_NOW_PLAYING_VIDEO"
+msgstr "इस फ़ाइल स्वरूप द्वारा केवल वीडियो डाटा समर्थित है। वीडियो अभी चलाया जा रहा है।"
+
+msgid "IDS_VPL_BODY_CENTRE"
+msgstr "केन्द्र"
+
+msgid "IDS_VPL_BODY_ON"
+msgstr "चालू"
+
+msgid "IDS_VPL_BODY_SETTINGS"
+msgstr "सेटिंग्स"
+
+msgid "IDS_VPL_BODY_VIDEOS_T_MAINMENU"
+msgstr "वीडियोज़"
+
+msgid "IDS_VPL_BUTTON_SHARE"
+msgstr "साझा"
+
+msgid "IDS_VPL_HEADER_DETAILS"
+msgstr "विवरण"
+
+msgid "IDS_VPL_OPT_DELETE"
+msgstr "हटाएँ"
+
+msgid "IDS_VPL_POP_BUFFERING_PDP"
+msgstr "बफ़र हो रहा है - %d%"
+
+msgid "IDS_VIDEO_OPT_NONE"
+msgstr "कोई नहीं"
+
+msgid "IDS_VIDEO_BODY_PD_SECS_ABB3"
+msgstr "%d सेकंड"
+
+msgid "IDS_MUSIC_HEADER_SOUNDALIVE_ABB3"
+msgstr "SoundAlive"
+
+msgid "IDS_MP_HEADER_SELECT_AUDIO_DEVICE"
+msgstr "ऑडियो डिवाइस चुनें"
+
+msgid "IDS_MUSIC_OPT_DELETE"
+msgstr "हटाएँ"
+
+msgid "IDS_CLOCK_BUTTON_CANCEL"
+msgstr "रद्द"
+
+msgid "IDS_VIDEO_POP_AN_UNKNOWN_ERROR_HAS_OCCURRED_OR_THE_FILE_MAY_BE_CORRUPT"
+msgstr "एक अज्ञात त्रुटि उत्पन्न हुई है या फाइल दूषित हो सकती है।"
+
+msgid "IDS_VIDEO_POP_THIS_FILE_TYPE_IS_NOT_SUPPORTED"
+msgstr "यह फाइल प्रकार समर्थित नहीं है।"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "पूर्ण"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "रद्द करें"
+
+msgid "IDS_TPLATFORM_MBODY_STORAGE_LOCATION"
+msgstr "संग्रहण स्‍थान"
+
+msgid "IDS_GP_BODY_SUBTITLES_HCC"
+msgstr "उपशीर्षक (CC)"
+
+msgid "IDS_GALLERY_BODY_PERSONAL_STORAGE"
+msgstr "व्यक्तिगत स्टोरेज"
+
+msgid "IDS_ACCS_BODY_CAPTIONS_WILL_LOOK_LIKE_THIS"
+msgstr "शीर्षक इस तरह दिखाई देंगे।"
+

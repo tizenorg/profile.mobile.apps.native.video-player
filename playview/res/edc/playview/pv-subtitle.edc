@@ -1,0 +1,297 @@
+/*
+* Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+
+#include "pv-image.edc"
+
+#define FONT_COLOR				255 255 255 255
+#define _SCREEN_SIZE_PROTRAIT_			480 750
+#define _SCREEN_SIZE_LANDSCAPE_			800 430
+#define SUBTITLE_K_FEATURE
+
+collections {
+	base_scale: 1.8;
+	styles {
+		style {
+			name: "textblock_style_small";
+			base: "font=Tizen:style=Roman font_size=28 color=#fff align=center wrap=word";
+			tag:  "br" "\n";
+			tag:  "ps" "ps";
+			tag:  "hilight" "+ font=Tizen:style=Roman";
+			tag:  "b" "+ font=Tizen:style=Roman";
+			tag:  "tab" "\t";
+		}
+		style {
+			name: "textblock_style_medium";
+			base: "font=Tizen:style=Roman font_size=42 color=#fff align=center wrap=word";
+			tag:  "br" "\n";
+			tag:  "ps" "ps";
+			tag:  "hilight" "+ font=Tizen:style=Roman";
+			tag:  "b" "+ font=Tizen:style=Roman";
+			tag:  "tab" "\t";
+		}
+
+		style {
+			name: "textblock_style_large";
+			base: "font=Tizen:style=Roman font_size=54 color=#fff align=center wrap=word";
+			tag:  "br" "\n";
+			tag:  "ps" "ps";
+			tag:  "hilight" "+ font=Tizen:style=Roman";
+			tag:  "b" "+ font=Tizen:style=Roman";
+			tag:  "tab" "\t";
+		}
+		style {
+			name: "textblock_style_default";
+			base: "font=Tizen:style=Roman align=center wrap=word";
+			tag:  "br" "\n";
+			tag:  "ps" "ps";
+			tag:  "hilight" "+ font=Tizen:style=Roman";
+			tag:  "b" "+ font=Tizen:style=Roman";
+			tag:  "tab" "\t";
+		}
+	}
+	group {
+		name: "pv.subtitle";
+
+		parts {
+			part {
+				name: "pv.subtitle.main.bg";
+				type: SPACER;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+#ifdef SUBTITLE_K_FEATURE
+					min: _SCREEN_SIZE_PROTRAIT_;
+					max: _SCREEN_SIZE_PROTRAIT_;
+				}
+				description {
+					state: "landscape.show" 0.0;
+					min: _SCREEN_SIZE_LANDSCAPE_;
+					max: _SCREEN_SIZE_LANDSCAPE_;
+#endif
+				}
+			}
+
+			part {
+				name: "pv.subtitle.main.bottom.padding";
+				type: SPACER;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 0 25;
+					fixed: 0 1;
+					align: 0.5 1.0;
+					rel1 { relative: 0.0 1.0; to: "pv.subtitle.main.bg";}
+					rel2 { relative: 1.0 1.0; to: "pv.subtitle.main.bg";}
+				}
+			}
+
+			part {
+				name: "pv.subtitle.grep.box";
+				type: RECT;
+				scale: 1;
+				mouse_events: 1;
+				repeat_events: 1;
+				description {
+					state: "default" 0.0;
+					align: 0.5 0.0;
+					rel1 { relative: 0.0 0.0; offset:0 5; to: "pv.subtitle.main.bg";}
+					rel2 { relative: 1.0 0.0; offset:0 5; to: "pv.subtitle.main.bg";}
+					min: 720 50;
+					max: 720 50;
+					color: 0 0 0 0;
+				}
+				description {
+					state: "grep.box.show" 0.0;
+					inherit: "default";
+					color: 80 80 150 150;
+				}
+			}
+
+			part {
+				name: "pv.subtitle.caption.window";
+				type: RECT;
+				scale: 1;
+				mouse_events: 1;
+				repeat_events: 1;
+				description {
+					state: "default" 0.0;
+					align: 0.5 0.0;
+					rel1 { relative: 0.0 0.0; offset:0 5 ;to: "pv.subtitle.main.bg";}
+					rel2 { relative: 1.0 0.0; offset:0 5 ;to: "pv.subtitle.main.bg";}
+					min: 720 50;
+					max: 720 50;
+					color: 0 0 0 0;
+				}
+				description {
+					state: "caption.window.show" 0.0;
+					inherit: "default";
+					align: 0.0 0.0;
+				}
+			}
+
+			part {
+				name: "pv.subtitle.swallow.txt";
+				type: SWALLOW;
+				scale: 1;
+				mouse_events: 1;
+				repeat_events: 1;
+				description {
+					visible: 1;
+					state: "default" 0.0;
+					align: 0.5 0.0;
+					rel1 { relative: 0.0 0.0; offset:0 20;to: "pv.subtitle.main.bg";}
+					rel2 { relative: 1.0 0.0; to: "pv.subtitle.main.bottom.padding";}
+				}
+			}
+
+#ifdef SUBTITLE_K_FEATURE
+			programs {
+				program {
+					name: "subtitle_landscape_show";
+					signal: "signal.pv.subtitle.main.landscape.show";
+					source: "*";
+					action: STATE_SET "landscape.show" 0.0;
+					target: "pv.subtitle.main.bg";
+				}
+				program {
+					name: "subtitle_portrait_show";
+					signal: "signal.pv.subtitle.main.portrait.show";
+					source: "*";
+					action: STATE_SET "default" 0.0;
+					target: "pv.subtitle.main.bg";
+				}
+				program {
+					name: "subtitle_grep_box_show";
+					signal: "signal.pv.subtitle.grep.box.show";
+					source: "*";
+					action: STATE_SET "grep.box.show" 0.0;
+					target: "pv.subtitle.grep.box";
+				}
+				program {
+					name: "subtitle_grep_box_hide";
+					signal: "signal.pv.subtitle.grep.box.hide";
+					source: "*";
+					action: STATE_SET "default" 0.0;
+					target: "pv.subtitle.grep.box";
+				}
+				program {
+					name: "subtitle_caption_window_hide";
+					signal: "signal.pv.subtitle.caption.window.hide";
+					source: "*";
+					action: STATE_SET "default" 0.0;
+					target: "pv.subtitle.caption.window";
+				}
+			}/* programs */
+			script {
+				public message(Msg_Type:type, id, ...) {
+					if ((type == MSG_INT_SET) && (id == 1)) {
+						new w = getarg(2);
+						new h = getarg(3);
+
+						custom_state(PART:"pv.subtitle.grep.box", "grep.box.show", 0.0);
+						set_state_val(PART:"pv.subtitle.grep.box", STATE_MIN, w, h);
+						set_state_val(PART:"pv.subtitle.grep.box", STATE_MAX, w, h);
+						set_state(PART:"pv.subtitle.grep.box", "custom", 0.0);
+					}
+					else if ((type == MSG_INT_SET) && (id == 2)) {
+						new w = getarg(2);
+						new h = getarg(3);
+
+						custom_state(PART:"pv.subtitle.caption.window", "caption.window.show", 0.0);
+						set_state_val(PART:"pv.subtitle.caption.window", STATE_MIN, w, h);
+						set_state_val(PART:"pv.subtitle.caption.window", STATE_MAX, w, h);
+						set_state(PART:"pv.subtitle.caption.window", "custom", 0.0);
+					}
+					else if ((type == MSG_INT_SET) && (id == 3)) {
+						new r = getarg(2);
+						new g = getarg(3);
+						new b = getarg(4);
+						new a = getarg(5);
+
+						custom_state(PART:"pv.subtitle.caption.window", "caption.window.show", 0.0);
+						set_state_val(PART:"pv.subtitle.caption.window", STATE_COLOR, r, g, b, a);
+						set_state(PART:"pv.subtitle.caption.window", "custom", 0.0);
+					}
+					else if ((type == MSG_INT_SET) && (id == 4)) {
+						new left = getarg(2);
+						new top = getarg(3);
+
+						custom_state(PART:"pv.subtitle.caption.window", "caption.window.show", 0.0);
+						set_state_val(PART:"pv.subtitle.caption.window",  STATE_REL1_OFFSET, left, top);
+						set_state(PART:"pv.subtitle.caption.window", "custom", 0.0);
+					}
+				}
+			}/* script */
+#endif
+		} /* parts */
+	}	/* group */
+
+	group {
+		name: "pv.multi-subtitle";
+
+		parts {
+			part {
+				name: "pv.multi.subtitle.main.bg";
+				type: SPACER;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					rel1 { relative: 0.0 0.0;}
+					rel2 { relative: 1.0 1.0;}
+				}
+			}
+
+			part {
+				name: "pv.multi.subtitle.main.bottom.padding";
+				type: SPACER;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 0 25;
+					fixed: 0 1;
+					align: 0.5 1.0;
+					rel1 { relative: 0.0 1.0;}
+					rel2 { relative: 1.0 1.0;}
+				}
+			}
+			part {
+				name: "pv.multi.subtitle.label.txt";
+				type: TEXTBLOCK;
+				scale: 1;
+				mouse_events: 1;
+				repeat_events: 1;
+				multiline: 1;
+				description {
+					visible: 1;
+					state: "default" 0.0;
+					align: 0.5 0.0;
+					rel1 { relative: 0.0 0.0; }
+					rel2 { relative: 1.0 0.0; to_y: "pv.multi.subtitle.main.bottom.padding";}
+					text {
+						style: "textblock_style_default";
+						align: 0.5 1.0;
+					}
+				}
+			}
+		} /* parts */
+	}	/* group */
+} /* collections */
+

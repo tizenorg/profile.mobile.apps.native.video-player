@@ -1,0 +1,306 @@
+/*
+* Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+
+//#include "pv-image.edc"
+#define SUBTITLE_TEXT_OFFSET	20
+collections {
+	group {
+	    name: "pv.subtitle-color-popup";
+	    parts{
+	            part {
+	                    name: "pv.subtitle-color-popup.main.bg";
+	                    type: SPACER;
+	                    scale: 1;
+	                    description {
+	                            state: "default" 0.0;
+								min: 0 750;
+								rel1 { relative: 0.0 0.0; }
+								rel2 { relative: 1.0 1.0; }
+	                    }
+	            }
+	            part {
+	                    name: "pv.subtitle-color-popup.title";
+	                    type: SPACER;
+	                    scale: 1;
+	                    description {
+	                            state: "default" 0.0;
+	                            min: 0 50;
+	                            fixed: 0 1;
+	                            rel1 { relative: 0.0 0.0; to: "pv.subtitle-color-popup.main.bg"; }
+	                            rel2 { relative: 1.0 0.0; to: "pv.subtitle-color-popup.main.bg"; }
+	                            align: 0.0 0.0;
+	                    }
+	            }
+				part {
+						name: "pv.subtitle-color-popup.subject";
+						type: TEXT;
+						scale: 1;
+						description {
+								state: "default" 0.0;
+								min: 0 50;
+								fixed: 0 1;
+								rel1 { relative: 0.0 1.0; offset: SUBTITLE_TEXT_OFFSET 0; to: "pv.subtitle-color-popup.title";}
+								rel2 { relative: 1.0 1.0; offset: SUBTITLE_TEXT_OFFSET 0; to: "pv.subtitle-color-popup.title";}
+								align: 0.0 0.0;
+								text {
+									align: 0.0 1.0;
+									min: 0 1;
+									size: 27;
+								}
+								color: 21 108 148 255;
+						}
+				}
+				part {
+						name: "pv.subtitle-color-popup.divideline";
+						type: RECT;
+						scale: 1;
+						description {
+								state: "default" 0.0;
+								min: 0 3;
+								fixed: 0 1;
+								rel1 { relative: 0.0 1.0; offset: -SUBTITLE_TEXT_OFFSET 0; to: "pv.subtitle-color-popup.subject";}
+								rel2 { relative: 1.0 1.0; offset: -SUBTITLE_TEXT_OFFSET 0; to: "pv.subtitle-color-popup.subject";}
+								align: 0.0 0.0;
+								color: 217 217 217 255;
+						}
+				}
+				part {
+						name: "pv.subtitle-color-popup.colorpalette.top";
+						type: SPACER;
+						scale: 1;
+						description {
+								state: "default" 0.0;
+								min: 0 50;
+								fixed: 0 1;
+								rel1 { relative: 0.0 1.0; to: "pv.subtitle-color-popup.divideline";}
+								rel2 { relative: 1.0 1.0; to: "pv.subtitle-color-popup.divideline";}
+								align: 0.0 0.0;
+						}
+				}
+
+	            part {
+	                    name: "pv.subtitle-color-popup.colorpalette.swallow";
+	                    type: SWALLOW;
+	                    scale: 1;
+	                    description {
+	                            state: "default" 0.0;
+	                            rel1 { relative: 0.0 1.0; to: "pv.subtitle-color-popup.colorpalette.top"; }
+	                            rel2 { relative: 1.0 1.0; to: "pv.subtitle-color-popup.colorpalette.top"; }
+	                            align: 0.0 0.0;
+	                    }
+	            }
+				part {
+						name: "pv.subtitle-color-popup.opacity.text";
+						type: TEXT;
+						scale: 1;
+						description {
+								state: "default" 0.0;
+								min: 0 50;
+								fixed: 0 1;
+								rel1 { relative: 0.0 1.0; offset: SUBTITLE_TEXT_OFFSET 0; to: "pv.subtitle-color-popup.colorpalette.swallow";}
+								rel2 { relative: 1.0 1.0; offset: SUBTITLE_TEXT_OFFSET 0; to: "pv.subtitle-color-popup.colorpalette.swallow";}
+								align: 0.0 0.0;
+								text {
+									align: 0.0 1.0;
+									min: 0 1;
+									size: 27;
+								}
+								color: 21 108 148 255;
+						}
+				}
+				part {
+						name: "pv.subtitle-color-popup.opacity.divideline";
+						type: RECT;
+						scale: 1;
+						description {
+								state: "default" 0.0;
+								min: 0 3;
+								fixed: 0 1;
+								rel1 { relative: 0.0 1.0; offset: -SUBTITLE_TEXT_OFFSET 0; to: "pv.subtitle-color-popup.opacity.text";}
+								rel2 { relative: 1.0 1.0; offset: -SUBTITLE_TEXT_OFFSET 0; to: "pv.subtitle-color-popup.opacity.text";}
+								align: 0.0 0.0;
+								color: 217 217 217 255;
+						}
+				}
+				part {
+						name: "pv.subtitle-color-popup.opacity.percent";
+						type: TEXT;
+						scale: 1;
+						description {
+								state: "default" 0.0;
+								min: 0 100;
+								fixed: 0 1;
+								rel1 { relative: 0.0 1.0; to: "pv.subtitle-color-popup.opacity.divideline";}
+								rel2 { relative: 1.0 1.0; to: "pv.subtitle-color-popup.opacity.divideline";}
+								align: 0.0 0.0;
+								text {
+									align: 0.5 1.0;
+									min: 0 1;
+									size: 27;
+								}
+								color: 21 108 148 255;
+						}
+				}
+
+				part {
+					name: "pad_l";
+					type: SPACER;
+					scale: 1;
+					description {
+						state: "default" 0.0;
+						min: 24 0;
+						max: 24 0;
+						fixed: 1 0;
+						align: 0.0 0.0;
+						rel1 { relative: 0.0 0.0; to: "pv.subtitle-color-popup.main.bg";}
+						rel2 { relative: 0.0 1.0; to: "pv.subtitle-color-popup.main.bg";}
+					}
+				}
+				part {
+					name: "pad_r";
+					type: SPACER;
+					scale: 1;
+					description {
+						state: "default" 0.0;
+						min: 24 0;
+						max: 24 0;
+						fixed: 1 0;
+						align: 1.0 1.0;
+						rel1 { relative: 1.0 0.0; to: "pv.subtitle-color-popup.main.bg";}
+						rel2 { relative: 1.0 1.0; to: "pv.subtitle-color-popup.main.bg";}
+					}
+				}
+
+				part {
+					name: "elm.swallow.icon.1";
+					type: SWALLOW;
+					scale: 1;
+					description {
+						state: "default" 0.0;
+						min: 63 78;
+						fixed: 1 1;
+						align: 0.0 0.0;
+						rel1 { relative: 1.0 1.0; to_x: "pad_l"; to_y: "pv.subtitle-color-popup.opacity.percent"; }
+						rel2 { relative: 1.0 1.0; to_x: "pad_l"; to_y: "pv.subtitle-color-popup.opacity.percent"; }
+					}
+				}
+				part {
+					name: "elm.swallow.icon.left";
+					type: RECT;
+					scale: 1;
+					description {
+						state: "default" 0.0;
+						visible: 0;
+						min: 6 0;
+						max: 6 0;
+						fixed: 1 0;
+						align: 0.0 0.5;
+						rel1 { relative: 1.0 1.0; to_x: "elm.swallow.icon.1"; to_y: "pv.subtitle-color-popup.opacity.percent"; }
+						rel2 { relative: 1.0 1.0; to_x: "elm.swallow.icon.1"; to_y: "pv.subtitle-color-popup.opacity.percent"; }
+					}
+				}
+				part {
+					name: "elm.swallow.icon.right";
+					type: RECT;
+					scale: 1;
+					description {
+						state: "default" 0.0;
+						visible: 0;
+						min: 6 0;
+						max: 6 0;
+						fixed: 1 0;
+						align: 1.0 0.5;
+						rel1 { relative: 0.0 1.0; to_x: "elm.swallow.icon.2"; to_y: "pv.subtitle-color-popup.opacity.percent"; }
+						rel2 { relative: 0.0 1.0; to_x: "elm.swallow.icon.2"; to_y: "pv.subtitle-color-popup.opacity.percent"; }
+					}
+				}
+				part {
+					name: "elm.swallow.icon.2";
+					type: SWALLOW;
+					scale: 1;
+					description {
+						state: "default" 0.0;
+						min: 63 78;
+						fixed: 1 1;
+						align: 1.0 0.0;
+						rel1 { relative: 0.0 1.0; to_x: "pad_r"; to_y: "pv.subtitle-color-popup.opacity.percent"; }
+						rel2 { relative: 0.0 1.0; to_x: "pad_r"; to_y: "pv.subtitle-color-popup.opacity.percent"; }
+					}
+				}
+				part {
+					name: "elm.swallow.content";
+					type: SWALLOW;
+					scale: 1;
+					description {
+						state: "default" 0.0;
+						min: 0 78;
+						fixed: 0 1;
+						align: 0.5 0.0;
+						rel1 { relative: 1.0 1.0; to_x: "elm.swallow.icon.left"; to_y: "pv.subtitle-color-popup.opacity.percent"; }
+						rel2 { relative: 0.0 1.0; to_x: "elm.swallow.icon.right"; to_y: "pv.subtitle-color-popup.opacity.percent"; }
+					}
+				}
+
+	            /*part {
+	                    name: "colorpalette_bottom_padding";
+	                    type: SPACER;
+	                    scale: 1;
+	                    description {
+	                            state: "default" 0.0;
+	                            min: 0 12;
+	                            fixed: 0 1;
+	                            rel1 {
+	                                    relative: 0.0 1.0;
+	                                    to_y: "colorpalette";
+	                                    to_x: "bg";
+	                            }
+	                            rel2 {
+	                                    to_x: "bg";
+	                                    to_y: "colorpalette";
+	                            }
+	                            align: 0.0 0.0;
+	                    }
+	            }*/
+
+	    }//end parts
+	} //end group
+	group { name: "pv.subtitle.scroller.layout";
+	   parts {
+	      part { name: "elm.swallow.content";
+	         type: SWALLOW;
+	         scale: 1;
+	         description { state: "default" 0.0;
+	            fixed: 1 0;
+	            min: 0 800;
+	         }
+	      }
+	   }
+	}
+	group { name: "pv.subtitle.scroller.layout.landscape";
+	   parts {
+	      part { name: "elm.swallow.content";
+	         type: SWALLOW;
+	         scale: 1;
+	         description { state: "default" 0.0;
+	            fixed: 1 0;
+	            min: 0 380;
+	         }
+	      }
+	   }
+	}
+}
+

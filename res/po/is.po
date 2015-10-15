@@ -1,0 +1,390 @@
+msgid "IDS_VIDEO_OPT_DOWNLOAD"
+msgstr "Sækja"
+
+msgid "IDS_VIDEO_POP_1_FOLDER_WILL_BE_DOWNLOADED"
+msgstr "1 mappa verður sótt."
+
+msgid "IDS_VIDEO_POP_1_VIDEO_WILL_BE_DOWNLOADED"
+msgstr "1 myndskeið verður sótt."
+
+msgid "IDS_VIDEO_POP_ALL_FOLDERS_WILL_BE_DOWNLOADED"
+msgstr "Allar möppur verða sóttar."
+
+msgid "IDS_VIDEO_POP_ALL_VIDEOS_WILL_BE_DOWNLOADED"
+msgstr "Öll myndskeið verða sótt."
+
+msgid "IDS_VIDEO_POP_PD_FOLDERS_WILL_BE_DOWNLOADED"
+msgstr "%d möppur verða sóttar."
+
+msgid "IDS_VIDEO_POP_PD_VIDEOS_WILL_BE_DOWNLOADED"
+msgstr "%d myndskeið verða sótt."
+
+msgid "IDS_VIDEO_TPOP_MOBILE_DATA_TURNED_OFF_CONNECT_TO_WI_FI_NETWORK_INSTEAD_OR_TURN_ON_MOBILE_DATA_AND_TRY_AGAIN"
+msgstr "Slökkt er á farsímagögnum. Tengstu Wi-Fi neti í staðinn eða kveiktu á farsímagögnum og reyndu aftur."
+
+msgid "IDS_GALLERY_OPT_PRIVATE_M_CONTENT"
+msgstr "Einkamál"
+
+msgid "IDS_VIDEO_BODY_B"
+msgstr "B"
+
+msgid "IDS_VIDEO_BODY_GB"
+msgstr "GB"
+
+msgid "IDS_VIDEO_BODY_KB"
+msgstr "KB"
+
+msgid "IDS_VIDEO_BODY_LOCATION"
+msgstr "Staðsetning"
+
+msgid "IDS_VIDEO_BODY_MB"
+msgstr "MB"
+
+msgid "IDS_VIDEO_BODY_UNKNOWN"
+msgstr "Óþekkt"
+
+msgid "IDS_VIDEO_BUTTON_OK"
+msgstr "Í lagi"
+
+msgid "IDS_VIDEO_HEADER_1_FOLDER"
+msgstr "1 mappa"
+
+msgid "IDS_VIDEO_HEADER_1_VIDEO"
+msgstr "Eitt myndskeið"
+
+msgid "IDS_VIDEO_HEADER_ALL"
+msgstr "Allt"
+
+msgid "IDS_VIDEO_HEADER_FROM_DEVICE"
+msgstr "Úr tæki"
+
+msgid "IDS_VIDEO_HEADER_FROM_DROPBOX"
+msgstr "Af Dropbox"
+
+msgid "IDS_VIDEO_HEADER_LAST_MODIFIED_M_DATE"
+msgstr "Síðast breytt"
+
+msgid "IDS_VIDEO_OPT_CONTENT_TO_DISPLAY"
+msgstr "Efni til að birta"
+
+msgid "IDS_VIDEO_OPT_SEARCH"
+msgstr "Leita"
+
+msgid "IDS_VIDEO_OPT_SHARE"
+msgstr "Deila"
+
+msgid "IDS_VIDEO_POP_1_FOLDER_WILL_BE_DELETED"
+msgstr "Einni möppu verður eytt."
+
+msgid "IDS_VIDEO_TPOP_DELETING_ING"
+msgstr "Eyði..."
+
+msgid "IDS_VIDEO_BODY_AFTER_YOU_RECORD_VIDEOS_USING_THE_CAMERA_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Eftir að þú tekur upp myndskeið með myndavélinni verða þau birt hér."
+
+msgid "IDS_VIDEO_HEADER_PD_VIDEOS"
+msgstr "%d myndskeið"
+
+msgid "IDS_VIDEO_HEADER_VIDEO"
+msgstr "Myndskeið"
+
+msgid "IDS_VIDEO_NPBODY_NO_VIDEOS"
+msgstr "Engin myndskeið"
+
+msgid "IDS_VIDEO_OPT_DETAILS"
+msgstr "Upplýsingar"
+
+msgid "IDS_VIDEO_OPT_FOLDER"
+msgstr "Mappa"
+
+msgid "IDS_VIDEO_OPT_LIST"
+msgstr "Listi"
+
+msgid "IDS_VIDEO_OPT_RECENTLY_ADDED_ABB"
+msgstr "Nýlega bætt við"
+
+msgid "IDS_VIDEO_OPT_RECENTLY_VIEWED_ABB"
+msgstr "Skoðað nýlega"
+
+msgid "IDS_VIDEO_OPT_RENAME"
+msgstr "Endurnefna"
+
+msgid "IDS_VIDEO_OPT_SIZE"
+msgstr "Stærð"
+
+msgid "IDS_VIDEO_OPT_SORT_BY"
+msgstr "Raða eftir"
+
+msgid "IDS_VIDEO_OPT_TITLE"
+msgstr "Titill"
+
+msgid "IDS_VIDEO_OPT_TYPE"
+msgstr "Gerð"
+
+msgid "IDS_VIDEO_OPT_VIEW_AS"
+msgstr "Skoða sem"
+
+msgid "IDS_VIDEO_POP_ALL_VIDEOS_WILL_BE_DELETED"
+msgstr "Öllum myndskeiðum verður eytt."
+
+msgid "IDS_VIDEO_POP_PD_FOLDERS_WILL_BE_DELETED"
+msgstr "%d möppum verður eytt."
+
+msgid "IDS_VIDEO_POP_PD_VIDEOS_WILL_BE_DELETED"
+msgstr "%d myndskeiðum verður eytt."
+
+msgid "IDS_VIDEO_POP_THIS_FOLDER_WILL_BE_DELETED"
+msgstr "Þessari möppu verður eytt."
+
+msgid "IDS_VIDEO_HEADER_PD_FOLDERS"
+msgstr "%d möppur"
+
+msgid "IDS_VIDEO_HEADER_SETTINGS"
+msgstr "Stillingar"
+
+msgid "IDS_VIDEO_HEADER_UNABLE_TO_PLAY_VIDEO_ABB"
+msgstr "Ekki hægt að spila myndskeið"
+
+msgid "IDS_VIDEO_MBODY_ALIGNMENT"
+msgstr "Jöfnun"
+
+msgid "IDS_VIDEO_MBODY_FONT_SIZE"
+msgstr "Leturstærð"
+
+msgid "IDS_VIDEO_OPT_REPEAT_SETTING_ABB"
+msgstr "Endurtekningarstilling"
+
+msgid "IDS_VIDEO_OPT_SUBTITLES_HCC_ABB"
+msgstr "Skjátextar"
+
+msgid "IDS_VIDEO_POP_ALL_FOLDERS_WILL_BE_DELETED"
+msgstr "Öllum möppum verður eytt."
+
+msgid "IDS_VIDEO_SBODY_CENTRE_M_STATUS"
+msgstr "Miðja"
+
+msgid "IDS_VIDEO_SBODY_LARGE_M_STATUS"
+msgstr "Stórt"
+
+msgid "IDS_VIDEO_SBODY_LEFT_M_STATUS"
+msgstr "Vinstri"
+
+msgid "IDS_VIDEO_SBODY_MEDIUM_M_STATUS"
+msgstr "Miðlungs"
+
+msgid "IDS_VIDEO_SBODY_RIGHT_M_STATUS"
+msgstr "Hægri"
+
+msgid "IDS_VIDEO_SBODY_SMALL_M_STATUS"
+msgstr "Lítið"
+
+msgid "IDS_VIDEO_TPOP_FILE_NAME_ALREADY_IN_USE"
+msgstr "Skráarheitið er þegar í notkun."
+
+msgid "IDS_GALLERY_OPT_REMOVE_FROM_PRIVATE"
+msgstr "Fjarlægja úr einkamálum"
+
+msgid "IDS_GALLERY_OPT_MOVE_TO_PRIVATE"
+msgstr "Færa í einkamál"
+
+msgid "IDS_IV_POP_ENTRY_IS_EMPTY"
+msgstr "Færsla er tóm."
+
+msgid "IDS_VPL_OPT_FORMAT"
+msgstr "Snið"
+
+msgid "IDS_VPL_BODY_UNABLE_TO_PLAY_VIDEO_DURING_CALL"
+msgstr "Ekki er hægt að spila vídeó á meðan símtal stendur yfir."
+
+msgid "IDS_CLOUD_BODY_DROPBOX_ABB"
+msgstr "Dropbox"
+
+msgid "IDS_VIDEO_POP_THIS_FILE_IS_UNAVAILABLE_WHILE_OFFLINE_CHECK_NETWORK_CONNECTION_AND_TRY_AGAIN"
+msgstr "Þessi skrá er ekki í boði án nettengingar. Athugaðu nettenginguna og reyndu aftur."
+
+msgid "IDS_VIDEO_POP_THE_SELECTED_ITEM_WILL_BE_MOVED_TO_PS"
+msgstr "Valið atriði verður fært í %s."
+
+msgid "IDS_VIDEO_POP_THE_SELECTED_ITEMS_WILL_BE_MOVED_TO_PS"
+msgstr "Valin atriði verða færð í %s."
+
+msgid "IDS_VIDEO_POP_REMOVING_ING"
+msgstr "Verið er að fjarlægja..."
+
+msgid "IDS_VIDEO_POP_MOVING_ING"
+msgstr "Verið er að flytja..."
+
+msgid "IDS_VIDEO_POP_FAILED_TO_MOVE_TO_PERSONAL_STORAGE"
+msgstr "Mistókst að færa í einkageymslu."
+
+msgid "IDS_VIDEO_POP_FAILED_TO_MOVE_TO_NORMAL_STORAGE"
+msgstr "Mistókst að færa í venjulega geymslu."
+
+msgid "IDS_VIDEO_OPT_MESSAGE_ABB"
+msgstr "Skilaboð"
+
+msgid "IDS_VIDEO_OPT_FOLDERS_ABB"
+msgstr "Möppur"
+
+msgid "IDS_VIDEO_OPT_EMAIL_ABB"
+msgstr "Netfang"
+
+msgid "IDS_VIDEO_OPT_DATE_HMOST_RECENT_ABB"
+msgstr "Dags. (nýjasta)"
+
+msgid "IDS_VIDEO_HEADER_PD_SELECTED"
+msgstr "%d valið"
+
+msgid "IDS_VIDEO_HEADER_DELETE_VIDEOS"
+msgstr "Eyða myndskeiðum"
+
+msgid "IDS_VIDEO_HEADER_DELETE_VIDEO"
+msgstr "Eyða myndskeiði"
+
+msgid "IDS_VIDEO_BUTTON_MOVE_ABB"
+msgstr "Færa"
+
+msgid "IDS_VIDEO_BODY_LONGITUDE"
+msgstr "Lengdargráða"
+
+msgid "IDS_VIDEO_BODY_LATITUDE"
+msgstr "Breiddargráða"
+
+msgid "IDS_VIDEO_BODY_AFTER_YOU_RECORD_VIDEOS_USING_THE_CAMERA_VIDEOS_WILL_BE_SHOWN"
+msgstr "Eftir að þú tekur upp myndskeið með myndavélinni verða myndskeið birt."
+
+msgid "IDS_VIDEO_SK_CANCEL_ABB"
+msgstr "Hætta við"
+
+msgid "IDS_VIDEO_OPT_STOP_AFTER_ALL_ABB"
+msgstr "Stöðva eftir allt"
+
+msgid "IDS_VIDEO_OPT_REPEAT_CURRENT_ABB"
+msgstr "Endurtaka þetta"
+
+msgid "IDS_VIDEO_OPT_REPEAT_ALL_ABB"
+msgstr "Endurtaka öll"
+
+msgid "IDS_VIDEO_BODY_RESOLUTION"
+msgstr "Upplausn"
+
+msgid "IDS_VIDEO_BUTTON_DELETE"
+msgstr "Eyða"
+
+msgid "IDS_ST_OPT_DELETE_ALL"
+msgstr "Eyða öllu"
+
+msgid "IDS_VPL_TPOP_ONLY_AUDIO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_AUDIO"
+msgstr "Þessi skrá styður aðeins hljóðgögn. Hljóð er nú í spilun."
+
+msgid "IDS_VPL_TPOP_ONLY_VIDEO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_VIDEO"
+msgstr "Þessi skrá styður aðeins myndgögn. Myndskeið er nú í spilun."
+
+msgid "IDS_MUSIC_OPT_RENAME"
+msgstr "Endurnefna"
+
+msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
+msgstr "Höfuðtól"
+
+msgid "IDS_VIDEO_BUTTON_DOWNLOAD"
+msgstr "Sækja"
+
+msgid "IDS_TPLATFORM_BODY_OFF"
+msgstr "Slökkt"
+
+msgid "IDS_TPLATFORM_BODY_ON"
+msgstr "Kveikt"
+
+msgid "IDS_VIDEO_POP_1_VIDEO_WILL_BE_DELETED"
+msgstr "1 myndskeiði verður eytt."
+
+msgid "IDS_SWALL_HEADER_INVALID_CHARACTER"
+msgstr "Ógildur stafur"
+
+msgid "IDS_VIDEO_BODY_NO_SEARCH_RESULTS"
+msgstr "Engar leitarniðurstöður"
+
+msgid "IDS_GALLERY_HEADER_SELECT"
+msgstr "Velja"
+
+msgid "IDS_VIDEO_BODY_LAST_MODIFIED_M_DATE_ABB"
+msgstr "Síðast breytt"
+
+msgid "IDS_VIDEO_BUTTON_DONE"
+msgstr "Lokið"
+
+msgid "IDS_VIDEO_HEADER_DATE"
+msgstr "Dagsetning"
+
+msgid "IDS_VIDEO_HEADER_LATITUDE"
+msgstr "Breiddargráða"
+
+msgid "IDS_VIDEO_OPT_NAME"
+msgstr "Heiti"
+
+msgid "IDS_VIDEO_OPT_NAME_HA_Z_ABB"
+msgstr "Heiti (A–Ö)"
+
+msgid "IDS_VIDEO_OPT_VIDEOS"
+msgstr "Myndskeið"
+
+msgid "IDS_VIDEO_TPOP_MAXIMUM_NUMBER_OF_ATTACHMENTS_HPD_EXCEEDED"
+msgstr "Hámarksfjölda viðhengja (%d) hefur verið náð."
+
+msgid "IDS_VIDEO_HEADER_SELECT_ALL"
+msgstr "Velja allt"
+
+msgid "IDS_VIDEO_SBODY_DEVICE_STORAGE"
+msgstr "Geymsla tækis"
+
+msgid "IDS_VIDEO_SBODY_SD_CARD"
+msgstr "SD-kort"
+
+msgid "IDS_VIDEO_OPT_SHARE_VIA"
+msgstr "Deila um"
+
+msgid "IDS_VIDEO_POP_A_NETWORK_ERROR_HAS_OCCURRED_TRY_AGAIN"
+msgstr "Netvilla kom upp. Reyndu aftur."
+
+msgid "IDS_VPL_OPT_AUTO_PLAY_NEXT_ABB"
+msgstr "Sp. næsta sj.kr."
+
+msgid "IDS_VPL_POP_PROCESSING_ING"
+msgstr "Vinnsla í gangi..."
+
+msgid "IDS_MEMO_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Hámarksfjölda stafa hefur verið náð."
+
+msgid "IDS_MUSIC_OPT_DELETE"
+msgstr "Eyða"
+
+msgid "IDS_MUSIC_OPT_DELETE_ALL"
+msgstr "Eyða öllu"
+
+msgid "IDS_PB_BODY_NO_SEARCH_RESULT"
+msgstr "Engar leitarniðurstöður"
+
+msgid "IDS_VIDEO_HEADER_SELECT_ITEM"
+msgstr "Velja hlut"
+
+msgid "IDS_VIDEO_HEADER_SELECT_ITEMS"
+msgstr "Velja hluti"
+
+msgid "IDS_CLOCK_BUTTON_CANCEL"
+msgstr "Hætta v."
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "LOKIÐ"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "HÆTTA VIÐ"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DELETE_ABB"
+msgstr "EYÐA"
+
+msgid "IDS_TPLATFORM_MBODY_STORAGE_LOCATION"
+msgstr "Geymslustaður"
+
+msgid "IDS_GALLERY_HEADER_SELECT_VIDEO"
+msgstr "Velja myndskeið"
+

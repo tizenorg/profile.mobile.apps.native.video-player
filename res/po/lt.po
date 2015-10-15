@@ -1,0 +1,390 @@
+msgid "IDS_VIDEO_OPT_DOWNLOAD"
+msgstr "Atsisiųsti"
+
+msgid "IDS_VIDEO_POP_1_FOLDER_WILL_BE_DOWNLOADED"
+msgstr "Bus atsiųstas 1 aplankas."
+
+msgid "IDS_VIDEO_POP_1_VIDEO_WILL_BE_DOWNLOADED"
+msgstr "Bus atsiųstas 1 vaizdo įrašas."
+
+msgid "IDS_VIDEO_POP_ALL_FOLDERS_WILL_BE_DOWNLOADED"
+msgstr "Bus atsiųsti visi aplankai."
+
+msgid "IDS_VIDEO_POP_ALL_VIDEOS_WILL_BE_DOWNLOADED"
+msgstr "Bus atsiųsti visi vaizdo įrašai."
+
+msgid "IDS_VIDEO_POP_PD_FOLDERS_WILL_BE_DOWNLOADED"
+msgstr "Bus atsiųsta aplankų: %d."
+
+msgid "IDS_VIDEO_POP_PD_VIDEOS_WILL_BE_DOWNLOADED"
+msgstr "Bus atsiųsta vaizdo įrašų: %d."
+
+msgid "IDS_VIDEO_TPOP_MOBILE_DATA_TURNED_OFF_CONNECT_TO_WI_FI_NETWORK_INSTEAD_OR_TURN_ON_MOBILE_DATA_AND_TRY_AGAIN"
+msgstr "Mobilieji duomenys išjungti. Vietoj to prisijunkite prie „Wi-Fi“ tinklo arba įjunkite mobiliuosius duomenis ir bandykite dar kartą."
+
+msgid "IDS_GALLERY_OPT_PRIVATE_M_CONTENT"
+msgstr "Privatus"
+
+msgid "IDS_VIDEO_BODY_B"
+msgstr "B"
+
+msgid "IDS_VIDEO_BODY_GB"
+msgstr "GB"
+
+msgid "IDS_VIDEO_BODY_KB"
+msgstr "KB"
+
+msgid "IDS_VIDEO_BODY_LOCATION"
+msgstr "Vieta"
+
+msgid "IDS_VIDEO_BODY_MB"
+msgstr "MB"
+
+msgid "IDS_VIDEO_BODY_UNKNOWN"
+msgstr "Nežinomas"
+
+msgid "IDS_VIDEO_BUTTON_OK"
+msgstr "Gerai"
+
+msgid "IDS_VIDEO_HEADER_1_FOLDER"
+msgstr "1 aplankas"
+
+msgid "IDS_VIDEO_HEADER_1_VIDEO"
+msgstr "1 vaizdo įrašas"
+
+msgid "IDS_VIDEO_HEADER_ALL"
+msgstr "Visos"
+
+msgid "IDS_VIDEO_HEADER_FROM_DEVICE"
+msgstr "Iš įrenginio"
+
+msgid "IDS_VIDEO_HEADER_FROM_DROPBOX"
+msgstr "Iš „Dropbox“"
+
+msgid "IDS_VIDEO_HEADER_LAST_MODIFIED_M_DATE"
+msgstr "Paskutinį kartą keista"
+
+msgid "IDS_VIDEO_OPT_CONTENT_TO_DISPLAY"
+msgstr "Rodytinas turinys"
+
+msgid "IDS_VIDEO_OPT_SEARCH"
+msgstr "Paieška"
+
+msgid "IDS_VIDEO_OPT_SHARE"
+msgstr "Dalytis"
+
+msgid "IDS_VIDEO_POP_1_FOLDER_WILL_BE_DELETED"
+msgstr "Bus ištrintas 1 aplankas."
+
+msgid "IDS_VIDEO_TPOP_DELETING_ING"
+msgstr "Trinama..."
+
+msgid "IDS_VIDEO_BODY_AFTER_YOU_RECORD_VIDEOS_USING_THE_CAMERA_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Kai fotoaparatu įrašysite vaizdo įrašų, jie bus rodomi čia."
+
+msgid "IDS_VIDEO_HEADER_PD_VIDEOS"
+msgstr "%d vaizdo įrašai (-ų)"
+
+msgid "IDS_VIDEO_HEADER_VIDEO"
+msgstr "Vaizdo įrašas"
+
+msgid "IDS_VIDEO_NPBODY_NO_VIDEOS"
+msgstr "Vaizdo įrašų nėra"
+
+msgid "IDS_VIDEO_OPT_DETAILS"
+msgstr "Išsami informacija"
+
+msgid "IDS_VIDEO_OPT_FOLDER"
+msgstr "Aplankas"
+
+msgid "IDS_VIDEO_OPT_LIST"
+msgstr "Sąrašas"
+
+msgid "IDS_VIDEO_OPT_RECENTLY_ADDED_ABB"
+msgstr "Neseniai prid."
+
+msgid "IDS_VIDEO_OPT_RECENTLY_VIEWED_ABB"
+msgstr "Neseniai peržiūrėta"
+
+msgid "IDS_VIDEO_OPT_RENAME"
+msgstr "Pervardyti"
+
+msgid "IDS_VIDEO_OPT_SIZE"
+msgstr "Dydis"
+
+msgid "IDS_VIDEO_OPT_SORT_BY"
+msgstr "Rūšiuoti pagal"
+
+msgid "IDS_VIDEO_OPT_TITLE"
+msgstr "Pavadinimas"
+
+msgid "IDS_VIDEO_OPT_TYPE"
+msgstr "Tipas"
+
+msgid "IDS_VIDEO_OPT_VIEW_AS"
+msgstr "Peržiūrėti kaip"
+
+msgid "IDS_VIDEO_POP_ALL_VIDEOS_WILL_BE_DELETED"
+msgstr "Visi vaizdo įrašai bus ištrinti."
+
+msgid "IDS_VIDEO_POP_PD_FOLDERS_WILL_BE_DELETED"
+msgstr "Bus ištrinti aplankai: %d."
+
+msgid "IDS_VIDEO_POP_PD_VIDEOS_WILL_BE_DELETED"
+msgstr "Bus ištrinta vaizdo įrašų: %d."
+
+msgid "IDS_VIDEO_POP_THIS_FOLDER_WILL_BE_DELETED"
+msgstr "Šis aplankas bus ištrintas."
+
+msgid "IDS_VIDEO_HEADER_PD_FOLDERS"
+msgstr "%d aplankai (-ų)"
+
+msgid "IDS_VIDEO_HEADER_SETTINGS"
+msgstr "Nustatymai"
+
+msgid "IDS_VIDEO_HEADER_UNABLE_TO_PLAY_VIDEO_ABB"
+msgstr "Negalima paleisti vaizdo įrašo"
+
+msgid "IDS_VIDEO_MBODY_ALIGNMENT"
+msgstr "Lygiavimas"
+
+msgid "IDS_VIDEO_MBODY_FONT_SIZE"
+msgstr "Šrifto dydis"
+
+msgid "IDS_VIDEO_OPT_REPEAT_SETTING_ABB"
+msgstr "Kartoti nustatymą"
+
+msgid "IDS_VIDEO_OPT_SUBTITLES_HCC_ABB"
+msgstr "Subtitrai (pasirenkami)"
+
+msgid "IDS_VIDEO_POP_ALL_FOLDERS_WILL_BE_DELETED"
+msgstr "Bus ištrinti visi aplankai."
+
+msgid "IDS_VIDEO_SBODY_CENTRE_M_STATUS"
+msgstr "Centruoti"
+
+msgid "IDS_VIDEO_SBODY_LARGE_M_STATUS"
+msgstr "Didelis"
+
+msgid "IDS_VIDEO_SBODY_LEFT_M_STATUS"
+msgstr "Kairė"
+
+msgid "IDS_VIDEO_SBODY_MEDIUM_M_STATUS"
+msgstr "Vidutinis"
+
+msgid "IDS_VIDEO_SBODY_RIGHT_M_STATUS"
+msgstr "Dešinė"
+
+msgid "IDS_VIDEO_SBODY_SMALL_M_STATUS"
+msgstr "Mažas"
+
+msgid "IDS_VIDEO_TPOP_FILE_NAME_ALREADY_IN_USE"
+msgstr "Failo pavadinimas jau naudojamas"
+
+msgid "IDS_GALLERY_OPT_REMOVE_FROM_PRIVATE"
+msgstr "Pašalinti iš privataus"
+
+msgid "IDS_GALLERY_OPT_MOVE_TO_PRIVATE"
+msgstr "Perkelti į asmeninį"
+
+msgid "IDS_IV_POP_ENTRY_IS_EMPTY"
+msgstr "Įrašas tuščias."
+
+msgid "IDS_VPL_OPT_FORMAT"
+msgstr "Formatas"
+
+msgid "IDS_VPL_BODY_UNABLE_TO_PLAY_VIDEO_DURING_CALL"
+msgstr "Pokalbio metu negalima paleisti vaizdo įrašo."
+
+msgid "IDS_CLOUD_BODY_DROPBOX_ABB"
+msgstr "Dropbox"
+
+msgid "IDS_VIDEO_POP_THIS_FILE_IS_UNAVAILABLE_WHILE_OFFLINE_CHECK_NETWORK_CONNECTION_AND_TRY_AGAIN"
+msgstr "Šio failo neįmanoma pasiekti atsijungus. Patikrinkite tinklo ryšį ir bandykite dar kartą."
+
+msgid "IDS_VIDEO_POP_THE_SELECTED_ITEM_WILL_BE_MOVED_TO_PS"
+msgstr "Pasirinktas elementas bus perkeltas į %s."
+
+msgid "IDS_VIDEO_POP_THE_SELECTED_ITEMS_WILL_BE_MOVED_TO_PS"
+msgstr "Pasirinkti elementai bus perkelti į %s."
+
+msgid "IDS_VIDEO_POP_REMOVING_ING"
+msgstr "Šalinama..."
+
+msgid "IDS_VIDEO_POP_MOVING_ING"
+msgstr "Perkeliama..."
+
+msgid "IDS_VIDEO_POP_FAILED_TO_MOVE_TO_PERSONAL_STORAGE"
+msgstr "Nepavyko perkelti į asmeninę saugyklą."
+
+msgid "IDS_VIDEO_POP_FAILED_TO_MOVE_TO_NORMAL_STORAGE"
+msgstr "Nepavyko perkelti į įprastą saugyklą."
+
+msgid "IDS_VIDEO_OPT_MESSAGE_ABB"
+msgstr "Žinutė"
+
+msgid "IDS_VIDEO_OPT_FOLDERS_ABB"
+msgstr "Aplankai"
+
+msgid "IDS_VIDEO_OPT_EMAIL_ABB"
+msgstr "El. paštas"
+
+msgid "IDS_VIDEO_OPT_DATE_HMOST_RECENT_ABB"
+msgstr "Data (naujausi)"
+
+msgid "IDS_VIDEO_HEADER_PD_SELECTED"
+msgstr "Pasirinkta: %d"
+
+msgid "IDS_VIDEO_HEADER_DELETE_VIDEOS"
+msgstr "Trinti vaizdo įrašus"
+
+msgid "IDS_VIDEO_HEADER_DELETE_VIDEO"
+msgstr "Trinti vaizdo įrašą"
+
+msgid "IDS_VIDEO_BUTTON_MOVE_ABB"
+msgstr "Perkelti"
+
+msgid "IDS_VIDEO_BODY_LONGITUDE"
+msgstr "Ilguma"
+
+msgid "IDS_VIDEO_BODY_LATITUDE"
+msgstr "Platuma"
+
+msgid "IDS_VIDEO_BODY_AFTER_YOU_RECORD_VIDEOS_USING_THE_CAMERA_VIDEOS_WILL_BE_SHOWN"
+msgstr "Kai įrašysite vaizdo įrašus naudodami fotoaparatą, jie bus rodomi."
+
+msgid "IDS_VIDEO_SK_CANCEL_ABB"
+msgstr "Atš."
+
+msgid "IDS_VIDEO_OPT_STOP_AFTER_ALL_ABB"
+msgstr "Stabdyti po visų"
+
+msgid "IDS_VIDEO_OPT_REPEAT_CURRENT_ABB"
+msgstr "Kartoti dabartinį"
+
+msgid "IDS_VIDEO_OPT_REPEAT_ALL_ABB"
+msgstr "Kartoti viską"
+
+msgid "IDS_VIDEO_BODY_RESOLUTION"
+msgstr "Raiška"
+
+msgid "IDS_VIDEO_BUTTON_DELETE"
+msgstr "Trinti"
+
+msgid "IDS_ST_OPT_DELETE_ALL"
+msgstr "Trinti viską"
+
+msgid "IDS_VPL_TPOP_ONLY_AUDIO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_AUDIO"
+msgstr "Šis failas palaiko tik garso duomenis. Dabar atkuriamas garsas."
+
+msgid "IDS_VPL_TPOP_ONLY_VIDEO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_VIDEO"
+msgstr "Šis failas palaiko tik vaizdo duomenis. Dabar atkuriamas vaizdas."
+
+msgid "IDS_MUSIC_OPT_RENAME"
+msgstr "Pervardyti"
+
+msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
+msgstr "Ausinės"
+
+msgid "IDS_VIDEO_BUTTON_DOWNLOAD"
+msgstr "Atsisiųsti"
+
+msgid "IDS_TPLATFORM_BODY_OFF"
+msgstr "Išjungta"
+
+msgid "IDS_TPLATFORM_BODY_ON"
+msgstr "Įjungta"
+
+msgid "IDS_VIDEO_POP_1_VIDEO_WILL_BE_DELETED"
+msgstr "Bus pašalintas 1 vaizdo įrašas."
+
+msgid "IDS_SWALL_HEADER_INVALID_CHARACTER"
+msgstr "Neteisingas simbolis"
+
+msgid "IDS_VIDEO_BODY_NO_SEARCH_RESULTS"
+msgstr "Nėra paieškos rezultatų"
+
+msgid "IDS_GALLERY_HEADER_SELECT"
+msgstr "Pasirinkti"
+
+msgid "IDS_VIDEO_BODY_LAST_MODIFIED_M_DATE_ABB"
+msgstr "Paskutinį kartą keista"
+
+msgid "IDS_VIDEO_BUTTON_DONE"
+msgstr "Atlikta"
+
+msgid "IDS_VIDEO_HEADER_DATE"
+msgstr "Data"
+
+msgid "IDS_VIDEO_HEADER_LATITUDE"
+msgstr "Platuma"
+
+msgid "IDS_VIDEO_OPT_NAME"
+msgstr "Vardas"
+
+msgid "IDS_VIDEO_OPT_NAME_HA_Z_ABB"
+msgstr "Pavadinimas (A–Z)"
+
+msgid "IDS_VIDEO_OPT_VIDEOS"
+msgstr "Vaizdo įrašai"
+
+msgid "IDS_VIDEO_TPOP_MAXIMUM_NUMBER_OF_ATTACHMENTS_HPD_EXCEEDED"
+msgstr "Viršytas didžiausias priedų skaičius (%d)."
+
+msgid "IDS_VIDEO_HEADER_SELECT_ALL"
+msgstr "Rinktis viską"
+
+msgid "IDS_VIDEO_SBODY_DEVICE_STORAGE"
+msgstr "Įrenginio atmintis"
+
+msgid "IDS_VIDEO_SBODY_SD_CARD"
+msgstr "SD kortelė"
+
+msgid "IDS_VIDEO_OPT_SHARE_VIA"
+msgstr "Bendrinti per"
+
+msgid "IDS_VIDEO_POP_A_NETWORK_ERROR_HAS_OCCURRED_TRY_AGAIN"
+msgstr "Įvyko tinklo klaida. Bandykite dar kartą."
+
+msgid "IDS_VPL_OPT_AUTO_PLAY_NEXT_ABB"
+msgstr "Autm. leisti kitą"
+
+msgid "IDS_VPL_POP_PROCESSING_ING"
+msgstr "Apdorojama..."
+
+msgid "IDS_MEMO_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Pasiektas didžiausias simbolių skaičius."
+
+msgid "IDS_MUSIC_OPT_DELETE"
+msgstr "Trinti"
+
+msgid "IDS_MUSIC_OPT_DELETE_ALL"
+msgstr "Trinti viską"
+
+msgid "IDS_PB_BODY_NO_SEARCH_RESULT"
+msgstr "Rezultatų nerasta"
+
+msgid "IDS_VIDEO_HEADER_SELECT_ITEM"
+msgstr "Pasirinkti elementą"
+
+msgid "IDS_VIDEO_HEADER_SELECT_ITEMS"
+msgstr "Pasirinkti elementų"
+
+msgid "IDS_CLOCK_BUTTON_CANCEL"
+msgstr "Atšaukti"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "ATLIKTA"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "ATŠAUKTI"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DELETE_ABB"
+msgstr "IŠTRINTI"
+
+msgid "IDS_TPLATFORM_MBODY_STORAGE_LOCATION"
+msgstr "Saugojimo vieta"
+
+msgid "IDS_GALLERY_HEADER_SELECT_VIDEO"
+msgstr "Pasirinkti vaizdo įrašą"
+

@@ -1,0 +1,38 @@
+/*
+* Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+
+#include "custom/pv-custom-define.edc"
+#include "custom/pv-custom-image.edc"
+externals {
+	   external: "elm";
+	   external: "feedback";
+	}
+collections {
+	plugins {
+	plugin {
+		name: "touch_sound_plugin";
+		source: "feedback";
+		param: "FEEDBACK_TYPE_SOUND FEEDBACK_PATTERN_TAP";
+		}
+	}
+	#include "custom/pv-custom-layout.edc"
+	#include "custom/pv-custom-naviframe.edc"
+	#include "custom/pv-custom-button.edc"
+	#include "custom/pv-custom-gengrid-item.edc"
+	#include "custom/pv-custom-genlist-item.edc"
+	#include "custom/pv-custom-colorselector.edc"
+}

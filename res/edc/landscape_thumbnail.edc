@@ -1,0 +1,223 @@
+/*
+* Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+#define GRAY_RECT_COLOR			128 128 128 128
+#define SPEEDBOX_OFFSET_Y		225
+
+
+#include "image_res.edc"
+#include "vp_font.edc"
+
+collections {
+	group {
+		name: "landscape.thumb";
+
+		parts {
+			part {
+				name: "landscape.thumb";
+				type: RECT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					rel1 { relative: 0.0 0.0;}
+					rel2 { relative: 1.0 1.0;}
+					color: 255 255 255 255;
+				}
+			}
+			part {
+				name: "landscape.thumb.preview.image";
+				type: SWALLOW;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					align: 0.0 0.0;
+					rel1 { relative: 0.0 0.0; }
+					rel2 { relative: 1.0 1.0; }
+				}
+				description {
+					state: "show" 0.0;
+					inherit: "default" 0.0;
+					visible: 1;
+				}
+				description {
+					state: "hide" 0.0;
+					inherit: "default" 0.0;
+					visible: 0;
+				}
+			}
+			part {
+				name: "landscape.thumb.preview.text.bg";
+				type: RECT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 0 68;
+					fixed: 0 1;
+					align: 0.0 1.0;
+					color: 0 0 0 102;
+					rel1 { relative: 0.0 1.0; to: "landscape.thumb.preview.image"; }
+					rel2 { relative: 1.0 1.0; to: "landscape.thumb.preview.image"; }
+				}
+				description {
+					state: "show" 0.0;
+					inherit: "default" 0.0;
+					visible: 1;
+				}
+				description {
+					state: "hide" 0.0;
+					inherit: "default" 0.0;
+					visible: 0;
+				}
+			}
+			part {
+				name: "landscape.thumb.preview.title";
+				type: RECT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 0 50;
+					fixed: 0 1;
+					align: 0.0 0.5;
+					color: 0 0 0 0;
+					rel1 { relative: 0.0433 0.5; to: "landscape.thumb.preview.text.bg"; }
+					rel2 { relative: 0.59 0.5; to: "landscape.thumb.preview.text.bg"; }
+				}
+				description {
+					state: "show" 0.0;
+					inherit: "default" 0.0;
+					visible: 1;
+				}
+				description {
+					state: "hide" 0.0;
+					inherit: "default" 0.0;
+					visible: 0;
+				}
+			}
+			part {
+				name: "landscape.thumb.preview.title.text";
+				type: TEXT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					align: 0.0 0.0;
+					rel1 { relative: 0.0 0.0; to: "landscape.thumb.preview.title"; }
+					rel2 { relative: 1.0 1.0; to: "landscape.thumb.preview.title"; }
+					text {
+						font: FONT_BOLD_TYPE;
+						size: 26;
+						text: "TITLE";
+						align: 0.0 0.5;
+					}
+					color: 255 255 255 28;
+				}
+				description {
+					state: "show" 0.0;
+					inherit: "default" 0.0;
+					visible: 1;
+				}
+				description {
+					state: "hide" 0.0;
+					inherit: "default" 0.0;
+					visible: 0;
+				}
+			}
+			part {
+				name: "landscape.thumb.preview.duration";
+				type: RECT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 0 50;
+					fixed: 0 1;
+					align: 1.0 0.5;
+					color: 0 0 0 0;
+					rel1 { relative: 0.6 0.5; to: "landscape.thumb.preview.text.bg"; }
+					rel2 { relative: 0.9567 0.5; to: "landscape.thumb.preview.text.bg"; }
+				}
+				description {
+					state: "show" 0.0;
+					inherit: "default" 0.0;
+					visible: 1;
+				}
+				description {
+					state: "hide" 0.0;
+					inherit: "default" 0.0;
+					visible: 0;
+				}
+			}
+			part {
+				name: "landscape.thumb.preview.duration.text";
+				type: TEXT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					align: 0.0 0.0;
+					rel1 { relative: 0.0 0.0; to: "landscape.thumb.preview.duration"; }
+					rel2 { relative: 1.0 1.0; to: "landscape.thumb.preview.duration"; }
+					text {
+						font: FONT_BOLD_TYPE;
+						size: 26;
+						text: "--:--:--/--:--:--";
+						align: 0.0 0.5;
+					}
+					color: 255 255 255 28;
+				}
+				description {
+					state: "show" 0.0;
+					inherit: "default" 0.0;
+					visible: 1;
+				}
+				description {
+					state: "hide" 0.0;
+					inherit: "default" 0.0;
+					visible: 0;
+				}
+			}
+		} /* parts */
+
+		programs {
+			program {
+ 				signal: "signal.landscape.thumb.preview.show";
+ 				source: "*";
+				action: STATE_SET "show" 0.0;
+				target: "landscape.thumb.preview.image";
+				target: "landscape.thumb.preview.text.bg";
+				target: "landscape.thumb.preview.title";
+				target: "landscape.thumb.preview.title.text";
+				target: "landscape.thumb.preview.duration";
+				target: "landscape.thumb.preview.duration.text";
+			}
+			program {
+ 				signal: "signal.landscape.thumb.preview.hide";
+ 				source: "*";
+				action: STATE_SET "hide" 0.0;
+				target: "landscape.thumb.preview.image";
+				target: "landscape.thumb.preview.text.bg";
+				target: "landscape.thumb.preview.title";
+				target: "landscape.thumb.preview.title.text";
+				target: "landscape.thumb.preview.duration";
+				target: "landscape.thumb.preview.duration.text";
+			}
+		}
+	} /* group */
+} /* collection */

@@ -1,0 +1,390 @@
+msgid "IDS_VIDEO_OPT_DOWNLOAD"
+msgstr "下載"
+
+msgid "IDS_VIDEO_POP_1_FOLDER_WILL_BE_DOWNLOADED"
+msgstr "將下載 1 個資料夾。"
+
+msgid "IDS_VIDEO_POP_1_VIDEO_WILL_BE_DOWNLOADED"
+msgstr "將下載 1 個影片。"
+
+msgid "IDS_VIDEO_POP_ALL_FOLDERS_WILL_BE_DOWNLOADED"
+msgstr "將下載所有資料夾。"
+
+msgid "IDS_VIDEO_POP_ALL_VIDEOS_WILL_BE_DOWNLOADED"
+msgstr "將下載所有影片。"
+
+msgid "IDS_VIDEO_POP_PD_FOLDERS_WILL_BE_DOWNLOADED"
+msgstr "將下載 %d 個資料夾。"
+
+msgid "IDS_VIDEO_POP_PD_VIDEOS_WILL_BE_DOWNLOADED"
+msgstr "將下載 %d 個影片。"
+
+msgid "IDS_VIDEO_TPOP_MOBILE_DATA_TURNED_OFF_CONNECT_TO_WI_FI_NETWORK_INSTEAD_OR_TURN_ON_MOBILE_DATA_AND_TRY_AGAIN"
+msgstr "流動數據已關閉。改為連接至 Wi-Fi 網絡或開啟流動數據並重試。"
+
+msgid "IDS_GALLERY_OPT_PRIVATE_M_CONTENT"
+msgstr "私人資料夾"
+
+msgid "IDS_VIDEO_BODY_B"
+msgstr "B"
+
+msgid "IDS_VIDEO_BODY_GB"
+msgstr "GB"
+
+msgid "IDS_VIDEO_BODY_KB"
+msgstr "KB"
+
+msgid "IDS_VIDEO_BODY_LOCATION"
+msgstr "位置"
+
+msgid "IDS_VIDEO_BODY_MB"
+msgstr "MB"
+
+msgid "IDS_VIDEO_BODY_UNKNOWN"
+msgstr "未知"
+
+msgid "IDS_VIDEO_BUTTON_OK"
+msgstr "確定"
+
+msgid "IDS_VIDEO_HEADER_1_FOLDER"
+msgstr "1 個資料夾"
+
+msgid "IDS_VIDEO_HEADER_1_VIDEO"
+msgstr "1 個影片"
+
+msgid "IDS_VIDEO_HEADER_ALL"
+msgstr "全部"
+
+msgid "IDS_VIDEO_HEADER_FROM_DEVICE"
+msgstr "從裝置"
+
+msgid "IDS_VIDEO_HEADER_FROM_DROPBOX"
+msgstr "從 Dropbox"
+
+msgid "IDS_VIDEO_HEADER_LAST_MODIFIED_M_DATE"
+msgstr "上次修改"
+
+msgid "IDS_VIDEO_OPT_CONTENT_TO_DISPLAY"
+msgstr "要顯示的內容"
+
+msgid "IDS_VIDEO_OPT_SEARCH"
+msgstr "搜尋"
+
+msgid "IDS_VIDEO_OPT_SHARE"
+msgstr "分享"
+
+msgid "IDS_VIDEO_POP_1_FOLDER_WILL_BE_DELETED"
+msgstr "1 個資料夾將被刪除。"
+
+msgid "IDS_VIDEO_TPOP_DELETING_ING"
+msgstr "正在刪除..."
+
+msgid "IDS_VIDEO_BODY_AFTER_YOU_RECORD_VIDEOS_USING_THE_CAMERA_THEY_WILL_BE_SHOWN_HERE"
+msgstr "使用相機錄製影片後，將顯示於此。"
+
+msgid "IDS_VIDEO_HEADER_PD_VIDEOS"
+msgstr "%d 個影片"
+
+msgid "IDS_VIDEO_HEADER_VIDEO"
+msgstr "影片"
+
+msgid "IDS_VIDEO_NPBODY_NO_VIDEOS"
+msgstr "無影片"
+
+msgid "IDS_VIDEO_OPT_DETAILS"
+msgstr "詳細資料"
+
+msgid "IDS_VIDEO_OPT_FOLDER"
+msgstr "資料夾"
+
+msgid "IDS_VIDEO_OPT_LIST"
+msgstr "清單"
+
+msgid "IDS_VIDEO_OPT_RECENTLY_ADDED_ABB"
+msgstr "最近加入"
+
+msgid "IDS_VIDEO_OPT_RECENTLY_VIEWED_ABB"
+msgstr "最近檢視"
+
+msgid "IDS_VIDEO_OPT_RENAME"
+msgstr "重新命名"
+
+msgid "IDS_VIDEO_OPT_SIZE"
+msgstr "大小"
+
+msgid "IDS_VIDEO_OPT_SORT_BY"
+msgstr "排序方式"
+
+msgid "IDS_VIDEO_OPT_TITLE"
+msgstr "標題"
+
+msgid "IDS_VIDEO_OPT_TYPE"
+msgstr "類型"
+
+msgid "IDS_VIDEO_OPT_VIEW_AS"
+msgstr "檢視方式"
+
+msgid "IDS_VIDEO_POP_ALL_VIDEOS_WILL_BE_DELETED"
+msgstr "所有影片將被刪除。"
+
+msgid "IDS_VIDEO_POP_PD_FOLDERS_WILL_BE_DELETED"
+msgstr "%d 個資料夾將被刪除。"
+
+msgid "IDS_VIDEO_POP_PD_VIDEOS_WILL_BE_DELETED"
+msgstr "%d 個影片將被刪除。"
+
+msgid "IDS_VIDEO_POP_THIS_FOLDER_WILL_BE_DELETED"
+msgstr "此資料夾將被刪除。"
+
+msgid "IDS_VIDEO_HEADER_PD_FOLDERS"
+msgstr "%d 個資料夾"
+
+msgid "IDS_VIDEO_HEADER_SETTINGS"
+msgstr "設定"
+
+msgid "IDS_VIDEO_HEADER_UNABLE_TO_PLAY_VIDEO_ABB"
+msgstr "無法播放影片"
+
+msgid "IDS_VIDEO_MBODY_ALIGNMENT"
+msgstr "校準"
+
+msgid "IDS_VIDEO_MBODY_FONT_SIZE"
+msgstr "字體大小"
+
+msgid "IDS_VIDEO_OPT_REPEAT_SETTING_ABB"
+msgstr "重複設定"
+
+msgid "IDS_VIDEO_OPT_SUBTITLES_HCC_ABB"
+msgstr "字幕 (CC)"
+
+msgid "IDS_VIDEO_POP_ALL_FOLDERS_WILL_BE_DELETED"
+msgstr "所有資料夾將被刪除。"
+
+msgid "IDS_VIDEO_SBODY_CENTRE_M_STATUS"
+msgstr "置中"
+
+msgid "IDS_VIDEO_SBODY_LARGE_M_STATUS"
+msgstr "大"
+
+msgid "IDS_VIDEO_SBODY_LEFT_M_STATUS"
+msgstr "靠左"
+
+msgid "IDS_VIDEO_SBODY_MEDIUM_M_STATUS"
+msgstr "中"
+
+msgid "IDS_VIDEO_SBODY_RIGHT_M_STATUS"
+msgstr "靠右"
+
+msgid "IDS_VIDEO_SBODY_SMALL_M_STATUS"
+msgstr "小"
+
+msgid "IDS_VIDEO_TPOP_FILE_NAME_ALREADY_IN_USE"
+msgstr "檔案名稱已被使用"
+
+msgid "IDS_GALLERY_OPT_REMOVE_FROM_PRIVATE"
+msgstr "從私人資料夾中移除"
+
+msgid "IDS_GALLERY_OPT_MOVE_TO_PRIVATE"
+msgstr "移動至私人資料夾"
+
+msgid "IDS_IV_POP_ENTRY_IS_EMPTY"
+msgstr "空白記錄。"
+
+msgid "IDS_VPL_OPT_FORMAT"
+msgstr "格式"
+
+msgid "IDS_VPL_BODY_UNABLE_TO_PLAY_VIDEO_DURING_CALL"
+msgstr "通話期間無法播放影片。"
+
+msgid "IDS_CLOUD_BODY_DROPBOX_ABB"
+msgstr "Dropbox"
+
+msgid "IDS_VIDEO_POP_THIS_FILE_IS_UNAVAILABLE_WHILE_OFFLINE_CHECK_NETWORK_CONNECTION_AND_TRY_AGAIN"
+msgstr "離線時無法使用此檔案。檢查網絡連線並重試一次。"
+
+msgid "IDS_VIDEO_POP_THE_SELECTED_ITEM_WILL_BE_MOVED_TO_PS"
+msgstr "選擇的項目將被移至 %s。"
+
+msgid "IDS_VIDEO_POP_THE_SELECTED_ITEMS_WILL_BE_MOVED_TO_PS"
+msgstr "選擇的項目將被移至 %s。"
+
+msgid "IDS_VIDEO_POP_REMOVING_ING"
+msgstr "正在移除..."
+
+msgid "IDS_VIDEO_POP_MOVING_ING"
+msgstr "正在移動..."
+
+msgid "IDS_VIDEO_POP_FAILED_TO_MOVE_TO_PERSONAL_STORAGE"
+msgstr "無法移至個人儲存空間。"
+
+msgid "IDS_VIDEO_POP_FAILED_TO_MOVE_TO_NORMAL_STORAGE"
+msgstr "無法移至一般儲存空間。"
+
+msgid "IDS_VIDEO_OPT_MESSAGE_ABB"
+msgstr "訊息"
+
+msgid "IDS_VIDEO_OPT_FOLDERS_ABB"
+msgstr "資料夾"
+
+msgid "IDS_VIDEO_OPT_EMAIL_ABB"
+msgstr "電子郵件"
+
+msgid "IDS_VIDEO_OPT_DATE_HMOST_RECENT_ABB"
+msgstr "日期（最近）"
+
+msgid "IDS_VIDEO_HEADER_PD_SELECTED"
+msgstr "%d 已選擇"
+
+msgid "IDS_VIDEO_HEADER_DELETE_VIDEOS"
+msgstr "刪除影片"
+
+msgid "IDS_VIDEO_HEADER_DELETE_VIDEO"
+msgstr "刪除影片"
+
+msgid "IDS_VIDEO_BUTTON_MOVE_ABB"
+msgstr "移動"
+
+msgid "IDS_VIDEO_BODY_LONGITUDE"
+msgstr "經度"
+
+msgid "IDS_VIDEO_BODY_LATITUDE"
+msgstr "緯度"
+
+msgid "IDS_VIDEO_BODY_AFTER_YOU_RECORD_VIDEOS_USING_THE_CAMERA_VIDEOS_WILL_BE_SHOWN"
+msgstr "使用相機錄製影片後，將顯示影片。"
+
+msgid "IDS_VIDEO_SK_CANCEL_ABB"
+msgstr "取消"
+
+msgid "IDS_VIDEO_OPT_STOP_AFTER_ALL_ABB"
+msgstr "全部播放後停止"
+
+msgid "IDS_VIDEO_OPT_REPEAT_CURRENT_ABB"
+msgstr "重複目前的"
+
+msgid "IDS_VIDEO_OPT_REPEAT_ALL_ABB"
+msgstr "重複全部"
+
+msgid "IDS_VIDEO_BODY_RESOLUTION"
+msgstr "解像度"
+
+msgid "IDS_VIDEO_BUTTON_DELETE"
+msgstr "刪除"
+
+msgid "IDS_ST_OPT_DELETE_ALL"
+msgstr "全部刪除"
+
+msgid "IDS_VPL_TPOP_ONLY_AUDIO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_AUDIO"
+msgstr "此檔案僅支援音訊數據。現正播放音訊。"
+
+msgid "IDS_VPL_TPOP_ONLY_VIDEO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_VIDEO"
+msgstr "此檔案僅支援影片數據。現正播放影片。"
+
+msgid "IDS_MUSIC_OPT_RENAME"
+msgstr "重新命名"
+
+msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
+msgstr "耳機"
+
+msgid "IDS_VIDEO_BUTTON_DOWNLOAD"
+msgstr "下載"
+
+msgid "IDS_TPLATFORM_BODY_OFF"
+msgstr "關"
+
+msgid "IDS_TPLATFORM_BODY_ON"
+msgstr "開"
+
+msgid "IDS_VIDEO_POP_1_VIDEO_WILL_BE_DELETED"
+msgstr "1 個影片將被刪除。"
+
+msgid "IDS_SWALL_HEADER_INVALID_CHARACTER"
+msgstr "無效字元"
+
+msgid "IDS_VIDEO_BODY_NO_SEARCH_RESULTS"
+msgstr "無搜尋結果"
+
+msgid "IDS_GALLERY_HEADER_SELECT"
+msgstr "選擇"
+
+msgid "IDS_VIDEO_BODY_LAST_MODIFIED_M_DATE_ABB"
+msgstr "上次修改"
+
+msgid "IDS_VIDEO_BUTTON_DONE"
+msgstr "完成"
+
+msgid "IDS_VIDEO_HEADER_DATE"
+msgstr "日期"
+
+msgid "IDS_VIDEO_HEADER_LATITUDE"
+msgstr "緯度"
+
+msgid "IDS_VIDEO_OPT_NAME"
+msgstr "名稱"
+
+msgid "IDS_VIDEO_OPT_NAME_HA_Z_ABB"
+msgstr "名稱 (A-Z)"
+
+msgid "IDS_VIDEO_OPT_VIDEOS"
+msgstr "影片"
+
+msgid "IDS_VIDEO_TPOP_MAXIMUM_NUMBER_OF_ATTACHMENTS_HPD_EXCEEDED"
+msgstr "已超過附件數量上限 (%d)。"
+
+msgid "IDS_VIDEO_HEADER_SELECT_ALL"
+msgstr "選擇全部"
+
+msgid "IDS_VIDEO_SBODY_DEVICE_STORAGE"
+msgstr "裝置記憶體"
+
+msgid "IDS_VIDEO_SBODY_SD_CARD"
+msgstr "SD 卡"
+
+msgid "IDS_VIDEO_OPT_SHARE_VIA"
+msgstr "分享透過"
+
+msgid "IDS_VIDEO_POP_A_NETWORK_ERROR_HAS_OCCURRED_TRY_AGAIN"
+msgstr "發生網絡錯誤。請重試。"
+
+msgid "IDS_VPL_OPT_AUTO_PLAY_NEXT_ABB"
+msgstr "自動播放下一個"
+
+msgid "IDS_VPL_POP_PROCESSING_ING"
+msgstr "正在處理..."
+
+msgid "IDS_MEMO_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "已達字元數量上限。"
+
+msgid "IDS_MUSIC_OPT_DELETE"
+msgstr "刪除"
+
+msgid "IDS_MUSIC_OPT_DELETE_ALL"
+msgstr "全部刪除"
+
+msgid "IDS_PB_BODY_NO_SEARCH_RESULT"
+msgstr "無搜尋結果"
+
+msgid "IDS_VIDEO_HEADER_SELECT_ITEM"
+msgstr "選擇項目"
+
+msgid "IDS_VIDEO_HEADER_SELECT_ITEMS"
+msgstr "選擇項目"
+
+msgid "IDS_CLOCK_BUTTON_CANCEL"
+msgstr "取消"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "完成"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "取消"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DELETE_ABB"
+msgstr "刪除"
+
+msgid "IDS_TPLATFORM_MBODY_STORAGE_LOCATION"
+msgstr "儲存裝置位置"
+
+msgid "IDS_GALLERY_HEADER_SELECT_VIDEO"
+msgstr "選擇影片"
+

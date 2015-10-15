@@ -1,0 +1,390 @@
+msgid "IDS_VIDEO_OPT_DOWNLOAD"
+msgstr "Преземи"
+
+msgid "IDS_VIDEO_POP_1_FOLDER_WILL_BE_DOWNLOADED"
+msgstr "1 папка ќе се преземе."
+
+msgid "IDS_VIDEO_POP_1_VIDEO_WILL_BE_DOWNLOADED"
+msgstr "1 видео ќе се преземе."
+
+msgid "IDS_VIDEO_POP_ALL_FOLDERS_WILL_BE_DOWNLOADED"
+msgstr "Ќе се преземат сите папки."
+
+msgid "IDS_VIDEO_POP_ALL_VIDEOS_WILL_BE_DOWNLOADED"
+msgstr "Ќе се преземат сите видеа."
+
+msgid "IDS_VIDEO_POP_PD_FOLDERS_WILL_BE_DOWNLOADED"
+msgstr "Ќе се преземат %d папки."
+
+msgid "IDS_VIDEO_POP_PD_VIDEOS_WILL_BE_DOWNLOADED"
+msgstr "Ќе се преземат %d видеа."
+
+msgid "IDS_VIDEO_TPOP_MOBILE_DATA_TURNED_OFF_CONNECT_TO_WI_FI_NETWORK_INSTEAD_OR_TURN_ON_MOBILE_DATA_AND_TRY_AGAIN"
+msgstr "Мобилните податоци се исклучени. Поврзете се со мрежа Wi-Fi или вклучете Мобилни податоци и обидете се повторно."
+
+msgid "IDS_GALLERY_OPT_PRIVATE_M_CONTENT"
+msgstr "Приватно"
+
+msgid "IDS_VIDEO_BODY_B"
+msgstr "B"
+
+msgid "IDS_VIDEO_BODY_GB"
+msgstr "GB"
+
+msgid "IDS_VIDEO_BODY_KB"
+msgstr "KB"
+
+msgid "IDS_VIDEO_BODY_LOCATION"
+msgstr "Локација"
+
+msgid "IDS_VIDEO_BODY_MB"
+msgstr "MB"
+
+msgid "IDS_VIDEO_BODY_UNKNOWN"
+msgstr "Непознато"
+
+msgid "IDS_VIDEO_BUTTON_OK"
+msgstr "OK"
+
+msgid "IDS_VIDEO_HEADER_1_FOLDER"
+msgstr "1 папка"
+
+msgid "IDS_VIDEO_HEADER_1_VIDEO"
+msgstr "1 видео"
+
+msgid "IDS_VIDEO_HEADER_ALL"
+msgstr "Сите"
+
+msgid "IDS_VIDEO_HEADER_FROM_DEVICE"
+msgstr "Од уред"
+
+msgid "IDS_VIDEO_HEADER_FROM_DROPBOX"
+msgstr "Од Dropbox"
+
+msgid "IDS_VIDEO_HEADER_LAST_MODIFIED_M_DATE"
+msgstr "Последно менување"
+
+msgid "IDS_VIDEO_OPT_CONTENT_TO_DISPLAY"
+msgstr "Содржина за приказ"
+
+msgid "IDS_VIDEO_OPT_SEARCH"
+msgstr "Пребарување"
+
+msgid "IDS_VIDEO_OPT_SHARE"
+msgstr "Сподели"
+
+msgid "IDS_VIDEO_POP_1_FOLDER_WILL_BE_DELETED"
+msgstr "1 папка ќе се избрише."
+
+msgid "IDS_VIDEO_TPOP_DELETING_ING"
+msgstr "Се брише..."
+
+msgid "IDS_VIDEO_BODY_AFTER_YOU_RECORD_VIDEOS_USING_THE_CAMERA_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Откако ќе снимите видеа со камерата, ќе се прикажат тука."
+
+msgid "IDS_VIDEO_HEADER_PD_VIDEOS"
+msgstr "%d видеа"
+
+msgid "IDS_VIDEO_HEADER_VIDEO"
+msgstr "Видео-запис"
+
+msgid "IDS_VIDEO_NPBODY_NO_VIDEOS"
+msgstr "Нема видеа"
+
+msgid "IDS_VIDEO_OPT_DETAILS"
+msgstr "Детали"
+
+msgid "IDS_VIDEO_OPT_FOLDER"
+msgstr "Папка"
+
+msgid "IDS_VIDEO_OPT_LIST"
+msgstr "Листа"
+
+msgid "IDS_VIDEO_OPT_RECENTLY_ADDED_ABB"
+msgstr "Послед.додадено"
+
+msgid "IDS_VIDEO_OPT_RECENTLY_VIEWED_ABB"
+msgstr "Последни разгледани"
+
+msgid "IDS_VIDEO_OPT_RENAME"
+msgstr "Преименувај"
+
+msgid "IDS_VIDEO_OPT_SIZE"
+msgstr "Големина"
+
+msgid "IDS_VIDEO_OPT_SORT_BY"
+msgstr "Подреди според"
+
+msgid "IDS_VIDEO_OPT_TITLE"
+msgstr "Наслов"
+
+msgid "IDS_VIDEO_OPT_TYPE"
+msgstr "Вид"
+
+msgid "IDS_VIDEO_OPT_VIEW_AS"
+msgstr "Преглед како"
+
+msgid "IDS_VIDEO_POP_ALL_VIDEOS_WILL_BE_DELETED"
+msgstr "Сите видеа ќе се избришат."
+
+msgid "IDS_VIDEO_POP_PD_FOLDERS_WILL_BE_DELETED"
+msgstr "%d папки ќе се избришат."
+
+msgid "IDS_VIDEO_POP_PD_VIDEOS_WILL_BE_DELETED"
+msgstr "%d видеа ќе се избришат."
+
+msgid "IDS_VIDEO_POP_THIS_FOLDER_WILL_BE_DELETED"
+msgstr "Папката ќе се избрише."
+
+msgid "IDS_VIDEO_HEADER_PD_FOLDERS"
+msgstr "%d папки"
+
+msgid "IDS_VIDEO_HEADER_SETTINGS"
+msgstr "Опции"
+
+msgid "IDS_VIDEO_HEADER_UNABLE_TO_PLAY_VIDEO_ABB"
+msgstr "Не може да се емитува видеото"
+
+msgid "IDS_VIDEO_MBODY_ALIGNMENT"
+msgstr "Порамнување"
+
+msgid "IDS_VIDEO_MBODY_FONT_SIZE"
+msgstr "Големина на букви"
+
+msgid "IDS_VIDEO_OPT_REPEAT_SETTING_ABB"
+msgstr "Поставка за повторување"
+
+msgid "IDS_VIDEO_OPT_SUBTITLES_HCC_ABB"
+msgstr "Титли (CC)"
+
+msgid "IDS_VIDEO_POP_ALL_FOLDERS_WILL_BE_DELETED"
+msgstr "Сите папки ќе се избришат."
+
+msgid "IDS_VIDEO_SBODY_CENTRE_M_STATUS"
+msgstr "Центар"
+
+msgid "IDS_VIDEO_SBODY_LARGE_M_STATUS"
+msgstr "Големи"
+
+msgid "IDS_VIDEO_SBODY_LEFT_M_STATUS"
+msgstr "Лево"
+
+msgid "IDS_VIDEO_SBODY_MEDIUM_M_STATUS"
+msgstr "Средни"
+
+msgid "IDS_VIDEO_SBODY_RIGHT_M_STATUS"
+msgstr "Десно"
+
+msgid "IDS_VIDEO_SBODY_SMALL_M_STATUS"
+msgstr "Мали"
+
+msgid "IDS_VIDEO_TPOP_FILE_NAME_ALREADY_IN_USE"
+msgstr "Името на фајлот се користи."
+
+msgid "IDS_GALLERY_OPT_REMOVE_FROM_PRIVATE"
+msgstr "Отстрани од Приватно"
+
+msgid "IDS_GALLERY_OPT_MOVE_TO_PRIVATE"
+msgstr "Премести во Приватно"
+
+msgid "IDS_IV_POP_ENTRY_IS_EMPTY"
+msgstr "Записот е празен."
+
+msgid "IDS_VPL_OPT_FORMAT"
+msgstr "Формат"
+
+msgid "IDS_VPL_BODY_UNABLE_TO_PLAY_VIDEO_DURING_CALL"
+msgstr "Не може да се пушти видео за време на разговор."
+
+msgid "IDS_CLOUD_BODY_DROPBOX_ABB"
+msgstr "Dropbox"
+
+msgid "IDS_VIDEO_POP_THIS_FILE_IS_UNAVAILABLE_WHILE_OFFLINE_CHECK_NETWORK_CONNECTION_AND_TRY_AGAIN"
+msgstr "Овој фајл е недостапен без мрежа. Проверете го мрежното поврзување и обидете се повторно."
+
+msgid "IDS_VIDEO_POP_THE_SELECTED_ITEM_WILL_BE_MOVED_TO_PS"
+msgstr "Избраниот запис ќе се премести во %s."
+
+msgid "IDS_VIDEO_POP_THE_SELECTED_ITEMS_WILL_BE_MOVED_TO_PS"
+msgstr "Избраните записи ќе се преместат во %s."
+
+msgid "IDS_VIDEO_POP_REMOVING_ING"
+msgstr "Отстранување..."
+
+msgid "IDS_VIDEO_POP_MOVING_ING"
+msgstr "Се преместува..."
+
+msgid "IDS_VIDEO_POP_FAILED_TO_MOVE_TO_PERSONAL_STORAGE"
+msgstr "Не можеше да се премести во лична меморија."
+
+msgid "IDS_VIDEO_POP_FAILED_TO_MOVE_TO_NORMAL_STORAGE"
+msgstr "Не можеше да се премести во нормална меморија."
+
+msgid "IDS_VIDEO_OPT_MESSAGE_ABB"
+msgstr "Порака"
+
+msgid "IDS_VIDEO_OPT_FOLDERS_ABB"
+msgstr "Папки"
+
+msgid "IDS_VIDEO_OPT_EMAIL_ABB"
+msgstr "Е-пошта"
+
+msgid "IDS_VIDEO_OPT_DATE_HMOST_RECENT_ABB"
+msgstr "Датум (најнов)"
+
+msgid "IDS_VIDEO_HEADER_PD_SELECTED"
+msgstr "Избрани се %d"
+
+msgid "IDS_VIDEO_HEADER_DELETE_VIDEOS"
+msgstr "Избриши видеа"
+
+msgid "IDS_VIDEO_HEADER_DELETE_VIDEO"
+msgstr "Избриши видео-запис"
+
+msgid "IDS_VIDEO_BUTTON_MOVE_ABB"
+msgstr "Премести"
+
+msgid "IDS_VIDEO_BODY_LONGITUDE"
+msgstr "Географска должина"
+
+msgid "IDS_VIDEO_BODY_LATITUDE"
+msgstr "Географска широчина"
+
+msgid "IDS_VIDEO_BODY_AFTER_YOU_RECORD_VIDEOS_USING_THE_CAMERA_VIDEOS_WILL_BE_SHOWN"
+msgstr "Откако ќе снимите видеа со камерата, ќе се прикажат видеа."
+
+msgid "IDS_VIDEO_SK_CANCEL_ABB"
+msgstr "Откажи"
+
+msgid "IDS_VIDEO_OPT_STOP_AFTER_ALL_ABB"
+msgstr "Сопри после сѐ"
+
+msgid "IDS_VIDEO_OPT_REPEAT_CURRENT_ABB"
+msgstr "Повт. моментална"
+
+msgid "IDS_VIDEO_OPT_REPEAT_ALL_ABB"
+msgstr "Повторувај сè"
+
+msgid "IDS_VIDEO_BODY_RESOLUTION"
+msgstr "Резолуција"
+
+msgid "IDS_VIDEO_BUTTON_DELETE"
+msgstr "Бриши"
+
+msgid "IDS_ST_OPT_DELETE_ALL"
+msgstr "Избриши сè"
+
+msgid "IDS_VPL_TPOP_ONLY_AUDIO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_AUDIO"
+msgstr "Овој фајл поддржува само аудио податоци. Се емитува звук."
+
+msgid "IDS_VPL_TPOP_ONLY_VIDEO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_VIDEO"
+msgstr "Овој фајл поддржува само видео податоци. Се емитува видео."
+
+msgid "IDS_MUSIC_OPT_RENAME"
+msgstr "Преименувај"
+
+msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
+msgstr "Слушалки"
+
+msgid "IDS_VIDEO_BUTTON_DOWNLOAD"
+msgstr "Преземи"
+
+msgid "IDS_TPLATFORM_BODY_OFF"
+msgstr "Исклучено"
+
+msgid "IDS_TPLATFORM_BODY_ON"
+msgstr "Вклучено"
+
+msgid "IDS_VIDEO_POP_1_VIDEO_WILL_BE_DELETED"
+msgstr "1 видео ќе се избрише."
+
+msgid "IDS_SWALL_HEADER_INVALID_CHARACTER"
+msgstr "Погрешен знак"
+
+msgid "IDS_VIDEO_BODY_NO_SEARCH_RESULTS"
+msgstr "Нема резултати од пребарувањето"
+
+msgid "IDS_GALLERY_HEADER_SELECT"
+msgstr "Избери"
+
+msgid "IDS_VIDEO_BODY_LAST_MODIFIED_M_DATE_ABB"
+msgstr "Последно менување"
+
+msgid "IDS_VIDEO_BUTTON_DONE"
+msgstr "Готово"
+
+msgid "IDS_VIDEO_HEADER_DATE"
+msgstr "Датум"
+
+msgid "IDS_VIDEO_HEADER_LATITUDE"
+msgstr "Географска широчина"
+
+msgid "IDS_VIDEO_OPT_NAME"
+msgstr "Име"
+
+msgid "IDS_VIDEO_OPT_NAME_HA_Z_ABB"
+msgstr "Име (А-Ш)"
+
+msgid "IDS_VIDEO_OPT_VIDEOS"
+msgstr "Видео-записи"
+
+msgid "IDS_VIDEO_TPOP_MAXIMUM_NUMBER_OF_ATTACHMENTS_HPD_EXCEEDED"
+msgstr "Надминат е максималниот број прилози (%d)."
+
+msgid "IDS_VIDEO_HEADER_SELECT_ALL"
+msgstr "Избери ги сите"
+
+msgid "IDS_VIDEO_SBODY_DEVICE_STORAGE"
+msgstr "Меморија на уредот"
+
+msgid "IDS_VIDEO_SBODY_SD_CARD"
+msgstr "SD-картичка"
+
+msgid "IDS_VIDEO_OPT_SHARE_VIA"
+msgstr "Сподели преку"
+
+msgid "IDS_VIDEO_POP_A_NETWORK_ERROR_HAS_OCCURRED_TRY_AGAIN"
+msgstr "Дојде до мрежна грешка. Обидете се повторно."
+
+msgid "IDS_VPL_OPT_AUTO_PLAY_NEXT_ABB"
+msgstr "Следното автом."
+
+msgid "IDS_VPL_POP_PROCESSING_ING"
+msgstr "Обработување..."
+
+msgid "IDS_MEMO_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Достигнат е максималниот број знаци."
+
+msgid "IDS_MUSIC_OPT_DELETE"
+msgstr "Избриши"
+
+msgid "IDS_MUSIC_OPT_DELETE_ALL"
+msgstr "Избриши сè"
+
+msgid "IDS_PB_BODY_NO_SEARCH_RESULT"
+msgstr "Нема резултат од пребарувањето"
+
+msgid "IDS_VIDEO_HEADER_SELECT_ITEM"
+msgstr "Избери запис"
+
+msgid "IDS_VIDEO_HEADER_SELECT_ITEMS"
+msgstr "Изберете записи"
+
+msgid "IDS_CLOCK_BUTTON_CANCEL"
+msgstr "Откажи"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "ГОТОВО"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "ОТКАЖИ"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DELETE_ABB"
+msgstr "ИЗБРИШИ"
+
+msgid "IDS_TPLATFORM_MBODY_STORAGE_LOCATION"
+msgstr "Место за меморирање"
+
+msgid "IDS_GALLERY_HEADER_SELECT_VIDEO"
+msgstr "Избери видео"
+

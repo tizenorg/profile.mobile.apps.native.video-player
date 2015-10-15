@@ -1,0 +1,390 @@
+msgid "IDS_VIDEO_OPT_DOWNLOAD"
+msgstr "Λήψη"
+
+msgid "IDS_VIDEO_POP_1_FOLDER_WILL_BE_DOWNLOADED"
+msgstr "Θα γίνει λήψη 1 φακέλου."
+
+msgid "IDS_VIDEO_POP_1_VIDEO_WILL_BE_DOWNLOADED"
+msgstr "Θα γίνει λήψη 1 βίντεο."
+
+msgid "IDS_VIDEO_POP_ALL_FOLDERS_WILL_BE_DOWNLOADED"
+msgstr "Θα γίνει λήψη όλων των φακέλων."
+
+msgid "IDS_VIDEO_POP_ALL_VIDEOS_WILL_BE_DOWNLOADED"
+msgstr "Θα γίνει λήψη όλων των βίντεο."
+
+msgid "IDS_VIDEO_POP_PD_FOLDERS_WILL_BE_DOWNLOADED"
+msgstr "Θα γίνει λήψη %d φακέλων."
+
+msgid "IDS_VIDEO_POP_PD_VIDEOS_WILL_BE_DOWNLOADED"
+msgstr "Θα γίνει λήψη %d βίντεο."
+
+msgid "IDS_VIDEO_TPOP_MOBILE_DATA_TURNED_OFF_CONNECT_TO_WI_FI_NETWORK_INSTEAD_OR_TURN_ON_MOBILE_DATA_AND_TRY_AGAIN"
+msgstr "Τα δεδομένα κινητής τηλεφωνίας απενεργοποιήθηκαν. Συνδεθείτε σε ένα δίκτυο Wi-Fi ή ενεργοποιήστε τα δεδομένα κινητής τηλεφωνίας και δοκιμάστε ξανά."
+
+msgid "IDS_GALLERY_OPT_PRIVATE_M_CONTENT"
+msgstr "Προσωπικό"
+
+msgid "IDS_VIDEO_BODY_B"
+msgstr "B"
+
+msgid "IDS_VIDEO_BODY_GB"
+msgstr "GB"
+
+msgid "IDS_VIDEO_BODY_KB"
+msgstr "KB"
+
+msgid "IDS_VIDEO_BODY_LOCATION"
+msgstr "Τοποθεσία"
+
+msgid "IDS_VIDEO_BODY_MB"
+msgstr "MB"
+
+msgid "IDS_VIDEO_BODY_UNKNOWN"
+msgstr "Άγνωστο"
+
+msgid "IDS_VIDEO_BUTTON_OK"
+msgstr "OK"
+
+msgid "IDS_VIDEO_HEADER_1_FOLDER"
+msgstr "1 φάκελος"
+
+msgid "IDS_VIDEO_HEADER_1_VIDEO"
+msgstr "1 βίντεο"
+
+msgid "IDS_VIDEO_HEADER_ALL"
+msgstr "Όλα"
+
+msgid "IDS_VIDEO_HEADER_FROM_DEVICE"
+msgstr "Από τη συσκευή"
+
+msgid "IDS_VIDEO_HEADER_FROM_DROPBOX"
+msgstr "Από το Dropbox"
+
+msgid "IDS_VIDEO_HEADER_LAST_MODIFIED_M_DATE"
+msgstr "Τελευταία τροποποίηση"
+
+msgid "IDS_VIDEO_OPT_CONTENT_TO_DISPLAY"
+msgstr "Περιεχόμενο για εμφάνιση"
+
+msgid "IDS_VIDEO_OPT_SEARCH"
+msgstr "Αναζήτηση"
+
+msgid "IDS_VIDEO_OPT_SHARE"
+msgstr "Κοινή χρήση"
+
+msgid "IDS_VIDEO_POP_1_FOLDER_WILL_BE_DELETED"
+msgstr "1 φάκελος θα διαγραφεί."
+
+msgid "IDS_VIDEO_TPOP_DELETING_ING"
+msgstr "Διαγραφή..."
+
+msgid "IDS_VIDEO_BODY_AFTER_YOU_RECORD_VIDEOS_USING_THE_CAMERA_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Αφού τραβήξετε βίντεο με την κάμερα, τα βίντεο θα εμφανιστούν εδώ."
+
+msgid "IDS_VIDEO_HEADER_PD_VIDEOS"
+msgstr "%d βίντεο"
+
+msgid "IDS_VIDEO_HEADER_VIDEO"
+msgstr "Βίντεο"
+
+msgid "IDS_VIDEO_NPBODY_NO_VIDEOS"
+msgstr "Δεν υπάρχουν βίντεο"
+
+msgid "IDS_VIDEO_OPT_DETAILS"
+msgstr "Λεπτομέρειες"
+
+msgid "IDS_VIDEO_OPT_FOLDER"
+msgstr "Φάκελος"
+
+msgid "IDS_VIDEO_OPT_LIST"
+msgstr "Λίστα"
+
+msgid "IDS_VIDEO_OPT_RECENTLY_ADDED_ABB"
+msgstr "Πρόσφ. προσθ."
+
+msgid "IDS_VIDEO_OPT_RECENTLY_VIEWED_ABB"
+msgstr "Προβλήθηκαν πρόσφατα"
+
+msgid "IDS_VIDEO_OPT_RENAME"
+msgstr "Μετονομασία"
+
+msgid "IDS_VIDEO_OPT_SIZE"
+msgstr "Μέγεθος"
+
+msgid "IDS_VIDEO_OPT_SORT_BY"
+msgstr "Ταξινόμηση κατά"
+
+msgid "IDS_VIDEO_OPT_TITLE"
+msgstr "Τίτλος"
+
+msgid "IDS_VIDEO_OPT_TYPE"
+msgstr "Είδος"
+
+msgid "IDS_VIDEO_OPT_VIEW_AS"
+msgstr "Προβολή ως"
+
+msgid "IDS_VIDEO_POP_ALL_VIDEOS_WILL_BE_DELETED"
+msgstr "Θα διαγραφούν όλα τα βίντεο."
+
+msgid "IDS_VIDEO_POP_PD_FOLDERS_WILL_BE_DELETED"
+msgstr "Θα διαγραφούν %d φάκελοι."
+
+msgid "IDS_VIDEO_POP_PD_VIDEOS_WILL_BE_DELETED"
+msgstr "Θα διαγραφούν %d βίντεο."
+
+msgid "IDS_VIDEO_POP_THIS_FOLDER_WILL_BE_DELETED"
+msgstr "Ο φάκελος θα διαγραφεί."
+
+msgid "IDS_VIDEO_HEADER_PD_FOLDERS"
+msgstr "%d φάκελοι"
+
+msgid "IDS_VIDEO_HEADER_SETTINGS"
+msgstr "Ρυθμίσεις"
+
+msgid "IDS_VIDEO_HEADER_UNABLE_TO_PLAY_VIDEO_ABB"
+msgstr "Αδύν. η αναπαρ. του βίντεο"
+
+msgid "IDS_VIDEO_MBODY_ALIGNMENT"
+msgstr "Στοίχιση"
+
+msgid "IDS_VIDEO_MBODY_FONT_SIZE"
+msgstr "Μέγ. γραμματοσειράς"
+
+msgid "IDS_VIDEO_OPT_REPEAT_SETTING_ABB"
+msgstr "Επανάληψη ρύθμισης"
+
+msgid "IDS_VIDEO_OPT_SUBTITLES_HCC_ABB"
+msgstr "Υπότιτλοι (CC)"
+
+msgid "IDS_VIDEO_POP_ALL_FOLDERS_WILL_BE_DELETED"
+msgstr "Θα διαγραφούν όλοι οι φάκελοι."
+
+msgid "IDS_VIDEO_SBODY_CENTRE_M_STATUS"
+msgstr "Σεντρ"
+
+msgid "IDS_VIDEO_SBODY_LARGE_M_STATUS"
+msgstr "Μεγάλο"
+
+msgid "IDS_VIDEO_SBODY_LEFT_M_STATUS"
+msgstr "Αριστερό"
+
+msgid "IDS_VIDEO_SBODY_MEDIUM_M_STATUS"
+msgstr "Μεσαίο"
+
+msgid "IDS_VIDEO_SBODY_RIGHT_M_STATUS"
+msgstr "Δεξιά"
+
+msgid "IDS_VIDEO_SBODY_SMALL_M_STATUS"
+msgstr "Μικρό"
+
+msgid "IDS_VIDEO_TPOP_FILE_NAME_ALREADY_IN_USE"
+msgstr "Το όνομα αρχείου χρησιμοποιείται ήδη."
+
+msgid "IDS_GALLERY_OPT_REMOVE_FROM_PRIVATE"
+msgstr "Κατάργηση από το φάκελο «Απόρρητο»"
+
+msgid "IDS_GALLERY_OPT_MOVE_TO_PRIVATE"
+msgstr "Μετακίνηση στο φάκελο «Ιδιωτικό»"
+
+msgid "IDS_IV_POP_ENTRY_IS_EMPTY"
+msgstr "Κενή καταχώρηση."
+
+msgid "IDS_VPL_OPT_FORMAT"
+msgstr "Μορφή"
+
+msgid "IDS_VPL_BODY_UNABLE_TO_PLAY_VIDEO_DURING_CALL"
+msgstr "Δεν είναι δυνατή η αναπαραγωγή βίντεο κατά την κλήση."
+
+msgid "IDS_CLOUD_BODY_DROPBOX_ABB"
+msgstr "Dropbox"
+
+msgid "IDS_VIDEO_POP_THIS_FILE_IS_UNAVAILABLE_WHILE_OFFLINE_CHECK_NETWORK_CONNECTION_AND_TRY_AGAIN"
+msgstr "Το αρχείο δεν είναι διαθέσιμο εκτός σύνδεσης. Ελέγξτε τη σύνδεση δικτύου σας και δοκιμάστε ξανά."
+
+msgid "IDS_VIDEO_POP_THE_SELECTED_ITEM_WILL_BE_MOVED_TO_PS"
+msgstr "Το επιλεγμένο στοιχείο θα μετακινηθεί στο %s."
+
+msgid "IDS_VIDEO_POP_THE_SELECTED_ITEMS_WILL_BE_MOVED_TO_PS"
+msgstr "Τα επιλεγμένα στοιχεία θα μετακινηθούν στο %s."
+
+msgid "IDS_VIDEO_POP_REMOVING_ING"
+msgstr "Αφαίρεση..."
+
+msgid "IDS_VIDEO_POP_MOVING_ING"
+msgstr "Μετακίνηση..."
+
+msgid "IDS_VIDEO_POP_FAILED_TO_MOVE_TO_PERSONAL_STORAGE"
+msgstr "Απέτυχε η μετακίνηση στον προσωπικό χώρο αποθήκευσης."
+
+msgid "IDS_VIDEO_POP_FAILED_TO_MOVE_TO_NORMAL_STORAGE"
+msgstr "Απέτυχε η μετακίνηση στον κανονικό χώρο αποθήκευσης."
+
+msgid "IDS_VIDEO_OPT_MESSAGE_ABB"
+msgstr "Μήνυμα"
+
+msgid "IDS_VIDEO_OPT_FOLDERS_ABB"
+msgstr "Φάκελοι"
+
+msgid "IDS_VIDEO_OPT_EMAIL_ABB"
+msgstr "Email"
+
+msgid "IDS_VIDEO_OPT_DATE_HMOST_RECENT_ABB"
+msgstr "Ημερ. (πιο πρόσφ.)"
+
+msgid "IDS_VIDEO_HEADER_PD_SELECTED"
+msgstr "%d επιλέχθηκαν"
+
+msgid "IDS_VIDEO_HEADER_DELETE_VIDEOS"
+msgstr "Διαγραφή βίντεο"
+
+msgid "IDS_VIDEO_HEADER_DELETE_VIDEO"
+msgstr "Διαγραφή βίντεο"
+
+msgid "IDS_VIDEO_BUTTON_MOVE_ABB"
+msgstr "Μετακίνηση"
+
+msgid "IDS_VIDEO_BODY_LONGITUDE"
+msgstr "Γεωγραφικό μήκος"
+
+msgid "IDS_VIDEO_BODY_LATITUDE"
+msgstr "Γεωγραφικό πλάτος"
+
+msgid "IDS_VIDEO_BODY_AFTER_YOU_RECORD_VIDEOS_USING_THE_CAMERA_VIDEOS_WILL_BE_SHOWN"
+msgstr "Τα στοιχεία θα εμφανιστούν, μετά την εγγραφή βίντεο μέσω της κάμερας."
+
+msgid "IDS_VIDEO_SK_CANCEL_ABB"
+msgstr "Άκυρο"
+
+msgid "IDS_VIDEO_OPT_STOP_AFTER_ALL_ABB"
+msgstr "Όλα και μετά διακοπή"
+
+msgid "IDS_VIDEO_OPT_REPEAT_CURRENT_ABB"
+msgstr "Επανάληψη τρέχοντος"
+
+msgid "IDS_VIDEO_OPT_REPEAT_ALL_ABB"
+msgstr "Επανάληψη όλων"
+
+msgid "IDS_VIDEO_BODY_RESOLUTION"
+msgstr "Ανάλυση"
+
+msgid "IDS_VIDEO_BUTTON_DELETE"
+msgstr "Διαγρ."
+
+msgid "IDS_ST_OPT_DELETE_ALL"
+msgstr "Διαγραφή όλων"
+
+msgid "IDS_VPL_TPOP_ONLY_AUDIO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_AUDIO"
+msgstr "Υποστηρίζονται μόνο δεδομένα ήχου από αυτό το αρχείο. Γίνεται αναπαραγωγή του ήχου."
+
+msgid "IDS_VPL_TPOP_ONLY_VIDEO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_VIDEO"
+msgstr "Υποστηρίζονται μόνο δεδομένα βίντεο από αυτό το αρχείο. Γίνεται αναπαραγωγή του βίντεο."
+
+msgid "IDS_MUSIC_OPT_RENAME"
+msgstr "Μετονομασία"
+
+msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
+msgstr "Ακουστικά"
+
+msgid "IDS_VIDEO_BUTTON_DOWNLOAD"
+msgstr "Λήψη"
+
+msgid "IDS_TPLATFORM_BODY_OFF"
+msgstr "Ανενεργό"
+
+msgid "IDS_TPLATFORM_BODY_ON"
+msgstr "Ενεργό"
+
+msgid "IDS_VIDEO_POP_1_VIDEO_WILL_BE_DELETED"
+msgstr "1 βίντεο θα διαγραφεί."
+
+msgid "IDS_SWALL_HEADER_INVALID_CHARACTER"
+msgstr "Μη έγκυρος χαρακτήρας"
+
+msgid "IDS_VIDEO_BODY_NO_SEARCH_RESULTS"
+msgstr "Δεν υπάρχουν αποτελέσματα αναζήτησης"
+
+msgid "IDS_GALLERY_HEADER_SELECT"
+msgstr "Επιλογή"
+
+msgid "IDS_VIDEO_BODY_LAST_MODIFIED_M_DATE_ABB"
+msgstr "Τελευταία τροποποίηση"
+
+msgid "IDS_VIDEO_BUTTON_DONE"
+msgstr "Τέλος"
+
+msgid "IDS_VIDEO_HEADER_DATE"
+msgstr "Ημερομηνία"
+
+msgid "IDS_VIDEO_HEADER_LATITUDE"
+msgstr "Γεωγραφικό πλάτος"
+
+msgid "IDS_VIDEO_OPT_NAME"
+msgstr "Όνομα"
+
+msgid "IDS_VIDEO_OPT_NAME_HA_Z_ABB"
+msgstr "Όνομα (Α-Ω)"
+
+msgid "IDS_VIDEO_OPT_VIDEOS"
+msgstr "Βίντεο"
+
+msgid "IDS_VIDEO_TPOP_MAXIMUM_NUMBER_OF_ATTACHMENTS_HPD_EXCEEDED"
+msgstr "Έγινε υπέρβαση του μέγιστου αριθμού συνημμένων (%d)."
+
+msgid "IDS_VIDEO_HEADER_SELECT_ALL"
+msgstr "Επιλογή όλων"
+
+msgid "IDS_VIDEO_SBODY_DEVICE_STORAGE"
+msgstr "Χώρος αποθήκευσης συσκευής"
+
+msgid "IDS_VIDEO_SBODY_SD_CARD"
+msgstr "Κάρτα SD"
+
+msgid "IDS_VIDEO_OPT_SHARE_VIA"
+msgstr "Κοινή χρήση μέσω"
+
+msgid "IDS_VIDEO_POP_A_NETWORK_ERROR_HAS_OCCURRED_TRY_AGAIN"
+msgstr "Προέκυψε σφάλμα δικτύου. Δοκιμάστε ξανά."
+
+msgid "IDS_VPL_OPT_AUTO_PLAY_NEXT_ABB"
+msgstr "Αυτ. αναπ. επόμ."
+
+msgid "IDS_VPL_POP_PROCESSING_ING"
+msgstr "Επεξεργασία..."
+
+msgid "IDS_MEMO_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Συμπληρώθηκε ο μέγιστος αριθμός χαρακτήρων."
+
+msgid "IDS_MUSIC_OPT_DELETE"
+msgstr "Διαγραφή"
+
+msgid "IDS_MUSIC_OPT_DELETE_ALL"
+msgstr "Διαγραφή όλων"
+
+msgid "IDS_PB_BODY_NO_SEARCH_RESULT"
+msgstr "Δεν υπ. απ. αναζ."
+
+msgid "IDS_VIDEO_HEADER_SELECT_ITEM"
+msgstr "Επιλογή στοιχείου"
+
+msgid "IDS_VIDEO_HEADER_SELECT_ITEMS"
+msgstr "Επιλογή στοιχείων"
+
+msgid "IDS_CLOCK_BUTTON_CANCEL"
+msgstr "Ακύρωση"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "ΤΕΛΟΣ"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "ΑΚΥΡΟ"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DELETE_ABB"
+msgstr "ΔΙΑΓΡΑΦΗ"
+
+msgid "IDS_TPLATFORM_MBODY_STORAGE_LOCATION"
+msgstr "Θέση αποθήκευσης"
+
+msgid "IDS_GALLERY_HEADER_SELECT_VIDEO"
+msgstr "Επιλογή βίντεο"
+

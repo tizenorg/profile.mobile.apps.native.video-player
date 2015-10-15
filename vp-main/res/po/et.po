@@ -1,0 +1,489 @@
+msgid "IDS_VIDEO_OPT_BRIGHTNESS"
+msgstr "Heledus"
+
+msgid "IDS_VIDEO_OPT_MUSIC_M_SOUNDALIVE"
+msgstr "Muusika"
+
+msgid "IDS_VIDEO_OPT_VOICES_M_PERSON"
+msgstr "Hääled"
+
+msgid "IDS_VIDEO_BODY_B"
+msgstr "B"
+
+msgid "IDS_VIDEO_BODY_GB"
+msgstr "GB"
+
+msgid "IDS_VIDEO_BODY_KB"
+msgstr "kB"
+
+msgid "IDS_VIDEO_BODY_LOCATION"
+msgstr "Asukoht"
+
+msgid "IDS_VIDEO_BODY_MB"
+msgstr "MB"
+
+msgid "IDS_VIDEO_BUTTON_OK"
+msgstr "OK"
+
+msgid "IDS_VIDEO_HEADER_LAST_MODIFIED_M_DATE"
+msgstr "Viimati muudetud"
+
+msgid "IDS_VIDEO_OPT_SHARE"
+msgstr "Jaga"
+
+msgid "IDS_VIDEO_HEADER_CANNOT_PLAY_VIDEO_ABB"
+msgstr "Videot ei saa esitada"
+
+msgid "IDS_VIDEO_POP_AN_ERROR_OCCURRED_WITH_THE_SUBTITLES"
+msgstr "Subtiitritega ilmnes tõrge."
+
+msgid "IDS_VIDEO_POP_THE_FILE_IS_CORRUPTED_OR_THE_SD_CARD_HAS_BEEN_REMOVED"
+msgstr "Fail on rikutud või SD-kaart on eemaldatud."
+
+msgid "IDS_VIDEO_OPT_DETAILS"
+msgstr "Üksikasjad"
+
+msgid "IDS_VIDEO_OPT_TITLE"
+msgstr "Pealkiri"
+
+msgid "IDS_VIDEO_POP_THIS_VIDEO_WILL_BE_DELETED"
+msgstr "See video kustutatakse."
+
+msgid "IDS_VIDEO_HEADER_SETTINGS"
+msgstr "Seaded"
+
+msgid "IDS_VIDEO_HEADER_UNABLE_TO_PLAY_VIDEO_ABB"
+msgstr "Videot ei saa esitada"
+
+msgid "IDS_VIDEO_MBODY_ALIGNMENT"
+msgstr "Joondamine"
+
+msgid "IDS_VIDEO_MBODY_FONT_SIZE"
+msgstr "Fondi suurus"
+
+msgid "IDS_VIDEO_OPT_REPEAT_SETTING_ABB"
+msgstr "Korduse seadistus"
+
+msgid "IDS_VIDEO_OPT_SUBTITLES_HCC_ABB"
+msgstr "Subtiitrid (peittiitrid)"
+
+msgid "IDS_VIDEO_SBODY_CENTRE_M_STATUS"
+msgstr "Keskel"
+
+msgid "IDS_VIDEO_SBODY_LARGE_M_STATUS"
+msgstr "Suur"
+
+msgid "IDS_VIDEO_SBODY_LEFT_M_STATUS"
+msgstr "Vasakul"
+
+msgid "IDS_VIDEO_SBODY_MEDIUM_M_STATUS"
+msgstr "Keskmine"
+
+msgid "IDS_VIDEO_SBODY_RIGHT_M_STATUS"
+msgstr "Paremal"
+
+msgid "IDS_VIDEO_SBODY_SMALL_M_STATUS"
+msgstr "Väike"
+
+msgid "IDS_BR_SK_NEXT"
+msgstr "Järgmine"
+
+msgid "IDS_BR_SK_PREVIOUS"
+msgstr "Eelmine"
+
+msgid "IDS_VPL_POP_DRM_FILES_CANNOT_BE_SHARED"
+msgstr "DRM-faile ei saa jagada."
+
+msgid "IDS_VPL_OPT_FORMAT"
+msgstr "Vorminda"
+
+msgid "IDS_VPL_BODY_UNABLE_TO_PLAY_VIDEO_DURING_CALL"
+msgstr "Kõne ajal ei saa videot esitada."
+
+msgid "IDS_VIDEO_OPT_MESSAGE_ABB"
+msgstr "Sõnum"
+
+msgid "IDS_VIDEO_OPT_FILE_TRANSFER_ABB"
+msgstr "Failiedastus"
+
+msgid "IDS_VIDEO_OPT_EMAIL_ABB"
+msgstr "E-kiri"
+
+msgid "IDS_VIDEO_BODY_LONGITUDE"
+msgstr "Pikkuskraad"
+
+msgid "IDS_VIDEO_BODY_LATITUDE"
+msgstr "Laiuskraad"
+
+msgid "IDS_MUSIC_BUTTON_ENABLE_MOTION"
+msgstr "Luba liik."
+
+msgid "IDS_VPL_TPOP_SCRUBBING_AT_PSX_SPEED"
+msgstr "Kaapimine %sx kiirusel."
+
+msgid "IDS_VPL_TAB_EXTERNAL_STORAGE"
+msgstr "Välismälu"
+
+msgid "IDS_VPL_POP_VOLUME_M_SOUND"
+msgstr "Helitugevus"
+
+msgid "IDS_VPL_POP_UNSUPPORTED_VIDEO_FORMAT"
+msgstr "Mittetoetatud videovorming."
+
+msgid "IDS_VPL_POP_UNSUPPORTED_FILE_TYPE"
+msgstr "Toetuseta failitüüp."
+
+msgid "IDS_VPL_POP_UNSUPPORTED_AUDIO_FORMAT"
+msgstr "Mittetoetatud helivorming."
+
+msgid "IDS_VPL_POP_UNABLE_TO_USE_FAST_FORWARD_AND_REWIND_WHEN_NEARBY_DEVICES_ARE_ENABLED"
+msgstr "Kui lähedalolevad seadmed aktiveeritakse, ei saa te kasutada edasi- ja tagasikerimist."
+
+msgid "IDS_VPL_POP_UNABLE_TO_CAPTURE"
+msgstr "Jäädvustamine nurjus."
+
+msgid "IDS_VPL_POP_ROTATE"
+msgstr "Pööra"
+
+msgid "IDS_VPL_POP_PRESS_THE_BACK_KEY_AGAIN_TO_RETURN_TO_PREVIOUS_SCREEN"
+msgstr "Eelmisele kuvale naasmiseks vajutage uuesti tagasiliikumise klahvi."
+
+msgid "IDS_VPL_POP_NOT_ENOUGH_MEMORY_DELETE_SOME_ITEMS"
+msgstr "Mälu pole piisavalt. Kustutage mõned üksused"
+
+msgid "IDS_VPL_POP_BOOKMARK_LIST_FULL_DELETE_SOME_BOOKMARKS"
+msgstr "Järjehoidjate loend on täis.\nKustutage mõned järjehoidjad."
+
+msgid "IDS_VPL_OPT_YELLOW_M_COLOUR"
+msgstr "Kollane"
+
+msgid "IDS_VPL_OPT_VIRTUAL_71_CH"
+msgstr "Virtuaal. kanal 7.1"
+
+msgid "IDS_VPL_OPT_SUBTITLES_HCC_ABB"
+msgstr "Subtiitrid (peittiitrid)"
+
+msgid "IDS_VPL_OPT_SOUNDALIVE"
+msgstr "SoundAlive"
+
+msgid "IDS_VPL_OPT_REPEAT_MODE"
+msgstr "Kordusrežiim"
+
+msgid "IDS_VPL_OPT_NO_REPEAT"
+msgstr "Ei korda"
+
+msgid "IDS_VPL_OPT_MAGENTA_M_COLOUR"
+msgstr "Magenta"
+
+msgid "IDS_VPL_OPT_GREEN"
+msgstr "Roheline"
+
+msgid "IDS_VPL_OPT_CYAN_M_COLOUR"
+msgstr "Tsüaan"
+
+msgid "IDS_VPL_OPT_CUSTOM"
+msgstr "Kohandatud"
+
+msgid "IDS_VPL_OPT_CURRENT_VIDEO_HONCE_ABB"
+msgstr "Praegune video (1x)"
+
+msgid "IDS_VPL_OPT_CONNECTION_INFO_ABB"
+msgstr "Ühenduse teave"
+
+msgid "IDS_VPL_OPT_CHANGE_PLAYER"
+msgstr "Vaheta mängijat"
+
+msgid "IDS_VPL_OPT_CAPTURE"
+msgstr "Jäädvusta"
+
+msgid "IDS_VPL_OPT_ALLSHARE"
+msgstr "AllShare"
+
+msgid "IDS_VPL_HEADER_SELECT_DEVICE_ABB"
+msgstr "Vali seade"
+
+msgid "IDS_VPL_HEADER_AVAILABLE_DEVICES_ABB"
+msgstr "Saadaolevad seadmed"
+
+msgid "IDS_VPL_BUTTON_SPEAKER_ABB"
+msgstr "Val.hääl."
+
+msgid "IDS_VPL_BODY_WHITE"
+msgstr "Valge"
+
+msgid "IDS_VPL_BODY_UDRGOTHICM_M_FONT"
+msgstr "UDRGothicM"
+
+msgid "IDS_VPL_BODY_UDMINCHO_M_FONT"
+msgstr "UDMincho"
+
+msgid "IDS_VPL_BODY_ROSEMARY_M_FONT"
+msgstr "Rosemary"
+
+msgid "IDS_VPL_BODY_RED_ABB"
+msgstr "Punane"
+
+msgid "IDS_VPL_BODY_PS_SECONDS"
+msgstr "%s sekundit"
+
+msgid "IDS_VPL_BODY_POP_M_FONT"
+msgstr "POP"
+
+msgid "IDS_VPL_BODY_PLAY_SPEED"
+msgstr "Esituskiirus"
+
+msgid "IDS_VPL_BODY_PD_SECS"
+msgstr "%d sek"
+
+msgid "IDS_VPL_BODY_OFF"
+msgstr "Väljas"
+
+msgid "IDS_VPL_BODY_NO_TITLE"
+msgstr "Pealkirjata"
+
+msgid "IDS_VPL_BODY_MY_DEVICE"
+msgstr "Minu seade"
+
+msgid "IDS_VPL_BODY_DEFAULT_FONT"
+msgstr "Vaikefont"
+
+msgid "IDS_VPL_BODY_COOL_JAZZ_M_FONT"
+msgstr "Cool jazz"
+
+msgid "IDS_VPL_BODY_CHOCO_COOKY_M_FONT"
+msgstr "Choco cooky"
+
+msgid "IDS_VPL_BODY_BLUE"
+msgstr "Sinine"
+
+msgid "IDS_VPL_BODY_BLACK"
+msgstr "Must"
+
+msgid "IDS_VPL_BODY_ACTIVATION"
+msgstr "Aktiveerimine"
+
+msgid "IDS_SMEMO_POP_CLOSE_APPLICATION_Q"
+msgstr "Kas sulgeda rakendus?"
+
+msgid "IDS_VIDEO_SK_CANCEL_ABB"
+msgstr "Tühis."
+
+msgid "IDS_VIDEO_OPT_STOP_AFTER_ALL_ABB"
+msgstr "Lõpeta pärast kõiki"
+
+msgid "IDS_VIDEO_OPT_REPEAT_CURRENT_ABB"
+msgstr "Korda praegust"
+
+msgid "IDS_VIDEO_OPT_REPEAT_ALL_ABB"
+msgstr "Korda kõik"
+
+msgid "IDS_VIDEO_BODY_RESOLUTION"
+msgstr "Eraldusvõime"
+
+msgid "IDS_VIDEO_BODY_PS_SOUND_EFFECTS_NOT_SUPPORTED_BY_SPEAKER"
+msgstr "Valjuhääldi ei toeta rakenduse %s heliefekte."
+
+msgid "IDS_MUSIC_BODY_TURN_PHONE_OVER_TO_MUTE_INCOMING_CALLS_MESSAGE_ALERTS_AND_ALARMS"
+msgstr "Saabuvate konede, sonumi marguannete ja teiste marguannete vaigistamiseks keerake telefon umber."
+
+msgid "IDS_ST_BODY_SD_CARD"
+msgstr "SD-kaart"
+
+msgid "IDS_VPL_TPOP_ONLY_AUDIO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_AUDIO"
+msgstr "See fail toetab ainult heliandmeid. Nüüd esitatakse heli."
+
+msgid "IDS_VPL_TPOP_ONLY_VIDEO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_VIDEO"
+msgstr "See fail toetab ainult videoandmeid. Nüüd esitatakse videot."
+
+msgid "IDS_ST_BODY_PRIVATE_STORAGE"
+msgstr "Privaatne mälu"
+
+msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
+msgstr "Kõrvaklapid"
+
+msgid "IDS_MUSIC_OPT_SPEAKER"
+msgstr "Kõlar"
+
+msgid "IDS_MUSIC_OPT_PAUSE"
+msgstr "Paus"
+
+msgid "IDS_VIDEO_BUTTON_DOWNLOAD"
+msgstr "Laadi alla"
+
+msgid "IDS_VIDEO_MBODY_SELECT_SUBTITLES_HCC"
+msgstr "Vali subt. (peittiitrid)"
+
+msgid "IDS_VIDEO_NPBODY_PREVIEW_SUBTITLES_HCC_ABB"
+msgstr "Eelvaate subt. (peittiitrid)"
+
+msgid "IDS_VIDEO_OPT_REPEAT_MODE_ABB"
+msgstr "Kordusrežiim"
+
+msgid "IDS_VIDEO_POP_UNSUPPORTED_FILE_TYPE"
+msgstr "Toetuseta failitüüp."
+
+msgid "IDS_VIDEO_OPT_NORMAL_M_SOUND_ABB"
+msgstr "Tavaline"
+
+msgid "IDS_VIDEO_BODY_VOICE"
+msgstr "Hääl"
+
+msgid "IDS_VIDEO_BODY_MOVIES"
+msgstr "Filmid"
+
+msgid "IDS_VIDEO_OPT_AUDIO_TRACK_ABB"
+msgstr "Helipala"
+
+msgid "IDS_VIDEO_BODY_BUFFERING_ING_ABB"
+msgstr "Puhverdamine"
+
+msgid "IDS_VIDEO_BODY_FILE_FORMAT"
+msgstr "Failivorming"
+
+msgid "IDS_VIDEO_BODY_LANGUAGE"
+msgstr "Keel"
+
+msgid "IDS_VIDEO_BODY_NO_VIDEOS"
+msgstr "Videoid pole"
+
+msgid "IDS_VIDEO_BODY_SIZE"
+msgstr "Suurus"
+
+msgid "IDS_VIDEO_BUTTON_DONE"
+msgstr "Valmis"
+
+msgid "IDS_VIDEO_BUTTON_REFRESH"
+msgstr "Värskenda"
+
+msgid "IDS_VIDEO_HEADER_DATE"
+msgstr "Kuupäev"
+
+msgid "IDS_VIDEO_HEADER_LOADING_ING_ABB"
+msgstr "Laadimine..."
+
+msgid "IDS_VIDEO_HEADER_SUBTITLES_HCC_ABB2"
+msgstr "Subt. (peittiitrid)"
+
+msgid "IDS_VIDEO_IOPT3_DELETE"
+msgstr "Kustuta"
+
+msgid "IDS_VIDEO_OPT_ADD_TO_HOME_SCREEN_ABB"
+msgstr "Lisa avaekraanile"
+
+msgid "IDS_VIDEO_OPT_FACEBOOK_ABB"
+msgstr "Facebook"
+
+msgid "IDS_VIDEO_OPT_HDMI"
+msgstr "HDMI"
+
+msgid "IDS_VIDEO_OPT_NAME"
+msgstr "Nimi"
+
+msgid "IDS_VIDEO_OPT_SOUNDALIVE_ABB2"
+msgstr "SoundAlive"
+
+msgid "IDS_VIDEO_OPT_YOUTUBE_ABB"
+msgstr "YouTube"
+
+msgid "IDS_VIDEO_POP_UNABLE_TO_PLAY_VIDEO"
+msgstr "Videot ei saa esitada."
+
+msgid "IDS_VIDEO_SBODY_NO_SUBTITLES_AVAILABLE_M_STATUS"
+msgstr "Subtiitrid pole saadaval"
+
+msgid "IDS_VIDEO_SK3_PLAY"
+msgstr "Esita"
+
+msgid "IDS_VIDEO_SK_CLOSE"
+msgstr "Sulge"
+
+msgid "IDS_VPL_POP_INVALID_URL"
+msgstr "Vigane URL."
+
+msgid "IDS_CHATON_HEADER_ERROR_ABB"
+msgstr "Tõrge"
+
+msgid "IDS_VIDEO_SBODY_DEVICE_STORAGE"
+msgstr "Seadme mälu"
+
+msgid "IDS_COM_BODY_VIDEO_PLAYER_T_MAINMENU"
+msgstr "Videomängija"
+
+msgid "IDS_VIDEO_OPT_SHARE_VIA"
+msgstr "Jaga:"
+
+msgid "IDS_VIDEO_POP_A_NETWORK_ERROR_HAS_OCCURRED_TRY_AGAIN"
+msgstr "Ilmnes võrgutõrge. Proovige uuesti."
+
+msgid "IDS_VIDEO_TPOP_ONLY_AUDIO_DATA_SUPPORTED_BY_THIS_FILE_FORMAT_NOW_PLAYING_AUDIO"
+msgstr "See failvorming toetab ainult heliandmeid. Nüüd esitatakse heli."
+
+msgid "IDS_VIDEO_TPOP_ONLY_VIDEO_DATA_SUPPORTED_BY_THIS_FILE_FORMAT_NOW_PLAYING_VIDEO"
+msgstr "See failvorming toetab ainult videoandmeid. Nüüd esitatakse videot."
+
+msgid "IDS_VPL_BODY_CENTRE"
+msgstr "Keskele"
+
+msgid "IDS_VPL_BODY_ON"
+msgstr "Sees"
+
+msgid "IDS_VPL_BODY_SETTINGS"
+msgstr "Seaded"
+
+msgid "IDS_VPL_BODY_VIDEOS_T_MAINMENU"
+msgstr "Videod"
+
+msgid "IDS_VPL_BUTTON_SHARE"
+msgstr "Jaga"
+
+msgid "IDS_VPL_HEADER_DETAILS"
+msgstr "Üksikasjad"
+
+msgid "IDS_VPL_OPT_DELETE"
+msgstr "Kustuta"
+
+msgid "IDS_VPL_POP_BUFFERING_PDP"
+msgstr "Puhverdamine – %d%"
+
+msgid "IDS_VIDEO_OPT_NONE"
+msgstr "Puudub"
+
+msgid "IDS_VIDEO_BODY_PD_SECS_ABB3"
+msgstr "%d sek"
+
+msgid "IDS_MUSIC_HEADER_SOUNDALIVE_ABB3"
+msgstr "SoundAlive"
+
+msgid "IDS_MP_HEADER_SELECT_AUDIO_DEVICE"
+msgstr "Heliseadme valimine"
+
+msgid "IDS_MUSIC_OPT_DELETE"
+msgstr "Kustuta"
+
+msgid "IDS_CLOCK_BUTTON_CANCEL"
+msgstr "Tühista"
+
+msgid "IDS_VIDEO_POP_AN_UNKNOWN_ERROR_HAS_OCCURRED_OR_THE_FILE_MAY_BE_CORRUPT"
+msgstr "Ilmnes tundmatu tõrge või fail on rikutud."
+
+msgid "IDS_VIDEO_POP_THIS_FILE_TYPE_IS_NOT_SUPPORTED"
+msgstr "Seda failitüüpi ei toetata."
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "VALMIS"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "TÜHISTA"
+
+msgid "IDS_TPLATFORM_MBODY_STORAGE_LOCATION"
+msgstr "Salvestamise asukoht"
+
+msgid "IDS_GP_BODY_SUBTITLES_HCC"
+msgstr "Subtiitrid (peittiitrid)"
+
+msgid "IDS_GALLERY_BODY_PERSONAL_STORAGE"
+msgstr "Isiklik mälu"
+
+msgid "IDS_ACCS_BODY_CAPTIONS_WILL_LOOK_LIKE_THIS"
+msgstr "Pealdised näevad välja nii"
+

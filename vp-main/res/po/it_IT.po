@@ -1,0 +1,489 @@
+msgid "IDS_VIDEO_OPT_BRIGHTNESS"
+msgstr "Luminosità"
+
+msgid "IDS_VIDEO_OPT_MUSIC_M_SOUNDALIVE"
+msgstr "Musica"
+
+msgid "IDS_VIDEO_OPT_VOICES_M_PERSON"
+msgstr "Voci"
+
+msgid "IDS_VIDEO_BODY_B"
+msgstr "B"
+
+msgid "IDS_VIDEO_BODY_GB"
+msgstr "GB"
+
+msgid "IDS_VIDEO_BODY_KB"
+msgstr "KB"
+
+msgid "IDS_VIDEO_BODY_LOCATION"
+msgstr "Posizione"
+
+msgid "IDS_VIDEO_BODY_MB"
+msgstr "MB"
+
+msgid "IDS_VIDEO_BUTTON_OK"
+msgstr "OK"
+
+msgid "IDS_VIDEO_HEADER_LAST_MODIFIED_M_DATE"
+msgstr "Ultima modifica"
+
+msgid "IDS_VIDEO_OPT_SHARE"
+msgstr "Condividi"
+
+msgid "IDS_VIDEO_HEADER_CANNOT_PLAY_VIDEO_ABB"
+msgstr "Impossibile riprodurre video"
+
+msgid "IDS_VIDEO_POP_AN_ERROR_OCCURRED_WITH_THE_SUBTITLES"
+msgstr "Si è verificato un errore con i sottotitoli."
+
+msgid "IDS_VIDEO_POP_THE_FILE_IS_CORRUPTED_OR_THE_SD_CARD_HAS_BEEN_REMOVED"
+msgstr "Il file è danneggiato o la scheda SD è stata rimossa."
+
+msgid "IDS_VIDEO_OPT_DETAILS"
+msgstr "Dettagli"
+
+msgid "IDS_VIDEO_OPT_TITLE"
+msgstr "Titolo"
+
+msgid "IDS_VIDEO_POP_THIS_VIDEO_WILL_BE_DELETED"
+msgstr "Il video sarà eliminato."
+
+msgid "IDS_VIDEO_HEADER_SETTINGS"
+msgstr "Impostaz."
+
+msgid "IDS_VIDEO_HEADER_UNABLE_TO_PLAY_VIDEO_ABB"
+msgstr "Impossibile riprodurre video"
+
+msgid "IDS_VIDEO_MBODY_ALIGNMENT"
+msgstr "Allineamento"
+
+msgid "IDS_VIDEO_MBODY_FONT_SIZE"
+msgstr "Dimensione carattere"
+
+msgid "IDS_VIDEO_OPT_REPEAT_SETTING_ABB"
+msgstr "Ripeti impostazione"
+
+msgid "IDS_VIDEO_OPT_SUBTITLES_HCC_ABB"
+msgstr "Sottotitoli (CC)"
+
+msgid "IDS_VIDEO_SBODY_CENTRE_M_STATUS"
+msgstr "Centrale"
+
+msgid "IDS_VIDEO_SBODY_LARGE_M_STATUS"
+msgstr "Grande"
+
+msgid "IDS_VIDEO_SBODY_LEFT_M_STATUS"
+msgstr "Sinistra"
+
+msgid "IDS_VIDEO_SBODY_MEDIUM_M_STATUS"
+msgstr "Medio"
+
+msgid "IDS_VIDEO_SBODY_RIGHT_M_STATUS"
+msgstr "Destra"
+
+msgid "IDS_VIDEO_SBODY_SMALL_M_STATUS"
+msgstr "Piccolo"
+
+msgid "IDS_BR_SK_NEXT"
+msgstr "Avanti"
+
+msgid "IDS_BR_SK_PREVIOUS"
+msgstr "Precedente"
+
+msgid "IDS_VPL_POP_DRM_FILES_CANNOT_BE_SHARED"
+msgstr "Impossibile condividere i file DRM."
+
+msgid "IDS_VPL_OPT_FORMAT"
+msgstr "Formato"
+
+msgid "IDS_VPL_BODY_UNABLE_TO_PLAY_VIDEO_DURING_CALL"
+msgstr "Impossibile riprodurre durante chiamata."
+
+msgid "IDS_VIDEO_OPT_MESSAGE_ABB"
+msgstr "Mess."
+
+msgid "IDS_VIDEO_OPT_FILE_TRANSFER_ABB"
+msgstr "Trasferimento file"
+
+msgid "IDS_VIDEO_OPT_EMAIL_ABB"
+msgstr "E-mail"
+
+msgid "IDS_VIDEO_BODY_LONGITUDE"
+msgstr "Longitudine"
+
+msgid "IDS_VIDEO_BODY_LATITUDE"
+msgstr "Latitudine"
+
+msgid "IDS_MUSIC_BUTTON_ENABLE_MOTION"
+msgstr "Attiva movim."
+
+msgid "IDS_VPL_TPOP_SCRUBBING_AT_PSX_SPEED"
+msgstr "Velocità di avanzamento %sx."
+
+msgid "IDS_VPL_TAB_EXTERNAL_STORAGE"
+msgstr "Memoria esterna"
+
+msgid "IDS_VPL_POP_VOLUME_M_SOUND"
+msgstr "Volume"
+
+msgid "IDS_VPL_POP_UNSUPPORTED_VIDEO_FORMAT"
+msgstr "Formato video non supportato."
+
+msgid "IDS_VPL_POP_UNSUPPORTED_FILE_TYPE"
+msgstr "Tipo file non supportato."
+
+msgid "IDS_VPL_POP_UNSUPPORTED_AUDIO_FORMAT"
+msgstr "Formato audio non supportato."
+
+msgid "IDS_VPL_POP_UNABLE_TO_USE_FAST_FORWARD_AND_REWIND_WHEN_NEARBY_DEVICES_ARE_ENABLED"
+msgstr "Impossibile utilizzare le funzioni di avanzamento rapido e riavvolgimento se i dispositivi vicini sono attivati."
+
+msgid "IDS_VPL_POP_UNABLE_TO_CAPTURE"
+msgstr "Impossibile acquisire."
+
+msgid "IDS_VPL_POP_ROTATE"
+msgstr "Ruota"
+
+msgid "IDS_VPL_POP_PRESS_THE_BACK_KEY_AGAIN_TO_RETURN_TO_PREVIOUS_SCREEN"
+msgstr "Premete nuovamente il tasto Indietro per tornare alla schermata precedente."
+
+msgid "IDS_VPL_POP_NOT_ENOUGH_MEMORY_DELETE_SOME_ITEMS"
+msgstr "Memoria insufficiente. Eliminare alcuni elementi."
+
+msgid "IDS_VPL_POP_BOOKMARK_LIST_FULL_DELETE_SOME_BOOKMARKS"
+msgstr "Elenco preferiti pieno. Eliminare alcuni preferiti."
+
+msgid "IDS_VPL_OPT_YELLOW_M_COLOUR"
+msgstr "Giallo"
+
+msgid "IDS_VPL_OPT_VIRTUAL_71_CH"
+msgstr "Canale virtuale 7.1"
+
+msgid "IDS_VPL_OPT_SUBTITLES_HCC_ABB"
+msgstr "Sottotitoli (CC)"
+
+msgid "IDS_VPL_OPT_SOUNDALIVE"
+msgstr "SoundAlive"
+
+msgid "IDS_VPL_OPT_REPEAT_MODE"
+msgstr "Modalità ripetizione"
+
+msgid "IDS_VPL_OPT_NO_REPEAT"
+msgstr "Nessuna ripetizione"
+
+msgid "IDS_VPL_OPT_MAGENTA_M_COLOUR"
+msgstr "Magenta"
+
+msgid "IDS_VPL_OPT_GREEN"
+msgstr "Verde"
+
+msgid "IDS_VPL_OPT_CYAN_M_COLOUR"
+msgstr "Ciano"
+
+msgid "IDS_VPL_OPT_CUSTOM"
+msgstr "Personalizzato"
+
+msgid "IDS_VPL_OPT_CURRENT_VIDEO_HONCE_ABB"
+msgstr "Video corr. (1 vol.)"
+
+msgid "IDS_VPL_OPT_CONNECTION_INFO_ABB"
+msgstr "Info connessione"
+
+msgid "IDS_VPL_OPT_CHANGE_PLAYER"
+msgstr "Cambia lettore"
+
+msgid "IDS_VPL_OPT_CAPTURE"
+msgstr "Cattura"
+
+msgid "IDS_VPL_OPT_ALLSHARE"
+msgstr "AllShare"
+
+msgid "IDS_VPL_HEADER_SELECT_DEVICE_ABB"
+msgstr "Seleziona dispositivo"
+
+msgid "IDS_VPL_HEADER_AVAILABLE_DEVICES_ABB"
+msgstr "Dispositivi disponibili"
+
+msgid "IDS_VPL_BUTTON_SPEAKER_ABB"
+msgstr "Altoparl."
+
+msgid "IDS_VPL_BODY_WHITE"
+msgstr "Bianco"
+
+msgid "IDS_VPL_BODY_UDRGOTHICM_M_FONT"
+msgstr "UDRGothicM"
+
+msgid "IDS_VPL_BODY_UDMINCHO_M_FONT"
+msgstr "UDMincho"
+
+msgid "IDS_VPL_BODY_ROSEMARY_M_FONT"
+msgstr "Rosemary"
+
+msgid "IDS_VPL_BODY_RED_ABB"
+msgstr "Rosso"
+
+msgid "IDS_VPL_BODY_PS_SECONDS"
+msgstr "%s secondi"
+
+msgid "IDS_VPL_BODY_POP_M_FONT"
+msgstr "POP"
+
+msgid "IDS_VPL_BODY_PLAY_SPEED"
+msgstr "Velocità di riproduzione"
+
+msgid "IDS_VPL_BODY_PD_SECS"
+msgstr "%d sec"
+
+msgid "IDS_VPL_BODY_OFF"
+msgstr "Non attivo"
+
+msgid "IDS_VPL_BODY_NO_TITLE"
+msgstr "Nessun titolo"
+
+msgid "IDS_VPL_BODY_MY_DEVICE"
+msgstr "Dispositivo personale"
+
+msgid "IDS_VPL_BODY_DEFAULT_FONT"
+msgstr "Carattere predefinito"
+
+msgid "IDS_VPL_BODY_COOL_JAZZ_M_FONT"
+msgstr "Cool jazz"
+
+msgid "IDS_VPL_BODY_CHOCO_COOKY_M_FONT"
+msgstr "Choco cooky"
+
+msgid "IDS_VPL_BODY_BLUE"
+msgstr "Blu"
+
+msgid "IDS_VPL_BODY_BLACK"
+msgstr "Nero"
+
+msgid "IDS_VPL_BODY_ACTIVATION"
+msgstr "Attivazione"
+
+msgid "IDS_SMEMO_POP_CLOSE_APPLICATION_Q"
+msgstr "Chiudere applicazione?"
+
+msgid "IDS_VIDEO_SK_CANCEL_ABB"
+msgstr "Ann."
+
+msgid "IDS_VIDEO_OPT_STOP_AFTER_ALL_ABB"
+msgstr "Interrom. dopo tutto"
+
+msgid "IDS_VIDEO_OPT_REPEAT_CURRENT_ABB"
+msgstr "Ripeti corrente"
+
+msgid "IDS_VIDEO_OPT_REPEAT_ALL_ABB"
+msgstr "Ripeti tutto"
+
+msgid "IDS_VIDEO_BODY_RESOLUTION"
+msgstr "Risoluzione"
+
+msgid "IDS_VIDEO_BODY_PS_SOUND_EFFECTS_NOT_SUPPORTED_BY_SPEAKER"
+msgstr "Effetti audio %s non supportati dall'altoparlante."
+
+msgid "IDS_MUSIC_BODY_TURN_PHONE_OVER_TO_MUTE_INCOMING_CALLS_MESSAGE_ALERTS_AND_ALARMS"
+msgstr "Capovolgi il dispositivo per disattivare il suono durante una chiamata in arrivo, gli avvisi messaggi e le sveglie."
+
+msgid "IDS_ST_BODY_SD_CARD"
+msgstr "Scheda SD"
+
+msgid "IDS_VPL_TPOP_ONLY_AUDIO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_AUDIO"
+msgstr "Questo file è in grado di supportare soltanto i dati audio. Audio attualmente in riproduzione."
+
+msgid "IDS_VPL_TPOP_ONLY_VIDEO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_VIDEO"
+msgstr "Questo file è in grado di supportare soltanto i dati video. Video attualmente in riproduzione."
+
+msgid "IDS_ST_BODY_PRIVATE_STORAGE"
+msgstr "Archivio privato"
+
+msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
+msgstr "Cuffie"
+
+msgid "IDS_MUSIC_OPT_SPEAKER"
+msgstr "Altoparlante"
+
+msgid "IDS_MUSIC_OPT_PAUSE"
+msgstr "Pausa"
+
+msgid "IDS_VIDEO_BUTTON_DOWNLOAD"
+msgstr "Scarica"
+
+msgid "IDS_VIDEO_MBODY_SELECT_SUBTITLES_HCC"
+msgstr "Selez. sottotitoli (CC)"
+
+msgid "IDS_VIDEO_NPBODY_PREVIEW_SUBTITLES_HCC_ABB"
+msgstr "Sottotitoli anteprima (CC)"
+
+msgid "IDS_VIDEO_OPT_REPEAT_MODE_ABB"
+msgstr "Modo ripetizione"
+
+msgid "IDS_VIDEO_POP_UNSUPPORTED_FILE_TYPE"
+msgstr "Tipo file non supportato."
+
+msgid "IDS_VIDEO_OPT_NORMAL_M_SOUND_ABB"
+msgstr "Normale"
+
+msgid "IDS_VIDEO_BODY_VOICE"
+msgstr "Voce"
+
+msgid "IDS_VIDEO_BODY_MOVIES"
+msgstr "Film"
+
+msgid "IDS_VIDEO_OPT_AUDIO_TRACK_ABB"
+msgstr "Brano audio"
+
+msgid "IDS_VIDEO_BODY_BUFFERING_ING_ABB"
+msgstr "Buffer..."
+
+msgid "IDS_VIDEO_BODY_FILE_FORMAT"
+msgstr "Formato file"
+
+msgid "IDS_VIDEO_BODY_LANGUAGE"
+msgstr "Lingua"
+
+msgid "IDS_VIDEO_BODY_NO_VIDEOS"
+msgstr "Nessun video"
+
+msgid "IDS_VIDEO_BODY_SIZE"
+msgstr "Dimensioni"
+
+msgid "IDS_VIDEO_BUTTON_DONE"
+msgstr "Fatto"
+
+msgid "IDS_VIDEO_BUTTON_REFRESH"
+msgstr "Aggiorna"
+
+msgid "IDS_VIDEO_HEADER_DATE"
+msgstr "Data"
+
+msgid "IDS_VIDEO_HEADER_LOADING_ING_ABB"
+msgstr "Caricamento..."
+
+msgid "IDS_VIDEO_HEADER_SUBTITLES_HCC_ABB2"
+msgstr "Sottotitoli (CC)"
+
+msgid "IDS_VIDEO_IOPT3_DELETE"
+msgstr "Elimina"
+
+msgid "IDS_VIDEO_OPT_ADD_TO_HOME_SCREEN_ABB"
+msgstr "Aggiungi a schermata Home"
+
+msgid "IDS_VIDEO_OPT_FACEBOOK_ABB"
+msgstr "Facebook"
+
+msgid "IDS_VIDEO_OPT_HDMI"
+msgstr "HDMI"
+
+msgid "IDS_VIDEO_OPT_NAME"
+msgstr "Nome"
+
+msgid "IDS_VIDEO_OPT_SOUNDALIVE_ABB2"
+msgstr "SoundAlive"
+
+msgid "IDS_VIDEO_OPT_YOUTUBE_ABB"
+msgstr "YouTube"
+
+msgid "IDS_VIDEO_POP_UNABLE_TO_PLAY_VIDEO"
+msgstr "Impossibile riprodurre video."
+
+msgid "IDS_VIDEO_SBODY_NO_SUBTITLES_AVAILABLE_M_STATUS"
+msgstr "Nessun sottotitolo disponibile"
+
+msgid "IDS_VIDEO_SK3_PLAY"
+msgstr "Riproduci"
+
+msgid "IDS_VIDEO_SK_CLOSE"
+msgstr "Chiudi"
+
+msgid "IDS_VPL_POP_INVALID_URL"
+msgstr "URL non valida."
+
+msgid "IDS_CHATON_HEADER_ERROR_ABB"
+msgstr "Errore"
+
+msgid "IDS_VIDEO_SBODY_DEVICE_STORAGE"
+msgstr "Memoria dispositivo"
+
+msgid "IDS_COM_BODY_VIDEO_PLAYER_T_MAINMENU"
+msgstr "Lettore video"
+
+msgid "IDS_VIDEO_OPT_SHARE_VIA"
+msgstr "Condividi con"
+
+msgid "IDS_VIDEO_POP_A_NETWORK_ERROR_HAS_OCCURRED_TRY_AGAIN"
+msgstr "Si è verificato un errore di rete. Riprovate."
+
+msgid "IDS_VIDEO_TPOP_ONLY_AUDIO_DATA_SUPPORTED_BY_THIS_FILE_FORMAT_NOW_PLAYING_AUDIO"
+msgstr "Questo formato file è in grado di supportare soltanto i dati audio. Audio attualmente in riproduzione."
+
+msgid "IDS_VIDEO_TPOP_ONLY_VIDEO_DATA_SUPPORTED_BY_THIS_FILE_FORMAT_NOW_PLAYING_VIDEO"
+msgstr "Il formato file supporta solo i dati video. Video in riproduzione."
+
+msgid "IDS_VPL_BODY_CENTRE"
+msgstr "Centro"
+
+msgid "IDS_VPL_BODY_ON"
+msgstr "Attivo"
+
+msgid "IDS_VPL_BODY_SETTINGS"
+msgstr "Impostaz."
+
+msgid "IDS_VPL_BODY_VIDEOS_T_MAINMENU"
+msgstr "Video"
+
+msgid "IDS_VPL_BUTTON_SHARE"
+msgstr "Condividi"
+
+msgid "IDS_VPL_HEADER_DETAILS"
+msgstr "Dettagli"
+
+msgid "IDS_VPL_OPT_DELETE"
+msgstr "Elimina"
+
+msgid "IDS_VPL_POP_BUFFERING_PDP"
+msgstr "Buffering: %d%"
+
+msgid "IDS_VIDEO_OPT_NONE"
+msgstr "Nessuno"
+
+msgid "IDS_VIDEO_BODY_PD_SECS_ABB3"
+msgstr "%d sec"
+
+msgid "IDS_MUSIC_HEADER_SOUNDALIVE_ABB3"
+msgstr "SoundAlive"
+
+msgid "IDS_MP_HEADER_SELECT_AUDIO_DEVICE"
+msgstr "Selezionate un dispositivo audio"
+
+msgid "IDS_MUSIC_OPT_DELETE"
+msgstr "Elimina"
+
+msgid "IDS_CLOCK_BUTTON_CANCEL"
+msgstr "Annulla"
+
+msgid "IDS_VIDEO_POP_AN_UNKNOWN_ERROR_HAS_OCCURRED_OR_THE_FILE_MAY_BE_CORRUPT"
+msgstr "Si è verificato un errore sconosciuto o il file è danneggiato."
+
+msgid "IDS_VIDEO_POP_THIS_FILE_TYPE_IS_NOT_SUPPORTED"
+msgstr "Questo tipo di file non è supportato."
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "FATTO"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "ANNULLA"
+
+msgid "IDS_TPLATFORM_MBODY_STORAGE_LOCATION"
+msgstr "Posizione di memoria"
+
+msgid "IDS_GP_BODY_SUBTITLES_HCC"
+msgstr "Sottotitoli (codificati)"
+
+msgid "IDS_GALLERY_BODY_PERSONAL_STORAGE"
+msgstr "Memoria personale"
+
+msgid "IDS_ACCS_BODY_CAPTIONS_WILL_LOOK_LIKE_THIS"
+msgstr "Aspetto dei sottotitoli"
+

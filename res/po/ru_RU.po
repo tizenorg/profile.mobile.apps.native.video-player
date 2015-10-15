@@ -1,0 +1,390 @@
+msgid "IDS_VIDEO_OPT_DOWNLOAD"
+msgstr "Загрузить"
+
+msgid "IDS_VIDEO_POP_1_FOLDER_WILL_BE_DOWNLOADED"
+msgstr "Будет загружена 1 папка."
+
+msgid "IDS_VIDEO_POP_1_VIDEO_WILL_BE_DOWNLOADED"
+msgstr "Будет загружено 1 видео."
+
+msgid "IDS_VIDEO_POP_ALL_FOLDERS_WILL_BE_DOWNLOADED"
+msgstr "Будут загружены все папки."
+
+msgid "IDS_VIDEO_POP_ALL_VIDEOS_WILL_BE_DOWNLOADED"
+msgstr "Будут загружены все видео."
+
+msgid "IDS_VIDEO_POP_PD_FOLDERS_WILL_BE_DOWNLOADED"
+msgstr "Будет загружено папок: %d."
+
+msgid "IDS_VIDEO_POP_PD_VIDEOS_WILL_BE_DOWNLOADED"
+msgstr "Будет загружено видео: %d."
+
+msgid "IDS_VIDEO_TPOP_MOBILE_DATA_TURNED_OFF_CONNECT_TO_WI_FI_NETWORK_INSTEAD_OR_TURN_ON_MOBILE_DATA_AND_TRY_AGAIN"
+msgstr "Мобильные данные включены. Подключитесь к сети Wi-Fi или включите мобильные данные и повторите попытку."
+
+msgid "IDS_GALLERY_OPT_PRIVATE_M_CONTENT"
+msgstr "Личное"
+
+msgid "IDS_VIDEO_BODY_B"
+msgstr "б"
+
+msgid "IDS_VIDEO_BODY_GB"
+msgstr "Гб"
+
+msgid "IDS_VIDEO_BODY_KB"
+msgstr "КБ"
+
+msgid "IDS_VIDEO_BODY_LOCATION"
+msgstr "Местоположение"
+
+msgid "IDS_VIDEO_BODY_MB"
+msgstr "МБ"
+
+msgid "IDS_VIDEO_BODY_UNKNOWN"
+msgstr "Неизвестно"
+
+msgid "IDS_VIDEO_BUTTON_OK"
+msgstr "ОК"
+
+msgid "IDS_VIDEO_HEADER_1_FOLDER"
+msgstr "1 папка"
+
+msgid "IDS_VIDEO_HEADER_1_VIDEO"
+msgstr "1 видео"
+
+msgid "IDS_VIDEO_HEADER_ALL"
+msgstr "Все"
+
+msgid "IDS_VIDEO_HEADER_FROM_DEVICE"
+msgstr "С устройства"
+
+msgid "IDS_VIDEO_HEADER_FROM_DROPBOX"
+msgstr "С Dropbox"
+
+msgid "IDS_VIDEO_HEADER_LAST_MODIFIED_M_DATE"
+msgstr "Последнее изменение"
+
+msgid "IDS_VIDEO_OPT_CONTENT_TO_DISPLAY"
+msgstr "Содержимое для просмотра"
+
+msgid "IDS_VIDEO_OPT_SEARCH"
+msgstr "Поиск"
+
+msgid "IDS_VIDEO_OPT_SHARE"
+msgstr "Отправить"
+
+msgid "IDS_VIDEO_POP_1_FOLDER_WILL_BE_DELETED"
+msgstr "1 папка будет удалена."
+
+msgid "IDS_VIDEO_TPOP_DELETING_ING"
+msgstr "Удаление..."
+
+msgid "IDS_VIDEO_BODY_AFTER_YOU_RECORD_VIDEOS_USING_THE_CAMERA_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Здесь будут отображаться видеозаписи, сделанные с помощью камеры."
+
+msgid "IDS_VIDEO_HEADER_PD_VIDEOS"
+msgstr "Видеозаписей: %d"
+
+msgid "IDS_VIDEO_HEADER_VIDEO"
+msgstr "Видео"
+
+msgid "IDS_VIDEO_NPBODY_NO_VIDEOS"
+msgstr "Нет видео"
+
+msgid "IDS_VIDEO_OPT_DETAILS"
+msgstr "Свойства"
+
+msgid "IDS_VIDEO_OPT_FOLDER"
+msgstr "Папка"
+
+msgid "IDS_VIDEO_OPT_LIST"
+msgstr "Список"
+
+msgid "IDS_VIDEO_OPT_RECENTLY_ADDED_ABB"
+msgstr "Недав. добавл."
+
+msgid "IDS_VIDEO_OPT_RECENTLY_VIEWED_ABB"
+msgstr "Недавно просмотренные"
+
+msgid "IDS_VIDEO_OPT_RENAME"
+msgstr "Переименовать"
+
+msgid "IDS_VIDEO_OPT_SIZE"
+msgstr "Размер"
+
+msgid "IDS_VIDEO_OPT_SORT_BY"
+msgstr "Сортировать по"
+
+msgid "IDS_VIDEO_OPT_TITLE"
+msgstr "Название"
+
+msgid "IDS_VIDEO_OPT_TYPE"
+msgstr "Тип"
+
+msgid "IDS_VIDEO_OPT_VIEW_AS"
+msgstr "Вид"
+
+msgid "IDS_VIDEO_POP_ALL_VIDEOS_WILL_BE_DELETED"
+msgstr "Все видео будут удалены."
+
+msgid "IDS_VIDEO_POP_PD_FOLDERS_WILL_BE_DELETED"
+msgstr "Папки (%d) будут удалены."
+
+msgid "IDS_VIDEO_POP_PD_VIDEOS_WILL_BE_DELETED"
+msgstr "Видео (%d) будут удалены."
+
+msgid "IDS_VIDEO_POP_THIS_FOLDER_WILL_BE_DELETED"
+msgstr "Эта папка будет удалена."
+
+msgid "IDS_VIDEO_HEADER_PD_FOLDERS"
+msgstr "Папки: %d"
+
+msgid "IDS_VIDEO_HEADER_SETTINGS"
+msgstr "Настройки"
+
+msgid "IDS_VIDEO_HEADER_UNABLE_TO_PLAY_VIDEO_ABB"
+msgstr "Невозможно воспроизвести видео"
+
+msgid "IDS_VIDEO_MBODY_ALIGNMENT"
+msgstr "Выравнивание"
+
+msgid "IDS_VIDEO_MBODY_FONT_SIZE"
+msgstr "Размер шрифта"
+
+msgid "IDS_VIDEO_OPT_REPEAT_SETTING_ABB"
+msgstr "Параметры повторения"
+
+msgid "IDS_VIDEO_OPT_SUBTITLES_HCC_ABB"
+msgstr "Субтитры"
+
+msgid "IDS_VIDEO_POP_ALL_FOLDERS_WILL_BE_DELETED"
+msgstr "Все папки будут удалены."
+
+msgid "IDS_VIDEO_SBODY_CENTRE_M_STATUS"
+msgstr "По центру"
+
+msgid "IDS_VIDEO_SBODY_LARGE_M_STATUS"
+msgstr "Крупный"
+
+msgid "IDS_VIDEO_SBODY_LEFT_M_STATUS"
+msgstr "Слева"
+
+msgid "IDS_VIDEO_SBODY_MEDIUM_M_STATUS"
+msgstr "Средний"
+
+msgid "IDS_VIDEO_SBODY_RIGHT_M_STATUS"
+msgstr "Справа"
+
+msgid "IDS_VIDEO_SBODY_SMALL_M_STATUS"
+msgstr "Мелкий"
+
+msgid "IDS_VIDEO_TPOP_FILE_NAME_ALREADY_IN_USE"
+msgstr "Имя файла уже используется"
+
+msgid "IDS_GALLERY_OPT_REMOVE_FROM_PRIVATE"
+msgstr "Удалить из приватного режима"
+
+msgid "IDS_GALLERY_OPT_MOVE_TO_PRIVATE"
+msgstr "Добавить в приватный режим"
+
+msgid "IDS_IV_POP_ENTRY_IS_EMPTY"
+msgstr "Пустая запись."
+
+msgid "IDS_VPL_OPT_FORMAT"
+msgstr "Формат"
+
+msgid "IDS_VPL_BODY_UNABLE_TO_PLAY_VIDEO_DURING_CALL"
+msgstr "Воспроизведение видео во время вызова невозможно."
+
+msgid "IDS_CLOUD_BODY_DROPBOX_ABB"
+msgstr "Dropbox"
+
+msgid "IDS_VIDEO_POP_THIS_FILE_IS_UNAVAILABLE_WHILE_OFFLINE_CHECK_NETWORK_CONNECTION_AND_TRY_AGAIN"
+msgstr "Файл недоступен в автономном режиме. Проверьте подключение к сети и повторите попытку"
+
+msgid "IDS_VIDEO_POP_THE_SELECTED_ITEM_WILL_BE_MOVED_TO_PS"
+msgstr "Выбранный элемент будет перемещен в %s."
+
+msgid "IDS_VIDEO_POP_THE_SELECTED_ITEMS_WILL_BE_MOVED_TO_PS"
+msgstr "Выбранные элементы будут перемещены в %s."
+
+msgid "IDS_VIDEO_POP_REMOVING_ING"
+msgstr "Удаление..."
+
+msgid "IDS_VIDEO_POP_MOVING_ING"
+msgstr "Перемещение..."
+
+msgid "IDS_VIDEO_POP_FAILED_TO_MOVE_TO_PERSONAL_STORAGE"
+msgstr "Не удалось переместить в личное хранилище."
+
+msgid "IDS_VIDEO_POP_FAILED_TO_MOVE_TO_NORMAL_STORAGE"
+msgstr "Не удалось переместить в обычное хранилище."
+
+msgid "IDS_VIDEO_OPT_MESSAGE_ABB"
+msgstr "Сообщение"
+
+msgid "IDS_VIDEO_OPT_FOLDERS_ABB"
+msgstr "Папки"
+
+msgid "IDS_VIDEO_OPT_EMAIL_ABB"
+msgstr "Эл. почта"
+
+msgid "IDS_VIDEO_OPT_DATE_HMOST_RECENT_ABB"
+msgstr "Дата (последние)"
+
+msgid "IDS_VIDEO_HEADER_PD_SELECTED"
+msgstr "Выбрано: %d"
+
+msgid "IDS_VIDEO_HEADER_DELETE_VIDEOS"
+msgstr "Удалить видео"
+
+msgid "IDS_VIDEO_HEADER_DELETE_VIDEO"
+msgstr "Удалить видеозапись"
+
+msgid "IDS_VIDEO_BUTTON_MOVE_ABB"
+msgstr "Переместить"
+
+msgid "IDS_VIDEO_BODY_LONGITUDE"
+msgstr "Долгота"
+
+msgid "IDS_VIDEO_BODY_LATITUDE"
+msgstr "Широта"
+
+msgid "IDS_VIDEO_BODY_AFTER_YOU_RECORD_VIDEOS_USING_THE_CAMERA_VIDEOS_WILL_BE_SHOWN"
+msgstr "Здесь будут отображаться видео, снятые с помощью камеры."
+
+msgid "IDS_VIDEO_SK_CANCEL_ABB"
+msgstr "Отмена"
+
+msgid "IDS_VIDEO_OPT_STOP_AFTER_ALL_ABB"
+msgstr "Останов. после всех"
+
+msgid "IDS_VIDEO_OPT_REPEAT_CURRENT_ABB"
+msgstr "Повторить текущее"
+
+msgid "IDS_VIDEO_OPT_REPEAT_ALL_ABB"
+msgstr "Повторять все"
+
+msgid "IDS_VIDEO_BODY_RESOLUTION"
+msgstr "Разрешение"
+
+msgid "IDS_VIDEO_BUTTON_DELETE"
+msgstr "Удалить"
+
+msgid "IDS_ST_OPT_DELETE_ALL"
+msgstr "Удалить все"
+
+msgid "IDS_VPL_TPOP_ONLY_AUDIO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_AUDIO"
+msgstr "Только звук, поддерживаемый этим файлом. Текущий воспроизводимый аудиофайл."
+
+msgid "IDS_VPL_TPOP_ONLY_VIDEO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_VIDEO"
+msgstr "Только видео, поддерживаемое этим файлом. Текущий воспроизводимый видеофайл."
+
+msgid "IDS_MUSIC_OPT_RENAME"
+msgstr "Переименовать"
+
+msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
+msgstr "Наушники"
+
+msgid "IDS_VIDEO_BUTTON_DOWNLOAD"
+msgstr "Загрузить"
+
+msgid "IDS_TPLATFORM_BODY_OFF"
+msgstr "Выключено"
+
+msgid "IDS_TPLATFORM_BODY_ON"
+msgstr "Включено"
+
+msgid "IDS_VIDEO_POP_1_VIDEO_WILL_BE_DELETED"
+msgstr "1 видеозапись будет удалена."
+
+msgid "IDS_SWALL_HEADER_INVALID_CHARACTER"
+msgstr "Недопустимый символ"
+
+msgid "IDS_VIDEO_BODY_NO_SEARCH_RESULTS"
+msgstr "Нет результатов поиска"
+
+msgid "IDS_GALLERY_HEADER_SELECT"
+msgstr "Выбрать"
+
+msgid "IDS_VIDEO_BODY_LAST_MODIFIED_M_DATE_ABB"
+msgstr "Последнее изменение"
+
+msgid "IDS_VIDEO_BUTTON_DONE"
+msgstr "Готово"
+
+msgid "IDS_VIDEO_HEADER_DATE"
+msgstr "Дата"
+
+msgid "IDS_VIDEO_HEADER_LATITUDE"
+msgstr "Широта"
+
+msgid "IDS_VIDEO_OPT_NAME"
+msgstr "Имя"
+
+msgid "IDS_VIDEO_OPT_NAME_HA_Z_ABB"
+msgstr "Имя (от А до Я)"
+
+msgid "IDS_VIDEO_OPT_VIDEOS"
+msgstr "Видео"
+
+msgid "IDS_VIDEO_TPOP_MAXIMUM_NUMBER_OF_ATTACHMENTS_HPD_EXCEEDED"
+msgstr "Превышено максимальное число вложений (%d)."
+
+msgid "IDS_VIDEO_HEADER_SELECT_ALL"
+msgstr "Выбрать все"
+
+msgid "IDS_VIDEO_SBODY_DEVICE_STORAGE"
+msgstr "Память устройства"
+
+msgid "IDS_VIDEO_SBODY_SD_CARD"
+msgstr "Карта памяти SD"
+
+msgid "IDS_VIDEO_OPT_SHARE_VIA"
+msgstr "Отправить через"
+
+msgid "IDS_VIDEO_POP_A_NETWORK_ERROR_HAS_OCCURRED_TRY_AGAIN"
+msgstr "Произошла ошибка сети. Повторите попытку."
+
+msgid "IDS_VPL_OPT_AUTO_PLAY_NEXT_ABB"
+msgstr "Автопереход"
+
+msgid "IDS_VPL_POP_PROCESSING_ING"
+msgstr "Обработка..."
+
+msgid "IDS_MEMO_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Достигнуто максимальное число символов."
+
+msgid "IDS_MUSIC_OPT_DELETE"
+msgstr "Удалить"
+
+msgid "IDS_MUSIC_OPT_DELETE_ALL"
+msgstr "Удалить все"
+
+msgid "IDS_PB_BODY_NO_SEARCH_RESULT"
+msgstr "Нет результатов"
+
+msgid "IDS_VIDEO_HEADER_SELECT_ITEM"
+msgstr "Выберите элемент"
+
+msgid "IDS_VIDEO_HEADER_SELECT_ITEMS"
+msgstr "Выберите элементы"
+
+msgid "IDS_CLOCK_BUTTON_CANCEL"
+msgstr "Отмена"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "ГОТОВО"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "ОТМЕНА"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DELETE_ABB"
+msgstr "УДАЛИТЬ"
+
+msgid "IDS_TPLATFORM_MBODY_STORAGE_LOCATION"
+msgstr "Место хранения"
+
+msgid "IDS_GALLERY_HEADER_SELECT_VIDEO"
+msgstr "Выберите видео"
+

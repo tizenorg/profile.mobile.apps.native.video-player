@@ -1,0 +1,390 @@
+msgid "IDS_VIDEO_OPT_DOWNLOAD"
+msgstr "Prenos"
+
+msgid "IDS_VIDEO_POP_1_FOLDER_WILL_BE_DOWNLOADED"
+msgstr "Prenesena bo 1 mapa."
+
+msgid "IDS_VIDEO_POP_1_VIDEO_WILL_BE_DOWNLOADED"
+msgstr "Prenesen bo 1 videoposnetek."
+
+msgid "IDS_VIDEO_POP_ALL_FOLDERS_WILL_BE_DOWNLOADED"
+msgstr "Prenesene bodo vse mape."
+
+msgid "IDS_VIDEO_POP_ALL_VIDEOS_WILL_BE_DOWNLOADED"
+msgstr "Preneseni bodo vsi videoposnetki."
+
+msgid "IDS_VIDEO_POP_PD_FOLDERS_WILL_BE_DOWNLOADED"
+msgstr "Prenesenih bo toliko map: %d."
+
+msgid "IDS_VIDEO_POP_PD_VIDEOS_WILL_BE_DOWNLOADED"
+msgstr "Prenesenih bo toliko videoposnetkov: %d."
+
+msgid "IDS_VIDEO_TPOP_MOBILE_DATA_TURNED_OFF_CONNECT_TO_WI_FI_NETWORK_INSTEAD_OR_TURN_ON_MOBILE_DATA_AND_TRY_AGAIN"
+msgstr "Funkcija Prenos podatkov prek mobilnega omrežja je izklopljena. Namesto tega se povežite z omrežjem Wi-Fi, ali pa vklopite funkcijo Prenos podatkov prek mobilnega omrežja in poskusite znova."
+
+msgid "IDS_GALLERY_OPT_PRIVATE_M_CONTENT"
+msgstr "Zasebno"
+
+msgid "IDS_VIDEO_BODY_B"
+msgstr "B"
+
+msgid "IDS_VIDEO_BODY_GB"
+msgstr "GB"
+
+msgid "IDS_VIDEO_BODY_KB"
+msgstr "KB"
+
+msgid "IDS_VIDEO_BODY_LOCATION"
+msgstr "Lokacija"
+
+msgid "IDS_VIDEO_BODY_MB"
+msgstr "MB"
+
+msgid "IDS_VIDEO_BODY_UNKNOWN"
+msgstr "Neznano"
+
+msgid "IDS_VIDEO_BUTTON_OK"
+msgstr "V redu"
+
+msgid "IDS_VIDEO_HEADER_1_FOLDER"
+msgstr "1 mapa"
+
+msgid "IDS_VIDEO_HEADER_1_VIDEO"
+msgstr "1 video"
+
+msgid "IDS_VIDEO_HEADER_ALL"
+msgstr "Vse"
+
+msgid "IDS_VIDEO_HEADER_FROM_DEVICE"
+msgstr "Iz naprave"
+
+msgid "IDS_VIDEO_HEADER_FROM_DROPBOX"
+msgstr "Iz storitve Dropbox"
+
+msgid "IDS_VIDEO_HEADER_LAST_MODIFIED_M_DATE"
+msgstr "Zadnjič spremenjeno"
+
+msgid "IDS_VIDEO_OPT_CONTENT_TO_DISPLAY"
+msgstr "Vsebina za prikaz"
+
+msgid "IDS_VIDEO_OPT_SEARCH"
+msgstr "Iskanje"
+
+msgid "IDS_VIDEO_OPT_SHARE"
+msgstr "Skupna raba"
+
+msgid "IDS_VIDEO_POP_1_FOLDER_WILL_BE_DELETED"
+msgstr "Izbrisana bo 1 mapa."
+
+msgid "IDS_VIDEO_TPOP_DELETING_ING"
+msgstr "Brisanje ..."
+
+msgid "IDS_VIDEO_BODY_AFTER_YOU_RECORD_VIDEOS_USING_THE_CAMERA_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Ko boste s kamero posneli videoposnetke, bodo prikazani tukaj."
+
+msgid "IDS_VIDEO_HEADER_PD_VIDEOS"
+msgstr "%d videoposnetkov"
+
+msgid "IDS_VIDEO_HEADER_VIDEO"
+msgstr "Video"
+
+msgid "IDS_VIDEO_NPBODY_NO_VIDEOS"
+msgstr "Ni videoposnetkov"
+
+msgid "IDS_VIDEO_OPT_DETAILS"
+msgstr "Podrobnosti"
+
+msgid "IDS_VIDEO_OPT_FOLDER"
+msgstr "Mapa"
+
+msgid "IDS_VIDEO_OPT_LIST"
+msgstr "Seznam"
+
+msgid "IDS_VIDEO_OPT_RECENTLY_ADDED_ABB"
+msgstr "Nedavno dodano"
+
+msgid "IDS_VIDEO_OPT_RECENTLY_VIEWED_ABB"
+msgstr "Pred kratkim prikazano"
+
+msgid "IDS_VIDEO_OPT_RENAME"
+msgstr "Preimenuj"
+
+msgid "IDS_VIDEO_OPT_SIZE"
+msgstr "Velikost"
+
+msgid "IDS_VIDEO_OPT_SORT_BY"
+msgstr "Razvrsti po"
+
+msgid "IDS_VIDEO_OPT_TITLE"
+msgstr "Naslov"
+
+msgid "IDS_VIDEO_OPT_TYPE"
+msgstr "Vrsta"
+
+msgid "IDS_VIDEO_OPT_VIEW_AS"
+msgstr "Prikaži kot"
+
+msgid "IDS_VIDEO_POP_ALL_VIDEOS_WILL_BE_DELETED"
+msgstr "Vsi videoposnetki bodo izbrisani."
+
+msgid "IDS_VIDEO_POP_PD_FOLDERS_WILL_BE_DELETED"
+msgstr "%d map bo izbrisanih."
+
+msgid "IDS_VIDEO_POP_PD_VIDEOS_WILL_BE_DELETED"
+msgstr "%d videoposnetkov bo izbrisanih."
+
+msgid "IDS_VIDEO_POP_THIS_FOLDER_WILL_BE_DELETED"
+msgstr "Ta mapa bo izbrisana."
+
+msgid "IDS_VIDEO_HEADER_PD_FOLDERS"
+msgstr "%d map"
+
+msgid "IDS_VIDEO_HEADER_SETTINGS"
+msgstr "Nastavitve"
+
+msgid "IDS_VIDEO_HEADER_UNABLE_TO_PLAY_VIDEO_ABB"
+msgstr "Videa ni mogoče predvajati"
+
+msgid "IDS_VIDEO_MBODY_ALIGNMENT"
+msgstr "Poravnava"
+
+msgid "IDS_VIDEO_MBODY_FONT_SIZE"
+msgstr "Velikost pisave"
+
+msgid "IDS_VIDEO_OPT_REPEAT_SETTING_ABB"
+msgstr "Nastavitev ponavljanja"
+
+msgid "IDS_VIDEO_OPT_SUBTITLES_HCC_ABB"
+msgstr "Podnapisi (CC)"
+
+msgid "IDS_VIDEO_POP_ALL_FOLDERS_WILL_BE_DELETED"
+msgstr "Vse mape bodo izbrisane."
+
+msgid "IDS_VIDEO_SBODY_CENTRE_M_STATUS"
+msgstr "Sredina"
+
+msgid "IDS_VIDEO_SBODY_LARGE_M_STATUS"
+msgstr "Velika"
+
+msgid "IDS_VIDEO_SBODY_LEFT_M_STATUS"
+msgstr "Levo"
+
+msgid "IDS_VIDEO_SBODY_MEDIUM_M_STATUS"
+msgstr "Srednja"
+
+msgid "IDS_VIDEO_SBODY_RIGHT_M_STATUS"
+msgstr "Desno"
+
+msgid "IDS_VIDEO_SBODY_SMALL_M_STATUS"
+msgstr "Majhna"
+
+msgid "IDS_VIDEO_TPOP_FILE_NAME_ALREADY_IN_USE"
+msgstr "Ime datoteke je že v uporabi."
+
+msgid "IDS_GALLERY_OPT_REMOVE_FROM_PRIVATE"
+msgstr "Odstrani iz zasebne"
+
+msgid "IDS_GALLERY_OPT_MOVE_TO_PRIVATE"
+msgstr "Premaknite v mapo Zasebno"
+
+msgid "IDS_IV_POP_ENTRY_IS_EMPTY"
+msgstr "Prazen vnos."
+
+msgid "IDS_VPL_OPT_FORMAT"
+msgstr "Format"
+
+msgid "IDS_VPL_BODY_UNABLE_TO_PLAY_VIDEO_DURING_CALL"
+msgstr "Ni mogoče predvajati videa med klicem."
+
+msgid "IDS_CLOUD_BODY_DROPBOX_ABB"
+msgstr "Dropbox"
+
+msgid "IDS_VIDEO_POP_THIS_FILE_IS_UNAVAILABLE_WHILE_OFFLINE_CHECK_NETWORK_CONNECTION_AND_TRY_AGAIN"
+msgstr "Ta datoteka ni na voljo brez povezave. Preverite omrežno povezavo in poskusite znova."
+
+msgid "IDS_VIDEO_POP_THE_SELECTED_ITEM_WILL_BE_MOVED_TO_PS"
+msgstr "Izbrani element bo premaknjen v mapo %s."
+
+msgid "IDS_VIDEO_POP_THE_SELECTED_ITEMS_WILL_BE_MOVED_TO_PS"
+msgstr "Izbrani elementi bodo premaknjeni v mapo %s."
+
+msgid "IDS_VIDEO_POP_REMOVING_ING"
+msgstr "Odstranjujem ..."
+
+msgid "IDS_VIDEO_POP_MOVING_ING"
+msgstr "Premikam"
+
+msgid "IDS_VIDEO_POP_FAILED_TO_MOVE_TO_PERSONAL_STORAGE"
+msgstr "Ni uspelo premakniti v osebno shrambo."
+
+msgid "IDS_VIDEO_POP_FAILED_TO_MOVE_TO_NORMAL_STORAGE"
+msgstr "Ni uspelo premakniti v običajno shrambo."
+
+msgid "IDS_VIDEO_OPT_MESSAGE_ABB"
+msgstr "Sporoč."
+
+msgid "IDS_VIDEO_OPT_FOLDERS_ABB"
+msgstr "Mape"
+
+msgid "IDS_VIDEO_OPT_EMAIL_ABB"
+msgstr "E-pošta"
+
+msgid "IDS_VIDEO_OPT_DATE_HMOST_RECENT_ABB"
+msgstr "Datum (najnovejši)"
+
+msgid "IDS_VIDEO_HEADER_PD_SELECTED"
+msgstr "%d izbranih"
+
+msgid "IDS_VIDEO_HEADER_DELETE_VIDEOS"
+msgstr "Izbrišite videoposnetke"
+
+msgid "IDS_VIDEO_HEADER_DELETE_VIDEO"
+msgstr "Izbrišite video"
+
+msgid "IDS_VIDEO_BUTTON_MOVE_ABB"
+msgstr "Premakni"
+
+msgid "IDS_VIDEO_BODY_LONGITUDE"
+msgstr "Zemljepisna dolžina"
+
+msgid "IDS_VIDEO_BODY_LATITUDE"
+msgstr "Zemljepisna širina"
+
+msgid "IDS_VIDEO_BODY_AFTER_YOU_RECORD_VIDEOS_USING_THE_CAMERA_VIDEOS_WILL_BE_SHOWN"
+msgstr "Ko boste s kamero posneli videoposnetke, bodo prikazani."
+
+msgid "IDS_VIDEO_SK_CANCEL_ABB"
+msgstr "Prekliči"
+
+msgid "IDS_VIDEO_OPT_STOP_AFTER_ALL_ABB"
+msgstr "Ustavi po vseh"
+
+msgid "IDS_VIDEO_OPT_REPEAT_CURRENT_ABB"
+msgstr "Ponovi trenutno"
+
+msgid "IDS_VIDEO_OPT_REPEAT_ALL_ABB"
+msgstr "Ponovi vse"
+
+msgid "IDS_VIDEO_BODY_RESOLUTION"
+msgstr "Ločljivost"
+
+msgid "IDS_VIDEO_BUTTON_DELETE"
+msgstr "Izbris"
+
+msgid "IDS_ST_OPT_DELETE_ALL"
+msgstr "Izbriši vse"
+
+msgid "IDS_VPL_TPOP_ONLY_AUDIO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_AUDIO"
+msgstr "Ta datoteka podpira samo zvočne podatke. Zvok se predvaja."
+
+msgid "IDS_VPL_TPOP_ONLY_VIDEO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_VIDEO"
+msgstr "Ta datoteka podpira samo video podatke. Video se predvaja."
+
+msgid "IDS_MUSIC_OPT_RENAME"
+msgstr "Preimenuj"
+
+msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
+msgstr "Slušalke"
+
+msgid "IDS_VIDEO_BUTTON_DOWNLOAD"
+msgstr "Prenos"
+
+msgid "IDS_TPLATFORM_BODY_OFF"
+msgstr "Izključeno"
+
+msgid "IDS_TPLATFORM_BODY_ON"
+msgstr "Vključeno"
+
+msgid "IDS_VIDEO_POP_1_VIDEO_WILL_BE_DELETED"
+msgstr "1 video bo izbrisan."
+
+msgid "IDS_SWALL_HEADER_INVALID_CHARACTER"
+msgstr "Neveljaven znak"
+
+msgid "IDS_VIDEO_BODY_NO_SEARCH_RESULTS"
+msgstr "Ni rezultatov iskanja"
+
+msgid "IDS_GALLERY_HEADER_SELECT"
+msgstr "Izberite"
+
+msgid "IDS_VIDEO_BODY_LAST_MODIFIED_M_DATE_ABB"
+msgstr "Zadnjič spremenjeno"
+
+msgid "IDS_VIDEO_BUTTON_DONE"
+msgstr "Končano"
+
+msgid "IDS_VIDEO_HEADER_DATE"
+msgstr "Datum"
+
+msgid "IDS_VIDEO_HEADER_LATITUDE"
+msgstr "Zemljepisna širina"
+
+msgid "IDS_VIDEO_OPT_NAME"
+msgstr "Ime"
+
+msgid "IDS_VIDEO_OPT_NAME_HA_Z_ABB"
+msgstr "Ime (A–Z)"
+
+msgid "IDS_VIDEO_OPT_VIDEOS"
+msgstr "Videoposnetki"
+
+msgid "IDS_VIDEO_TPOP_MAXIMUM_NUMBER_OF_ATTACHMENTS_HPD_EXCEEDED"
+msgstr "Največje dovoljeno število prilog (%d) je preseženo."
+
+msgid "IDS_VIDEO_HEADER_SELECT_ALL"
+msgstr "Izberite vse"
+
+msgid "IDS_VIDEO_SBODY_DEVICE_STORAGE"
+msgstr "Shramba naprave"
+
+msgid "IDS_VIDEO_SBODY_SD_CARD"
+msgstr "Kartica SD"
+
+msgid "IDS_VIDEO_OPT_SHARE_VIA"
+msgstr "Deli z drugimi prek"
+
+msgid "IDS_VIDEO_POP_A_NETWORK_ERROR_HAS_OCCURRED_TRY_AGAIN"
+msgstr "Prišlo je do napake omrežja. Poskusite znova."
+
+msgid "IDS_VPL_OPT_AUTO_PLAY_NEXT_ABB"
+msgstr "Sam. pred. nasl."
+
+msgid "IDS_VPL_POP_PROCESSING_ING"
+msgstr "Obdelujem..."
+
+msgid "IDS_MEMO_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Doseženo je največje dovoljeno število znakov."
+
+msgid "IDS_MUSIC_OPT_DELETE"
+msgstr "Izbriši"
+
+msgid "IDS_MUSIC_OPT_DELETE_ALL"
+msgstr "Izbriši vse"
+
+msgid "IDS_PB_BODY_NO_SEARCH_RESULT"
+msgstr "Ni rezultatov iskanja"
+
+msgid "IDS_VIDEO_HEADER_SELECT_ITEM"
+msgstr "Izberi predmet"
+
+msgid "IDS_VIDEO_HEADER_SELECT_ITEMS"
+msgstr "Izberi elemente"
+
+msgid "IDS_CLOCK_BUTTON_CANCEL"
+msgstr "Prekliči"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "KONČANO"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "PREKLIČI"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DELETE_ABB"
+msgstr "IZBRIŠI"
+
+msgid "IDS_TPLATFORM_MBODY_STORAGE_LOCATION"
+msgstr "Mesto shranjevanja"
+
+msgid "IDS_GALLERY_HEADER_SELECT_VIDEO"
+msgstr "Izberite videoposnetek"
+

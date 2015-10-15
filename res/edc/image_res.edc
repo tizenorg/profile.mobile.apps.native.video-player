@@ -1,0 +1,55 @@
+/*
+* Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+images {
+	image: "T01_toolbar_bg.png" COMP;
+	image: "T01_toolbar_press.png" COMP;
+	image: "T01_Nocontents_multimedia.png" COMP;
+	image: "T01-2_hold_icon_lock.png" COMP;
+
+
+	image: "panel/T01-2_controller_progress_bar.png" COMP;
+	image: "panel/T01-2_controller_progress_bg.png" COMP;
+	image: "panel/T01-2_icon_toolbar_cancel.png" COMP;
+	image: "panel/T01-2_icon_toolbar_done.png" COMP;
+
+
+	// FOR GENLIST SWEEP and check box
+	image: "00_sweep_list_bg.png" COMP;
+	image: "T01_checkbox.png" COMP;
+	image: "00_check_bg_dim.png" COMP;
+	image: "T01_check.png" COMP;
+	image: "T01_grid_select_check.png" COMP;
+	image: "00_grid_select_check.png" COMP;
+	image: "T01_video_list_progress_bar.png" COMP;
+	image: "00_winset_list_progress_bg.png" COMP;
+
+
+	image: "white/common/T01-2_popup_bg.png" COMP;
+	image: "white/common/T01-2_popup_arrow.png" COMP;
+
+
+	image: "T01_2_icon_rotate.png" COMP;
+	image: "T01_2_icon_rotate_press.png" COMP;
+	image: "turn_over/B15_turn_over_01.png" COMP;
+	image: "turn_over/B15_turn_over_02.png" COMP;
+	image: "turn_over/B15_turn_over_03.png" COMP;
+
+	image: "00_scroll_bar.png" COMP;
+	image: "00_scroll_bar_v.png" COMP;
+	image: "00_scroll_bar_h.png" COMP;
+}
+

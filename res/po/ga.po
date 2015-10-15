@@ -1,0 +1,390 @@
+msgid "IDS_VIDEO_OPT_DOWNLOAD"
+msgstr "Íoslódáil"
+
+msgid "IDS_VIDEO_POP_1_FOLDER_WILL_BE_DOWNLOADED"
+msgstr "Íoslódálfar 1 fhillteán."
+
+msgid "IDS_VIDEO_POP_1_VIDEO_WILL_BE_DOWNLOADED"
+msgstr "Íoslódálfar 1 fhíseán."
+
+msgid "IDS_VIDEO_POP_ALL_FOLDERS_WILL_BE_DOWNLOADED"
+msgstr "Íoslódálfar gach fillteán."
+
+msgid "IDS_VIDEO_POP_ALL_VIDEOS_WILL_BE_DOWNLOADED"
+msgstr "Íoslódálfar gach físeán."
+
+msgid "IDS_VIDEO_POP_PD_FOLDERS_WILL_BE_DOWNLOADED"
+msgstr "Íoslódálfar %d fillteán."
+
+msgid "IDS_VIDEO_POP_PD_VIDEOS_WILL_BE_DOWNLOADED"
+msgstr "Íoslódálfar %d físeán."
+
+msgid "IDS_VIDEO_TPOP_MOBILE_DATA_TURNED_OFF_CONNECT_TO_WI_FI_NETWORK_INSTEAD_OR_TURN_ON_MOBILE_DATA_AND_TRY_AGAIN"
+msgstr "Sonraí móibíleacha casta as. Nasc le líonra Wi-Fi ina ionad, nó cas Sonraí móibíleacha air agus triail arís."
+
+msgid "IDS_GALLERY_OPT_PRIVATE_M_CONTENT"
+msgstr "Príobháideach"
+
+msgid "IDS_VIDEO_BODY_B"
+msgstr "B"
+
+msgid "IDS_VIDEO_BODY_GB"
+msgstr "GB"
+
+msgid "IDS_VIDEO_BODY_KB"
+msgstr "KB"
+
+msgid "IDS_VIDEO_BODY_LOCATION"
+msgstr "Suíomh"
+
+msgid "IDS_VIDEO_BODY_MB"
+msgstr "MB"
+
+msgid "IDS_VIDEO_BODY_UNKNOWN"
+msgstr "Anaithnid"
+
+msgid "IDS_VIDEO_BUTTON_OK"
+msgstr "OK"
+
+msgid "IDS_VIDEO_HEADER_1_FOLDER"
+msgstr "1 Fhillteán"
+
+msgid "IDS_VIDEO_HEADER_1_VIDEO"
+msgstr "1 fhíseán"
+
+msgid "IDS_VIDEO_HEADER_ALL"
+msgstr "Gach"
+
+msgid "IDS_VIDEO_HEADER_FROM_DEVICE"
+msgstr "Ó ghléas"
+
+msgid "IDS_VIDEO_HEADER_FROM_DROPBOX"
+msgstr "Ó Dropbox"
+
+msgid "IDS_VIDEO_HEADER_LAST_MODIFIED_M_DATE"
+msgstr "Mionathrú is déanaí"
+
+msgid "IDS_VIDEO_OPT_CONTENT_TO_DISPLAY"
+msgstr "Inneachar le taispeáint"
+
+msgid "IDS_VIDEO_OPT_SEARCH"
+msgstr "Cuardaigh"
+
+msgid "IDS_VIDEO_OPT_SHARE"
+msgstr "Comhroinn"
+
+msgid "IDS_VIDEO_POP_1_FOLDER_WILL_BE_DELETED"
+msgstr "Scriosfar 1 fhillteán."
+
+msgid "IDS_VIDEO_TPOP_DELETING_ING"
+msgstr "Scriosadh..."
+
+msgid "IDS_VIDEO_BODY_AFTER_YOU_RECORD_VIDEOS_USING_THE_CAMERA_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Tar éis duit físeáin a thaifeadadh leis an gceamara, taispeánfar anseo iad."
+
+msgid "IDS_VIDEO_HEADER_PD_VIDEOS"
+msgstr "%d físeán"
+
+msgid "IDS_VIDEO_HEADER_VIDEO"
+msgstr "Físeán"
+
+msgid "IDS_VIDEO_NPBODY_NO_VIDEOS"
+msgstr "Níl físeáin ann"
+
+msgid "IDS_VIDEO_OPT_DETAILS"
+msgstr "Sonraí"
+
+msgid "IDS_VIDEO_OPT_FOLDER"
+msgstr "Fillteán"
+
+msgid "IDS_VIDEO_OPT_LIST"
+msgstr "Liostaigh"
+
+msgid "IDS_VIDEO_OPT_RECENTLY_ADDED_ABB"
+msgstr "Curtha leis le déanaí"
+
+msgid "IDS_VIDEO_OPT_RECENTLY_VIEWED_ABB"
+msgstr "Amharc orthu le déanaí"
+
+msgid "IDS_VIDEO_OPT_RENAME"
+msgstr "Athainmnigh"
+
+msgid "IDS_VIDEO_OPT_SIZE"
+msgstr "Méid"
+
+msgid "IDS_VIDEO_OPT_SORT_BY"
+msgstr "Sórt de réir"
+
+msgid "IDS_VIDEO_OPT_TITLE"
+msgstr "Teideal"
+
+msgid "IDS_VIDEO_OPT_TYPE"
+msgstr "Cineál"
+
+msgid "IDS_VIDEO_OPT_VIEW_AS"
+msgstr "Amharc air mar"
+
+msgid "IDS_VIDEO_POP_ALL_VIDEOS_WILL_BE_DELETED"
+msgstr "Scriosfar gach físeán"
+
+msgid "IDS_VIDEO_POP_PD_FOLDERS_WILL_BE_DELETED"
+msgstr "Scriosfar %d fillteán"
+
+msgid "IDS_VIDEO_POP_PD_VIDEOS_WILL_BE_DELETED"
+msgstr "Scriosfar %d físeán"
+
+msgid "IDS_VIDEO_POP_THIS_FOLDER_WILL_BE_DELETED"
+msgstr "Scriosfar an fillteán seo"
+
+msgid "IDS_VIDEO_HEADER_PD_FOLDERS"
+msgstr "%d fillteán"
+
+msgid "IDS_VIDEO_HEADER_SETTINGS"
+msgstr "Socruithe"
+
+msgid "IDS_VIDEO_HEADER_UNABLE_TO_PLAY_VIDEO_ABB"
+msgstr "Ní féidir físeán a sheinm"
+
+msgid "IDS_VIDEO_MBODY_ALIGNMENT"
+msgstr "Ailíniú"
+
+msgid "IDS_VIDEO_MBODY_FONT_SIZE"
+msgstr "Méid cló"
+
+msgid "IDS_VIDEO_OPT_REPEAT_SETTING_ABB"
+msgstr "Socrú athsheanma"
+
+msgid "IDS_VIDEO_OPT_SUBTITLES_HCC_ABB"
+msgstr "Fotheidil (CC)"
+
+msgid "IDS_VIDEO_POP_ALL_FOLDERS_WILL_BE_DELETED"
+msgstr "Scriosfar gach fillteán"
+
+msgid "IDS_VIDEO_SBODY_CENTRE_M_STATUS"
+msgstr "Lárnach"
+
+msgid "IDS_VIDEO_SBODY_LARGE_M_STATUS"
+msgstr "Mór"
+
+msgid "IDS_VIDEO_SBODY_LEFT_M_STATUS"
+msgstr "Clé"
+
+msgid "IDS_VIDEO_SBODY_MEDIUM_M_STATUS"
+msgstr "Meánach"
+
+msgid "IDS_VIDEO_SBODY_RIGHT_M_STATUS"
+msgstr "Deas"
+
+msgid "IDS_VIDEO_SBODY_SMALL_M_STATUS"
+msgstr "Beag"
+
+msgid "IDS_VIDEO_TPOP_FILE_NAME_ALREADY_IN_USE"
+msgstr "Comhadainm in úsáid cheana."
+
+msgid "IDS_GALLERY_OPT_REMOVE_FROM_PRIVATE"
+msgstr "Bain ó Phríobháideach"
+
+msgid "IDS_GALLERY_OPT_MOVE_TO_PRIVATE"
+msgstr "Bog chuig Príobháideach"
+
+msgid "IDS_IV_POP_ENTRY_IS_EMPTY"
+msgstr "Tá an iontráil folamh"
+
+msgid "IDS_VPL_OPT_FORMAT"
+msgstr "Formáid"
+
+msgid "IDS_VPL_BODY_UNABLE_TO_PLAY_VIDEO_DURING_CALL"
+msgstr "Ní féidir físeán a sheinm le linn glao."
+
+msgid "IDS_CLOUD_BODY_DROPBOX_ABB"
+msgstr "Dropbox"
+
+msgid "IDS_VIDEO_POP_THIS_FILE_IS_UNAVAILABLE_WHILE_OFFLINE_CHECK_NETWORK_CONNECTION_AND_TRY_AGAIN"
+msgstr "N‎íl an comhad seo ar fáil fad is atá tú as líne. Seiceáil do nasc líonra le do thoil agus triail arís."
+
+msgid "IDS_VIDEO_POP_THE_SELECTED_ITEM_WILL_BE_MOVED_TO_PS"
+msgstr "Bogfar an mhír roghnaithe chuig %s"
+
+msgid "IDS_VIDEO_POP_THE_SELECTED_ITEMS_WILL_BE_MOVED_TO_PS"
+msgstr "Bogfar na míreanna roghnaithe chuig %s"
+
+msgid "IDS_VIDEO_POP_REMOVING_ING"
+msgstr "Ag baint..."
+
+msgid "IDS_VIDEO_POP_MOVING_ING"
+msgstr "Ag bogadh..."
+
+msgid "IDS_VIDEO_POP_FAILED_TO_MOVE_TO_PERSONAL_STORAGE"
+msgstr "Theip ar bhogadh chuig stóras pearsanta."
+
+msgid "IDS_VIDEO_POP_FAILED_TO_MOVE_TO_NORMAL_STORAGE"
+msgstr "Theip ar bhogadh chuig gnáthstóras."
+
+msgid "IDS_VIDEO_OPT_MESSAGE_ABB"
+msgstr "Teachtai"
+
+msgid "IDS_VIDEO_OPT_FOLDERS_ABB"
+msgstr "Fillteáin"
+
+msgid "IDS_VIDEO_OPT_EMAIL_ABB"
+msgstr "R-phost"
+
+msgid "IDS_VIDEO_OPT_DATE_HMOST_RECENT_ABB"
+msgstr "Dáta (is déanaí)"
+
+msgid "IDS_VIDEO_HEADER_PD_SELECTED"
+msgstr "%d roghnaithe"
+
+msgid "IDS_VIDEO_HEADER_DELETE_VIDEOS"
+msgstr "Scrios físeáin"
+
+msgid "IDS_VIDEO_HEADER_DELETE_VIDEO"
+msgstr "Scrios físeán"
+
+msgid "IDS_VIDEO_BUTTON_MOVE_ABB"
+msgstr "Bog"
+
+msgid "IDS_VIDEO_BODY_LONGITUDE"
+msgstr "Domhanfad"
+
+msgid "IDS_VIDEO_BODY_LATITUDE"
+msgstr "Leithead"
+
+msgid "IDS_VIDEO_BODY_AFTER_YOU_RECORD_VIDEOS_USING_THE_CAMERA_VIDEOS_WILL_BE_SHOWN"
+msgstr "Tar éis duit físeáin a thaifeadadh ag úsáid an cheamara, taispeánfar na físeáin"
+
+msgid "IDS_VIDEO_SK_CANCEL_ABB"
+msgstr "Cealú"
+
+msgid "IDS_VIDEO_OPT_STOP_AFTER_ALL_ABB"
+msgstr "Stop tar eis gach"
+
+msgid "IDS_VIDEO_OPT_REPEAT_CURRENT_ABB"
+msgstr "Athdhean cuid reatha"
+
+msgid "IDS_VIDEO_OPT_REPEAT_ALL_ABB"
+msgstr "Athdhéan gach"
+
+msgid "IDS_VIDEO_BODY_RESOLUTION"
+msgstr "Taifeach"
+
+msgid "IDS_VIDEO_BUTTON_DELETE"
+msgstr "Scrios"
+
+msgid "IDS_ST_OPT_DELETE_ALL"
+msgstr "Scrios gach"
+
+msgid "IDS_VPL_TPOP_ONLY_AUDIO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_AUDIO"
+msgstr "Níl tacú sa chomhad seo ach do shonraí fuaime. Fuaim á seinm anois."
+
+msgid "IDS_VPL_TPOP_ONLY_VIDEO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_VIDEO"
+msgstr "Níl tacú sa chomhad seo ach do shonraí físe. Físeán á sheinm anois."
+
+msgid "IDS_MUSIC_OPT_RENAME"
+msgstr "Athainmnigh"
+
+msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
+msgstr "Cluasáin"
+
+msgid "IDS_VIDEO_BUTTON_DOWNLOAD"
+msgstr "Íoslódáil"
+
+msgid "IDS_TPLATFORM_BODY_OFF"
+msgstr "As"
+
+msgid "IDS_TPLATFORM_BODY_ON"
+msgstr "Air"
+
+msgid "IDS_VIDEO_POP_1_VIDEO_WILL_BE_DELETED"
+msgstr "Scriosfar 1 fhíseán."
+
+msgid "IDS_SWALL_HEADER_INVALID_CHARACTER"
+msgstr "Carachtar neamhbhailí"
+
+msgid "IDS_VIDEO_BODY_NO_SEARCH_RESULTS"
+msgstr "Níl torthaí cuardaigh ann"
+
+msgid "IDS_GALLERY_HEADER_SELECT"
+msgstr "Roghnaigh"
+
+msgid "IDS_VIDEO_BODY_LAST_MODIFIED_M_DATE_ABB"
+msgstr "Mionathrú is déanaí"
+
+msgid "IDS_VIDEO_BUTTON_DONE"
+msgstr "Déanta"
+
+msgid "IDS_VIDEO_HEADER_DATE"
+msgstr "Dáta"
+
+msgid "IDS_VIDEO_HEADER_LATITUDE"
+msgstr "Leithead"
+
+msgid "IDS_VIDEO_OPT_NAME"
+msgstr "Ainm"
+
+msgid "IDS_VIDEO_OPT_NAME_HA_Z_ABB"
+msgstr "Ainm (A-Z)"
+
+msgid "IDS_VIDEO_OPT_VIDEOS"
+msgstr "Físeáin"
+
+msgid "IDS_VIDEO_TPOP_MAXIMUM_NUMBER_OF_ATTACHMENTS_HPD_EXCEEDED"
+msgstr "Uaslíon na gceangaltán (%d) sáraithe."
+
+msgid "IDS_VIDEO_HEADER_SELECT_ALL"
+msgstr "Roghnaigh gach"
+
+msgid "IDS_VIDEO_SBODY_DEVICE_STORAGE"
+msgstr "Stóras gléis"
+
+msgid "IDS_VIDEO_SBODY_SD_CARD"
+msgstr "Cárta SD"
+
+msgid "IDS_VIDEO_OPT_SHARE_VIA"
+msgstr "Comhroinn le"
+
+msgid "IDS_VIDEO_POP_A_NETWORK_ERROR_HAS_OCCURRED_TRY_AGAIN"
+msgstr "Tharla earráid líonra. Triail arís."
+
+msgid "IDS_VPL_OPT_AUTO_PLAY_NEXT_ABB"
+msgstr "U. sheinn ar lean"
+
+msgid "IDS_VPL_POP_PROCESSING_ING"
+msgstr "Ag próiseáil..."
+
+msgid "IDS_MEMO_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Uaslíon na gcarachtar bainte amach."
+
+msgid "IDS_MUSIC_OPT_DELETE"
+msgstr "Scrios"
+
+msgid "IDS_MUSIC_OPT_DELETE_ALL"
+msgstr "Scrios gach"
+
+msgid "IDS_PB_BODY_NO_SEARCH_RESULT"
+msgstr "Níl toradh cuardaigh ann"
+
+msgid "IDS_VIDEO_HEADER_SELECT_ITEM"
+msgstr "Roghnaigh mír"
+
+msgid "IDS_VIDEO_HEADER_SELECT_ITEMS"
+msgstr "Roghnaigh míreanna"
+
+msgid "IDS_CLOCK_BUTTON_CANCEL"
+msgstr "Cealaigh"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "DÉANTA"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "CUIR AR CEAL"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DELETE_ABB"
+msgstr "SCRIOS"
+
+msgid "IDS_TPLATFORM_MBODY_STORAGE_LOCATION"
+msgstr "Suíomh stórais"
+
+msgid "IDS_GALLERY_HEADER_SELECT_VIDEO"
+msgstr "Roghnaigh físeán"
+

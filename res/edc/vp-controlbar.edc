@@ -1,0 +1,776 @@
+/*
+* Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+/*
+* Refer to nbeat-theme\themes\groups\controlbar.edc
+*/
+
+#define CONTROLBAR_LARGE_H		78		//Macros defined in file: nbeat.edc.
+#define CONTROLBAR_LARGE_LANDSCAPE_H		62
+#define CONTROLBAR_SMALL_H		65
+#define CONTROLBAR_SMALL_LANDSCAPE_H		50
+#define CONTROLBAR_W			78
+
+#define CONTROLBAR_SEPARATEBAR_BRIGHT_COLOR_INC 22 22 22 255
+#define CONTROLBAR_SEPARATEBAR_DARK_COLOR_INC 63 63 63 255
+
+
+	group{
+		name: "elm/controlbar/base/video/default";
+		parts{
+			part{
+				name: "bg_rect";
+				type: RECT;
+				scale: 1;
+				mouse_events:0;
+				description{
+					state: "default" 0.0;
+					rel1 {relative: 0.0 0.0; offset: 0 0;}
+					rel2 {relative: 1.0 1.0; offset: -1 -1;}
+					color: 0 0 0 0;
+				}
+			}
+			part{
+				name: "bg_image";
+				type: SWALLOW;
+				scale: 1;
+				mouse_events:0;
+				description{
+					state: "default" 0.0;
+					rel1 {relative: 0.0 0.0; offset: 0 0;}
+					rel2 {relative: 1.0 1.0; offset: -1 -1;}
+				}
+				description{
+					state: "large" 0.0;
+					min: 0 CONTROLBAR_LARGE_H;
+					fixed: 0 1;
+					align: 0.5 1.0;
+					rel1 {relative: 0.0 1.0; offset: 0 -1;}
+					rel2 {relative: 1.0 1.0; offset: -1 -1;}
+				}
+				description{
+					state: "small" 0.0;
+					min: 0 CONTROLBAR_SMALL_H;
+					fixed: 0 1;
+					align: 0.5 1.0;
+					rel1 {relative: 0.0 1.0; offset: 0 -1;}
+					rel2 {relative: 1.0 1.0; offset: -1 -1;}
+				}
+				description{
+					state: "left" 0.0;
+					min: CONTROLBAR_W 0;
+					fixed: 1 0;
+					align: 0.0 0.5;
+					rel1 {relative: 0.0 0.0; offset: 0 0;}
+					rel2 {relative: 0.0 1.0; offset: 0 -1;}
+				}
+				description{
+					state: "right" 0.0;
+					min: CONTROLBAR_W 0;
+					fixed: 1 0;
+					align: 1.0 0.5;
+					rel1 {relative: 1.0 0.0; offset: -1 0;}
+					rel2 {relative: 1.0 1.0; offset: -1 -1;}
+				}
+			}
+			part{
+				name: "elm.swallow.items";
+				type: SWALLOW;
+				scale: 1;
+				description{
+					state: "default" 0.0;
+					rel1 {relative: 0.0 0.0; to: "bg_image";}
+					rel2 {relative: 1.0 1.0; to: "bg_image";}
+				}
+			}
+		}
+		programs{
+			program{
+				name: "default";
+				signal: "elm,state,default";
+				source: "elm";
+				action: STATE_SET "default" 0.0;
+				target: "bg_image";
+			}
+			program{
+				name: "large";
+				signal: "elm,state,large";
+				source: "elm";
+				action: STATE_SET "large" 0.0;
+				target: "bg_image";
+			}
+			program{
+				name: "small";
+				signal: "elm,state,small";
+				source: "elm";
+				action: STATE_SET "small" 0.0;
+				target: "bg_image";
+			}
+			program{
+				name: "left";
+				signal: "elm,state,left";
+				source: "elm";
+				action: STATE_SET "left" 0.0;
+				target: "bg_image";
+			}
+			program{
+				name: "right";
+				signal: "elm,state,right";
+				source: "elm";
+				action: STATE_SET "right" 0.0;
+				target: "bg_image";
+			}
+		}
+	}
+
+	group{
+		name: "elm/controlbar/background/video/default";
+		images{
+			image: "T01_toolbar_bg.png" COMP;
+		}
+		parts{
+			part{
+				name: "bg_image";
+				type: IMAGE;
+				scale: 1;
+				mouse_events:0;
+				description{
+					state: "default" 0.0;
+					rel1 {relative: 0.0 0.0; offset: 0 0;}
+					rel2 {relative: 1.0 1.0; offset: -1 -1;}
+					image.normal: "T01_toolbar_bg.png";
+					color: 255 255 255 255;
+				}
+			}
+			programs {
+				program {
+					name: "tabbar_bg";
+					signal: "elm,state,tabbar";
+					source: "elm";
+					action: STATE_SET "tabbar" 0.0;
+					target: "bg_image";
+				}
+			}
+		}
+	}
+
+	group{
+		name: "elm/controlbar/view/video/default";
+		parts{
+			part{
+				name: "bg_rect";
+				type: RECT;
+				mouse_events:1;
+				description{
+					state: "default" 0.0;
+					rel1 {relative: 0.0 0.0; offset: 0 0;}
+					rel2 {relative: 1.0 1.0; offset: -1 -1;}
+					color: 0 0 0 0;
+				}
+			}
+			part{
+				name: "elm.swallow.view";
+				type: SWALLOW;
+				description{
+					state: "default" 0.0;
+					rel1 {relative: 0.0 0.0; to: "bg_rect";}
+					rel2 {relative: 1.0 1.0; to: "bg_rect";}
+				}
+			}
+		}
+	}
+
+	group{
+		name: "elm/controlbar/item_bg/video/default";
+		images{
+			image: "T01_toolbar_press.png" COMP;
+		}
+		parts{
+			part{
+				name: "bg_rect";
+				type: RECT;
+				scale: 1;
+				mouse_events: 1;
+				description{
+					state: "default" 0.0;
+					min: 0 CONTROLBAR_SMALL_H;
+					rel1 {relative: 0.0 0.0; offset: 0 0;}
+					rel2 {relative: 1.0 1.0; offset: -1 -1;}
+					color: 0 0 0 0;
+				}
+			}
+			part{
+				name: "bg_img";
+				type: IMAGE;
+				scale: 1;
+				mouse_events: 0;
+				description{
+					state: "default" 0.0;
+					visible: 0;
+					rel1 {relative: 0.0 0.0; offset: 0 0;}
+					rel2 {relative: 1.0 1.0; offset: -1 -1;}
+				}
+				description{
+					state: "toolbar_pressed" 0.0;
+					inherit: "default" 0.0;
+					rel1 {relative: 0.0 0.07; offset: 3 0;}
+					rel2 {relative: 1.0 0.93; offset: -3 0;}
+					image.normal: "T01_toolbar_press.png";
+					image.border: 2 2 2 2;
+					visible: 1;
+				}
+			}
+			part{
+				name: "left_line";
+				type: RECT;
+				scale: 1;
+				mouse_events: 0;
+				description{
+					state: "default" 0.0;
+					visible: 0;
+					rel1 {relative: 0.0 0.0; offset: 0 5;}
+					rel2 {relative: 0.0 1.0; offset: 1 -3;}
+					color: CONTROLBAR_SEPARATEBAR_BRIGHT_COLOR_INC;
+				}
+				description{
+					state: "show" 0.0;
+					inherit: "default" 0.0;
+					visible: 1;
+				}
+			}
+			part{
+				name: "right_line";
+				type: RECT;
+				scale: 1;
+				mouse_events: 0;
+				description{
+					state: "default" 0.0;
+					visible: 0;
+					rel1 {relative: 1.0 0.0; offset: -1 5;}
+					rel2 {relative: 1.0 1.0; offset: 0 -3;}
+					color: CONTROLBAR_SEPARATEBAR_DARK_COLOR_INC;
+				}
+				description{
+					state: "show" 0.0;
+					inherit: "default" 0.0;
+					visible: 1;
+				}
+			}
+			part{
+				name: "top_line";
+				type: RECT;
+				scale: 1;
+				mouse_events: 0;
+				description{
+					state: "default" 0.0;
+					visible: 0;
+					rel1 {relative: 0.0 0.0; offset: 5 0;}
+					rel2 {relative: 1.0 0.0; offset: -5 1;}
+					color: CONTROLBAR_SEPARATEBAR_BRIGHT_COLOR_INC;
+				}
+				description{
+					state: "show" 0.0;
+					inherit: "default" 0.0;
+					visible: 1;
+				}
+			}
+			part{
+				name: "bottom_line";
+				type: RECT;
+				scale: 1;
+				mouse_events: 0;
+				description{
+					state: "default" 0.0;
+					visible: 0;
+					rel1 {relative: 0.0 1.0; offset: 5 -1;}
+					rel2 {relative: 1.0 1.0; offset: -5 0;}
+					color: CONTROLBAR_SEPARATEBAR_DARK_COLOR_INC;
+				}
+				description{
+					state: "show" 0.0;
+					inherit: "default" 0.0;
+					visible: 1;
+				}
+			}
+			part{
+				name: "item";
+				type: SWALLOW;
+				scale: 1;
+				mouse_events: 1;
+				description{
+					state: "default" 0.0;
+					rel1 {to: "bg_rect";}
+					rel2 {to: "bg_rect";}
+				}
+			}
+		}
+		programs {
+			program {
+				name: "toolbar_pressed";
+				signal: "elm,state,toolbar_pressed";
+				source: "elm";
+				action: STATE_SET "toolbar_pressed" 0.0;
+				target: "bg_img";
+			}
+			program {
+				name: "unselected";
+				signal: "elm,state,unselected";
+				source: "elm";
+				action: STATE_SET "default" 0.0;
+				target: "bg_img";
+			}
+			program {
+				name: "unpressed";
+				signal: "elm,state,unpressed";
+				source: "elm";
+				action: STATE_SET "default" 0.0;
+				target: "bg_img";
+			}
+			program {
+				name: "left_line_show";
+				signal: "elm,state,left_line_show";
+				source: "elm";
+				action: STATE_SET "show" 0.0;
+				target: "left_line";
+			}
+			program {
+				name: "left_line_hide";
+				signal: "elm,state,left_line_hide";
+				source: "elm";
+				action: STATE_SET "default" 0.0;
+				target: "left_line";
+			}
+			program {
+				name: "right_line_show";
+				signal: "elm,state,right_line_show";
+				source: "elm";
+				action: STATE_SET "show" 0.0;
+				target: "right_line";
+			}
+			program {
+				name: "right_line_hide";
+				signal: "elm,state,right_line_hide";
+				source: "elm";
+				action: STATE_SET "default" 0.0;
+				target: "right_line";
+			}
+			program {
+				name: "top_line_show";
+				signal: "elm,state,top_line_show";
+				source: "elm";
+				action: STATE_SET "show" 0.0;
+				target: "top_line";
+			}
+			program {
+				name: "top_line_hide";
+				signal: "elm,state,top_line_hide";
+				source: "elm";
+				action: STATE_SET "default" 0.0;
+				target: "top_line";
+			}
+			program {
+				name: "bottom_line_show";
+				signal: "elm,state,bottom_line_show";
+				source: "elm";
+				action: STATE_SET "show" 0.0;
+				target: "bottom_line";
+			}
+			program {
+				name: "bottom_line_hide";
+				signal: "elm,state,bottom_line_hide";
+				source: "elm";
+				action: STATE_SET "default" 0.0;
+				target: "bottom_line";
+			}
+		}
+	}
+
+
+	group{
+		name: "elm/controlbar/base/video/landscape/default";
+
+		parts{
+			part{
+				name: "bg_rect";
+				type: RECT;
+				scale: 1;
+				mouse_events:0;
+				description{
+					state: "default" 0.0;
+					rel1 {relative: 0.0 0.0; offset: 0 0;}
+					rel2 {relative: 1.0 1.0; offset: -1 -1;}
+					color: 0 0 0 0;
+				}
+			}
+			part{
+				name: "bg_image";
+				type: SWALLOW;
+				scale: 1;
+				mouse_events:0;
+				description{
+					state: "default" 0.0;
+					rel1 {relative: 0.0 0.0; offset: 0 0;}
+					rel2 {relative: 1.0 1.0; offset: -1 -1;}
+				}
+				description{
+					state: "large" 0.0;
+					min: 0 CONTROLBAR_LARGE_LANDSCAPE_H;
+					fixed: 0 1;
+					align: 0.5 1.0;
+					rel1 {relative: 0.0 1.0; offset: 0 -1;}
+					rel2 {relative: 1.0 1.0; offset: -1 -1;}
+				}
+				description{
+					state: "small" 0.0;
+					min: 0 CONTROLBAR_SMALL_LANDSCAPE_H;
+					fixed: 0 1;
+					align: 0.5 1.0;
+					rel1 {relative: 0.0 1.0; offset: 0 -1;}
+					rel2 {relative: 1.0 1.0; offset: -1 -1;}
+				}
+				description{
+					state: "left" 0.0;
+					min: CONTROLBAR_W 0;
+					fixed: 1 0;
+					align: 0.0 0.5;
+					rel1 {relative: 0.0 0.0; offset: 0 0;}
+					rel2 {relative: 0.0 1.0; offset: 0 -1;}
+				}
+				description{
+					state: "right" 0.0;
+					min: CONTROLBAR_W 0;
+					fixed: 1 0;
+					align: 1.0 0.5;
+					rel1 {relative: 1.0 0.0; offset: -1 0;}
+					rel2 {relative: 1.0 1.0; offset: -1 -1;}
+				}
+			}
+			part{
+				name: "elm.swallow.items";
+				type: SWALLOW;
+				scale: 1;
+				description{
+					state: "default" 0.0;
+					rel1 {relative: 0.0 0.0; to: "bg_image";}
+					rel2 {relative: 1.0 1.0; to: "bg_image";}
+				}
+			}
+		}
+		programs{
+			program{
+				name: "default";
+				signal: "elm,state,default";
+				source: "elm";
+				action: STATE_SET "default" 0.0;
+				target: "bg_image";
+			}
+			program{
+				name: "large";
+				signal: "elm,state,large";
+				source: "elm";
+				action: STATE_SET "large" 0.0;
+				target: "bg_image";
+			}
+			program{
+				name: "small";
+				signal: "elm,state,small";
+				source: "elm";
+				action: STATE_SET "small" 0.0;
+				target: "bg_image";
+			}
+			program{
+				name: "left";
+				signal: "elm,state,left";
+				source: "elm";
+				action: STATE_SET "left" 0.0;
+				target: "bg_image";
+			}
+			program{
+				name: "right";
+				signal: "elm,state,right";
+				source: "elm";
+				action: STATE_SET "right" 0.0;
+				target: "bg_image";
+			}
+		}
+	}
+
+	group{
+		name: "elm/controlbar/background/video/landscape/default";
+
+		images{
+			image: "T01_toolbar_bg.png" COMP;
+		}
+
+		parts{
+			part{
+				name: "bg_image";
+				type: IMAGE;
+				scale: 1;
+				mouse_events:0;
+				description{
+					state: "default" 0.0;
+					rel1 {relative: 0.0 0.0; offset: 0 0;}
+					rel2 {relative: 1.0 1.0; offset: -1 -1;}
+					image.normal: "T01_toolbar_bg.png";
+					color: 255 255 255 255;
+				}
+			}
+			programs {
+				program {
+					name: "tabbar_bg";
+					signal: "elm,state,tabbar";
+					source: "elm";
+					action: STATE_SET "tabbar" 0.0;
+					target: "bg_image";
+				}
+			}
+		}
+	}
+
+	group{
+		name: "elm/controlbar/view/video/landscape/default";
+
+		parts{
+			part{
+				name: "bg_rect";
+				type: RECT;
+				mouse_events:1;
+				description{
+					state: "default" 0.0;
+					rel1 {relative: 0.0 0.0; offset: 0 0;}
+					rel2 {relative: 1.0 1.0; offset: -1 -1;}
+					color: 0 0 0 0;
+				}
+			}
+			part{
+				name: "elm.swallow.view";
+				type: SWALLOW;
+				description{
+					state: "default" 0.0;
+					rel1 {relative: 0.0 0.0; to: "bg_rect";}
+					rel2 {relative: 1.0 1.0; to: "bg_rect";}
+				}
+			}
+		}
+	}
+
+	group{
+		name: "elm/controlbar/item_bg/video/landscape/default";
+		images{
+			image: "T01_toolbar_press.png" COMP;
+		}
+
+		parts{
+			part{
+				name: "bg_rect";
+				type: RECT;
+				scale: 1;
+				mouse_events: 1;
+				description{
+					state: "default" 0.0;
+					min: 0 CONTROLBAR_SMALL_LANDSCAPE_H;
+					rel1 {relative: 0.0 0.0; offset: 0 0;}
+					rel2 {relative: 1.0 1.0; offset: -1 -1;}
+					color: 0 0 0 0;
+				}
+			}
+			part{
+				name: "bg_img";
+				type: IMAGE;
+				scale: 1;
+				mouse_events: 0;
+				description{
+					state: "default" 0.0;
+					visible: 0;
+					rel1 {relative: 0.0 0.0; offset: 0 0;}
+					rel2 {relative: 1.0 1.0; offset: -1 -1;}
+				}
+				description{
+					state: "toolbar_pressed" 0.0;
+					inherit: "default" 0.0;
+					rel1 {relative: 0.0 0.07; offset: 3 0;}
+					rel2 {relative: 1.0 0.93; offset: -3 0;}
+					image.normal: "T01_toolbar_press.png";
+					image.border: 2 2 2 2;
+					visible: 1;
+				}
+			}
+			part{
+				name: "left_line";
+				type: RECT;
+				scale: 1;
+				mouse_events: 0;
+				description{
+					state: "default" 0.0;
+					visible: 0;
+					rel1 {relative: 0.0 0.0; offset: 0 5;}
+					rel2 {relative: 0.0 1.0; offset: 1 -3;}
+					color: CONTROLBAR_SEPARATEBAR_BRIGHT_COLOR_INC;
+				}
+				description{
+					state: "show" 0.0;
+					inherit: "default" 0.0;
+					visible: 1;
+				}
+			}
+			part{
+				name: "right_line";
+				type: RECT;
+				scale: 1;
+				mouse_events: 0;
+				description{
+					state: "default" 0.0;
+					visible: 0;
+					rel1 {relative: 1.0 0.0; offset: -1 5;}
+					rel2 {relative: 1.0 1.0; offset: 0 -3;}
+					color: CONTROLBAR_SEPARATEBAR_DARK_COLOR_INC;
+				}
+				description{
+					state: "show" 0.0;
+					inherit: "default" 0.0;
+					visible: 1;
+				}
+			}
+			part{
+				name: "top_line";
+				type: RECT;
+				scale: 1;
+				mouse_events: 0;
+				description{
+					state: "default" 0.0;
+					visible: 0;
+					rel1 {relative: 0.0 0.0; offset: 5 0;}
+					rel2 {relative: 1.0 0.0; offset: -5 1;}
+					color: CONTROLBAR_SEPARATEBAR_BRIGHT_COLOR_INC;
+				}
+				description{
+					state: "show" 0.0;
+					inherit: "default" 0.0;
+					visible: 1;
+				}
+			}
+			part{
+				name: "bottom_line";
+				type: RECT;
+				scale: 1;
+				mouse_events: 0;
+				description{
+					state: "default" 0.0;
+					visible: 0;
+					rel1 {relative: 0.0 1.0; offset: 5 -1;}
+					rel2 {relative: 1.0 1.0; offset: -5 0;}
+					color: CONTROLBAR_SEPARATEBAR_DARK_COLOR_INC;
+				}
+				description{
+					state: "show" 0.0;
+					inherit: "default" 0.0;
+					visible: 1;
+				}
+			}
+			part{
+				name: "item";
+				type: SWALLOW;
+				scale: 1;
+				mouse_events: 1;
+				description{
+					state: "default" 0.0;
+					rel1 {to: "bg_rect";}
+					rel2 {to: "bg_rect";}
+				}
+			}
+		}
+		programs {
+			program {
+				name: "toolbar_pressed";
+				signal: "elm,state,toolbar_pressed";
+				source: "elm";
+				action: STATE_SET "toolbar_pressed" 0.0;
+				target: "bg_img";
+			}
+			program {
+				name: "unselected";
+				signal: "elm,state,unselected";
+				source: "elm";
+				action: STATE_SET "default" 0.0;
+				target: "bg_img";
+			}
+			program {
+				name: "unpressed";
+				signal: "elm,state,unpressed";
+				source: "elm";
+				action: STATE_SET "default" 0.0;
+				target: "bg_img";
+			}
+			program {
+				name: "left_line_show";
+				signal: "elm,state,left_line_show";
+				source: "elm";
+				action: STATE_SET "show" 0.0;
+				target: "left_line";
+			}
+			program {
+				name: "left_line_hide";
+				signal: "elm,state,left_line_hide";
+				source: "elm";
+				action: STATE_SET "default" 0.0;
+				target: "left_line";
+			}
+			program {
+				name: "right_line_show";
+				signal: "elm,state,right_line_show";
+				source: "elm";
+				action: STATE_SET "show" 0.0;
+				target: "right_line";
+			}
+			program {
+				name: "right_line_hide";
+				signal: "elm,state,right_line_hide";
+				source: "elm";
+				action: STATE_SET "default" 0.0;
+				target: "right_line";
+			}
+			program {
+				name: "top_line_show";
+				signal: "elm,state,top_line_show";
+				source: "elm";
+				action: STATE_SET "show" 0.0;
+				target: "top_line";
+			}
+			program {
+				name: "top_line_hide";
+				signal: "elm,state,top_line_hide";
+				source: "elm";
+				action: STATE_SET "default" 0.0;
+				target: "top_line";
+			}
+			program {
+				name: "bottom_line_show";
+				signal: "elm,state,bottom_line_show";
+				source: "elm";
+				action: STATE_SET "show" 0.0;
+				target: "bottom_line";
+			}
+			program {
+				name: "bottom_line_hide";
+				signal: "elm,state,bottom_line_hide";
+				source: "elm";
+				action: STATE_SET "default" 0.0;
+				target: "bottom_line";
+			}
+		}
+	}
+

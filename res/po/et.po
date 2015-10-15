@@ -1,0 +1,390 @@
+msgid "IDS_VIDEO_OPT_DOWNLOAD"
+msgstr "Laadi alla"
+
+msgid "IDS_VIDEO_POP_1_FOLDER_WILL_BE_DOWNLOADED"
+msgstr "1 kaust laaditakse alla."
+
+msgid "IDS_VIDEO_POP_1_VIDEO_WILL_BE_DOWNLOADED"
+msgstr "1 video laaditakse alla."
+
+msgid "IDS_VIDEO_POP_ALL_FOLDERS_WILL_BE_DOWNLOADED"
+msgstr "Kõik kaustad laaditakse alla."
+
+msgid "IDS_VIDEO_POP_ALL_VIDEOS_WILL_BE_DOWNLOADED"
+msgstr "Kõik videod laaditakse alla."
+
+msgid "IDS_VIDEO_POP_PD_FOLDERS_WILL_BE_DOWNLOADED"
+msgstr "%d kausta laaditakse alla."
+
+msgid "IDS_VIDEO_POP_PD_VIDEOS_WILL_BE_DOWNLOADED"
+msgstr "%d videot laaditakse alla."
+
+msgid "IDS_VIDEO_TPOP_MOBILE_DATA_TURNED_OFF_CONNECT_TO_WI_FI_NETWORK_INSTEAD_OR_TURN_ON_MOBILE_DATA_AND_TRY_AGAIN"
+msgstr "Mobiilne andmeside on välja lülitatud. Looge selle asemel ühendus Wi-Fi võrguga või lülitage mobiilne andmeside sisse ja proovige uuesti."
+
+msgid "IDS_GALLERY_OPT_PRIVATE_M_CONTENT"
+msgstr "Privaatne"
+
+msgid "IDS_VIDEO_BODY_B"
+msgstr "B"
+
+msgid "IDS_VIDEO_BODY_GB"
+msgstr "GB"
+
+msgid "IDS_VIDEO_BODY_KB"
+msgstr "kB"
+
+msgid "IDS_VIDEO_BODY_LOCATION"
+msgstr "Asukoht"
+
+msgid "IDS_VIDEO_BODY_MB"
+msgstr "MB"
+
+msgid "IDS_VIDEO_BODY_UNKNOWN"
+msgstr "Tundmatu"
+
+msgid "IDS_VIDEO_BUTTON_OK"
+msgstr "OK"
+
+msgid "IDS_VIDEO_HEADER_1_FOLDER"
+msgstr "1 kaust"
+
+msgid "IDS_VIDEO_HEADER_1_VIDEO"
+msgstr "1 video"
+
+msgid "IDS_VIDEO_HEADER_ALL"
+msgstr "Kõik"
+
+msgid "IDS_VIDEO_HEADER_FROM_DEVICE"
+msgstr "Seadmest"
+
+msgid "IDS_VIDEO_HEADER_FROM_DROPBOX"
+msgstr "Dropboxist"
+
+msgid "IDS_VIDEO_HEADER_LAST_MODIFIED_M_DATE"
+msgstr "Viimati muudetud"
+
+msgid "IDS_VIDEO_OPT_CONTENT_TO_DISPLAY"
+msgstr "Sisu, mida kuvada"
+
+msgid "IDS_VIDEO_OPT_SEARCH"
+msgstr "Otsi"
+
+msgid "IDS_VIDEO_OPT_SHARE"
+msgstr "Jaga"
+
+msgid "IDS_VIDEO_POP_1_FOLDER_WILL_BE_DELETED"
+msgstr "1 kaust kustutatakse."
+
+msgid "IDS_VIDEO_TPOP_DELETING_ING"
+msgstr "Kustutamine..."
+
+msgid "IDS_VIDEO_BODY_AFTER_YOU_RECORD_VIDEOS_USING_THE_CAMERA_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Videod kuvatakse pärast nende salvestamist kaameraga."
+
+msgid "IDS_VIDEO_HEADER_PD_VIDEOS"
+msgstr "%d videot"
+
+msgid "IDS_VIDEO_HEADER_VIDEO"
+msgstr "Video"
+
+msgid "IDS_VIDEO_NPBODY_NO_VIDEOS"
+msgstr "Videoid pole"
+
+msgid "IDS_VIDEO_OPT_DETAILS"
+msgstr "Üksikasjad"
+
+msgid "IDS_VIDEO_OPT_FOLDER"
+msgstr "Kaust"
+
+msgid "IDS_VIDEO_OPT_LIST"
+msgstr "Loend"
+
+msgid "IDS_VIDEO_OPT_RECENTLY_ADDED_ABB"
+msgstr "Hiljuti lisatud"
+
+msgid "IDS_VIDEO_OPT_RECENTLY_VIEWED_ABB"
+msgstr "Hiljuti vaadatud"
+
+msgid "IDS_VIDEO_OPT_RENAME"
+msgstr "Nimeta ümber"
+
+msgid "IDS_VIDEO_OPT_SIZE"
+msgstr "Suurus"
+
+msgid "IDS_VIDEO_OPT_SORT_BY"
+msgstr "Sortimisalus"
+
+msgid "IDS_VIDEO_OPT_TITLE"
+msgstr "Pealkiri"
+
+msgid "IDS_VIDEO_OPT_TYPE"
+msgstr "Tüüp"
+
+msgid "IDS_VIDEO_OPT_VIEW_AS"
+msgstr "Kuva:"
+
+msgid "IDS_VIDEO_POP_ALL_VIDEOS_WILL_BE_DELETED"
+msgstr "Koik videod kustutatakse."
+
+msgid "IDS_VIDEO_POP_PD_FOLDERS_WILL_BE_DELETED"
+msgstr "%d kausta kustutatakse."
+
+msgid "IDS_VIDEO_POP_PD_VIDEOS_WILL_BE_DELETED"
+msgstr "%d videot kustutatakse."
+
+msgid "IDS_VIDEO_POP_THIS_FOLDER_WILL_BE_DELETED"
+msgstr "See kaust kustutatakse."
+
+msgid "IDS_VIDEO_HEADER_PD_FOLDERS"
+msgstr "%d kaustad"
+
+msgid "IDS_VIDEO_HEADER_SETTINGS"
+msgstr "Seaded"
+
+msgid "IDS_VIDEO_HEADER_UNABLE_TO_PLAY_VIDEO_ABB"
+msgstr "Videot ei saa esitada"
+
+msgid "IDS_VIDEO_MBODY_ALIGNMENT"
+msgstr "Joondamine"
+
+msgid "IDS_VIDEO_MBODY_FONT_SIZE"
+msgstr "Fondi suurus"
+
+msgid "IDS_VIDEO_OPT_REPEAT_SETTING_ABB"
+msgstr "Korduse seadistus"
+
+msgid "IDS_VIDEO_OPT_SUBTITLES_HCC_ABB"
+msgstr "Subtiitrid (peittiitrid)"
+
+msgid "IDS_VIDEO_POP_ALL_FOLDERS_WILL_BE_DELETED"
+msgstr "Koik kaustad kustutatakse."
+
+msgid "IDS_VIDEO_SBODY_CENTRE_M_STATUS"
+msgstr "Keskel"
+
+msgid "IDS_VIDEO_SBODY_LARGE_M_STATUS"
+msgstr "Suur"
+
+msgid "IDS_VIDEO_SBODY_LEFT_M_STATUS"
+msgstr "Vasakul"
+
+msgid "IDS_VIDEO_SBODY_MEDIUM_M_STATUS"
+msgstr "Keskmine"
+
+msgid "IDS_VIDEO_SBODY_RIGHT_M_STATUS"
+msgstr "Paremal"
+
+msgid "IDS_VIDEO_SBODY_SMALL_M_STATUS"
+msgstr "Väike"
+
+msgid "IDS_VIDEO_TPOP_FILE_NAME_ALREADY_IN_USE"
+msgstr "Failinimi on juba kasutusel"
+
+msgid "IDS_GALLERY_OPT_REMOVE_FROM_PRIVATE"
+msgstr "Eemalda kaustast Privaatne"
+
+msgid "IDS_GALLERY_OPT_MOVE_TO_PRIVATE"
+msgstr "Teisalda kausta Privaatne"
+
+msgid "IDS_IV_POP_ENTRY_IS_EMPTY"
+msgstr "Kirje on tuhi."
+
+msgid "IDS_VPL_OPT_FORMAT"
+msgstr "Vorminda"
+
+msgid "IDS_VPL_BODY_UNABLE_TO_PLAY_VIDEO_DURING_CALL"
+msgstr "Kõne ajal ei saa videot esitada."
+
+msgid "IDS_CLOUD_BODY_DROPBOX_ABB"
+msgstr "Dropbox"
+
+msgid "IDS_VIDEO_POP_THIS_FILE_IS_UNAVAILABLE_WHILE_OFFLINE_CHECK_NETWORK_CONNECTION_AND_TRY_AGAIN"
+msgstr "See fail pole võrguühenduseta olekus saadaval. Kontrollige võrguühendust ja proovige uuesti."
+
+msgid "IDS_VIDEO_POP_THE_SELECTED_ITEM_WILL_BE_MOVED_TO_PS"
+msgstr "Valitud uksus teisaldatakse asukohta %s."
+
+msgid "IDS_VIDEO_POP_THE_SELECTED_ITEMS_WILL_BE_MOVED_TO_PS"
+msgstr "Valitud uksused teisaldatakse asukohta %s."
+
+msgid "IDS_VIDEO_POP_REMOVING_ING"
+msgstr "Eemaldamine..."
+
+msgid "IDS_VIDEO_POP_MOVING_ING"
+msgstr "Teisaldamine..."
+
+msgid "IDS_VIDEO_POP_FAILED_TO_MOVE_TO_PERSONAL_STORAGE"
+msgstr "Isiklikku mällu teisaldamine nurjus."
+
+msgid "IDS_VIDEO_POP_FAILED_TO_MOVE_TO_NORMAL_STORAGE"
+msgstr "Tavamällu teisaldamine nurjus."
+
+msgid "IDS_VIDEO_OPT_MESSAGE_ABB"
+msgstr "Sõnum"
+
+msgid "IDS_VIDEO_OPT_FOLDERS_ABB"
+msgstr "Kaustad"
+
+msgid "IDS_VIDEO_OPT_EMAIL_ABB"
+msgstr "E-kiri"
+
+msgid "IDS_VIDEO_OPT_DATE_HMOST_RECENT_ABB"
+msgstr "Kuupäev (hilis)"
+
+msgid "IDS_VIDEO_HEADER_PD_SELECTED"
+msgstr "%d valitud"
+
+msgid "IDS_VIDEO_HEADER_DELETE_VIDEOS"
+msgstr "Kustuta videod"
+
+msgid "IDS_VIDEO_HEADER_DELETE_VIDEO"
+msgstr "Kustuta video"
+
+msgid "IDS_VIDEO_BUTTON_MOVE_ABB"
+msgstr "Teisalda"
+
+msgid "IDS_VIDEO_BODY_LONGITUDE"
+msgstr "Pikkuskraad"
+
+msgid "IDS_VIDEO_BODY_LATITUDE"
+msgstr "Laiuskraad"
+
+msgid "IDS_VIDEO_BODY_AFTER_YOU_RECORD_VIDEOS_USING_THE_CAMERA_VIDEOS_WILL_BE_SHOWN"
+msgstr "Videod kuvatakse parast nende salvestamist kaameraga."
+
+msgid "IDS_VIDEO_SK_CANCEL_ABB"
+msgstr "Tühis."
+
+msgid "IDS_VIDEO_OPT_STOP_AFTER_ALL_ABB"
+msgstr "Lõpeta pärast kõiki"
+
+msgid "IDS_VIDEO_OPT_REPEAT_CURRENT_ABB"
+msgstr "Korda praegust"
+
+msgid "IDS_VIDEO_OPT_REPEAT_ALL_ABB"
+msgstr "Korda kõik"
+
+msgid "IDS_VIDEO_BODY_RESOLUTION"
+msgstr "Eraldusvõime"
+
+msgid "IDS_VIDEO_BUTTON_DELETE"
+msgstr "Kust."
+
+msgid "IDS_ST_OPT_DELETE_ALL"
+msgstr "Kustuta kõik"
+
+msgid "IDS_VPL_TPOP_ONLY_AUDIO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_AUDIO"
+msgstr "See fail toetab ainult heliandmeid. Nüüd esitatakse heli."
+
+msgid "IDS_VPL_TPOP_ONLY_VIDEO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_VIDEO"
+msgstr "See fail toetab ainult videoandmeid. Nüüd esitatakse videot."
+
+msgid "IDS_MUSIC_OPT_RENAME"
+msgstr "Nimeta ümber"
+
+msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
+msgstr "Kõrvaklapid"
+
+msgid "IDS_VIDEO_BUTTON_DOWNLOAD"
+msgstr "Laadi alla"
+
+msgid "IDS_TPLATFORM_BODY_OFF"
+msgstr "Väljas"
+
+msgid "IDS_TPLATFORM_BODY_ON"
+msgstr "Sees"
+
+msgid "IDS_VIDEO_POP_1_VIDEO_WILL_BE_DELETED"
+msgstr "1 video kustutatakse."
+
+msgid "IDS_SWALL_HEADER_INVALID_CHARACTER"
+msgstr "Lubamatu tähemärk"
+
+msgid "IDS_VIDEO_BODY_NO_SEARCH_RESULTS"
+msgstr "Otsingutulemeid pole"
+
+msgid "IDS_GALLERY_HEADER_SELECT"
+msgstr "Vali"
+
+msgid "IDS_VIDEO_BODY_LAST_MODIFIED_M_DATE_ABB"
+msgstr "Viimati muudetud"
+
+msgid "IDS_VIDEO_BUTTON_DONE"
+msgstr "Valmis"
+
+msgid "IDS_VIDEO_HEADER_DATE"
+msgstr "Kuupäev"
+
+msgid "IDS_VIDEO_HEADER_LATITUDE"
+msgstr "Laiuskraad"
+
+msgid "IDS_VIDEO_OPT_NAME"
+msgstr "Nimi"
+
+msgid "IDS_VIDEO_OPT_NAME_HA_Z_ABB"
+msgstr "Nimi (A‒Z)"
+
+msgid "IDS_VIDEO_OPT_VIDEOS"
+msgstr "Videod"
+
+msgid "IDS_VIDEO_TPOP_MAXIMUM_NUMBER_OF_ATTACHMENTS_HPD_EXCEEDED"
+msgstr "Manuste maksimaalne arv (%d) on ületatud."
+
+msgid "IDS_VIDEO_HEADER_SELECT_ALL"
+msgstr "Vali kõik"
+
+msgid "IDS_VIDEO_SBODY_DEVICE_STORAGE"
+msgstr "Seadme mälu"
+
+msgid "IDS_VIDEO_SBODY_SD_CARD"
+msgstr "SD-kaart"
+
+msgid "IDS_VIDEO_OPT_SHARE_VIA"
+msgstr "Jaga:"
+
+msgid "IDS_VIDEO_POP_A_NETWORK_ERROR_HAS_OCCURRED_TRY_AGAIN"
+msgstr "Ilmnes võrgutõrge. Proovige uuesti."
+
+msgid "IDS_VPL_OPT_AUTO_PLAY_NEXT_ABB"
+msgstr "Esita järgm. auto."
+
+msgid "IDS_VPL_POP_PROCESSING_ING"
+msgstr "Töötlemine..."
+
+msgid "IDS_MEMO_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Tähemärkide maksimaalne arv on saavutatud."
+
+msgid "IDS_MUSIC_OPT_DELETE"
+msgstr "Kustuta"
+
+msgid "IDS_MUSIC_OPT_DELETE_ALL"
+msgstr "Kustuta kõik"
+
+msgid "IDS_PB_BODY_NO_SEARCH_RESULT"
+msgstr "Otsing ei andnud"
+
+msgid "IDS_VIDEO_HEADER_SELECT_ITEM"
+msgstr "Vali üksus"
+
+msgid "IDS_VIDEO_HEADER_SELECT_ITEMS"
+msgstr "Vali üksusi"
+
+msgid "IDS_CLOCK_BUTTON_CANCEL"
+msgstr "Tühista"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "VALMIS"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "TÜHISTA"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DELETE_ABB"
+msgstr "KUSTUTA"
+
+msgid "IDS_TPLATFORM_MBODY_STORAGE_LOCATION"
+msgstr "Salvestamise asukoht"
+
+msgid "IDS_GALLERY_HEADER_SELECT_VIDEO"
+msgstr "Valige video"
+

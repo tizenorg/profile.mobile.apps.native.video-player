@@ -1,0 +1,391 @@
+/*
+* Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+
+#include "pv-image.edc"
+
+#define PV_POPUP_PROGRESSVIEW_CONTENT_MIN 				0 93
+#define PV_POPUP_PROGRESSVIEW_WIDTH_HEIGHT_MIN 			0 163
+#define PV_POPUP_PROGRESSVIEW_TEXT_LEFT_RIGHT_MAX 		120 60
+
+#define PV_POPUP_ENTRY_CONTENT_MIN 						0 100
+
+#define PV_POPUP_CAPTION_WIDTH_HEIGHT_MIN 				614 135
+#define PV_POPUP_CAPTION_WIN_WIDTH_HEIGHT_MIN			514 95
+#define PV_POPUP_BG_WIDTH_HEIGHT_MIN 					270 60
+#define PV_POPUP_LANDSCAPE_BG_WIDTH_HEIGHT_MIN 			760 60
+#define PV_POPUP_LINE_WIDTH_HEIGHT_MIN 					0 1
+#define PV_POPUP_TITLE_WIDTH_HEIGHT_MIN 					0 72
+#define PV_GENLIST_LIST_LINE1_POPUP_COLOR              211 209 203 255
+
+#define POPUP_BASE_DEFAULT_TEXT_FONT_SIZE_INC 	20
+collections {
+	group {
+		name: "pv.popup.progress";
+		parts {
+			part {
+				name:"bg";
+				type: RECT;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: PV_POPUP_PROGRESSVIEW_WIDTH_HEIGHT_MIN;
+					color: 0 0 0 0;
+				}
+			}
+
+			part {
+				name: "pad_l";
+				type: SPACER;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 20 0;
+					max: 20 0;
+					fixed: 1 0;
+					align: 0.0 0.0;
+					rel1 { relative: 0.0 0.0; to: "bg";}
+					rel2 { relative: 0.0 1.0; to: "bg";}
+				}
+			}
+
+			part {
+				name: "pad_r";
+				type: SPACER;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 20 0;
+					max: 20 0;
+					fixed: 1 0;
+					align: 1.0 1.0;
+					rel1 { relative: 1.0 0.0; to: "bg";}
+					rel2 { relative: 1.0 1.0; to: "bg";}
+				}
+			}
+
+			part {
+				name: "elm.swallow.content";
+				type: SWALLOW;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: PV_POPUP_PROGRESSVIEW_CONTENT_MIN;
+					fixed: 0 1;
+					align: 0.5 0.0;
+					rel1 { relative: 1.0 0.0; to_x: "pad_l"; to_y: "bg"; }
+					rel2 { relative: 0.0 0.0; to_x: "pad_r"; to_y: "bg"; }
+				}
+			}
+
+			part {
+				name: "elm.text.right";
+				type: TEXT;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: PV_POPUP_PROGRESSVIEW_TEXT_LEFT_RIGHT_MAX;
+					fixed: 1 1;
+					color: 0 0 0 255;
+					align: 1.0 0.0;
+					rel1 { relative: 0.0 1.0;  to_x: "pad_r"; to_y: "elm.swallow.content"; }
+					rel2 { relative: 0.0 1.0;  to_x: "pad_r"; to_y: "elm.swallow.content"; }
+					text {
+						font: "Tizen:style=Medium";
+						size: 36;
+						min: 0 0;
+						align: 1.0 0.0;
+					}
+
+				}
+			}
+
+		}
+	} /* group */
+
+	group {
+		name: "pv.popup.entry";
+		parts {
+			part {
+				name:"bg";
+				type: RECT;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: PV_POPUP_PROGRESSVIEW_WIDTH_HEIGHT_MIN;
+					color: 0 0 0 0;
+				}
+			}
+
+			part {
+				name: "pad_l";
+				type: SPACER;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 26 0;
+					max: 32 0;
+					fixed: 1 0;
+					align: 0.0 0.0;
+					rel1 { relative: 0.0 0.0; to: "bg";}
+					rel2 { relative: 0.0 1.0; to: "bg";}
+				}
+			}
+
+			part {
+				name: "pad_r";
+				type: SPACER;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 26 0;
+					max: 26 0;
+					fixed: 1 0;
+					align: 1.0 1.0;
+					rel1 { relative: 1.0 0.0; to: "bg";}
+					rel2 { relative: 1.0 1.0; to: "bg";}
+				}
+			}
+			part {
+				name: "elm.swallow.content";
+				type: SWALLOW;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: PV_POPUP_PROGRESSVIEW_CONTENT_MIN;
+					fixed: 0 1;
+					align: 0.0 0.5;
+					rel1 { relative: 1.0 0.5; to_x: "pad_l"; to_y: "bg"; }
+					rel2 { relative: 0.0 0.5; to_x: "pad_r"; to_y: "bg"; }
+				}
+			}
+
+		}
+	} /* group */
+
+	group {
+		name: "pv.popup.caption";
+		parts {
+			part {
+				name:"bg";
+				type: RECT;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: PV_POPUP_BG_WIDTH_HEIGHT_MIN;
+					color: 0 0 0 0;
+				}
+				description {
+					state: "landscape" 0.0;
+					min: PV_POPUP_LANDSCAPE_BG_WIDTH_HEIGHT_MIN;
+					color: 0 0 0 0;
+				}
+			}
+			part {
+				name: "elm.caption.preview.bg";
+				type: IMAGE;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					align: 0.5 0.5;
+					//rel1 { relative: 1.0 0.0; to_x: "pad_l"; to_y: "bg"; }
+					//rel2 { relative: 0.0 1.0; to_x: "pad_r"; to_y: "bg"; }
+					rel1 { relative: 0.0 0.0; to: "bg";}
+					rel2 { relative: 1.0 1.0; to: "bg";}
+					image { normal: "genlist/preview_settings_bg.png";}
+				}
+				description {
+					state: "landscape" 0.0;
+					inherit: "default" 0.0;
+				}
+			}
+			part {
+				name: "elm.swallow.content";
+				type: SWALLOW;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					align: 0.5 0.5;
+					//rel1 { relative: 1.0 0.0; to_x: "pad_l"; to_y: "bg"; }
+					//rel2 { relative: 0.0 1.0; to_x: "pad_r"; to_y: "bg"; }
+					rel1 { relative: 0.0 0.0; to: "bg";}
+					rel2 { relative: 1.0 1.0; to: "bg";}
+				}
+				description {
+					state: "landscape" 0.0;
+					inherit: "default" 0.0;
+				}
+			}
+		} /* parts*/
+	}
+	group
+	{
+		name: "navi_texts";
+		styles {
+			style { name: "navi_title_style";
+				base: "font=Tizen:style=Regular font_size=15 align=center color=#FFFFFF  wrap=mixed ellipsis=1.0";
+				tag:  "br" "\n";
+				tag:  "tab" "\t";
+			}
+		}
+		parts{
+			part{
+				name: "navi_bg";
+				type: RECT;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					color: 115 167 191 255;
+				rel1 {
+						relative: 0.0 0.0;
+					}
+					rel2 {
+						relative: 1.0 1.0;
+					}
+				}
+			}
+			part { name: "navi_text";
+				type: TEXTBLOCK;
+				mouse_events: 1;
+				scale:1;
+				description { state: "default" 0.0;
+					text {
+						style: "navi_title_style";
+						align: 0.5 0.5;
+					}
+					rel1 {
+						relative: 0.0 0.0;
+					}
+					rel2 {
+						relative: 1.0 1.0;
+					}
+					align: 0.5 0.5;
+				}
+			}
+		} /* parts */
+		programs
+          {
+           program
+          {
+                name: "state_changer";
+				signal: "mouse,down,1";
+				source: "navi_text";
+				action: SIGNAL_EMIT "elm,action,click1" "navi_text";
+			}
+	} /* programs */
+	}
+	group {
+		name: "pv.popup.title";
+		styles {
+			style { name: "popup_title_style";
+				base: "font=Tizen:style=Regular align=center font_size="POPUP_BASE_DEFAULT_TEXT_FONT_SIZE_INC" color=#FFFFFF  wrap=mixed ellipsis=1.0";
+				tag:  "br" "\n";
+				tag:  "tab" "\t";
+			}
+		}
+
+		parts {
+			part {
+				name:"elm.bg.title";
+				type: RECT;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 0 50;
+					max:440 50;
+					color: 61 185 204 255;
+				}
+			}
+			part {
+				name: "pad_l";
+				type: SPACER;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 8 0;
+					max: 8 0;
+					fixed: 1 0;
+					align: 0.0 0.0;
+					rel1 { relative: 0.0 0.0; to: "elm.bg.title";}
+					rel2 { relative: 0.0 1.0; to: "elm.bg.title";}
+				}
+			}
+
+			part {
+				name: "pad_r";
+				type: SPACER;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 8 0;
+					max: 8 0;
+					fixed: 1 0;
+					align: 1.0 1.0;
+					rel1 { relative: 1.0 0.0; to: "elm.bg.title";}
+					rel2 { relative: 1.0 1.0; to: "elm.bg.title";}
+				}
+			}
+
+			part { name: "elm.swallow.title.left.icon";
+				type: SWALLOW;
+				scale: 1;
+				description { state: "default" 0.0;
+					rel1 { relative: 0 0; to: "elm.bg.title";}
+					rel2 { relative: 0.25 1; to: "elm.bg.title";}
+					min: 30 0;
+					fixed: 1 0;
+					align: 0.5 0.5;
+				}
+			}
+
+			part { name: "elm.swallow.title.right.icon";
+				type: SWALLOW;
+				scale: 1;
+				description { state: "default" 0.0;
+					rel1 { relative: 0.75 0; to: "elm.bg.title";}
+					rel2 { relative: 1 1; to: "elm.bg.title";}
+					min: 30 0;
+					fixed: 1 0;
+					align: 1.0 0.5;
+				}
+			}
+
+			part { name: "elm.text.title";
+				type: TEXTBLOCK;
+				scale:1;
+				description { state: "default" 0.0;
+					fixed: 1 1;
+					text {
+						style: "popup_title_style";
+						size: POPUP_BASE_DEFAULT_TEXT_FONT_SIZE_INC;
+						align: 0.5 0.5;
+					}
+					rel1 {
+						relative: 1.0 0.0;
+						to_x: "elm.swallow.title.left.icon";
+						to_y: "elm.bg.title";
+					}
+					rel2 {
+						relative: 0.0 1.0;
+						to_x: "elm.swallow.title.right.icon";
+						to_y: "elm.bg.title";
+					}
+					align: 0.5 0.5;
+				}
+			}
+		} /* parts*/
+	}
+} /* collections */

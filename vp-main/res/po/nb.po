@@ -1,0 +1,489 @@
+msgid "IDS_VIDEO_OPT_BRIGHTNESS"
+msgstr "Lysstyrke"
+
+msgid "IDS_VIDEO_OPT_MUSIC_M_SOUNDALIVE"
+msgstr "Musikk"
+
+msgid "IDS_VIDEO_OPT_VOICES_M_PERSON"
+msgstr "Stemmer"
+
+msgid "IDS_VIDEO_BODY_B"
+msgstr "B"
+
+msgid "IDS_VIDEO_BODY_GB"
+msgstr "GB"
+
+msgid "IDS_VIDEO_BODY_KB"
+msgstr "KB"
+
+msgid "IDS_VIDEO_BODY_LOCATION"
+msgstr "Posisjon"
+
+msgid "IDS_VIDEO_BODY_MB"
+msgstr "MB"
+
+msgid "IDS_VIDEO_BUTTON_OK"
+msgstr "OK"
+
+msgid "IDS_VIDEO_HEADER_LAST_MODIFIED_M_DATE"
+msgstr "Sist endret"
+
+msgid "IDS_VIDEO_OPT_SHARE"
+msgstr "Del"
+
+msgid "IDS_VIDEO_HEADER_CANNOT_PLAY_VIDEO_ABB"
+msgstr "Kan ikke spille av video"
+
+msgid "IDS_VIDEO_POP_AN_ERROR_OCCURRED_WITH_THE_SUBTITLES"
+msgstr "Det oppstod en feil med undertekstene."
+
+msgid "IDS_VIDEO_POP_THE_FILE_IS_CORRUPTED_OR_THE_SD_CARD_HAS_BEEN_REMOVED"
+msgstr "Filen er ødelagt eller SD-kortet er fjernet."
+
+msgid "IDS_VIDEO_OPT_DETAILS"
+msgstr "Detaljer"
+
+msgid "IDS_VIDEO_OPT_TITLE"
+msgstr "Tittel"
+
+msgid "IDS_VIDEO_POP_THIS_VIDEO_WILL_BE_DELETED"
+msgstr "Denne videoen vil bli slettet."
+
+msgid "IDS_VIDEO_HEADER_SETTINGS"
+msgstr "Innstillinger"
+
+msgid "IDS_VIDEO_HEADER_UNABLE_TO_PLAY_VIDEO_ABB"
+msgstr "Kan ikke spille av video"
+
+msgid "IDS_VIDEO_MBODY_ALIGNMENT"
+msgstr "Justering"
+
+msgid "IDS_VIDEO_MBODY_FONT_SIZE"
+msgstr "Skriftstørrelse"
+
+msgid "IDS_VIDEO_OPT_REPEAT_SETTING_ABB"
+msgstr "Gjentakelsesinnstilling"
+
+msgid "IDS_VIDEO_OPT_SUBTITLES_HCC_ABB"
+msgstr "Undertekster (CC)"
+
+msgid "IDS_VIDEO_SBODY_CENTRE_M_STATUS"
+msgstr "Midtstill"
+
+msgid "IDS_VIDEO_SBODY_LARGE_M_STATUS"
+msgstr "Stor"
+
+msgid "IDS_VIDEO_SBODY_LEFT_M_STATUS"
+msgstr "Venstre"
+
+msgid "IDS_VIDEO_SBODY_MEDIUM_M_STATUS"
+msgstr "Middels"
+
+msgid "IDS_VIDEO_SBODY_RIGHT_M_STATUS"
+msgstr "Høyre"
+
+msgid "IDS_VIDEO_SBODY_SMALL_M_STATUS"
+msgstr "Liten"
+
+msgid "IDS_BR_SK_NEXT"
+msgstr "Neste"
+
+msgid "IDS_BR_SK_PREVIOUS"
+msgstr "Forrige"
+
+msgid "IDS_VPL_POP_DRM_FILES_CANNOT_BE_SHARED"
+msgstr "DRM-filer kan ikke deles."
+
+msgid "IDS_VPL_OPT_FORMAT"
+msgstr "Format"
+
+msgid "IDS_VPL_BODY_UNABLE_TO_PLAY_VIDEO_DURING_CALL"
+msgstr "Kan ikke spille av video under samtale."
+
+msgid "IDS_VIDEO_OPT_MESSAGE_ABB"
+msgstr "Melding"
+
+msgid "IDS_VIDEO_OPT_FILE_TRANSFER_ABB"
+msgstr "Filoverføring"
+
+msgid "IDS_VIDEO_OPT_EMAIL_ABB"
+msgstr "E-post"
+
+msgid "IDS_VIDEO_BODY_LONGITUDE"
+msgstr "Lengdegrad"
+
+msgid "IDS_VIDEO_BODY_LATITUDE"
+msgstr "Breddegrad"
+
+msgid "IDS_MUSIC_BUTTON_ENABLE_MOTION"
+msgstr "Aktiv. beveg."
+
+msgid "IDS_VPL_TPOP_SCRUBBING_AT_PSX_SPEED"
+msgstr "Skrubber med %sx hastighet."
+
+msgid "IDS_VPL_TAB_EXTERNAL_STORAGE"
+msgstr "Ekstern lagring"
+
+msgid "IDS_VPL_POP_VOLUME_M_SOUND"
+msgstr "Volum"
+
+msgid "IDS_VPL_POP_UNSUPPORTED_VIDEO_FORMAT"
+msgstr "Videoformatet støttes ikke."
+
+msgid "IDS_VPL_POP_UNSUPPORTED_FILE_TYPE"
+msgstr "Filtypen støttes ikke."
+
+msgid "IDS_VPL_POP_UNSUPPORTED_AUDIO_FORMAT"
+msgstr "Ikke støttet lydformat."
+
+msgid "IDS_VPL_POP_UNABLE_TO_USE_FAST_FORWARD_AND_REWIND_WHEN_NEARBY_DEVICES_ARE_ENABLED"
+msgstr "Kan ikke bruke spoling fremover og bakover når Enheter i nærheten er aktivert."
+
+msgid "IDS_VPL_POP_UNABLE_TO_CAPTURE"
+msgstr "Kan ikke ta bilde."
+
+msgid "IDS_VPL_POP_ROTATE"
+msgstr "Roter"
+
+msgid "IDS_VPL_POP_PRESS_THE_BACK_KEY_AGAIN_TO_RETURN_TO_PREVIOUS_SCREEN"
+msgstr "Trykk på Tilbake-tasten på nytt for å gå tilbake til det forrige skjermbildet."
+
+msgid "IDS_VPL_POP_NOT_ENOUGH_MEMORY_DELETE_SOME_ITEMS"
+msgstr "Ikke nok minne. Slett noen elementer."
+
+msgid "IDS_VPL_POP_BOOKMARK_LIST_FULL_DELETE_SOME_BOOKMARKS"
+msgstr "Bokmerkeliste full. Slett noen bokmerker."
+
+msgid "IDS_VPL_OPT_YELLOW_M_COLOUR"
+msgstr "Gul"
+
+msgid "IDS_VPL_OPT_VIRTUAL_71_CH"
+msgstr "Virtuell 7.1 kanal"
+
+msgid "IDS_VPL_OPT_SUBTITLES_HCC_ABB"
+msgstr "Undertekster (CC)"
+
+msgid "IDS_VPL_OPT_SOUNDALIVE"
+msgstr "SoundAlive"
+
+msgid "IDS_VPL_OPT_REPEAT_MODE"
+msgstr "Gjentakelsesmodus"
+
+msgid "IDS_VPL_OPT_NO_REPEAT"
+msgstr "Ingen gjentakelse"
+
+msgid "IDS_VPL_OPT_MAGENTA_M_COLOUR"
+msgstr "Magenta"
+
+msgid "IDS_VPL_OPT_GREEN"
+msgstr "Grønn"
+
+msgid "IDS_VPL_OPT_CYAN_M_COLOUR"
+msgstr "Cyan"
+
+msgid "IDS_VPL_OPT_CUSTOM"
+msgstr "Tilpasset"
+
+msgid "IDS_VPL_OPT_CURRENT_VIDEO_HONCE_ABB"
+msgstr "Gj. video (én gang)"
+
+msgid "IDS_VPL_OPT_CONNECTION_INFO_ABB"
+msgstr "Tilkoblingsinfo."
+
+msgid "IDS_VPL_OPT_CHANGE_PLAYER"
+msgstr "Endre avspiller"
+
+msgid "IDS_VPL_OPT_CAPTURE"
+msgstr "Ta opp"
+
+msgid "IDS_VPL_OPT_ALLSHARE"
+msgstr "AllShare"
+
+msgid "IDS_VPL_HEADER_SELECT_DEVICE_ABB"
+msgstr "Velg enhet"
+
+msgid "IDS_VPL_HEADER_AVAILABLE_DEVICES_ABB"
+msgstr "Tilgjeng. enheter"
+
+msgid "IDS_VPL_BUTTON_SPEAKER_ABB"
+msgstr "Høyttaler"
+
+msgid "IDS_VPL_BODY_WHITE"
+msgstr "Hvit"
+
+msgid "IDS_VPL_BODY_UDRGOTHICM_M_FONT"
+msgstr "UDRGothicM"
+
+msgid "IDS_VPL_BODY_UDMINCHO_M_FONT"
+msgstr "UDMincho"
+
+msgid "IDS_VPL_BODY_ROSEMARY_M_FONT"
+msgstr "Rosmarin"
+
+msgid "IDS_VPL_BODY_RED_ABB"
+msgstr "Rød"
+
+msgid "IDS_VPL_BODY_PS_SECONDS"
+msgstr "%s sekunder"
+
+msgid "IDS_VPL_BODY_POP_M_FONT"
+msgstr "POP"
+
+msgid "IDS_VPL_BODY_PLAY_SPEED"
+msgstr "Avspillingshastighet"
+
+msgid "IDS_VPL_BODY_PD_SECS"
+msgstr "%d sek"
+
+msgid "IDS_VPL_BODY_OFF"
+msgstr "Av"
+
+msgid "IDS_VPL_BODY_NO_TITLE"
+msgstr "Ingen tittel"
+
+msgid "IDS_VPL_BODY_MY_DEVICE"
+msgstr "Min enhet"
+
+msgid "IDS_VPL_BODY_DEFAULT_FONT"
+msgstr "Standardskrift"
+
+msgid "IDS_VPL_BODY_COOL_JAZZ_M_FONT"
+msgstr "Cool jazz"
+
+msgid "IDS_VPL_BODY_CHOCO_COOKY_M_FONT"
+msgstr "Choco cooky"
+
+msgid "IDS_VPL_BODY_BLUE"
+msgstr "Blå"
+
+msgid "IDS_VPL_BODY_BLACK"
+msgstr "Svart"
+
+msgid "IDS_VPL_BODY_ACTIVATION"
+msgstr "Aktivering"
+
+msgid "IDS_SMEMO_POP_CLOSE_APPLICATION_Q"
+msgstr "Lukke app?"
+
+msgid "IDS_VIDEO_SK_CANCEL_ABB"
+msgstr "Avbryt"
+
+msgid "IDS_VIDEO_OPT_STOP_AFTER_ALL_ABB"
+msgstr "Stopp etter alle"
+
+msgid "IDS_VIDEO_OPT_REPEAT_CURRENT_ABB"
+msgstr "Gjenta gjeldende"
+
+msgid "IDS_VIDEO_OPT_REPEAT_ALL_ABB"
+msgstr "Gjenta alle"
+
+msgid "IDS_VIDEO_BODY_RESOLUTION"
+msgstr "Oppløsning"
+
+msgid "IDS_VIDEO_BODY_PS_SOUND_EFFECTS_NOT_SUPPORTED_BY_SPEAKER"
+msgstr "%s lydeffekter støttes ikke av høyttaler."
+
+msgid "IDS_MUSIC_BODY_TURN_PHONE_OVER_TO_MUTE_INCOMING_CALLS_MESSAGE_ALERTS_AND_ALARMS"
+msgstr "Vend telefonen for å dempe innkommende samtaler, meldingsvarsler og alarmer."
+
+msgid "IDS_ST_BODY_SD_CARD"
+msgstr "SD-kort"
+
+msgid "IDS_VPL_TPOP_ONLY_AUDIO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_AUDIO"
+msgstr "Bare lyddata støttes av denne filen. Spiller nå av lyd."
+
+msgid "IDS_VPL_TPOP_ONLY_VIDEO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_VIDEO"
+msgstr "Bare videodata støttes av denne filen. Spiller nå av video."
+
+msgid "IDS_ST_BODY_PRIVATE_STORAGE"
+msgstr "Privat lagring"
+
+msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
+msgstr "Hodetelefoner"
+
+msgid "IDS_MUSIC_OPT_SPEAKER"
+msgstr "Høyttaler"
+
+msgid "IDS_MUSIC_OPT_PAUSE"
+msgstr "Pause"
+
+msgid "IDS_VIDEO_BUTTON_DOWNLOAD"
+msgstr "Last ned"
+
+msgid "IDS_VIDEO_MBODY_SELECT_SUBTITLES_HCC"
+msgstr "Velg undertekster (CC)"
+
+msgid "IDS_VIDEO_NPBODY_PREVIEW_SUBTITLES_HCC_ABB"
+msgstr "Forhåndsvis undertekster (CC)"
+
+msgid "IDS_VIDEO_OPT_REPEAT_MODE_ABB"
+msgstr "Gjentakelsesmodus"
+
+msgid "IDS_VIDEO_POP_UNSUPPORTED_FILE_TYPE"
+msgstr "Filtypen støttes ikke."
+
+msgid "IDS_VIDEO_OPT_NORMAL_M_SOUND_ABB"
+msgstr "Normal"
+
+msgid "IDS_VIDEO_BODY_VOICE"
+msgstr "Tale"
+
+msgid "IDS_VIDEO_BODY_MOVIES"
+msgstr "Filmer"
+
+msgid "IDS_VIDEO_OPT_AUDIO_TRACK_ABB"
+msgstr "Lydspor"
+
+msgid "IDS_VIDEO_BODY_BUFFERING_ING_ABB"
+msgstr "Bufrer..."
+
+msgid "IDS_VIDEO_BODY_FILE_FORMAT"
+msgstr "Filformat"
+
+msgid "IDS_VIDEO_BODY_LANGUAGE"
+msgstr "Språk"
+
+msgid "IDS_VIDEO_BODY_NO_VIDEOS"
+msgstr "Ingen videoer"
+
+msgid "IDS_VIDEO_BODY_SIZE"
+msgstr "Størrelse"
+
+msgid "IDS_VIDEO_BUTTON_DONE"
+msgstr "OK"
+
+msgid "IDS_VIDEO_BUTTON_REFRESH"
+msgstr "Oppdater"
+
+msgid "IDS_VIDEO_HEADER_DATE"
+msgstr "Dato"
+
+msgid "IDS_VIDEO_HEADER_LOADING_ING_ABB"
+msgstr "Laster ..."
+
+msgid "IDS_VIDEO_HEADER_SUBTITLES_HCC_ABB2"
+msgstr "Undertekster (CC)"
+
+msgid "IDS_VIDEO_IOPT3_DELETE"
+msgstr "Slett"
+
+msgid "IDS_VIDEO_OPT_ADD_TO_HOME_SCREEN_ABB"
+msgstr "Legg til på startskjerm"
+
+msgid "IDS_VIDEO_OPT_FACEBOOK_ABB"
+msgstr "Facebook"
+
+msgid "IDS_VIDEO_OPT_HDMI"
+msgstr "HDMI"
+
+msgid "IDS_VIDEO_OPT_NAME"
+msgstr "Navn"
+
+msgid "IDS_VIDEO_OPT_SOUNDALIVE_ABB2"
+msgstr "SoundAlive"
+
+msgid "IDS_VIDEO_OPT_YOUTUBE_ABB"
+msgstr "YouTube"
+
+msgid "IDS_VIDEO_POP_UNABLE_TO_PLAY_VIDEO"
+msgstr "Kan ikke spille av video."
+
+msgid "IDS_VIDEO_SBODY_NO_SUBTITLES_AVAILABLE_M_STATUS"
+msgstr "Ingen undertekster er tilgjengelig"
+
+msgid "IDS_VIDEO_SK3_PLAY"
+msgstr "Spill"
+
+msgid "IDS_VIDEO_SK_CLOSE"
+msgstr "Lukk"
+
+msgid "IDS_VPL_POP_INVALID_URL"
+msgstr "Ugyldig URL."
+
+msgid "IDS_CHATON_HEADER_ERROR_ABB"
+msgstr "Feil"
+
+msgid "IDS_VIDEO_SBODY_DEVICE_STORAGE"
+msgstr "Enhetsminne"
+
+msgid "IDS_COM_BODY_VIDEO_PLAYER_T_MAINMENU"
+msgstr "Videospiller"
+
+msgid "IDS_VIDEO_OPT_SHARE_VIA"
+msgstr "Del via"
+
+msgid "IDS_VIDEO_POP_A_NETWORK_ERROR_HAS_OCCURRED_TRY_AGAIN"
+msgstr "Det har oppstått en nettverksfeil. Prøv på nytt."
+
+msgid "IDS_VIDEO_TPOP_ONLY_AUDIO_DATA_SUPPORTED_BY_THIS_FILE_FORMAT_NOW_PLAYING_AUDIO"
+msgstr "Bare lyddata støttes av dette filformatet. Spiller nå av lyd."
+
+msgid "IDS_VIDEO_TPOP_ONLY_VIDEO_DATA_SUPPORTED_BY_THIS_FILE_FORMAT_NOW_PLAYING_VIDEO"
+msgstr "Bare videodata støttes av dette filformatet. Spiller nå av video."
+
+msgid "IDS_VPL_BODY_CENTRE"
+msgstr "Midten"
+
+msgid "IDS_VPL_BODY_ON"
+msgstr "På"
+
+msgid "IDS_VPL_BODY_SETTINGS"
+msgstr "Innstillinger"
+
+msgid "IDS_VPL_BODY_VIDEOS_T_MAINMENU"
+msgstr "Videoer"
+
+msgid "IDS_VPL_BUTTON_SHARE"
+msgstr "Del"
+
+msgid "IDS_VPL_HEADER_DETAILS"
+msgstr "Detaljer"
+
+msgid "IDS_VPL_OPT_DELETE"
+msgstr "Slett"
+
+msgid "IDS_VPL_POP_BUFFERING_PDP"
+msgstr "Bufrer – %d %"
+
+msgid "IDS_VIDEO_OPT_NONE"
+msgstr "Ingen"
+
+msgid "IDS_VIDEO_BODY_PD_SECS_ABB3"
+msgstr "%d sek"
+
+msgid "IDS_MUSIC_HEADER_SOUNDALIVE_ABB3"
+msgstr "SoundAlive"
+
+msgid "IDS_MP_HEADER_SELECT_AUDIO_DEVICE"
+msgstr "Velg lydenhet"
+
+msgid "IDS_MUSIC_OPT_DELETE"
+msgstr "Slett"
+
+msgid "IDS_CLOCK_BUTTON_CANCEL"
+msgstr "Avbryt"
+
+msgid "IDS_VIDEO_POP_AN_UNKNOWN_ERROR_HAS_OCCURRED_OR_THE_FILE_MAY_BE_CORRUPT"
+msgstr "Det har oppstått en ukjent feil, eller filen kan være ødelagt."
+
+msgid "IDS_VIDEO_POP_THIS_FILE_TYPE_IS_NOT_SUPPORTED"
+msgstr "Denne filtypen støttes ikke."
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "FULLFØRT"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "AVBRYT"
+
+msgid "IDS_TPLATFORM_MBODY_STORAGE_LOCATION"
+msgstr "Lagringssted"
+
+msgid "IDS_GP_BODY_SUBTITLES_HCC"
+msgstr "Undertekster (CC)"
+
+msgid "IDS_GALLERY_BODY_PERSONAL_STORAGE"
+msgstr "Personlig lagring"
+
+msgid "IDS_ACCS_BODY_CAPTIONS_WILL_LOOK_LIKE_THIS"
+msgstr "Teksten vil se slik ut."
+

@@ -1,0 +1,390 @@
+msgid "IDS_VIDEO_OPT_DOWNLOAD"
+msgstr "تنزيل"
+
+msgid "IDS_VIDEO_POP_1_FOLDER_WILL_BE_DOWNLOADED"
+msgstr "سيتم تنزيل مجلد واحد."
+
+msgid "IDS_VIDEO_POP_1_VIDEO_WILL_BE_DOWNLOADED"
+msgstr "سيتم تنزيل فيديو واحد."
+
+msgid "IDS_VIDEO_POP_ALL_FOLDERS_WILL_BE_DOWNLOADED"
+msgstr "سيتم تنزيل كل المجلدات."
+
+msgid "IDS_VIDEO_POP_ALL_VIDEOS_WILL_BE_DOWNLOADED"
+msgstr "سيتم تنزيل كل مقاطع الفيديو."
+
+msgid "IDS_VIDEO_POP_PD_FOLDERS_WILL_BE_DOWNLOADED"
+msgstr "سيتم تنزيل %d من المجلدات."
+
+msgid "IDS_VIDEO_POP_PD_VIDEOS_WILL_BE_DOWNLOADED"
+msgstr "سيتم تنزيل %d من مقاطع الفيديو."
+
+msgid "IDS_VIDEO_TPOP_MOBILE_DATA_TURNED_OFF_CONNECT_TO_WI_FI_NETWORK_INSTEAD_OR_TURN_ON_MOBILE_DATA_AND_TRY_AGAIN"
+msgstr "تم إيقاف تشغيل بيانات الهاتف المحمول. بدلاً من ذلك، اتصل بشبكة Wi-Fi، أو شغّل بيانات الهاتف المحمول وحاول مرة أخرى."
+
+msgid "IDS_GALLERY_OPT_PRIVATE_M_CONTENT"
+msgstr "خاص"
+
+msgid "IDS_VIDEO_BODY_B"
+msgstr "ب."
+
+msgid "IDS_VIDEO_BODY_GB"
+msgstr "ج.ب"
+
+msgid "IDS_VIDEO_BODY_KB"
+msgstr "ك.ب"
+
+msgid "IDS_VIDEO_BODY_LOCATION"
+msgstr "الموقع"
+
+msgid "IDS_VIDEO_BODY_MB"
+msgstr "م.ب"
+
+msgid "IDS_VIDEO_BODY_UNKNOWN"
+msgstr "غير معروف"
+
+msgid "IDS_VIDEO_BUTTON_OK"
+msgstr "موافق"
+
+msgid "IDS_VIDEO_HEADER_1_FOLDER"
+msgstr "مجلد واحد"
+
+msgid "IDS_VIDEO_HEADER_1_VIDEO"
+msgstr "مقطع فيديو واحد"
+
+msgid "IDS_VIDEO_HEADER_ALL"
+msgstr "الكل"
+
+msgid "IDS_VIDEO_HEADER_FROM_DEVICE"
+msgstr "من الجهاز"
+
+msgid "IDS_VIDEO_HEADER_FROM_DROPBOX"
+msgstr "من Dropbox"
+
+msgid "IDS_VIDEO_HEADER_LAST_MODIFIED_M_DATE"
+msgstr "آخر تعديل"
+
+msgid "IDS_VIDEO_OPT_CONTENT_TO_DISPLAY"
+msgstr "المحتوى المطلوب عرضه"
+
+msgid "IDS_VIDEO_OPT_SEARCH"
+msgstr "البحث"
+
+msgid "IDS_VIDEO_OPT_SHARE"
+msgstr "مشاركة"
+
+msgid "IDS_VIDEO_POP_1_FOLDER_WILL_BE_DELETED"
+msgstr "سيتم حذف مجلد واحد."
+
+msgid "IDS_VIDEO_TPOP_DELETING_ING"
+msgstr "جارٍ الحذف..."
+
+msgid "IDS_VIDEO_BODY_AFTER_YOU_RECORD_VIDEOS_USING_THE_CAMERA_THEY_WILL_BE_SHOWN_HERE"
+msgstr "سيتم عرض مقاطع فيديو التي تم تسجيلها باستخدام الكاميرا هنا."
+
+msgid "IDS_VIDEO_HEADER_PD_VIDEOS"
+msgstr "%d مقاطع فيديو"
+
+msgid "IDS_VIDEO_HEADER_VIDEO"
+msgstr "فيديو"
+
+msgid "IDS_VIDEO_NPBODY_NO_VIDEOS"
+msgstr "ما من مقاطع فيديو"
+
+msgid "IDS_VIDEO_OPT_DETAILS"
+msgstr "التفاصيل"
+
+msgid "IDS_VIDEO_OPT_FOLDER"
+msgstr "المجلد"
+
+msgid "IDS_VIDEO_OPT_LIST"
+msgstr "اللائحة"
+
+msgid "IDS_VIDEO_OPT_RECENTLY_ADDED_ABB"
+msgstr "مضاف مؤخرا"
+
+msgid "IDS_VIDEO_OPT_RECENTLY_VIEWED_ABB"
+msgstr "تمت مشاهدتها مؤخراً"
+
+msgid "IDS_VIDEO_OPT_RENAME"
+msgstr "تغيير الاسم"
+
+msgid "IDS_VIDEO_OPT_SIZE"
+msgstr "الحجم"
+
+msgid "IDS_VIDEO_OPT_SORT_BY"
+msgstr "فرز حسب"
+
+msgid "IDS_VIDEO_OPT_TITLE"
+msgstr "العنوان"
+
+msgid "IDS_VIDEO_OPT_TYPE"
+msgstr "النوع"
+
+msgid "IDS_VIDEO_OPT_VIEW_AS"
+msgstr "عرض كـ"
+
+msgid "IDS_VIDEO_POP_ALL_VIDEOS_WILL_BE_DELETED"
+msgstr "سيتم حذف جميع مقاطع الفيديو."
+
+msgid "IDS_VIDEO_POP_PD_FOLDERS_WILL_BE_DELETED"
+msgstr "سيتم حذف %d مجلدات."
+
+msgid "IDS_VIDEO_POP_PD_VIDEOS_WILL_BE_DELETED"
+msgstr "سيتم حذف %d مقاطع فيديو."
+
+msgid "IDS_VIDEO_POP_THIS_FOLDER_WILL_BE_DELETED"
+msgstr "سيتم حذف هذا المجلد."
+
+msgid "IDS_VIDEO_HEADER_PD_FOLDERS"
+msgstr "مجلدات %d"
+
+msgid "IDS_VIDEO_HEADER_SETTINGS"
+msgstr "الضبط"
+
+msgid "IDS_VIDEO_HEADER_UNABLE_TO_PLAY_VIDEO_ABB"
+msgstr "يتعذر تشغيل الفيديو"
+
+msgid "IDS_VIDEO_MBODY_ALIGNMENT"
+msgstr "محاذاة"
+
+msgid "IDS_VIDEO_MBODY_FONT_SIZE"
+msgstr "حجم الخط"
+
+msgid "IDS_VIDEO_OPT_REPEAT_SETTING_ABB"
+msgstr "ضبط التكرار"
+
+msgid "IDS_VIDEO_OPT_SUBTITLES_HCC_ABB"
+msgstr "العناوين الفرعية (CC)"
+
+msgid "IDS_VIDEO_POP_ALL_FOLDERS_WILL_BE_DELETED"
+msgstr "سيتم حذف كل المجلدات."
+
+msgid "IDS_VIDEO_SBODY_CENTRE_M_STATUS"
+msgstr "وسط"
+
+msgid "IDS_VIDEO_SBODY_LARGE_M_STATUS"
+msgstr "كبير"
+
+msgid "IDS_VIDEO_SBODY_LEFT_M_STATUS"
+msgstr "إلى اليسار"
+
+msgid "IDS_VIDEO_SBODY_MEDIUM_M_STATUS"
+msgstr "متوسطة"
+
+msgid "IDS_VIDEO_SBODY_RIGHT_M_STATUS"
+msgstr "إلى اليمين"
+
+msgid "IDS_VIDEO_SBODY_SMALL_M_STATUS"
+msgstr "صغير"
+
+msgid "IDS_VIDEO_TPOP_FILE_NAME_ALREADY_IN_USE"
+msgstr "اسم الملف مستخدم بالفعل"
+
+msgid "IDS_GALLERY_OPT_REMOVE_FROM_PRIVATE"
+msgstr "إزالة من الخاص"
+
+msgid "IDS_GALLERY_OPT_MOVE_TO_PRIVATE"
+msgstr "نقل إلى الخاص"
+
+msgid "IDS_IV_POP_ENTRY_IS_EMPTY"
+msgstr "المدخل خالي."
+
+msgid "IDS_VPL_OPT_FORMAT"
+msgstr "تنسيق"
+
+msgid "IDS_VPL_BODY_UNABLE_TO_PLAY_VIDEO_DURING_CALL"
+msgstr "يتعذر تشغيل الصوت أثناء المكالمة."
+
+msgid "IDS_CLOUD_BODY_DROPBOX_ABB"
+msgstr "Dropbox"
+
+msgid "IDS_VIDEO_POP_THIS_FILE_IS_UNAVAILABLE_WHILE_OFFLINE_CHECK_NETWORK_CONNECTION_AND_TRY_AGAIN"
+msgstr "هذا الملف غير متاح أثناء عدم الاتصال الشبكة. تحقق من اتصال الشبكة وحاول مرة أخرى."
+
+msgid "IDS_VIDEO_POP_THE_SELECTED_ITEM_WILL_BE_MOVED_TO_PS"
+msgstr "سيتم نقل العنصر المحدد إلى %s."
+
+msgid "IDS_VIDEO_POP_THE_SELECTED_ITEMS_WILL_BE_MOVED_TO_PS"
+msgstr "سيتم نقل العناصر المحددة إلى %s."
+
+msgid "IDS_VIDEO_POP_REMOVING_ING"
+msgstr "جاري الحذف..."
+
+msgid "IDS_VIDEO_POP_MOVING_ING"
+msgstr "جاري النقل..."
+
+msgid "IDS_VIDEO_POP_FAILED_TO_MOVE_TO_PERSONAL_STORAGE"
+msgstr "فشل النقل إلى التخزين الشخصي."
+
+msgid "IDS_VIDEO_POP_FAILED_TO_MOVE_TO_NORMAL_STORAGE"
+msgstr "فشل النقل إلى التخزين العادي."
+
+msgid "IDS_VIDEO_OPT_MESSAGE_ABB"
+msgstr "الرسالة"
+
+msgid "IDS_VIDEO_OPT_FOLDERS_ABB"
+msgstr "مجلدات"
+
+msgid "IDS_VIDEO_OPT_EMAIL_ABB"
+msgstr "بريد إلكتروني"
+
+msgid "IDS_VIDEO_OPT_DATE_HMOST_RECENT_ABB"
+msgstr "التاريخ (الأحدث)"
+
+msgid "IDS_VIDEO_HEADER_PD_SELECTED"
+msgstr "تم تحديد %d"
+
+msgid "IDS_VIDEO_HEADER_DELETE_VIDEOS"
+msgstr "حذف مقاطع الفيديو"
+
+msgid "IDS_VIDEO_HEADER_DELETE_VIDEO"
+msgstr "حذف مقطع الفيديو"
+
+msgid "IDS_VIDEO_BUTTON_MOVE_ABB"
+msgstr "نقل"
+
+msgid "IDS_VIDEO_BODY_LONGITUDE"
+msgstr "خط الطول"
+
+msgid "IDS_VIDEO_BODY_LATITUDE"
+msgstr "المدى"
+
+msgid "IDS_VIDEO_BODY_AFTER_YOU_RECORD_VIDEOS_USING_THE_CAMERA_VIDEOS_WILL_BE_SHOWN"
+msgstr "بعد تسجيل مقاطع فيديو باستخدام الكاميرا، سيتم عرض مقاطع الفيديو"
+
+msgid "IDS_VIDEO_SK_CANCEL_ABB"
+msgstr "إلغاء"
+
+msgid "IDS_VIDEO_OPT_STOP_AFTER_ALL_ABB"
+msgstr "بعد إيقاف الكل"
+
+msgid "IDS_VIDEO_OPT_REPEAT_CURRENT_ABB"
+msgstr "تكرار الحالية"
+
+msgid "IDS_VIDEO_OPT_REPEAT_ALL_ABB"
+msgstr "تكرار الكل"
+
+msgid "IDS_VIDEO_BODY_RESOLUTION"
+msgstr "الدقة"
+
+msgid "IDS_VIDEO_BUTTON_DELETE"
+msgstr "حذف"
+
+msgid "IDS_ST_OPT_DELETE_ALL"
+msgstr "مسح الكل"
+
+msgid "IDS_VPL_TPOP_ONLY_AUDIO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_AUDIO"
+msgstr "هذا الملف يعتمد بيانات الصوت فقط. تشغيل الصوت الآن."
+
+msgid "IDS_VPL_TPOP_ONLY_VIDEO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_VIDEO"
+msgstr "هذا الملف يعتمد بيانات الفيديو فقط. تشغيل الفيديو الآن."
+
+msgid "IDS_MUSIC_OPT_RENAME"
+msgstr "إعادة تسمية"
+
+msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
+msgstr "سماعات رأس"
+
+msgid "IDS_VIDEO_BUTTON_DOWNLOAD"
+msgstr "تنزيل"
+
+msgid "IDS_TPLATFORM_BODY_OFF"
+msgstr "غير مفعل"
+
+msgid "IDS_TPLATFORM_BODY_ON"
+msgstr "مفعل"
+
+msgid "IDS_VIDEO_POP_1_VIDEO_WILL_BE_DELETED"
+msgstr "سيتم حذف مقطع فيديو واحد."
+
+msgid "IDS_SWALL_HEADER_INVALID_CHARACTER"
+msgstr "حرف غير صالح"
+
+msgid "IDS_VIDEO_BODY_NO_SEARCH_RESULTS"
+msgstr "لا توجد نتائج للبحث"
+
+msgid "IDS_GALLERY_HEADER_SELECT"
+msgstr "تحديد"
+
+msgid "IDS_VIDEO_BODY_LAST_MODIFIED_M_DATE_ABB"
+msgstr "آخر تعديل"
+
+msgid "IDS_VIDEO_BUTTON_DONE"
+msgstr "تم"
+
+msgid "IDS_VIDEO_HEADER_DATE"
+msgstr "التاريخ"
+
+msgid "IDS_VIDEO_HEADER_LATITUDE"
+msgstr "المدى"
+
+msgid "IDS_VIDEO_OPT_NAME"
+msgstr "الاسم"
+
+msgid "IDS_VIDEO_OPT_NAME_HA_Z_ABB"
+msgstr "الاسم (من أ إلى ي)"
+
+msgid "IDS_VIDEO_OPT_VIDEOS"
+msgstr "الفيديو"
+
+msgid "IDS_VIDEO_TPOP_MAXIMUM_NUMBER_OF_ATTACHMENTS_HPD_EXCEEDED"
+msgstr "تم تجاوز الحد الأقصى لعدد المرفقات (%d)."
+
+msgid "IDS_VIDEO_HEADER_SELECT_ALL"
+msgstr "تحديد الكل"
+
+msgid "IDS_VIDEO_SBODY_DEVICE_STORAGE"
+msgstr "وحدة تخزين الجهاز"
+
+msgid "IDS_VIDEO_SBODY_SD_CARD"
+msgstr "بطاقة SD"
+
+msgid "IDS_VIDEO_OPT_SHARE_VIA"
+msgstr "مشاركة عبر"
+
+msgid "IDS_VIDEO_POP_A_NETWORK_ERROR_HAS_OCCURRED_TRY_AGAIN"
+msgstr "حدث خطأ في الشبكة. حاول مرة أخرى."
+
+msgid "IDS_VPL_OPT_AUTO_PLAY_NEXT_ABB"
+msgstr "تشغيل التالي تلقائيا"
+
+msgid "IDS_VPL_POP_PROCESSING_ING"
+msgstr "جاري المعالجة..."
+
+msgid "IDS_MEMO_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "تم بلوغ الحد الأقصى لعدد الأحرف."
+
+msgid "IDS_MUSIC_OPT_DELETE"
+msgstr "حذف"
+
+msgid "IDS_MUSIC_OPT_DELETE_ALL"
+msgstr "مسح الكل"
+
+msgid "IDS_PB_BODY_NO_SEARCH_RESULT"
+msgstr "لا يوجد نتيجة للبحث"
+
+msgid "IDS_VIDEO_HEADER_SELECT_ITEM"
+msgstr "اختيار عنصر"
+
+msgid "IDS_VIDEO_HEADER_SELECT_ITEMS"
+msgstr "تحديد العناصر"
+
+msgid "IDS_CLOCK_BUTTON_CANCEL"
+msgstr "إلغاء"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "تم"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "إلغاء"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DELETE_ABB"
+msgstr "حذف"
+
+msgid "IDS_TPLATFORM_MBODY_STORAGE_LOCATION"
+msgstr "موقع التخزين"
+
+msgid "IDS_GALLERY_HEADER_SELECT_VIDEO"
+msgstr "تحديد الفيديو"
+

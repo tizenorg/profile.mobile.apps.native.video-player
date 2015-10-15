@@ -1,0 +1,391 @@
+/*
+* Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+
+
+#define BUTTON_BG_NORMAL "white/common/00_button_01.png"
+#define BUTTON_BG_PRESS "white/common/00_button_01_press.png"
+#define NO_ITEM_BUTTON_WIDTH 688
+#define NO_ITEM_BUTTON_HEIGHT 80
+
+#define BUTTON_BG_BACK_NORMAL "T01_icon_soft_back.png"
+#define BUTTON_BG_CLEAR_NORMAL "T01-2_icon_toolbar_cancel.png"
+
+//////////////////////////////////////////////////////////////
+
+#define VP_BUTTON_STYLE(__name,__bg_normal,__bg_pressed,__width,__height) \
+group { name: "elm/button/base/video/"__name; \
+	images { \
+		image: __bg_normal COMP; \
+		image: __bg_pressed COMP; \
+	} \
+	parts { \
+		part { \
+			name: __name"_bg"; \
+			mouse_events: 0; \
+			type: RECT; \
+			scale: 1; \
+			description { \
+				state: "default" 0.0; \
+				align: 0.0 0.0; \
+				visible: 0; \
+				min: __width __height; \
+				max: __width __height; \
+				fixed: 1 1; \
+				rel1 { \
+					relative: 0.0 0.0; \
+				} \
+				rel2 { \
+					relative: 1.0 1.0; \
+				} \
+				color: 0 0 0 0; \
+			} \
+			description { state: "invisible" 0.0; \
+				inherit: "default" 0.0; \
+				visible: 0; \
+			} \
+		} \
+		part{ \
+			name : __name"_press_bg"; \
+			type: IMAGE; \
+			mouse_events:1; \
+			scale : 1; \
+			description { \
+				state: "default" 0.0; \
+				align: 0 0; \
+				visible:1; \
+				image { \
+					normal: __bg_normal; \
+					border: 13 13 15 15; \
+					border_scale: 1; \
+				} \
+				rel1 { \
+					relative: 0 0; \
+					to: __name"_bg"; \
+				} \
+				rel2 { \
+					relative: 1 1; \
+					to: __name"_bg"; \
+				} \
+			} \
+			description { \
+				state: "press" 0.0; \
+				inherit: "default" 0.0; \
+				image { normal: __bg_pressed; } \
+			} \
+			description { state: "invisible" 0.0; \
+				inherit: "default" 0.0; \
+				visible: 0; \
+			} \
+		} \
+		part { \
+			name: "elm.text"; \
+			type: TEXT; \
+			mouse_events: 1; \
+			scale: 1; \
+			description { \
+				state: "default" 0.0; \
+				align: 0.5 0.5; \
+				visible:1; \
+				rel1 { \
+					relative: 0 0; \
+					to: __name"_bg"; \
+				} \
+				rel2 { \
+					relative: 1 1; \
+					to: __name"_bg"; \
+				} \
+				color: 50 50 50 255; \
+				text { \
+					font: "Tizen:style=Medium"; \
+					size: 36; \
+					min: 0 0; \
+					max: 1 0; \
+					align: 0.5 0.5; \
+				} \
+			} \
+			description { \
+				state: "press" 0.0; \
+				inherit: "default" 0.0; \
+				color: 248 246 239 255; \
+			} \
+			description { state: "invisible" 0.0; \
+				inherit: "default" 0.0; \
+				visible: 0; \
+			} \
+		} \
+	} \
+	programs{ \
+		program{\
+			name: __name"_after_down"; \
+			source: "elm.text"; \
+			signal: "mouse,down,1"; \
+			action: STATE_SET "press" 0.0; \
+			target: __name"_bg"; \
+			target: __name"_press_bg"; \
+			target: "elm.text"; \
+		} \
+		program { \
+			name: __name"_down"; \
+			source: "*"; \
+			signal: "mouse,down,1"; \
+			action: PLAY_SAMPLE "button-pressed" 1.0; \
+			after:  __name"_after_down"; \
+		} \
+		program { \
+			name: __name"_up"; \
+			source: "*"; \
+			signal: "mouse,up,1"; \
+			action: STATE_SET "default" 0.0; \
+			target: __name"_bg"; \
+			target: __name"_press_bg"; \
+			target: "elm.text"; \
+		} \
+	} \
+}
+
+VP_BUTTON_STYLE("sign_in", BUTTON_BG_NORMAL,  BUTTON_BG_PRESS, NO_ITEM_BUTTON_WIDTH, NO_ITEM_BUTTON_HEIGHT)
+
+group {
+	name: "elm/button/base/text";
+	parts {
+		part {
+			name: "bg";
+			type: RECT;
+			mouse_events: 1;
+			description {
+				state: "default" 0.0;
+				color: 0 0 0 0;
+				min: 200 100;
+			}
+		}
+		part {
+			name: "text_part_left";
+			type: TEXT;
+			mouse_events: 1;
+			description {
+				state: "default" 0.0;
+				align: 0.5 0.5;
+				color: 255 255 255 255;
+				rel1 {
+					relative: 0.1 0;
+					to: "bg";
+				}
+				rel2 {
+					relative: 1 1;
+					to: "bg";
+				}
+				text {
+					size: 30;
+					min: 0 0;
+					max: 1 0;
+				}
+			}
+		}
+			part {
+			name: "text_part_right";
+			type: TEXT;
+			mouse_events: 1;
+			description {
+				state: "default" 0.0;
+				align: 0.5 0.5;
+				color: 255 255 255 255;
+				rel1 {
+					relative: 0.0 0;
+					to: "bg";
+				}
+				rel2 {
+					relative: 0.9 1;
+					to: "bg";
+				}
+				text {
+					size: 30;
+					min: 0 0;
+					max: 1 0;
+				}
+			}
+		}
+	} /*parts*/
+	programs {
+		program {
+			name:   "buttonclicked";
+			signal: "mouse,clicked,1";
+			source: "bg";
+			action: SIGNAL_EMIT "elm,action,click" "";
+		}
+		program {
+			name:   "buttonlefttextclicked";
+			signal: "mouse,clicked,1";
+			source: "text_part_left";
+			action: SIGNAL_EMIT "elm,action,click" "";
+		}
+		program {
+			name:   "buttonrighttextclicked";
+			signal: "mouse,clicked,1";
+			source: "text_part_right";
+			action: SIGNAL_EMIT "elm,action,click" "";
+		}
+	}
+
+}
+group {
+	name: "elm/button/base/back";
+	images
+	{
+		image: BUTTON_BG_BACK_NORMAL COMP;
+	}
+	parts {
+		part {
+			name: "bg";
+			type: RECT;
+			mouse_events: 1;
+			description {
+				state: "default" 0.0;
+				color: 0 0 0 0;
+				min: 50 80;
+				max: 50 80;
+			}
+		}
+		part {
+			name: "icon";
+			type: IMAGE;
+			mouse_events: 1;
+			description {
+				state: "default" 0.0;
+				rel1 {
+					relative: 0 0;
+					to: "bg";
+				}
+				rel2 {
+					relative: 1 1;
+					to: "bg";
+				}
+				image {
+					normal: BUTTON_BG_BACK_NORMAL;
+				}
+			}
+		}
+	} /*parts*/
+	programs {
+		program {
+			name:   "buttonclicked";
+			signal: "mouse,clicked,1";
+			source: "bg";
+			action: SIGNAL_EMIT "elm,action,click" "";
+		}
+		program {
+			name:   "buttontextclicked";
+			signal: "mouse,clicked,1";
+			source: "icon";
+			action: SIGNAL_EMIT "elm,action,click" "";
+		}
+	}
+
+}
+group {
+	name: "elm/button/base/clear";
+	images
+	{
+		image: BUTTON_BG_CLEAR_NORMAL COMP;
+	}
+	parts {
+		part {
+			name: "bg";
+			type: RECT;
+			mouse_events: 1;
+			description {
+				state: "default" 0.0;
+				color: 0 0 0 0;
+				min: 30 30;
+				max: 30 30;
+			}
+		}
+		part {
+			name: "icon";
+			type: IMAGE;
+			mouse_events: 1;
+			description {
+				state: "default" 0.0;
+				rel1 {
+					relative: 0 0;
+					to: "bg";
+				}
+				rel2 {
+					relative: 1 1;
+					to: "bg";
+				}
+				image {
+					normal: BUTTON_BG_CLEAR_NORMAL;
+				}
+				color: 0 0 0 255;
+			}
+		}
+	} /*parts*/
+	programs {
+		program {
+			name:   "buttonclicked";
+			signal: "mouse,clicked,1";
+			source: "bg";
+			action: SIGNAL_EMIT "elm,action,click" "";
+		}
+		program {
+			name:   "buttontextclicked";
+			signal: "mouse,clicked,1";
+			source: "icon";
+			action: SIGNAL_EMIT "elm,action,click" "";
+		}
+	}
+
+}
+group {
+	name: "elm/button/base/clear_dim";
+	images
+	{
+		image: BUTTON_BG_CLEAR_NORMAL COMP;
+	}
+	parts {
+		part {
+			name: "bg";
+			type: RECT;
+			mouse_events: 1;
+			description {
+				state: "default" 0.0;
+				color: 0 0 0 0;
+				min: 30 30;
+				max: 30 30;
+			}
+		}
+		part {
+			name: "icon";
+			type: IMAGE;
+			description {
+				state: "default" 0.0;
+				rel1 {
+					relative: 0 0;
+					to: "bg";
+				}
+				rel2 {
+					relative: 1 1;
+					to: "bg";
+				}
+				image {
+					normal: BUTTON_BG_CLEAR_NORMAL;
+				}
+				color: 100 100 100 255;
+			}
+		}
+	} /*parts*/
+}

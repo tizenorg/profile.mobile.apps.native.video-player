@@ -1,0 +1,390 @@
+msgid "IDS_VIDEO_OPT_DOWNLOAD"
+msgstr "Yüklə"
+
+msgid "IDS_VIDEO_POP_1_FOLDER_WILL_BE_DOWNLOADED"
+msgstr "1 qovluq yüklənəcək."
+
+msgid "IDS_VIDEO_POP_1_VIDEO_WILL_BE_DOWNLOADED"
+msgstr "1 video yüklənəcək."
+
+msgid "IDS_VIDEO_POP_ALL_FOLDERS_WILL_BE_DOWNLOADED"
+msgstr "Bütün qovluqlar yüklənəcək."
+
+msgid "IDS_VIDEO_POP_ALL_VIDEOS_WILL_BE_DOWNLOADED"
+msgstr "Bütün videolar yüklənəcək."
+
+msgid "IDS_VIDEO_POP_PD_FOLDERS_WILL_BE_DOWNLOADED"
+msgstr "%d qovluq yüklənəcək."
+
+msgid "IDS_VIDEO_POP_PD_VIDEOS_WILL_BE_DOWNLOADED"
+msgstr "%d video yüklənəcək."
+
+msgid "IDS_VIDEO_TPOP_MOBILE_DATA_TURNED_OFF_CONNECT_TO_WI_FI_NETWORK_INSTEAD_OR_TURN_ON_MOBILE_DATA_AND_TRY_AGAIN"
+msgstr "Mobil tarif söndürüldü. Əvəzinə Wi-Fi şəbəkəsinə qoşulun və ya Mobil tarifi aktivləşdirin və yenidən cəhd edin."
+
+msgid "IDS_GALLERY_OPT_PRIVATE_M_CONTENT"
+msgstr "Şəxsi"
+
+msgid "IDS_VIDEO_BODY_B"
+msgstr "B"
+
+msgid "IDS_VIDEO_BODY_GB"
+msgstr "QB"
+
+msgid "IDS_VIDEO_BODY_KB"
+msgstr "KB"
+
+msgid "IDS_VIDEO_BODY_LOCATION"
+msgstr "Yeri"
+
+msgid "IDS_VIDEO_BODY_MB"
+msgstr "MB"
+
+msgid "IDS_VIDEO_BODY_UNKNOWN"
+msgstr "Naməlum"
+
+msgid "IDS_VIDEO_BUTTON_OK"
+msgstr "OK"
+
+msgid "IDS_VIDEO_HEADER_1_FOLDER"
+msgstr "1 qovluq"
+
+msgid "IDS_VIDEO_HEADER_1_VIDEO"
+msgstr "1 video"
+
+msgid "IDS_VIDEO_HEADER_ALL"
+msgstr "Hamısını"
+
+msgid "IDS_VIDEO_HEADER_FROM_DEVICE"
+msgstr "Cihazdan"
+
+msgid "IDS_VIDEO_HEADER_FROM_DROPBOX"
+msgstr "Dropbox-dan"
+
+msgid "IDS_VIDEO_HEADER_LAST_MODIFIED_M_DATE"
+msgstr "Son dəyişmə"
+
+msgid "IDS_VIDEO_OPT_CONTENT_TO_DISPLAY"
+msgstr "Göstərmək üçün məzmun"
+
+msgid "IDS_VIDEO_OPT_SEARCH"
+msgstr "Axtar"
+
+msgid "IDS_VIDEO_OPT_SHARE"
+msgstr "Paylaş"
+
+msgid "IDS_VIDEO_POP_1_FOLDER_WILL_BE_DELETED"
+msgstr "1 qovluq silinəcək."
+
+msgid "IDS_VIDEO_TPOP_DELETING_ING"
+msgstr "Silinir..."
+
+msgid "IDS_VIDEO_BODY_AFTER_YOU_RECORD_VIDEOS_USING_THE_CAMERA_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Kamera vasitəsilə videoları çəkdikdən sonra onlar burada görünəcək."
+
+msgid "IDS_VIDEO_HEADER_PD_VIDEOS"
+msgstr "%d video"
+
+msgid "IDS_VIDEO_HEADER_VIDEO"
+msgstr "Video"
+
+msgid "IDS_VIDEO_NPBODY_NO_VIDEOS"
+msgstr "Video yoxdur"
+
+msgid "IDS_VIDEO_OPT_DETAILS"
+msgstr "Təfsilatlar"
+
+msgid "IDS_VIDEO_OPT_FOLDER"
+msgstr "Qovluq"
+
+msgid "IDS_VIDEO_OPT_LIST"
+msgstr "Siyahı"
+
+msgid "IDS_VIDEO_OPT_RECENTLY_ADDED_ABB"
+msgstr "Son əlavələr"
+
+msgid "IDS_VIDEO_OPT_RECENTLY_VIEWED_ABB"
+msgstr "Bu yaxınlarda baxılmış"
+
+msgid "IDS_VIDEO_OPT_RENAME"
+msgstr "Adını dəyişdir"
+
+msgid "IDS_VIDEO_OPT_SIZE"
+msgstr "Ölçü"
+
+msgid "IDS_VIDEO_OPT_SORT_BY"
+msgstr "Çeşidlə"
+
+msgid "IDS_VIDEO_OPT_TITLE"
+msgstr "Başlıq"
+
+msgid "IDS_VIDEO_OPT_TYPE"
+msgstr "Növ"
+
+msgid "IDS_VIDEO_OPT_VIEW_AS"
+msgstr "Fərqli bax"
+
+msgid "IDS_VIDEO_POP_ALL_VIDEOS_WILL_BE_DELETED"
+msgstr "Bütün videolar silinəcək."
+
+msgid "IDS_VIDEO_POP_PD_FOLDERS_WILL_BE_DELETED"
+msgstr "%d qovluq silinəcək."
+
+msgid "IDS_VIDEO_POP_PD_VIDEOS_WILL_BE_DELETED"
+msgstr "%d video silinəcək."
+
+msgid "IDS_VIDEO_POP_THIS_FOLDER_WILL_BE_DELETED"
+msgstr "Bu qovluq silinəcək."
+
+msgid "IDS_VIDEO_HEADER_PD_FOLDERS"
+msgstr "%d qovluq"
+
+msgid "IDS_VIDEO_HEADER_SETTINGS"
+msgstr "Parametrlər"
+
+msgid "IDS_VIDEO_HEADER_UNABLE_TO_PLAY_VIDEO_ABB"
+msgstr "Videonu göstərmək mümkün deyil"
+
+msgid "IDS_VIDEO_MBODY_ALIGNMENT"
+msgstr "Nizamlama"
+
+msgid "IDS_VIDEO_MBODY_FONT_SIZE"
+msgstr "Şriftin ölçüsü"
+
+msgid "IDS_VIDEO_OPT_REPEAT_SETTING_ABB"
+msgstr "Parametri təkrarla"
+
+msgid "IDS_VIDEO_OPT_SUBTITLES_HCC_ABB"
+msgstr "Yarım başlıqlar (bağlı)"
+
+msgid "IDS_VIDEO_POP_ALL_FOLDERS_WILL_BE_DELETED"
+msgstr "Bütün qovluqlar silinəcək."
+
+msgid "IDS_VIDEO_SBODY_CENTRE_M_STATUS"
+msgstr "Mərkəz"
+
+msgid "IDS_VIDEO_SBODY_LARGE_M_STATUS"
+msgstr "Böyük"
+
+msgid "IDS_VIDEO_SBODY_LEFT_M_STATUS"
+msgstr "Sol"
+
+msgid "IDS_VIDEO_SBODY_MEDIUM_M_STATUS"
+msgstr "Orta"
+
+msgid "IDS_VIDEO_SBODY_RIGHT_M_STATUS"
+msgstr "Sağ"
+
+msgid "IDS_VIDEO_SBODY_SMALL_M_STATUS"
+msgstr "Kiçik"
+
+msgid "IDS_VIDEO_TPOP_FILE_NAME_ALREADY_IN_USE"
+msgstr "Fayl adı artıq istifadədədir"
+
+msgid "IDS_GALLERY_OPT_REMOVE_FROM_PRIVATE"
+msgstr "Şəxsi rejimdən sil"
+
+msgid "IDS_GALLERY_OPT_MOVE_TO_PRIVATE"
+msgstr "Şəxsiyə köçür"
+
+msgid "IDS_IV_POP_ENTRY_IS_EMPTY"
+msgstr "Boş qeyd."
+
+msgid "IDS_VPL_OPT_FORMAT"
+msgstr "Format"
+
+msgid "IDS_VPL_BODY_UNABLE_TO_PLAY_VIDEO_DURING_CALL"
+msgstr "Zəng zamanı videonu göstərmək mümkün deyildir."
+
+msgid "IDS_CLOUD_BODY_DROPBOX_ABB"
+msgstr "Dropbox"
+
+msgid "IDS_VIDEO_POP_THIS_FILE_IS_UNAVAILABLE_WHILE_OFFLINE_CHECK_NETWORK_CONNECTION_AND_TRY_AGAIN"
+msgstr "Bu fayl oflayn mümkün deyil. Şəbəkə bağlantısını yoxlayın və yenidən cəhd edin"
+
+msgid "IDS_VIDEO_POP_THE_SELECTED_ITEM_WILL_BE_MOVED_TO_PS"
+msgstr "Seçilən element %s-a köçürüləcəkdir."
+
+msgid "IDS_VIDEO_POP_THE_SELECTED_ITEMS_WILL_BE_MOVED_TO_PS"
+msgstr "Seçilən elementlər %s-a köçürüləcəkdir."
+
+msgid "IDS_VIDEO_POP_REMOVING_ING"
+msgstr "Silinir..."
+
+msgid "IDS_VIDEO_POP_MOVING_ING"
+msgstr "Göndərilmə..."
+
+msgid "IDS_VIDEO_POP_FAILED_TO_MOVE_TO_PERSONAL_STORAGE"
+msgstr "Fərdi yaddaşa köçürmək mümkün olmadı."
+
+msgid "IDS_VIDEO_POP_FAILED_TO_MOVE_TO_NORMAL_STORAGE"
+msgstr "Normal yaddaşa köçürmək mümkün olmadı."
+
+msgid "IDS_VIDEO_OPT_MESSAGE_ABB"
+msgstr "Mesaj"
+
+msgid "IDS_VIDEO_OPT_FOLDERS_ABB"
+msgstr "Qovluqlar"
+
+msgid "IDS_VIDEO_OPT_EMAIL_ABB"
+msgstr "Epoçt"
+
+msgid "IDS_VIDEO_OPT_DATE_HMOST_RECENT_ABB"
+msgstr "Tarix (ən son)"
+
+msgid "IDS_VIDEO_HEADER_PD_SELECTED"
+msgstr "%d seçilmişdir"
+
+msgid "IDS_VIDEO_HEADER_DELETE_VIDEOS"
+msgstr "Videoları sil"
+
+msgid "IDS_VIDEO_HEADER_DELETE_VIDEO"
+msgstr "Videonu sil"
+
+msgid "IDS_VIDEO_BUTTON_MOVE_ABB"
+msgstr "Köçür"
+
+msgid "IDS_VIDEO_BODY_LONGITUDE"
+msgstr "Uzunluq"
+
+msgid "IDS_VIDEO_BODY_LATITUDE"
+msgstr "En"
+
+msgid "IDS_VIDEO_BODY_AFTER_YOU_RECORD_VIDEOS_USING_THE_CAMERA_VIDEOS_WILL_BE_SHOWN"
+msgstr "Kamera vasitəsilə videoları çəkdikdən sonra videolar göstəriləcək."
+
+msgid "IDS_VIDEO_SK_CANCEL_ABB"
+msgstr "Ləğv et"
+
+msgid "IDS_VIDEO_OPT_STOP_AFTER_ALL_ABB"
+msgstr "Bitəndə dayandır"
+
+msgid "IDS_VIDEO_OPT_REPEAT_CURRENT_ABB"
+msgstr "İndikini təkrarla"
+
+msgid "IDS_VIDEO_OPT_REPEAT_ALL_ABB"
+msgstr "Hamısını təkrarla"
+
+msgid "IDS_VIDEO_BODY_RESOLUTION"
+msgstr "Rezolyusiya"
+
+msgid "IDS_VIDEO_BUTTON_DELETE"
+msgstr "Sil"
+
+msgid "IDS_ST_OPT_DELETE_ALL"
+msgstr "Hamısı silindi"
+
+msgid "IDS_VPL_TPOP_ONLY_AUDIO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_AUDIO"
+msgstr "Bu fayl yalnız audio məlumatı dəstəkləyir. İndi səsləndirilən audio."
+
+msgid "IDS_VPL_TPOP_ONLY_VIDEO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_VIDEO"
+msgstr "Bu fayl yalnız video məlumatı dəstəkləyir. İndi görüntülənən video."
+
+msgid "IDS_MUSIC_OPT_RENAME"
+msgstr "Adını dəyiş"
+
+msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
+msgstr "Qulaqlıqlar"
+
+msgid "IDS_VIDEO_BUTTON_DOWNLOAD"
+msgstr "Yükləyin"
+
+msgid "IDS_TPLATFORM_BODY_OFF"
+msgstr "Söndür"
+
+msgid "IDS_TPLATFORM_BODY_ON"
+msgstr "Qoş"
+
+msgid "IDS_VIDEO_POP_1_VIDEO_WILL_BE_DELETED"
+msgstr "1 video silinəcək."
+
+msgid "IDS_SWALL_HEADER_INVALID_CHARACTER"
+msgstr "Yalnış simvol"
+
+msgid "IDS_VIDEO_BODY_NO_SEARCH_RESULTS"
+msgstr "Axtarış nəticəsi yoxdur"
+
+msgid "IDS_GALLERY_HEADER_SELECT"
+msgstr "Seç"
+
+msgid "IDS_VIDEO_BODY_LAST_MODIFIED_M_DATE_ABB"
+msgstr "Son dəyişdirilmə"
+
+msgid "IDS_VIDEO_BUTTON_DONE"
+msgstr "Tamam"
+
+msgid "IDS_VIDEO_HEADER_DATE"
+msgstr "Tarix"
+
+msgid "IDS_VIDEO_HEADER_LATITUDE"
+msgstr "En"
+
+msgid "IDS_VIDEO_OPT_NAME"
+msgstr "Ad"
+
+msgid "IDS_VIDEO_OPT_NAME_HA_Z_ABB"
+msgstr "Ad (A-Z)"
+
+msgid "IDS_VIDEO_OPT_VIDEOS"
+msgstr "Video"
+
+msgid "IDS_VIDEO_TPOP_MAXIMUM_NUMBER_OF_ATTACHMENTS_HPD_EXCEEDED"
+msgstr "Qoşmaların sayı maksimumu (%d) keçmişdir."
+
+msgid "IDS_VIDEO_HEADER_SELECT_ALL"
+msgstr "Hamısını seç"
+
+msgid "IDS_VIDEO_SBODY_DEVICE_STORAGE"
+msgstr "Cihazın yaddaşı"
+
+msgid "IDS_VIDEO_SBODY_SD_CARD"
+msgstr "SD kart"
+
+msgid "IDS_VIDEO_OPT_SHARE_VIA"
+msgstr "Paylaş"
+
+msgid "IDS_VIDEO_POP_A_NETWORK_ERROR_HAS_OCCURRED_TRY_AGAIN"
+msgstr "Şəbəkə xətası baş verdi. Yenidən cəhd edin."
+
+msgid "IDS_VPL_OPT_AUTO_PLAY_NEXT_ABB"
+msgstr "Növbətini avto-göstər"
+
+msgid "IDS_VPL_POP_PROCESSING_ING"
+msgstr "Emal edilir..."
+
+msgid "IDS_MEMO_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Simvolların sayı maksimuma çatıb."
+
+msgid "IDS_MUSIC_OPT_DELETE"
+msgstr "Sil"
+
+msgid "IDS_MUSIC_OPT_DELETE_ALL"
+msgstr "Hamısı silindi"
+
+msgid "IDS_PB_BODY_NO_SEARCH_RESULT"
+msgstr "Axtarış nəticəsi yoxdur"
+
+msgid "IDS_VIDEO_HEADER_SELECT_ITEM"
+msgstr "Element seç"
+
+msgid "IDS_VIDEO_HEADER_SELECT_ITEMS"
+msgstr "Elementləri seç"
+
+msgid "IDS_CLOCK_BUTTON_CANCEL"
+msgstr "Ləğv et"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "HAZIR"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "LƏĞV ET"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DELETE_ABB"
+msgstr "SİL"
+
+msgid "IDS_TPLATFORM_MBODY_STORAGE_LOCATION"
+msgstr "Yaddaş yeri"
+
+msgid "IDS_GALLERY_HEADER_SELECT_VIDEO"
+msgstr "Video seçin"
+

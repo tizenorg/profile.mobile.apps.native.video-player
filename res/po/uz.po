@@ -1,0 +1,390 @@
+msgid "IDS_VIDEO_OPT_DOWNLOAD"
+msgstr "Yuklab olish"
+
+msgid "IDS_VIDEO_POP_1_FOLDER_WILL_BE_DOWNLOADED"
+msgstr "1 ta jild yuklab olinadi."
+
+msgid "IDS_VIDEO_POP_1_VIDEO_WILL_BE_DOWNLOADED"
+msgstr "1 ta video yuklab olinadi."
+
+msgid "IDS_VIDEO_POP_ALL_FOLDERS_WILL_BE_DOWNLOADED"
+msgstr "Barcha jildlar yuklab olinadi."
+
+msgid "IDS_VIDEO_POP_ALL_VIDEOS_WILL_BE_DOWNLOADED"
+msgstr "Barcha videolar yuklab olinadi."
+
+msgid "IDS_VIDEO_POP_PD_FOLDERS_WILL_BE_DOWNLOADED"
+msgstr "%d ta jild yuklab olinadi."
+
+msgid "IDS_VIDEO_POP_PD_VIDEOS_WILL_BE_DOWNLOADED"
+msgstr "%d ta video yuklab olinadi."
+
+msgid "IDS_VIDEO_TPOP_MOBILE_DATA_TURNED_OFF_CONNECT_TO_WI_FI_NETWORK_INSTEAD_OR_TURN_ON_MOBILE_DATA_AND_TRY_AGAIN"
+msgstr "Mobil ma’lumot o‘chirilgan. Uning o‘rniga Wi-Fi tarmoqqa ulaning yoki Mobil ma’lumotni yoqing va qayta urinib ko‘ring."
+
+msgid "IDS_GALLERY_OPT_PRIVATE_M_CONTENT"
+msgstr "Maxfiy"
+
+msgid "IDS_VIDEO_BODY_B"
+msgstr "B"
+
+msgid "IDS_VIDEO_BODY_GB"
+msgstr "Gb"
+
+msgid "IDS_VIDEO_BODY_KB"
+msgstr "KB"
+
+msgid "IDS_VIDEO_BODY_LOCATION"
+msgstr "Joylashuv"
+
+msgid "IDS_VIDEO_BODY_MB"
+msgstr "Mb"
+
+msgid "IDS_VIDEO_BODY_UNKNOWN"
+msgstr "Noma’lum"
+
+msgid "IDS_VIDEO_BUTTON_OK"
+msgstr "OK"
+
+msgid "IDS_VIDEO_HEADER_1_FOLDER"
+msgstr "1 jild"
+
+msgid "IDS_VIDEO_HEADER_1_VIDEO"
+msgstr "1ta video"
+
+msgid "IDS_VIDEO_HEADER_ALL"
+msgstr "Barchasi"
+
+msgid "IDS_VIDEO_HEADER_FROM_DEVICE"
+msgstr "Qurilmadan"
+
+msgid "IDS_VIDEO_HEADER_FROM_DROPBOX"
+msgstr "Dropbox-dan"
+
+msgid "IDS_VIDEO_HEADER_LAST_MODIFIED_M_DATE"
+msgstr "Oxirgi o‘zgartirilgan"
+
+msgid "IDS_VIDEO_OPT_CONTENT_TO_DISPLAY"
+msgstr "Ko‘rsatiladigan tarkib"
+
+msgid "IDS_VIDEO_OPT_SEARCH"
+msgstr "Qidirish"
+
+msgid "IDS_VIDEO_OPT_SHARE"
+msgstr "Ulashish"
+
+msgid "IDS_VIDEO_POP_1_FOLDER_WILL_BE_DELETED"
+msgstr "1ta jild joy yo‘q qilinadi."
+
+msgid "IDS_VIDEO_TPOP_DELETING_ING"
+msgstr "Yo‘q qilinmoqda..."
+
+msgid "IDS_VIDEO_BODY_AFTER_YOU_RECORD_VIDEOS_USING_THE_CAMERA_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Kamera yordamida videoga olganingizdan so‘ng, ular bu yerda ko‘rsatiladi."
+
+msgid "IDS_VIDEO_HEADER_PD_VIDEOS"
+msgstr "%d video"
+
+msgid "IDS_VIDEO_HEADER_VIDEO"
+msgstr "Video"
+
+msgid "IDS_VIDEO_NPBODY_NO_VIDEOS"
+msgstr "Videolar yo‘q"
+
+msgid "IDS_VIDEO_OPT_DETAILS"
+msgstr "Tafsilotlar"
+
+msgid "IDS_VIDEO_OPT_FOLDER"
+msgstr "Jild"
+
+msgid "IDS_VIDEO_OPT_LIST"
+msgstr "Ro‘yxat"
+
+msgid "IDS_VIDEO_OPT_RECENTLY_ADDED_ABB"
+msgstr "Oxir/qo‘shilgan"
+
+msgid "IDS_VIDEO_OPT_RECENTLY_VIEWED_ABB"
+msgstr "Oxirgi ko‘rb chiqilgan"
+
+msgid "IDS_VIDEO_OPT_RENAME"
+msgstr "Nom o‘zgartirish"
+
+msgid "IDS_VIDEO_OPT_SIZE"
+msgstr "O‘lcham"
+
+msgid "IDS_VIDEO_OPT_SORT_BY"
+msgstr "Quyidagi bo‘y. saral"
+
+msgid "IDS_VIDEO_OPT_TITLE"
+msgstr "Sarlavha"
+
+msgid "IDS_VIDEO_OPT_TYPE"
+msgstr "Tur"
+
+msgid "IDS_VIDEO_OPT_VIEW_AS"
+msgstr "Quyidagi sifatida ko‘rib chiqish"
+
+msgid "IDS_VIDEO_POP_ALL_VIDEOS_WILL_BE_DELETED"
+msgstr "Barcha videolar yo‘q qilinadi."
+
+msgid "IDS_VIDEO_POP_PD_FOLDERS_WILL_BE_DELETED"
+msgstr "%d ta jild o'chiriladi."
+
+msgid "IDS_VIDEO_POP_PD_VIDEOS_WILL_BE_DELETED"
+msgstr "%d videolar o'chiriladi."
+
+msgid "IDS_VIDEO_POP_THIS_FOLDER_WILL_BE_DELETED"
+msgstr "Ushbu jild o'chiriladi."
+
+msgid "IDS_VIDEO_HEADER_PD_FOLDERS"
+msgstr "%d jild"
+
+msgid "IDS_VIDEO_HEADER_SETTINGS"
+msgstr "Parametrlar"
+
+msgid "IDS_VIDEO_HEADER_UNABLE_TO_PLAY_VIDEO_ABB"
+msgstr "Videoni o‘ynatib bo‘lmaydi"
+
+msgid "IDS_VIDEO_MBODY_ALIGNMENT"
+msgstr "Tenglashtirish"
+
+msgid "IDS_VIDEO_MBODY_FONT_SIZE"
+msgstr "Shrift o‘lchami"
+
+msgid "IDS_VIDEO_OPT_REPEAT_SETTING_ABB"
+msgstr "Takrorlash parametri"
+
+msgid "IDS_VIDEO_OPT_SUBTITLES_HCC_ABB"
+msgstr "Subtitrlar (CC)"
+
+msgid "IDS_VIDEO_POP_ALL_FOLDERS_WILL_BE_DELETED"
+msgstr "Barcha jildlar o'chiriladi."
+
+msgid "IDS_VIDEO_SBODY_CENTRE_M_STATUS"
+msgstr "Markaz"
+
+msgid "IDS_VIDEO_SBODY_LARGE_M_STATUS"
+msgstr "Katta"
+
+msgid "IDS_VIDEO_SBODY_LEFT_M_STATUS"
+msgstr "Chap"
+
+msgid "IDS_VIDEO_SBODY_MEDIUM_M_STATUS"
+msgstr "O‘rta"
+
+msgid "IDS_VIDEO_SBODY_RIGHT_M_STATUS"
+msgstr "O‘ng"
+
+msgid "IDS_VIDEO_SBODY_SMALL_M_STATUS"
+msgstr "Kichik"
+
+msgid "IDS_VIDEO_TPOP_FILE_NAME_ALREADY_IN_USE"
+msgstr "Fayl nomi avvaldan foydalanilmoqda"
+
+msgid "IDS_GALLERY_OPT_REMOVE_FROM_PRIVATE"
+msgstr "Maxfiydan olib tashlash"
+
+msgid "IDS_GALLERY_OPT_MOVE_TO_PRIVATE"
+msgstr "Maxfiyga ko‘chirish"
+
+msgid "IDS_IV_POP_ENTRY_IS_EMPTY"
+msgstr "Kiritish bo‘sh."
+
+msgid "IDS_VPL_OPT_FORMAT"
+msgstr "Format"
+
+msgid "IDS_VPL_BODY_UNABLE_TO_PLAY_VIDEO_DURING_CALL"
+msgstr "Qo‘ng‘iroq mobaynida video o‘ynatib bo‘lmaydi."
+
+msgid "IDS_CLOUD_BODY_DROPBOX_ABB"
+msgstr "Dropbox"
+
+msgid "IDS_VIDEO_POP_THIS_FILE_IS_UNAVAILABLE_WHILE_OFFLINE_CHECK_NETWORK_CONNECTION_AND_TRY_AGAIN"
+msgstr "Offlayn rejimda fayldan foydalanib bo‘lmaydi. Tarmoq ulanishini tekshiring va qayta urinib ko‘ring"
+
+msgid "IDS_VIDEO_POP_THE_SELECTED_ITEM_WILL_BE_MOVED_TO_PS"
+msgstr "Tanlangan element %sga ko‘chiriladi."
+
+msgid "IDS_VIDEO_POP_THE_SELECTED_ITEMS_WILL_BE_MOVED_TO_PS"
+msgstr "Tanlangan elementlar %sga ko‘chiriladi."
+
+msgid "IDS_VIDEO_POP_REMOVING_ING"
+msgstr "Olib tashlanmoqda..."
+
+msgid "IDS_VIDEO_POP_MOVING_ING"
+msgstr "Ko‘chirilmoqda..."
+
+msgid "IDS_VIDEO_POP_FAILED_TO_MOVE_TO_PERSONAL_STORAGE"
+msgstr "Shaxsiy xotiraga ko‘chirib bo‘lmadi."
+
+msgid "IDS_VIDEO_POP_FAILED_TO_MOVE_TO_NORMAL_STORAGE"
+msgstr "Normal xotiraga ko‘chirib bo‘lmadi."
+
+msgid "IDS_VIDEO_OPT_MESSAGE_ABB"
+msgstr "Xabar"
+
+msgid "IDS_VIDEO_OPT_FOLDERS_ABB"
+msgstr "Jildlar"
+
+msgid "IDS_VIDEO_OPT_EMAIL_ABB"
+msgstr "E-pochta"
+
+msgid "IDS_VIDEO_OPT_DATE_HMOST_RECENT_ABB"
+msgstr "Sana (eng oxirgi)"
+
+msgid "IDS_VIDEO_HEADER_PD_SELECTED"
+msgstr "%d tanlangan"
+
+msgid "IDS_VIDEO_HEADER_DELETE_VIDEOS"
+msgstr "Videolarni yo‘q qilish"
+
+msgid "IDS_VIDEO_HEADER_DELETE_VIDEO"
+msgstr "Videoni yo‘q qilish"
+
+msgid "IDS_VIDEO_BUTTON_MOVE_ABB"
+msgstr "Ko‘chirish"
+
+msgid "IDS_VIDEO_BODY_LONGITUDE"
+msgstr "Uzunlik"
+
+msgid "IDS_VIDEO_BODY_LATITUDE"
+msgstr "Kenglik"
+
+msgid "IDS_VIDEO_BODY_AFTER_YOU_RECORD_VIDEOS_USING_THE_CAMERA_VIDEOS_WILL_BE_SHOWN"
+msgstr "Kamera yordamida videolar yozib olingandan so‘ng videolar ko‘rsatiladi."
+
+msgid "IDS_VIDEO_SK_CANCEL_ABB"
+msgstr "Bek/q."
+
+msgid "IDS_VIDEO_OPT_STOP_AFTER_ALL_ABB"
+msgstr "Baridan keyin to‘xta"
+
+msgid "IDS_VIDEO_OPT_REPEAT_CURRENT_ABB"
+msgstr "Joriyni takrorlash"
+
+msgid "IDS_VIDEO_OPT_REPEAT_ALL_ABB"
+msgstr "Barini takrorlash"
+
+msgid "IDS_VIDEO_BODY_RESOLUTION"
+msgstr "Rezolyutsiya"
+
+msgid "IDS_VIDEO_BUTTON_DELETE"
+msgstr "Yo‘q/q"
+
+msgid "IDS_ST_OPT_DELETE_ALL"
+msgstr "Barchasi o'chirish"
+
+msgid "IDS_VPL_TPOP_ONLY_AUDIO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_AUDIO"
+msgstr "Faqat audio ma’lumot ushbu fayl tomonidan qo‘llab-quvvatlanadi. Hozirda o‘ynayotgan audio."
+
+msgid "IDS_VPL_TPOP_ONLY_VIDEO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_VIDEO"
+msgstr "Faqat video ma’lumot ushbu fayl tomonidan qo‘llab-quvvatlanadi. Hozirda o‘ynayotgan video."
+
+msgid "IDS_MUSIC_OPT_RENAME"
+msgstr "Nom o‘zgartirish"
+
+msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
+msgstr "Quloqliklar"
+
+msgid "IDS_VIDEO_BUTTON_DOWNLOAD"
+msgstr "Yuklab olish"
+
+msgid "IDS_TPLATFORM_BODY_OFF"
+msgstr "O‘ch."
+
+msgid "IDS_TPLATFORM_BODY_ON"
+msgstr "Yoq."
+
+msgid "IDS_VIDEO_POP_1_VIDEO_WILL_BE_DELETED"
+msgstr "1ta video yo‘q qilinadi."
+
+msgid "IDS_SWALL_HEADER_INVALID_CHARACTER"
+msgstr "Noto‘g‘ri belgi"
+
+msgid "IDS_VIDEO_BODY_NO_SEARCH_RESULTS"
+msgstr "Qidirish natijalari yo‘q"
+
+msgid "IDS_GALLERY_HEADER_SELECT"
+msgstr "Tanlash"
+
+msgid "IDS_VIDEO_BODY_LAST_MODIFIED_M_DATE_ABB"
+msgstr "Oxirgi o‘zgartirilgan"
+
+msgid "IDS_VIDEO_BUTTON_DONE"
+msgstr "OK"
+
+msgid "IDS_VIDEO_HEADER_DATE"
+msgstr "Sana"
+
+msgid "IDS_VIDEO_HEADER_LATITUDE"
+msgstr "Kenglik"
+
+msgid "IDS_VIDEO_OPT_NAME"
+msgstr "Ism"
+
+msgid "IDS_VIDEO_OPT_NAME_HA_Z_ABB"
+msgstr "Nom (A-Z)"
+
+msgid "IDS_VIDEO_OPT_VIDEOS"
+msgstr "Videolar"
+
+msgid "IDS_VIDEO_TPOP_MAXIMUM_NUMBER_OF_ATTACHMENTS_HPD_EXCEEDED"
+msgstr "Teglar soni maksimal miqdordan (%d) oshib ketdi."
+
+msgid "IDS_VIDEO_HEADER_SELECT_ALL"
+msgstr "Barchasini tanlash"
+
+msgid "IDS_VIDEO_SBODY_DEVICE_STORAGE"
+msgstr "Qurilma xotirasi"
+
+msgid "IDS_VIDEO_SBODY_SD_CARD"
+msgstr "SD-karta"
+
+msgid "IDS_VIDEO_OPT_SHARE_VIA"
+msgstr "Quyidagi orqali ulashish"
+
+msgid "IDS_VIDEO_POP_A_NETWORK_ERROR_HAS_OCCURRED_TRY_AGAIN"
+msgstr "Tarmoq xatosi yuz berdi. Qayta urinib ko‘ring."
+
+msgid "IDS_VPL_OPT_AUTO_PLAY_NEXT_ABB"
+msgstr "Key. avto-o‘ynat."
+
+msgid "IDS_VPL_POP_PROCESSING_ING"
+msgstr "Bajarilmoqda..."
+
+msgid "IDS_MEMO_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Belgilar soni maksimal miqdorga yetdi."
+
+msgid "IDS_MUSIC_OPT_DELETE"
+msgstr "Yo‘q qilish"
+
+msgid "IDS_MUSIC_OPT_DELETE_ALL"
+msgstr "Barchasi o'chirish"
+
+msgid "IDS_PB_BODY_NO_SEARCH_RESULT"
+msgstr "Qidiruv natijalari yo‘q"
+
+msgid "IDS_VIDEO_HEADER_SELECT_ITEM"
+msgstr "Element tanlang"
+
+msgid "IDS_VIDEO_HEADER_SELECT_ITEMS"
+msgstr "Elementlarni tanlang"
+
+msgid "IDS_CLOCK_BUTTON_CANCEL"
+msgstr "Bekor qilish"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "BAJARILDI"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "BEKOR QILISH"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DELETE_ABB"
+msgstr "O‘CHIRISH"
+
+msgid "IDS_TPLATFORM_MBODY_STORAGE_LOCATION"
+msgstr "Xotira joylashuvi"
+
+msgid "IDS_GALLERY_HEADER_SELECT_VIDEO"
+msgstr "Videoi tanlash"
+

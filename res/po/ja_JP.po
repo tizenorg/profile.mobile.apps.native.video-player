@@ -1,0 +1,390 @@
+msgid "IDS_VIDEO_OPT_DOWNLOAD"
+msgstr "ダウンロード"
+
+msgid "IDS_VIDEO_POP_1_FOLDER_WILL_BE_DOWNLOADED"
+msgstr "1件のフォルダをダウンロードします。"
+
+msgid "IDS_VIDEO_POP_1_VIDEO_WILL_BE_DOWNLOADED"
+msgstr "1件の動画をダウンロードします。"
+
+msgid "IDS_VIDEO_POP_ALL_FOLDERS_WILL_BE_DOWNLOADED"
+msgstr "全てのフォルダをダウンロードします。"
+
+msgid "IDS_VIDEO_POP_ALL_VIDEOS_WILL_BE_DOWNLOADED"
+msgstr "全ての動画をダウンロードします。"
+
+msgid "IDS_VIDEO_POP_PD_FOLDERS_WILL_BE_DOWNLOADED"
+msgstr "%d件のフォルダをダウンロードします。"
+
+msgid "IDS_VIDEO_POP_PD_VIDEOS_WILL_BE_DOWNLOADED"
+msgstr "%d件の動画をダウンロードします。"
+
+msgid "IDS_VIDEO_TPOP_MOBILE_DATA_TURNED_OFF_CONNECT_TO_WI_FI_NETWORK_INSTEAD_OR_TURN_ON_MOBILE_DATA_AND_TRY_AGAIN"
+msgstr "モバイルデータがOFFになっています。Wi-Fiネットワークに接続するか、モバイルデータをONにしてから再度お試しください。"
+
+msgid "IDS_GALLERY_OPT_PRIVATE_M_CONTENT"
+msgstr "プライベート"
+
+msgid "IDS_VIDEO_BODY_B"
+msgstr "B"
+
+msgid "IDS_VIDEO_BODY_GB"
+msgstr "GB"
+
+msgid "IDS_VIDEO_BODY_KB"
+msgstr "KB"
+
+msgid "IDS_VIDEO_BODY_LOCATION"
+msgstr "場所"
+
+msgid "IDS_VIDEO_BODY_MB"
+msgstr "MB"
+
+msgid "IDS_VIDEO_BODY_UNKNOWN"
+msgstr "不明"
+
+msgid "IDS_VIDEO_BUTTON_OK"
+msgstr "OK"
+
+msgid "IDS_VIDEO_HEADER_1_FOLDER"
+msgstr "1件のフォルダ"
+
+msgid "IDS_VIDEO_HEADER_1_VIDEO"
+msgstr "1件の動画"
+
+msgid "IDS_VIDEO_HEADER_ALL"
+msgstr "全て"
+
+msgid "IDS_VIDEO_HEADER_FROM_DEVICE"
+msgstr "端末の動画"
+
+msgid "IDS_VIDEO_HEADER_FROM_DROPBOX"
+msgstr "Dropboxの動画"
+
+msgid "IDS_VIDEO_HEADER_LAST_MODIFIED_M_DATE"
+msgstr "最終更新日"
+
+msgid "IDS_VIDEO_OPT_CONTENT_TO_DISPLAY"
+msgstr "表示するコンテンツ"
+
+msgid "IDS_VIDEO_OPT_SEARCH"
+msgstr "検索"
+
+msgid "IDS_VIDEO_OPT_SHARE"
+msgstr "共有"
+
+msgid "IDS_VIDEO_POP_1_FOLDER_WILL_BE_DELETED"
+msgstr "1件のフォルダを削除します。"
+
+msgid "IDS_VIDEO_TPOP_DELETING_ING"
+msgstr "削除中..."
+
+msgid "IDS_VIDEO_BODY_AFTER_YOU_RECORD_VIDEOS_USING_THE_CAMERA_THEY_WILL_BE_SHOWN_HERE"
+msgstr "カメラで動画を撮影した後に、動画が表示されます。"
+
+msgid "IDS_VIDEO_HEADER_PD_VIDEOS"
+msgstr "%d件の動画"
+
+msgid "IDS_VIDEO_HEADER_VIDEO"
+msgstr "動画"
+
+msgid "IDS_VIDEO_NPBODY_NO_VIDEOS"
+msgstr "動画がありません"
+
+msgid "IDS_VIDEO_OPT_DETAILS"
+msgstr "詳細"
+
+msgid "IDS_VIDEO_OPT_FOLDER"
+msgstr "フォルダ"
+
+msgid "IDS_VIDEO_OPT_LIST"
+msgstr "リスト"
+
+msgid "IDS_VIDEO_OPT_RECENTLY_ADDED_ABB"
+msgstr "最近追加した順"
+
+msgid "IDS_VIDEO_OPT_RECENTLY_VIEWED_ABB"
+msgstr "最近閲覧した順"
+
+msgid "IDS_VIDEO_OPT_RENAME"
+msgstr "名前を変更"
+
+msgid "IDS_VIDEO_OPT_SIZE"
+msgstr "サイズ"
+
+msgid "IDS_VIDEO_OPT_SORT_BY"
+msgstr "並べ替え"
+
+msgid "IDS_VIDEO_OPT_TITLE"
+msgstr "タイトル"
+
+msgid "IDS_VIDEO_OPT_TYPE"
+msgstr "タイプ"
+
+msgid "IDS_VIDEO_OPT_VIEW_AS"
+msgstr "表示形式"
+
+msgid "IDS_VIDEO_POP_ALL_VIDEOS_WILL_BE_DELETED"
+msgstr "全ての動画が削除されます。"
+
+msgid "IDS_VIDEO_POP_PD_FOLDERS_WILL_BE_DELETED"
+msgstr "%d件のフォルダを削除します。"
+
+msgid "IDS_VIDEO_POP_PD_VIDEOS_WILL_BE_DELETED"
+msgstr "%d件の動画を削除します。"
+
+msgid "IDS_VIDEO_POP_THIS_FOLDER_WILL_BE_DELETED"
+msgstr "このフォルダを削除します。"
+
+msgid "IDS_VIDEO_HEADER_PD_FOLDERS"
+msgstr "%d件のフォルダ"
+
+msgid "IDS_VIDEO_HEADER_SETTINGS"
+msgstr "設定"
+
+msgid "IDS_VIDEO_HEADER_UNABLE_TO_PLAY_VIDEO_ABB"
+msgstr "動画再生不可"
+
+msgid "IDS_VIDEO_MBODY_ALIGNMENT"
+msgstr "配置"
+
+msgid "IDS_VIDEO_MBODY_FONT_SIZE"
+msgstr "文字サイズ"
+
+msgid "IDS_VIDEO_OPT_REPEAT_SETTING_ABB"
+msgstr "リピート設定"
+
+msgid "IDS_VIDEO_OPT_SUBTITLES_HCC_ABB"
+msgstr "字幕(CC)"
+
+msgid "IDS_VIDEO_POP_ALL_FOLDERS_WILL_BE_DELETED"
+msgstr "全てのフォルダを削除します。"
+
+msgid "IDS_VIDEO_SBODY_CENTRE_M_STATUS"
+msgstr "中央"
+
+msgid "IDS_VIDEO_SBODY_LARGE_M_STATUS"
+msgstr "大"
+
+msgid "IDS_VIDEO_SBODY_LEFT_M_STATUS"
+msgstr "左"
+
+msgid "IDS_VIDEO_SBODY_MEDIUM_M_STATUS"
+msgstr "中"
+
+msgid "IDS_VIDEO_SBODY_RIGHT_M_STATUS"
+msgstr "右"
+
+msgid "IDS_VIDEO_SBODY_SMALL_M_STATUS"
+msgstr "小"
+
+msgid "IDS_VIDEO_TPOP_FILE_NAME_ALREADY_IN_USE"
+msgstr "ファイル名は既に使用されています。"
+
+msgid "IDS_GALLERY_OPT_REMOVE_FROM_PRIVATE"
+msgstr "プライベートから削除"
+
+msgid "IDS_GALLERY_OPT_MOVE_TO_PRIVATE"
+msgstr "プライベートに移動"
+
+msgid "IDS_IV_POP_ENTRY_IS_EMPTY"
+msgstr "入力されていません。"
+
+msgid "IDS_VPL_OPT_FORMAT"
+msgstr "ファイル形式"
+
+msgid "IDS_VPL_BODY_UNABLE_TO_PLAY_VIDEO_DURING_CALL"
+msgstr "通話中はビデオ再生できません"
+
+msgid "IDS_CLOUD_BODY_DROPBOX_ABB"
+msgstr "Dropbox"
+
+msgid "IDS_VIDEO_POP_THIS_FILE_IS_UNAVAILABLE_WHILE_OFFLINE_CHECK_NETWORK_CONNECTION_AND_TRY_AGAIN"
+msgstr "オフラインの間はこのファイルは利用できません。インターネット接続を確認してからやり直してください。"
+
+msgid "IDS_VIDEO_POP_THE_SELECTED_ITEM_WILL_BE_MOVED_TO_PS"
+msgstr "選択したアイテムを%sに移動します。"
+
+msgid "IDS_VIDEO_POP_THE_SELECTED_ITEMS_WILL_BE_MOVED_TO_PS"
+msgstr "選択したアイテムを%sに移動します。"
+
+msgid "IDS_VIDEO_POP_REMOVING_ING"
+msgstr "削除中..."
+
+msgid "IDS_VIDEO_POP_MOVING_ING"
+msgstr "移動中..."
+
+msgid "IDS_VIDEO_POP_FAILED_TO_MOVE_TO_PERSONAL_STORAGE"
+msgstr "パーソナルストレージへの移動に失敗しました。"
+
+msgid "IDS_VIDEO_POP_FAILED_TO_MOVE_TO_NORMAL_STORAGE"
+msgstr "標準ストレージへの移動に失敗しました。"
+
+msgid "IDS_VIDEO_OPT_MESSAGE_ABB"
+msgstr "ﾒｯｾｰｼﾞ"
+
+msgid "IDS_VIDEO_OPT_FOLDERS_ABB"
+msgstr "フォルダ"
+
+msgid "IDS_VIDEO_OPT_EMAIL_ABB"
+msgstr "Eメール"
+
+msgid "IDS_VIDEO_OPT_DATE_HMOST_RECENT_ABB"
+msgstr "日付(新しい順)"
+
+msgid "IDS_VIDEO_HEADER_PD_SELECTED"
+msgstr "%d件選択"
+
+msgid "IDS_VIDEO_HEADER_DELETE_VIDEOS"
+msgstr "動画を削除"
+
+msgid "IDS_VIDEO_HEADER_DELETE_VIDEO"
+msgstr "動画を削除"
+
+msgid "IDS_VIDEO_BUTTON_MOVE_ABB"
+msgstr "移動"
+
+msgid "IDS_VIDEO_BODY_LONGITUDE"
+msgstr "経度"
+
+msgid "IDS_VIDEO_BODY_LATITUDE"
+msgstr "緯度"
+
+msgid "IDS_VIDEO_BODY_AFTER_YOU_RECORD_VIDEOS_USING_THE_CAMERA_VIDEOS_WILL_BE_SHOWN"
+msgstr "カメラで動画を撮影した後に、動画が表示されます。"
+
+msgid "IDS_VIDEO_SK_CANCEL_ABB"
+msgstr "ｷｬﾝｾﾙ"
+
+msgid "IDS_VIDEO_OPT_STOP_AFTER_ALL_ABB"
+msgstr "終了後に停止"
+
+msgid "IDS_VIDEO_OPT_REPEAT_CURRENT_ABB"
+msgstr "現在の動画をリピート"
+
+msgid "IDS_VIDEO_OPT_REPEAT_ALL_ABB"
+msgstr "全てリピート"
+
+msgid "IDS_VIDEO_BODY_RESOLUTION"
+msgstr "解像度"
+
+msgid "IDS_VIDEO_BUTTON_DELETE"
+msgstr "削除"
+
+msgid "IDS_ST_OPT_DELETE_ALL"
+msgstr "全て削除"
+
+msgid "IDS_VPL_TPOP_ONLY_AUDIO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_AUDIO"
+msgstr "このファイルはオーディオデータのみ再生することができます。音声のみ再生します。"
+
+msgid "IDS_VPL_TPOP_ONLY_VIDEO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_VIDEO"
+msgstr "このファイルは動画データのみ再生することができます。動画のみ再生します。"
+
+msgid "IDS_MUSIC_OPT_RENAME"
+msgstr "名前を変更"
+
+msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
+msgstr "ヘッドホン"
+
+msgid "IDS_VIDEO_BUTTON_DOWNLOAD"
+msgstr "ダウンロード"
+
+msgid "IDS_TPLATFORM_BODY_OFF"
+msgstr "OFF"
+
+msgid "IDS_TPLATFORM_BODY_ON"
+msgstr "ON"
+
+msgid "IDS_VIDEO_POP_1_VIDEO_WILL_BE_DELETED"
+msgstr "1件の動画を削除します。"
+
+msgid "IDS_SWALL_HEADER_INVALID_CHARACTER"
+msgstr "無効な文字"
+
+msgid "IDS_VIDEO_BODY_NO_SEARCH_RESULTS"
+msgstr "検索結果がありません。"
+
+msgid "IDS_GALLERY_HEADER_SELECT"
+msgstr "選択"
+
+msgid "IDS_VIDEO_BODY_LAST_MODIFIED_M_DATE_ABB"
+msgstr "最終更新日"
+
+msgid "IDS_VIDEO_BUTTON_DONE"
+msgstr "完了"
+
+msgid "IDS_VIDEO_HEADER_DATE"
+msgstr "日付"
+
+msgid "IDS_VIDEO_HEADER_LATITUDE"
+msgstr "緯度"
+
+msgid "IDS_VIDEO_OPT_NAME"
+msgstr "名前"
+
+msgid "IDS_VIDEO_OPT_NAME_HA_Z_ABB"
+msgstr "名前(A～Z)"
+
+msgid "IDS_VIDEO_OPT_VIDEOS"
+msgstr "動画"
+
+msgid "IDS_VIDEO_TPOP_MAXIMUM_NUMBER_OF_ATTACHMENTS_HPD_EXCEEDED"
+msgstr "添付ファイルの最大件数(%d件)を超えています。"
+
+msgid "IDS_VIDEO_HEADER_SELECT_ALL"
+msgstr "全て選択"
+
+msgid "IDS_VIDEO_SBODY_DEVICE_STORAGE"
+msgstr "システムメモリ(本体)"
+
+msgid "IDS_VIDEO_SBODY_SD_CARD"
+msgstr "外部SDカード"
+
+msgid "IDS_VIDEO_OPT_SHARE_VIA"
+msgstr "共有"
+
+msgid "IDS_VIDEO_POP_A_NETWORK_ERROR_HAS_OCCURRED_TRY_AGAIN"
+msgstr "ネットワークエラーが発生しました。再度お試しください。"
+
+msgid "IDS_VPL_OPT_AUTO_PLAY_NEXT_ABB"
+msgstr "次の動画を自動再生"
+
+msgid "IDS_VPL_POP_PROCESSING_ING"
+msgstr "処理中..."
+
+msgid "IDS_MEMO_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "最大文字数に達しました。"
+
+msgid "IDS_MUSIC_OPT_DELETE"
+msgstr "削除"
+
+msgid "IDS_MUSIC_OPT_DELETE_ALL"
+msgstr "全て削除"
+
+msgid "IDS_PB_BODY_NO_SEARCH_RESULT"
+msgstr "検索結果がありません。"
+
+msgid "IDS_VIDEO_HEADER_SELECT_ITEM"
+msgstr "アイテムを選択してください。"
+
+msgid "IDS_VIDEO_HEADER_SELECT_ITEMS"
+msgstr "アイテムを選択"
+
+msgid "IDS_CLOCK_BUTTON_CANCEL"
+msgstr "キャンセル"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "完了"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "キャンセル"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DELETE_ABB"
+msgstr "削除"
+
+msgid "IDS_TPLATFORM_MBODY_STORAGE_LOCATION"
+msgstr "保存場所"
+
+msgid "IDS_GALLERY_HEADER_SELECT_VIDEO"
+msgstr "動画を選択"
+

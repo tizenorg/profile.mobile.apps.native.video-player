@@ -1,0 +1,390 @@
+msgid "IDS_VIDEO_OPT_DOWNLOAD"
+msgstr "ჩამოტვირთვა"
+
+msgid "IDS_VIDEO_POP_1_FOLDER_WILL_BE_DOWNLOADED"
+msgstr "ჩამოიტვირთება 1 საქაღალდე."
+
+msgid "IDS_VIDEO_POP_1_VIDEO_WILL_BE_DOWNLOADED"
+msgstr "ჩამოიტვირთება 1 ვიდეო."
+
+msgid "IDS_VIDEO_POP_ALL_FOLDERS_WILL_BE_DOWNLOADED"
+msgstr "ჩამოიტვირთება ყველა საქაღალდე."
+
+msgid "IDS_VIDEO_POP_ALL_VIDEOS_WILL_BE_DOWNLOADED"
+msgstr "ჩამოიტვირთება ყველა ვიდეო."
+
+msgid "IDS_VIDEO_POP_PD_FOLDERS_WILL_BE_DOWNLOADED"
+msgstr "ჩამოიტვირთება %d საქაღალდე."
+
+msgid "IDS_VIDEO_POP_PD_VIDEOS_WILL_BE_DOWNLOADED"
+msgstr "ჩამოიტვირთება %d ვიდეო."
+
+msgid "IDS_VIDEO_TPOP_MOBILE_DATA_TURNED_OFF_CONNECT_TO_WI_FI_NETWORK_INSTEAD_OR_TURN_ON_MOBILE_DATA_AND_TRY_AGAIN"
+msgstr "მობილურ მონაცემთა ქსელი გამორთულია. სანაცვლოდ, დაუკავშირდით Wi-Fi ქსელს, ან ჩართეთ მობილური მონაცემები და ისევ სცადეთ."
+
+msgid "IDS_GALLERY_OPT_PRIVATE_M_CONTENT"
+msgstr "პერსონალური"
+
+msgid "IDS_VIDEO_BODY_B"
+msgstr "B"
+
+msgid "IDS_VIDEO_BODY_GB"
+msgstr "GB"
+
+msgid "IDS_VIDEO_BODY_KB"
+msgstr "KB"
+
+msgid "IDS_VIDEO_BODY_LOCATION"
+msgstr "ადგილმდებ."
+
+msgid "IDS_VIDEO_BODY_MB"
+msgstr "MB"
+
+msgid "IDS_VIDEO_BODY_UNKNOWN"
+msgstr "უცნობი"
+
+msgid "IDS_VIDEO_BUTTON_OK"
+msgstr "კი"
+
+msgid "IDS_VIDEO_HEADER_1_FOLDER"
+msgstr "1 საქაღალდე"
+
+msgid "IDS_VIDEO_HEADER_1_VIDEO"
+msgstr "1 ვიდეო"
+
+msgid "IDS_VIDEO_HEADER_ALL"
+msgstr "ყველა"
+
+msgid "IDS_VIDEO_HEADER_FROM_DEVICE"
+msgstr "მოწყობილობიდან"
+
+msgid "IDS_VIDEO_HEADER_FROM_DROPBOX"
+msgstr "Dropbox-დან"
+
+msgid "IDS_VIDEO_HEADER_LAST_MODIFIED_M_DATE"
+msgstr "ბოლოს შესწორდა"
+
+msgid "IDS_VIDEO_OPT_CONTENT_TO_DISPLAY"
+msgstr "ეკრანზე გამოსაჩენი მასალა"
+
+msgid "IDS_VIDEO_OPT_SEARCH"
+msgstr "ძებნა"
+
+msgid "IDS_VIDEO_OPT_SHARE"
+msgstr "გაზიარება"
+
+msgid "IDS_VIDEO_POP_1_FOLDER_WILL_BE_DELETED"
+msgstr "1 საქაღალდე წაიშლება."
+
+msgid "IDS_VIDEO_TPOP_DELETING_ING"
+msgstr "წაშლა..."
+
+msgid "IDS_VIDEO_BODY_AFTER_YOU_RECORD_VIDEOS_USING_THE_CAMERA_THEY_WILL_BE_SHOWN_HERE"
+msgstr "როდესაც ჩაწერთ ვიდეოს კამერით, ისინი გამოჩნდება აქ."
+
+msgid "IDS_VIDEO_HEADER_PD_VIDEOS"
+msgstr "%d ვიდეო"
+
+msgid "IDS_VIDEO_HEADER_VIDEO"
+msgstr "ვიდეო"
+
+msgid "IDS_VIDEO_NPBODY_NO_VIDEOS"
+msgstr "ვიდეოები არ არის"
+
+msgid "IDS_VIDEO_OPT_DETAILS"
+msgstr "დეტალები"
+
+msgid "IDS_VIDEO_OPT_FOLDER"
+msgstr "საქაღალდე"
+
+msgid "IDS_VIDEO_OPT_LIST"
+msgstr "სია"
+
+msgid "IDS_VIDEO_OPT_RECENTLY_ADDED_ABB"
+msgstr "ბოლო დამატებული"
+
+msgid "IDS_VIDEO_OPT_RECENTLY_VIEWED_ABB"
+msgstr "ბოლოს ნანახი"
+
+msgid "IDS_VIDEO_OPT_RENAME"
+msgstr "ხელახლა დასათაურება"
+
+msgid "IDS_VIDEO_OPT_SIZE"
+msgstr "ზომა"
+
+msgid "IDS_VIDEO_OPT_SORT_BY"
+msgstr "დალაგება კრიტერიუმით"
+
+msgid "IDS_VIDEO_OPT_TITLE"
+msgstr "სათაური"
+
+msgid "IDS_VIDEO_OPT_TYPE"
+msgstr "ტიპი"
+
+msgid "IDS_VIDEO_OPT_VIEW_AS"
+msgstr "ნახეთ როგორც"
+
+msgid "IDS_VIDEO_POP_ALL_VIDEOS_WILL_BE_DELETED"
+msgstr "ყველა ვიდეო წაიშლება."
+
+msgid "IDS_VIDEO_POP_PD_FOLDERS_WILL_BE_DELETED"
+msgstr "%d საქაღალდე წაიშლება."
+
+msgid "IDS_VIDEO_POP_PD_VIDEOS_WILL_BE_DELETED"
+msgstr "%d ვიდეო წაიშლება."
+
+msgid "IDS_VIDEO_POP_THIS_FOLDER_WILL_BE_DELETED"
+msgstr "ეს საქაღალდე წაიშლება."
+
+msgid "IDS_VIDEO_HEADER_PD_FOLDERS"
+msgstr "%d საქაღალდე"
+
+msgid "IDS_VIDEO_HEADER_SETTINGS"
+msgstr "პარამეტრები"
+
+msgid "IDS_VIDEO_HEADER_UNABLE_TO_PLAY_VIDEO_ABB"
+msgstr "ვიდეოს დაკვრა შეუძლებელია"
+
+msgid "IDS_VIDEO_MBODY_ALIGNMENT"
+msgstr "განაწილება"
+
+msgid "IDS_VIDEO_MBODY_FONT_SIZE"
+msgstr "შრიფტის ზომა"
+
+msgid "IDS_VIDEO_OPT_REPEAT_SETTING_ABB"
+msgstr "გამეორების პარამეტრი"
+
+msgid "IDS_VIDEO_OPT_SUBTITLES_HCC_ABB"
+msgstr "ტიტრები (სუბტიტრები)"
+
+msgid "IDS_VIDEO_POP_ALL_FOLDERS_WILL_BE_DELETED"
+msgstr "ყველა საქაღალდე წაიშლება."
+
+msgid "IDS_VIDEO_SBODY_CENTRE_M_STATUS"
+msgstr "ცენტრი"
+
+msgid "IDS_VIDEO_SBODY_LARGE_M_STATUS"
+msgstr "დიდი"
+
+msgid "IDS_VIDEO_SBODY_LEFT_M_STATUS"
+msgstr "მარცხნივ"
+
+msgid "IDS_VIDEO_SBODY_MEDIUM_M_STATUS"
+msgstr "საშუალო"
+
+msgid "IDS_VIDEO_SBODY_RIGHT_M_STATUS"
+msgstr "მარჯვნივ"
+
+msgid "IDS_VIDEO_SBODY_SMALL_M_STATUS"
+msgstr "მცირე"
+
+msgid "IDS_VIDEO_TPOP_FILE_NAME_ALREADY_IN_USE"
+msgstr "ფაილის სახელი უკვე გამოყენებულია"
+
+msgid "IDS_GALLERY_OPT_REMOVE_FROM_PRIVATE"
+msgstr "პერსონალურიდან წაშლა"
+
+msgid "IDS_GALLERY_OPT_MOVE_TO_PRIVATE"
+msgstr "პერსონალურში გადატანა"
+
+msgid "IDS_IV_POP_ENTRY_IS_EMPTY"
+msgstr "ცარიელი ჩანაწ."
+
+msgid "IDS_VPL_OPT_FORMAT"
+msgstr "დაფორმატება"
+
+msgid "IDS_VPL_BODY_UNABLE_TO_PLAY_VIDEO_DURING_CALL"
+msgstr "ვიდეოს ვერ გაუშვებთ ზარის დროს."
+
+msgid "IDS_CLOUD_BODY_DROPBOX_ABB"
+msgstr "Dropbox"
+
+msgid "IDS_VIDEO_POP_THIS_FILE_IS_UNAVAILABLE_WHILE_OFFLINE_CHECK_NETWORK_CONNECTION_AND_TRY_AGAIN"
+msgstr "ეს ფაილი მიუწვდომელია ინტერნეტის გარეშე. შეამოწმეთ კავშირი ქსელთან და ისევ მოსინჯეთ"
+
+msgid "IDS_VIDEO_POP_THE_SELECTED_ITEM_WILL_BE_MOVED_TO_PS"
+msgstr "შერჩეული ელემენტი გადავა ადგილზე: %s."
+
+msgid "IDS_VIDEO_POP_THE_SELECTED_ITEMS_WILL_BE_MOVED_TO_PS"
+msgstr "შერჩეული ელემენტები გადავა ადგილზე: %s."
+
+msgid "IDS_VIDEO_POP_REMOVING_ING"
+msgstr "იშლება..."
+
+msgid "IDS_VIDEO_POP_MOVING_ING"
+msgstr "გადატანა..."
+
+msgid "IDS_VIDEO_POP_FAILED_TO_MOVE_TO_PERSONAL_STORAGE"
+msgstr "პერსონალურ საცავში ვერ გადავიდა."
+
+msgid "IDS_VIDEO_POP_FAILED_TO_MOVE_TO_NORMAL_STORAGE"
+msgstr "ნორმალურ საცავში ვერ გადავიდა."
+
+msgid "IDS_VIDEO_OPT_MESSAGE_ABB"
+msgstr "წერილი"
+
+msgid "IDS_VIDEO_OPT_FOLDERS_ABB"
+msgstr "საქაღალდეები"
+
+msgid "IDS_VIDEO_OPT_EMAIL_ABB"
+msgstr "ელ.ფოსტა"
+
+msgid "IDS_VIDEO_OPT_DATE_HMOST_RECENT_ABB"
+msgstr "თარიღი (უახლესი)"
+
+msgid "IDS_VIDEO_HEADER_PD_SELECTED"
+msgstr "%d არჩეულია"
+
+msgid "IDS_VIDEO_HEADER_DELETE_VIDEOS"
+msgstr "ვიდეოების წაშლა"
+
+msgid "IDS_VIDEO_HEADER_DELETE_VIDEO"
+msgstr "ვიდეოს წაშლა"
+
+msgid "IDS_VIDEO_BUTTON_MOVE_ABB"
+msgstr "გადატანა"
+
+msgid "IDS_VIDEO_BODY_LONGITUDE"
+msgstr "გრძედი"
+
+msgid "IDS_VIDEO_BODY_LATITUDE"
+msgstr "განედი"
+
+msgid "IDS_VIDEO_BODY_AFTER_YOU_RECORD_VIDEOS_USING_THE_CAMERA_VIDEOS_WILL_BE_SHOWN"
+msgstr "როდესაც ჩაწერთ ვიდეოს კამერით, გამოჩნდება ვიდეოები."
+
+msgid "IDS_VIDEO_SK_CANCEL_ABB"
+msgstr "გაუქმ."
+
+msgid "IDS_VIDEO_OPT_STOP_AFTER_ALL_ABB"
+msgstr "გაჩერდეს ბოლოში"
+
+msgid "IDS_VIDEO_OPT_REPEAT_CURRENT_ABB"
+msgstr "მიმდინარეს გამეორება"
+
+msgid "IDS_VIDEO_OPT_REPEAT_ALL_ABB"
+msgstr "გაიმეორე ყველა"
+
+msgid "IDS_VIDEO_BODY_RESOLUTION"
+msgstr "გარჩევადობა"
+
+msgid "IDS_VIDEO_BUTTON_DELETE"
+msgstr "წაშლა"
+
+msgid "IDS_ST_OPT_DELETE_ALL"
+msgstr "ყველას წაშლა"
+
+msgid "IDS_VPL_TPOP_ONLY_AUDIO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_AUDIO"
+msgstr "ამ ფაილს აქვს მხოლოდ აუდიო მონაცემთა მხარდაჭერა. ახლა ჩართულია აუდიო."
+
+msgid "IDS_VPL_TPOP_ONLY_VIDEO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_VIDEO"
+msgstr "ამ ფაილს აქვს მხოლოდ ვიდეო მონაცემთა მხარდაჭერა. ახლა ჩართულია ვიდეო."
+
+msgid "IDS_MUSIC_OPT_RENAME"
+msgstr "გადარქმევა"
+
+msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
+msgstr "გარნიტურები"
+
+msgid "IDS_VIDEO_BUTTON_DOWNLOAD"
+msgstr "ჩამოტვირთვა"
+
+msgid "IDS_TPLATFORM_BODY_OFF"
+msgstr "გამორთ."
+
+msgid "IDS_TPLATFORM_BODY_ON"
+msgstr "ჩართვა"
+
+msgid "IDS_VIDEO_POP_1_VIDEO_WILL_BE_DELETED"
+msgstr "1 ვიდეო წაიშლება."
+
+msgid "IDS_SWALL_HEADER_INVALID_CHARACTER"
+msgstr "სიმბოლო არასწორია"
+
+msgid "IDS_VIDEO_BODY_NO_SEARCH_RESULTS"
+msgstr "ძიების შედეგი არ არის"
+
+msgid "IDS_GALLERY_HEADER_SELECT"
+msgstr "არჩევა"
+
+msgid "IDS_VIDEO_BODY_LAST_MODIFIED_M_DATE_ABB"
+msgstr "ბოლოს შესწორდა"
+
+msgid "IDS_VIDEO_BUTTON_DONE"
+msgstr "შესრულდა"
+
+msgid "IDS_VIDEO_HEADER_DATE"
+msgstr "თარიღი"
+
+msgid "IDS_VIDEO_HEADER_LATITUDE"
+msgstr "განედი"
+
+msgid "IDS_VIDEO_OPT_NAME"
+msgstr "სახელი"
+
+msgid "IDS_VIDEO_OPT_NAME_HA_Z_ABB"
+msgstr "სახელი (ა-ჰ)"
+
+msgid "IDS_VIDEO_OPT_VIDEOS"
+msgstr "ვიდეოები"
+
+msgid "IDS_VIDEO_TPOP_MAXIMUM_NUMBER_OF_ATTACHMENTS_HPD_EXCEEDED"
+msgstr "გადაჭარბებულია დანართების მაქსიმალური რაოდენობა (%d)."
+
+msgid "IDS_VIDEO_HEADER_SELECT_ALL"
+msgstr "აირჩიეთ ყველა"
+
+msgid "IDS_VIDEO_SBODY_DEVICE_STORAGE"
+msgstr "აპარატის მეხსიერება"
+
+msgid "IDS_VIDEO_SBODY_SD_CARD"
+msgstr "SD ბარათი"
+
+msgid "IDS_VIDEO_OPT_SHARE_VIA"
+msgstr "გაზიარება მეთოდით"
+
+msgid "IDS_VIDEO_POP_A_NETWORK_ERROR_HAS_OCCURRED_TRY_AGAIN"
+msgstr "მოხდა ქსელის შეცდომა. ისევ სცადეთ."
+
+msgid "IDS_VPL_OPT_AUTO_PLAY_NEXT_ABB"
+msgstr "ავტომატური ტექსტი"
+
+msgid "IDS_VPL_POP_PROCESSING_ING"
+msgstr "მუშავდება..."
+
+msgid "IDS_MEMO_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "მიღწეულია სიმბოლოების მაქსიმალური რაოდენობა."
+
+msgid "IDS_MUSIC_OPT_DELETE"
+msgstr "წაშლა"
+
+msgid "IDS_MUSIC_OPT_DELETE_ALL"
+msgstr "ყველას წაშლა"
+
+msgid "IDS_PB_BODY_NO_SEARCH_RESULT"
+msgstr "ძიების შედეგი არ არის"
+
+msgid "IDS_VIDEO_HEADER_SELECT_ITEM"
+msgstr "ელემენტის არჩევა"
+
+msgid "IDS_VIDEO_HEADER_SELECT_ITEMS"
+msgstr "ელემენტების არჩევა"
+
+msgid "IDS_CLOCK_BUTTON_CANCEL"
+msgstr "გაუქმება"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "მზადაა"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "გაუქმება"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DELETE_ABB"
+msgstr "წაშლა"
+
+msgid "IDS_TPLATFORM_MBODY_STORAGE_LOCATION"
+msgstr "შენახვის ადგილი"
+
+msgid "IDS_GALLERY_HEADER_SELECT_VIDEO"
+msgstr "აირჩიეთ ვიდეო"
+

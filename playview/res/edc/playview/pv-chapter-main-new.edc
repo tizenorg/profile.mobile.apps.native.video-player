@@ -1,0 +1,1922 @@
+/*
+* Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+
+#include "pv-image.edc"
+
+#define ITEM_LINE_WIDTH				1
+#define ITEM_TEXT_BG_COLOR 			8 8 8 255
+#define ITEM_LINE_COLOR 				109 109 109 255
+#define ITEM_TEXT_COLOR 				212 212 212 255
+
+
+#define CHAPTER_ITEM_SELECT_VI_EFFECT \
+} \
+description { state: "pressed" 0.0; \
+   inherit: "default" 0.0; \
+   map { \
+	  on: 1; \
+	  perspective: "persp1"; \
+	  smooth: 0; \
+   } \
+} \
+description { state: "selected" 0.0; \
+   inherit: "default" 0.0; \
+   map { \
+	  on: 1; \
+	  perspective: "persp"; \
+	  smooth: 1; \
+   }
+
+#define CHAPTER_PROGRAM_ITEM_SELECT_VI_EFFECT( TARGET ) \
+	  program { name: "vi_pressed"; \
+		 action: STATE_SET "pressed" 0.0; \
+		 TARGET \
+		 after: "vi_zoom_in"; \
+	  } \
+	  program { name: "vi_zoom_in"; \
+		 action: STATE_SET "selected" 0.0; \
+		 TARGET \
+		 transition: SIN_FAC 0.167 1.1; \
+	  } \
+	  program { name: "vi_zoom_out"; \
+		 action: STATE_SET "pressed" 0.0; \
+		 TARGET \
+		 transition: SIN_FAC 0.167 1.1; \
+		 after: "vi_default"; \
+	  } \
+	  program { name: "vi_default"; \
+		 action: STATE_SET "default" 0.0; \
+		 TARGET \
+	  }
+
+
+collections {
+	group {
+		name: "pv.chapter.main";
+		parts {
+			part {
+				name: "pv.chapter.main.bg";
+				type: RECT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					rel1 { relative: 0.0 0.0;}
+					rel2 { relative: 1.0 1.0;}
+					color: 8 8 8 255;
+				}
+			}
+
+			part {
+				name: "pv.chapter.main.item.01.bg";
+				type: RECT;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					color: ITEM_TEXT_BG_COLOR;
+					rel1 { relative: 0.016 0.01;}
+					rel2 { relative: 0.246 0.33;}
+				}
+				description {
+					state: "portrait" 0.0;
+					inherit: "default" 0.0;
+					rel1 { relative: 0.01 0.016 ;}
+					rel2 { relative: 0.33 0.246;}
+				}
+
+			}
+			part {
+				name: "pv.chapter.main.item.02.bg";
+				type: RECT;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					color: ITEM_TEXT_BG_COLOR;
+					rel1 { relative: 0.262 0.01;}
+					rel2 { relative: 0.492 0.33;}
+				}
+				description {
+					state: "portrait" 0.0;
+					inherit: "default" 0.0;
+					rel1 { relative: 0.34 0.016;}
+					rel2 { relative: 0.66 0.246;}
+				}
+			}
+
+			part {
+				name: "pv.chapter.main.item.03.bg";
+				type: RECT;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					color: ITEM_TEXT_BG_COLOR;
+					rel1 { relative: 0.508 0.01;}
+					rel2 { relative: 0.738 0.33;}
+				}
+				description {
+					state: "portrait" 0.0;
+					inherit: "default" 0.0;
+					rel1 { relative: 0.67 0.016;}
+					rel2 { relative: 0.99 0.246;}
+				}
+			}
+
+			part {
+				name: "pv.chapter.main.item.04.bg";
+				type: RECT;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					color: ITEM_TEXT_BG_COLOR;
+					rel1 { relative: 0.754 0.01;}
+					rel2 { relative: 0.984 0.33;}
+				}
+				description {
+					state: "portrait" 0.0;
+					inherit: "default" 0.0;
+					rel1 { relative: 0.01 0.262;}
+					rel2 { relative: 0.33 0.492;}
+				}
+			}
+			part {
+				name: "pv.chapter.main.item.05.bg";
+				type: RECT;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					color: ITEM_TEXT_BG_COLOR;
+					rel1 { relative: 0.016 0.34;}
+					rel2 { relative: 0.246 0.66;}
+				}
+				description {
+					state: "portrait" 0.0;
+					inherit: "default" 0.0;
+					rel1 { relative: 0.34 0.262;}
+					rel2 { relative: 0.66 0.492;}
+				}
+			}
+			part {
+				name: "pv.chapter.main.item.06.bg";
+				type: RECT;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					color: ITEM_TEXT_BG_COLOR;
+					rel1 { relative: 0.262 0.34;}
+					rel2 { relative: 0.492 0.66;}
+				}
+				description {
+					state: "portrait" 0.0;
+					inherit: "default" 0.0;
+					rel1 { relative: 0.67 0.262;}
+					rel2 { relative: 0.99 0.492;}
+				}
+			}
+
+			part {
+				name: "pv.chapter.main.item.07.bg";
+				type: RECT;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					color: ITEM_TEXT_BG_COLOR;
+					rel1 { relative: 0.508 0.34;}
+					rel2 { relative: 0.738 0.66;}
+				}
+				description {
+					state: "portrait" 0.0;
+					inherit: "default" 0.0;
+					rel1 { relative: 0.01 0.508;}
+					rel2 { relative: 0.33 0.738;}
+				}
+			}
+
+			part {
+				name: "pv.chapter.main.item.08.bg";
+				type: RECT;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					color: ITEM_TEXT_BG_COLOR;
+					rel1 { relative: 0.754 0.34;}
+					rel2 { relative: 0.984 0.66;}
+				}
+				description {
+					state: "portrait" 0.0;
+					inherit: "default" 0.0;
+					rel1 { relative: 0.34 0.508;}
+					rel2 { relative: 0.66 0.738;}
+				}
+			}
+
+
+			part {
+				name: "pv.chapter.main.item.09.bg";
+				type: RECT;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					color: ITEM_TEXT_BG_COLOR;
+					rel1 { relative: 0.016 0.67;}
+					rel2 { relative: 0.246 0.99;}
+				}
+				description {
+					state: "portrait" 0.0;
+					inherit: "default" 0.0;
+					rel1 { relative: 0.67 0.508;}
+					rel2 { relative: 0.99 0.738;}
+				}
+			}
+			part {
+				name: "pv.chapter.main.item.10.bg";
+				type: RECT;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					color: ITEM_TEXT_BG_COLOR;
+					rel1 { relative: 0.262 0.67;}
+					rel2 { relative: 0.492 0.99;}
+				}
+				description {
+					state: "portrait" 0.0;
+					inherit: "default" 0.0;
+					rel1 { relative: 0.01 0.754;}
+					rel2 { relative: 0.33 0.984;}
+				}
+			}
+
+			part {
+				name: "pv.chapter.main.item.11.bg";
+				type: RECT;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					color: ITEM_TEXT_BG_COLOR;
+					rel1 { relative: 0.508 0.67;}
+					rel2 { relative: 0.738 0.99;}
+				}
+				description {
+					state: "portrait" 0.0;
+					inherit: "default" 0.0;
+					rel1 { relative: 0.34 0.754;}
+					rel2 { relative: 0.66 0.984;}
+				}
+			}
+
+			part {
+				name: "pv.chapter.main.item.12.bg";
+				type: RECT;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					color: ITEM_TEXT_BG_COLOR;
+					rel1 { relative: 0.754 0.67;}
+					rel2 { relative: 0.984 0.99;}
+				}
+				description {
+					state: "portrait" 0.0;
+					inherit: "default" 0.0;
+					rel1 { relative: 0.67 0.754;}
+					rel2 { relative: 0.99 0.984;}
+				}
+			}
+
+			part {
+				name: "pv.chapter.main.item.01";
+				type: SWALLOW;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					rel1 { relative: 0.0 0.0; to: "pv.chapter.main.item.01.bg";}
+					rel2 { relative: 1.0 1.0; to: "pv.chapter.main.item.01.bg";}
+				}
+			}
+
+			part {
+				name: "pv.chapter.main.item.02";
+				type: SWALLOW;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					rel1 { relative: 0.0 0.0; to: "pv.chapter.main.item.02.bg";}
+					rel2 { relative: 1.0 1.0; to: "pv.chapter.main.item.02.bg";}
+				}
+			}
+
+			part {
+				name: "pv.chapter.main.item.03";
+				type: SWALLOW;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					rel1 { relative: 0.0 0.0; to: "pv.chapter.main.item.03.bg";}
+					rel2 { relative: 1.0 1.0; to: "pv.chapter.main.item.03.bg";}
+				}
+			}
+
+			part {
+				name: "pv.chapter.main.item.04";
+				type: SWALLOW;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					rel1 { relative: 0.0 0.0; to: "pv.chapter.main.item.04.bg";}
+					rel2 { relative: 1.0 1.0; to: "pv.chapter.main.item.04.bg";}
+				}
+			}
+
+
+			part {
+				name: "pv.chapter.main.item.05";
+				type: SWALLOW;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					rel1 { relative: 0.0 0.0; to: "pv.chapter.main.item.05.bg";}
+					rel2 { relative: 1.0 1.0; to: "pv.chapter.main.item.05.bg";}
+				}
+			}
+			part {
+				name: "pv.chapter.main.item.06";
+				type: SWALLOW;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					rel1 { relative: 0.0 0.0; to: "pv.chapter.main.item.06.bg";}
+					rel2 { relative: 1.0 1.0; to: "pv.chapter.main.item.06.bg";}
+				}
+			}
+
+			part {
+				name: "pv.chapter.main.item.07";
+				type: SWALLOW;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					rel1 { relative: 0.0 0.0; to: "pv.chapter.main.item.07.bg";}
+					rel2 { relative: 1.0 1.0; to: "pv.chapter.main.item.07.bg";}
+				}
+			}
+
+			part {
+				name: "pv.chapter.main.item.08";
+				type: SWALLOW;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					rel1 { relative: 0.0 0.0; to: "pv.chapter.main.item.08.bg";}
+					rel2 { relative: 1.0 1.0; to: "pv.chapter.main.item.08.bg";}
+				}
+			}
+
+
+			part {
+				name: "pv.chapter.main.item.09";
+				type: SWALLOW;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					rel1 { relative: 0.0 0.0; to: "pv.chapter.main.item.09.bg";}
+					rel2 { relative: 1.0 1.0; to: "pv.chapter.main.item.09.bg";}
+				}
+			}
+			part {
+				name: "pv.chapter.main.item.10";
+				type: SWALLOW;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					rel1 { relative: 0.0 0.0; to: "pv.chapter.main.item.10.bg";}
+					rel2 { relative: 1.0 1.0; to: "pv.chapter.main.item.10.bg";}
+				}
+			}
+
+			part {
+				name: "pv.chapter.main.item.11";
+				type: SWALLOW;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					rel1 { relative: 0.0 0.0; to: "pv.chapter.main.item.11.bg";}
+					rel2 { relative: 1.0 1.0; to: "pv.chapter.main.item.11.bg";}
+				}
+			}
+
+			part {
+				name: "pv.chapter.main.item.12";
+				type: SWALLOW;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					rel1 { relative: 0.0 0.0; to: "pv.chapter.main.item.12.bg";}
+					rel2 { relative: 1.0 1.0; to: "pv.chapter.main.item.12.bg";}
+				}
+			}
+			//shadow
+			part {
+				name: "pv.chapter.main.shadow.01";
+				type: IMAGE;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					rel1 { relative: 0.0 0.3; to: "pv.chapter.main.item.01.bg";}
+					rel2 { relative: 1.0 1.0; to: "pv.chapter.main.item.01.bg";}
+					image { normal: "chapter/T01_2_thumbnail_shadow.png";}
+				}
+				description {
+					state: "portrait" 0.0;
+					inherit: "default" 0.0;
+					image { normal: "chapter/T01_2_thumbnail_shadow_h.png";}
+				}
+			}
+			part {
+				name: "pv.chapter.main.shadow.02";
+				type: IMAGE;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					rel1 { relative: 0.0 0.3; to: "pv.chapter.main.item.02.bg";}
+					rel2 { relative: 1.0 1.0; to: "pv.chapter.main.item.02.bg";}
+					image { normal: "chapter/T01_2_thumbnail_shadow.png";}
+				}
+				description {
+					state: "portrait" 0.0;
+					inherit: "default" 0.0;
+					image { normal: "chapter/T01_2_thumbnail_shadow_h.png";}
+				}
+			}
+			part {
+				name: "pv.chapter.main.shadow.03";
+				type: IMAGE;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					rel1 { relative: 0.0 0.3; to: "pv.chapter.main.item.03.bg";}
+					rel2 { relative: 1.0 1.0; to: "pv.chapter.main.item.03.bg";}
+					image { normal: "chapter/T01_2_thumbnail_shadow.png";}
+				}
+				description {
+					state: "portrait" 0.0;
+					inherit: "default" 0.0;
+					image { normal: "chapter/T01_2_thumbnail_shadow_h.png";}
+				}
+			}
+			part {
+				name: "pv.chapter.main.shadow.04";
+				type: IMAGE;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					rel1 { relative: 0.0 0.3; to: "pv.chapter.main.item.04.bg";}
+					rel2 { relative: 1.0 1.0; to: "pv.chapter.main.item.04.bg";}
+					image { normal: "chapter/T01_2_thumbnail_shadow.png";}
+				}
+				description {
+					state: "portrait" 0.0;
+					inherit: "default" 0.0;
+					image { normal: "chapter/T01_2_thumbnail_shadow_h.png";}
+				}
+			}
+			part {
+				name: "pv.chapter.main.shadow.05";
+				type: IMAGE;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					rel1 { relative: 0.0 0.3; to: "pv.chapter.main.item.05.bg";}
+					rel2 { relative: 1.0 1.0; to: "pv.chapter.main.item.05.bg";}
+					image { normal: "chapter/T01_2_thumbnail_shadow.png";}
+				}
+				description {
+					state: "portrait" 0.0;
+					inherit: "default" 0.0;
+					image { normal: "chapter/T01_2_thumbnail_shadow_h.png";}
+				}
+			}
+			part {
+				name: "pv.chapter.main.shadow.06";
+				type: IMAGE;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					rel1 { relative: 0.0 0.3; to: "pv.chapter.main.item.06.bg";}
+					rel2 { relative: 1.0 1.0; to: "pv.chapter.main.item.06.bg";}
+					image { normal: "chapter/T01_2_thumbnail_shadow.png";}
+				}
+				description {
+					state: "portrait" 0.0;
+					inherit: "default" 0.0;
+					image { normal: "chapter/T01_2_thumbnail_shadow_h.png";}
+				}
+			}
+			part {
+				name: "pv.chapter.main.shadow.07";
+				type: IMAGE;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					rel1 { relative: 0.0 0.3; to: "pv.chapter.main.item.07.bg";}
+					rel2 { relative: 1.0 1.0; to: "pv.chapter.main.item.07.bg";}
+					image { normal: "chapter/T01_2_thumbnail_shadow.png";}
+				}
+				description {
+					state: "portrait" 0.0;
+					inherit: "default" 0.0;
+					image { normal: "chapter/T01_2_thumbnail_shadow_h.png";}
+				}
+			}
+			part {
+				name: "pv.chapter.main.shadow.08";
+				type: IMAGE;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					rel1 { relative: 0.0 0.3; to: "pv.chapter.main.item.08.bg";}
+					rel2 { relative: 1.0 1.0; to: "pv.chapter.main.item.08.bg";}
+					image { normal: "chapter/T01_2_thumbnail_shadow.png";}
+				}
+				description {
+					state: "portrait" 0.0;
+					inherit: "default" 0.0;
+					image { normal: "chapter/T01_2_thumbnail_shadow_h.png";}
+				}
+			}
+			part {
+				name: "pv.chapter.main.shadow.09";
+				type: IMAGE;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					rel1 { relative: 0.0 0.3; to: "pv.chapter.main.item.09.bg";}
+					rel2 { relative: 1.0 1.0; to: "pv.chapter.main.item.09.bg";}
+					image { normal: "chapter/T01_2_thumbnail_shadow.png";}
+				}
+				description {
+					state: "portrait" 0.0;
+					inherit: "default" 0.0;
+					image { normal: "chapter/T01_2_thumbnail_shadow_h.png";}
+				}
+			}
+			part {
+				name: "pv.chapter.main.shadow.10";
+				type: IMAGE;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					rel1 { relative: 0.0 0.3; to: "pv.chapter.main.item.10.bg";}
+					rel2 { relative: 1.0 1.0; to: "pv.chapter.main.item.10.bg";}
+					image { normal: "chapter/T01_2_thumbnail_shadow.png";}
+				}
+				description {
+					state: "portrait" 0.0;
+					inherit: "default" 0.0;
+					image { normal: "chapter/T01_2_thumbnail_shadow_h.png";}
+				}
+			}
+			part {
+				name: "pv.chapter.main.shadow.11";
+				type: IMAGE;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					rel1 { relative: 0.0 0.3; to: "pv.chapter.main.item.11.bg";}
+					rel2 { relative: 1.0 1.0; to: "pv.chapter.main.item.11.bg";}
+					image { normal: "chapter/T01_2_thumbnail_shadow.png";}
+				}
+				description {
+					state: "portrait" 0.0;
+					inherit: "default" 0.0;
+					image { normal: "chapter/T01_2_thumbnail_shadow_h.png";}
+				}
+			}
+			part {
+				name: "pv.chapter.main.shadow.12";
+				type: IMAGE;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					rel1 { relative: 0.0 0.3; to: "pv.chapter.main.item.12.bg";}
+					rel2 { relative: 1.0 1.0; to: "pv.chapter.main.item.12.bg";}
+					image { normal: "chapter/T01_2_thumbnail_shadow.png";}
+				}
+				description {
+					state: "portrait" 0.0;
+					inherit: "default" 0.0;
+					image { normal: "chapter/T01_2_thumbnail_shadow_h.png";}
+				}
+			}
+
+			part {
+				name: "pv.chapter.main.item.01.num.txt";
+				type: TEXT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 50 50;
+					fixed: 1 1;
+					align: 1.0 1.0;
+					rel1 { relative: 1.0 1.0; to: "pv.chapter.main.item.01.bg";}
+					rel2 { relative: 1.0 1.0; to: "pv.chapter.main.item.01.bg";}
+					color: ITEM_TEXT_COLOR ;
+					text {
+						font: "Tizen:style=Bold";
+						size: 30;
+						text: "01";
+						align: 0.5 0.5;
+					}
+				}
+			}
+
+			part {
+				name: "pv.chapter.main.item.02.num.txt";
+				type: TEXT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 50 50;
+					fixed: 1 1;
+					align: 1.0 1.0;
+					rel1 { relative: 1.0 1.0; to: "pv.chapter.main.item.02.bg";}
+					rel2 { relative: 1.0 1.0; to: "pv.chapter.main.item.02.bg";}
+					color: ITEM_TEXT_COLOR ;
+					text {
+						font: "Tizen:style=Bold";
+						size: 30;
+						text: "02";
+						align: 0.5 0.5;
+					}
+				}
+			}
+
+			part {
+				name: "pv.chapter.main.item.03.num.txt";
+				type: TEXT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 50 50;
+					fixed: 1 1;
+					align: 1.0 1.0;
+					rel1 { relative: 1.0 1.0; to: "pv.chapter.main.item.03.bg";}
+					rel2 { relative: 1.0 1.0; to: "pv.chapter.main.item.03.bg";}
+					color: ITEM_TEXT_COLOR ;
+					text {
+						font: "Tizen:style=Bold";
+						size: 30;
+						text: "03";
+						align: 0.5 0.5;
+					}
+				}
+			}
+
+			part {
+				name: "pv.chapter.main.item.04.num.txt";
+				type: TEXT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 50 50;
+					fixed: 1 1;
+					align: 1.0 1.0;
+					rel1 { relative: 1.0 1.0; to: "pv.chapter.main.item.04.bg";}
+					rel2 { relative: 1.0 1.0; to: "pv.chapter.main.item.04.bg";}
+					color: ITEM_TEXT_COLOR ;
+					text {
+						font: "Tizen:style=Bold";
+						size: 30;
+						text: "04";
+						align: 0.5 0.5;
+					}
+				}
+			}
+
+			part {
+				name: "pv.chapter.main.item.05.num.txt";
+				type: TEXT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 50 50;
+					fixed: 1 1;
+					align: 1.0 1.0;
+					rel1 { relative: 1.0 1.0; to: "pv.chapter.main.item.05.bg";}
+					rel2 { relative: 1.0 1.0; to: "pv.chapter.main.item.05.bg";}
+					color: ITEM_TEXT_COLOR ;
+					text {
+						font: "Tizen:style=Bold";
+						size: 30;
+						text: "05";
+						align: 0.5 0.5;
+					}
+				}
+			}
+
+			part {
+				name: "pv.chapter.main.item.06.num.txt";
+				type: TEXT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 50 50;
+					fixed: 1 1;
+					align: 1.0 1.0;
+					rel1 { relative: 1.0 1.0; to: "pv.chapter.main.item.06.bg";}
+					rel2 { relative: 1.0 1.0; to: "pv.chapter.main.item.06.bg";}
+					color: ITEM_TEXT_COLOR ;
+					text {
+						font: "Tizen:style=Bold";
+						size: 30;
+						text: "06";
+						align: 0.5 0.5;
+					}
+				}
+			}
+
+			part {
+				name: "pv.chapter.main.item.07.num.txt";
+				type: TEXT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 50 50;
+					fixed: 1 1;
+					align: 1.0 1.0;
+					rel1 { relative: 1.0 1.0; to: "pv.chapter.main.item.07.bg";}
+					rel2 { relative: 1.0 1.0; to: "pv.chapter.main.item.07.bg";}
+					color: ITEM_TEXT_COLOR ;
+					text {
+						font: "Tizen:style=Bold";
+						size: 30;
+						text: "07";
+						align: 0.5 0.5;
+					}
+				}
+			}
+
+			part {
+				name: "pv.chapter.main.item.08.num.txt";
+				type: TEXT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 50 50;
+					fixed: 1 1;
+					align: 1.0 1.0;
+					rel1 { relative: 1.0 1.0; to: "pv.chapter.main.item.08.bg";}
+					rel2 { relative: 1.0 1.0; to: "pv.chapter.main.item.08.bg";}
+					color: ITEM_TEXT_COLOR ;
+					text {
+						font: "Tizen:style=Bold";
+						size: 30;
+						text: "08";
+						align: 0.5 0.5;
+					}
+				}
+			}
+
+			part {
+				name: "pv.chapter.main.item.09.num.txt";
+				type: TEXT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 50 50;
+					fixed: 1 1;
+					align: 1.0 1.0;
+					rel1 { relative: 1.0 1.0; to: "pv.chapter.main.item.09.bg";}
+					rel2 { relative: 1.0 1.0; to: "pv.chapter.main.item.09.bg";}
+					color: ITEM_TEXT_COLOR ;
+					text {
+						font: "Tizen:style=Bold";
+						size: 30;
+						text: "09";
+						align: 0.5 0.5;
+					}
+				}
+			}
+
+			part {
+				name: "pv.chapter.main.item.10.num.txt";
+				type: TEXT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 50 50;
+					fixed: 1 1;
+					align: 1.0 1.0;
+					rel1 { relative: 1.0 1.0; to: "pv.chapter.main.item.10.bg";}
+					rel2 { relative: 1.0 1.0; to: "pv.chapter.main.item.10.bg";}
+					color: ITEM_TEXT_COLOR ;
+					text {
+						font: "Tizen:style=Bold";
+						size: 30;
+						text: "10";
+						align: 0.5 0.5;
+					}
+				}
+			}
+
+			part {
+				name: "pv.chapter.main.item.11.num.txt";
+				type: TEXT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 50 50;
+					fixed: 1 1;
+					align: 1.0 1.0;
+					rel1 { relative: 1.0 1.0; to: "pv.chapter.main.item.11.bg";}
+					rel2 { relative: 1.0 1.0; to: "pv.chapter.main.item.11.bg";}
+					color: ITEM_TEXT_COLOR ;
+					text {
+						font: "Tizen:style=Bold";
+						size: 30;
+						text: "11";
+						align: 0.5 0.5;
+					}
+				}
+			}
+
+			part {
+				name: "pv.chapter.main.item.12.num.txt";
+				type: TEXT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 50 50;
+					fixed: 1 1;
+					align: 1.0 1.0;
+					rel1 { relative: 1.0 1.0; to: "pv.chapter.main.item.12.bg";}
+					rel2 { relative: 1.0 1.0; to: "pv.chapter.main.item.12.bg";}
+					color: ITEM_TEXT_COLOR ;
+					text {
+						font: "Tizen:style=Bold";
+						size: 30;
+						text: "12";
+						align: 0.5 0.5;
+					}
+				}
+			}
+
+			part {
+				name: "pv.chapter.main.item.01.left";
+				type: RECT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					min: ITEM_LINE_WIDTH 0;
+					fixed: 1 0;
+					align: 0.0 0.0;
+					rel1 { relative: 0.0 0.0; to: "pv.chapter.main.item.01.bg";}
+					rel2 { relative: 0.0 1.0; to: "pv.chapter.main.item.01.bg";}
+					color: ITEM_LINE_COLOR;
+				}
+			}
+
+			part {
+				name: "pv.chapter.main.item.01.right";
+				type: RECT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					min: ITEM_LINE_WIDTH 0;
+					fixed: 1 0;
+					align: 1.0 0.0;
+					rel1 { relative: 1.0 0.0; to: "pv.chapter.main.item.01.bg";}
+					rel2 { relative: 1.0 1.0; to: "pv.chapter.main.item.01.bg";}
+					color: ITEM_LINE_COLOR;
+				}
+			}
+
+			part {
+				name: "pv.chapter.main.item.01.top";
+				type: RECT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					min: 0 ITEM_LINE_WIDTH;
+					fixed: 0 1;
+					align: 0.0 0.0;
+					rel1 { relative: 0.0 0.0; to: "pv.chapter.main.item.01.bg";}
+					rel2 { relative: 1.0 0.0; to: "pv.chapter.main.item.01.bg";}
+					color: ITEM_LINE_COLOR;
+				}
+			}
+
+			part {
+				name: "pv.chapter.main.item.01.bottom";
+				type: RECT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					min: 0 ITEM_LINE_WIDTH;
+					fixed: 0 1;
+					align: 0.0 1.0;
+					rel1 { relative: 0.0 1.0; to: "pv.chapter.main.item.01.bg";}
+					rel2 { relative: 1.0 1.0; to: "pv.chapter.main.item.01.bg";}
+					color: ITEM_LINE_COLOR;
+				}
+			}
+
+			part {
+				name: "pv.chapter.main.item.02.left";
+				type: RECT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					min: ITEM_LINE_WIDTH 0;
+					fixed: 1 0;
+					align: 0.0 0.0;
+					rel1 { relative: 0.0 0.0; to: "pv.chapter.main.item.02.bg";}
+					rel2 { relative: 0.0 1.0; to: "pv.chapter.main.item.02.bg";}
+					color: ITEM_LINE_COLOR;
+				}
+			}
+
+			part {
+				name: "pv.chapter.main.item.02.right";
+				type: RECT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					min: ITEM_LINE_WIDTH 0;
+					fixed: 1 0;
+					align: 1.0 0.0;
+					rel1 { relative: 1.0 0.0; to: "pv.chapter.main.item.02.bg";}
+					rel2 { relative: 1.0 1.0; to: "pv.chapter.main.item.02.bg";}
+					color: ITEM_LINE_COLOR;
+				}
+			}
+
+			part {
+				name: "pv.chapter.main.item.02.top";
+				type: RECT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					min: 0 ITEM_LINE_WIDTH;
+					fixed: 0 1;
+					align: 0.0 0.0;
+					rel1 { relative: 0.0 0.0; to: "pv.chapter.main.item.02.bg";}
+					rel2 { relative: 1.0 0.0; to: "pv.chapter.main.item.02.bg";}
+					color: ITEM_LINE_COLOR;
+				}
+			}
+
+			part {
+				name: "pv.chapter.main.item.02.bottom";
+				type: RECT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					min: 0 ITEM_LINE_WIDTH;
+					fixed: 0 1;
+					align: 0.0 1.0;
+					rel1 { relative: 0.0 1.0; to: "pv.chapter.main.item.02.bg";}
+					rel2 { relative: 1.0 1.0; to: "pv.chapter.main.item.02.bg";}
+					color: ITEM_LINE_COLOR;
+				}
+			}
+
+			part {
+				name: "pv.chapter.main.item.03.left";
+				type: RECT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					min: ITEM_LINE_WIDTH 0;
+					fixed: 1 0;
+					align: 0.0 0.0;
+					rel1 { relative: 0.0 0.0; to: "pv.chapter.main.item.03.bg";}
+					rel2 { relative: 0.0 1.0; to: "pv.chapter.main.item.03.bg";}
+					color: ITEM_LINE_COLOR;
+				}
+			}
+
+			part {
+				name: "pv.chapter.main.item.03.right";
+				type: RECT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					min: ITEM_LINE_WIDTH 0;
+					fixed: 1 0;
+					align: 1.0 0.0;
+					rel1 { relative: 1.0 0.0; to: "pv.chapter.main.item.03.bg";}
+					rel2 { relative: 1.0 1.0; to: "pv.chapter.main.item.03.bg";}
+					color: ITEM_LINE_COLOR;
+				}
+			}
+
+			part {
+				name: "pv.chapter.main.item.03.top";
+				type: RECT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					min: 0 ITEM_LINE_WIDTH;
+					fixed: 0 1;
+					align: 0.0 0.0;
+					rel1 { relative: 0.0 0.0; to: "pv.chapter.main.item.03.bg";}
+					rel2 { relative: 1.0 0.0; to: "pv.chapter.main.item.03.bg";}
+					color: ITEM_LINE_COLOR;
+				}
+			}
+
+			part {
+				name: "pv.chapter.main.item.03.bottom";
+				type: RECT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					min: 0 ITEM_LINE_WIDTH;
+					fixed: 0 1;
+					align: 0.0 1.0;
+					rel1 { relative: 0.0 1.0; to: "pv.chapter.main.item.03.bg";}
+					rel2 { relative: 1.0 1.0; to: "pv.chapter.main.item.03.bg";}
+					color: ITEM_LINE_COLOR;
+				}
+			}
+
+			part {
+				name: "pv.chapter.main.item.04.left";
+				type: RECT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					min: ITEM_LINE_WIDTH 0;
+					fixed: 1 0;
+					align: 0.0 0.0;
+					rel1 { relative: 0.0 0.0; to: "pv.chapter.main.item.04.bg";}
+					rel2 { relative: 0.0 1.0; to: "pv.chapter.main.item.04.bg";}
+					color: ITEM_LINE_COLOR;
+				}
+			}
+
+			part {
+				name: "pv.chapter.main.item.04.right";
+				type: RECT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					min: ITEM_LINE_WIDTH 0;
+					fixed: 1 0;
+					align: 1.0 0.0;
+					rel1 { relative: 1.0 0.0; to: "pv.chapter.main.item.04.bg";}
+					rel2 { relative: 1.0 1.0; to: "pv.chapter.main.item.04.bg";}
+					color: ITEM_LINE_COLOR;
+				}
+			}
+
+			part {
+				name: "pv.chapter.main.item.04.top";
+				type: RECT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					min: 0 ITEM_LINE_WIDTH;
+					fixed: 0 1;
+					align: 0.0 0.0;
+					rel1 { relative: 0.0 0.0; to: "pv.chapter.main.item.04.bg";}
+					rel2 { relative: 1.0 0.0; to: "pv.chapter.main.item.04.bg";}
+					color: ITEM_LINE_COLOR;
+				}
+			}
+
+			part {
+				name: "pv.chapter.main.item.04.bottom";
+				type: RECT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					min: 0 ITEM_LINE_WIDTH;
+					fixed: 0 1;
+					align: 0.0 1.0;
+					rel1 { relative: 0.0 1.0; to: "pv.chapter.main.item.04.bg";}
+					rel2 { relative: 1.0 1.0; to: "pv.chapter.main.item.04.bg";}
+					color: ITEM_LINE_COLOR;
+				}
+			}
+
+			part {
+				name: "pv.chapter.main.item.05.left";
+				type: RECT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					min: ITEM_LINE_WIDTH 0;
+					fixed: 1 0;
+					align: 0.0 0.0;
+					rel1 { relative: 0.0 0.0; to: "pv.chapter.main.item.05.bg";}
+					rel2 { relative: 0.0 1.0; to: "pv.chapter.main.item.05.bg";}
+					color: ITEM_LINE_COLOR;
+				}
+			}
+
+			part {
+				name: "pv.chapter.main.item.05.right";
+				type: RECT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					min: ITEM_LINE_WIDTH 0;
+					fixed: 1 0;
+					align: 1.0 0.0;
+					rel1 { relative: 1.0 0.0; to: "pv.chapter.main.item.05.bg";}
+					rel2 { relative: 1.0 1.0; to: "pv.chapter.main.item.05.bg";}
+					color: ITEM_LINE_COLOR;
+				}
+			}
+
+			part {
+				name: "pv.chapter.main.item.05.top";
+				type: RECT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					min: 0 ITEM_LINE_WIDTH;
+					fixed: 0 1;
+					align: 0.0 0.0;
+					rel1 { relative: 0.0 0.0; to: "pv.chapter.main.item.05.bg";}
+					rel2 { relative: 1.0 0.0; to: "pv.chapter.main.item.05.bg";}
+					color: ITEM_LINE_COLOR;
+				}
+			}
+
+			part {
+				name: "pv.chapter.main.item.05.bottom";
+				type: RECT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					min: 0 ITEM_LINE_WIDTH;
+					fixed: 0 1;
+					align: 0.0 1.0;
+					rel1 { relative: 0.0 1.0; to: "pv.chapter.main.item.05.bg";}
+					rel2 { relative: 1.0 1.0; to: "pv.chapter.main.item.05.bg";}
+					color: ITEM_LINE_COLOR;
+				}
+			}
+			part {
+				name: "pv.chapter.main.item.06.left";
+				type: RECT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					min: ITEM_LINE_WIDTH 0;
+					fixed: 1 0;
+					align: 0.0 0.0;
+					rel1 { relative: 0.0 0.0; to: "pv.chapter.main.item.06.bg";}
+					rel2 { relative: 0.0 1.0; to: "pv.chapter.main.item.06.bg";}
+					color: ITEM_LINE_COLOR;
+				}
+			}
+
+			part {
+				name: "pv.chapter.main.item.06.right";
+				type: RECT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					min: ITEM_LINE_WIDTH 0;
+					fixed: 1 0;
+					align: 1.0 0.0;
+					rel1 { relative: 1.0 0.0; to: "pv.chapter.main.item.06.bg";}
+					rel2 { relative: 1.0 1.0; to: "pv.chapter.main.item.06.bg";}
+					color: ITEM_LINE_COLOR;
+				}
+			}
+
+			part {
+				name: "pv.chapter.main.item.06.top";
+				type: RECT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					min: 0 ITEM_LINE_WIDTH;
+					fixed: 0 1;
+					align: 0.0 0.0;
+					rel1 { relative: 0.0 0.0; to: "pv.chapter.main.item.06.bg";}
+					rel2 { relative: 1.0 0.0; to: "pv.chapter.main.item.06.bg";}
+					color: ITEM_LINE_COLOR;
+				}
+			}
+
+			part {
+				name: "pv.chapter.main.item.06.bottom";
+				type: RECT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					min: 0 ITEM_LINE_WIDTH;
+					fixed: 0 1;
+					align: 0.0 1.0;
+					rel1 { relative: 0.0 1.0; to: "pv.chapter.main.item.06.bg";}
+					rel2 { relative: 1.0 1.0; to: "pv.chapter.main.item.06.bg";}
+					color: ITEM_LINE_COLOR;
+				}
+			}
+			part {
+				name: "pv.chapter.main.item.07.left";
+				type: RECT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					min: ITEM_LINE_WIDTH 0;
+					fixed: 1 0;
+					align: 0.0 0.0;
+					rel1 { relative: 0.0 0.0; to: "pv.chapter.main.item.07.bg";}
+					rel2 { relative: 0.0 1.0; to: "pv.chapter.main.item.07.bg";}
+					color: ITEM_LINE_COLOR;
+				}
+			}
+
+			part {
+				name: "pv.chapter.main.item.07.right";
+				type: RECT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					min: ITEM_LINE_WIDTH 0;
+					fixed: 1 0;
+					align: 1.0 0.0;
+					rel1 { relative: 1.0 0.0; to: "pv.chapter.main.item.07.bg";}
+					rel2 { relative: 1.0 1.0; to: "pv.chapter.main.item.07.bg";}
+					color: ITEM_LINE_COLOR;
+				}
+			}
+
+			part {
+				name: "pv.chapter.main.item.07.top";
+				type: RECT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					min: 0 ITEM_LINE_WIDTH;
+					fixed: 0 1;
+					align: 0.0 0.0;
+					rel1 { relative: 0.0 0.0; to: "pv.chapter.main.item.07.bg";}
+					rel2 { relative: 1.0 0.0; to: "pv.chapter.main.item.07.bg";}
+					color: ITEM_LINE_COLOR;
+				}
+			}
+
+			part {
+				name: "pv.chapter.main.item.07.bottom";
+				type: RECT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					min: 0 ITEM_LINE_WIDTH;
+					fixed: 0 1;
+					align: 0.0 1.0;
+					rel1 { relative: 0.0 1.0; to: "pv.chapter.main.item.07.bg";}
+					rel2 { relative: 1.0 1.0; to: "pv.chapter.main.item.07.bg";}
+					color: ITEM_LINE_COLOR;
+				}
+			}
+
+			part {
+				name: "pv.chapter.main.item.08.left";
+				type: RECT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					min: ITEM_LINE_WIDTH 0;
+					fixed: 1 0;
+					align: 0.0 0.0;
+					rel1 { relative: 0.0 0.0; to: "pv.chapter.main.item.08.bg";}
+					rel2 { relative: 0.0 1.0; to: "pv.chapter.main.item.08.bg";}
+					color: ITEM_LINE_COLOR;
+				}
+			}
+
+			part {
+				name: "pv.chapter.main.item.08.right";
+				type: RECT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					min: ITEM_LINE_WIDTH 0;
+					fixed: 1 0;
+					align: 1.0 0.0;
+					rel1 { relative: 1.0 0.0; to: "pv.chapter.main.item.08.bg";}
+					rel2 { relative: 1.0 1.0; to: "pv.chapter.main.item.08.bg";}
+					color: ITEM_LINE_COLOR;
+				}
+			}
+
+			part {
+				name: "pv.chapter.main.item.08.top";
+				type: RECT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					min: 0 ITEM_LINE_WIDTH;
+					fixed: 0 1;
+					align: 0.0 0.0;
+					rel1 { relative: 0.0 0.0; to: "pv.chapter.main.item.08.bg";}
+					rel2 { relative: 1.0 0.0; to: "pv.chapter.main.item.08.bg";}
+					color: ITEM_LINE_COLOR;
+				}
+			}
+
+			part {
+				name: "pv.chapter.main.item.08.bottom";
+				type: RECT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					min: 0 ITEM_LINE_WIDTH;
+					fixed: 0 1;
+					align: 0.0 1.0;
+					rel1 { relative: 0.0 1.0; to: "pv.chapter.main.item.08.bg";}
+					rel2 { relative: 1.0 1.0; to: "pv.chapter.main.item.08.bg";}
+					color: ITEM_LINE_COLOR;
+				}
+			}
+
+			part {
+				name: "pv.chapter.main.item.09.left";
+				type: RECT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					min: ITEM_LINE_WIDTH 0;
+					fixed: 1 0;
+					align: 0.0 0.0;
+					rel1 { relative: 0.0 0.0; to: "pv.chapter.main.item.09.bg";}
+					rel2 { relative: 0.0 1.0; to: "pv.chapter.main.item.09.bg";}
+					color: ITEM_LINE_COLOR;
+				}
+			}
+
+			part {
+				name: "pv.chapter.main.item.09.right";
+				type: RECT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					min: ITEM_LINE_WIDTH 0;
+					fixed: 1 0;
+					align: 1.0 0.0;
+					rel1 { relative: 1.0 0.0; to: "pv.chapter.main.item.09.bg";}
+					rel2 { relative: 1.0 1.0; to: "pv.chapter.main.item.09.bg";}
+					color: ITEM_LINE_COLOR;
+				}
+			}
+
+			part {
+				name: "pv.chapter.main.item.09.top";
+				type: RECT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					min: 0 ITEM_LINE_WIDTH;
+					fixed: 0 1;
+					align: 0.0 0.0;
+					rel1 { relative: 0.0 0.0; to: "pv.chapter.main.item.09.bg";}
+					rel2 { relative: 1.0 0.0; to: "pv.chapter.main.item.09.bg";}
+					color: ITEM_LINE_COLOR;
+				}
+			}
+
+			part {
+				name: "pv.chapter.main.item.09.bottom";
+				type: RECT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					min: 0 ITEM_LINE_WIDTH;
+					fixed: 0 1;
+					align: 0.0 1.0;
+					rel1 { relative: 0.0 1.0; to: "pv.chapter.main.item.09.bg";}
+					rel2 { relative: 1.0 1.0; to: "pv.chapter.main.item.09.bg";}
+					color: ITEM_LINE_COLOR;
+				}
+			}
+
+			part {
+				name: "pv.chapter.main.item.10.left";
+				type: RECT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					min: ITEM_LINE_WIDTH 0;
+					fixed: 1 0;
+					align: 0.0 0.0;
+					rel1 { relative: 0.0 0.0; to: "pv.chapter.main.item.10.bg";}
+					rel2 { relative: 0.0 1.0; to: "pv.chapter.main.item.10.bg";}
+					color: ITEM_LINE_COLOR;
+				}
+			}
+
+			part {
+				name: "pv.chapter.main.item.10.right";
+				type: RECT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					min: ITEM_LINE_WIDTH 0;
+					fixed: 1 0;
+					align: 1.0 0.0;
+					rel1 { relative: 1.0 0.0; to: "pv.chapter.main.item.10.bg";}
+					rel2 { relative: 1.0 1.0; to: "pv.chapter.main.item.10.bg";}
+					color: ITEM_LINE_COLOR;
+				}
+			}
+
+			part {
+				name: "pv.chapter.main.item.10.top";
+				type: RECT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					min: 0 ITEM_LINE_WIDTH;
+					fixed: 0 1;
+					align: 0.0 0.0;
+					rel1 { relative: 0.0 0.0; to: "pv.chapter.main.item.10.bg";}
+					rel2 { relative: 1.0 0.0; to: "pv.chapter.main.item.10.bg";}
+					color: ITEM_LINE_COLOR;
+				}
+			}
+
+			part {
+				name: "pv.chapter.main.item.10.bottom";
+				type: RECT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					min: 0 ITEM_LINE_WIDTH;
+					fixed: 0 1;
+					align: 0.0 1.0;
+					rel1 { relative: 0.0 1.0; to: "pv.chapter.main.item.10.bg";}
+					rel2 { relative: 1.0 1.0; to: "pv.chapter.main.item.10.bg";}
+					color: ITEM_LINE_COLOR;
+				}
+			}
+
+			part {
+				name: "pv.chapter.main.item.11.left";
+				type: RECT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					min: ITEM_LINE_WIDTH 0;
+					fixed: 1 0;
+					align: 0.0 0.0;
+					rel1 { relative: 0.0 0.0; to: "pv.chapter.main.item.11.bg";}
+					rel2 { relative: 0.0 1.0; to: "pv.chapter.main.item.11.bg";}
+					color: ITEM_LINE_COLOR;
+				}
+			}
+
+			part {
+				name: "pv.chapter.main.item.11.right";
+				type: RECT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					min: ITEM_LINE_WIDTH 0;
+					fixed: 1 0;
+					align: 1.0 0.0;
+					rel1 { relative: 1.0 0.0; to: "pv.chapter.main.item.11.bg";}
+					rel2 { relative: 1.0 1.0; to: "pv.chapter.main.item.11.bg";}
+					color: ITEM_LINE_COLOR;
+				}
+			}
+
+			part {
+				name: "pv.chapter.main.item.11.top";
+				type: RECT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					min: 0 ITEM_LINE_WIDTH;
+					fixed: 0 1;
+					align: 0.0 0.0;
+					rel1 { relative: 0.0 0.0; to: "pv.chapter.main.item.11.bg";}
+					rel2 { relative: 1.0 0.0; to: "pv.chapter.main.item.11.bg";}
+					color: ITEM_LINE_COLOR;
+				}
+			}
+
+			part {
+				name: "pv.chapter.main.item.11.bottom";
+				type: RECT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					min: 0 ITEM_LINE_WIDTH;
+					fixed: 0 1;
+					align: 0.0 1.0;
+					rel1 { relative: 0.0 1.0; to: "pv.chapter.main.item.11.bg";}
+					rel2 { relative: 1.0 1.0; to: "pv.chapter.main.item.11.bg";}
+					color: ITEM_LINE_COLOR;
+				}
+			}
+
+			part {
+				name: "pv.chapter.main.item.12.left";
+				type: RECT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					min: ITEM_LINE_WIDTH 0;
+					fixed: 1 0;
+					align: 0.0 0.0;
+					rel1 { relative: 0.0 0.0; to: "pv.chapter.main.item.12.bg";}
+					rel2 { relative: 0.0 1.0; to: "pv.chapter.main.item.12.bg";}
+					color: ITEM_LINE_COLOR;
+				}
+			}
+
+			part {
+				name: "pv.chapter.main.item.12.right";
+				type: RECT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					min: ITEM_LINE_WIDTH 0;
+					fixed: 1 0;
+					align: 1.0 0.0;
+					rel1 { relative: 1.0 0.0; to: "pv.chapter.main.item.12.bg";}
+					rel2 { relative: 1.0 1.0; to: "pv.chapter.main.item.12.bg";}
+					color: ITEM_LINE_COLOR;
+				}
+			}
+
+			part {
+				name: "pv.chapter.main.item.12.top";
+				type: RECT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					min: 0 ITEM_LINE_WIDTH;
+					fixed: 0 1;
+					align: 0.0 0.0;
+					rel1 { relative: 0.0 0.0; to: "pv.chapter.main.item.12.bg";}
+					rel2 { relative: 1.0 0.0; to: "pv.chapter.main.item.12.bg";}
+					color: ITEM_LINE_COLOR;
+				}
+			}
+
+			part {
+				name: "pv.chapter.main.item.12.bottom";
+				type: RECT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					min: 0 ITEM_LINE_WIDTH;
+					fixed: 0 1;
+					align: 0.0 1.0;
+					rel1 { relative: 0.0 1.0; to: "pv.chapter.main.item.12.bg";}
+					rel2 { relative: 1.0 1.0; to: "pv.chapter.main.item.12.bg";}
+					color: ITEM_LINE_COLOR;
+				}
+			}
+		} /* parts */
+		programs {
+			program {
+				name: "portrait_mode";
+				signal: "signal.pv.chapter.portrait.mode";
+				source: "*";
+				action: STATE_SET "portrait" 0.0;
+				target: "pv.chapter.main.item.01.bg";
+				target: "pv.chapter.main.item.02.bg";
+				target: "pv.chapter.main.item.03.bg";
+				target: "pv.chapter.main.item.04.bg";
+				target: "pv.chapter.main.item.05.bg";
+				target: "pv.chapter.main.item.06.bg";
+				target: "pv.chapter.main.item.07.bg";
+				target: "pv.chapter.main.item.08.bg";
+				target: "pv.chapter.main.item.09.bg";
+				target: "pv.chapter.main.item.10.bg";
+				target: "pv.chapter.main.item.11.bg";
+				target: "pv.chapter.main.item.12.bg";
+				target: "pv.chapter.main.shadow.01";
+				target: "pv.chapter.main.shadow.02";
+				target: "pv.chapter.main.shadow.03";
+				target: "pv.chapter.main.shadow.04";
+				target: "pv.chapter.main.shadow.05";
+				target: "pv.chapter.main.shadow.06";
+				target: "pv.chapter.main.shadow.07";
+				target: "pv.chapter.main.shadow.08";
+				target: "pv.chapter.main.shadow.09";
+				target: "pv.chapter.main.shadow.10";
+				target: "pv.chapter.main.shadow.11";
+				target: "pv.chapter.main.shadow.12";
+			}
+
+			program {
+				name: "landscape_mode";
+				signal: "signal.pv.chapter.landscape.mode";
+				source: "*";
+				action: STATE_SET "default" 0.0;
+				target: "pv.chapter.main.item.01.bg";
+				target: "pv.chapter.main.item.02.bg";
+				target: "pv.chapter.main.item.03.bg";
+				target: "pv.chapter.main.item.04.bg";
+				target: "pv.chapter.main.item.05.bg";
+				target: "pv.chapter.main.item.06.bg";
+				target: "pv.chapter.main.item.07.bg";
+				target: "pv.chapter.main.item.08.bg";
+				target: "pv.chapter.main.item.09.bg";
+				target: "pv.chapter.main.item.10.bg";
+				target: "pv.chapter.main.item.11.bg";
+				target: "pv.chapter.main.item.12.bg";
+				target: "pv.chapter.main.shadow.01";
+				target: "pv.chapter.main.shadow.02";
+				target: "pv.chapter.main.shadow.03";
+				target: "pv.chapter.main.shadow.04";
+				target: "pv.chapter.main.shadow.05";
+				target: "pv.chapter.main.shadow.06";
+				target: "pv.chapter.main.shadow.07";
+				target: "pv.chapter.main.shadow.08";
+				target: "pv.chapter.main.shadow.09";
+				target: "pv.chapter.main.shadow.10";
+				target: "pv.chapter.main.shadow.11";
+				target: "pv.chapter.main.shadow.12";
+			}
+		}
+	} /* group */
+
+	group {
+		name: "pv.chapter.main.item";
+		script {
+		   public selected = 0;
+		}
+		parts {
+			part {
+				name: "pv.chapter.main.item.bg";
+				type: RECT;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					rel1 { relative: 0.0 0.0; }
+					rel2 { relative: 1.0 1.0; }
+					color: 0 0 0 0;
+					CHAPTER_ITEM_SELECT_VI_EFFECT
+				}
+			}
+			part { name: "persp";
+			   type: RECT;
+			   description { state: "default" 0.0;
+				  min: 32 32;
+				  max: 32 32;
+				  fixed: 1 1;
+				  align: 0.5 0.5;
+				  color: 0 0 0 0;
+				  visible: 1;
+				  perspective {
+					 zplane: -70;
+					 focal: 1000;
+				  }
+			   }
+			}
+			part { name: "persp1";
+			   type: RECT;
+			   description { state: "default" 0.0;
+				  min: 32 32;
+				  max: 32 32;
+				  fixed: 1 1;
+				  align: 0.5 0.5;
+				  color: 0 0 0 0;
+				  visible: 1;
+				  perspective {
+					 zplane: 0;
+					 focal: 1000;
+				  }
+			   }
+			}
+			part {
+				name: "pv.chapter.main.item.image";
+				type: SWALLOW;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					align: 0.5 0.5;
+					state: "default" 0.0;
+					rel1 { relative: 0.0 0.0; to: "pv.chapter.main.item.bg"; }
+					rel2 { relative: 1.0 1.0; to: "pv.chapter.main.item.bg"; }
+					CHAPTER_ITEM_SELECT_VI_EFFECT
+				}
+			}
+		}
+		programs {
+			CHAPTER_PROGRAM_ITEM_SELECT_VI_EFFECT(
+			   target: "pv.chapter.main.item.bg";
+			   target: "pv.chapter.main.item.image";
+			)
+			program {
+				name: "mouse_down";
+				signal: "mouse,down,1";
+				source: "pv.chapter.main.item.bg";
+				action: SIGNAL_EMIT "down" "*";
+				script {
+				   if (!get_int(selected)) {
+					  set_int(selected, 1);
+					  run_program(PROGRAM:"vi_pressed");
+				   }
+				}
+			}
+			program {
+				name: "mouse_up";
+				signal: "mouse,up,1";
+				source: "pv.chapter.main.item.bg";
+				action: SIGNAL_EMIT "up" "*";
+				script {
+				   if (get_int(selected)) {
+					  set_int(selected, 0);
+					  run_program(PROGRAM:"vi_zoom_out");
+				   }
+				}
+			}
+		}
+	}
+} /* collections */
+

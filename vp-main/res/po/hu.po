@@ -1,0 +1,489 @@
+msgid "IDS_VIDEO_OPT_BRIGHTNESS"
+msgstr "Fényerő"
+
+msgid "IDS_VIDEO_OPT_MUSIC_M_SOUNDALIVE"
+msgstr "Zene"
+
+msgid "IDS_VIDEO_OPT_VOICES_M_PERSON"
+msgstr "Beszéd"
+
+msgid "IDS_VIDEO_BODY_B"
+msgstr "B"
+
+msgid "IDS_VIDEO_BODY_GB"
+msgstr "GB"
+
+msgid "IDS_VIDEO_BODY_KB"
+msgstr "KB"
+
+msgid "IDS_VIDEO_BODY_LOCATION"
+msgstr "Hely"
+
+msgid "IDS_VIDEO_BODY_MB"
+msgstr "MB"
+
+msgid "IDS_VIDEO_BUTTON_OK"
+msgstr "OK"
+
+msgid "IDS_VIDEO_HEADER_LAST_MODIFIED_M_DATE"
+msgstr "Legutóbbi módosítás"
+
+msgid "IDS_VIDEO_OPT_SHARE"
+msgstr "Megosztás"
+
+msgid "IDS_VIDEO_HEADER_CANNOT_PLAY_VIDEO_ABB"
+msgstr "Nem játszható le a videó"
+
+msgid "IDS_VIDEO_POP_AN_ERROR_OCCURRED_WITH_THE_SUBTITLES"
+msgstr "Hiba történt a feliratokkal."
+
+msgid "IDS_VIDEO_POP_THE_FILE_IS_CORRUPTED_OR_THE_SD_CARD_HAS_BEEN_REMOVED"
+msgstr "A fájl sérült, vagy eltávolították az SD-kártyát."
+
+msgid "IDS_VIDEO_OPT_DETAILS"
+msgstr "Részletek"
+
+msgid "IDS_VIDEO_OPT_TITLE"
+msgstr "Cím"
+
+msgid "IDS_VIDEO_POP_THIS_VIDEO_WILL_BE_DELETED"
+msgstr "Törölni fogja ezt a videót."
+
+msgid "IDS_VIDEO_HEADER_SETTINGS"
+msgstr "Beállítások"
+
+msgid "IDS_VIDEO_HEADER_UNABLE_TO_PLAY_VIDEO_ABB"
+msgstr "Nem lehet lejátszani a videót"
+
+msgid "IDS_VIDEO_MBODY_ALIGNMENT"
+msgstr "Igazítás"
+
+msgid "IDS_VIDEO_MBODY_FONT_SIZE"
+msgstr "Betűméret"
+
+msgid "IDS_VIDEO_OPT_REPEAT_SETTING_ABB"
+msgstr "Ismétlési beállítás"
+
+msgid "IDS_VIDEO_OPT_SUBTITLES_HCC_ABB"
+msgstr "Feliratok (hangfelirat)"
+
+msgid "IDS_VIDEO_SBODY_CENTRE_M_STATUS"
+msgstr "Középső"
+
+msgid "IDS_VIDEO_SBODY_LARGE_M_STATUS"
+msgstr "Nagy"
+
+msgid "IDS_VIDEO_SBODY_LEFT_M_STATUS"
+msgstr "Balra"
+
+msgid "IDS_VIDEO_SBODY_MEDIUM_M_STATUS"
+msgstr "Közepes"
+
+msgid "IDS_VIDEO_SBODY_RIGHT_M_STATUS"
+msgstr "Jobbra"
+
+msgid "IDS_VIDEO_SBODY_SMALL_M_STATUS"
+msgstr "Kicsi"
+
+msgid "IDS_BR_SK_NEXT"
+msgstr "Tovább"
+
+msgid "IDS_BR_SK_PREVIOUS"
+msgstr "Előző"
+
+msgid "IDS_VPL_POP_DRM_FILES_CANNOT_BE_SHARED"
+msgstr "DRM-fájlt nem lehet megosztani."
+
+msgid "IDS_VPL_OPT_FORMAT"
+msgstr "Formátum"
+
+msgid "IDS_VPL_BODY_UNABLE_TO_PLAY_VIDEO_DURING_CALL"
+msgstr "Hívás közben nem lehet videót lejátszani."
+
+msgid "IDS_VIDEO_OPT_MESSAGE_ABB"
+msgstr "Üzenet"
+
+msgid "IDS_VIDEO_OPT_FILE_TRANSFER_ABB"
+msgstr "Fájlátvitel"
+
+msgid "IDS_VIDEO_OPT_EMAIL_ABB"
+msgstr "E-mail"
+
+msgid "IDS_VIDEO_BODY_LONGITUDE"
+msgstr "Hosszúság"
+
+msgid "IDS_VIDEO_BODY_LATITUDE"
+msgstr "Szélesség"
+
+msgid "IDS_MUSIC_BUTTON_ENABLE_MOTION"
+msgstr "Mozgás eng."
+
+msgid "IDS_VPL_TPOP_SCRUBBING_AT_PSX_SPEED"
+msgstr "Tisztítás %sx sebességgel."
+
+msgid "IDS_VPL_TAB_EXTERNAL_STORAGE"
+msgstr "Külső tároló"
+
+msgid "IDS_VPL_POP_VOLUME_M_SOUND"
+msgstr "Hangerő"
+
+msgid "IDS_VPL_POP_UNSUPPORTED_VIDEO_FORMAT"
+msgstr "Nem támogatott videoformátum."
+
+msgid "IDS_VPL_POP_UNSUPPORTED_FILE_TYPE"
+msgstr "A fájltípus\nnem támogatott."
+
+msgid "IDS_VPL_POP_UNSUPPORTED_AUDIO_FORMAT"
+msgstr "Nem támogatott hangformátum."
+
+msgid "IDS_VPL_POP_UNABLE_TO_USE_FAST_FORWARD_AND_REWIND_WHEN_NEARBY_DEVICES_ARE_ENABLED"
+msgstr "Ha engedélyezve van a Közeli eszközök funkció, nem használható a gyors előretekerés és a visszatekerés."
+
+msgid "IDS_VPL_POP_UNABLE_TO_CAPTURE"
+msgstr "Nem sikerült felvételt készíteni."
+
+msgid "IDS_VPL_POP_ROTATE"
+msgstr "Elforgatás"
+
+msgid "IDS_VPL_POP_PRESS_THE_BACK_KEY_AGAIN_TO_RETURN_TO_PREVIOUS_SCREEN"
+msgstr "A Vissza gomb újbóli megnyomásával visszatérhet az előző képernyőre."
+
+msgid "IDS_VPL_POP_NOT_ENOUGH_MEMORY_DELETE_SOME_ITEMS"
+msgstr "Kevés a memória. Töröljön néhány tételt"
+
+msgid "IDS_VPL_POP_BOOKMARK_LIST_FULL_DELETE_SOME_BOOKMARKS"
+msgstr "A könyvjelzők listája megtelt. Töröljön néhányat."
+
+msgid "IDS_VPL_OPT_YELLOW_M_COLOUR"
+msgstr "Sárga"
+
+msgid "IDS_VPL_OPT_VIRTUAL_71_CH"
+msgstr "Virtuális 7.1 csatorna"
+
+msgid "IDS_VPL_OPT_SUBTITLES_HCC_ABB"
+msgstr "Feliratok (hangfelirat)"
+
+msgid "IDS_VPL_OPT_SOUNDALIVE"
+msgstr "SoundAlive"
+
+msgid "IDS_VPL_OPT_REPEAT_MODE"
+msgstr "Ismétlés módja"
+
+msgid "IDS_VPL_OPT_NO_REPEAT"
+msgstr "Nincs ismétlés"
+
+msgid "IDS_VPL_OPT_MAGENTA_M_COLOUR"
+msgstr "Magenta"
+
+msgid "IDS_VPL_OPT_GREEN"
+msgstr "Zöld"
+
+msgid "IDS_VPL_OPT_CYAN_M_COLOUR"
+msgstr "Ciánkék"
+
+msgid "IDS_VPL_OPT_CUSTOM"
+msgstr "Egyedi"
+
+msgid "IDS_VPL_OPT_CURRENT_VIDEO_HONCE_ABB"
+msgstr "Jelenlegi videó (1x)"
+
+msgid "IDS_VPL_OPT_CONNECTION_INFO_ABB"
+msgstr "Kapcsolatadatok"
+
+msgid "IDS_VPL_OPT_CHANGE_PLAYER"
+msgstr "Lejátszóváltás"
+
+msgid "IDS_VPL_OPT_CAPTURE"
+msgstr "Rögzítés"
+
+msgid "IDS_VPL_OPT_ALLSHARE"
+msgstr "AllShare"
+
+msgid "IDS_VPL_HEADER_SELECT_DEVICE_ABB"
+msgstr "Eszköz kiválasztása"
+
+msgid "IDS_VPL_HEADER_AVAILABLE_DEVICES_ABB"
+msgstr "Elérhető eszközök"
+
+msgid "IDS_VPL_BUTTON_SPEAKER_ABB"
+msgstr "Hangszóró"
+
+msgid "IDS_VPL_BODY_WHITE"
+msgstr "Fehér"
+
+msgid "IDS_VPL_BODY_UDRGOTHICM_M_FONT"
+msgstr "UDRGothicM"
+
+msgid "IDS_VPL_BODY_UDMINCHO_M_FONT"
+msgstr "UDMincho"
+
+msgid "IDS_VPL_BODY_ROSEMARY_M_FONT"
+msgstr "Rosemary"
+
+msgid "IDS_VPL_BODY_RED_ABB"
+msgstr "Piros"
+
+msgid "IDS_VPL_BODY_PS_SECONDS"
+msgstr "%s másodperc"
+
+msgid "IDS_VPL_BODY_POP_M_FONT"
+msgstr "POP"
+
+msgid "IDS_VPL_BODY_PLAY_SPEED"
+msgstr "Lejátszás sebessége"
+
+msgid "IDS_VPL_BODY_PD_SECS"
+msgstr "%d mp"
+
+msgid "IDS_VPL_BODY_OFF"
+msgstr "Ki"
+
+msgid "IDS_VPL_BODY_NO_TITLE"
+msgstr "Nincs cím"
+
+msgid "IDS_VPL_BODY_MY_DEVICE"
+msgstr "Saját eszköz"
+
+msgid "IDS_VPL_BODY_DEFAULT_FONT"
+msgstr "Alapértelmezett betűtípus"
+
+msgid "IDS_VPL_BODY_COOL_JAZZ_M_FONT"
+msgstr "Cool jazz"
+
+msgid "IDS_VPL_BODY_CHOCO_COOKY_M_FONT"
+msgstr "Choco cooky"
+
+msgid "IDS_VPL_BODY_BLUE"
+msgstr "Kék"
+
+msgid "IDS_VPL_BODY_BLACK"
+msgstr "Fekete"
+
+msgid "IDS_VPL_BODY_ACTIVATION"
+msgstr "Aktivál"
+
+msgid "IDS_SMEMO_POP_CLOSE_APPLICATION_Q"
+msgstr "Bezárja az alkalmazást?"
+
+msgid "IDS_VIDEO_SK_CANCEL_ABB"
+msgstr "Mégse"
+
+msgid "IDS_VIDEO_OPT_STOP_AFTER_ALL_ABB"
+msgstr "Mégis leállítja"
+
+msgid "IDS_VIDEO_OPT_REPEAT_CURRENT_ABB"
+msgstr "Aktuális ismétlése"
+
+msgid "IDS_VIDEO_OPT_REPEAT_ALL_ABB"
+msgstr "Összes ismétlése"
+
+msgid "IDS_VIDEO_BODY_RESOLUTION"
+msgstr "Felbontás"
+
+msgid "IDS_VIDEO_BODY_PS_SOUND_EFFECTS_NOT_SUPPORTED_BY_SPEAKER"
+msgstr "A hangszóró nem támogatja a(z) %s hangeffektusokat."
+
+msgid "IDS_MUSIC_BODY_TURN_PHONE_OVER_TO_MUTE_INCOMING_CALLS_MESSAGE_ALERTS_AND_ALARMS"
+msgstr "A bejövő hívások, üzenetek és egyebek jelzésének elnémításához fordítsa meg a telefont."
+
+msgid "IDS_ST_BODY_SD_CARD"
+msgstr "SD-kártya"
+
+msgid "IDS_VPL_TPOP_ONLY_AUDIO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_AUDIO"
+msgstr "A fájl csak hangadatokat támogat. Jelenleg hanglejátszás zajlik."
+
+msgid "IDS_VPL_TPOP_ONLY_VIDEO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_VIDEO"
+msgstr "A fájl csak videóadatokat támogat. Jelenleg videólejátszás zajlik."
+
+msgid "IDS_ST_BODY_PRIVATE_STORAGE"
+msgstr "Privát tárhely"
+
+msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
+msgstr "Fejhallgató"
+
+msgid "IDS_MUSIC_OPT_SPEAKER"
+msgstr "Hangszóró"
+
+msgid "IDS_MUSIC_OPT_PAUSE"
+msgstr "Szünet"
+
+msgid "IDS_VIDEO_BUTTON_DOWNLOAD"
+msgstr "Letöltés"
+
+msgid "IDS_VIDEO_MBODY_SELECT_SUBTITLES_HCC"
+msgstr "Feliratok kiválasztása"
+
+msgid "IDS_VIDEO_NPBODY_PREVIEW_SUBTITLES_HCC_ABB"
+msgstr "Feliratok megj. (hangfelirat)"
+
+msgid "IDS_VIDEO_OPT_REPEAT_MODE_ABB"
+msgstr "Ismétlési mód"
+
+msgid "IDS_VIDEO_POP_UNSUPPORTED_FILE_TYPE"
+msgstr "A fájltípus\nnem támogatott."
+
+msgid "IDS_VIDEO_OPT_NORMAL_M_SOUND_ABB"
+msgstr "Normál"
+
+msgid "IDS_VIDEO_BODY_VOICE"
+msgstr "Voice"
+
+msgid "IDS_VIDEO_BODY_MOVIES"
+msgstr "Filmek"
+
+msgid "IDS_VIDEO_OPT_AUDIO_TRACK_ABB"
+msgstr "Hangsáv"
+
+msgid "IDS_VIDEO_BODY_BUFFERING_ING_ABB"
+msgstr "Pufferelés..."
+
+msgid "IDS_VIDEO_BODY_FILE_FORMAT"
+msgstr "Fájlformátum"
+
+msgid "IDS_VIDEO_BODY_LANGUAGE"
+msgstr "Nyelv"
+
+msgid "IDS_VIDEO_BODY_NO_VIDEOS"
+msgstr "Nincs videó"
+
+msgid "IDS_VIDEO_BODY_SIZE"
+msgstr "Méret"
+
+msgid "IDS_VIDEO_BUTTON_DONE"
+msgstr "Kész"
+
+msgid "IDS_VIDEO_BUTTON_REFRESH"
+msgstr "Frissítés"
+
+msgid "IDS_VIDEO_HEADER_DATE"
+msgstr "Dátum"
+
+msgid "IDS_VIDEO_HEADER_LOADING_ING_ABB"
+msgstr "Betöltés..."
+
+msgid "IDS_VIDEO_HEADER_SUBTITLES_HCC_ABB2"
+msgstr "Feliratok (CC)"
+
+msgid "IDS_VIDEO_IOPT3_DELETE"
+msgstr "Törlés"
+
+msgid "IDS_VIDEO_OPT_ADD_TO_HOME_SCREEN_ABB"
+msgstr "Kezdőképernyőhöz adás"
+
+msgid "IDS_VIDEO_OPT_FACEBOOK_ABB"
+msgstr "Facebook"
+
+msgid "IDS_VIDEO_OPT_HDMI"
+msgstr "HDMI"
+
+msgid "IDS_VIDEO_OPT_NAME"
+msgstr "Név"
+
+msgid "IDS_VIDEO_OPT_SOUNDALIVE_ABB2"
+msgstr "SoundAlive"
+
+msgid "IDS_VIDEO_OPT_YOUTUBE_ABB"
+msgstr "YouTube"
+
+msgid "IDS_VIDEO_POP_UNABLE_TO_PLAY_VIDEO"
+msgstr "Nem játszható le a videó."
+
+msgid "IDS_VIDEO_SBODY_NO_SUBTITLES_AVAILABLE_M_STATUS"
+msgstr "Nem áll rendelkezésre felirat"
+
+msgid "IDS_VIDEO_SK3_PLAY"
+msgstr "Lejátszás"
+
+msgid "IDS_VIDEO_SK_CLOSE"
+msgstr "Bezár"
+
+msgid "IDS_VPL_POP_INVALID_URL"
+msgstr "Érvénytelen URL"
+
+msgid "IDS_CHATON_HEADER_ERROR_ABB"
+msgstr "Hiba"
+
+msgid "IDS_VIDEO_SBODY_DEVICE_STORAGE"
+msgstr "Eszköz tárhelye"
+
+msgid "IDS_COM_BODY_VIDEO_PLAYER_T_MAINMENU"
+msgstr "Video-lejátszó"
+
+msgid "IDS_VIDEO_OPT_SHARE_VIA"
+msgstr "Megosztás"
+
+msgid "IDS_VIDEO_POP_A_NETWORK_ERROR_HAS_OCCURRED_TRY_AGAIN"
+msgstr "Hálózati hiba történt. Próbálja újra."
+
+msgid "IDS_VIDEO_TPOP_ONLY_AUDIO_DATA_SUPPORTED_BY_THIS_FILE_FORMAT_NOW_PLAYING_AUDIO"
+msgstr "A fájlformátum csak hangadatokat támogat. Jelenleg hanglejátszás zajlik."
+
+msgid "IDS_VIDEO_TPOP_ONLY_VIDEO_DATA_SUPPORTED_BY_THIS_FILE_FORMAT_NOW_PLAYING_VIDEO"
+msgstr "Ez a fájlformátum csak videóadatokat támogat. Jelenleg videólejátszás zajlik."
+
+msgid "IDS_VPL_BODY_CENTRE"
+msgstr "Középre zárt"
+
+msgid "IDS_VPL_BODY_ON"
+msgstr "Be"
+
+msgid "IDS_VPL_BODY_SETTINGS"
+msgstr "Beállítások"
+
+msgid "IDS_VPL_BODY_VIDEOS_T_MAINMENU"
+msgstr "Videók"
+
+msgid "IDS_VPL_BUTTON_SHARE"
+msgstr "Megoszt"
+
+msgid "IDS_VPL_HEADER_DETAILS"
+msgstr "Részletek"
+
+msgid "IDS_VPL_OPT_DELETE"
+msgstr "Töröl"
+
+msgid "IDS_VPL_POP_BUFFERING_PDP"
+msgstr "Pufferelés – %d%"
+
+msgid "IDS_VIDEO_OPT_NONE"
+msgstr "Nincs"
+
+msgid "IDS_VIDEO_BODY_PD_SECS_ABB3"
+msgstr "%d mp"
+
+msgid "IDS_MUSIC_HEADER_SOUNDALIVE_ABB3"
+msgstr "SoundAlive"
+
+msgid "IDS_MP_HEADER_SELECT_AUDIO_DEVICE"
+msgstr "Hangeszköz kiválasztása"
+
+msgid "IDS_MUSIC_OPT_DELETE"
+msgstr "Törlés"
+
+msgid "IDS_CLOCK_BUTTON_CANCEL"
+msgstr "Mégse"
+
+msgid "IDS_VIDEO_POP_AN_UNKNOWN_ERROR_HAS_OCCURRED_OR_THE_FILE_MAY_BE_CORRUPT"
+msgstr "Ismeretlen eredetű hiba történt, vagy sérült a fájl."
+
+msgid "IDS_VIDEO_POP_THIS_FILE_TYPE_IS_NOT_SUPPORTED"
+msgstr "Ez a fájltípus nincs támogatva."
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "KÉSZ"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "MÉGSE"
+
+msgid "IDS_TPLATFORM_MBODY_STORAGE_LOCATION"
+msgstr "Mentési hely"
+
+msgid "IDS_GP_BODY_SUBTITLES_HCC"
+msgstr "Feliratok (hangfelirat)"
+
+msgid "IDS_GALLERY_BODY_PERSONAL_STORAGE"
+msgstr "Személyes tárhely"
+
+msgid "IDS_ACCS_BODY_CAPTIONS_WILL_LOOK_LIKE_THIS"
+msgstr "Ilyenek lesznek a feliratok"
+

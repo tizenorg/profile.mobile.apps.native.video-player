@@ -1,0 +1,489 @@
+msgid "IDS_VIDEO_OPT_BRIGHTNESS"
+msgstr "Luminozitate"
+
+msgid "IDS_VIDEO_OPT_MUSIC_M_SOUNDALIVE"
+msgstr "Muzică"
+
+msgid "IDS_VIDEO_OPT_VOICES_M_PERSON"
+msgstr "Voci"
+
+msgid "IDS_VIDEO_BODY_B"
+msgstr "B"
+
+msgid "IDS_VIDEO_BODY_GB"
+msgstr "GB"
+
+msgid "IDS_VIDEO_BODY_KB"
+msgstr "KO"
+
+msgid "IDS_VIDEO_BODY_LOCATION"
+msgstr "Locaţie"
+
+msgid "IDS_VIDEO_BODY_MB"
+msgstr "MO"
+
+msgid "IDS_VIDEO_BUTTON_OK"
+msgstr "OK"
+
+msgid "IDS_VIDEO_HEADER_LAST_MODIFIED_M_DATE"
+msgstr "Ultima modificare"
+
+msgid "IDS_VIDEO_OPT_SHARE"
+msgstr "Partajaţi"
+
+msgid "IDS_VIDEO_HEADER_CANNOT_PLAY_VIDEO_ABB"
+msgstr "Videoclipul nu poate fi redat"
+
+msgid "IDS_VIDEO_POP_AN_ERROR_OCCURRED_WITH_THE_SUBTITLES"
+msgstr "A apărut o eroare legată de subtitrări."
+
+msgid "IDS_VIDEO_POP_THE_FILE_IS_CORRUPTED_OR_THE_SD_CARD_HAS_BEEN_REMOVED"
+msgstr "Fişierul este deteriorat sau cardul SD a fost îndepărtat."
+
+msgid "IDS_VIDEO_OPT_DETAILS"
+msgstr "Detalii"
+
+msgid "IDS_VIDEO_OPT_TITLE"
+msgstr "Titlu"
+
+msgid "IDS_VIDEO_POP_THIS_VIDEO_WILL_BE_DELETED"
+msgstr "Acest videoclip va fi şters."
+
+msgid "IDS_VIDEO_HEADER_SETTINGS"
+msgstr "Setări"
+
+msgid "IDS_VIDEO_HEADER_UNABLE_TO_PLAY_VIDEO_ABB"
+msgstr "Videoclipul nu poate fi redat"
+
+msgid "IDS_VIDEO_MBODY_ALIGNMENT"
+msgstr "Aliniere"
+
+msgid "IDS_VIDEO_MBODY_FONT_SIZE"
+msgstr "Dimensiune font"
+
+msgid "IDS_VIDEO_OPT_REPEAT_SETTING_ABB"
+msgstr "Setare repetare"
+
+msgid "IDS_VIDEO_OPT_SUBTITLES_HCC_ABB"
+msgstr "Subtitrări (complexe)"
+
+msgid "IDS_VIDEO_SBODY_CENTRE_M_STATUS"
+msgstr "Centru"
+
+msgid "IDS_VIDEO_SBODY_LARGE_M_STATUS"
+msgstr "Mare"
+
+msgid "IDS_VIDEO_SBODY_LEFT_M_STATUS"
+msgstr "Stânga"
+
+msgid "IDS_VIDEO_SBODY_MEDIUM_M_STATUS"
+msgstr "Mediu"
+
+msgid "IDS_VIDEO_SBODY_RIGHT_M_STATUS"
+msgstr "Dreapta"
+
+msgid "IDS_VIDEO_SBODY_SMALL_M_STATUS"
+msgstr "Mic"
+
+msgid "IDS_BR_SK_NEXT"
+msgstr "Următor"
+
+msgid "IDS_BR_SK_PREVIOUS"
+msgstr "Anterior"
+
+msgid "IDS_VPL_POP_DRM_FILES_CANNOT_BE_SHARED"
+msgstr "Fişierele DRM nu pot fi partajate."
+
+msgid "IDS_VPL_OPT_FORMAT"
+msgstr "Formatare"
+
+msgid "IDS_VPL_BODY_UNABLE_TO_PLAY_VIDEO_DURING_CALL"
+msgstr "Imposibil de redat videoclipul în timpul apelului"
+
+msgid "IDS_VIDEO_OPT_MESSAGE_ABB"
+msgstr "Mesaj"
+
+msgid "IDS_VIDEO_OPT_FILE_TRANSFER_ABB"
+msgstr "Transfer fişier"
+
+msgid "IDS_VIDEO_OPT_EMAIL_ABB"
+msgstr "Email"
+
+msgid "IDS_VIDEO_BODY_LONGITUDE"
+msgstr "Longitudine"
+
+msgid "IDS_VIDEO_BODY_LATITUDE"
+msgstr "Latitudine"
+
+msgid "IDS_MUSIC_BUTTON_ENABLE_MOTION"
+msgstr "Activ. mişc."
+
+msgid "IDS_VPL_TPOP_SCRUBBING_AT_PSX_SPEED"
+msgstr "Se derulează la o viteză de %sx."
+
+msgid "IDS_VPL_TAB_EXTERNAL_STORAGE"
+msgstr "Stocare externă"
+
+msgid "IDS_VPL_POP_VOLUME_M_SOUND"
+msgstr "Volum"
+
+msgid "IDS_VPL_POP_UNSUPPORTED_VIDEO_FORMAT"
+msgstr "Format video neacceptat"
+
+msgid "IDS_VPL_POP_UNSUPPORTED_FILE_TYPE"
+msgstr "Tip fişier neacceptat"
+
+msgid "IDS_VPL_POP_UNSUPPORTED_AUDIO_FORMAT"
+msgstr "Format audio neacceptat"
+
+msgid "IDS_VPL_POP_UNABLE_TO_USE_FAST_FORWARD_AND_REWIND_WHEN_NEARBY_DEVICES_ARE_ENABLED"
+msgstr "Nu se poate utiliza derularea rapidă înainte sau derularea înapoi când dispozitivele din apropiere sunt activate."
+
+msgid "IDS_VPL_POP_UNABLE_TO_CAPTURE"
+msgstr "Imposibil de capturat"
+
+msgid "IDS_VPL_POP_ROTATE"
+msgstr "Rotire"
+
+msgid "IDS_VPL_POP_PRESS_THE_BACK_KEY_AGAIN_TO_RETURN_TO_PREVIOUS_SCREEN"
+msgstr "Apăsaţi din nou pe tasta Înapoi pentru a reveni la ecranul anterior."
+
+msgid "IDS_VPL_POP_NOT_ENOUGH_MEMORY_DELETE_SOME_ITEMS"
+msgstr "Memorie insuficientă. Ştergeţi câteva elemente"
+
+msgid "IDS_VPL_POP_BOOKMARK_LIST_FULL_DELETE_SOME_BOOKMARKS"
+msgstr "Listă marcaje plină. Ştergeţi din marcaje."
+
+msgid "IDS_VPL_OPT_YELLOW_M_COLOUR"
+msgstr "Galben"
+
+msgid "IDS_VPL_OPT_VIRTUAL_71_CH"
+msgstr "7.1 canale virtuale"
+
+msgid "IDS_VPL_OPT_SUBTITLES_HCC_ABB"
+msgstr "Subtitrări (complexe)"
+
+msgid "IDS_VPL_OPT_SOUNDALIVE"
+msgstr "SoundAlive"
+
+msgid "IDS_VPL_OPT_REPEAT_MODE"
+msgstr "Mod repetare"
+
+msgid "IDS_VPL_OPT_NO_REPEAT"
+msgstr "Nicio repetiţie"
+
+msgid "IDS_VPL_OPT_MAGENTA_M_COLOUR"
+msgstr "Magenta"
+
+msgid "IDS_VPL_OPT_GREEN"
+msgstr "Verde"
+
+msgid "IDS_VPL_OPT_CYAN_M_COLOUR"
+msgstr "Azuriu"
+
+msgid "IDS_VPL_OPT_CUSTOM"
+msgstr "Personalizat"
+
+msgid "IDS_VPL_OPT_CURRENT_VIDEO_HONCE_ABB"
+msgstr "Video act. (o dată)"
+
+msgid "IDS_VPL_OPT_CONNECTION_INFO_ABB"
+msgstr "Info. conexiune"
+
+msgid "IDS_VPL_OPT_CHANGE_PLAYER"
+msgstr "Schimbare player"
+
+msgid "IDS_VPL_OPT_CAPTURE"
+msgstr "Captură"
+
+msgid "IDS_VPL_OPT_ALLSHARE"
+msgstr "AllShare"
+
+msgid "IDS_VPL_HEADER_SELECT_DEVICE_ABB"
+msgstr "Selectare dispozitiv"
+
+msgid "IDS_VPL_HEADER_AVAILABLE_DEVICES_ABB"
+msgstr "Dispozitive dispon."
+
+msgid "IDS_VPL_BUTTON_SPEAKER_ABB"
+msgstr "Difuzor"
+
+msgid "IDS_VPL_BODY_WHITE"
+msgstr "Alb"
+
+msgid "IDS_VPL_BODY_UDRGOTHICM_M_FONT"
+msgstr "UDRGothicM"
+
+msgid "IDS_VPL_BODY_UDMINCHO_M_FONT"
+msgstr "UDMincho"
+
+msgid "IDS_VPL_BODY_ROSEMARY_M_FONT"
+msgstr "Rozmarin"
+
+msgid "IDS_VPL_BODY_RED_ABB"
+msgstr "Roşu"
+
+msgid "IDS_VPL_BODY_PS_SECONDS"
+msgstr "%s secunde"
+
+msgid "IDS_VPL_BODY_POP_M_FONT"
+msgstr "POP"
+
+msgid "IDS_VPL_BODY_PLAY_SPEED"
+msgstr "Viteză de redare"
+
+msgid "IDS_VPL_BODY_PD_SECS"
+msgstr "%d sec."
+
+msgid "IDS_VPL_BODY_OFF"
+msgstr "Oprit"
+
+msgid "IDS_VPL_BODY_NO_TITLE"
+msgstr "Nici un titlu"
+
+msgid "IDS_VPL_BODY_MY_DEVICE"
+msgstr "Dispozitivul meu"
+
+msgid "IDS_VPL_BODY_DEFAULT_FONT"
+msgstr "Font prestabilit"
+
+msgid "IDS_VPL_BODY_COOL_JAZZ_M_FONT"
+msgstr "Jazz liniştit"
+
+msgid "IDS_VPL_BODY_CHOCO_COOKY_M_FONT"
+msgstr "Biscuite de ciocolată"
+
+msgid "IDS_VPL_BODY_BLUE"
+msgstr "Albastru"
+
+msgid "IDS_VPL_BODY_BLACK"
+msgstr "Negru"
+
+msgid "IDS_VPL_BODY_ACTIVATION"
+msgstr "Activare"
+
+msgid "IDS_SMEMO_POP_CLOSE_APPLICATION_Q"
+msgstr "Închideţi aplicaţia?"
+
+msgid "IDS_VIDEO_SK_CANCEL_ABB"
+msgstr "Anul."
+
+msgid "IDS_VIDEO_OPT_STOP_AFTER_ALL_ABB"
+msgstr "Oprire după toate"
+
+msgid "IDS_VIDEO_OPT_REPEAT_CURRENT_ABB"
+msgstr "Repetare actual"
+
+msgid "IDS_VIDEO_OPT_REPEAT_ALL_ABB"
+msgstr "Repetare globală"
+
+msgid "IDS_VIDEO_BODY_RESOLUTION"
+msgstr "Rezoluţie"
+
+msgid "IDS_VIDEO_BODY_PS_SOUND_EFFECTS_NOT_SUPPORTED_BY_SPEAKER"
+msgstr "Efectele sonore %s nu sunt acceptate de difuzor."
+
+msgid "IDS_MUSIC_BODY_TURN_PHONE_OVER_TO_MUTE_INCOMING_CALLS_MESSAGE_ALERTS_AND_ALARMS"
+msgstr "Întoarceţi telefonul pentru a opri sunetul pentru apeluri primite, alerte de mesaje şi alarme."
+
+msgid "IDS_ST_BODY_SD_CARD"
+msgstr "Cartelă SD"
+
+msgid "IDS_VPL_TPOP_ONLY_AUDIO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_AUDIO"
+msgstr "Doar datele audio sunt acceptate de acest fişier. Se redă conţinut audio."
+
+msgid "IDS_VPL_TPOP_ONLY_VIDEO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_VIDEO"
+msgstr "Doar datele video sunt acceptate de acest fişier. Se redă conţinut video."
+
+msgid "IDS_ST_BODY_PRIVATE_STORAGE"
+msgstr "Spaţiu de stocare privat"
+
+msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
+msgstr "Căşti"
+
+msgid "IDS_MUSIC_OPT_SPEAKER"
+msgstr "Difuzor"
+
+msgid "IDS_MUSIC_OPT_PAUSE"
+msgstr "Pauză"
+
+msgid "IDS_VIDEO_BUTTON_DOWNLOAD"
+msgstr "Descărcare"
+
+msgid "IDS_VIDEO_MBODY_SELECT_SUBTITLES_HCC"
+msgstr "Sel. subtitr. (complexe)"
+
+msgid "IDS_VIDEO_NPBODY_PREVIEW_SUBTITLES_HCC_ABB"
+msgstr "Examin. subtitrări (complexe)"
+
+msgid "IDS_VIDEO_OPT_REPEAT_MODE_ABB"
+msgstr "Mod repetare"
+
+msgid "IDS_VIDEO_POP_UNSUPPORTED_FILE_TYPE"
+msgstr "Tip fişier neacceptat"
+
+msgid "IDS_VIDEO_OPT_NORMAL_M_SOUND_ABB"
+msgstr "Normal"
+
+msgid "IDS_VIDEO_BODY_VOICE"
+msgstr "Voce"
+
+msgid "IDS_VIDEO_BODY_MOVIES"
+msgstr "Filme"
+
+msgid "IDS_VIDEO_OPT_AUDIO_TRACK_ABB"
+msgstr "Piesă audio"
+
+msgid "IDS_VIDEO_BODY_BUFFERING_ING_ABB"
+msgstr "Se încarcă..."
+
+msgid "IDS_VIDEO_BODY_FILE_FORMAT"
+msgstr "Format fişier"
+
+msgid "IDS_VIDEO_BODY_LANGUAGE"
+msgstr "Limbă"
+
+msgid "IDS_VIDEO_BODY_NO_VIDEOS"
+msgstr "Niciun videoclip"
+
+msgid "IDS_VIDEO_BODY_SIZE"
+msgstr "Dimensiune"
+
+msgid "IDS_VIDEO_BUTTON_DONE"
+msgstr "Efectuat"
+
+msgid "IDS_VIDEO_BUTTON_REFRESH"
+msgstr "Reîmprosp."
+
+msgid "IDS_VIDEO_HEADER_DATE"
+msgstr "Dată"
+
+msgid "IDS_VIDEO_HEADER_LOADING_ING_ABB"
+msgstr "Se încarcă..."
+
+msgid "IDS_VIDEO_HEADER_SUBTITLES_HCC_ABB2"
+msgstr "Subtitr. (complexe)"
+
+msgid "IDS_VIDEO_IOPT3_DELETE"
+msgstr "Ştergere"
+
+msgid "IDS_VIDEO_OPT_ADD_TO_HOME_SCREEN_ABB"
+msgstr "Adăug. la ecran. de pornire"
+
+msgid "IDS_VIDEO_OPT_FACEBOOK_ABB"
+msgstr "Facebook"
+
+msgid "IDS_VIDEO_OPT_HDMI"
+msgstr "HDMI"
+
+msgid "IDS_VIDEO_OPT_NAME"
+msgstr "Nume"
+
+msgid "IDS_VIDEO_OPT_SOUNDALIVE_ABB2"
+msgstr "SoundAlive"
+
+msgid "IDS_VIDEO_OPT_YOUTUBE_ABB"
+msgstr "YouTube"
+
+msgid "IDS_VIDEO_POP_UNABLE_TO_PLAY_VIDEO"
+msgstr "Imposibil de redat videoclipul"
+
+msgid "IDS_VIDEO_SBODY_NO_SUBTITLES_AVAILABLE_M_STATUS"
+msgstr "Nu sunt disponibile subtitrări"
+
+msgid "IDS_VIDEO_SK3_PLAY"
+msgstr "Redare"
+
+msgid "IDS_VIDEO_SK_CLOSE"
+msgstr "Închidere"
+
+msgid "IDS_VPL_POP_INVALID_URL"
+msgstr "URL invalid"
+
+msgid "IDS_CHATON_HEADER_ERROR_ABB"
+msgstr "Eroare"
+
+msgid "IDS_VIDEO_SBODY_DEVICE_STORAGE"
+msgstr "Spaţiu stocare dispozitiv"
+
+msgid "IDS_COM_BODY_VIDEO_PLAYER_T_MAINMENU"
+msgstr "Player video"
+
+msgid "IDS_VIDEO_OPT_SHARE_VIA"
+msgstr "Partajare prin"
+
+msgid "IDS_VIDEO_POP_A_NETWORK_ERROR_HAS_OCCURRED_TRY_AGAIN"
+msgstr "A apărut o eroare de reţea. Încercaţi din nou."
+
+msgid "IDS_VIDEO_TPOP_ONLY_AUDIO_DATA_SUPPORTED_BY_THIS_FILE_FORMAT_NOW_PLAYING_AUDIO"
+msgstr "Doar datele audio sunt acceptate de acest format de fişier. Se redă conţinut audio."
+
+msgid "IDS_VIDEO_TPOP_ONLY_VIDEO_DATA_SUPPORTED_BY_THIS_FILE_FORMAT_NOW_PLAYING_VIDEO"
+msgstr "Acest format de fişier acceptă doar datele video. Se redă conţinut video."
+
+msgid "IDS_VPL_BODY_CENTRE"
+msgstr "Centru"
+
+msgid "IDS_VPL_BODY_ON"
+msgstr "Pornit"
+
+msgid "IDS_VPL_BODY_SETTINGS"
+msgstr "Setări"
+
+msgid "IDS_VPL_BODY_VIDEOS_T_MAINMENU"
+msgstr "Videoclip."
+
+msgid "IDS_VPL_BUTTON_SHARE"
+msgstr "Partaj."
+
+msgid "IDS_VPL_HEADER_DETAILS"
+msgstr "Detalii"
+
+msgid "IDS_VPL_OPT_DELETE"
+msgstr "Ştergere"
+
+msgid "IDS_VPL_POP_BUFFERING_PDP"
+msgstr "Încărcare în zona tampon - %d%"
+
+msgid "IDS_VIDEO_OPT_NONE"
+msgstr "Fără"
+
+msgid "IDS_VIDEO_BODY_PD_SECS_ABB3"
+msgstr "%d sec."
+
+msgid "IDS_MUSIC_HEADER_SOUNDALIVE_ABB3"
+msgstr "SoundAlive"
+
+msgid "IDS_MP_HEADER_SELECT_AUDIO_DEVICE"
+msgstr "Selectare dispozitiv audio"
+
+msgid "IDS_MUSIC_OPT_DELETE"
+msgstr "Ştergere"
+
+msgid "IDS_CLOCK_BUTTON_CANCEL"
+msgstr "Anulare"
+
+msgid "IDS_VIDEO_POP_AN_UNKNOWN_ERROR_HAS_OCCURRED_OR_THE_FILE_MAY_BE_CORRUPT"
+msgstr "A apărut o eroare necunoscută sau este posibil ca fişierul să fie deteriorat."
+
+msgid "IDS_VIDEO_POP_THIS_FILE_TYPE_IS_NOT_SUPPORTED"
+msgstr "Acest tip de fişier nu este acceptat."
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "EFECTUAT"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "ANULARE"
+
+msgid "IDS_TPLATFORM_MBODY_STORAGE_LOCATION"
+msgstr "Locaţie stocare"
+
+msgid "IDS_GP_BODY_SUBTITLES_HCC"
+msgstr "Subtitrări (complexe)"
+
+msgid "IDS_GALLERY_BODY_PERSONAL_STORAGE"
+msgstr "Spaţiu de stocare personal"
+
+msgid "IDS_ACCS_BODY_CAPTIONS_WILL_LOOK_LIKE_THIS"
+msgstr "Subtitrările vor arăta astfel"
+

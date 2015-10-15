@@ -1,0 +1,390 @@
+msgid "IDS_VIDEO_OPT_DOWNLOAD"
+msgstr "다운로드"
+
+msgid "IDS_VIDEO_POP_1_FOLDER_WILL_BE_DOWNLOADED"
+msgstr "폴더 1개를 다운로드합니다."
+
+msgid "IDS_VIDEO_POP_1_VIDEO_WILL_BE_DOWNLOADED"
+msgstr "동영상 1개를 다운로드합니다."
+
+msgid "IDS_VIDEO_POP_ALL_FOLDERS_WILL_BE_DOWNLOADED"
+msgstr "모든 폴더를 다운로드합니다."
+
+msgid "IDS_VIDEO_POP_ALL_VIDEOS_WILL_BE_DOWNLOADED"
+msgstr "모든 동영상을 다운로드합니다."
+
+msgid "IDS_VIDEO_POP_PD_FOLDERS_WILL_BE_DOWNLOADED"
+msgstr "폴더 %d개를 다운로드합니다."
+
+msgid "IDS_VIDEO_POP_PD_VIDEOS_WILL_BE_DOWNLOADED"
+msgstr "동영상 %d개를 다운로드합니다."
+
+msgid "IDS_VIDEO_TPOP_MOBILE_DATA_TURNED_OFF_CONNECT_TO_WI_FI_NETWORK_INSTEAD_OR_TURN_ON_MOBILE_DATA_AND_TRY_AGAIN"
+msgstr "[모바일 데이터]가 해제된 상태입니다. Wi-Fi 네트워크에 연결하거나, [모바일 데이터]를 실행한 후 다시 시도하세요."
+
+msgid "IDS_GALLERY_OPT_PRIVATE_M_CONTENT"
+msgstr "프라이빗"
+
+msgid "IDS_VIDEO_BODY_B"
+msgstr "B"
+
+msgid "IDS_VIDEO_BODY_GB"
+msgstr "GB"
+
+msgid "IDS_VIDEO_BODY_KB"
+msgstr "KB"
+
+msgid "IDS_VIDEO_BODY_LOCATION"
+msgstr "위치"
+
+msgid "IDS_VIDEO_BODY_MB"
+msgstr "MB"
+
+msgid "IDS_VIDEO_BODY_UNKNOWN"
+msgstr "알 수 없음"
+
+msgid "IDS_VIDEO_BUTTON_OK"
+msgstr "확인"
+
+msgid "IDS_VIDEO_HEADER_1_FOLDER"
+msgstr "폴더 1개"
+
+msgid "IDS_VIDEO_HEADER_1_VIDEO"
+msgstr "동영상 1개"
+
+msgid "IDS_VIDEO_HEADER_ALL"
+msgstr "전체"
+
+msgid "IDS_VIDEO_HEADER_FROM_DEVICE"
+msgstr "디바이스"
+
+msgid "IDS_VIDEO_HEADER_FROM_DROPBOX"
+msgstr "Dropbox"
+
+msgid "IDS_VIDEO_HEADER_LAST_MODIFIED_M_DATE"
+msgstr "마지막 수정"
+
+msgid "IDS_VIDEO_OPT_CONTENT_TO_DISPLAY"
+msgstr "표시할 컨텐츠"
+
+msgid "IDS_VIDEO_OPT_SEARCH"
+msgstr "검색"
+
+msgid "IDS_VIDEO_OPT_SHARE"
+msgstr "공유"
+
+msgid "IDS_VIDEO_POP_1_FOLDER_WILL_BE_DELETED"
+msgstr "폴더 1개를 삭제합니다."
+
+msgid "IDS_VIDEO_TPOP_DELETING_ING"
+msgstr "삭제 중..."
+
+msgid "IDS_VIDEO_BODY_AFTER_YOU_RECORD_VIDEOS_USING_THE_CAMERA_THEY_WILL_BE_SHOWN_HERE"
+msgstr "카메라를 사용하여 동영상을 촬영하면 동영상이 여기에 표시됩니다."
+
+msgid "IDS_VIDEO_HEADER_PD_VIDEOS"
+msgstr "동영상 %d개"
+
+msgid "IDS_VIDEO_HEADER_VIDEO"
+msgstr "동영상"
+
+msgid "IDS_VIDEO_NPBODY_NO_VIDEOS"
+msgstr "동영상이 없습니다"
+
+msgid "IDS_VIDEO_OPT_DETAILS"
+msgstr "상세정보"
+
+msgid "IDS_VIDEO_OPT_FOLDER"
+msgstr "폴더"
+
+msgid "IDS_VIDEO_OPT_LIST"
+msgstr "목록"
+
+msgid "IDS_VIDEO_OPT_RECENTLY_ADDED_ABB"
+msgstr "최근 추가 순"
+
+msgid "IDS_VIDEO_OPT_RECENTLY_VIEWED_ABB"
+msgstr "최근 본 항목 순"
+
+msgid "IDS_VIDEO_OPT_RENAME"
+msgstr "이름 변경"
+
+msgid "IDS_VIDEO_OPT_SIZE"
+msgstr "크기"
+
+msgid "IDS_VIDEO_OPT_SORT_BY"
+msgstr "정렬 방식"
+
+msgid "IDS_VIDEO_OPT_TITLE"
+msgstr "제목"
+
+msgid "IDS_VIDEO_OPT_TYPE"
+msgstr "종류"
+
+msgid "IDS_VIDEO_OPT_VIEW_AS"
+msgstr "보기 방식"
+
+msgid "IDS_VIDEO_POP_ALL_VIDEOS_WILL_BE_DELETED"
+msgstr "모든 동영상을 삭제합니다."
+
+msgid "IDS_VIDEO_POP_PD_FOLDERS_WILL_BE_DELETED"
+msgstr "폴더 %d개를 삭제합니다."
+
+msgid "IDS_VIDEO_POP_PD_VIDEOS_WILL_BE_DELETED"
+msgstr "동영상 %d개를 삭제합니다."
+
+msgid "IDS_VIDEO_POP_THIS_FOLDER_WILL_BE_DELETED"
+msgstr "이 폴더를 삭제합니다."
+
+msgid "IDS_VIDEO_HEADER_PD_FOLDERS"
+msgstr "폴더 %d개"
+
+msgid "IDS_VIDEO_HEADER_SETTINGS"
+msgstr "설정"
+
+msgid "IDS_VIDEO_HEADER_UNABLE_TO_PLAY_VIDEO_ABB"
+msgstr "동영상을 재생할 수 없음"
+
+msgid "IDS_VIDEO_MBODY_ALIGNMENT"
+msgstr "정렬"
+
+msgid "IDS_VIDEO_MBODY_FONT_SIZE"
+msgstr "글자 크기"
+
+msgid "IDS_VIDEO_OPT_REPEAT_SETTING_ABB"
+msgstr "반복 설정"
+
+msgid "IDS_VIDEO_OPT_SUBTITLES_HCC_ABB"
+msgstr "자막(CC)"
+
+msgid "IDS_VIDEO_POP_ALL_FOLDERS_WILL_BE_DELETED"
+msgstr "모든 폴더를 삭제합니다."
+
+msgid "IDS_VIDEO_SBODY_CENTRE_M_STATUS"
+msgstr "가운데"
+
+msgid "IDS_VIDEO_SBODY_LARGE_M_STATUS"
+msgstr "크게"
+
+msgid "IDS_VIDEO_SBODY_LEFT_M_STATUS"
+msgstr "왼쪽"
+
+msgid "IDS_VIDEO_SBODY_MEDIUM_M_STATUS"
+msgstr "중간"
+
+msgid "IDS_VIDEO_SBODY_RIGHT_M_STATUS"
+msgstr "오른쪽"
+
+msgid "IDS_VIDEO_SBODY_SMALL_M_STATUS"
+msgstr "작게"
+
+msgid "IDS_VIDEO_TPOP_FILE_NAME_ALREADY_IN_USE"
+msgstr "사용 중인 파일 이름입니다."
+
+msgid "IDS_GALLERY_OPT_REMOVE_FROM_PRIVATE"
+msgstr "프라이빗에서 제거"
+
+msgid "IDS_GALLERY_OPT_MOVE_TO_PRIVATE"
+msgstr "프라이빗으로 이동"
+
+msgid "IDS_IV_POP_ENTRY_IS_EMPTY"
+msgstr "입력된 내용이 없습니다."
+
+msgid "IDS_VPL_OPT_FORMAT"
+msgstr "형식"
+
+msgid "IDS_VPL_BODY_UNABLE_TO_PLAY_VIDEO_DURING_CALL"
+msgstr "통화 중에는 동영상을 재생할 수 없습니다."
+
+msgid "IDS_CLOUD_BODY_DROPBOX_ABB"
+msgstr "Dropbox"
+
+msgid "IDS_VIDEO_POP_THIS_FILE_IS_UNAVAILABLE_WHILE_OFFLINE_CHECK_NETWORK_CONNECTION_AND_TRY_AGAIN"
+msgstr "오프라인에서 사용할 수 없는 파일입니다. 네트워크 연결을 확인한 후 다시 시도하세요."
+
+msgid "IDS_VIDEO_POP_THE_SELECTED_ITEM_WILL_BE_MOVED_TO_PS"
+msgstr "선택한 항목을 %s(으)로 이동합니다."
+
+msgid "IDS_VIDEO_POP_THE_SELECTED_ITEMS_WILL_BE_MOVED_TO_PS"
+msgstr "선택한 항목을 %s(으)로 이동합니다."
+
+msgid "IDS_VIDEO_POP_REMOVING_ING"
+msgstr "제거 중..."
+
+msgid "IDS_VIDEO_POP_MOVING_ING"
+msgstr "이동 중..."
+
+msgid "IDS_VIDEO_POP_FAILED_TO_MOVE_TO_PERSONAL_STORAGE"
+msgstr "퍼스널 저장공간으로 이동하지 못하였습니다."
+
+msgid "IDS_VIDEO_POP_FAILED_TO_MOVE_TO_NORMAL_STORAGE"
+msgstr "일반 저장공간으로 이동하지 못하였습니다."
+
+msgid "IDS_VIDEO_OPT_MESSAGE_ABB"
+msgstr "메시지"
+
+msgid "IDS_VIDEO_OPT_FOLDERS_ABB"
+msgstr "폴더"
+
+msgid "IDS_VIDEO_OPT_EMAIL_ABB"
+msgstr "이메일"
+
+msgid "IDS_VIDEO_OPT_DATE_HMOST_RECENT_ABB"
+msgstr "날짜(최근 순)"
+
+msgid "IDS_VIDEO_HEADER_PD_SELECTED"
+msgstr "%d개 선택"
+
+msgid "IDS_VIDEO_HEADER_DELETE_VIDEOS"
+msgstr "동영상 삭제"
+
+msgid "IDS_VIDEO_HEADER_DELETE_VIDEO"
+msgstr "동영상 삭제"
+
+msgid "IDS_VIDEO_BUTTON_MOVE_ABB"
+msgstr "이동"
+
+msgid "IDS_VIDEO_BODY_LONGITUDE"
+msgstr "경도"
+
+msgid "IDS_VIDEO_BODY_LATITUDE"
+msgstr "위도"
+
+msgid "IDS_VIDEO_BODY_AFTER_YOU_RECORD_VIDEOS_USING_THE_CAMERA_VIDEOS_WILL_BE_SHOWN"
+msgstr "카메라로 동영상을 녹화하면 동영상이 여기에 표시됩니다."
+
+msgid "IDS_VIDEO_SK_CANCEL_ABB"
+msgstr "취소"
+
+msgid "IDS_VIDEO_OPT_STOP_AFTER_ALL_ABB"
+msgstr "모두 재생 후 중지"
+
+msgid "IDS_VIDEO_OPT_REPEAT_CURRENT_ABB"
+msgstr "현재 동영상 반복"
+
+msgid "IDS_VIDEO_OPT_REPEAT_ALL_ABB"
+msgstr "모두 반복"
+
+msgid "IDS_VIDEO_BODY_RESOLUTION"
+msgstr "해상도"
+
+msgid "IDS_VIDEO_BUTTON_DELETE"
+msgstr "삭제"
+
+msgid "IDS_ST_OPT_DELETE_ALL"
+msgstr "모두 삭제"
+
+msgid "IDS_VPL_TPOP_ONLY_AUDIO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_AUDIO"
+msgstr "이 파일은 오디오 데이터만 지원합니다. 오디오를 재생합니다."
+
+msgid "IDS_VPL_TPOP_ONLY_VIDEO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_VIDEO"
+msgstr "이 파일은 동영상 데이터만 지원합니다. 동영상을 재생합니다."
+
+msgid "IDS_MUSIC_OPT_RENAME"
+msgstr "이름 변경"
+
+msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
+msgstr "헤드폰"
+
+msgid "IDS_VIDEO_BUTTON_DOWNLOAD"
+msgstr "다운로드"
+
+msgid "IDS_TPLATFORM_BODY_OFF"
+msgstr "해제"
+
+msgid "IDS_TPLATFORM_BODY_ON"
+msgstr "사용"
+
+msgid "IDS_VIDEO_POP_1_VIDEO_WILL_BE_DELETED"
+msgstr "동영상 1개를 삭제합니다."
+
+msgid "IDS_SWALL_HEADER_INVALID_CHARACTER"
+msgstr "바르지 않은 글자"
+
+msgid "IDS_VIDEO_BODY_NO_SEARCH_RESULTS"
+msgstr "검색 결과가 없습니다"
+
+msgid "IDS_GALLERY_HEADER_SELECT"
+msgstr "선택"
+
+msgid "IDS_VIDEO_BODY_LAST_MODIFIED_M_DATE_ABB"
+msgstr "마지막 수정"
+
+msgid "IDS_VIDEO_BUTTON_DONE"
+msgstr "완료"
+
+msgid "IDS_VIDEO_HEADER_DATE"
+msgstr "날짜"
+
+msgid "IDS_VIDEO_HEADER_LATITUDE"
+msgstr "위도"
+
+msgid "IDS_VIDEO_OPT_NAME"
+msgstr "이름"
+
+msgid "IDS_VIDEO_OPT_NAME_HA_Z_ABB"
+msgstr "이름(가나다 순)"
+
+msgid "IDS_VIDEO_OPT_VIDEOS"
+msgstr "동영상"
+
+msgid "IDS_VIDEO_TPOP_MAXIMUM_NUMBER_OF_ATTACHMENTS_HPD_EXCEEDED"
+msgstr "최대 첨부파일 수(%d)를 초과하였습니다."
+
+msgid "IDS_VIDEO_HEADER_SELECT_ALL"
+msgstr "모두 선택"
+
+msgid "IDS_VIDEO_SBODY_DEVICE_STORAGE"
+msgstr "디바이스 저장공간"
+
+msgid "IDS_VIDEO_SBODY_SD_CARD"
+msgstr "SD 카드"
+
+msgid "IDS_VIDEO_OPT_SHARE_VIA"
+msgstr "공유"
+
+msgid "IDS_VIDEO_POP_A_NETWORK_ERROR_HAS_OCCURRED_TRY_AGAIN"
+msgstr "네트워크 오류가 발생하였습니다. 다시 시도하세요."
+
+msgid "IDS_VPL_OPT_AUTO_PLAY_NEXT_ABB"
+msgstr "다음 파일 자동 재생"
+
+msgid "IDS_VPL_POP_PROCESSING_ING"
+msgstr "진행 중..."
+
+msgid "IDS_MEMO_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "최대 글자 수에 도달하였습니다."
+
+msgid "IDS_MUSIC_OPT_DELETE"
+msgstr "삭제"
+
+msgid "IDS_MUSIC_OPT_DELETE_ALL"
+msgstr "모두 삭제"
+
+msgid "IDS_PB_BODY_NO_SEARCH_RESULT"
+msgstr "검색 결과가 없습니다"
+
+msgid "IDS_VIDEO_HEADER_SELECT_ITEM"
+msgstr "항목 선택"
+
+msgid "IDS_VIDEO_HEADER_SELECT_ITEMS"
+msgstr "항목 선택"
+
+msgid "IDS_CLOCK_BUTTON_CANCEL"
+msgstr "취소"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "완료"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "취소"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DELETE_ABB"
+msgstr "삭제"
+
+msgid "IDS_TPLATFORM_MBODY_STORAGE_LOCATION"
+msgstr "저장 위치"
+
+msgid "IDS_GALLERY_HEADER_SELECT_VIDEO"
+msgstr "동영상 선택"
+

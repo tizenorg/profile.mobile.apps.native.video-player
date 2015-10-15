@@ -1,0 +1,489 @@
+msgid "IDS_VIDEO_OPT_BRIGHTNESS"
+msgstr "Ашықтығы"
+
+msgid "IDS_VIDEO_OPT_MUSIC_M_SOUNDALIVE"
+msgstr "Музыка"
+
+msgid "IDS_VIDEO_OPT_VOICES_M_PERSON"
+msgstr "Дауыстар"
+
+msgid "IDS_VIDEO_BODY_B"
+msgstr "Б"
+
+msgid "IDS_VIDEO_BODY_GB"
+msgstr "Гбайт"
+
+msgid "IDS_VIDEO_BODY_KB"
+msgstr "KБ"
+
+msgid "IDS_VIDEO_BODY_LOCATION"
+msgstr "Орналасу орны"
+
+msgid "IDS_VIDEO_BODY_MB"
+msgstr "МБ"
+
+msgid "IDS_VIDEO_BUTTON_OK"
+msgstr "OK"
+
+msgid "IDS_VIDEO_HEADER_LAST_MODIFIED_M_DATE"
+msgstr "Соңғы өзгертілген"
+
+msgid "IDS_VIDEO_OPT_SHARE"
+msgstr "Бөлісу"
+
+msgid "IDS_VIDEO_HEADER_CANNOT_PLAY_VIDEO_ABB"
+msgstr "Бейнені ойнату мүмкін емес"
+
+msgid "IDS_VIDEO_POP_AN_ERROR_OCCURRED_WITH_THE_SUBTITLES"
+msgstr "Субтитрлерде қате пайда болды."
+
+msgid "IDS_VIDEO_POP_THE_FILE_IS_CORRUPTED_OR_THE_SD_CARD_HAS_BEEN_REMOVED"
+msgstr "Файл бүлінген немесе SD картасы алып тасталған."
+
+msgid "IDS_VIDEO_OPT_DETAILS"
+msgstr "Өзгешеліктері"
+
+msgid "IDS_VIDEO_OPT_TITLE"
+msgstr "Тақырыбы"
+
+msgid "IDS_VIDEO_POP_THIS_VIDEO_WILL_BE_DELETED"
+msgstr "Бұл бейне жойылады."
+
+msgid "IDS_VIDEO_HEADER_SETTINGS"
+msgstr "Қондырғылар"
+
+msgid "IDS_VIDEO_HEADER_UNABLE_TO_PLAY_VIDEO_ABB"
+msgstr "Бейнені ойнату мүмкін емес"
+
+msgid "IDS_VIDEO_MBODY_ALIGNMENT"
+msgstr "Туралау"
+
+msgid "IDS_VIDEO_MBODY_FONT_SIZE"
+msgstr "Қаріп өлшемі"
+
+msgid "IDS_VIDEO_OPT_REPEAT_SETTING_ABB"
+msgstr "Қайталау параметрі"
+
+msgid "IDS_VIDEO_OPT_SUBTITLES_HCC_ABB"
+msgstr "Субтитрлер (ЖТ)"
+
+msgid "IDS_VIDEO_SBODY_CENTRE_M_STATUS"
+msgstr "Орталық"
+
+msgid "IDS_VIDEO_SBODY_LARGE_M_STATUS"
+msgstr "Үлкен"
+
+msgid "IDS_VIDEO_SBODY_LEFT_M_STATUS"
+msgstr "Сол жақ"
+
+msgid "IDS_VIDEO_SBODY_MEDIUM_M_STATUS"
+msgstr "Орташа"
+
+msgid "IDS_VIDEO_SBODY_RIGHT_M_STATUS"
+msgstr "Оң жақ"
+
+msgid "IDS_VIDEO_SBODY_SMALL_M_STATUS"
+msgstr "Кіші"
+
+msgid "IDS_BR_SK_NEXT"
+msgstr "Сосын"
+
+msgid "IDS_BR_SK_PREVIOUS"
+msgstr "Алдыңғы"
+
+msgid "IDS_VPL_POP_DRM_FILES_CANNOT_BE_SHARED"
+msgstr "DRM файлдарын бөлісу мүмкін емес."
+
+msgid "IDS_VPL_OPT_FORMAT"
+msgstr "Пішімдеу"
+
+msgid "IDS_VPL_BODY_UNABLE_TO_PLAY_VIDEO_DURING_CALL"
+msgstr "Қоңырау кезінде бейне ойнатылмайды."
+
+msgid "IDS_VIDEO_OPT_MESSAGE_ABB"
+msgstr "Хабар"
+
+msgid "IDS_VIDEO_OPT_FILE_TRANSFER_ABB"
+msgstr "Файл жіберу"
+
+msgid "IDS_VIDEO_OPT_EMAIL_ABB"
+msgstr "Элек. пошта"
+
+msgid "IDS_VIDEO_BODY_LONGITUDE"
+msgstr "Ұзақтық"
+
+msgid "IDS_VIDEO_BODY_LATITUDE"
+msgstr "Кеңділік"
+
+msgid "IDS_MUSIC_BUTTON_ENABLE_MOTION"
+msgstr "Қозғалыс қосу"
+
+msgid "IDS_VPL_TPOP_SCRUBBING_AT_PSX_SPEED"
+msgstr "%sx жылдамдығында тазалау."
+
+msgid "IDS_VPL_TAB_EXTERNAL_STORAGE"
+msgstr "Сыртқы жад"
+
+msgid "IDS_VPL_POP_VOLUME_M_SOUND"
+msgstr "Дауыстың күші"
+
+msgid "IDS_VPL_POP_UNSUPPORTED_VIDEO_FORMAT"
+msgstr "Қолданылмайтын бейне пішім."
+
+msgid "IDS_VPL_POP_UNSUPPORTED_FILE_TYPE"
+msgstr "Қолдаусыз файл түрі."
+
+msgid "IDS_VPL_POP_UNSUPPORTED_AUDIO_FORMAT"
+msgstr "Қолданылмайтын аудио пішім."
+
+msgid "IDS_VPL_POP_UNABLE_TO_USE_FAST_FORWARD_AND_REWIND_WHEN_NEARBY_DEVICES_ARE_ENABLED"
+msgstr "Жақын құрылғылар қосулы болғанда жылдам және кері айналдыруды пайдалану мүмкін емес."
+
+msgid "IDS_VPL_POP_UNABLE_TO_CAPTURE"
+msgstr "Түсіру мүмкін емес."
+
+msgid "IDS_VPL_POP_ROTATE"
+msgstr "Бұру"
+
+msgid "IDS_VPL_POP_PRESS_THE_BACK_KEY_AGAIN_TO_RETURN_TO_PREVIOUS_SCREEN"
+msgstr "Алдыңғы экранға оралу үшін “Артқа” түймесін басыңыз."
+
+msgid "IDS_VPL_POP_NOT_ENOUGH_MEMORY_DELETE_SOME_ITEMS"
+msgstr "Жад жетыспейт.Көп арналы жою."
+
+msgid "IDS_VPL_POP_BOOKMARK_LIST_FULL_DELETE_SOME_BOOKMARKS"
+msgstr "Кітапша тізімі толған / кейбір қосымшаларды жойыңыз."
+
+msgid "IDS_VPL_OPT_YELLOW_M_COLOUR"
+msgstr "Сары"
+
+msgid "IDS_VPL_OPT_VIRTUAL_71_CH"
+msgstr "Виртуалды 7.1 арна"
+
+msgid "IDS_VPL_OPT_SUBTITLES_HCC_ABB"
+msgstr "Субтитрлер (ЖТ)"
+
+msgid "IDS_VPL_OPT_SOUNDALIVE"
+msgstr "SoundAlive"
+
+msgid "IDS_VPL_OPT_REPEAT_MODE"
+msgstr "Қайталау режимі"
+
+msgid "IDS_VPL_OPT_NO_REPEAT"
+msgstr "Қайталамау"
+
+msgid "IDS_VPL_OPT_MAGENTA_M_COLOUR"
+msgstr "Магента"
+
+msgid "IDS_VPL_OPT_GREEN"
+msgstr "Жасыл"
+
+msgid "IDS_VPL_OPT_CYAN_M_COLOUR"
+msgstr "Көгілдір"
+
+msgid "IDS_VPL_OPT_CUSTOM"
+msgstr "Таңдамалы"
+
+msgid "IDS_VPL_OPT_CURRENT_VIDEO_HONCE_ABB"
+msgstr "Ағым. бейне (1 рет)"
+
+msgid "IDS_VPL_OPT_CONNECTION_INFO_ABB"
+msgstr "Қосылым ақпараты"
+
+msgid "IDS_VPL_OPT_CHANGE_PLAYER"
+msgstr "Ойнатқышты өзгерту"
+
+msgid "IDS_VPL_OPT_CAPTURE"
+msgstr "Түсіру"
+
+msgid "IDS_VPL_OPT_ALLSHARE"
+msgstr "AllShare"
+
+msgid "IDS_VPL_HEADER_SELECT_DEVICE_ABB"
+msgstr "Құрылғыны таңдау"
+
+msgid "IDS_VPL_HEADER_AVAILABLE_DEVICES_ABB"
+msgstr "Қол жетімді құр-лар"
+
+msgid "IDS_VPL_BUTTON_SPEAKER_ABB"
+msgstr "Динамик"
+
+msgid "IDS_VPL_BODY_WHITE"
+msgstr "Ақ"
+
+msgid "IDS_VPL_BODY_UDRGOTHICM_M_FONT"
+msgstr "UDRGothicM"
+
+msgid "IDS_VPL_BODY_UDMINCHO_M_FONT"
+msgstr "UDMincho"
+
+msgid "IDS_VPL_BODY_ROSEMARY_M_FONT"
+msgstr "Rosemary"
+
+msgid "IDS_VPL_BODY_RED_ABB"
+msgstr "Қызыл"
+
+msgid "IDS_VPL_BODY_PS_SECONDS"
+msgstr "%s секунд"
+
+msgid "IDS_VPL_BODY_POP_M_FONT"
+msgstr "POP"
+
+msgid "IDS_VPL_BODY_PLAY_SPEED"
+msgstr "Ойнату жылдамдығы"
+
+msgid "IDS_VPL_BODY_PD_SECS"
+msgstr "%d сек"
+
+msgid "IDS_VPL_BODY_OFF"
+msgstr "Өшірілген"
+
+msgid "IDS_VPL_BODY_NO_TITLE"
+msgstr "Тақырып жоқ"
+
+msgid "IDS_VPL_BODY_MY_DEVICE"
+msgstr "Құрылғым"
+
+msgid "IDS_VPL_BODY_DEFAULT_FONT"
+msgstr "Әдепкі қаріп"
+
+msgid "IDS_VPL_BODY_COOL_JAZZ_M_FONT"
+msgstr "Cool jazz"
+
+msgid "IDS_VPL_BODY_CHOCO_COOKY_M_FONT"
+msgstr "Choco cooky"
+
+msgid "IDS_VPL_BODY_BLUE"
+msgstr "Көк"
+
+msgid "IDS_VPL_BODY_BLACK"
+msgstr "Қара"
+
+msgid "IDS_VPL_BODY_ACTIVATION"
+msgstr "Активтеу"
+
+msgid "IDS_SMEMO_POP_CLOSE_APPLICATION_Q"
+msgstr "Бағдарламаны жабу керек пе?"
+
+msgid "IDS_VIDEO_SK_CANCEL_ABB"
+msgstr "Тоқт"
+
+msgid "IDS_VIDEO_OPT_STOP_AFTER_ALL_ABB"
+msgstr "Тоқтату"
+
+msgid "IDS_VIDEO_OPT_REPEAT_CURRENT_ABB"
+msgstr "Ағымдағыны қайталау"
+
+msgid "IDS_VIDEO_OPT_REPEAT_ALL_ABB"
+msgstr "Барлығын қайталау"
+
+msgid "IDS_VIDEO_BODY_RESOLUTION"
+msgstr "Шешім"
+
+msgid "IDS_VIDEO_BODY_PS_SOUND_EFFECTS_NOT_SUPPORTED_BY_SPEAKER"
+msgstr "%s дыбыстық әсерлері динамик арқылы қолданылмайды."
+
+msgid "IDS_MUSIC_BODY_TURN_PHONE_OVER_TO_MUTE_INCOMING_CALLS_MESSAGE_ALERTS_AND_ALARMS"
+msgstr "Келген қоңыраулардың, хабар сигналдарының және дабылдардың дыбысын өшіру үшін телефонды аударыңыз."
+
+msgid "IDS_ST_BODY_SD_CARD"
+msgstr "SD карта"
+
+msgid "IDS_VPL_TPOP_ONLY_AUDIO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_AUDIO"
+msgstr "Бұл файл арқылы тек аудио деректер берілген. Қазір ойнатылып жатқап аудио."
+
+msgid "IDS_VPL_TPOP_ONLY_VIDEO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_VIDEO"
+msgstr "Бұл файл арқылы тек бейне деректер берілген. Қазір ойнатылып жатқап бейне."
+
+msgid "IDS_ST_BODY_PRIVATE_STORAGE"
+msgstr "Жеке сақтау орны"
+
+msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
+msgstr "Құлаққаптар"
+
+msgid "IDS_MUSIC_OPT_SPEAKER"
+msgstr "Дауыс зорайтқыш"
+
+msgid "IDS_MUSIC_OPT_PAUSE"
+msgstr "Үзіліс"
+
+msgid "IDS_VIDEO_BUTTON_DOWNLOAD"
+msgstr "Жүктеу"
+
+msgid "IDS_VIDEO_MBODY_SELECT_SUBTITLES_HCC"
+msgstr "Субтитрлерді таңдау (ЖТ)"
+
+msgid "IDS_VIDEO_NPBODY_PREVIEW_SUBTITLES_HCC_ABB"
+msgstr "Алд.ала қарап шығу субт-і (ЖТ)"
+
+msgid "IDS_VIDEO_OPT_REPEAT_MODE_ABB"
+msgstr "Қайталау режимі"
+
+msgid "IDS_VIDEO_POP_UNSUPPORTED_FILE_TYPE"
+msgstr "Қолдаусыз файл түрі."
+
+msgid "IDS_VIDEO_OPT_NORMAL_M_SOUND_ABB"
+msgstr "Қалыпты"
+
+msgid "IDS_VIDEO_BODY_VOICE"
+msgstr "Дауыс"
+
+msgid "IDS_VIDEO_BODY_MOVIES"
+msgstr "Фильм"
+
+msgid "IDS_VIDEO_OPT_AUDIO_TRACK_ABB"
+msgstr "Аудио трек"
+
+msgid "IDS_VIDEO_BODY_BUFFERING_ING_ABB"
+msgstr "Буферлеуде..."
+
+msgid "IDS_VIDEO_BODY_FILE_FORMAT"
+msgstr "Файл пішімі"
+
+msgid "IDS_VIDEO_BODY_LANGUAGE"
+msgstr "Тіл"
+
+msgid "IDS_VIDEO_BODY_NO_VIDEOS"
+msgstr "Бейнелер жоқ"
+
+msgid "IDS_VIDEO_BODY_SIZE"
+msgstr "Өлшемі"
+
+msgid "IDS_VIDEO_BUTTON_DONE"
+msgstr "Дайын"
+
+msgid "IDS_VIDEO_BUTTON_REFRESH"
+msgstr "Жаңарту"
+
+msgid "IDS_VIDEO_HEADER_DATE"
+msgstr "Күні"
+
+msgid "IDS_VIDEO_HEADER_LOADING_ING_ABB"
+msgstr "Жүктелуде..."
+
+msgid "IDS_VIDEO_HEADER_SUBTITLES_HCC_ABB2"
+msgstr "Субтитрлер (ЖТ)"
+
+msgid "IDS_VIDEO_IOPT3_DELETE"
+msgstr "Жою"
+
+msgid "IDS_VIDEO_OPT_ADD_TO_HOME_SCREEN_ABB"
+msgstr "Бастапқы экранға қосу"
+
+msgid "IDS_VIDEO_OPT_FACEBOOK_ABB"
+msgstr "Facebook"
+
+msgid "IDS_VIDEO_OPT_HDMI"
+msgstr "HDMI"
+
+msgid "IDS_VIDEO_OPT_NAME"
+msgstr "Аты"
+
+msgid "IDS_VIDEO_OPT_SOUNDALIVE_ABB2"
+msgstr "SoundAlive"
+
+msgid "IDS_VIDEO_OPT_YOUTUBE_ABB"
+msgstr "YouTube"
+
+msgid "IDS_VIDEO_POP_UNABLE_TO_PLAY_VIDEO"
+msgstr "Бейне көруге болмайды."
+
+msgid "IDS_VIDEO_SBODY_NO_SUBTITLES_AVAILABLE_M_STATUS"
+msgstr "Субтитрлер қолжетімді емес"
+
+msgid "IDS_VIDEO_SK3_PLAY"
+msgstr "Ойнату"
+
+msgid "IDS_VIDEO_SK_CLOSE"
+msgstr "Жабу"
+
+msgid "IDS_VPL_POP_INVALID_URL"
+msgstr "Жарамсыз URL."
+
+msgid "IDS_CHATON_HEADER_ERROR_ABB"
+msgstr "Қате"
+
+msgid "IDS_VIDEO_SBODY_DEVICE_STORAGE"
+msgstr "Құрылғы қоймасы"
+
+msgid "IDS_COM_BODY_VIDEO_PLAYER_T_MAINMENU"
+msgstr "Бейне ойнатқыш"
+
+msgid "IDS_VIDEO_OPT_SHARE_VIA"
+msgstr "Бөлісу құралы"
+
+msgid "IDS_VIDEO_POP_A_NETWORK_ERROR_HAS_OCCURRED_TRY_AGAIN"
+msgstr "Желі қатесі пайда болды. Әрекетті қайталаңыз."
+
+msgid "IDS_VIDEO_TPOP_ONLY_AUDIO_DATA_SUPPORTED_BY_THIS_FILE_FORMAT_NOW_PLAYING_AUDIO"
+msgstr "Осы файл пішімі арқылы тек аудио деректерге қолдау көрсетіледі. Қазір ойнатылып жатқан аудио."
+
+msgid "IDS_VIDEO_TPOP_ONLY_VIDEO_DATA_SUPPORTED_BY_THIS_FILE_FORMAT_NOW_PLAYING_VIDEO"
+msgstr "Осы файл пішімі арқылы тек бейне деректеріне қолдау көрсетіледі. Қазір ойнатылып жатқап бейне."
+
+msgid "IDS_VPL_BODY_CENTRE"
+msgstr "Орталық"
+
+msgid "IDS_VPL_BODY_ON"
+msgstr "Қосылған"
+
+msgid "IDS_VPL_BODY_SETTINGS"
+msgstr "Қондырғылар"
+
+msgid "IDS_VPL_BODY_VIDEOS_T_MAINMENU"
+msgstr "Бейнежазбалар"
+
+msgid "IDS_VPL_BUTTON_SHARE"
+msgstr "Бөлісу"
+
+msgid "IDS_VPL_HEADER_DETAILS"
+msgstr "Өзгешеліктері"
+
+msgid "IDS_VPL_OPT_DELETE"
+msgstr "Жою"
+
+msgid "IDS_VPL_POP_BUFFERING_PDP"
+msgstr "%d% буферлеу"
+
+msgid "IDS_VIDEO_OPT_NONE"
+msgstr "Жоқ"
+
+msgid "IDS_VIDEO_BODY_PD_SECS_ABB3"
+msgstr "%d сек"
+
+msgid "IDS_MUSIC_HEADER_SOUNDALIVE_ABB3"
+msgstr "SoundAlive"
+
+msgid "IDS_MP_HEADER_SELECT_AUDIO_DEVICE"
+msgstr "Аудио құрылғыны таңдаңыз"
+
+msgid "IDS_MUSIC_OPT_DELETE"
+msgstr "Жою"
+
+msgid "IDS_CLOCK_BUTTON_CANCEL"
+msgstr "Тоқтату"
+
+msgid "IDS_VIDEO_POP_AN_UNKNOWN_ERROR_HAS_OCCURRED_OR_THE_FILE_MAY_BE_CORRUPT"
+msgstr "Белгісіз қате пайда болды немесе файл бүлінген болуы мүмкін."
+
+msgid "IDS_VIDEO_POP_THIS_FILE_TYPE_IS_NOT_SUPPORTED"
+msgstr "Файл түріне қолдау көрсетілмейді."
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "ДАЙЫН"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "БАС ТАРТУ"
+
+msgid "IDS_TPLATFORM_MBODY_STORAGE_LOCATION"
+msgstr "Сақтау орны"
+
+msgid "IDS_GP_BODY_SUBTITLES_HCC"
+msgstr "Субтитрлер (ЖТ)"
+
+msgid "IDS_GALLERY_BODY_PERSONAL_STORAGE"
+msgstr "Жеке қойма"
+
+msgid "IDS_ACCS_BODY_CAPTIONS_WILL_LOOK_LIKE_THIS"
+msgstr "Тақырыптар осы сияқты көрінеді"
+

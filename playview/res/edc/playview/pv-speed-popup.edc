@@ -1,0 +1,205 @@
+/*
+* Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+
+#include "pv-image.edc"
+
+
+
+#define SPEED_POPUP_WIDTH_HEIGHT_MIN 		0 100
+#define SPEED_POPUP_CONTENT_MIN	 			0 50
+#define SPEED_POPUP_BUTTON_MIN	 			40 40
+externals {
+	   external: "elm";
+	   external: "feedback";
+	}
+collections {
+	plugins {
+	plugin {
+		name: "touch_sound_plugin";
+		source: "feedback";
+		param: "FEEDBACK_TYPE_SOUND FEEDBACK_PATTERN_TAP";
+		}
+	}
+	group {
+		name: "pv.play.speed.popup";
+		parts {
+			part {
+				name:"bg";
+				type: RECT;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: SPEED_POPUP_WIDTH_HEIGHT_MIN;
+					color: 0 0 0 0;
+				}
+			}
+
+			part {
+				name: "pad_l";
+				type: SPACER;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 10 0;
+					max: 10 0;
+					fixed: 1 0;
+					align: 0.0 0.0;
+					rel1 { relative: 0.0 0.0; to: "bg";}
+					rel2 { relative: 0.0 1.0; to: "bg";}
+				}
+			}
+
+			part {
+				name: "pad_r";
+				type: SPACER;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 10 0;
+					max: 10 0;
+					fixed: 1 0;
+					align: 1.0 1.0;
+					rel1 { relative: 1.0 0.0; to: "bg";}
+					rel2 { relative: 1.0 1.0; to: "bg";}
+				}
+			}
+
+			part {
+				name: "pad_t";
+				type: SPACER;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 0 10;
+					fixed: 0 1;
+					align: 0.0 0.0;
+					rel1 { relative: 0.0 0.0; to: "bg";}
+					rel2 { relative: 0.0 0.0; to: "bg";}
+				}
+			}
+
+			part {
+				name: "elm.text.title";
+				type: TEXT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					min: 0 54;
+					fixed: 0 1;
+					align: 0.5 0.0;
+					rel1 { relative: 0.0 1.0; to_y: "pad_t";}
+					rel2 { relative: 1.0 1.0; to_y: "pad_t";}
+					color: 0 0 0 255;
+					text {
+						font: "Tizen:style=Bold";
+						size: 25;
+						align: 0.5 0.5;
+					}
+				}
+			}
+
+			part {
+				name: "elm.swallow.icon.1";
+				type: SWALLOW;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: SPEED_POPUP_BUTTON_MIN;
+					fixed: 1 1;
+					align: 0.0 0.0;
+					rel1 { relative: 1.0 0.2; to_x: "pad_l"; to_y: "elm.text.title"; }
+					rel2 { relative: 1.0 0.2; to_x: "pad_l"; to_y: "elm.text.title"; }
+				}
+			}
+
+			part {
+				name: "elm.swallow.icon.left";
+				type: RECT;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 0;
+					min: 6 0;
+					max: 6 0;
+					fixed: 1 0;
+					align: 0.0 0.5;
+					rel1 { relative: 1.0 1.0; to_x: "elm.swallow.icon.1"; to_y: "elm.text.title"; }
+					rel2 { relative: 1.0 1.0; to_x: "elm.swallow.icon.1"; to_y: "elm.text.title"; }
+				}
+			}
+			part {
+				name: "elm.swallow.icon.right";
+				type: RECT;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 0;
+					min: 6 0;
+					max: 6 0;
+					fixed: 1 0;
+					align: 1.0 0.5;
+					rel1 { relative: 0.0 1.0; to_x: "elm.swallow.icon.2"; to_y: "elm.text.title"; }
+					rel2 { relative: 0.0 1.0; to_x: "elm.swallow.icon.2"; to_y: "elm.text.title"; }
+				}
+			}
+
+			part {
+				name: "elm.swallow.icon.2";
+				type: SWALLOW;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: SPEED_POPUP_BUTTON_MIN;
+					fixed: 1 1;
+					align: 1.0 0.0;
+					rel1 { relative: 0.0 0.2; to_x: "pad_r"; to_y: "elm.text.title"; }
+					rel2 { relative: 0.0 0.2; to_x: "pad_r"; to_y: "elm.text.title"; }
+				}
+			}
+
+			part {
+				name: "elm.swallow.content";
+				type: SWALLOW;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: SPEED_POPUP_CONTENT_MIN;
+					fixed: 0 1;
+					align: 0.5 0.5;
+					rel1 { relative: 1.0 1.0; to_x: "pad_l"; to_y: "elm.text.title"; }
+					rel2 { relative: 0.0 1.0; to_x: "pad_r"; to_y: "elm.text.title"; }
+				}
+			}
+		} /* parts */
+		programs {
+			program{
+			name: "touch_snd";
+			source: "elm.swallow.icon.1";
+			signal: "mouse,clicked,1";
+			action: RUN_PLUGIN "touch_sound_plugin";
+			}
+			program{
+			name: "touch_snd2";
+			source: "elm.swallow.icon.2";
+			signal: "mouse,clicked,1";
+			action: RUN_PLUGIN "touch_sound_plugin";
+			}
+		} /* programs*/
+	} /* group */
+} /* collections */

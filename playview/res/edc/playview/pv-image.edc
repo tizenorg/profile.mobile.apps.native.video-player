@@ -1,0 +1,139 @@
+/*
+* Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+
+images
+{
+	/* main */
+	image: "T01_2_video_thumbnail_default.png" COMP;
+	image: "T01_no_video.png" COMP;
+
+	/* multi window */
+	image: "multi/mw_frame.png" COMP;
+	image: "multi/mw_title_bg.#.png" COMP;
+	image: "multi/mw_title_bg_ef.#.png" COMP;
+	image: "multi/mw_title_bg_focus.#.png" COMP;
+	image: "multi/mw_title_bg_focus_ef.#.png" COMP;
+	image: "multi/mw_title_bg_press.png" COMP;
+	image: "multi/mw_title_focus.#.png" COMP;
+	image: "multi/mw_title_focus_bg_press.#.png" COMP;
+	image: "multi/mw_title_divider.png" COMP;
+	image: "multi/Mw_title_icon_press_bg.png" COMP;
+	image: "multi/my_title_icon_delete.png" COMP;
+	image: "multi/my_title_icon_delete_press.png" COMP;
+	image: "multi/my_title_icon_delete_ef_press.png" COMP;
+	image: "multi/my_title_icon_maximize.png" COMP;
+	image: "multi/my_title_icon_maximize_press.png" COMP;
+	image: "multi/my_title_icon_maximize_ef_press.png" COMP;
+	image: "multi/my_title_icon_mimimize.png" COMP;
+	image: "multi/my_title_icon_mimimize_press.png" COMP;
+	image: "multi/my_title_icon_mimimize_ef_press.png" COMP;
+
+	/* genlist */
+	image: "genlist/preview_settings_bg.png" COMP;
+
+	/* main controller */
+	image: "control/T01-2_control_bg.png" COMP;
+
+	/* normal progressbar */
+	image: "progressbar/T01_2_control_progress_handle.png" COMP;
+	image: "progressbar/T01_2_control_progress_handle_press.png" COMP;
+	image: "progressbar/core_progress_bar.#.png" COMP;
+
+	/* volume */
+    image: "volume/T01_2_volume_popup_bg.png" COMP;
+    image: "volume/T01_2_volume_popup_progress_bar.png" COMP;
+    image: "volume/T01_2_volume_popup_progress_bg.png" COMP;
+    image: "volume/T01_2_volume_popup_progress_handle.png" COMP;
+    image: "volume/T01_2_volume_popup_progress_handle_press.png" COMP;
+
+	/* popup */
+	image: "popup/T01-2_volume_popup_icon_brightness.png" COMP;
+	image: "popup/T01-2_volume_popup_icon_volume01.png" COMP;
+	image: "popup/T01-2_volume_popup_icon_volume02.png" COMP;
+	image: "popup/U05_help_popup_sbeam.png" COMP;
+
+
+	/* dmc */
+	image: "dmc/T01_2_device_connect_arrow_01.png" COMP;
+	image: "dmc/T01_2_device_connect_arrow_02.png" COMP;
+	image: "dmc/T01_2_device_connect_arrow_03.png" COMP;
+	image: "dmc/T01_2_device_connect_arrow_04.png" COMP;
+	image: "dmc/T01_2_image_mydevice.png" COMP;
+	image: "dmc/T01_2_image_tv.png" COMP;
+	image: "dmc/T02_player_all_share.png" COMP;
+
+	/* trim */
+	image: "trim/T01_2_trim_left.png" COMP;
+	image: "trim/T01_2_trim_right.png" COMP;
+	image: "trim/T01_2_trim_picker.png" COMP;
+
+	/* tag */
+	image: "tag/T01-1_logo_accuweather.png" COMP;
+	image: "tag/U07_weather_logo.png" COMP;
+
+	/* nearby device */
+	image: "nearby_device/U04_connecting_ani_01.png" COMP;
+	image: "nearby_device/U04_connecting_ani_02.png" COMP;
+	image: "nearby_device/U04_connecting_ani_03.png" COMP;
+	image: "nearby_device/U04_connecting_ani_04.png" COMP;
+
+	/* chapter */
+	image: "chapter/T01_2_thumbnail_shadow.png" COMP;
+	image: "chapter/T01_2_thumbnail_shadow_h.png" COMP;
+
+	/* allshare voice control*/
+	image: "allshare/voice/T01-2_icon_volume_control_minus.png" COMP;
+	image: "allshare/voice/T01-2_icon_volume_control_minus_dim.png" COMP;
+	image: "allshare/voice/T01-2_icon_volume_control_minus_press.png" COMP;
+	image: "allshare/voice/T01-2_icon_volume_control_mute.png" COMP;
+	image: "allshare/voice/T01-2_icon_volume_control_mute_dim.png" COMP;
+	image: "allshare/voice/T01-2_icon_volume_control_mute_press.png" COMP;
+	image: "allshare/voice/T01-2_icon_volume_control_plus.png" COMP;
+	image: "allshare/voice/T01-2_icon_volume_control_plus_dim.png" COMP;
+	image: "allshare/voice/T01-2_icon_volume_control_plus_press.png" COMP;
+	image: "allshare/voice/T01-2_icon_volume_control_bg.png" COMP;
+
+	/*minicontroller*/
+	image: "mini_controller/btn_video_prev_nor.png" COMP;
+	image: "mini_controller/btn_music_prev_press.png" COMP;
+	image: "mini_controller/btn_music_play_nor.png" COMP;
+	image: "mini_controller/btn_music_play_press.png" COMP;
+	image: "mini_controller/btn_music_pause_nor.png" COMP;
+	image: "mini_controller/btn_music_next_nor.png" COMP;
+	image: "mini_controller/btn_music_next_press.png" COMP;
+	image: "mini_controller/btn_close_nor.png" COMP;
+	image: "mini_controller/btn_close_press.png" COMP;
+	image: "mini_controller/music_progress_bg.png" COMP;
+	image: "mini_controller/music_progress.png" COMP;
+
+	/* micro controller */
+	image: "micro_control/T01_2_micro_control_down_01.png" COMP;
+	image: "micro_control/T01_2_micro_control_down_02.png" COMP;
+	image: "micro_control/T01_2_micro_control_down_03.png" COMP;
+	image: "micro_control/T01_2_micro_control_up_01.png" COMP;
+	image: "micro_control/T01_2_micro_control_up_02.png" COMP;
+	image: "micro_control/T01_2_micro_control_up_03.png" COMP;
+
+	/* jump */
+	image: "jump/T01_2_jump_L_01.png" COMP;
+	image: "jump/T01_2_jump_L_02.png" COMP;
+	image: "jump/T01_2_jump_L_03.png" COMP;
+	image: "jump/T01_2_jump_R_01.png" COMP;
+	image: "jump/T01_2_jump_R_02.png" COMP;
+	image: "jump/T01_2_jump_R_03.png" COMP;
+}
+

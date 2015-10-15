@@ -1,0 +1,390 @@
+msgid "IDS_VIDEO_OPT_DOWNLOAD"
+msgstr "Descarregar"
+
+msgid "IDS_VIDEO_POP_1_FOLDER_WILL_BE_DOWNLOADED"
+msgstr "Es descarregarà 1 carpeta."
+
+msgid "IDS_VIDEO_POP_1_VIDEO_WILL_BE_DOWNLOADED"
+msgstr "Es descarregarà 1 vídeo."
+
+msgid "IDS_VIDEO_POP_ALL_FOLDERS_WILL_BE_DOWNLOADED"
+msgstr "Es descarregaran totes les carpetes."
+
+msgid "IDS_VIDEO_POP_ALL_VIDEOS_WILL_BE_DOWNLOADED"
+msgstr "Es descarregaran tots els vídeos."
+
+msgid "IDS_VIDEO_POP_PD_FOLDERS_WILL_BE_DOWNLOADED"
+msgstr "Es descarregaran %d carpetes."
+
+msgid "IDS_VIDEO_POP_PD_VIDEOS_WILL_BE_DOWNLOADED"
+msgstr "Es descarregaran %d vídeos."
+
+msgid "IDS_VIDEO_TPOP_MOBILE_DATA_TURNED_OFF_CONNECT_TO_WI_FI_NETWORK_INSTEAD_OR_TURN_ON_MOBILE_DATA_AND_TRY_AGAIN"
+msgstr "Dades mòbils desactivades. Connecti's a una xarxa Wi-Fi o activi les dades mòbils i torni-ho a intentar."
+
+msgid "IDS_GALLERY_OPT_PRIVATE_M_CONTENT"
+msgstr "Privat"
+
+msgid "IDS_VIDEO_BODY_B"
+msgstr "B"
+
+msgid "IDS_VIDEO_BODY_GB"
+msgstr "GB"
+
+msgid "IDS_VIDEO_BODY_KB"
+msgstr "KB"
+
+msgid "IDS_VIDEO_BODY_LOCATION"
+msgstr "Ubicació"
+
+msgid "IDS_VIDEO_BODY_MB"
+msgstr "MB"
+
+msgid "IDS_VIDEO_BODY_UNKNOWN"
+msgstr "Desconegut"
+
+msgid "IDS_VIDEO_BUTTON_OK"
+msgstr "Acceptar"
+
+msgid "IDS_VIDEO_HEADER_1_FOLDER"
+msgstr "1 carpeta"
+
+msgid "IDS_VIDEO_HEADER_1_VIDEO"
+msgstr "1 vídeo"
+
+msgid "IDS_VIDEO_HEADER_ALL"
+msgstr "Tot"
+
+msgid "IDS_VIDEO_HEADER_FROM_DEVICE"
+msgstr "Des del dispositiu"
+
+msgid "IDS_VIDEO_HEADER_FROM_DROPBOX"
+msgstr "Des de Dropbox"
+
+msgid "IDS_VIDEO_HEADER_LAST_MODIFIED_M_DATE"
+msgstr "Última modificació"
+
+msgid "IDS_VIDEO_OPT_CONTENT_TO_DISPLAY"
+msgstr "Contingut per mostrar"
+
+msgid "IDS_VIDEO_OPT_SEARCH"
+msgstr "Cercar"
+
+msgid "IDS_VIDEO_OPT_SHARE"
+msgstr "Compartir"
+
+msgid "IDS_VIDEO_POP_1_FOLDER_WILL_BE_DELETED"
+msgstr "S'esborrarà 1 carpeta."
+
+msgid "IDS_VIDEO_TPOP_DELETING_ING"
+msgstr "Esborrant..."
+
+msgid "IDS_VIDEO_BODY_AFTER_YOU_RECORD_VIDEOS_USING_THE_CAMERA_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Després de gravar vídeos amb la càmera, es mostraran aquí."
+
+msgid "IDS_VIDEO_HEADER_PD_VIDEOS"
+msgstr "%d vídeos"
+
+msgid "IDS_VIDEO_HEADER_VIDEO"
+msgstr "Vídeo"
+
+msgid "IDS_VIDEO_NPBODY_NO_VIDEOS"
+msgstr "No hi ha vídeos"
+
+msgid "IDS_VIDEO_OPT_DETAILS"
+msgstr "Detalls"
+
+msgid "IDS_VIDEO_OPT_FOLDER"
+msgstr "Carpeta"
+
+msgid "IDS_VIDEO_OPT_LIST"
+msgstr "Llista"
+
+msgid "IDS_VIDEO_OPT_RECENTLY_ADDED_ABB"
+msgstr "Afegits fa poc"
+
+msgid "IDS_VIDEO_OPT_RECENTLY_VIEWED_ABB"
+msgstr "Vist fa poc"
+
+msgid "IDS_VIDEO_OPT_RENAME"
+msgstr "Canviar nom"
+
+msgid "IDS_VIDEO_OPT_SIZE"
+msgstr "Mida"
+
+msgid "IDS_VIDEO_OPT_SORT_BY"
+msgstr "Ordenar per"
+
+msgid "IDS_VIDEO_OPT_TITLE"
+msgstr "Títol"
+
+msgid "IDS_VIDEO_OPT_TYPE"
+msgstr "Tipus"
+
+msgid "IDS_VIDEO_OPT_VIEW_AS"
+msgstr "Veure com a"
+
+msgid "IDS_VIDEO_POP_ALL_VIDEOS_WILL_BE_DELETED"
+msgstr "S'esborraran tots els vídeos"
+
+msgid "IDS_VIDEO_POP_PD_FOLDERS_WILL_BE_DELETED"
+msgstr "S'esborraran %d carpetes"
+
+msgid "IDS_VIDEO_POP_PD_VIDEOS_WILL_BE_DELETED"
+msgstr "S'esborraran %d vídeos"
+
+msgid "IDS_VIDEO_POP_THIS_FOLDER_WILL_BE_DELETED"
+msgstr "S'esborrarà aquesta carpeta"
+
+msgid "IDS_VIDEO_HEADER_PD_FOLDERS"
+msgstr "%d carpetes"
+
+msgid "IDS_VIDEO_HEADER_SETTINGS"
+msgstr "Ajustaments"
+
+msgid "IDS_VIDEO_HEADER_UNABLE_TO_PLAY_VIDEO_ABB"
+msgstr "No es pot reproduir el vídeo"
+
+msgid "IDS_VIDEO_MBODY_ALIGNMENT"
+msgstr "Alineació"
+
+msgid "IDS_VIDEO_MBODY_FONT_SIZE"
+msgstr "Mida font"
+
+msgid "IDS_VIDEO_OPT_REPEAT_SETTING_ABB"
+msgstr "Repetir ajustament"
+
+msgid "IDS_VIDEO_OPT_SUBTITLES_HCC_ABB"
+msgstr "Subtítols"
+
+msgid "IDS_VIDEO_POP_ALL_FOLDERS_WILL_BE_DELETED"
+msgstr "S'esborraran totes les carpetes"
+
+msgid "IDS_VIDEO_SBODY_CENTRE_M_STATUS"
+msgstr "Centre"
+
+msgid "IDS_VIDEO_SBODY_LARGE_M_STATUS"
+msgstr "Gran"
+
+msgid "IDS_VIDEO_SBODY_LEFT_M_STATUS"
+msgstr "Esquerra"
+
+msgid "IDS_VIDEO_SBODY_MEDIUM_M_STATUS"
+msgstr "Mitjana"
+
+msgid "IDS_VIDEO_SBODY_RIGHT_M_STATUS"
+msgstr "Dreta"
+
+msgid "IDS_VIDEO_SBODY_SMALL_M_STATUS"
+msgstr "Petita"
+
+msgid "IDS_VIDEO_TPOP_FILE_NAME_ALREADY_IN_USE"
+msgstr "El nom de fitxer està en ús."
+
+msgid "IDS_GALLERY_OPT_REMOVE_FROM_PRIVATE"
+msgstr "Esborrar de Privat"
+
+msgid "IDS_GALLERY_OPT_MOVE_TO_PRIVATE"
+msgstr "Moure a Privat"
+
+msgid "IDS_IV_POP_ENTRY_IS_EMPTY"
+msgstr "L'entrada és buida"
+
+msgid "IDS_VPL_OPT_FORMAT"
+msgstr "Format"
+
+msgid "IDS_VPL_BODY_UNABLE_TO_PLAY_VIDEO_DURING_CALL"
+msgstr "No es pot reproduir un vídeo durant una trucada"
+
+msgid "IDS_CLOUD_BODY_DROPBOX_ABB"
+msgstr "Dropbox"
+
+msgid "IDS_VIDEO_POP_THIS_FILE_IS_UNAVAILABLE_WHILE_OFFLINE_CHECK_NETWORK_CONNECTION_AND_TRY_AGAIN"
+msgstr "Aquest fitxer no està disponible quan està desconnectat. Comprovi la connexió de xarxa i torni-ho a intentar."
+
+msgid "IDS_VIDEO_POP_THE_SELECTED_ITEM_WILL_BE_MOVED_TO_PS"
+msgstr "L'element seleccionat es mourà a %s"
+
+msgid "IDS_VIDEO_POP_THE_SELECTED_ITEMS_WILL_BE_MOVED_TO_PS"
+msgstr "Els elements seleccionats es mouran a %s"
+
+msgid "IDS_VIDEO_POP_REMOVING_ING"
+msgstr "Eliminant..."
+
+msgid "IDS_VIDEO_POP_MOVING_ING"
+msgstr "Movent..."
+
+msgid "IDS_VIDEO_POP_FAILED_TO_MOVE_TO_PERSONAL_STORAGE"
+msgstr "Error en moure a l'emmagatzematge personal."
+
+msgid "IDS_VIDEO_POP_FAILED_TO_MOVE_TO_NORMAL_STORAGE"
+msgstr "Error en moure a l'emmagatzematge normal."
+
+msgid "IDS_VIDEO_OPT_MESSAGE_ABB"
+msgstr "Missatge"
+
+msgid "IDS_VIDEO_OPT_FOLDERS_ABB"
+msgstr "Carpetes"
+
+msgid "IDS_VIDEO_OPT_EMAIL_ABB"
+msgstr "Correu elec"
+
+msgid "IDS_VIDEO_OPT_DATE_HMOST_RECENT_ABB"
+msgstr "Data (més recents)"
+
+msgid "IDS_VIDEO_HEADER_PD_SELECTED"
+msgstr "%d seleccionat"
+
+msgid "IDS_VIDEO_HEADER_DELETE_VIDEOS"
+msgstr "Esborrar vídeos"
+
+msgid "IDS_VIDEO_HEADER_DELETE_VIDEO"
+msgstr "Esborrar vídeo"
+
+msgid "IDS_VIDEO_BUTTON_MOVE_ABB"
+msgstr "Moure"
+
+msgid "IDS_VIDEO_BODY_LONGITUDE"
+msgstr "Longitud"
+
+msgid "IDS_VIDEO_BODY_LATITUDE"
+msgstr "Latitud"
+
+msgid "IDS_VIDEO_BODY_AFTER_YOU_RECORD_VIDEOS_USING_THE_CAMERA_VIDEOS_WILL_BE_SHOWN"
+msgstr "Després de gravar vídeos amb la càmera, es mostraran els vídeos"
+
+msgid "IDS_VIDEO_SK_CANCEL_ABB"
+msgstr "Canc"
+
+msgid "IDS_VIDEO_OPT_STOP_AFTER_ALL_ABB"
+msgstr "Aturar després tot"
+
+msgid "IDS_VIDEO_OPT_REPEAT_CURRENT_ABB"
+msgstr "Repetir actual"
+
+msgid "IDS_VIDEO_OPT_REPEAT_ALL_ABB"
+msgstr "Repetir tot"
+
+msgid "IDS_VIDEO_BODY_RESOLUTION"
+msgstr "Resolució"
+
+msgid "IDS_VIDEO_BUTTON_DELETE"
+msgstr "Esborr"
+
+msgid "IDS_ST_OPT_DELETE_ALL"
+msgstr "Esborrar tot"
+
+msgid "IDS_VPL_TPOP_ONLY_AUDIO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_AUDIO"
+msgstr "Aquest fitxer només admet dades d'àudio. Ara està reproduint àudio."
+
+msgid "IDS_VPL_TPOP_ONLY_VIDEO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_VIDEO"
+msgstr "Aquest fitxer només admet dades de vídeo. Ara està reproduint vídeo."
+
+msgid "IDS_MUSIC_OPT_RENAME"
+msgstr "Canviar nom"
+
+msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
+msgstr "Auriculars"
+
+msgid "IDS_VIDEO_BUTTON_DOWNLOAD"
+msgstr "Descarregar"
+
+msgid "IDS_TPLATFORM_BODY_OFF"
+msgstr "Desactivat"
+
+msgid "IDS_TPLATFORM_BODY_ON"
+msgstr "Activat"
+
+msgid "IDS_VIDEO_POP_1_VIDEO_WILL_BE_DELETED"
+msgstr "S'esborrarà 1 vídeo."
+
+msgid "IDS_SWALL_HEADER_INVALID_CHARACTER"
+msgstr "Caràcter no vàlids"
+
+msgid "IDS_VIDEO_BODY_NO_SEARCH_RESULTS"
+msgstr "No hi ha cap resultat de cerca"
+
+msgid "IDS_GALLERY_HEADER_SELECT"
+msgstr "Seleccionar"
+
+msgid "IDS_VIDEO_BODY_LAST_MODIFIED_M_DATE_ABB"
+msgstr "Última modificació"
+
+msgid "IDS_VIDEO_BUTTON_DONE"
+msgstr "Fet"
+
+msgid "IDS_VIDEO_HEADER_DATE"
+msgstr "Data"
+
+msgid "IDS_VIDEO_HEADER_LATITUDE"
+msgstr "Latitud"
+
+msgid "IDS_VIDEO_OPT_NAME"
+msgstr "Nom"
+
+msgid "IDS_VIDEO_OPT_NAME_HA_Z_ABB"
+msgstr "Nom (A-Z)"
+
+msgid "IDS_VIDEO_OPT_VIDEOS"
+msgstr "Vídeos"
+
+msgid "IDS_VIDEO_TPOP_MAXIMUM_NUMBER_OF_ATTACHMENTS_HPD_EXCEEDED"
+msgstr "S'ha excedit el nombre màxim d'adjunts (%d)."
+
+msgid "IDS_VIDEO_HEADER_SELECT_ALL"
+msgstr "Seleccionar tot"
+
+msgid "IDS_VIDEO_SBODY_DEVICE_STORAGE"
+msgstr "Emmagatzematge de dispositiu"
+
+msgid "IDS_VIDEO_SBODY_SD_CARD"
+msgstr "Targeta SD"
+
+msgid "IDS_VIDEO_OPT_SHARE_VIA"
+msgstr "Compartir mitjançant"
+
+msgid "IDS_VIDEO_POP_A_NETWORK_ERROR_HAS_OCCURRED_TRY_AGAIN"
+msgstr "S'ha produït un error de xarxa. Torni a intentar-ho."
+
+msgid "IDS_VPL_OPT_AUTO_PLAY_NEXT_ABB"
+msgstr "Rep. aut. següent"
+
+msgid "IDS_VPL_POP_PROCESSING_ING"
+msgstr "Processant..."
+
+msgid "IDS_MEMO_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "S'ha assolit el nombre màxim de caràcters."
+
+msgid "IDS_MUSIC_OPT_DELETE"
+msgstr "Esborrar"
+
+msgid "IDS_MUSIC_OPT_DELETE_ALL"
+msgstr "Esborrar tot"
+
+msgid "IDS_PB_BODY_NO_SEARCH_RESULT"
+msgstr "No hi ha resultats de cerca"
+
+msgid "IDS_VIDEO_HEADER_SELECT_ITEM"
+msgstr "Seleccionar element"
+
+msgid "IDS_VIDEO_HEADER_SELECT_ITEMS"
+msgstr "Seleccionar elements"
+
+msgid "IDS_CLOCK_BUTTON_CANCEL"
+msgstr "Cancel"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "REALITZAT"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "CANCEL·LAR"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DELETE_ABB"
+msgstr "ESBORRAR"
+
+msgid "IDS_TPLATFORM_MBODY_STORAGE_LOCATION"
+msgstr "Ubicació d'emmagatzematge"
+
+msgid "IDS_GALLERY_HEADER_SELECT_VIDEO"
+msgstr "Seleccionar vídeo"
+

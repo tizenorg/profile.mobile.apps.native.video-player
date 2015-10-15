@@ -1,0 +1,489 @@
+msgid "IDS_VIDEO_OPT_BRIGHTNESS"
+msgstr "Parlaklık"
+
+msgid "IDS_VIDEO_OPT_MUSIC_M_SOUNDALIVE"
+msgstr "Müzik"
+
+msgid "IDS_VIDEO_OPT_VOICES_M_PERSON"
+msgstr "Sesler"
+
+msgid "IDS_VIDEO_BODY_B"
+msgstr "B"
+
+msgid "IDS_VIDEO_BODY_GB"
+msgstr "GB"
+
+msgid "IDS_VIDEO_BODY_KB"
+msgstr "KB"
+
+msgid "IDS_VIDEO_BODY_LOCATION"
+msgstr "Konum"
+
+msgid "IDS_VIDEO_BODY_MB"
+msgstr "MB"
+
+msgid "IDS_VIDEO_BUTTON_OK"
+msgstr "Tamam"
+
+msgid "IDS_VIDEO_HEADER_LAST_MODIFIED_M_DATE"
+msgstr "Son değiştirilme"
+
+msgid "IDS_VIDEO_OPT_SHARE"
+msgstr "Paylaş"
+
+msgid "IDS_VIDEO_HEADER_CANNOT_PLAY_VIDEO_ABB"
+msgstr "Video oynatılamıyor"
+
+msgid "IDS_VIDEO_POP_AN_ERROR_OCCURRED_WITH_THE_SUBTITLES"
+msgstr "Altyazılarla ilgili bir hata oluştu."
+
+msgid "IDS_VIDEO_POP_THE_FILE_IS_CORRUPTED_OR_THE_SD_CARD_HAS_BEEN_REMOVED"
+msgstr "Dosya bozuk veya SD kartı çıkarılmış."
+
+msgid "IDS_VIDEO_OPT_DETAILS"
+msgstr "Ayrıntılar"
+
+msgid "IDS_VIDEO_OPT_TITLE"
+msgstr "Başlık"
+
+msgid "IDS_VIDEO_POP_THIS_VIDEO_WILL_BE_DELETED"
+msgstr "Bu video silinecek."
+
+msgid "IDS_VIDEO_HEADER_SETTINGS"
+msgstr "Ayarlar"
+
+msgid "IDS_VIDEO_HEADER_UNABLE_TO_PLAY_VIDEO_ABB"
+msgstr "Video oynatılamıyor"
+
+msgid "IDS_VIDEO_MBODY_ALIGNMENT"
+msgstr "Hizalama"
+
+msgid "IDS_VIDEO_MBODY_FONT_SIZE"
+msgstr "Yazı boyutu"
+
+msgid "IDS_VIDEO_OPT_REPEAT_SETTING_ABB"
+msgstr "Ayarı tekrarla"
+
+msgid "IDS_VIDEO_OPT_SUBTITLES_HCC_ABB"
+msgstr "Altyazılar (CC)"
+
+msgid "IDS_VIDEO_SBODY_CENTRE_M_STATUS"
+msgstr "Merkez"
+
+msgid "IDS_VIDEO_SBODY_LARGE_M_STATUS"
+msgstr "Büyük"
+
+msgid "IDS_VIDEO_SBODY_LEFT_M_STATUS"
+msgstr "Sol"
+
+msgid "IDS_VIDEO_SBODY_MEDIUM_M_STATUS"
+msgstr "Orta"
+
+msgid "IDS_VIDEO_SBODY_RIGHT_M_STATUS"
+msgstr "Sağ"
+
+msgid "IDS_VIDEO_SBODY_SMALL_M_STATUS"
+msgstr "Küçük"
+
+msgid "IDS_BR_SK_NEXT"
+msgstr "İleri"
+
+msgid "IDS_BR_SK_PREVIOUS"
+msgstr "Önceki"
+
+msgid "IDS_VPL_POP_DRM_FILES_CANNOT_BE_SHARED"
+msgstr "DRM dosyaları paylaşılamaz"
+
+msgid "IDS_VPL_OPT_FORMAT"
+msgstr "Biçim"
+
+msgid "IDS_VPL_BODY_UNABLE_TO_PLAY_VIDEO_DURING_CALL"
+msgstr "Görüşme sırasında video oynatılamıyor."
+
+msgid "IDS_VIDEO_OPT_MESSAGE_ABB"
+msgstr "Mesaj"
+
+msgid "IDS_VIDEO_OPT_FILE_TRANSFER_ABB"
+msgstr "Dosya transferi"
+
+msgid "IDS_VIDEO_OPT_EMAIL_ABB"
+msgstr "E-posta"
+
+msgid "IDS_VIDEO_BODY_LONGITUDE"
+msgstr "Boylam"
+
+msgid "IDS_VIDEO_BODY_LATITUDE"
+msgstr "Enlem"
+
+msgid "IDS_MUSIC_BUTTON_ENABLE_MOTION"
+msgstr "Hareket etkinleştir"
+
+msgid "IDS_VPL_TPOP_SCRUBBING_AT_PSX_SPEED"
+msgstr "%sx hızda sarma."
+
+msgid "IDS_VPL_TAB_EXTERNAL_STORAGE"
+msgstr "Harici bellek"
+
+msgid "IDS_VPL_POP_VOLUME_M_SOUND"
+msgstr "Ses seviyesi"
+
+msgid "IDS_VPL_POP_UNSUPPORTED_VIDEO_FORMAT"
+msgstr "Video biçimi desteklenmiyor."
+
+msgid "IDS_VPL_POP_UNSUPPORTED_FILE_TYPE"
+msgstr "Dosya türü desteklenmiyor."
+
+msgid "IDS_VPL_POP_UNSUPPORTED_AUDIO_FORMAT"
+msgstr "Ses biçimi desteklenmiyor."
+
+msgid "IDS_VPL_POP_UNABLE_TO_USE_FAST_FORWARD_AND_REWIND_WHEN_NEARBY_DEVICES_ARE_ENABLED"
+msgstr "Civardaki cihazlar etkinken ileri veya geri sarma kullanılamaz."
+
+msgid "IDS_VPL_POP_UNABLE_TO_CAPTURE"
+msgstr "Yakalanamıyor."
+
+msgid "IDS_VPL_POP_ROTATE"
+msgstr "Döndür"
+
+msgid "IDS_VPL_POP_PRESS_THE_BACK_KEY_AGAIN_TO_RETURN_TO_PREVIOUS_SCREEN"
+msgstr "Önceki ekrana tekrar dönmek için geri tuşuna basın."
+
+msgid "IDS_VPL_POP_NOT_ENOUGH_MEMORY_DELETE_SOME_ITEMS"
+msgstr "Yeterli hafıza yok. Bazı öğeleri silin."
+
+msgid "IDS_VPL_POP_BOOKMARK_LIST_FULL_DELETE_SOME_BOOKMARKS"
+msgstr "Yer işaretleri listesi dolu.  Bazılarını silin."
+
+msgid "IDS_VPL_OPT_YELLOW_M_COLOUR"
+msgstr "Sarı"
+
+msgid "IDS_VPL_OPT_VIRTUAL_71_CH"
+msgstr "Virtual 7.1 ch"
+
+msgid "IDS_VPL_OPT_SUBTITLES_HCC_ABB"
+msgstr "Altyazılar (CC)"
+
+msgid "IDS_VPL_OPT_SOUNDALIVE"
+msgstr "SoundAlive"
+
+msgid "IDS_VPL_OPT_REPEAT_MODE"
+msgstr "Tekrarlama modu"
+
+msgid "IDS_VPL_OPT_NO_REPEAT"
+msgstr "Tekrarlama yok"
+
+msgid "IDS_VPL_OPT_MAGENTA_M_COLOUR"
+msgstr "Macenta"
+
+msgid "IDS_VPL_OPT_GREEN"
+msgstr "Yeşil"
+
+msgid "IDS_VPL_OPT_CYAN_M_COLOUR"
+msgstr "Cam göbeği"
+
+msgid "IDS_VPL_OPT_CUSTOM"
+msgstr "Özel"
+
+msgid "IDS_VPL_OPT_CURRENT_VIDEO_HONCE_ABB"
+msgstr "Gçrl video (bir kez)"
+
+msgid "IDS_VPL_OPT_CONNECTION_INFO_ABB"
+msgstr "Bağlantı bilgisi"
+
+msgid "IDS_VPL_OPT_CHANGE_PLAYER"
+msgstr "Oynatıcı değiştir"
+
+msgid "IDS_VPL_OPT_CAPTURE"
+msgstr "Yakala"
+
+msgid "IDS_VPL_OPT_ALLSHARE"
+msgstr "AllShare"
+
+msgid "IDS_VPL_HEADER_SELECT_DEVICE_ABB"
+msgstr "Cihaz seçin"
+
+msgid "IDS_VPL_HEADER_AVAILABLE_DEVICES_ABB"
+msgstr "Kllanılablr cihazlar"
+
+msgid "IDS_VPL_BUTTON_SPEAKER_ABB"
+msgstr "Hoparlör"
+
+msgid "IDS_VPL_BODY_WHITE"
+msgstr "Beyaz"
+
+msgid "IDS_VPL_BODY_UDRGOTHICM_M_FONT"
+msgstr "UDRGothicM"
+
+msgid "IDS_VPL_BODY_UDMINCHO_M_FONT"
+msgstr "UDMincho"
+
+msgid "IDS_VPL_BODY_ROSEMARY_M_FONT"
+msgstr "Rosemary"
+
+msgid "IDS_VPL_BODY_RED_ABB"
+msgstr "Kırmızı"
+
+msgid "IDS_VPL_BODY_PS_SECONDS"
+msgstr "%s saniye"
+
+msgid "IDS_VPL_BODY_POP_M_FONT"
+msgstr "POP"
+
+msgid "IDS_VPL_BODY_PLAY_SPEED"
+msgstr "Oynatma hızı"
+
+msgid "IDS_VPL_BODY_PD_SECS"
+msgstr "%d sn"
+
+msgid "IDS_VPL_BODY_OFF"
+msgstr "Kapalı"
+
+msgid "IDS_VPL_BODY_NO_TITLE"
+msgstr "Başlık yok"
+
+msgid "IDS_VPL_BODY_MY_DEVICE"
+msgstr "Cihazım"
+
+msgid "IDS_VPL_BODY_DEFAULT_FONT"
+msgstr "Varsayılan yazı tipi"
+
+msgid "IDS_VPL_BODY_COOL_JAZZ_M_FONT"
+msgstr "Cool jazz"
+
+msgid "IDS_VPL_BODY_CHOCO_COOKY_M_FONT"
+msgstr "Çikolatalı kurabiye"
+
+msgid "IDS_VPL_BODY_BLUE"
+msgstr "Mavi"
+
+msgid "IDS_VPL_BODY_BLACK"
+msgstr "Siyah"
+
+msgid "IDS_VPL_BODY_ACTIVATION"
+msgstr "Etkinleştirme"
+
+msgid "IDS_SMEMO_POP_CLOSE_APPLICATION_Q"
+msgstr "Uygulama kapatılsın mı ?"
+
+msgid "IDS_VIDEO_SK_CANCEL_ABB"
+msgstr "İptal"
+
+msgid "IDS_VIDEO_OPT_STOP_AFTER_ALL_ABB"
+msgstr "Tümünden sonra drdr"
+
+msgid "IDS_VIDEO_OPT_REPEAT_CURRENT_ABB"
+msgstr "Geçerli ortm tkrarla"
+
+msgid "IDS_VIDEO_OPT_REPEAT_ALL_ABB"
+msgstr "Tümünü tekrarla"
+
+msgid "IDS_VIDEO_BODY_RESOLUTION"
+msgstr "Çözünürlük"
+
+msgid "IDS_VIDEO_BODY_PS_SOUND_EFFECTS_NOT_SUPPORTED_BY_SPEAKER"
+msgstr "Hoparlor %s ses efektlerini desteklemiyor."
+
+msgid "IDS_MUSIC_BODY_TURN_PHONE_OVER_TO_MUTE_INCOMING_CALLS_MESSAGE_ALERTS_AND_ALARMS"
+msgstr "Telefonunuzu döndürerek gelen aramaları, mesaj uyarılarını ve alarmları susturun."
+
+msgid "IDS_ST_BODY_SD_CARD"
+msgstr "SD kart"
+
+msgid "IDS_VPL_TPOP_ONLY_AUDIO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_AUDIO"
+msgstr "Bu dosya sadece ses verilerini destekliyor. Şu anda ses oynatılıyor."
+
+msgid "IDS_VPL_TPOP_ONLY_VIDEO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_VIDEO"
+msgstr "Bu dosya sadece video verilerini destekliyor. Şu anda video oynatılıyor."
+
+msgid "IDS_ST_BODY_PRIVATE_STORAGE"
+msgstr "Özel depolama"
+
+msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
+msgstr "Kulaklıklar"
+
+msgid "IDS_MUSIC_OPT_SPEAKER"
+msgstr "Hoparlör"
+
+msgid "IDS_MUSIC_OPT_PAUSE"
+msgstr "Duraklat"
+
+msgid "IDS_VIDEO_BUTTON_DOWNLOAD"
+msgstr "İndir"
+
+msgid "IDS_VIDEO_MBODY_SELECT_SUBTITLES_HCC"
+msgstr "Altyazı (CC) seçme"
+
+msgid "IDS_VIDEO_NPBODY_PREVIEW_SUBTITLES_HCC_ABB"
+msgstr "Altyazıları (CC) önizleme"
+
+msgid "IDS_VIDEO_OPT_REPEAT_MODE_ABB"
+msgstr "Tekrar modu"
+
+msgid "IDS_VIDEO_POP_UNSUPPORTED_FILE_TYPE"
+msgstr "Dosya türü desteklenmiyor."
+
+msgid "IDS_VIDEO_OPT_NORMAL_M_SOUND_ABB"
+msgstr "Normal"
+
+msgid "IDS_VIDEO_BODY_VOICE"
+msgstr "Ses"
+
+msgid "IDS_VIDEO_BODY_MOVIES"
+msgstr "Filmler"
+
+msgid "IDS_VIDEO_OPT_AUDIO_TRACK_ABB"
+msgstr "Ses parçası"
+
+msgid "IDS_VIDEO_BODY_BUFFERING_ING_ABB"
+msgstr "Arabellğe al."
+
+msgid "IDS_VIDEO_BODY_FILE_FORMAT"
+msgstr "Dosya biçimi"
+
+msgid "IDS_VIDEO_BODY_LANGUAGE"
+msgstr "Dil"
+
+msgid "IDS_VIDEO_BODY_NO_VIDEOS"
+msgstr "Video yok"
+
+msgid "IDS_VIDEO_BODY_SIZE"
+msgstr "Boyut"
+
+msgid "IDS_VIDEO_BUTTON_DONE"
+msgstr "Tamam"
+
+msgid "IDS_VIDEO_BUTTON_REFRESH"
+msgstr "Yenile"
+
+msgid "IDS_VIDEO_HEADER_DATE"
+msgstr "Tarih"
+
+msgid "IDS_VIDEO_HEADER_LOADING_ING_ABB"
+msgstr "Yükleniyor..."
+
+msgid "IDS_VIDEO_HEADER_SUBTITLES_HCC_ABB2"
+msgstr "Altyazılar (CC)"
+
+msgid "IDS_VIDEO_IOPT3_DELETE"
+msgstr "Sil"
+
+msgid "IDS_VIDEO_OPT_ADD_TO_HOME_SCREEN_ABB"
+msgstr "Ana ekrana ekle"
+
+msgid "IDS_VIDEO_OPT_FACEBOOK_ABB"
+msgstr "Facebook"
+
+msgid "IDS_VIDEO_OPT_HDMI"
+msgstr "HDMI"
+
+msgid "IDS_VIDEO_OPT_NAME"
+msgstr "İsim"
+
+msgid "IDS_VIDEO_OPT_SOUNDALIVE_ABB2"
+msgstr "SoundAlive"
+
+msgid "IDS_VIDEO_OPT_YOUTUBE_ABB"
+msgstr "YouTube"
+
+msgid "IDS_VIDEO_POP_UNABLE_TO_PLAY_VIDEO"
+msgstr "Video oynatılamıyor."
+
+msgid "IDS_VIDEO_SBODY_NO_SUBTITLES_AVAILABLE_M_STATUS"
+msgstr "Altyazı mevcut değil"
+
+msgid "IDS_VIDEO_SK3_PLAY"
+msgstr "Çal"
+
+msgid "IDS_VIDEO_SK_CLOSE"
+msgstr "Kapat"
+
+msgid "IDS_VPL_POP_INVALID_URL"
+msgstr "URL geçersiz."
+
+msgid "IDS_CHATON_HEADER_ERROR_ABB"
+msgstr "Hata"
+
+msgid "IDS_VIDEO_SBODY_DEVICE_STORAGE"
+msgstr "Cihaz hafızası"
+
+msgid "IDS_COM_BODY_VIDEO_PLAYER_T_MAINMENU"
+msgstr "Video Oynatıcı"
+
+msgid "IDS_VIDEO_OPT_SHARE_VIA"
+msgstr "Paylaşma şekli"
+
+msgid "IDS_VIDEO_POP_A_NETWORK_ERROR_HAS_OCCURRED_TRY_AGAIN"
+msgstr "Bir ağ hatası oluştu. Tekrar deneyin."
+
+msgid "IDS_VIDEO_TPOP_ONLY_AUDIO_DATA_SUPPORTED_BY_THIS_FILE_FORMAT_NOW_PLAYING_AUDIO"
+msgstr "Bu dosya biçimi yalnızca ses verilerini destekler. Şimdi ses oynatılıyor."
+
+msgid "IDS_VIDEO_TPOP_ONLY_VIDEO_DATA_SUPPORTED_BY_THIS_FILE_FORMAT_NOW_PLAYING_VIDEO"
+msgstr "Bu dosya formatı yalnızca video verilerini destekler. Şu anda video oynatılıyor."
+
+msgid "IDS_VPL_BODY_CENTRE"
+msgstr "Orta"
+
+msgid "IDS_VPL_BODY_ON"
+msgstr "Açık"
+
+msgid "IDS_VPL_BODY_SETTINGS"
+msgstr "Ayarlar"
+
+msgid "IDS_VPL_BODY_VIDEOS_T_MAINMENU"
+msgstr "Videolar"
+
+msgid "IDS_VPL_BUTTON_SHARE"
+msgstr "Paylaş"
+
+msgid "IDS_VPL_HEADER_DETAILS"
+msgstr "Ayrıntılar"
+
+msgid "IDS_VPL_OPT_DELETE"
+msgstr "Sil"
+
+msgid "IDS_VPL_POP_BUFFERING_PDP"
+msgstr "Ara belleğe alınıyor - %d%"
+
+msgid "IDS_VIDEO_OPT_NONE"
+msgstr "Hiçbiri"
+
+msgid "IDS_VIDEO_BODY_PD_SECS_ABB3"
+msgstr "%d sn"
+
+msgid "IDS_MUSIC_HEADER_SOUNDALIVE_ABB3"
+msgstr "SoundAlive"
+
+msgid "IDS_MP_HEADER_SELECT_AUDIO_DEVICE"
+msgstr "Ses cihazı seç"
+
+msgid "IDS_MUSIC_OPT_DELETE"
+msgstr "Sil"
+
+msgid "IDS_CLOCK_BUTTON_CANCEL"
+msgstr "İptal"
+
+msgid "IDS_VIDEO_POP_AN_UNKNOWN_ERROR_HAS_OCCURRED_OR_THE_FILE_MAY_BE_CORRUPT"
+msgstr "Bilinmeyen bir hata oluştu veya dosya bozuk olabilir."
+
+msgid "IDS_VIDEO_POP_THIS_FILE_TYPE_IS_NOT_SUPPORTED"
+msgstr "Bu dosya türü desteklenmiyor."
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "BİTTİ"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "İPTAL"
+
+msgid "IDS_TPLATFORM_MBODY_STORAGE_LOCATION"
+msgstr "Saklama yeri"
+
+msgid "IDS_GP_BODY_SUBTITLES_HCC"
+msgstr "Altyazılar (CC)"
+
+msgid "IDS_GALLERY_BODY_PERSONAL_STORAGE"
+msgstr "Kişisel bellek"
+
+msgid "IDS_ACCS_BODY_CAPTIONS_WILL_LOOK_LIKE_THIS"
+msgstr "Altyazılar bu şekilde görünecek."
+

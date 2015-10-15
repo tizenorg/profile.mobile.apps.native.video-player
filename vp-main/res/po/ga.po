@@ -1,0 +1,489 @@
+msgid "IDS_VIDEO_OPT_BRIGHTNESS"
+msgstr "Gile"
+
+msgid "IDS_VIDEO_OPT_MUSIC_M_SOUNDALIVE"
+msgstr "Ceol"
+
+msgid "IDS_VIDEO_OPT_VOICES_M_PERSON"
+msgstr "Guthanna"
+
+msgid "IDS_VIDEO_BODY_B"
+msgstr "B"
+
+msgid "IDS_VIDEO_BODY_GB"
+msgstr "GB"
+
+msgid "IDS_VIDEO_BODY_KB"
+msgstr "KB"
+
+msgid "IDS_VIDEO_BODY_LOCATION"
+msgstr "Suíomh"
+
+msgid "IDS_VIDEO_BODY_MB"
+msgstr "MB"
+
+msgid "IDS_VIDEO_BUTTON_OK"
+msgstr "OK"
+
+msgid "IDS_VIDEO_HEADER_LAST_MODIFIED_M_DATE"
+msgstr "Mionathrú is déanaí"
+
+msgid "IDS_VIDEO_OPT_SHARE"
+msgstr "Comhroinn"
+
+msgid "IDS_VIDEO_HEADER_CANNOT_PLAY_VIDEO_ABB"
+msgstr "Ní féidir físeán a sheinm"
+
+msgid "IDS_VIDEO_POP_AN_ERROR_OCCURRED_WITH_THE_SUBTITLES"
+msgstr "Tharla earráid leis na fotheidil."
+
+msgid "IDS_VIDEO_POP_THE_FILE_IS_CORRUPTED_OR_THE_SD_CARD_HAS_BEEN_REMOVED"
+msgstr "Tá an comhad truaillithe nó baineadh an cárta SD as."
+
+msgid "IDS_VIDEO_OPT_DETAILS"
+msgstr "Sonraí"
+
+msgid "IDS_VIDEO_OPT_TITLE"
+msgstr "Teideal"
+
+msgid "IDS_VIDEO_POP_THIS_VIDEO_WILL_BE_DELETED"
+msgstr "Scriosfar an físeán seo"
+
+msgid "IDS_VIDEO_HEADER_SETTINGS"
+msgstr "Socruithe"
+
+msgid "IDS_VIDEO_HEADER_UNABLE_TO_PLAY_VIDEO_ABB"
+msgstr "Ní féidir físeán a sheinm"
+
+msgid "IDS_VIDEO_MBODY_ALIGNMENT"
+msgstr "Ailíniú"
+
+msgid "IDS_VIDEO_MBODY_FONT_SIZE"
+msgstr "Méid cló"
+
+msgid "IDS_VIDEO_OPT_REPEAT_SETTING_ABB"
+msgstr "Socrú athsheanma"
+
+msgid "IDS_VIDEO_OPT_SUBTITLES_HCC_ABB"
+msgstr "Fotheidil (CC)"
+
+msgid "IDS_VIDEO_SBODY_CENTRE_M_STATUS"
+msgstr "Lárnach"
+
+msgid "IDS_VIDEO_SBODY_LARGE_M_STATUS"
+msgstr "Mór"
+
+msgid "IDS_VIDEO_SBODY_LEFT_M_STATUS"
+msgstr "Clé"
+
+msgid "IDS_VIDEO_SBODY_MEDIUM_M_STATUS"
+msgstr "Meánach"
+
+msgid "IDS_VIDEO_SBODY_RIGHT_M_STATUS"
+msgstr "Deas"
+
+msgid "IDS_VIDEO_SBODY_SMALL_M_STATUS"
+msgstr "Beag"
+
+msgid "IDS_BR_SK_NEXT"
+msgstr "Ar aghaidh"
+
+msgid "IDS_BR_SK_PREVIOUS"
+msgstr "Roimhe"
+
+msgid "IDS_VPL_POP_DRM_FILES_CANNOT_BE_SHARED"
+msgstr "Ní féidir comhaid DRM a chomhroinnt."
+
+msgid "IDS_VPL_OPT_FORMAT"
+msgstr "Formáid"
+
+msgid "IDS_VPL_BODY_UNABLE_TO_PLAY_VIDEO_DURING_CALL"
+msgstr "Ní féidir físeán a sheinm le linn glao."
+
+msgid "IDS_VIDEO_OPT_MESSAGE_ABB"
+msgstr "Teachtai"
+
+msgid "IDS_VIDEO_OPT_FILE_TRANSFER_ABB"
+msgstr "Aistriú comhad"
+
+msgid "IDS_VIDEO_OPT_EMAIL_ABB"
+msgstr "R-phost"
+
+msgid "IDS_VIDEO_BODY_LONGITUDE"
+msgstr "Domhanfad"
+
+msgid "IDS_VIDEO_BODY_LATITUDE"
+msgstr "Leithead"
+
+msgid "IDS_MUSIC_BUTTON_ENABLE_MOTION"
+msgstr "Cumas. gluaisne"
+
+msgid "IDS_VPL_TPOP_SCRUBBING_AT_PSX_SPEED"
+msgstr "Sciúradh ar %sx luas."
+
+msgid "IDS_VPL_TAB_EXTERNAL_STORAGE"
+msgstr "Stóras seachtrach"
+
+msgid "IDS_VPL_POP_VOLUME_M_SOUND"
+msgstr "Airde"
+
+msgid "IDS_VPL_POP_UNSUPPORTED_VIDEO_FORMAT"
+msgstr "Formáid físeáin gan tacú."
+
+msgid "IDS_VPL_POP_UNSUPPORTED_FILE_TYPE"
+msgstr "Cineál comhaid gan tacú."
+
+msgid "IDS_VPL_POP_UNSUPPORTED_AUDIO_FORMAT"
+msgstr "Formáid fuaime gan tacú."
+
+msgid "IDS_VPL_POP_UNABLE_TO_USE_FAST_FORWARD_AND_REWIND_WHEN_NEARBY_DEVICES_ARE_ENABLED"
+msgstr "Ní féidir mearchasadh agus cúlchasadh a úsáid nuair atá gléasanna in aice láimhe cumasaithe."
+
+msgid "IDS_VPL_POP_UNABLE_TO_CAPTURE"
+msgstr "Ní féidir é a ghabháil."
+
+msgid "IDS_VPL_POP_ROTATE"
+msgstr "Rothlaigh"
+
+msgid "IDS_VPL_POP_PRESS_THE_BACK_KEY_AGAIN_TO_RETURN_TO_PREVIOUS_SCREEN"
+msgstr "Brúigh an eochair siar arís le filleadh ar an scáileán roimhe"
+
+msgid "IDS_VPL_POP_NOT_ENOUGH_MEMORY_DELETE_SOME_ITEMS"
+msgstr "Easpa cuimhne. Scrios roinnt míreanna."
+
+msgid "IDS_VPL_POP_BOOKMARK_LIST_FULL_DELETE_SOME_BOOKMARKS"
+msgstr "Liosta leabharmharcanna lán. Scrios roinnt leabharmharcanna."
+
+msgid "IDS_VPL_OPT_YELLOW_M_COLOUR"
+msgstr "Buí"
+
+msgid "IDS_VPL_OPT_VIRTUAL_71_CH"
+msgstr "Cainéal fíorúil 7.1"
+
+msgid "IDS_VPL_OPT_SUBTITLES_HCC_ABB"
+msgstr "Fotheidil (CC)"
+
+msgid "IDS_VPL_OPT_SOUNDALIVE"
+msgstr "SoundAlive"
+
+msgid "IDS_VPL_OPT_REPEAT_MODE"
+msgstr "Mód athsheinnte"
+
+msgid "IDS_VPL_OPT_NO_REPEAT"
+msgstr "Ná hathdhéan"
+
+msgid "IDS_VPL_OPT_MAGENTA_M_COLOUR"
+msgstr "Maigeanta"
+
+msgid "IDS_VPL_OPT_GREEN"
+msgstr "Glas"
+
+msgid "IDS_VPL_OPT_CYAN_M_COLOUR"
+msgstr "Cian"
+
+msgid "IDS_VPL_OPT_CUSTOM"
+msgstr "Saincheaptha"
+
+msgid "IDS_VPL_OPT_CURRENT_VIDEO_HONCE_ABB"
+msgstr "Físeán seo (1 uair)"
+
+msgid "IDS_VPL_OPT_CONNECTION_INFO_ABB"
+msgstr "Fais. faoi nascadh"
+
+msgid "IDS_VPL_OPT_CHANGE_PLAYER"
+msgstr "Athraigh seinnteoir"
+
+msgid "IDS_VPL_OPT_CAPTURE"
+msgstr "Gabh"
+
+msgid "IDS_VPL_OPT_ALLSHARE"
+msgstr "AllShare"
+
+msgid "IDS_VPL_HEADER_SELECT_DEVICE_ABB"
+msgstr "Roghnaigh gléas"
+
+msgid "IDS_VPL_HEADER_AVAILABLE_DEVICES_ABB"
+msgstr "Gléasanna atá ar fáil"
+
+msgid "IDS_VPL_BUTTON_SPEAKER_ABB"
+msgstr "Callaire"
+
+msgid "IDS_VPL_BODY_WHITE"
+msgstr "Bán"
+
+msgid "IDS_VPL_BODY_UDRGOTHICM_M_FONT"
+msgstr "UDRGothicM"
+
+msgid "IDS_VPL_BODY_UDMINCHO_M_FONT"
+msgstr "UDMincho"
+
+msgid "IDS_VPL_BODY_ROSEMARY_M_FONT"
+msgstr "Rosemary"
+
+msgid "IDS_VPL_BODY_RED_ABB"
+msgstr "Dearg"
+
+msgid "IDS_VPL_BODY_PS_SECONDS"
+msgstr "%s soicind"
+
+msgid "IDS_VPL_BODY_POP_M_FONT"
+msgstr "POP"
+
+msgid "IDS_VPL_BODY_PLAY_SPEED"
+msgstr "Luas seanma"
+
+msgid "IDS_VPL_BODY_PD_SECS"
+msgstr "%d soic"
+
+msgid "IDS_VPL_BODY_OFF"
+msgstr "As"
+
+msgid "IDS_VPL_BODY_NO_TITLE"
+msgstr "Níl teideal ann"
+
+msgid "IDS_VPL_BODY_MY_DEVICE"
+msgstr "Mo ghléas"
+
+msgid "IDS_VPL_BODY_DEFAULT_FONT"
+msgstr "Cló réamhshocraithe"
+
+msgid "IDS_VPL_BODY_COOL_JAZZ_M_FONT"
+msgstr "Snagcheol breá"
+
+msgid "IDS_VPL_BODY_CHOCO_COOKY_M_FONT"
+msgstr "Choco cooky"
+
+msgid "IDS_VPL_BODY_BLUE"
+msgstr "Gorm"
+
+msgid "IDS_VPL_BODY_BLACK"
+msgstr "Dubh"
+
+msgid "IDS_VPL_BODY_ACTIVATION"
+msgstr "Gníomhachtú"
+
+msgid "IDS_SMEMO_POP_CLOSE_APPLICATION_Q"
+msgstr "Dún ríomhchlár?"
+
+msgid "IDS_VIDEO_SK_CANCEL_ABB"
+msgstr "Cealú"
+
+msgid "IDS_VIDEO_OPT_STOP_AFTER_ALL_ABB"
+msgstr "Stop tar eis gach"
+
+msgid "IDS_VIDEO_OPT_REPEAT_CURRENT_ABB"
+msgstr "Athdhean cuid reatha"
+
+msgid "IDS_VIDEO_OPT_REPEAT_ALL_ABB"
+msgstr "Athdhéan gach"
+
+msgid "IDS_VIDEO_BODY_RESOLUTION"
+msgstr "Taifeach"
+
+msgid "IDS_VIDEO_BODY_PS_SOUND_EFFECTS_NOT_SUPPORTED_BY_SPEAKER"
+msgstr "Níl tacú sa challaire do mhaisíochtaí fuaime %s."
+
+msgid "IDS_MUSIC_BODY_TURN_PHONE_OVER_TO_MUTE_INCOMING_CALLS_MESSAGE_ALERTS_AND_ALARMS"
+msgstr "Cas an fón bunoscionn le glaonna isteach, foláirimh maidir le teachtaireachtaí agus aláraim a bhalbhú"
+
+msgid "IDS_ST_BODY_SD_CARD"
+msgstr "Cárta SD"
+
+msgid "IDS_VPL_TPOP_ONLY_AUDIO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_AUDIO"
+msgstr "Níl tacú sa chomhad seo ach do shonraí fuaime. Fuaim á seinm anois."
+
+msgid "IDS_VPL_TPOP_ONLY_VIDEO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_VIDEO"
+msgstr "Níl tacú sa chomhad seo ach do shonraí físe. Físeán á sheinm anois."
+
+msgid "IDS_ST_BODY_PRIVATE_STORAGE"
+msgstr "Stóras príobháideach"
+
+msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
+msgstr "Cluasáin"
+
+msgid "IDS_MUSIC_OPT_SPEAKER"
+msgstr "Callaire"
+
+msgid "IDS_MUSIC_OPT_PAUSE"
+msgstr "Cuir ar sos"
+
+msgid "IDS_VIDEO_BUTTON_DOWNLOAD"
+msgstr "Íoslódáil"
+
+msgid "IDS_VIDEO_MBODY_SELECT_SUBTITLES_HCC"
+msgstr "Roghnaigh fotheidil (CC)"
+
+msgid "IDS_VIDEO_NPBODY_PREVIEW_SUBTITLES_HCC_ABB"
+msgstr "Réamhamharc ar fhotheidil (CC)"
+
+msgid "IDS_VIDEO_OPT_REPEAT_MODE_ABB"
+msgstr "Modh athdhéanta"
+
+msgid "IDS_VIDEO_POP_UNSUPPORTED_FILE_TYPE"
+msgstr "Cineál comhaid gan tacú."
+
+msgid "IDS_VIDEO_OPT_NORMAL_M_SOUND_ABB"
+msgstr "Normálta"
+
+msgid "IDS_VIDEO_BODY_VOICE"
+msgstr "Guth"
+
+msgid "IDS_VIDEO_BODY_MOVIES"
+msgstr "Scannáin"
+
+msgid "IDS_VIDEO_OPT_AUDIO_TRACK_ABB"
+msgstr "Fuaimrian"
+
+msgid "IDS_VIDEO_BODY_BUFFERING_ING_ABB"
+msgstr "Ag maolánú..."
+
+msgid "IDS_VIDEO_BODY_FILE_FORMAT"
+msgstr "Formáid an chomhaid"
+
+msgid "IDS_VIDEO_BODY_LANGUAGE"
+msgstr "Teanga"
+
+msgid "IDS_VIDEO_BODY_NO_VIDEOS"
+msgstr "Níl físeáin ann"
+
+msgid "IDS_VIDEO_BODY_SIZE"
+msgstr "Méid"
+
+msgid "IDS_VIDEO_BUTTON_DONE"
+msgstr "Déanta"
+
+msgid "IDS_VIDEO_BUTTON_REFRESH"
+msgstr "Athnuaigh"
+
+msgid "IDS_VIDEO_HEADER_DATE"
+msgstr "Dáta"
+
+msgid "IDS_VIDEO_HEADER_LOADING_ING_ABB"
+msgstr "Ag lódáil..."
+
+msgid "IDS_VIDEO_HEADER_SUBTITLES_HCC_ABB2"
+msgstr "Fotheidil (CC)"
+
+msgid "IDS_VIDEO_IOPT3_DELETE"
+msgstr "Scrios"
+
+msgid "IDS_VIDEO_OPT_ADD_TO_HOME_SCREEN_ABB"
+msgstr "Cuir leis an scáileán baile"
+
+msgid "IDS_VIDEO_OPT_FACEBOOK_ABB"
+msgstr "Facebook"
+
+msgid "IDS_VIDEO_OPT_HDMI"
+msgstr "HDMI"
+
+msgid "IDS_VIDEO_OPT_NAME"
+msgstr "Ainm"
+
+msgid "IDS_VIDEO_OPT_SOUNDALIVE_ABB2"
+msgstr "SoundAlive"
+
+msgid "IDS_VIDEO_OPT_YOUTUBE_ABB"
+msgstr "YouTube"
+
+msgid "IDS_VIDEO_POP_UNABLE_TO_PLAY_VIDEO"
+msgstr "Ní féidir físeán a sheinm."
+
+msgid "IDS_VIDEO_SBODY_NO_SUBTITLES_AVAILABLE_M_STATUS"
+msgstr "Níl aon fhotheidil ar fáil"
+
+msgid "IDS_VIDEO_SK3_PLAY"
+msgstr "Seinn"
+
+msgid "IDS_VIDEO_SK_CLOSE"
+msgstr "Dún"
+
+msgid "IDS_VPL_POP_INVALID_URL"
+msgstr "URL neamhbhailí."
+
+msgid "IDS_CHATON_HEADER_ERROR_ABB"
+msgstr "Earráid"
+
+msgid "IDS_VIDEO_SBODY_DEVICE_STORAGE"
+msgstr "Stóras gléis"
+
+msgid "IDS_COM_BODY_VIDEO_PLAYER_T_MAINMENU"
+msgstr "Seinnteoir Físeán"
+
+msgid "IDS_VIDEO_OPT_SHARE_VIA"
+msgstr "Comhroinn le"
+
+msgid "IDS_VIDEO_POP_A_NETWORK_ERROR_HAS_OCCURRED_TRY_AGAIN"
+msgstr "Tharla earráid líonra. Triail arís."
+
+msgid "IDS_VIDEO_TPOP_ONLY_AUDIO_DATA_SUPPORTED_BY_THIS_FILE_FORMAT_NOW_PLAYING_AUDIO"
+msgstr "Níl tacú ann san fhormáid chomhaid seo ach do shonraí fuaime. Fuaim á seinm anois."
+
+msgid "IDS_VIDEO_TPOP_ONLY_VIDEO_DATA_SUPPORTED_BY_THIS_FILE_FORMAT_NOW_PLAYING_VIDEO"
+msgstr "Níl tacú sa formáid comhaid seo ach do shonraí físeáin. Físeán á sheinm anois."
+
+msgid "IDS_VPL_BODY_CENTRE"
+msgstr "Ionad"
+
+msgid "IDS_VPL_BODY_ON"
+msgstr "Air"
+
+msgid "IDS_VPL_BODY_SETTINGS"
+msgstr "Socruithe"
+
+msgid "IDS_VPL_BODY_VIDEOS_T_MAINMENU"
+msgstr "Físeáin"
+
+msgid "IDS_VPL_BUTTON_SHARE"
+msgstr "C.roinn"
+
+msgid "IDS_VPL_HEADER_DETAILS"
+msgstr "Sonraí"
+
+msgid "IDS_VPL_OPT_DELETE"
+msgstr "Scrios"
+
+msgid "IDS_VPL_POP_BUFFERING_PDP"
+msgstr "Maolánú - %d%"
+
+msgid "IDS_VIDEO_OPT_NONE"
+msgstr "Dada"
+
+msgid "IDS_VIDEO_BODY_PD_SECS_ABB3"
+msgstr "%d soic"
+
+msgid "IDS_MUSIC_HEADER_SOUNDALIVE_ABB3"
+msgstr "SoundAlive"
+
+msgid "IDS_MP_HEADER_SELECT_AUDIO_DEVICE"
+msgstr "Roghnaigh gléas fuaime"
+
+msgid "IDS_MUSIC_OPT_DELETE"
+msgstr "Scrios"
+
+msgid "IDS_CLOCK_BUTTON_CANCEL"
+msgstr "Cealaigh"
+
+msgid "IDS_VIDEO_POP_AN_UNKNOWN_ERROR_HAS_OCCURRED_OR_THE_FILE_MAY_BE_CORRUPT"
+msgstr "Tharla earráid neamhaithnid nó is féidir go bhfuil an comhad truaillithe."
+
+msgid "IDS_VIDEO_POP_THIS_FILE_TYPE_IS_NOT_SUPPORTED"
+msgstr "Níl tacú ann don chineál comhaid seo."
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "DÉANTA"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "CUIR AR CEAL"
+
+msgid "IDS_TPLATFORM_MBODY_STORAGE_LOCATION"
+msgstr "Suíomh stórais"
+
+msgid "IDS_GP_BODY_SUBTITLES_HCC"
+msgstr "Fotheidil (CC)"
+
+msgid "IDS_GALLERY_BODY_PERSONAL_STORAGE"
+msgstr "Stóras pearsanta"
+
+msgid "IDS_ACCS_BODY_CAPTIONS_WILL_LOOK_LIKE_THIS"
+msgstr "Beidh an chuma seo ar fhoscríbhinní"
+

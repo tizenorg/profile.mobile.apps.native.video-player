@@ -1,0 +1,30 @@
+collections {
+   group {
+      name: "effect";
+
+      parts {
+         part {
+            name: "bg";
+            type: RECT;
+            scale: 1;
+            description {
+               state: "default" 0.0;
+               color: 21 108 148 255;
+            }
+         }
+         part {
+            name: "naviframe";
+            type: RECT;
+            scale: 1;
+            description {
+               state: "default" 0.0;
+               rel2.relative: 1.0 0.0;
+               align: 0.5 0.0;
+               min: 0 96;
+               fixed: 0 1;
+               color: 21 108 148 255;
+            }
+         }
+      }
+   }
+}

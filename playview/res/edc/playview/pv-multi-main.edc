@@ -1,0 +1,1037 @@
+/*
+* Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+
+#include "pv-image.edc"
+
+#define FONT_REGULAR_TYPE		"Tizen:style=Regular"
+
+#define FONT_COLOR				255 255 255 255
+
+collections {
+	group {
+		name: "pv.multi.main";
+
+		parts {
+			part {
+				name: "pv.multi.bg";
+				type: RECT;
+				scale: 1;
+				mouse_events: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					fixed: 1 1;
+					min: 3+60+342+3 3+60+342+3;
+					rel1 { relative: 0.0 0.0;}
+					rel2 { relative: 1.0 1.0;}
+					color: 0 0 0 255;
+				}
+			}
+			part {
+				name: "pv.multi.rect.left.padding";
+				type: RECT;
+				scale: 1;
+				mouse_events: 1;
+				description {
+					state: "default" 0.0;
+					visible: 0;
+					fixed: 1 0;
+					min: 3 0;
+					align: 0.0 0.0;
+					rel1 { relative: 0.0 0.0; to: "pv.multi.bg"; }
+					rel2 { relative: 0.0 1.0; to: "pv.multi.bg"; }
+					color: 255 0 0 255;
+				}
+			}
+			part {
+				name: "pv.multi.rect.right.padding";
+				type: RECT;
+				scale: 1;
+				mouse_events: 1;
+				description {
+					state: "default" 0.0;
+					visible: 0;
+					fixed: 1 0;
+					min: 3 0;
+					align: 1.0 0.0;
+					rel1 { relative: 1.0 0.0; to: "pv.multi.bg"; }
+					rel2 { relative: 1.0 1.0; to: "pv.multi.bg"; }
+					color: 255 0 0 255;
+				}
+			}
+			part {
+				name: "pv.multi.rect.top.padding";
+				type: RECT;
+				scale: 1;
+				mouse_events: 1;
+				description {
+					state: "default" 0.0;
+					visible: 0;
+					fixed: 0 1;
+					min: 0 3;
+					align: 0.0 0.0;
+					rel1 { relative: 0.0 0.0; to: "pv.multi.bg"; }
+					rel2 { relative: 1.0 0.0; to: "pv.multi.bg"; }
+					color: 255 0 0 255;
+				}
+			}
+			part {
+				name: "pv.multi.rect.bottom.padding";
+				type: RECT;
+				scale: 1;
+				mouse_events: 1;
+				description {
+					state: "default" 0.0;
+					visible: 0;
+					fixed: 0 1;
+					min: 0 3;
+					align: 0.0 1.0;
+					rel1 { relative: 0.0 1.0; to: "pv.multi.bg"; }
+					rel2 { relative: 1.0 1.0; to: "pv.multi.bg"; }
+					color: 255 0 0 255;
+				}
+			}
+
+			part {
+				name: "pv.multi.frame";
+				type: IMAGE;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					rel1 { relative: 0.0 0.0; to: "pv.multi.bg"; }
+					rel2 { relative: 1.0 1.0; to: "pv.multi.bg"; }
+					image { normal: "multi/mw_frame.png"; border: 73 73 73 73;}
+					color: 255 255 255 255;
+				}
+			}
+
+			part {
+				name: "pv.multi.frame.title";
+				type: IMAGE;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					min: 0 60;
+					fixed: 0 1;
+					align: 0.0 0.0;
+					rel1 { relative: 0.0 0.0; to: "pv.multi.rect"; }
+					rel2 { relative: 1.0 0.0; to: "pv.multi.rect"; }
+					image { normal: "multi/mw_title_bg_focus.#.png"; }
+					color: 21 108 148 255;
+				}
+				description {
+					state: "focus_out" 0.0;
+					inherit: "default" 0.0;
+					image { normal: "multi/mw_title_bg.#.png"; }
+					color: 21 108 148 255;
+				}
+				description {
+					state: "pressed" 0.0;
+					inherit: "default" 0.0;
+					image { normal: "multi/mw_title_focus_bg_press.#.png"; }
+					color: 17 89 122 255;
+				}
+			}
+
+			part {
+				name: "pv.multi.frame.title.ef";
+				type: IMAGE;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					min: 0 60;
+					fixed: 0 1;
+					align: 0.0 0.0;
+					rel1 { relative: 0.0 0.0; to: "pv.multi.rect"; }
+					rel2 { relative: 1.0 0.0; to: "pv.multi.rect"; }
+					image { normal: "multi/mw_title_bg_focus_ef.#.png"; }
+				}
+				description {
+					state: "focus_out" 0.0;
+					inherit: "default" 0.0;
+					image { normal: "multi/mw_title_bg_ef.#.png"; }
+				}
+				description {
+					state: "pressed" 0.0;
+					inherit: "default" 0.0;
+					image { normal: "multi/mw_title_focus.#.png"; }
+					color: 36 186 255 255;
+				}
+			}
+
+			part {
+				name: "pv.multi.rect";
+				type: RECT;
+				scale: 1;
+				mouse_events: 1;
+				description {
+					state: "default" 0.0;
+					visible: 0;
+					align: 0.0 0.0;
+					rel1 { relative: 1.0 1.0; to_x : "pv.multi.rect.left.padding"; to_y : "pv.multi.rect.top.padding"; }
+					rel2 { relative: 0.0 0.0; to_x : "pv.multi.rect.right.padding"; to_y : "pv.multi.rect.bottom.padding"; }
+					color: 0 0 0 0;
+				}
+			}
+			part {
+				name: "pv.multi.image.buffer";
+				type: SWALLOW;
+				scale: 1;
+				mouse_events: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					align: 0.0 0.0;
+					rel1 { relative: 1.0 1.0; to_x : "pv.multi.rect.left.padding"; to_y: "pv.multi.frame.title"; }
+					rel2 { relative: 0.0 0.0; to_x : "pv.multi.rect.right.padding"; to_y : "pv.multi.rect.bottom.padding"; }
+				}
+			}
+
+			part {
+				name: "pv.multi.videosink";
+				type: SWALLOW;
+				scale: 1;
+				mouse_events: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					align: 0.0 0.0;
+					rel1 { relative: 1.0 1.0; to_x : "pv.multi.rect.left.padding"; to_y: "pv.multi.frame.title"; }
+					rel2 { relative: 0.0 0.0; to_x : "pv.multi.rect.right.padding"; to_y : "pv.multi.rect.bottom.padding"; }
+				}
+			}
+
+			part {
+				name: "pv.multi.close.icon.bg";
+				type: IMAGE;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 0;
+					min: 94 58;
+					max: 94 58;
+					fixed: 1 1;
+					align: 1.0 0.0;
+					rel1 { relative: 1.0 0.0; to_x: "pv.multi.rect"; to_y : "pv.multi.frame.title";}
+					rel2 { relative: 1.0 0.0; to_x: "pv.multi.rect"; to_y : "pv.multi.frame.title";}
+					image { normal: "multi/Mw_title_icon_press_bg.png"; }
+				}
+				description {
+					state: "pressed" 0.0;
+					inherit: "default" 0.0;
+					visible: 1;
+				}
+			}
+
+			part {
+				name: "pv.multi.close.icon";
+				type: IMAGE;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					min: 54 54;
+					max: 54 54;
+					fixed: 1 1;
+					align: 0.5 0.5;
+					rel1 { relative: 0.0 0.0; to_x: "pv.multi.close.icon.bg"; to_y : "pv.multi.frame.title";}
+					rel2 { relative: 1.0 1.0; to_x: "pv.multi.close.icon.bg"; to_y : "pv.multi.frame.title";}
+					image { normal: "multi/my_title_icon_delete.png"; }
+				}
+				description {
+					state: "pressed" 0.0;
+					inherit: "default" 0.0;
+					visible: 1;
+					image { normal: "multi/my_title_icon_delete_press.png"; }
+					color: 21 108 148 77;
+				}
+			}
+
+			part {
+				name: "pv.multi.close.icon.ef";
+				type: IMAGE;
+				description {
+					state: "default" 0.0;
+					visible: 0;
+					min: 54 54;
+					max: 54 54;
+					fixed: 1 1;
+					align: 0.5 0.5;
+					rel1 { relative: 0.0 0.0; to_x: "pv.multi.close.icon.bg"; to_y : "pv.multi.frame.title";}
+					rel2 { relative: 1.0 1.0; to_x: "pv.multi.close.icon.bg"; to_y : "pv.multi.frame.title";}
+					image { normal: "multi/my_title_icon_delete_ef_press.png"; }
+				}
+				description {
+					state: "pressed" 0.0;
+					inherit: "default" 0.0;
+					visible: 1;
+				}
+			}
+
+			part {
+				name: "pv.multi.close";
+				type: SWALLOW;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					min: 94 60;
+					fixed: 1 1;
+					align: 1.0 0.5;
+					rel1 { relative: 1.0 0.5; to_x: "pv.multi.rect"; to_y : "pv.multi.frame.title";}
+					rel2 { relative: 1.0 0.5; to_x: "pv.multi.rect"; to_y : "pv.multi.frame.title";}
+					color: 255 0 0 255;
+				}
+			}
+
+			part {
+				name: "pv.multi.close.line";
+				type: IMAGE;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					min: 2 42;
+					fixed: 1 1;
+					align: 1.0 0.5;
+					rel1 { relative: 0.0 0.5; to_x: "pv.multi.close"; to_y: "pv.multi.frame.title"; }
+					rel2 { relative: 0.0 0.5; to_x: "pv.multi.close"; to_y: "pv.multi.frame.title"; }
+					image { normal: "multi/mw_title_divider.png"; }
+				}
+			}
+
+			part {
+				name: "pv.multi.full.size.icon.bg";
+				type: IMAGE;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 0;
+					min: 94 58;
+					max: 94 58;
+					fixed: 1 1;
+					align: 1.0 0.0;
+					rel1 { relative: 0.0 0.0; to_x: "pv.multi.close.line"; to_y : "pv.multi.frame.title";}
+					rel2 { relative: 0.0 0.0; to_x: "pv.multi.close.line"; to_y : "pv.multi.frame.title";}
+					image { normal: "multi/Mw_title_icon_press_bg.png"; }
+				}
+				description {
+					state: "pressed" 0.0;
+					inherit: "default" 0.0;
+					visible: 1;
+				}
+			}
+
+			part {
+				name: "pv.multi.full.size.icon";
+				type: IMAGE;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					min: 54 54;
+					max: 54 54;
+					fixed: 1 1;
+					align: 0.5 0.5;
+					rel1 { relative: 0.0 0.0; to_x: "pv.multi.full.size.icon.bg"; to_y : "pv.multi.frame.title";}
+					rel2 { relative: 1.0 1.0; to_x: "pv.multi.full.size.icon.bg"; to_y : "pv.multi.frame.title";}
+					image { normal: "multi/my_title_icon_maximize.png"; }
+				}
+				description {
+					state: "pressed" 0.0;
+					inherit: "default" 0.0;
+					visible: 1;
+					image { normal: "multi/my_title_icon_maximize_press.png"; }
+					color: 21 108 148 77;
+				}
+			}
+
+			part {
+				name: "pv.multi.full.size.icon.ef";
+				type: IMAGE;
+				description {
+					state: "default" 0.0;
+					visible: 0;
+					min: 54 54;
+					max: 54 54;
+					fixed: 1 1;
+					align: 0.5 0.5;
+					rel1 { relative: 0.0 0.0; to_x: "pv.multi.full.size.icon.bg"; to_y : "pv.multi.frame.title";}
+					rel2 { relative: 1.0 1.0; to_x: "pv.multi.full.size.icon.bg"; to_y : "pv.multi.frame.title";}
+					image { normal: "multi/my_title_icon_maximize_ef_press.png"; }
+				}
+				description {
+					state: "pressed" 0.0;
+					inherit: "default" 0.0;
+					visible: 1;
+				}
+			}
+
+			part {
+				name: "pv.multi.full.size";
+				type: SWALLOW;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					min: 94 60;
+					fixed: 1 1;
+					align: 1.0 0.5;
+					rel1 { relative: 0.0 0.5; to_x: "pv.multi.close.line"; to_y : "pv.multi.frame.title";}
+					rel2 { relative: 0.0 0.5; to_x: "pv.multi.close.line"; to_y : "pv.multi.frame.title";}
+					color: 255 0 0 255;
+				}
+			}
+
+			part {
+				name: "pv.multi.full.size.line";
+				type: IMAGE;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					min: 2 42;
+					fixed: 1 1;
+					align: 1.0 0.5;
+					rel1 { relative: 0.0 0.5; to_x: "pv.multi.full.size"; to_y: "pv.multi.frame.title"; }
+					rel2 { relative: 0.0 0.5; to_x: "pv.multi.full.size"; to_y: "pv.multi.frame.title"; }
+					image { normal: "multi/mw_title_divider.png"; }
+				}
+			}
+
+			part {
+				name: "pv.multi.minimize.icon.bg";
+				type: IMAGE;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 0;
+					min: 94 58;
+					max: 94 58;
+					fixed: 1 1;
+					align: 1.0 0.0;
+					rel1 { relative: 0.0 0.0; to_x: "pv.multi.full.size.line"; to_y : "pv.multi.frame.title";}
+					rel2 { relative: 0.0 0.0; to_x: "pv.multi.full.size.line"; to_y : "pv.multi.frame.title";}
+					image { normal: "multi/Mw_title_icon_press_bg.png"; }
+				}
+				description {
+					state: "pressed" 0.0;
+					inherit: "default" 0.0;
+					visible: 1;
+				}
+			}
+
+			part {
+				name: "pv.multi.minimize.icon";
+				type: IMAGE;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					min: 54 54;
+					max: 54 54;
+					fixed: 1 1;
+					align: 0.5 0.5;
+					rel1 { relative: 0.0 0.0; to_x: "pv.multi.minimize.icon.bg"; to_y : "pv.multi.frame.title";}
+					rel2 { relative: 1.0 1.0; to_x: "pv.multi.minimize.icon.bg"; to_y : "pv.multi.frame.title";}
+					image { normal: "multi/my_title_icon_mimimize.png"; }
+				}
+				description {
+					state: "pressed" 0.0;
+					inherit: "default" 0.0;
+					visible: 1;
+					image { normal: "multi/my_title_icon_mimimize_press.png"; }
+					color: 21 108 148 77;
+				}
+			}
+
+			part {
+				name: "pv.multi.minimize.icon.ef";
+				type: IMAGE;
+				description {
+					state: "default" 0.0;
+					visible: 0;
+					min: 54 54;
+					max: 54 54;
+					fixed: 1 1;
+					align: 0.5 0.5;
+					rel1 { relative: 0.0 0.0; to_x: "pv.multi.minimize.icon.bg"; to_y : "pv.multi.frame.title";}
+					rel2 { relative: 1.0 1.0; to_x: "pv.multi.minimize.icon.bg"; to_y : "pv.multi.frame.title";}
+					image { normal: "multi/my_title_icon_mimimize_ef_press.png"; }
+				}
+				description {
+					state: "pressed" 0.0;
+					inherit: "default" 0.0;
+					visible: 1;
+				}
+			}
+
+			part {
+				name: "pv.multi.minimize";
+				type: SWALLOW;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					min: 94 60;
+					fixed: 1 1;
+					align: 1.0 0.5;
+					rel1 { relative: 0.0 0.5; to_x: "pv.multi.full.size.line"; to_y : "pv.multi.frame.title";}
+					rel2 { relative: 0.0 0.5; to_x: "pv.multi.full.size.line"; to_y : "pv.multi.frame.title";}
+					color: 255 0 0 255;
+				}
+			}
+
+			part {
+				name: "pv.multi.title.txt.left.padding";
+				type: RECT;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 0;
+					min: 0 0;
+					fixed: 0 0;
+					align: 0.0 0.0;
+					rel1 { relative: 0.0 0.0; to_x: "pv.multi.rect";}
+					rel2 { relative: 0.0 1.0; to_x: "pv.multi.rect";}
+					color: 0 255 0 255;
+				}
+			}
+
+			part {
+				name: "pv.multi.title.txt.right.padding";
+				type: RECT;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 0;
+					min: 3 0;
+					fixed: 1 0;
+					align: 1.0 0.0;
+					rel1 { relative: 0.0 0.0; to_x: "pv.multi.minimize";}
+					rel2 { relative: 0.0 1.0; to_x: "pv.multi.minimize";}
+					color: 0 255 0 255;
+				}
+			}
+
+			part {
+				name: "pv.multi.title.txt";
+				type: TEXT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 0;
+					min: 0 60;
+					fixed: 0 1;
+					align: 0.0 0.5;
+					rel1 { relative: 1.0 0.5; to_x : "pv.multi.title.txt.left.padding"; to_y : "pv.multi.frame.title";}
+					rel2 { relative: 0.0 0.5; to_x : "pv.multi.title.txt.right.padding"; to_y : "pv.multi.frame.title";}
+					color: FONT_COLOR;
+					text {
+						font: FONT_REGULAR_TYPE;
+						size: 40;
+						text: "";
+						align: 0.0 0.5;
+					}
+				}
+			}
+
+			part {
+				name: "pv.multi.event";
+				type: SWALLOW;
+				scale: 1;
+				mouse_events: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					align: 0.0 0.0;
+					rel1 { relative: 0.0 0.0; to: "pv.multi.videosink";}
+					rel2 { relative: 1.0 1.0; to: "pv.multi.videosink";}
+				}
+			}
+
+			part {
+				name: "pv.multi.main.subtitle";
+				type: SWALLOW;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					align: 0.0 0.0;
+					rel1 { relative: 0.0 0.0; to: "pv.multi.rect";  }
+					rel2 { relative: 1.0 0.0; to_x: "pv.multi.rect";  to_y : "pv.multi.control.rect"; }
+				}
+			}
+
+			part {
+				name: "pv.multi.control.bottom.padding";
+				type: RECT;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					align: 0.0 1.0;
+					min: 0 16;
+					fixed: 0 1;
+					rel1 { relative: 0.0 1.0; to: "pv.multi.rect";  }
+					rel2 { relative: 1.0 1.0; to: "pv.multi.rect";  }
+					color: 255 0 0 0;
+				}
+			}
+
+
+			part {
+				name: "pv.multi.control.rect";
+				type: RECT;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 0;
+					min: 312 68;
+					fixed: 1 1;
+					align: 0.5 1.0;
+					rel1 { relative: 0.5 0.0; to_y : pv.multi.control.bottom.padding;}
+					rel2 { relative: 0.5 0.0; to_y : pv.multi.control.bottom.padding;}
+					color: 128 128 128 128;
+				}
+
+				description {
+					state: "hide" 0.0;
+					inherit: "default" 0.0;
+					min: 312 0;
+				}
+			}
+
+			part {
+				name: "pv.multi.control.rew";
+				type: SWALLOW;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					min: 104 68;
+					fixed: 1 1;
+					align: 0.0 0.0;
+					rel1 { relative: 0.0 0.0; to : "pv.multi.control.rect";}
+					rel2 { relative: 0.0 1.0; to : "pv.multi.control.rect";}
+					color: 255 0 0 255;
+				}
+				description {
+					state: "hide" 0.0;
+					inherit: "default" 0.0;
+					visible: 0;
+				}
+			}
+			part {
+				name: "pv.multi.control.play";
+				type: SWALLOW;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					min: 104 68;
+					fixed: 1 1;
+					align: 0.5 0.0;
+					rel1 { relative: 0.5 0.0; to : "pv.multi.control.rect";}
+					rel2 { relative: 0.5 1.0; to : "pv.multi.control.rect";}
+					color: 0 255 0 255;
+				}
+				description {
+					state: "hide" 0.0;
+					inherit: "default" 0.0;
+					visible: 0;
+				}
+			}
+
+			part {
+				name: "pv.multi.control.play.focus";
+				type: SWALLOW;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					rel1 { relative: 0.0 0.0; to : "pv.multi.control.play";}
+					rel2 { relative: 1.0 1.0; to : "pv.multi.control.play";}
+					color: 0 255 0 255;
+				}
+				description {
+					state: "hide" 0.0;
+					inherit: "default" 0.0;
+					visible: 0;
+				}
+			}
+
+
+			part {
+				name: "pv.multi.control.ff";
+				type: SWALLOW;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					min: 104 68;
+					fixed: 1 1;
+					align: 1.0 0.0;
+					rel1 { relative: 1.0 0.0; to : "pv.multi.control.rect";}
+					rel2 { relative: 1.0 1.0; to : "pv.multi.control.rect";}
+					color: 255 0 0 255;
+				}
+				description {
+					state: "hide" 0.0;
+					inherit: "default" 0.0;
+					visible: 0;
+				}
+			}
+
+/*
+			part {
+				name: "pv.multi.control.rew.line";
+				type: RECT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					max: 2 42;
+					min: 2 42;
+					fixed: 1 1;
+					align: 0.0 0.5;
+					rel1 { relative: 1.0 0.5; to_x : "pv.multi.control.rew"; to_y : "pv.multi.control.rect";}
+					rel2 { relative: 1.0 0.5; to_x : "pv.multi.control.rew"; to_y : "pv.multi.control.rect";}
+					color: 0 0 0 255;
+				}
+
+				description {
+					state: "hide" 0.0;
+					inherit: "default" 0.0;
+					visible: 0;
+				}
+			}
+
+			part {
+				name: "pv.multi.control.ff.line";
+				type: RECT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					max: 2 42;
+					min: 2 42;
+					fixed: 1 1;
+					align: 1.0 0.5;
+					rel1 { relative: 0.0 0.5; to_x : "pv.multi.control.ff"; to_y : "pv.multi.control.rect";}
+					rel2 { relative: 0.0 0.5; to_x : "pv.multi.control.ff"; to_y : "pv.multi.control.rect";}
+					color: 0 0 0 255;
+				}
+				description {
+					state: "hide" 0.0;
+					inherit: "default" 0.0;
+					visible: 0;
+				}
+			}
+*/
+			part {
+				name: "pv.multi.main.loading";
+				type: SWALLOW;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					rel1 { relative: 0.0 0.2; to: "pv.multi.rect"; }
+					rel2 { relative: 1.0 1.0; to: "pv.multi.rect"; }
+				}
+			}
+			part {
+				name: "pv.multi.resize.rect";
+				type: RECT;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 0;
+					min: 36 36;
+					fixed: 1 1;
+					align: 1.0 1.0;
+					rel1 { relative: 1.0 1.0; to: "pv.multi.bg";}
+					rel2 { relative: 1.0 1.0; to: "pv.multi.bg";}
+					color: 0 0 0 0;
+				}
+			}
+			part {
+				name: "pv.multi.resize";
+				type: SWALLOW;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					min: 36 36;
+					fixed: 1 1;
+					rel1 { relative: 0.0 0.0; to: "pv.multi.resize.rect";}
+					rel2 { relative: 1.0 1.0; to: "pv.multi.resize.rect";}
+				}
+			}
+
+			part {
+				name: "pv.multi.nocontents";
+				type: IMAGE;
+				scale: 1;
+				mouse_events: 0;
+				description {
+					state: "default" 0.0;
+					visible: 0;
+					fixed: 1 1;
+					min: 176 174;
+					align: 0.5 0.5;
+					rel1 { relative: 0.5 0.5; to: "pv.multi.rect"; }
+					rel2 { relative: 0.5 0.5; to: "pv.multi.rect"; }
+					image { normal: "T01_no_video.png";}
+					color: 255 255 255 255;
+				}
+				description {
+					state: "show" 0.0;
+					inherit: "default" 0.0;
+					visible: 1;
+				}
+			}
+			part {
+				name: "pv.multi.nocontents.txt";
+				type: TEXT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 0;
+					min: 0 40;
+					fixed: 0 1;
+					align: 0.5 0.0;
+					rel1 { relative: 0.0 1.0; to_y : pv.multi.nocontents;}
+					rel2 { relative: 1.0 1.0; to_y : pv.multi.nocontents;}
+					color: FONT_COLOR;
+					text {
+						font: FONT_REGULAR_TYPE;
+						size: 40;
+						text: "No Videos";
+						align: 0.5 0.5;
+					}
+				}
+				description {
+					state: "show" 0.0;
+					inherit: "default" 0.0;
+					visible: 1;
+				}
+			}
+			part {
+				name: "pv.multi.main.speed.rect";
+				type: RECT;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 0;
+					min: 160 40;
+					fixed: 1 1;
+					align: 0.5 1.0;
+					rel1 { relative: 0.5 0.0; to_y : "pv.multi.control.rect"; }
+					rel2 { relative: 0.5 0.0; to_y : "pv.multi.control.rect"; }
+					color:  0 0 0 102;
+				}
+				description {
+					state: "show" 0.0;
+					inherit: "default" 0.0;
+					visible: 1;
+				}
+			}
+
+			part {
+				name: "pv.multi.main.speed.txt";
+				type: TEXT;
+				effect: OUTLINE;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 0;
+					align: 0.0 0.0;
+					rel1 { relative: 0.0 0.0; to : "pv.multi.main.speed.rect";}
+					rel2 { relative: 1.0 1.0; to : "pv.multi.main.speed.rect";}
+					color: FONT_COLOR;
+					text {
+						font: FONT_REGULAR_TYPE;
+						size: 32;
+						text: "";
+						align: 0.5 0.5;
+					}
+				}
+				description {
+					state: "show" 0.0;
+					inherit: "default" 0.0;
+					visible: 1;
+				}
+			}
+		} /* parts */
+		programs {
+			program {
+ 				signal: "signal.pv.multi.show.control";
+ 				source: "*";
+				script {
+					set_state(PART:"pv.multi.control.rect", "default", 0.0);
+					set_state(PART:"pv.multi.control.play", "default", 0.0);
+					set_state(PART:"pv.multi.control.play.focus", "default", 0.0);
+					set_state(PART:"pv.multi.control.rew", "default", 0.0);
+					set_state(PART:"pv.multi.control.ff", "default", 0.0);
+					//set_state(PART:"pv.multi.control.rew.line", "default", 0.0);
+					//set_state(PART:"pv.multi.control.ff.line", "default", 0.0);
+				}
+			}
+			program {
+ 				signal: "signal.pv.multi.hide.control";
+ 				source: "*";
+				script {
+					set_state(PART:"pv.multi.control.rect", "hide", 0.0);
+					set_state(PART:"pv.multi.control.play", "hide", 0.0);
+					set_state(PART:"pv.multi.control.play.focus", "hide", 0.0);
+					set_state(PART:"pv.multi.control.rew", "hide", 0.0);
+					set_state(PART:"pv.multi.control.ff", "hide", 0.0);
+					//set_state(PART:"pv.multi.control.rew.line", "hide", 0.0);
+					//set_state(PART:"pv.multi.control.ff.line", "hide", 0.0);
+				}
+			}
+
+			program {
+ 				signal: "signal.pv.multi.show.nocontents";
+ 				source: "*";
+				script {
+					set_state(PART:"pv.multi.nocontents", "show", 0.0);
+					set_state(PART:"pv.multi.nocontents.txt", "show", 0.0);
+				}
+			}
+			program {
+ 				signal: "signal.pv.multi.hide.nocontents";
+ 				source: "*";
+				script {
+					set_state(PART:"pv.multi.nocontents", "default", 0.0);
+					set_state(PART:"pv.multi.nocontents.txt", "default", 0.0);
+				}
+			}
+			program {
+ 				signal: "signal.pv.multi.focus.in.control";
+ 				source: "*";
+				script {
+					set_state(PART:"pv.multi.frame.title", "default", 0.0);
+					set_state(PART:"pv.multi.frame.title.ef", "default", 0.0);
+				}
+			}
+			program {
+ 				signal: "signal.pv.multi.focus.out.control";
+ 				source: "*";
+				script {
+					set_state(PART:"pv.multi.frame.title", "focus_out", 0.0);
+					set_state(PART:"pv.multi.frame.title.ef", "focus_out", 0.0);
+				}
+			}
+			program {
+				signal: "signal.pv.multi.close.pressed";
+				source: "*";
+				script {
+					set_state(PART:"pv.multi.close.icon.bg", "pressed", 0.0);
+					set_state(PART:"pv.multi.close.icon.ef", "pressed", 0.0);
+					set_state(PART:"pv.multi.frame.title", "pressed", 0.0);
+					set_state(PART:"pv.multi.frame.title.ef", "pressed", 0.0);
+				}
+			}
+			program {
+				signal: "signal.pv.multi.close.released";
+				source: "*";
+				script {
+					set_state(PART:"pv.multi.close.icon.bg", "default", 0.0);
+					set_state(PART:"pv.multi.close.icon.ef", "pressed", 0.0);
+					set_state(PART:"pv.multi.frame.title", "default", 0.0);
+					set_state(PART:"pv.multi.frame.title.ef", "default", 0.0);
+				}
+			}
+			program {
+				signal: "signal.pv.multi.fullsize.pressed";
+				source: "*";
+				script {
+				set_state(PART:"pv.multi.full.size.icon.bg", "pressed", 0.0);
+				set_state(PART:"pv.multi.full.size.icon.ef", "pressed", 0.0);
+				set_state(PART:"pv.multi.frame.title", "pressed", 0.0);
+				set_state(PART:"pv.multi.frame.title.ef", "pressed", 0.0);
+				}
+			}
+			program {
+				signal: "signal.pv.multi.fullsize.released";
+				source: "*";
+				script {
+					set_state(PART:"pv.multi.full.size.icon.bg", "default", 0.0);
+					set_state(PART:"pv.multi.full.size.icon.ef", "default", 0.0);
+					set_state(PART:"pv.multi.frame.title", "default", 0.0);
+					set_state(PART:"pv.multi.frame.title.ef", "default", 0.0);
+				}
+			}
+			program {
+				signal: "signal.pv.multi.minimize.pressed";
+				source: "*";
+				script {
+					set_state(PART:"pv.multi.minimize.icon.bg", "pressed", 0.0);
+					set_state(PART:"pv.multi.minimize.icon.ef", "pressed", 0.0);
+					set_state(PART:"pv.multi.frame.title", "pressed", 0.0);
+					set_state(PART:"pv.multi.frame.title.ef", "pressed", 0.0);
+				}
+			}
+			program {
+				signal: "signal.pv.multi.minimize.released";
+				source: "*";
+				script {
+					set_state(PART:"pv.multi.minimize.icon.bg", "default", 0.0);
+					set_state(PART:"pv.multi.minimize.icon.ef", "default", 0.0);
+					set_state(PART:"pv.multi.frame.title", "default", 0.0);
+					set_state(PART:"pv.multi.frame.title.ef", "default", 0.0);
+				}
+			}
+			program {
+				name: "speed_on";
+				signal: "signal.pv.multi.main.speed.show";
+				source: "*";
+				action: STATE_SET "show" 0.0;
+				target: "pv.multi.main.speed.rect";
+				target: "pv.multi.main.speed.txt";
+			}
+
+			program {
+				name: "speed_off";
+				signal: "signal.pv.multi.main.speed.hide";
+				source: "*";
+				action: STATE_SET "default" 0.0;
+				target: "pv.multi.main.speed.rect";
+				target: "pv.multi.main.speed.txt";
+			}
+		} /* programs */
+	}	/* group */
+} /* collections */
+

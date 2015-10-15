@@ -1,0 +1,390 @@
+msgid "IDS_VIDEO_OPT_DOWNLOAD"
+msgstr "Descargar"
+
+msgid "IDS_VIDEO_POP_1_FOLDER_WILL_BE_DOWNLOADED"
+msgstr "Descargarase 1 carpeta."
+
+msgid "IDS_VIDEO_POP_1_VIDEO_WILL_BE_DOWNLOADED"
+msgstr "Descargarase 1 vídeo."
+
+msgid "IDS_VIDEO_POP_ALL_FOLDERS_WILL_BE_DOWNLOADED"
+msgstr "Descargaranse todas as carpetas."
+
+msgid "IDS_VIDEO_POP_ALL_VIDEOS_WILL_BE_DOWNLOADED"
+msgstr "Descargaranse todos os vídeos."
+
+msgid "IDS_VIDEO_POP_PD_FOLDERS_WILL_BE_DOWNLOADED"
+msgstr "Descargaranse %d carpetas."
+
+msgid "IDS_VIDEO_POP_PD_VIDEOS_WILL_BE_DOWNLOADED"
+msgstr "Descargaranse %d vídeos."
+
+msgid "IDS_VIDEO_TPOP_MOBILE_DATA_TURNED_OFF_CONNECT_TO_WI_FI_NETWORK_INSTEAD_OR_TURN_ON_MOBILE_DATA_AND_TRY_AGAIN"
+msgstr "Os datos móbiles están desactivados. Conéctate a unha rede Wi-Fi no seu lugar ou activa os datos móbiles e téntao de novo."
+
+msgid "IDS_GALLERY_OPT_PRIVATE_M_CONTENT"
+msgstr "Privado"
+
+msgid "IDS_VIDEO_BODY_B"
+msgstr "B"
+
+msgid "IDS_VIDEO_BODY_GB"
+msgstr "GB"
+
+msgid "IDS_VIDEO_BODY_KB"
+msgstr "KB"
+
+msgid "IDS_VIDEO_BODY_LOCATION"
+msgstr "Localización"
+
+msgid "IDS_VIDEO_BODY_MB"
+msgstr "MB"
+
+msgid "IDS_VIDEO_BODY_UNKNOWN"
+msgstr "Descoñecido"
+
+msgid "IDS_VIDEO_BUTTON_OK"
+msgstr "Aceptar"
+
+msgid "IDS_VIDEO_HEADER_1_FOLDER"
+msgstr "1 carpeta"
+
+msgid "IDS_VIDEO_HEADER_1_VIDEO"
+msgstr "1 vídeo"
+
+msgid "IDS_VIDEO_HEADER_ALL"
+msgstr "Todas"
+
+msgid "IDS_VIDEO_HEADER_FROM_DEVICE"
+msgstr "Do dispositivo"
+
+msgid "IDS_VIDEO_HEADER_FROM_DROPBOX"
+msgstr "De Dropbox"
+
+msgid "IDS_VIDEO_HEADER_LAST_MODIFIED_M_DATE"
+msgstr "Modificado por última vez"
+
+msgid "IDS_VIDEO_OPT_CONTENT_TO_DISPLAY"
+msgstr "Contido a amosar"
+
+msgid "IDS_VIDEO_OPT_SEARCH"
+msgstr "Buscar"
+
+msgid "IDS_VIDEO_OPT_SHARE"
+msgstr "Compartir"
+
+msgid "IDS_VIDEO_POP_1_FOLDER_WILL_BE_DELETED"
+msgstr "Eliminarase 1 carpeta."
+
+msgid "IDS_VIDEO_TPOP_DELETING_ING"
+msgstr "Eliminando..."
+
+msgid "IDS_VIDEO_BODY_AFTER_YOU_RECORD_VIDEOS_USING_THE_CAMERA_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Despois de gravar vídeos coa cámara, amosaranse aquí."
+
+msgid "IDS_VIDEO_HEADER_PD_VIDEOS"
+msgstr "%d vídeos"
+
+msgid "IDS_VIDEO_HEADER_VIDEO"
+msgstr "Vídeo"
+
+msgid "IDS_VIDEO_NPBODY_NO_VIDEOS"
+msgstr "Non hai vídeos"
+
+msgid "IDS_VIDEO_OPT_DETAILS"
+msgstr "Detalles"
+
+msgid "IDS_VIDEO_OPT_FOLDER"
+msgstr "Carpeta"
+
+msgid "IDS_VIDEO_OPT_LIST"
+msgstr "Lista"
+
+msgid "IDS_VIDEO_OPT_RECENTLY_ADDED_ABB"
+msgstr "Engadido recen."
+
+msgid "IDS_VIDEO_OPT_RECENTLY_VIEWED_ABB"
+msgstr "Vistos recentemente"
+
+msgid "IDS_VIDEO_OPT_RENAME"
+msgstr "C. nome"
+
+msgid "IDS_VIDEO_OPT_SIZE"
+msgstr "Tamaño"
+
+msgid "IDS_VIDEO_OPT_SORT_BY"
+msgstr "Ordenar por"
+
+msgid "IDS_VIDEO_OPT_TITLE"
+msgstr "Título"
+
+msgid "IDS_VIDEO_OPT_TYPE"
+msgstr "Tipo"
+
+msgid "IDS_VIDEO_OPT_VIEW_AS"
+msgstr "Ver como"
+
+msgid "IDS_VIDEO_POP_ALL_VIDEOS_WILL_BE_DELETED"
+msgstr "Eliminaranse todos os vídeos"
+
+msgid "IDS_VIDEO_POP_PD_FOLDERS_WILL_BE_DELETED"
+msgstr "Eliminaranse %d carpetas"
+
+msgid "IDS_VIDEO_POP_PD_VIDEOS_WILL_BE_DELETED"
+msgstr "Eliminaranse %d vídeos"
+
+msgid "IDS_VIDEO_POP_THIS_FOLDER_WILL_BE_DELETED"
+msgstr "Eliminarase esta carpeta"
+
+msgid "IDS_VIDEO_HEADER_PD_FOLDERS"
+msgstr "%d carpetas"
+
+msgid "IDS_VIDEO_HEADER_SETTINGS"
+msgstr "Axustes"
+
+msgid "IDS_VIDEO_HEADER_UNABLE_TO_PLAY_VIDEO_ABB"
+msgstr "Imposible reproducir vídeo"
+
+msgid "IDS_VIDEO_MBODY_ALIGNMENT"
+msgstr "Aliñamento"
+
+msgid "IDS_VIDEO_MBODY_FONT_SIZE"
+msgstr "Tamaño da fonte"
+
+msgid "IDS_VIDEO_OPT_REPEAT_SETTING_ABB"
+msgstr "Axustes de repetición"
+
+msgid "IDS_VIDEO_OPT_SUBTITLES_HCC_ABB"
+msgstr "Subtítulos"
+
+msgid "IDS_VIDEO_POP_ALL_FOLDERS_WILL_BE_DELETED"
+msgstr "Eliminaranse todas as carpetas"
+
+msgid "IDS_VIDEO_SBODY_CENTRE_M_STATUS"
+msgstr "Centro"
+
+msgid "IDS_VIDEO_SBODY_LARGE_M_STATUS"
+msgstr "Grande"
+
+msgid "IDS_VIDEO_SBODY_LEFT_M_STATUS"
+msgstr "Esquerda"
+
+msgid "IDS_VIDEO_SBODY_MEDIUM_M_STATUS"
+msgstr "Media"
+
+msgid "IDS_VIDEO_SBODY_RIGHT_M_STATUS"
+msgstr "Dereita"
+
+msgid "IDS_VIDEO_SBODY_SMALL_M_STATUS"
+msgstr "Pequeno"
+
+msgid "IDS_VIDEO_TPOP_FILE_NAME_ALREADY_IN_USE"
+msgstr "Nome do arquivo xa en uso."
+
+msgid "IDS_GALLERY_OPT_REMOVE_FROM_PRIVATE"
+msgstr "Eliminar de Privado"
+
+msgid "IDS_GALLERY_OPT_MOVE_TO_PRIVATE"
+msgstr "Mover a Privado"
+
+msgid "IDS_IV_POP_ENTRY_IS_EMPTY"
+msgstr "A entrada está baleira"
+
+msgid "IDS_VPL_OPT_FORMAT"
+msgstr "Formatar"
+
+msgid "IDS_VPL_BODY_UNABLE_TO_PLAY_VIDEO_DURING_CALL"
+msgstr "Non se pode reproducir vídeo durante a chamada"
+
+msgid "IDS_CLOUD_BODY_DROPBOX_ABB"
+msgstr "Dropbox"
+
+msgid "IDS_VIDEO_POP_THIS_FILE_IS_UNAVAILABLE_WHILE_OFFLINE_CHECK_NETWORK_CONNECTION_AND_TRY_AGAIN"
+msgstr "Este arquivo non está dispoñible mentres estás fóra de liña. Comproba a conexión de rede e téntao de novo."
+
+msgid "IDS_VIDEO_POP_THE_SELECTED_ITEM_WILL_BE_MOVED_TO_PS"
+msgstr "O elemento seleccionado moverase a %s"
+
+msgid "IDS_VIDEO_POP_THE_SELECTED_ITEMS_WILL_BE_MOVED_TO_PS"
+msgstr "Os elementos seleccionados moveranse a %s"
+
+msgid "IDS_VIDEO_POP_REMOVING_ING"
+msgstr "Eliminando..."
+
+msgid "IDS_VIDEO_POP_MOVING_ING"
+msgstr "Movendo..."
+
+msgid "IDS_VIDEO_POP_FAILED_TO_MOVE_TO_PERSONAL_STORAGE"
+msgstr "Non se puido mover ao almacenamento persoal."
+
+msgid "IDS_VIDEO_POP_FAILED_TO_MOVE_TO_NORMAL_STORAGE"
+msgstr "Non se puido mover ao almacenamento normal."
+
+msgid "IDS_VIDEO_OPT_MESSAGE_ABB"
+msgstr "Mensaxe"
+
+msgid "IDS_VIDEO_OPT_FOLDERS_ABB"
+msgstr "Carpetas"
+
+msgid "IDS_VIDEO_OPT_EMAIL_ABB"
+msgstr "Correo e."
+
+msgid "IDS_VIDEO_OPT_DATE_HMOST_RECENT_ABB"
+msgstr "Data (recente)"
+
+msgid "IDS_VIDEO_HEADER_PD_SELECTED"
+msgstr "%d seleccionados"
+
+msgid "IDS_VIDEO_HEADER_DELETE_VIDEOS"
+msgstr "Eliminar vídeos"
+
+msgid "IDS_VIDEO_HEADER_DELETE_VIDEO"
+msgstr "Eliminar vídeo"
+
+msgid "IDS_VIDEO_BUTTON_MOVE_ABB"
+msgstr "Mover"
+
+msgid "IDS_VIDEO_BODY_LONGITUDE"
+msgstr "Lonxitude"
+
+msgid "IDS_VIDEO_BODY_LATITUDE"
+msgstr "Latitude"
+
+msgid "IDS_VIDEO_BODY_AFTER_YOU_RECORD_VIDEOS_USING_THE_CAMERA_VIDEOS_WILL_BE_SHOWN"
+msgstr "Despois de gravar vídeos mediante a cámara, estes amosaranse"
+
+msgid "IDS_VIDEO_SK_CANCEL_ABB"
+msgstr "Canc."
+
+msgid "IDS_VIDEO_OPT_STOP_AFTER_ALL_ABB"
+msgstr "Deter despo. de todo"
+
+msgid "IDS_VIDEO_OPT_REPEAT_CURRENT_ABB"
+msgstr "Repetir actual"
+
+msgid "IDS_VIDEO_OPT_REPEAT_ALL_ABB"
+msgstr "Repetir todos"
+
+msgid "IDS_VIDEO_BODY_RESOLUTION"
+msgstr "Resolución"
+
+msgid "IDS_VIDEO_BUTTON_DELETE"
+msgstr "Elim"
+
+msgid "IDS_ST_OPT_DELETE_ALL"
+msgstr "Eliminar todo"
+
+msgid "IDS_VPL_TPOP_ONLY_AUDIO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_AUDIO"
+msgstr "Este arquivo só admite datos de audio. Reprodución de audio en curso."
+
+msgid "IDS_VPL_TPOP_ONLY_VIDEO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_VIDEO"
+msgstr "Este arquivo só admite datos de vídeo. Reprodución de vídeo en curso."
+
+msgid "IDS_MUSIC_OPT_RENAME"
+msgstr "Cambiar nome"
+
+msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
+msgstr "Auriculares"
+
+msgid "IDS_VIDEO_BUTTON_DOWNLOAD"
+msgstr "Descargar"
+
+msgid "IDS_TPLATFORM_BODY_OFF"
+msgstr "Desactivado"
+
+msgid "IDS_TPLATFORM_BODY_ON"
+msgstr "Activado"
+
+msgid "IDS_VIDEO_POP_1_VIDEO_WILL_BE_DELETED"
+msgstr "Eliminarase 1 vídeo."
+
+msgid "IDS_SWALL_HEADER_INVALID_CHARACTER"
+msgstr "Carácter non válido"
+
+msgid "IDS_VIDEO_BODY_NO_SEARCH_RESULTS"
+msgstr "Non hai resultados da busca"
+
+msgid "IDS_GALLERY_HEADER_SELECT"
+msgstr "Seleccionar"
+
+msgid "IDS_VIDEO_BODY_LAST_MODIFIED_M_DATE_ABB"
+msgstr "Modificado por última vez"
+
+msgid "IDS_VIDEO_BUTTON_DONE"
+msgstr "Feito"
+
+msgid "IDS_VIDEO_HEADER_DATE"
+msgstr "Data"
+
+msgid "IDS_VIDEO_HEADER_LATITUDE"
+msgstr "Latitude"
+
+msgid "IDS_VIDEO_OPT_NAME"
+msgstr "Nome"
+
+msgid "IDS_VIDEO_OPT_NAME_HA_Z_ABB"
+msgstr "Nome (A-Z)"
+
+msgid "IDS_VIDEO_OPT_VIDEOS"
+msgstr "Vídeos"
+
+msgid "IDS_VIDEO_TPOP_MAXIMUM_NUMBER_OF_ATTACHMENTS_HPD_EXCEEDED"
+msgstr "Superouse o número máximo de adxuntos (%d)."
+
+msgid "IDS_VIDEO_HEADER_SELECT_ALL"
+msgstr "Seleccionar todo"
+
+msgid "IDS_VIDEO_SBODY_DEVICE_STORAGE"
+msgstr "Almacenamento do dispositivo"
+
+msgid "IDS_VIDEO_SBODY_SD_CARD"
+msgstr "Tarxeta SD"
+
+msgid "IDS_VIDEO_OPT_SHARE_VIA"
+msgstr "Compartir mediante"
+
+msgid "IDS_VIDEO_POP_A_NETWORK_ERROR_HAS_OCCURRED_TRY_AGAIN"
+msgstr "Produciuse un erro de rede. Téntao de novo."
+
+msgid "IDS_VPL_OPT_AUTO_PLAY_NEXT_ABB"
+msgstr "Reprod seg autom"
+
+msgid "IDS_VPL_POP_PROCESSING_ING"
+msgstr "Procesando..."
+
+msgid "IDS_MEMO_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Alcanzouse o número máximo de carácteres."
+
+msgid "IDS_MUSIC_OPT_DELETE"
+msgstr "Eliminar"
+
+msgid "IDS_MUSIC_OPT_DELETE_ALL"
+msgstr "Eliminar todo"
+
+msgid "IDS_PB_BODY_NO_SEARCH_RESULT"
+msgstr "Sen resultado da busca"
+
+msgid "IDS_VIDEO_HEADER_SELECT_ITEM"
+msgstr "Seleccionar elemento"
+
+msgid "IDS_VIDEO_HEADER_SELECT_ITEMS"
+msgstr "Seleccionar elementos"
+
+msgid "IDS_CLOCK_BUTTON_CANCEL"
+msgstr "Cancelar"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "FEITO"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "CANCELAR"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DELETE_ABB"
+msgstr "ELIMINAR"
+
+msgid "IDS_TPLATFORM_MBODY_STORAGE_LOCATION"
+msgstr "Localización almacenam."
+
+msgid "IDS_GALLERY_HEADER_SELECT_VIDEO"
+msgstr "Seleccionar vídeo"
+

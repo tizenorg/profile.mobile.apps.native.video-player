@@ -1,0 +1,489 @@
+msgid "IDS_VIDEO_OPT_BRIGHTNESS"
+msgstr "밝기"
+
+msgid "IDS_VIDEO_OPT_MUSIC_M_SOUNDALIVE"
+msgstr "음악"
+
+msgid "IDS_VIDEO_OPT_VOICES_M_PERSON"
+msgstr "목소리"
+
+msgid "IDS_VIDEO_BODY_B"
+msgstr "B"
+
+msgid "IDS_VIDEO_BODY_GB"
+msgstr "GB"
+
+msgid "IDS_VIDEO_BODY_KB"
+msgstr "KB"
+
+msgid "IDS_VIDEO_BODY_LOCATION"
+msgstr "위치"
+
+msgid "IDS_VIDEO_BODY_MB"
+msgstr "MB"
+
+msgid "IDS_VIDEO_BUTTON_OK"
+msgstr "확인"
+
+msgid "IDS_VIDEO_HEADER_LAST_MODIFIED_M_DATE"
+msgstr "마지막 수정"
+
+msgid "IDS_VIDEO_OPT_SHARE"
+msgstr "공유"
+
+msgid "IDS_VIDEO_HEADER_CANNOT_PLAY_VIDEO_ABB"
+msgstr "동영상을 재생할 수 없음"
+
+msgid "IDS_VIDEO_POP_AN_ERROR_OCCURRED_WITH_THE_SUBTITLES"
+msgstr "자막에 오류가 발생하였습니다."
+
+msgid "IDS_VIDEO_POP_THE_FILE_IS_CORRUPTED_OR_THE_SD_CARD_HAS_BEEN_REMOVED"
+msgstr "파일이 손상되었거나 SD 카드를 제거하였습니다."
+
+msgid "IDS_VIDEO_OPT_DETAILS"
+msgstr "상세정보"
+
+msgid "IDS_VIDEO_OPT_TITLE"
+msgstr "제목"
+
+msgid "IDS_VIDEO_POP_THIS_VIDEO_WILL_BE_DELETED"
+msgstr "이 동영상을 삭제합니다."
+
+msgid "IDS_VIDEO_HEADER_SETTINGS"
+msgstr "설정"
+
+msgid "IDS_VIDEO_HEADER_UNABLE_TO_PLAY_VIDEO_ABB"
+msgstr "동영상을 재생할 수 없음"
+
+msgid "IDS_VIDEO_MBODY_ALIGNMENT"
+msgstr "정렬"
+
+msgid "IDS_VIDEO_MBODY_FONT_SIZE"
+msgstr "글자 크기"
+
+msgid "IDS_VIDEO_OPT_REPEAT_SETTING_ABB"
+msgstr "반복 설정"
+
+msgid "IDS_VIDEO_OPT_SUBTITLES_HCC_ABB"
+msgstr "자막(CC)"
+
+msgid "IDS_VIDEO_SBODY_CENTRE_M_STATUS"
+msgstr "가운데"
+
+msgid "IDS_VIDEO_SBODY_LARGE_M_STATUS"
+msgstr "크게"
+
+msgid "IDS_VIDEO_SBODY_LEFT_M_STATUS"
+msgstr "왼쪽"
+
+msgid "IDS_VIDEO_SBODY_MEDIUM_M_STATUS"
+msgstr "중간"
+
+msgid "IDS_VIDEO_SBODY_RIGHT_M_STATUS"
+msgstr "오른쪽"
+
+msgid "IDS_VIDEO_SBODY_SMALL_M_STATUS"
+msgstr "작게"
+
+msgid "IDS_BR_SK_NEXT"
+msgstr "다음"
+
+msgid "IDS_BR_SK_PREVIOUS"
+msgstr "이전"
+
+msgid "IDS_VPL_POP_DRM_FILES_CANNOT_BE_SHARED"
+msgstr "DRM 파일은 공유할 수 없습니다."
+
+msgid "IDS_VPL_OPT_FORMAT"
+msgstr "형식"
+
+msgid "IDS_VPL_BODY_UNABLE_TO_PLAY_VIDEO_DURING_CALL"
+msgstr "통화 중에는 동영상을 재생할 수 없습니다."
+
+msgid "IDS_VIDEO_OPT_MESSAGE_ABB"
+msgstr "메시지"
+
+msgid "IDS_VIDEO_OPT_FILE_TRANSFER_ABB"
+msgstr "파일 전송"
+
+msgid "IDS_VIDEO_OPT_EMAIL_ABB"
+msgstr "이메일"
+
+msgid "IDS_VIDEO_BODY_LONGITUDE"
+msgstr "경도"
+
+msgid "IDS_VIDEO_BODY_LATITUDE"
+msgstr "위도"
+
+msgid "IDS_MUSIC_BUTTON_ENABLE_MOTION"
+msgstr "모션 실행"
+
+msgid "IDS_VPL_TPOP_SCRUBBING_AT_PSX_SPEED"
+msgstr "%sx 속도로 탐색 중입니다."
+
+msgid "IDS_VPL_TAB_EXTERNAL_STORAGE"
+msgstr "외장 저장공간"
+
+msgid "IDS_VPL_POP_VOLUME_M_SOUND"
+msgstr "음량"
+
+msgid "IDS_VPL_POP_UNSUPPORTED_VIDEO_FORMAT"
+msgstr "지원되지 않는 동영상 포맷입니다."
+
+msgid "IDS_VPL_POP_UNSUPPORTED_FILE_TYPE"
+msgstr "지원되지 않는 파일 형식입니다."
+
+msgid "IDS_VPL_POP_UNSUPPORTED_AUDIO_FORMAT"
+msgstr "지원되지 않는 오디오 포맷입니다."
+
+msgid "IDS_VPL_POP_UNABLE_TO_USE_FAST_FORWARD_AND_REWIND_WHEN_NEARBY_DEVICES_ARE_ENABLED"
+msgstr "주변 디바이스를 실행하는 중에는 빨리감기 및 되감기 기능을 사용할 수 없습니다."
+
+msgid "IDS_VPL_POP_UNABLE_TO_CAPTURE"
+msgstr "캡처할 수 없습니다."
+
+msgid "IDS_VPL_POP_ROTATE"
+msgstr "회전"
+
+msgid "IDS_VPL_POP_PRESS_THE_BACK_KEY_AGAIN_TO_RETURN_TO_PREVIOUS_SCREEN"
+msgstr "이전 화면으로 돌아가려면 뒤로가기 버튼을 다시 누르세요."
+
+msgid "IDS_VPL_POP_NOT_ENOUGH_MEMORY_DELETE_SOME_ITEMS"
+msgstr "저장공간이 부족합니다. 일부 항목을 삭제하세요."
+
+msgid "IDS_VPL_POP_BOOKMARK_LIST_FULL_DELETE_SOME_BOOKMARKS"
+msgstr "북마크 목록이 가득 찼습니다. 북마크 일부를 삭제하세요."
+
+msgid "IDS_VPL_OPT_YELLOW_M_COLOUR"
+msgstr "노란색"
+
+msgid "IDS_VPL_OPT_VIRTUAL_71_CH"
+msgstr "가상 7.1채널"
+
+msgid "IDS_VPL_OPT_SUBTITLES_HCC_ABB"
+msgstr "자막(CC)"
+
+msgid "IDS_VPL_OPT_SOUNDALIVE"
+msgstr "SoundAlive"
+
+msgid "IDS_VPL_OPT_REPEAT_MODE"
+msgstr "반복 모드"
+
+msgid "IDS_VPL_OPT_NO_REPEAT"
+msgstr "반복 안 함"
+
+msgid "IDS_VPL_OPT_MAGENTA_M_COLOUR"
+msgstr "자홍색"
+
+msgid "IDS_VPL_OPT_GREEN"
+msgstr "녹색"
+
+msgid "IDS_VPL_OPT_CYAN_M_COLOUR"
+msgstr "청록색"
+
+msgid "IDS_VPL_OPT_CUSTOM"
+msgstr "직접 설정"
+
+msgid "IDS_VPL_OPT_CURRENT_VIDEO_HONCE_ABB"
+msgstr "현재 동영상(한 번)"
+
+msgid "IDS_VPL_OPT_CONNECTION_INFO_ABB"
+msgstr "연결정보"
+
+msgid "IDS_VPL_OPT_CHANGE_PLAYER"
+msgstr "플레이어 변경"
+
+msgid "IDS_VPL_OPT_CAPTURE"
+msgstr "캡처"
+
+msgid "IDS_VPL_OPT_ALLSHARE"
+msgstr "AllShare"
+
+msgid "IDS_VPL_HEADER_SELECT_DEVICE_ABB"
+msgstr "디바이스 선택"
+
+msgid "IDS_VPL_HEADER_AVAILABLE_DEVICES_ABB"
+msgstr "사용 가능한 디바이스"
+
+msgid "IDS_VPL_BUTTON_SPEAKER_ABB"
+msgstr "스피커"
+
+msgid "IDS_VPL_BODY_WHITE"
+msgstr "흰색"
+
+msgid "IDS_VPL_BODY_UDRGOTHICM_M_FONT"
+msgstr "UD마루고딕"
+
+msgid "IDS_VPL_BODY_UDMINCHO_M_FONT"
+msgstr "UD명조"
+
+msgid "IDS_VPL_BODY_ROSEMARY_M_FONT"
+msgstr "로즈마리"
+
+msgid "IDS_VPL_BODY_RED_ABB"
+msgstr "빨간색"
+
+msgid "IDS_VPL_BODY_PS_SECONDS"
+msgstr "%s초"
+
+msgid "IDS_VPL_BODY_POP_M_FONT"
+msgstr "팝"
+
+msgid "IDS_VPL_BODY_PLAY_SPEED"
+msgstr "재생\n속도"
+
+msgid "IDS_VPL_BODY_PD_SECS"
+msgstr "%d초"
+
+msgid "IDS_VPL_BODY_OFF"
+msgstr "해제"
+
+msgid "IDS_VPL_BODY_NO_TITLE"
+msgstr "제목이 없습니다"
+
+msgid "IDS_VPL_BODY_MY_DEVICE"
+msgstr "내 디바이스"
+
+msgid "IDS_VPL_BODY_DEFAULT_FONT"
+msgstr "기본 서체"
+
+msgid "IDS_VPL_BODY_COOL_JAZZ_M_FONT"
+msgstr "쿨재즈"
+
+msgid "IDS_VPL_BODY_CHOCO_COOKY_M_FONT"
+msgstr "초코쿠키"
+
+msgid "IDS_VPL_BODY_BLUE"
+msgstr "파란색"
+
+msgid "IDS_VPL_BODY_BLACK"
+msgstr "검은색"
+
+msgid "IDS_VPL_BODY_ACTIVATION"
+msgstr "실행"
+
+msgid "IDS_SMEMO_POP_CLOSE_APPLICATION_Q"
+msgstr "애플리케이션을 종료할까요?"
+
+msgid "IDS_VIDEO_SK_CANCEL_ABB"
+msgstr "취소"
+
+msgid "IDS_VIDEO_OPT_STOP_AFTER_ALL_ABB"
+msgstr "모두 재생 후 중지"
+
+msgid "IDS_VIDEO_OPT_REPEAT_CURRENT_ABB"
+msgstr "현재 동영상 반복"
+
+msgid "IDS_VIDEO_OPT_REPEAT_ALL_ABB"
+msgstr "모두 반복"
+
+msgid "IDS_VIDEO_BODY_RESOLUTION"
+msgstr "해상도"
+
+msgid "IDS_VIDEO_BODY_PS_SOUND_EFFECTS_NOT_SUPPORTED_BY_SPEAKER"
+msgstr "스피커에서 %s 음향 효과가 지원되지 않습니다."
+
+msgid "IDS_MUSIC_BODY_TURN_PHONE_OVER_TO_MUTE_INCOMING_CALLS_MESSAGE_ALERTS_AND_ALARMS"
+msgstr "디바이스를 뒤집어 벨소리, 메시지 알림음, 알람을 끕니다."
+
+msgid "IDS_ST_BODY_SD_CARD"
+msgstr "SD 카드"
+
+msgid "IDS_VPL_TPOP_ONLY_AUDIO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_AUDIO"
+msgstr "이 파일은 오디오 데이터만 지원합니다. 오디오를 재생합니다."
+
+msgid "IDS_VPL_TPOP_ONLY_VIDEO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_VIDEO"
+msgstr "이 파일은 동영상 데이터만 지원합니다. 동영상을 재생합니다."
+
+msgid "IDS_ST_BODY_PRIVATE_STORAGE"
+msgstr "개인 저장공간"
+
+msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
+msgstr "헤드폰"
+
+msgid "IDS_MUSIC_OPT_SPEAKER"
+msgstr "스피커"
+
+msgid "IDS_MUSIC_OPT_PAUSE"
+msgstr "일시정지"
+
+msgid "IDS_VIDEO_BUTTON_DOWNLOAD"
+msgstr "다운로드"
+
+msgid "IDS_VIDEO_MBODY_SELECT_SUBTITLES_HCC"
+msgstr "자막(CC) 선택"
+
+msgid "IDS_VIDEO_NPBODY_PREVIEW_SUBTITLES_HCC_ABB"
+msgstr "자막(CC) 미리보기"
+
+msgid "IDS_VIDEO_OPT_REPEAT_MODE_ABB"
+msgstr "반복 모드"
+
+msgid "IDS_VIDEO_POP_UNSUPPORTED_FILE_TYPE"
+msgstr "지원되지 않는 파일 형식입니다."
+
+msgid "IDS_VIDEO_OPT_NORMAL_M_SOUND_ABB"
+msgstr "일반"
+
+msgid "IDS_VIDEO_BODY_VOICE"
+msgstr "음성"
+
+msgid "IDS_VIDEO_BODY_MOVIES"
+msgstr "영화"
+
+msgid "IDS_VIDEO_OPT_AUDIO_TRACK_ABB"
+msgstr "오디오 트랙"
+
+msgid "IDS_VIDEO_BODY_BUFFERING_ING_ABB"
+msgstr "버퍼링 중..."
+
+msgid "IDS_VIDEO_BODY_FILE_FORMAT"
+msgstr "파일 형식"
+
+msgid "IDS_VIDEO_BODY_LANGUAGE"
+msgstr "언어"
+
+msgid "IDS_VIDEO_BODY_NO_VIDEOS"
+msgstr "동영상 없음"
+
+msgid "IDS_VIDEO_BODY_SIZE"
+msgstr "크기"
+
+msgid "IDS_VIDEO_BUTTON_DONE"
+msgstr "완료"
+
+msgid "IDS_VIDEO_BUTTON_REFRESH"
+msgstr "새로고침"
+
+msgid "IDS_VIDEO_HEADER_DATE"
+msgstr "날짜"
+
+msgid "IDS_VIDEO_HEADER_LOADING_ING_ABB"
+msgstr "불러오는 중..."
+
+msgid "IDS_VIDEO_HEADER_SUBTITLES_HCC_ABB2"
+msgstr "자막(CC)"
+
+msgid "IDS_VIDEO_IOPT3_DELETE"
+msgstr "삭제"
+
+msgid "IDS_VIDEO_OPT_ADD_TO_HOME_SCREEN_ABB"
+msgstr "홈 화면에 추가"
+
+msgid "IDS_VIDEO_OPT_FACEBOOK_ABB"
+msgstr "Facebook"
+
+msgid "IDS_VIDEO_OPT_HDMI"
+msgstr "HDMI"
+
+msgid "IDS_VIDEO_OPT_NAME"
+msgstr "이름"
+
+msgid "IDS_VIDEO_OPT_SOUNDALIVE_ABB2"
+msgstr "SoundAlive"
+
+msgid "IDS_VIDEO_OPT_YOUTUBE_ABB"
+msgstr "YouTube"
+
+msgid "IDS_VIDEO_POP_UNABLE_TO_PLAY_VIDEO"
+msgstr "동영상을 재생할 수 없습니다."
+
+msgid "IDS_VIDEO_SBODY_NO_SUBTITLES_AVAILABLE_M_STATUS"
+msgstr "표시 가능한 자막이 없습니다"
+
+msgid "IDS_VIDEO_SK3_PLAY"
+msgstr "재생"
+
+msgid "IDS_VIDEO_SK_CLOSE"
+msgstr "닫기"
+
+msgid "IDS_VPL_POP_INVALID_URL"
+msgstr "URL이 바르지 않습니다."
+
+msgid "IDS_CHATON_HEADER_ERROR_ABB"
+msgstr "오류"
+
+msgid "IDS_VIDEO_SBODY_DEVICE_STORAGE"
+msgstr "디바이스 저장공간"
+
+msgid "IDS_COM_BODY_VIDEO_PLAYER_T_MAINMENU"
+msgstr "비디오 플레이어"
+
+msgid "IDS_VIDEO_OPT_SHARE_VIA"
+msgstr "공유"
+
+msgid "IDS_VIDEO_POP_A_NETWORK_ERROR_HAS_OCCURRED_TRY_AGAIN"
+msgstr "네트워크 오류가 발생하였습니다. 다시 시도하세요."
+
+msgid "IDS_VIDEO_TPOP_ONLY_AUDIO_DATA_SUPPORTED_BY_THIS_FILE_FORMAT_NOW_PLAYING_AUDIO"
+msgstr "이 파일은 오디오 데이터만 지원합니다. 오디오를 재생합니다."
+
+msgid "IDS_VIDEO_TPOP_ONLY_VIDEO_DATA_SUPPORTED_BY_THIS_FILE_FORMAT_NOW_PLAYING_VIDEO"
+msgstr "이 파일은 동영상 데이터만 지원합니다. 동영상을 재생합니다."
+
+msgid "IDS_VPL_BODY_CENTRE"
+msgstr "가운데"
+
+msgid "IDS_VPL_BODY_ON"
+msgstr "사용"
+
+msgid "IDS_VPL_BODY_SETTINGS"
+msgstr "설정"
+
+msgid "IDS_VPL_BODY_VIDEOS_T_MAINMENU"
+msgstr "비디오"
+
+msgid "IDS_VPL_BUTTON_SHARE"
+msgstr "공유"
+
+msgid "IDS_VPL_HEADER_DETAILS"
+msgstr "상세정보"
+
+msgid "IDS_VPL_OPT_DELETE"
+msgstr "삭제"
+
+msgid "IDS_VPL_POP_BUFFERING_PDP"
+msgstr "버퍼링- %d%"
+
+msgid "IDS_VIDEO_OPT_NONE"
+msgstr "설정 안 함"
+
+msgid "IDS_VIDEO_BODY_PD_SECS_ABB3"
+msgstr "%d초"
+
+msgid "IDS_MUSIC_HEADER_SOUNDALIVE_ABB3"
+msgstr "SoundAlive"
+
+msgid "IDS_MP_HEADER_SELECT_AUDIO_DEVICE"
+msgstr "오디오 디바이스 선택"
+
+msgid "IDS_MUSIC_OPT_DELETE"
+msgstr "삭제"
+
+msgid "IDS_CLOCK_BUTTON_CANCEL"
+msgstr "취소"
+
+msgid "IDS_VIDEO_POP_AN_UNKNOWN_ERROR_HAS_OCCURRED_OR_THE_FILE_MAY_BE_CORRUPT"
+msgstr "알 수 없는 오류가 발생하였거나 손상된 파일입니다."
+
+msgid "IDS_VIDEO_POP_THIS_FILE_TYPE_IS_NOT_SUPPORTED"
+msgstr "지원되지 않는 파일 형식입니다."
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "완료"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "취소"
+
+msgid "IDS_TPLATFORM_MBODY_STORAGE_LOCATION"
+msgstr "저장 위치"
+
+msgid "IDS_GP_BODY_SUBTITLES_HCC"
+msgstr "자막(CC)"
+
+msgid "IDS_GALLERY_BODY_PERSONAL_STORAGE"
+msgstr "퍼스널 저장공간"
+
+msgid "IDS_ACCS_BODY_CAPTIONS_WILL_LOOK_LIKE_THIS"
+msgstr "자막은 지금 보이는 것처럼 표시됩니다."
+

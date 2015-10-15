@@ -1,0 +1,489 @@
+msgid "IDS_VIDEO_OPT_BRIGHTNESS"
+msgstr "亮度"
+
+msgid "IDS_VIDEO_OPT_MUSIC_M_SOUNDALIVE"
+msgstr "音樂"
+
+msgid "IDS_VIDEO_OPT_VOICES_M_PERSON"
+msgstr "語音"
+
+msgid "IDS_VIDEO_BODY_B"
+msgstr "B"
+
+msgid "IDS_VIDEO_BODY_GB"
+msgstr "GB"
+
+msgid "IDS_VIDEO_BODY_KB"
+msgstr "KB"
+
+msgid "IDS_VIDEO_BODY_LOCATION"
+msgstr "位置"
+
+msgid "IDS_VIDEO_BODY_MB"
+msgstr "MB"
+
+msgid "IDS_VIDEO_BUTTON_OK"
+msgstr "確認"
+
+msgid "IDS_VIDEO_HEADER_LAST_MODIFIED_M_DATE"
+msgstr "最後一次修改"
+
+msgid "IDS_VIDEO_OPT_SHARE"
+msgstr "分享"
+
+msgid "IDS_VIDEO_HEADER_CANNOT_PLAY_VIDEO_ABB"
+msgstr "無法播放影片"
+
+msgid "IDS_VIDEO_POP_AN_ERROR_OCCURRED_WITH_THE_SUBTITLES"
+msgstr "發生字幕錯誤。"
+
+msgid "IDS_VIDEO_POP_THE_FILE_IS_CORRUPTED_OR_THE_SD_CARD_HAS_BEEN_REMOVED"
+msgstr "檔案已損毀或者 SD 卡已移除。"
+
+msgid "IDS_VIDEO_OPT_DETAILS"
+msgstr "詳細資料"
+
+msgid "IDS_VIDEO_OPT_TITLE"
+msgstr "標題"
+
+msgid "IDS_VIDEO_POP_THIS_VIDEO_WILL_BE_DELETED"
+msgstr "此影片將被刪除。"
+
+msgid "IDS_VIDEO_HEADER_SETTINGS"
+msgstr "設定"
+
+msgid "IDS_VIDEO_HEADER_UNABLE_TO_PLAY_VIDEO_ABB"
+msgstr "無法播放影片"
+
+msgid "IDS_VIDEO_MBODY_ALIGNMENT"
+msgstr "校準"
+
+msgid "IDS_VIDEO_MBODY_FONT_SIZE"
+msgstr "字型大小"
+
+msgid "IDS_VIDEO_OPT_REPEAT_SETTING_ABB"
+msgstr "重複設定"
+
+msgid "IDS_VIDEO_OPT_SUBTITLES_HCC_ABB"
+msgstr "字幕 (CC)"
+
+msgid "IDS_VIDEO_SBODY_CENTRE_M_STATUS"
+msgstr "置中"
+
+msgid "IDS_VIDEO_SBODY_LARGE_M_STATUS"
+msgstr "大"
+
+msgid "IDS_VIDEO_SBODY_LEFT_M_STATUS"
+msgstr "靠左對齊"
+
+msgid "IDS_VIDEO_SBODY_MEDIUM_M_STATUS"
+msgstr "中等"
+
+msgid "IDS_VIDEO_SBODY_RIGHT_M_STATUS"
+msgstr "靠右對齊"
+
+msgid "IDS_VIDEO_SBODY_SMALL_M_STATUS"
+msgstr "小"
+
+msgid "IDS_BR_SK_NEXT"
+msgstr "下一步"
+
+msgid "IDS_BR_SK_PREVIOUS"
+msgstr "上一步"
+
+msgid "IDS_VPL_POP_DRM_FILES_CANNOT_BE_SHARED"
+msgstr "DRM 檔案無法共享。"
+
+msgid "IDS_VPL_OPT_FORMAT"
+msgstr "格式"
+
+msgid "IDS_VPL_BODY_UNABLE_TO_PLAY_VIDEO_DURING_CALL"
+msgstr "無法在通話期間播放影片。"
+
+msgid "IDS_VIDEO_OPT_MESSAGE_ABB"
+msgstr "訊息"
+
+msgid "IDS_VIDEO_OPT_FILE_TRANSFER_ABB"
+msgstr "檔案傳輸"
+
+msgid "IDS_VIDEO_OPT_EMAIL_ABB"
+msgstr "電子郵件"
+
+msgid "IDS_VIDEO_BODY_LONGITUDE"
+msgstr "經度"
+
+msgid "IDS_VIDEO_BODY_LATITUDE"
+msgstr "緯度"
+
+msgid "IDS_MUSIC_BUTTON_ENABLE_MOTION"
+msgstr "啟用動作"
+
+msgid "IDS_VPL_TPOP_SCRUBBING_AT_PSX_SPEED"
+msgstr "以 %sx 速率刮擦。"
+
+msgid "IDS_VPL_TAB_EXTERNAL_STORAGE"
+msgstr "外部儲存裝置"
+
+msgid "IDS_VPL_POP_VOLUME_M_SOUND"
+msgstr "音量"
+
+msgid "IDS_VPL_POP_UNSUPPORTED_VIDEO_FORMAT"
+msgstr "不支援的視訊格式。"
+
+msgid "IDS_VPL_POP_UNSUPPORTED_FILE_TYPE"
+msgstr "不支援的檔案類型。"
+
+msgid "IDS_VPL_POP_UNSUPPORTED_AUDIO_FORMAT"
+msgstr "不支援的音訊格式。"
+
+msgid "IDS_VPL_POP_UNABLE_TO_USE_FAST_FORWARD_AND_REWIND_WHEN_NEARBY_DEVICES_ARE_ENABLED"
+msgstr "在附近裝置啟用時無法使用快轉或倒帶。"
+
+msgid "IDS_VPL_POP_UNABLE_TO_CAPTURE"
+msgstr "無法擷取。"
+
+msgid "IDS_VPL_POP_ROTATE"
+msgstr "旋轉"
+
+msgid "IDS_VPL_POP_PRESS_THE_BACK_KEY_AGAIN_TO_RETURN_TO_PREVIOUS_SCREEN"
+msgstr "再次按下返回鍵以返回上一個畫面。"
+
+msgid "IDS_VPL_POP_NOT_ENOUGH_MEMORY_DELETE_SOME_ITEMS"
+msgstr "記憶體不足。請刪除部分項目。"
+
+msgid "IDS_VPL_POP_BOOKMARK_LIST_FULL_DELETE_SOME_BOOKMARKS"
+msgstr "書籤清單已滿。請刪除部分書籤。"
+
+msgid "IDS_VPL_OPT_YELLOW_M_COLOUR"
+msgstr "黃"
+
+msgid "IDS_VPL_OPT_VIRTUAL_71_CH"
+msgstr "虛擬數位 7.1 聲道"
+
+msgid "IDS_VPL_OPT_SUBTITLES_HCC_ABB"
+msgstr "字幕 (CC)"
+
+msgid "IDS_VPL_OPT_SOUNDALIVE"
+msgstr "SoundAlive"
+
+msgid "IDS_VPL_OPT_REPEAT_MODE"
+msgstr "重複模式"
+
+msgid "IDS_VPL_OPT_NO_REPEAT"
+msgstr "不重覆播放"
+
+msgid "IDS_VPL_OPT_MAGENTA_M_COLOUR"
+msgstr "洋紅"
+
+msgid "IDS_VPL_OPT_GREEN"
+msgstr "綠"
+
+msgid "IDS_VPL_OPT_CYAN_M_COLOUR"
+msgstr "青綠"
+
+msgid "IDS_VPL_OPT_CUSTOM"
+msgstr "自訂"
+
+msgid "IDS_VPL_OPT_CURRENT_VIDEO_HONCE_ABB"
+msgstr "目前影片（一次）"
+
+msgid "IDS_VPL_OPT_CONNECTION_INFO_ABB"
+msgstr "連接資訊"
+
+msgid "IDS_VPL_OPT_CHANGE_PLAYER"
+msgstr "變更播放器"
+
+msgid "IDS_VPL_OPT_CAPTURE"
+msgstr "截圖"
+
+msgid "IDS_VPL_OPT_ALLSHARE"
+msgstr "數位連結中心"
+
+msgid "IDS_VPL_HEADER_SELECT_DEVICE_ABB"
+msgstr "選擇裝置"
+
+msgid "IDS_VPL_HEADER_AVAILABLE_DEVICES_ABB"
+msgstr "可用裝置"
+
+msgid "IDS_VPL_BUTTON_SPEAKER_ABB"
+msgstr "揚聲器"
+
+msgid "IDS_VPL_BODY_WHITE"
+msgstr "白色"
+
+msgid "IDS_VPL_BODY_UDRGOTHICM_M_FONT"
+msgstr "UDRGothicM"
+
+msgid "IDS_VPL_BODY_UDMINCHO_M_FONT"
+msgstr "UDMincho"
+
+msgid "IDS_VPL_BODY_ROSEMARY_M_FONT"
+msgstr "Rosemary 字體"
+
+msgid "IDS_VPL_BODY_RED_ABB"
+msgstr "紅"
+
+msgid "IDS_VPL_BODY_PS_SECONDS"
+msgstr "%s 秒"
+
+msgid "IDS_VPL_BODY_POP_M_FONT"
+msgstr "POP"
+
+msgid "IDS_VPL_BODY_PLAY_SPEED"
+msgstr "播放速度"
+
+msgid "IDS_VPL_BODY_PD_SECS"
+msgstr "%d 秒"
+
+msgid "IDS_VPL_BODY_OFF"
+msgstr "關"
+
+msgid "IDS_VPL_BODY_NO_TITLE"
+msgstr "無標題"
+
+msgid "IDS_VPL_BODY_MY_DEVICE"
+msgstr "我的裝置"
+
+msgid "IDS_VPL_BODY_DEFAULT_FONT"
+msgstr "預設字體"
+
+msgid "IDS_VPL_BODY_COOL_JAZZ_M_FONT"
+msgstr "Cool jazz 字體"
+
+msgid "IDS_VPL_BODY_CHOCO_COOKY_M_FONT"
+msgstr "Choco cooky 字體"
+
+msgid "IDS_VPL_BODY_BLUE"
+msgstr "藍色"
+
+msgid "IDS_VPL_BODY_BLACK"
+msgstr "黑色"
+
+msgid "IDS_VPL_BODY_ACTIVATION"
+msgstr "啟動"
+
+msgid "IDS_SMEMO_POP_CLOSE_APPLICATION_Q"
+msgstr "要關閉應用程式嗎？"
+
+msgid "IDS_VIDEO_SK_CANCEL_ABB"
+msgstr "取消"
+
+msgid "IDS_VIDEO_OPT_STOP_AFTER_ALL_ABB"
+msgstr "全部播放後停止"
+
+msgid "IDS_VIDEO_OPT_REPEAT_CURRENT_ABB"
+msgstr "重複目前影片"
+
+msgid "IDS_VIDEO_OPT_REPEAT_ALL_ABB"
+msgstr "重複全部"
+
+msgid "IDS_VIDEO_BODY_RESOLUTION"
+msgstr "解析度"
+
+msgid "IDS_VIDEO_BODY_PS_SOUND_EFFECTS_NOT_SUPPORTED_BY_SPEAKER"
+msgstr "揚聲器不支援 %s 音效。"
+
+msgid "IDS_MUSIC_BODY_TURN_PHONE_OVER_TO_MUTE_INCOMING_CALLS_MESSAGE_ALERTS_AND_ALARMS"
+msgstr "翻轉手機以將來電、訊息提醒及鬧鈴設為靜音。"
+
+msgid "IDS_ST_BODY_SD_CARD"
+msgstr "記憶卡"
+
+msgid "IDS_VPL_TPOP_ONLY_AUDIO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_AUDIO"
+msgstr "此檔案僅支援音訊資料。現正播放音訊。"
+
+msgid "IDS_VPL_TPOP_ONLY_VIDEO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_VIDEO"
+msgstr "此檔案僅支援影片資料。現正播放影片。"
+
+msgid "IDS_ST_BODY_PRIVATE_STORAGE"
+msgstr "私密儲存空間"
+
+msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
+msgstr "耳機"
+
+msgid "IDS_MUSIC_OPT_SPEAKER"
+msgstr "揚聲器"
+
+msgid "IDS_MUSIC_OPT_PAUSE"
+msgstr "暫停"
+
+msgid "IDS_VIDEO_BUTTON_DOWNLOAD"
+msgstr "下載"
+
+msgid "IDS_VIDEO_MBODY_SELECT_SUBTITLES_HCC"
+msgstr "選擇字幕 (CC)"
+
+msgid "IDS_VIDEO_NPBODY_PREVIEW_SUBTITLES_HCC_ABB"
+msgstr "預覽字幕 (CC)"
+
+msgid "IDS_VIDEO_OPT_REPEAT_MODE_ABB"
+msgstr "重複模式"
+
+msgid "IDS_VIDEO_POP_UNSUPPORTED_FILE_TYPE"
+msgstr "不支援的檔案類型。"
+
+msgid "IDS_VIDEO_OPT_NORMAL_M_SOUND_ABB"
+msgstr "標準"
+
+msgid "IDS_VIDEO_BODY_VOICE"
+msgstr "語音"
+
+msgid "IDS_VIDEO_BODY_MOVIES"
+msgstr "電影"
+
+msgid "IDS_VIDEO_OPT_AUDIO_TRACK_ABB"
+msgstr "音軌"
+
+msgid "IDS_VIDEO_BODY_BUFFERING_ING_ABB"
+msgstr "緩衝中..."
+
+msgid "IDS_VIDEO_BODY_FILE_FORMAT"
+msgstr "檔案格式"
+
+msgid "IDS_VIDEO_BODY_LANGUAGE"
+msgstr "語言"
+
+msgid "IDS_VIDEO_BODY_NO_VIDEOS"
+msgstr "無影片"
+
+msgid "IDS_VIDEO_BODY_SIZE"
+msgstr "大小"
+
+msgid "IDS_VIDEO_BUTTON_DONE"
+msgstr "完成"
+
+msgid "IDS_VIDEO_BUTTON_REFRESH"
+msgstr "重新整理"
+
+msgid "IDS_VIDEO_HEADER_DATE"
+msgstr "日期"
+
+msgid "IDS_VIDEO_HEADER_LOADING_ING_ABB"
+msgstr "正在載入..."
+
+msgid "IDS_VIDEO_HEADER_SUBTITLES_HCC_ABB2"
+msgstr "字幕 (CC)"
+
+msgid "IDS_VIDEO_IOPT3_DELETE"
+msgstr "刪除"
+
+msgid "IDS_VIDEO_OPT_ADD_TO_HOME_SCREEN_ABB"
+msgstr "新增至主畫面"
+
+msgid "IDS_VIDEO_OPT_FACEBOOK_ABB"
+msgstr "Facebook"
+
+msgid "IDS_VIDEO_OPT_HDMI"
+msgstr "HDMI"
+
+msgid "IDS_VIDEO_OPT_NAME"
+msgstr "名稱"
+
+msgid "IDS_VIDEO_OPT_SOUNDALIVE_ABB2"
+msgstr "SoundAlive"
+
+msgid "IDS_VIDEO_OPT_YOUTUBE_ABB"
+msgstr "YouTube"
+
+msgid "IDS_VIDEO_POP_UNABLE_TO_PLAY_VIDEO"
+msgstr "無法播放影片。"
+
+msgid "IDS_VIDEO_SBODY_NO_SUBTITLES_AVAILABLE_M_STATUS"
+msgstr "無可用字幕"
+
+msgid "IDS_VIDEO_SK3_PLAY"
+msgstr "播放"
+
+msgid "IDS_VIDEO_SK_CLOSE"
+msgstr "關閉"
+
+msgid "IDS_VPL_POP_INVALID_URL"
+msgstr "URL 無效"
+
+msgid "IDS_CHATON_HEADER_ERROR_ABB"
+msgstr "錯誤"
+
+msgid "IDS_VIDEO_SBODY_DEVICE_STORAGE"
+msgstr "裝置儲存空間"
+
+msgid "IDS_COM_BODY_VIDEO_PLAYER_T_MAINMENU"
+msgstr "影片播放器"
+
+msgid "IDS_VIDEO_OPT_SHARE_VIA"
+msgstr "分享方式"
+
+msgid "IDS_VIDEO_POP_A_NETWORK_ERROR_HAS_OCCURRED_TRY_AGAIN"
+msgstr "發生網路錯誤。請重試。"
+
+msgid "IDS_VIDEO_TPOP_ONLY_AUDIO_DATA_SUPPORTED_BY_THIS_FILE_FORMAT_NOW_PLAYING_AUDIO"
+msgstr "此檔案格式僅支援音訊資料。現正播放音訊。"
+
+msgid "IDS_VIDEO_TPOP_ONLY_VIDEO_DATA_SUPPORTED_BY_THIS_FILE_FORMAT_NOW_PLAYING_VIDEO"
+msgstr "此檔案格式僅支援影片資料。現正播放影片。"
+
+msgid "IDS_VPL_BODY_CENTRE"
+msgstr "中心"
+
+msgid "IDS_VPL_BODY_ON"
+msgstr "開"
+
+msgid "IDS_VPL_BODY_SETTINGS"
+msgstr "設定"
+
+msgid "IDS_VPL_BODY_VIDEOS_T_MAINMENU"
+msgstr "影片播放器"
+
+msgid "IDS_VPL_BUTTON_SHARE"
+msgstr "分享"
+
+msgid "IDS_VPL_HEADER_DETAILS"
+msgstr "詳細資料"
+
+msgid "IDS_VPL_OPT_DELETE"
+msgstr "刪除"
+
+msgid "IDS_VPL_POP_BUFFERING_PDP"
+msgstr "緩衝中 - %d%"
+
+msgid "IDS_VIDEO_OPT_NONE"
+msgstr "無"
+
+msgid "IDS_VIDEO_BODY_PD_SECS_ABB3"
+msgstr "%d 秒"
+
+msgid "IDS_MUSIC_HEADER_SOUNDALIVE_ABB3"
+msgstr "SoundAlive"
+
+msgid "IDS_MP_HEADER_SELECT_AUDIO_DEVICE"
+msgstr "選擇音訊裝置"
+
+msgid "IDS_MUSIC_OPT_DELETE"
+msgstr "刪除"
+
+msgid "IDS_CLOCK_BUTTON_CANCEL"
+msgstr "取消"
+
+msgid "IDS_VIDEO_POP_AN_UNKNOWN_ERROR_HAS_OCCURRED_OR_THE_FILE_MAY_BE_CORRUPT"
+msgstr "發生未知的錯誤或者檔案已損毀。"
+
+msgid "IDS_VIDEO_POP_THIS_FILE_TYPE_IS_NOT_SUPPORTED"
+msgstr "不支援該檔案類別。"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "完成"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "取消"
+
+msgid "IDS_TPLATFORM_MBODY_STORAGE_LOCATION"
+msgstr "儲存裝置位置"
+
+msgid "IDS_GP_BODY_SUBTITLES_HCC"
+msgstr "字幕 (CC)"
+
+msgid "IDS_GALLERY_BODY_PERSONAL_STORAGE"
+msgstr "個人儲存空間"
+
+msgid "IDS_ACCS_BODY_CAPTIONS_WILL_LOOK_LIKE_THIS"
+msgstr "字幕將依此顯示"
+

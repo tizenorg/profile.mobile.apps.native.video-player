@@ -1,0 +1,326 @@
+/*
+* Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+
+#include "pv-image.edc"
+
+collections {
+	group {
+		name: "pv.zoom.guide";
+		parts {
+			part {
+				name: "pv.zoom.guide.bg";
+				type: RECT;
+				mouse_events: 1;
+				repeat_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible : 0;
+					rel1 { relative: 0.0 0.0;}
+					rel2 { relative: 1.0 1.0;}
+					color: 0 0 0 0;
+				}
+			}
+			part {
+				name: "pv.zoom.guide.left.shadow";
+				type: RECT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible : 0;
+					min : 1 0;
+					fixed : 1 0;
+					align: 0.0 0.0;
+					rel1 { relative: 1.0 0.0; to: "pv.zoom.guide.left"; }
+					rel2 { relative: 1.0 1.0; to: "pv.zoom.guide.left"; }
+					color: 0 0 0 255;
+				}
+				description {
+					state: "show" 0.0;
+					inherit: "default" 0.0;
+					visible: 1;
+				}
+			}
+			part {
+				name: "pv.zoom.guide.right.shadow";
+				type: RECT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible : 0;
+					min : 1 0;
+					fixed : 1 0;
+					align: 1.0 0.0;
+					rel1 { relative: 0.0 0.0; to: "pv.zoom.guide.right"; }
+					rel2 { relative: 0.0 1.0; to: "pv.zoom.guide.right"; }
+					color: 0 0 0 255;
+				}
+				description {
+					state: "show" 0.0;
+					inherit: "default" 0.0;
+					visible: 1;
+				}
+			}
+			part {
+				name: "pv.zoom.guide.top.shadow";
+				type: RECT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible : 0;
+					min : 0 1;
+					fixed : 0 1;
+					align: 0.0 0.0;
+					rel1 { relative: 0.0 1.0; to: "pv.zoom.guide.top"; }
+					rel2 { relative: 1.0 1.0; to: "pv.zoom.guide.top"; }
+					color: 0 0 0 255;
+				}
+				description {
+					state: "show" 0.0;
+					inherit: "default" 0.0;
+					visible: 1;
+				}
+			}
+			part {
+				name: "pv.zoom.guide.bottom.shadow";
+				type: RECT;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible : 0;
+					min : 0 1;
+					fixed : 0 1;
+					align: 0.0 1.0;
+					rel1 { relative: 0.0 0.0; to: "pv.zoom.guide.bottom"; }
+					rel2 { relative: 1.0 0.0; to: "pv.zoom.guide.bottom"; }
+					color: 0 0 0 255;
+				}
+				description {
+					state: "show" 0.0;
+					inherit: "default" 0.0;
+					visible: 1;
+				}
+			}
+			part {
+				name: "pv.zoom.guide.left";
+				type: RECT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible : 0;
+					min : 2 0;
+					fixed : 1 0;
+					align: 0.0 0.0;
+					rel1 { relative: 0.0 0.0;}
+					rel2 { relative: 0.0 1.0;}
+					color: 255 255 255 255;
+				}
+				description {
+					state: "show" 0.0;
+					inherit: "default" 0.0;
+					visible: 1;
+				}
+			}
+			part {
+				name: "pv.zoom.guide.right";
+				type: RECT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible : 0;
+					min : 2 0;
+					fixed : 1 0;
+					align: 1.0 0.0;
+					rel1 { relative: 1.0 0.0;}
+					rel2 { relative: 1.0 1.0;}
+					color: 255 255 255 255;
+				}
+				description {
+					state: "show" 0.0;
+					inherit: "default" 0.0;
+					visible: 1;
+				}
+			}
+			part {
+				name: "pv.zoom.guide.top";
+				type: RECT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible : 0;
+					min : 0 2;
+					fixed : 0 1;
+					align: 0.0 0.0;
+					rel1 { relative: 0.0 0.0;}
+					rel2 { relative: 1.0 0.0;}
+					color: 255 255 255 255;
+				}
+				description {
+					state: "show" 0.0;
+					inherit: "default" 0.0;
+					visible: 1;
+				}
+			}
+
+			part {
+				name: "pv.zoom.guide.bottom";
+				type: RECT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible : 0;
+					min : 0 2;
+					fixed : 0 1;
+					align: 0.0 1.0;
+					rel1 { relative: 0.0 1.0;}
+					rel2 { relative: 1.0 1.0;}
+					color: 255 255 255 255;
+				}
+				description {
+					state: "show" 0.0;
+					inherit: "default" 0.0;
+					visible: 1;
+				}
+			}
+		} /* parts */
+		programs {
+			program {
+				name: "zoom_guide_show";
+				signal: "signal.pv.zoom.guide.show";
+				source: "*";
+				action: STATE_SET "show" 0.0;
+				target: "pv.zoom.guide.left.shadow";
+				target: "pv.zoom.guide.right.shadow";
+				target: "pv.zoom.guide.top.shadow";
+				target: "pv.zoom.guide.bottom.shadow";
+				target: "pv.zoom.guide.left";
+				target: "pv.zoom.guide.right";
+				target: "pv.zoom.guide.top";
+				target: "pv.zoom.guide.bottom";
+			}
+			program {
+				name: "zoom_guide_hide";
+				signal: "signal.pv.zoom.guide.hide";
+				source: "*";
+				action: STATE_SET "hide" 0.0;
+				target: "pv.zoom.guide.left.shadow";
+				target: "pv.zoom.guide.right.shadow";
+				target: "pv.zoom.guide.top.shadow";
+				target: "pv.zoom.guide.bottom.shadow";
+				target: "pv.zoom.guide.left";
+				target: "pv.zoom.guide.right";
+				target: "pv.zoom.guide.top";
+				target: "pv.zoom.guide.bottom";
+
+			}
+		} /* programs */
+	}	/* group */
+	group {
+		name: "pv.zoom.guide.item";
+		parts {
+			part {
+				name: "pv.zoom.guide.item.bg";
+				type: RECT;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible : 0;
+					rel1 { relative: 0.0 0.0;}
+					rel2 { relative: 1.0 1.0;}
+					color: 0 0 0 0;
+				}
+			}
+
+			part {
+				name: "pv.zoom.guide.item.left";
+				type: RECT;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible : 1;
+					min : 2 0;
+					fixed : 1 0;
+					align: 0.0 0.0;
+					rel1 { relative: 0.0 0.0;}
+					rel2 { relative: 0.0 1.0;}
+					color: 255 0 0 255;
+				}
+			}
+			part {
+				name: "pv.zoom.guide.item.right";
+				type: RECT;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible : 1;
+					min : 2 0;
+					fixed : 1 0;
+					align: 1.0 0.0;
+					rel1 { relative: 1.0 0.0;}
+					rel2 { relative: 1.0 1.0;}
+					color: 255 0 0 255;
+				}
+			}
+			part {
+				name: "pv.zoom.guide.item.top";
+				type: RECT;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible : 1;
+					min : 0 2;
+					fixed : 0 1;
+					align: 0.0 0.0;
+					rel1 { relative: 0.0 0.0;}
+					rel2 { relative: 1.0 0.0;}
+					color: 255 0 0 255;
+				}
+			}
+
+			part {
+				name: "pv.zoom.guide.item.bottom";
+				type: RECT;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible : 1;
+					min : 0 2;
+					fixed : 0 1;
+					align: 0.0 1.0;
+					rel1 { relative: 0.0 1.0;}
+					rel2 { relative: 1.0 1.0;}
+					color: 255 0 0 255;
+				}
+			}
+		} /* parts */
+	}	/* group */
+
+} /* collections */
+

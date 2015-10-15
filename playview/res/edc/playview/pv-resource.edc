@@ -1,0 +1,448 @@
+/*
+* Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+
+#include "pv-macro.edc"
+
+#define VP_PLAY_MULTI_VIEW_CLOSE			"multi/my_title_icon_delete.png"
+#define VP_PLAY_MULTI_VIEW_FULLSIZE			"multi/my_title_icon_maximize.png"
+#define VP_PLAY_MULTI_VIEW_RESIZE			"multi/mw_frame_handler.png"
+#define VP_PLAY_MULTI_VIEW_RESIZE_PRESS		"multi/mw_frame_handler_press.png"
+#define VP_PLAY_MULTI_VIEW_MINSIZE			"multi/my_title_icon_mimimize.png"
+
+#define VP_PLAY_MULTI_VIEW_FF				"multi/T01_2_mw_control_icon_ff.png"
+#define VP_PLAY_MULTI_VIEW_FF_PRESS			"multi/T01_2_mw_control_icon_ff_press.png"
+#define VP_PLAY_MULTI_VIEW_REW				"multi/T01_2_mw_control_icon_rew.png"
+#define VP_PLAY_MULTI_VIEW_REW_PRESS		"multi/T01_2_mw_control_icon_rew_press.png"
+#define VP_PLAY_MULTI_VIEW_PLAY				"multi/T01_2_mw_control_icon_play.png"
+#define VP_PLAY_MULTI_VIEW_PLAY_PRESS		"multi/T01_2_mw_control_icon_play_press.png"
+#define VP_PLAY_MULTI_VIEW_PAUSE				"multi/T01_2_mw_control_icon_pause.png"
+#define VP_PLAY_MULTI_VIEW_PAUSE_PRESS		"multi/T01_2_mw_control_icon_pause_press.png"
+
+#define VP_PLAY_NORMAL_RES_CONTROL_BG		"control/T01-2_control_bg.png"
+#define VP_PLAY_NORMAL_RES_RESUME			"control/T01-2_control_circle_icon_play.png"
+#define VP_PLAY_NORMAL_RES_PAUSE			"control/T01-2_control_circle_icon_pause.png"
+#define VP_PLAY_NORMAL_RES_PREV				"control/T01-2_control_circle_icon_rewind.png"
+#define VP_PLAY_NORMAL_RES_NEXT				"control/T01-2_control_circle_icon_next.png"
+
+#define VP_PLAY_NORMAL_RES_VOLUME					"function/T01_2_control_icon_volume.png"
+#define VP_PLAY_NORMAL_RES_VOLUME_PRESS			"function/T01_2_control_icon_volume_press.png"
+#define VP_PLAY_NORMAL_RES_VOLUME_DIM				"function/T01_2_control_icon_volume_dim.png"
+
+#define VP_PLAY_NORMAL_RES_MUTE						"function/T01-2_control_icon_mute.png"
+#define VP_PLAY_NORMAL_RES_MUTE_PRESS				"function/T01-2_control_icon_mute_press.png"
+#define VP_PLAY_NORMAL_RES_MUTE_DIM					"function/T01-2_control_icon_mute_dim.png"
+
+
+#define VP_PLAY_NORMAL_RES_BOOKMARK				"function/T01_2_control_icon_bookmark.png"
+#define VP_PLAY_NORMAL_RES_BOOKMARK_PRESS			"function/T01_2_control_icon_bookmark_press.png"
+#define VP_PLAY_NORMAL_RES_BOOKMARK_DIM			"function/T01_2_control_icon_bookmark_dim.png"
+
+#define VP_PLAY_NORMAL_RES_POPUP_PLAYER 	"function/player_popup_view_icon_nomal.png"
+
+#define VP_PLAY_NORMAL_RES_SCREEN_1_MODE			"function/T01_2_control_icon_screenmode03.png"
+#define VP_PLAY_NORMAL_RES_SCREEN_1_MODE_PRESS	"function/T01_2_control_icon_screenmode03_press.png"
+#define VP_PLAY_NORMAL_RES_SCREEN_1_MODE_DIM		"function/T01_2_control_icon_screenmode03_dim.png"
+
+#define VP_PLAY_NORMAL_RES_SCREEN_2_MODE			"function/T01_2_control_icon_screenmode02.png"
+#define VP_PLAY_NORMAL_RES_SCREEN_2_MODE_PRESS	"function/T01_2_control_icon_screenmode02_press.png"
+#define VP_PLAY_NORMAL_RES_SCREEN_2_MODE_DIM		"function/T01_2_control_icon_screenmode02_dim.png"
+
+#define VP_PLAY_NORMAL_RES_SCREEN_3_MODE			"function/T01_2_control_icon_screenmode.png"
+#define VP_PLAY_NORMAL_RES_SCREEN_3_MODE_PRESS	"function/T01_2_control_icon_screenmode_press.png"
+#define VP_PLAY_NORMAL_RES_SCREEN_3_MODE_DIM		"function/T01_2_control_icon_screenmode_dim.png"
+
+#define VP_PLAY_NORMAL_RES_SCREEN_4_MODE			"function/T01_2_control_icon_screenmode04.png"
+#define VP_PLAY_NORMAL_RES_SCREEN_4_MODE_PRESS	"function/T01_2_control_icon_screenmode04_press.png"
+#define VP_PLAY_NORMAL_RES_SCREEN_4_MODE_DIM		"function/T01_2_control_icon_screenmode04_dim.png"
+
+#define VP_PLAY_NORMAL_RES_MULTI_MODE				"function/T01_2_control_icon_multi_window.png"
+#define VP_PLAY_NORMAL_RES_MULTI_MODE_PRESS		"function/T01_2_control_icon_multi_window_press.png"
+#define VP_PLAY_NORMAL_RES_MULTI_MODE_DIM			"function/T01_2_control_icon_multi_window_dim.png"
+
+#define VP_PLAY_NORMAL_RES_SHARE					"function/T01_2_control_icon_share.png"
+#define VP_PLAY_NORMAL_RES_SHARE_PRESS				"function/T01_2_control_icon_share_press.png"
+#define VP_PLAY_NORMAL_RES_SHARE_DIM				"function/T01_2_control_icon_share_dim.png"
+
+#define VP_PLAY_NORMAL_RES_SOUND_ALIVE				"function/T01_2_control_icon_soundalive.png"
+#define VP_PLAY_NORMAL_RES_SOUND_ALIVE_PRESS		"function/T01_2_control_icon_soundalive_press.png"
+#define VP_PLAY_NORMAL_RES_SOUND_ALIVE_DIM			"function/T01_2_control_icon_soundalive_dim.png"
+
+#define VP_PLAY_NORMAL_RES_REPEAT_OFF				"function/T01_2_control_icon_repeat_mode.png"
+#define VP_PLAY_NORMAL_RES_REPEAT_OFF_PRESS			"function/T01_2_control_icon_repeat_mode_press.png"
+#define VP_PLAY_NORMAL_RES_REPEAT_OFF_DIM			"function/T01_2_control_icon_repeat_mode_dim.png"
+
+#define VP_PLAY_NORMAL_RES_REPEAT_ONE				"function/T01_2_control_icon_repeat_once.png"
+#define VP_PLAY_NORMAL_RES_REPEAT_ONE_PRESS		"function/T01_2_control_icon_repeat_once_press.png"
+#define VP_PLAY_NORMAL_RES_REPEAT_ONE_DIM			"function/T01_2_control_icon_repeat_once_dim.png"
+
+#define VP_PLAY_NORMAL_RES_REPEAT_ALL				"function/T01_2_control_icon_repeat_all.png"
+#define VP_PLAY_NORMAL_RES_REPEAT_ALL_PRESS			"function/T01_2_control_icon_repeat_all_press.png"
+#define VP_PLAY_NORMAL_RES_REPEAT_ALL_DIM			"function/T01_2_control_icon_repeat_all_dim.png"
+
+#define VP_PLAY_NORMAL_RES_TRIM						"function/T01_2_control_icon_trim.png"
+#define VP_PLAY_NORMAL_RES_TRIM_PRESS				"function/T01_2_control_icon_trim_press.png"
+#define VP_PLAY_NORMAL_RES_TRIM_DIM					"function/T01_2_control_icon_trim_dim.png"
+
+#define VP_PLAY_NORMAL_RES_ROTATE					"button/T01_2_icon_rotate.png"
+#define VP_PLAY_NORMAL_RES_ROTATE_PRESS			"button/T01_2_icon_rotate_press.png"
+#define VP_PLAY_NORMAL_RES_ROTATE_DIM				"button/T01_2_icon_rotate_dim.png"
+
+#define VP_PLAY_NAVIFRAME_RES_ALLSHARE				"button/T01_2_icon_Near_by_device.png"
+#define VP_PLAY_NAVIFRAME_RES_ALLSHARE_PRESS		"button/T01_2_icon_Near_by_device_press.png"
+#define VP_PLAY_NAVIFRAME_RES_ALLSHARE_DIM            "button/T01_2_icon_Near_by_device_dim.png"
+
+#define VP_PLAY_NAVIFRAME_RES_SAVE					"button/T01_2_icon_check.png"
+#define VP_PLAY_NAVIFRAME_RES_SAVE_PRESS			"button/T01_2_icon_check_press.png"
+#define VP_PLAY_NAVIFRAME_RES_SAVE_DIM				"button/T01_2_icon_check_dim.png"
+
+#define VP_PLAY_NAVIFRAME_RES_BACK					"button/T01_2_icon_close.png"
+#define VP_PLAY_NAVIFRAME_RES_BACK_PRESS			"button/T01_2_icon_close_press.png"
+#define VP_PLAY_NAVIFRAME_RES_BACK_DIM				"button/T01_2_icon_close_dim.png"
+
+
+#define VP_PLAY_BOOKMARK_RES_ADD			"bookmark/T01_2_icon_bookmark_add.png"
+#define VP_PLAY_BOOKMARK_RES_ADD_PRESS	"bookmark/T01_2_icon_bookmark_add_press.png"
+#define VP_PLAY_BOOKMARK_RES_DEL			"bookmark/T01_2_button_remove.png"
+#define VP_PLAY_BOOKMARK_RES_DEL_PRESS		"bookmark/T01_2_button_remove_press.png"
+
+#define VP_PLAY_TRIM_RES_REW				"control/T01_2_control_circle_icon_reverse.png"
+#define VP_PLAY_TRIM_RES_FF					"control/T01_2_control_circle_icon_forward.png"
+
+#define VP_PLAY_SENSOR_RES_TRUN_OVER_01	"sensor/B15_turn_over_01.png"
+#define VP_PLAY_SENSOR_RES_TRUN_OVER_02	"sensor/B15_turn_over_02.png"
+#define VP_PLAY_SENSOR_RES_TRUN_OVER_03	"sensor/B15_turn_over_03.png"
+
+#define VP_PLAY_ALLSHARE_MY_DEVICE			"nearby_device/T02_Player_Nearby_device_01.png"
+#define VP_PLAY_ALLSHARE_TV_DEVICE			"nearby_device/T02_Player_Nearby_device_02.png"
+
+#define VP_PLAY_ALLSHARE_DEVICE_TV_POPUP				"allshare/device/120x120/U04_device_TV.png"
+#define VP_PLAY_ALLSHARE_DEVICE_BD_POPUP				"allshare/device/120x120/U04_device_BD.png"
+#define VP_PLAY_ALLSHARE_DEVICE_LFD_POPUP				"allshare/device/120x120/U04_device_LFD.png"
+#define VP_PLAY_ALLSHARE_DEVICE_STB_POPUP				"allshare/device/120x120/U04_device_STB.png"
+#define VP_PLAY_ALLSHARE_DEVICE_MOBILE_POPUP			"allshare/device/120x120/U04_device_Mobile.png"
+#define VP_PLAY_ALLSHARE_DEVICE_TABLET_POPUP			"allshare/device/120x120/U04_device_Tablet.png"
+#define VP_PLAY_ALLSHARE_DEVICE_DONGLE_POPUP			"allshare/device/120x120/U04_device_Dongle.png"
+#define VP_PLAY_ALLSHARE_DEVICE_CAMERA_POPUP			"allshare/device/120x120/U04_device_Camera.png"
+#define VP_PLAY_ALLSHARE_DEVICE_CAMCORDER_POPUP		"allshare/device/120x120/U04_device_Camcorder.png"
+#define VP_PLAY_ALLSHARE_DEVICE_REF_POPUP				"allshare/device/120x120/U04_device_REF.png"
+#define VP_PLAY_ALLSHARE_DEVICE_AC_WALL_POPUP			"allshare/device/120x120/U04_device_AC_Wall.png"
+#define VP_PLAY_ALLSHARE_DEVICE_WM_POPUP				"allshare/device/120x120/U04_device_WM.png"
+#define VP_PLAY_ALLSHARE_DEVICE_ROBOT_TV_POPUP			"allshare/device/120x120/U04_device_ROBOT_VC.png"
+#define VP_PLAY_ALLSHARE_DEVICE_PC_POPUP				"allshare/device/120x120/U04_device_PC.png"
+#define VP_PLAY_ALLSHARE_DEVICE_UNKNOWN_POPUP			"allshare/device/120x120/U04_device_None_DNS.png"
+
+#define VP_PLAY_ALLSHARE_DEVICE_TV_ITEM					"allshare/device/81x81/U04_device_TV.png"
+#define VP_PLAY_ALLSHARE_DEVICE_BD_ITEM					"allshare/device/81x81/U04_device_BD.png"
+#define VP_PLAY_ALLSHARE_DEVICE_LFD_ITEM					"allshare/device/81x81/U04_device_LFD.png"
+#define VP_PLAY_ALLSHARE_DEVICE_STB_ITEM				"allshare/device/81x81/U04_device_STB.png"
+#define VP_PLAY_ALLSHARE_DEVICE_MOBILE_ITEM				"allshare/device/81x81/U04_device_Mobile.png"
+#define VP_PLAY_ALLSHARE_DEVICE_TABLET_ITEM				"allshare/device/81x81/U04_device_Tablet.png"
+#define VP_PLAY_ALLSHARE_DEVICE_DONGLE_ITEM				"allshare/device/81x81/U04_device_Dongle.png"
+#define VP_PLAY_ALLSHARE_DEVICE_CAMERA_ITEM				"allshare/device/81x81/U04_device_Camera.png"
+#define VP_PLAY_ALLSHARE_DEVICE_CAMCORDER_ITEM			"allshare/device/81x81/U04_device_Camcorder.png"
+#define VP_PLAY_ALLSHARE_DEVICE_REF_ITEM					"allshare/device/81x81/U04_device_REF.png"
+#define VP_PLAY_ALLSHARE_DEVICE_AC_WALL_ITEM			"allshare/device/81x81/U04_device_AC_Wall.png"
+#define VP_PLAY_ALLSHARE_DEVICE_WM_ITEM					"allshare/device/81x81/U04_device_WM.png"
+#define VP_PLAY_ALLSHARE_DEVICE_ROBOT_TV_ITEM			"allshare/device/81x81/U04_device_ROBOT_VC.png"
+#define VP_PLAY_ALLSHARE_DEVICE_PC_ITEM					"allshare/device/81x81/U04_device_PC.png"
+#define VP_PLAY_ALLSHARE_DEVICE_UNKNOWN_ITEM			"allshare/device/81x81/U04_device_None_DNS.png"
+
+#define VP_PLAY_CTX_ADD_TO_HOME						"more/icon_add_to_home.png"
+#define VP_PLAY_CTX_CHAPTER_PREVIEW						"more/icon_chapter_preview.png"
+#define VP_PLAY_CTX_DETAIL								"more/icon_detail.png"
+#define VP_PLAY_CTX_DOWNLOAD							"more/icon_download.png"
+#define VP_PLAY_CTX_SETTING								"more/icon_setting.png"
+#define VP_PLAY_CTX_SHARE_VIA							"more/icon_share_via.png"
+#define VP_PLAY_CTX_TRIM									"more/icon_trim.png"
+#define VP_PLAY_CTX_CONNECTION_INFO						"more/icon_nearbydevices.png"
+
+#define VP_PLAY_NORMAL_RES_CAPTURE						"capture/T01_2_icon_capture.png"
+#define VP_PLAY_NORMAL_RES_CAPTURE_PRESS				"capture/T01_2_icon_capture_press.png"
+#define VP_PLAY_NORMAL_RES_CAPTURE_DIM					"capture/T01_2_icon_capture_dim.png"
+
+#define VP_PLAY_NORMAL_RES_CAPTURE_REW					"capture/T01-2_icon_left.png"
+#define VP_PLAY_NORMAL_RES_CAPTURE_REW_PRESS			"capture/T01-2_icon_left_press.png"
+#define VP_PLAY_NORMAL_RES_CAPTURE_REW_DIM				"capture/T01-2_icon_left_dim.png"
+
+#define VP_PLAY_NORMAL_RES_CAPTURE_FF					"capture/T01-2_icon_right.png"
+#define VP_PLAY_NORMAL_RES_CAPTURE_FF_PRESS			"capture/T01-2_icon_right_press.png"
+#define VP_PLAY_NORMAL_RES_CAPTURE_FF_DIM				"capture/T01-2_icon_right_dim.png"
+
+#define VP_PLAY_RES_BUTTON_ADD							"button/T01-2_play_popup_icon_plus.png"
+#define VP_PLAY_RES_BUTTON_ADD_PRESS					"button/T01-2_play_popup_icon_plus_press.png"
+
+#define VP_PLAY_RES_BUTTON_DEL							"button/T01-2_play_popup_icon_minus.png"
+#define VP_PLAY_RES_BUTTON_DEL_PRESS					"button/T01-2_play_popup_icon_minus_press.png"
+
+#define VP_PLAY_TAG_BUDDY_DEAFULT						"tag/T01-1_Tag_buddy_settings_bg.png"
+#define VP_PLAY_TAG_BUDDY_LOGO							"tag/T01_2_icon_tag_buddy_cplogo.PNG"
+#define VP_PLAY_TAG_BUDDY_LOGO_JP						"tag/U07_weather_logo.png"
+
+
+#define VP_PLAY_NORMAL_RES_LOCK							"button/T01_2_icon_lock.png"
+#define VP_PLAY_NORMAL_RES_LOCK_PRESS					"button/T01_2_icon_lock_press.png"
+
+#define VP_PLAY_NORMAL_RES_BLUETOOTH_HEADSET			"button/T01_2_icon_bluetooth_headset.png"
+#define VP_PLAY_NORMAL_RES_EARPHONE						"button/T02_icon_soundPath.png"
+#define VP_PLAY_NORMAL_RES_SPEAKER						"button/T02_icon_speaker.png"
+#define VP_PLAY_NORMAL_RES_DMC_ICON						"mini_controller/A01_15_popup_No_device.png"
+#define VP_PLAY_NORMAL_RES_AUDIO_ONLY					"sound_only.png"
+#define VP_PLAY_NORMAL_RES_ERROR_IMAGE					"player_error_screen.png"
+
+#define VP_PLAY_BRIGHTNESS_POPUP_ICON_00 		"brightness/quick_icon_brightness_00.png"
+#define VP_PLAY_BRIGHTNESS_POPUP_ICON_01 		"brightness/quick_icon_brightness_01.png"
+#define VP_PLAY_BRIGHTNESS_POPUP_ICON_02 		"brightness/quick_icon_brightness_02.png"
+#define VP_PLAY_BRIGHTNESS_POPUP_ICON_03 		"brightness/quick_icon_brightness_03.png"
+#define VP_PLAY_BRIGHTNESS_POPUP_ICON_04 		"brightness/quick_icon_brightness_04.png"
+#define VP_PLAY_BRIGHTNESS_POPUP_ICON_05 		"brightness/quick_icon_brightness_05.png"
+#define VP_PLAY_BRIGHTNESS_POPUP_ICON_06 		"brightness/quick_icon_brightness_06.png"
+#define VP_PLAY_BRIGHTNESS_POPUP_ICON_07 		"brightness/quick_icon_brightness_07.png"
+#define VP_PLAY_BRIGHTNESS_POPUP_ICON_08 		"brightness/quick_icon_brightness_08.png"
+#define VP_PLAY_BRIGHTNESS_POPUP_ICON_09		"brightness/quick_icon_brightness_09.png"
+#define VP_PLAY_BRIGHTNESS_POPUP_ICON_10 		"brightness/quick_icon_brightness_10.png"
+#define VP_PLAY_BRIGHTNESS_POPUP_ICON_11 		"brightness/quick_icon_brightness_11.png"
+
+#define RESOURCE_IMAGE_LOSSY( FILE_NAME ) \
+group { \
+	name: FILE_NAME; \
+	images.image: FILE_NAME LOSSY 85; \
+	parts { \
+		part { \
+			name: "image"; \
+			description { \
+			state: "default" 0.0; \
+			image.normal: FILE_NAME; \
+			aspect: 1 1; \
+			aspect_preference: BOTH; \
+			} \
+		} \
+	} \
+}
+
+#define RESOURCE_IMAGE_COMP( FILE_NAME ) \
+	group { \
+		name: FILE_NAME; \
+		images.image: FILE_NAME COMP; \
+		parts { \
+			part { name: "image"; \
+				description { \
+					state: "default" 0.0; \
+					image.normal: FILE_NAME; \
+					aspect_preference: VERTICAL; \
+				} \
+			} \
+		} \
+	}
+
+
+collections {
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_MULTI_VIEW_CLOSE);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_MULTI_VIEW_FULLSIZE);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_MULTI_VIEW_RESIZE);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_MULTI_VIEW_RESIZE_PRESS);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_MULTI_VIEW_MINSIZE);
+
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_MULTI_VIEW_FF);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_MULTI_VIEW_FF_PRESS);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_MULTI_VIEW_REW);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_MULTI_VIEW_REW_PRESS);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_MULTI_VIEW_PLAY);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_MULTI_VIEW_PLAY_PRESS);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_MULTI_VIEW_PAUSE);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_MULTI_VIEW_PAUSE_PRESS);
+
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_NAVIFRAME_RES_ALLSHARE);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_NAVIFRAME_RES_ALLSHARE_PRESS);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_NAVIFRAME_RES_ALLSHARE_DIM);
+
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_NAVIFRAME_RES_SAVE);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_NAVIFRAME_RES_SAVE_PRESS);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_NAVIFRAME_RES_SAVE_DIM);
+
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_NAVIFRAME_RES_BACK);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_NAVIFRAME_RES_BACK_PRESS);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_NAVIFRAME_RES_BACK_DIM);
+
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_NORMAL_RES_RESUME);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_NORMAL_RES_PAUSE);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_NORMAL_RES_PREV);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_NORMAL_RES_NEXT);
+
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_NORMAL_RES_VOLUME);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_NORMAL_RES_VOLUME_PRESS);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_NORMAL_RES_VOLUME_DIM);
+
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_NORMAL_RES_MUTE);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_NORMAL_RES_MUTE_PRESS);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_NORMAL_RES_MUTE_DIM);
+
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_NORMAL_RES_BOOKMARK);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_NORMAL_RES_BOOKMARK_PRESS);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_NORMAL_RES_BOOKMARK_DIM);
+
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_NORMAL_RES_POPUP_PLAYER);
+
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_NORMAL_RES_SCREEN_1_MODE);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_NORMAL_RES_SCREEN_1_MODE_PRESS);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_NORMAL_RES_SCREEN_1_MODE_DIM);
+
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_NORMAL_RES_SCREEN_2_MODE);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_NORMAL_RES_SCREEN_2_MODE_PRESS);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_NORMAL_RES_SCREEN_2_MODE_DIM);
+
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_NORMAL_RES_SCREEN_3_MODE);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_NORMAL_RES_SCREEN_3_MODE_PRESS);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_NORMAL_RES_SCREEN_3_MODE_DIM);
+
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_NORMAL_RES_SCREEN_4_MODE);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_NORMAL_RES_SCREEN_4_MODE_PRESS);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_NORMAL_RES_SCREEN_4_MODE_DIM);
+
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_NORMAL_RES_MULTI_MODE);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_NORMAL_RES_MULTI_MODE_PRESS);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_NORMAL_RES_MULTI_MODE_DIM);
+
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_NORMAL_RES_SHARE);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_NORMAL_RES_SHARE_PRESS);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_NORMAL_RES_SHARE_DIM);
+
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_NORMAL_RES_SOUND_ALIVE);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_NORMAL_RES_SOUND_ALIVE_PRESS);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_NORMAL_RES_SOUND_ALIVE_DIM);
+
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_NORMAL_RES_REPEAT_OFF);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_NORMAL_RES_REPEAT_OFF_PRESS);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_NORMAL_RES_REPEAT_OFF_DIM);
+
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_NORMAL_RES_REPEAT_ONE);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_NORMAL_RES_REPEAT_ONE_PRESS);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_NORMAL_RES_REPEAT_ONE_DIM);
+
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_NORMAL_RES_REPEAT_ALL);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_NORMAL_RES_REPEAT_ALL_PRESS);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_NORMAL_RES_REPEAT_ALL_DIM);
+
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_NORMAL_RES_TRIM);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_NORMAL_RES_TRIM_PRESS);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_NORMAL_RES_TRIM_DIM);
+
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_NORMAL_RES_ROTATE);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_NORMAL_RES_ROTATE_PRESS);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_NORMAL_RES_ROTATE_DIM);
+
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_BOOKMARK_RES_ADD);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_BOOKMARK_RES_ADD_PRESS);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_BOOKMARK_RES_DEL);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_BOOKMARK_RES_DEL_PRESS);
+
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_TRIM_RES_REW);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_TRIM_RES_FF);
+
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_SENSOR_RES_TRUN_OVER_01);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_SENSOR_RES_TRUN_OVER_02);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_SENSOR_RES_TRUN_OVER_03);
+
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_ALLSHARE_MY_DEVICE);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_ALLSHARE_TV_DEVICE);
+
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_CTX_ADD_TO_HOME);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_CTX_CHAPTER_PREVIEW);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_CTX_DETAIL);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_CTX_DOWNLOAD);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_CTX_SETTING);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_CTX_SHARE_VIA);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_CTX_TRIM);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_CTX_CONNECTION_INFO);
+
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_ALLSHARE_DEVICE_TV_POPUP);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_ALLSHARE_DEVICE_BD_POPUP);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_ALLSHARE_DEVICE_LFD_POPUP);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_ALLSHARE_DEVICE_STB_POPUP);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_ALLSHARE_DEVICE_MOBILE_POPUP);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_ALLSHARE_DEVICE_TABLET_POPUP);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_ALLSHARE_DEVICE_DONGLE_POPUP);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_ALLSHARE_DEVICE_CAMERA_POPUP);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_ALLSHARE_DEVICE_CAMCORDER_POPUP);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_ALLSHARE_DEVICE_REF_POPUP);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_ALLSHARE_DEVICE_AC_WALL_POPUP);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_ALLSHARE_DEVICE_WM_POPUP);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_ALLSHARE_DEVICE_ROBOT_TV_POPUP);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_ALLSHARE_DEVICE_PC_POPUP);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_ALLSHARE_DEVICE_UNKNOWN_POPUP);
+
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_ALLSHARE_DEVICE_TV_ITEM);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_ALLSHARE_DEVICE_BD_ITEM);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_ALLSHARE_DEVICE_LFD_ITEM);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_ALLSHARE_DEVICE_STB_ITEM);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_ALLSHARE_DEVICE_MOBILE_ITEM);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_ALLSHARE_DEVICE_TABLET_ITEM);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_ALLSHARE_DEVICE_DONGLE_ITEM);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_ALLSHARE_DEVICE_CAMERA_ITEM);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_ALLSHARE_DEVICE_CAMCORDER_ITEM);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_ALLSHARE_DEVICE_REF_ITEM);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_ALLSHARE_DEVICE_AC_WALL_ITEM);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_ALLSHARE_DEVICE_WM_ITEM);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_ALLSHARE_DEVICE_ROBOT_TV_ITEM);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_ALLSHARE_DEVICE_PC_ITEM);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_ALLSHARE_DEVICE_UNKNOWN_ITEM);
+
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_NORMAL_RES_CAPTURE);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_NORMAL_RES_CAPTURE_PRESS);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_NORMAL_RES_CAPTURE_DIM);
+
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_NORMAL_RES_CAPTURE_REW);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_NORMAL_RES_CAPTURE_REW_PRESS);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_NORMAL_RES_CAPTURE_REW_DIM);
+
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_NORMAL_RES_CAPTURE_FF);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_NORMAL_RES_CAPTURE_FF_PRESS);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_NORMAL_RES_CAPTURE_FF_DIM);
+
+	RESOURCE_IMAGE_COMP(VP_PLAY_NORMAL_RES_AUDIO_ONLY);
+	RESOURCE_IMAGE_COMP(VP_PLAY_NORMAL_RES_ERROR_IMAGE);
+
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_RES_BUTTON_ADD);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_RES_BUTTON_ADD_PRESS);
+
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_RES_BUTTON_DEL);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_RES_BUTTON_DEL_PRESS);
+
+	RESOURCE_IMAGE_COMP(VP_PLAY_TAG_BUDDY_DEAFULT);
+
+	RESOURCE_IMAGE_COMP(VP_PLAY_NORMAL_RES_LOCK);
+	RESOURCE_IMAGE_COMP(VP_PLAY_NORMAL_RES_LOCK_PRESS);
+	RESOURCE_IMAGE_COMP(VP_PLAY_NORMAL_RES_BLUETOOTH_HEADSET);
+	RESOURCE_IMAGE_COMP(VP_PLAY_NORMAL_RES_EARPHONE);
+	RESOURCE_IMAGE_COMP(VP_PLAY_NORMAL_RES_SPEAKER);
+	RESOURCE_IMAGE_COMP(VP_PLAY_TAG_BUDDY_LOGO);
+	RESOURCE_IMAGE_COMP(VP_PLAY_TAG_BUDDY_LOGO_JP);
+	RESOURCE_IMAGE_COMP(VP_PLAY_NORMAL_RES_DMC_ICON);
+
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_BRIGHTNESS_POPUP_ICON_00);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_BRIGHTNESS_POPUP_ICON_01);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_BRIGHTNESS_POPUP_ICON_02);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_BRIGHTNESS_POPUP_ICON_03);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_BRIGHTNESS_POPUP_ICON_04);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_BRIGHTNESS_POPUP_ICON_05);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_BRIGHTNESS_POPUP_ICON_06);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_BRIGHTNESS_POPUP_ICON_07);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_BRIGHTNESS_POPUP_ICON_08);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_BRIGHTNESS_POPUP_ICON_09);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_BRIGHTNESS_POPUP_ICON_10);
+	RESOURCE_IMAGE_LOSSY(VP_PLAY_BRIGHTNESS_POPUP_ICON_11);
+}
+

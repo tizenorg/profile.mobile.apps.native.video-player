@@ -1,0 +1,55 @@
+/*
+* Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+
+images
+{
+	/* multi window */
+	image: "multi/T01_2_mw_control_bg_left.png" COMP;
+	image: "multi/T01_2_mw_control_bg_left_press.png" COMP;
+	image: "multi/T01_2_mw_control_bg_center.png" COMP;
+	image: "multi/T01_2_mw_control_bg_center_press.png" COMP;
+	image: "multi/T01_2_mw_control_bg_right.png" COMP;
+	image: "multi/T01_2_mw_control_bg_right_press.png" COMP;
+
+	/* button images */
+	image: "button/T01_2_icon_Near_by_device.png" COMP;
+	image: "button/T01_2_icon_Near_by_device_press.png" COMP;
+	image: "button/T01_2_icon_bluetooth_headset.png" COMP;
+	image: "button/T01_2_icon_bluetooth_headset_press.png" COMP;
+
+	image: "button/T01_2_icon_check.png" COMP;
+	image: "button/T01_2_icon_check_press.png" COMP;
+	image: "button/T01_2_icon_close.png" COMP;
+	image: "button/T01_2_icon_close_press.png" COMP;
+	image: "button/T01-2_control_circle_button_01.png" COMP;
+	image: "button/T01-2_control_circle_button_01_press.png" COMP;
+	image: "button/T01-2_control_circle_button_01_focus.png" COMP;
+	image: "button/T01-2_control_circle_button_02.png" COMP;
+	image: "button/T01-2_control_circle_button_02_press.png" COMP;
+	image: "button/T01-2_control_circle_button_02_focus.png" COMP;
+	image: "button/T01-2_control_circle_button_03.png" COMP;
+	image: "button/T01-2_control_circle_button_03_press.png" COMP;
+	image: "button/core_icon_back.png" COMP;
+	image: "control/T01-2_control_circle_icon_rewind.png" COMP;
+	image: "control/T01-2_control_circle_icon_next.png" COMP;
+	/*genlist*/
+	image: "genlist/00_focus.png" COMP;
+	image: "genlist/00_list_group_bg.png" COMP;
+	image: "genlist/00_list_group_bg_press.png" COMP;
+	image: "genlist/00_popup_list_press.pngg" COMP;
+
+}

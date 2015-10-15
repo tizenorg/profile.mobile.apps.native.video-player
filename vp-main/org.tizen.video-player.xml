@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns="http://tizen.org/ns/packages" package="org.tizen.video-player" version="1.0.39" install-location="internal-only">
+	<label>video-player</label>
+		<!--INDIA-->
+			<label xml:lang="en-gb">Video Player</label>	<!--  -->
+			<label xml:lang="bn-in">ভিডিও প্লেয়ার</label>
+			<label xml:lang="gu-in">વિડિયો પ્લેયર</label>
+			<label xml:lang="hi-in">वीडियो प्‍लेयर</label>
+			<label xml:lang="kn-in">ವೀಡಿಯೊ ಪ್ಲೇಯರ್</label>
+			<label xml:lang="ml-in">വീഡിയോ പ്ലെയര്‍</label>
+			<label xml:lang="si-lk">වීඩියෝ වාදකය</label>
+			<label xml:lang="ta-in">நிகழ்பட இயக்கி</label>
+			<label xml:lang="te-in">వీడియో ప్లేయర్</label>
+			<label xml:lang="ur-pk">ویڈیو پلیئر</label>
+		<!--SEA-->
+			<label xml:lang="en-us">Video Player</label>
+			<label xml:lang="en-ph">Video Player</label>
+			<label xml:lang="zh-cn">视频播放器</label>
+			<label xml:lang="tl-ph">Video Player</label>
+			<label xml:lang="id-id">Pemutar Video</label>
+			<label xml:lang="ko-kr">비디오 플레이어</label>
+			<label xml:lang="ms-my">Pemain Video</label>
+			<label xml:lang="my-mm">ဗီြဒီယုိ ဖြင့္စက္</label>
+			<label xml:lang="th-th">เครื่อง​เล่น​วีดีโอ</label>
+			<label xml:lang="vi-vn">Máy xem video</label>
+			<label xml:lang="lo-la">ເຄື່ອງຫຼິ້ນວິດີໂອ</label>
+			<label xml:lang="km-kh">កម្មវិធី​ចាក់​វីដេអូ</label>
+		<!--Latin-->
+			<label xml:lang="pt-br">Video Player</label>
+			<label xml:lang="es-us">Reproductor de Video</label>
+   <author email="jhyuk47.lee@samsung.com" href="www.samsung.com">Jonghyuk Lee</author>
+	<description>Video player</description>
+	<ui-application appid="org.tizen.video-player" exec="/usr/apps/org.tizen.video-player/bin/video-player" nodisplay="true" multiple="false" type="capp" taskmanage="true" process-pool="false" hw-acceleration="use-GL" launch_mode="caller">
+		<label>Video player</label>
+		<icon>org.tizen.video-player.png</icon>
+		<metadata key="http://developer.samsung.com/tizen/metadata/floatingapp/preview" value="shared/res/video_preview.png"/>
+		<metadata key="http://developer.samsung.com/tizen/metadata/floatingapp/preview/landscape" value="shared/res/video_preview_l.png"/>
+		<metadata key="http://developer.samsung.com/tizen/metadata/multiwindow"/>
+		<!--INDIA-->
+			<label xml:lang="en-gb">Video Player</label>	<!--  -->
+			<label xml:lang="bn-in">ভিডিও প্লেয়ার</label>
+			<label xml:lang="gu-in">વિડિયો પ્લેયર</label>
+			<label xml:lang="hi-in">वीडियो प्‍लेयर</label>
+			<label xml:lang="kn-ca">ವೀಡಿಯೊ ಪ್ಲೇಯರ್</label>
+			<label xml:lang="ml-my">വീഡിയോ പ്ലെയര്‍</label>
+			<label xml:lang="si-lk">වීඩියෝ වාදකය</label>
+			<label xml:lang="ta-in">நிகழ்பட இயக்கி</label>
+			<label xml:lang="te-in">వీడియో ప్లేయర్</label>
+			<label xml:lang="ur-pk">ویڈیو پلیئر</label>
+		<!--SEA-->
+			<label xml:lang="en-us">Video Player</label>
+			<label xml:lang="en-ph">Video Player</label>
+			<label xml:lang="zh-cn">视频播放器</label>
+			<label xml:lang="tl-ph">Video Player</label>
+			<label xml:lang="id-id">Pemutar Video</label>
+			<label xml:lang="ko-kr">비디오 플레이어</label>
+			<label xml:lang="ms-mw">Pemain Video</label>
+			<label xml:lang="my-mm">ဗီြဒီယုိ ဖြင့္စက္</label>
+			<label xml:lang="th-th">เครื่อง​เล่น​วีดีโอ</label>
+			<label xml:lang="vi-vn">Máy xem video</label>
+			<label xml:lang="lo-la">ເຄື່ອງຫຼິ້ນວິດີໂອ</label>
+			<label xml:lang="km-kh">កម្មវិធី​ចាក់​វីដេអូ</label>
+		<!--Latin-->
+			<label xml:lang="pt-br">Video Player</label>
+			<label xml:lang="es-us">Reproductor de Video</label>
+      <application-service>
+			<operation name="http://tizen.org/appcontrol/operation/view" />
+			<mime name="video/mp4" />
+			<mime name="video/3gp" />
+			<mime name="video/divx" />
+			<mime name="video/x-msvideo" />
+			<mime name="video/x-ms-wmv" />
+			<mime name="video/x-ms-asf" />
+			<mime name="video/3gpp" />
+			<mime name="video/x-matroska" />
+			<mime name="video/vnd.ms-playready.media.pyv" />
+			<mime name="application/vnd.apple.mpegurl" />
+			<mime name="application/x-mpegurl" />
+			<mime name="audio/x-mpegurl" />
+			<mime name="video/x-mpegurl" />
+			<mime name="video/x-flv" />
+			<mime name="video/ogg" />
+			<mime name="video/quicktime" />
+			<mime name="video/mp2t" />
+			<mime name="audio/isma" />
+			<mime name="application/sdp" />
+			<uri name="http" />
+			<uri name="https" />
+			<uri name="rtsp" />
+			<uri name="rtp" />
+		</application-service>
+		<application-service>
+			<operation name="http://tizen.org/appcontrol/operation/view" />
+			<mime name="video/mp4" />
+			<mime name="video/3gp" />
+			<mime name="video/divx" />
+			<mime name="video/x-msvideo" />
+			<mime name="video/x-ms-wmv" />
+			<mime name="video/x-ms-asf" />
+			<mime name="video/3gpp" />
+			<mime name="video/x-matroska" />
+			<mime name="video/vnd.ms-playready.media.pyv" />
+			<mime name="application/vnd.apple.mpegurl" />
+			<mime name="application/x-mpegurl" />
+			<mime name="audio/x-mpegurl" />
+			<mime name="video/x-mpegurl" />
+			<mime name="video/x-flv" />
+			<mime name="video/ogg" />
+			<mime name="video/quicktime" />
+			<mime name="video/mp2t" />
+			<mime name="audio/isma" />
+			<mime name="application/sdp" />
+		</application-service>
+	</ui-application>
+	<privileges>
+		<privilege>http://tizen.org/privilege/wifi.wifidirect.admin</privilege>
+		<privilege>http://tizen.org/privilege/wifi.wifidirect.read</privilege>
+		<privilege>http://tizen.org/privilege/maps</privilege>
+		<privilege>http://tizen.org/privilege/mediastorage</privilege>
+		<privilege>http://tizen.org/privilege/systemsettings</privilege>
+		<privilege>http://tizen.org/privilege/externalstorage.appdata</privilege>
+		<privilege>http://tizen.org/privilege/telephony</privilege>
+		<privilege>http://tizen.org/privilege/externalstorage</privilege>
+		<privilege>http://tizen.org/privilege/wifidirect</privilege>
+		<privilege>http://tizen.org/privilege/network.get</privilege>
+		<privilege>http://tizen.org/privilege/volume.set</privilege>
+		<privilege>http://tizen.org/privilege/appmanager.launch</privilege>
+	</privileges>
+</manifest>

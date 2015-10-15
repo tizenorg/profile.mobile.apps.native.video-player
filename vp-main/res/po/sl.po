@@ -1,0 +1,489 @@
+msgid "IDS_VIDEO_OPT_BRIGHTNESS"
+msgstr "Svetlost"
+
+msgid "IDS_VIDEO_OPT_MUSIC_M_SOUNDALIVE"
+msgstr "Glasba"
+
+msgid "IDS_VIDEO_OPT_VOICES_M_PERSON"
+msgstr "Glasovi"
+
+msgid "IDS_VIDEO_BODY_B"
+msgstr "B"
+
+msgid "IDS_VIDEO_BODY_GB"
+msgstr "GB"
+
+msgid "IDS_VIDEO_BODY_KB"
+msgstr "KB"
+
+msgid "IDS_VIDEO_BODY_LOCATION"
+msgstr "Lokacija"
+
+msgid "IDS_VIDEO_BODY_MB"
+msgstr "MB"
+
+msgid "IDS_VIDEO_BUTTON_OK"
+msgstr "V redu"
+
+msgid "IDS_VIDEO_HEADER_LAST_MODIFIED_M_DATE"
+msgstr "Zadnjič spremenjeno"
+
+msgid "IDS_VIDEO_OPT_SHARE"
+msgstr "Skupna raba"
+
+msgid "IDS_VIDEO_HEADER_CANNOT_PLAY_VIDEO_ABB"
+msgstr "Videa ni mogoče predvajati"
+
+msgid "IDS_VIDEO_POP_AN_ERROR_OCCURRED_WITH_THE_SUBTITLES"
+msgstr "Prišlo je do napake s podnapisi."
+
+msgid "IDS_VIDEO_POP_THE_FILE_IS_CORRUPTED_OR_THE_SD_CARD_HAS_BEEN_REMOVED"
+msgstr "Datoteka je poškodovana ali pa je kartica SD odstranjena."
+
+msgid "IDS_VIDEO_OPT_DETAILS"
+msgstr "Podrobnosti"
+
+msgid "IDS_VIDEO_OPT_TITLE"
+msgstr "Naslov"
+
+msgid "IDS_VIDEO_POP_THIS_VIDEO_WILL_BE_DELETED"
+msgstr "Ta videoposnetek bo izbrisan."
+
+msgid "IDS_VIDEO_HEADER_SETTINGS"
+msgstr "Nastavitve"
+
+msgid "IDS_VIDEO_HEADER_UNABLE_TO_PLAY_VIDEO_ABB"
+msgstr "Videa ni mogoče predvajati"
+
+msgid "IDS_VIDEO_MBODY_ALIGNMENT"
+msgstr "Poravnava"
+
+msgid "IDS_VIDEO_MBODY_FONT_SIZE"
+msgstr "Velikost pisave"
+
+msgid "IDS_VIDEO_OPT_REPEAT_SETTING_ABB"
+msgstr "Nastavitev ponavljanja"
+
+msgid "IDS_VIDEO_OPT_SUBTITLES_HCC_ABB"
+msgstr "Podnapisi (CC)"
+
+msgid "IDS_VIDEO_SBODY_CENTRE_M_STATUS"
+msgstr "Sredina"
+
+msgid "IDS_VIDEO_SBODY_LARGE_M_STATUS"
+msgstr "Velika"
+
+msgid "IDS_VIDEO_SBODY_LEFT_M_STATUS"
+msgstr "Levo"
+
+msgid "IDS_VIDEO_SBODY_MEDIUM_M_STATUS"
+msgstr "Srednja"
+
+msgid "IDS_VIDEO_SBODY_RIGHT_M_STATUS"
+msgstr "Desno"
+
+msgid "IDS_VIDEO_SBODY_SMALL_M_STATUS"
+msgstr "Majhna"
+
+msgid "IDS_BR_SK_NEXT"
+msgstr "Naprej"
+
+msgid "IDS_BR_SK_PREVIOUS"
+msgstr "Nazaj"
+
+msgid "IDS_VPL_POP_DRM_FILES_CANNOT_BE_SHARED"
+msgstr "Datotek DRM ni mogoče deliti z drugimi."
+
+msgid "IDS_VPL_OPT_FORMAT"
+msgstr "Format"
+
+msgid "IDS_VPL_BODY_UNABLE_TO_PLAY_VIDEO_DURING_CALL"
+msgstr "Ni mogoče predvajati videa med klicem."
+
+msgid "IDS_VIDEO_OPT_MESSAGE_ABB"
+msgstr "Sporoč."
+
+msgid "IDS_VIDEO_OPT_FILE_TRANSFER_ABB"
+msgstr "Prenos datotek"
+
+msgid "IDS_VIDEO_OPT_EMAIL_ABB"
+msgstr "E-pošta"
+
+msgid "IDS_VIDEO_BODY_LONGITUDE"
+msgstr "Zemljepisna dolžina"
+
+msgid "IDS_VIDEO_BODY_LATITUDE"
+msgstr "Zemljepisna širina"
+
+msgid "IDS_MUSIC_BUTTON_ENABLE_MOTION"
+msgstr "Omog. gibanje"
+
+msgid "IDS_VPL_TPOP_SCRUBBING_AT_PSX_SPEED"
+msgstr "Čiščenje pri hitrosti %sx."
+
+msgid "IDS_VPL_TAB_EXTERNAL_STORAGE"
+msgstr "Zunanji pomnilnik"
+
+msgid "IDS_VPL_POP_VOLUME_M_SOUND"
+msgstr "Glasnost"
+
+msgid "IDS_VPL_POP_UNSUPPORTED_VIDEO_FORMAT"
+msgstr "Nepodprt video zapis."
+
+msgid "IDS_VPL_POP_UNSUPPORTED_FILE_TYPE"
+msgstr "Nepodprta vrsta datoteke."
+
+msgid "IDS_VPL_POP_UNSUPPORTED_AUDIO_FORMAT"
+msgstr "Nepodprt zvočni zapis."
+
+msgid "IDS_VPL_POP_UNABLE_TO_USE_FAST_FORWARD_AND_REWIND_WHEN_NEARBY_DEVICES_ARE_ENABLED"
+msgstr "Funkcij za hitro previjanje naprej in nazaj ni mogoče uporabljati, ko so omogočene naprave v bližini."
+
+msgid "IDS_VPL_POP_UNABLE_TO_CAPTURE"
+msgstr "Ni mogoče zajeti."
+
+msgid "IDS_VPL_POP_ROTATE"
+msgstr "Obrni"
+
+msgid "IDS_VPL_POP_PRESS_THE_BACK_KEY_AGAIN_TO_RETURN_TO_PREVIOUS_SCREEN"
+msgstr "Znova pritisnite tipko za vrnitev, da se vrnete na prejšnji zaslon."
+
+msgid "IDS_VPL_POP_NOT_ENOUGH_MEMORY_DELETE_SOME_ITEMS"
+msgstr "Ni dovolj pomnilnika. Izbrišite nekaj predmetov"
+
+msgid "IDS_VPL_POP_BOOKMARK_LIST_FULL_DELETE_SOME_BOOKMARKS"
+msgstr "Seznam zaznamkov je poln. Izbrišite nekaj zaznamkov."
+
+msgid "IDS_VPL_OPT_YELLOW_M_COLOUR"
+msgstr "Rumena"
+
+msgid "IDS_VPL_OPT_VIRTUAL_71_CH"
+msgstr "Zvočna kartica Virtual 7.1 ch"
+
+msgid "IDS_VPL_OPT_SUBTITLES_HCC_ABB"
+msgstr "Podnapisi (CC)"
+
+msgid "IDS_VPL_OPT_SOUNDALIVE"
+msgstr "SoundAlive"
+
+msgid "IDS_VPL_OPT_REPEAT_MODE"
+msgstr "Način ponavljanja"
+
+msgid "IDS_VPL_OPT_NO_REPEAT"
+msgstr "Brez ponavljanja"
+
+msgid "IDS_VPL_OPT_MAGENTA_M_COLOUR"
+msgstr "Magenta"
+
+msgid "IDS_VPL_OPT_GREEN"
+msgstr "Zelena"
+
+msgid "IDS_VPL_OPT_CYAN_M_COLOUR"
+msgstr "Cijan"
+
+msgid "IDS_VPL_OPT_CUSTOM"
+msgstr "Po meri"
+
+msgid "IDS_VPL_OPT_CURRENT_VIDEO_HONCE_ABB"
+msgstr "Tren. video (enkrat)"
+
+msgid "IDS_VPL_OPT_CONNECTION_INFO_ABB"
+msgstr "Podatki o povezavi"
+
+msgid "IDS_VPL_OPT_CHANGE_PLAYER"
+msgstr "Spremeni predvajalnik"
+
+msgid "IDS_VPL_OPT_CAPTURE"
+msgstr "Zajemi"
+
+msgid "IDS_VPL_OPT_ALLSHARE"
+msgstr "AllShare"
+
+msgid "IDS_VPL_HEADER_SELECT_DEVICE_ABB"
+msgstr "Izberite napravo"
+
+msgid "IDS_VPL_HEADER_AVAILABLE_DEVICES_ABB"
+msgstr "Razpoložlj. naprave"
+
+msgid "IDS_VPL_BUTTON_SPEAKER_ABB"
+msgstr "Zvočnik"
+
+msgid "IDS_VPL_BODY_WHITE"
+msgstr "Bela"
+
+msgid "IDS_VPL_BODY_UDRGOTHICM_M_FONT"
+msgstr "UDRGothicM"
+
+msgid "IDS_VPL_BODY_UDMINCHO_M_FONT"
+msgstr "UDMincho"
+
+msgid "IDS_VPL_BODY_ROSEMARY_M_FONT"
+msgstr "Rosemary"
+
+msgid "IDS_VPL_BODY_RED_ABB"
+msgstr "Rdeča"
+
+msgid "IDS_VPL_BODY_PS_SECONDS"
+msgstr "%s s"
+
+msgid "IDS_VPL_BODY_POP_M_FONT"
+msgstr "POP"
+
+msgid "IDS_VPL_BODY_PLAY_SPEED"
+msgstr "Hitrost predvajanja"
+
+msgid "IDS_VPL_BODY_PD_SECS"
+msgstr "%d s"
+
+msgid "IDS_VPL_BODY_OFF"
+msgstr "Izključeno"
+
+msgid "IDS_VPL_BODY_NO_TITLE"
+msgstr "Ni naslova"
+
+msgid "IDS_VPL_BODY_MY_DEVICE"
+msgstr "Moja naprava"
+
+msgid "IDS_VPL_BODY_DEFAULT_FONT"
+msgstr "Privzeta pisava"
+
+msgid "IDS_VPL_BODY_COOL_JAZZ_M_FONT"
+msgstr "Cool jazz"
+
+msgid "IDS_VPL_BODY_CHOCO_COOKY_M_FONT"
+msgstr "Choco cooky"
+
+msgid "IDS_VPL_BODY_BLUE"
+msgstr "Modro"
+
+msgid "IDS_VPL_BODY_BLACK"
+msgstr "Črna"
+
+msgid "IDS_VPL_BODY_ACTIVATION"
+msgstr "Vklop"
+
+msgid "IDS_SMEMO_POP_CLOSE_APPLICATION_Q"
+msgstr "Zaprem aplikacijo?"
+
+msgid "IDS_VIDEO_SK_CANCEL_ABB"
+msgstr "Prekliči"
+
+msgid "IDS_VIDEO_OPT_STOP_AFTER_ALL_ABB"
+msgstr "Ustavi po vseh"
+
+msgid "IDS_VIDEO_OPT_REPEAT_CURRENT_ABB"
+msgstr "Ponovi trenutno"
+
+msgid "IDS_VIDEO_OPT_REPEAT_ALL_ABB"
+msgstr "Ponovi vse"
+
+msgid "IDS_VIDEO_BODY_RESOLUTION"
+msgstr "Ločljivost"
+
+msgid "IDS_VIDEO_BODY_PS_SOUND_EFFECTS_NOT_SUPPORTED_BY_SPEAKER"
+msgstr "Zvočnik ne podpira zvočnih učinkov %s."
+
+msgid "IDS_MUSIC_BODY_TURN_PHONE_OVER_TO_MUTE_INCOMING_CALLS_MESSAGE_ALERTS_AND_ALARMS"
+msgstr "Obrnite telefon, da utišate dohodne klice, opozorila o sporočilih in alarme."
+
+msgid "IDS_ST_BODY_SD_CARD"
+msgstr "Kartica SD"
+
+msgid "IDS_VPL_TPOP_ONLY_AUDIO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_AUDIO"
+msgstr "Ta datoteka podpira samo zvočne podatke. Zvok se predvaja."
+
+msgid "IDS_VPL_TPOP_ONLY_VIDEO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_VIDEO"
+msgstr "Ta datoteka podpira samo video podatke. Video se predvaja."
+
+msgid "IDS_ST_BODY_PRIVATE_STORAGE"
+msgstr "Zasebna shramba"
+
+msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
+msgstr "Slušalke"
+
+msgid "IDS_MUSIC_OPT_SPEAKER"
+msgstr "Zvočnik"
+
+msgid "IDS_MUSIC_OPT_PAUSE"
+msgstr "Premor"
+
+msgid "IDS_VIDEO_BUTTON_DOWNLOAD"
+msgstr "Prenos"
+
+msgid "IDS_VIDEO_MBODY_SELECT_SUBTITLES_HCC"
+msgstr "Izberite podnapise (CC)"
+
+msgid "IDS_VIDEO_NPBODY_PREVIEW_SUBTITLES_HCC_ABB"
+msgstr "Predogled podnapisov (CC)"
+
+msgid "IDS_VIDEO_OPT_REPEAT_MODE_ABB"
+msgstr "Način ponavljanja"
+
+msgid "IDS_VIDEO_POP_UNSUPPORTED_FILE_TYPE"
+msgstr "Nepodprta vrsta datoteke."
+
+msgid "IDS_VIDEO_OPT_NORMAL_M_SOUND_ABB"
+msgstr "Normalna"
+
+msgid "IDS_VIDEO_BODY_VOICE"
+msgstr "Glasovno"
+
+msgid "IDS_VIDEO_BODY_MOVIES"
+msgstr "Filmi"
+
+msgid "IDS_VIDEO_OPT_AUDIO_TRACK_ABB"
+msgstr "Zvočni posnetek"
+
+msgid "IDS_VIDEO_BODY_BUFFERING_ING_ABB"
+msgstr "Medpomnjenje"
+
+msgid "IDS_VIDEO_BODY_FILE_FORMAT"
+msgstr "Zapis datoteke"
+
+msgid "IDS_VIDEO_BODY_LANGUAGE"
+msgstr "Jezik"
+
+msgid "IDS_VIDEO_BODY_NO_VIDEOS"
+msgstr "Ni videoposnetkov"
+
+msgid "IDS_VIDEO_BODY_SIZE"
+msgstr "Velikost"
+
+msgid "IDS_VIDEO_BUTTON_DONE"
+msgstr "Končano"
+
+msgid "IDS_VIDEO_BUTTON_REFRESH"
+msgstr "Osveži"
+
+msgid "IDS_VIDEO_HEADER_DATE"
+msgstr "Datum"
+
+msgid "IDS_VIDEO_HEADER_LOADING_ING_ABB"
+msgstr "Nalaganje ..."
+
+msgid "IDS_VIDEO_HEADER_SUBTITLES_HCC_ABB2"
+msgstr "Podnapisi (CC)"
+
+msgid "IDS_VIDEO_IOPT3_DELETE"
+msgstr "Izbriši"
+
+msgid "IDS_VIDEO_OPT_ADD_TO_HOME_SCREEN_ABB"
+msgstr "Dodaj na domači zaslon"
+
+msgid "IDS_VIDEO_OPT_FACEBOOK_ABB"
+msgstr "Facebook"
+
+msgid "IDS_VIDEO_OPT_HDMI"
+msgstr "HDMI"
+
+msgid "IDS_VIDEO_OPT_NAME"
+msgstr "Ime"
+
+msgid "IDS_VIDEO_OPT_SOUNDALIVE_ABB2"
+msgstr "SoundAlive"
+
+msgid "IDS_VIDEO_OPT_YOUTUBE_ABB"
+msgstr "YouTube"
+
+msgid "IDS_VIDEO_POP_UNABLE_TO_PLAY_VIDEO"
+msgstr "Video posnetka ni mogoče predvajati."
+
+msgid "IDS_VIDEO_SBODY_NO_SUBTITLES_AVAILABLE_M_STATUS"
+msgstr "Nobeni podnapisi niso na voljo"
+
+msgid "IDS_VIDEO_SK3_PLAY"
+msgstr "Predvajaj"
+
+msgid "IDS_VIDEO_SK_CLOSE"
+msgstr "Zapri"
+
+msgid "IDS_VPL_POP_INVALID_URL"
+msgstr "Nepravilen URL."
+
+msgid "IDS_CHATON_HEADER_ERROR_ABB"
+msgstr "Napaka"
+
+msgid "IDS_VIDEO_SBODY_DEVICE_STORAGE"
+msgstr "Shramba naprave"
+
+msgid "IDS_COM_BODY_VIDEO_PLAYER_T_MAINMENU"
+msgstr "Video predvajal."
+
+msgid "IDS_VIDEO_OPT_SHARE_VIA"
+msgstr "Deli z drugimi prek"
+
+msgid "IDS_VIDEO_POP_A_NETWORK_ERROR_HAS_OCCURRED_TRY_AGAIN"
+msgstr "Prišlo je do napake omrežja. Poskusite znova."
+
+msgid "IDS_VIDEO_TPOP_ONLY_AUDIO_DATA_SUPPORTED_BY_THIS_FILE_FORMAT_NOW_PLAYING_AUDIO"
+msgstr "Ta oblika zapisa datoteke podpira samo zvočne podatke. Zvok se predvaja."
+
+msgid "IDS_VIDEO_TPOP_ONLY_VIDEO_DATA_SUPPORTED_BY_THIS_FILE_FORMAT_NOW_PLAYING_VIDEO"
+msgstr "Ta oblika zapisa datoteke podpira samo video podatke. Video se predvaja."
+
+msgid "IDS_VPL_BODY_CENTRE"
+msgstr "Na sredino"
+
+msgid "IDS_VPL_BODY_ON"
+msgstr "Vključeno"
+
+msgid "IDS_VPL_BODY_SETTINGS"
+msgstr "Nastavitve"
+
+msgid "IDS_VPL_BODY_VIDEOS_T_MAINMENU"
+msgstr "Videi"
+
+msgid "IDS_VPL_BUTTON_SHARE"
+msgstr "Soupor."
+
+msgid "IDS_VPL_HEADER_DETAILS"
+msgstr "Podrobnosti"
+
+msgid "IDS_VPL_OPT_DELETE"
+msgstr "Izbriši"
+
+msgid "IDS_VPL_POP_BUFFERING_PDP"
+msgstr "Medpomnjenje – %d %"
+
+msgid "IDS_VIDEO_OPT_NONE"
+msgstr "Brez"
+
+msgid "IDS_VIDEO_BODY_PD_SECS_ABB3"
+msgstr "%d s"
+
+msgid "IDS_MUSIC_HEADER_SOUNDALIVE_ABB3"
+msgstr "SoundAlive"
+
+msgid "IDS_MP_HEADER_SELECT_AUDIO_DEVICE"
+msgstr "Izberite zvočno napravo"
+
+msgid "IDS_MUSIC_OPT_DELETE"
+msgstr "Izbriši"
+
+msgid "IDS_CLOCK_BUTTON_CANCEL"
+msgstr "Prekliči"
+
+msgid "IDS_VIDEO_POP_AN_UNKNOWN_ERROR_HAS_OCCURRED_OR_THE_FILE_MAY_BE_CORRUPT"
+msgstr "Prišlo je do neznane napake ali pa je datoteka poškodovana."
+
+msgid "IDS_VIDEO_POP_THIS_FILE_TYPE_IS_NOT_SUPPORTED"
+msgstr "Ta vrsta datoteke ni podprta."
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "KONČANO"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "PREKLIČI"
+
+msgid "IDS_TPLATFORM_MBODY_STORAGE_LOCATION"
+msgstr "Mesto shranjevanja"
+
+msgid "IDS_GP_BODY_SUBTITLES_HCC"
+msgstr "Podnapisi (CC)"
+
+msgid "IDS_GALLERY_BODY_PERSONAL_STORAGE"
+msgstr "Osebna shramba"
+
+msgid "IDS_ACCS_BODY_CAPTIONS_WILL_LOOK_LIKE_THIS"
+msgstr "Napisi bodo videti tako"
+

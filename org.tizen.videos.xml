@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest xmlns="http://tizen.org/ns/packages" package="org.tizen.videos" version="1.0.39" install-location="internal-only" api-version="2.4">
+	<label>Videos</label>
+	<author email="yoechan.song@samsung.com" href="www.samsung.com">Yochan Song</author>
+	<description>Videos Application</description>
+	<ui-application appid="org.tizen.videos" exec="/usr/apps/org.tizen.videos/bin/videos"
+					nodisplay="false" multiple="false" type="capp" taskmanage="true" indicatordisplay="false" process-pool="false" hw-acceleration="use-GL"
+					effectimage-type="edj-default" portrait-effectimage="/usr/apps/org.tizen.videos/shared/res/video.edj">
+		<metadata key="http://developer.samsung.com/tizen/metadata/multiwindow"/>
+		<label>Video</label>
+		<icon>org.tizen.videos.png</icon>
+	<!--INDIA-->
+		<label xml:lang="en-gb">Video</label>	<!--  -->
+		<label xml:lang="hi-in">वीडियो</label>
+		<label xml:lang="bn-in">ভিডিও</label>
+		<label xml:lang="gu-in">વિડિયો</label>
+		<label xml:lang="kn-in">ವೀಡಿಯೊ</label>
+		<label xml:lang="ml-in">വീഡിയോ</label>
+		<label xml:lang="si-lk">වීඩියෝ</label>
+		<label xml:lang="ta-in">நிகழ்படம்</label>
+		<label xml:lang="te-in">వీడియో</label>
+		<label xml:lang="ur-pk">ویڈیو</label>
+	<!--SEA-->
+		<label xml:lang="en-us">Video</label>
+		<label xml:lang="en-ph">Video</label>
+		<label xml:lang="zh-cn">视频</label>
+		<label xml:lang="tl-ph">Video</label>
+		<label xml:lang="id-id">Video</label>
+		<label xml:lang="ko-kr">비디오</label>
+		<label xml:lang="ms-my">Video</label>
+		<label xml:lang="my-mm">ဗီဒီယို</label>
+		<label xml:lang="th-th">วิดีโอ</label>
+		<label xml:lang="vi-vn">Video</label>
+		<label xml:lang="lo-la">ວິດີໂອ</label>
+		<label xml:lang="km-kh">វីដេអូ</label>
+	<!--Latin-->
+		<label xml:lang="pt-br">Vídeo</label>
+		<label xml:lang="es-us">Video</label>
+	</ui-application>
+
+	<privileges>
+		<privilege>http://tizen.org/privilege/mediastorage</privilege>
+		<privilege>http://tizen.org/privilege/systemsettings</privilege>
+		<privilege>http://tizen.org/privilege/externalstorage.appdata</privilege>
+		<privilege>http://tizen.org/privilege/externalstorage</privilege>
+		<privilege>http://tizen.org/privilege/telephony</privilege>
+		<privilege>http://tizen.org/privilege/wifidirect</privilege>
+		<privilege>http://tizen.org/privilege/network.get</privilege>
+		<privilege>http://tizen.org/privilege/volume.set</privilege>
+		<privilege>http://tizen.org/privilege/appmanager.launch</privilege>
+	</privileges>
+</manifest>

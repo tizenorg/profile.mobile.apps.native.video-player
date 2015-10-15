@@ -1,0 +1,153 @@
+/*
+* Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+
+#include "pv-image.edc"
+#ifndef _TRIME_VIEW_NEW_FEATURE
+#define _TRIME_VIEW_NEW_FEATURE
+#endif
+collections {
+	group {
+		name: "pv.trim.main";
+
+		parts {
+			part {
+				name: "pv.trim.main.bg";
+				type: RECT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					rel1 { relative: 0.0 0.0;}
+					rel2 { relative: 1.0 1.0;}
+					color: 255 255 255 0;
+				}
+			}
+#ifndef _TRIME_VIEW_NEW_FEATURE
+			part {
+				name: "pv.trim.top.control";
+				type: SWALLOW;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					min: 0 68;
+					fixed: 0 1;
+					align: 0.5 0.0;
+					rel1 { relative: 0.0 0.0; }
+					rel2 { relative: 1.0 0.0; }
+					color: 0 0 0 0;
+				}
+			}
+
+			part {
+				name: "pv.trim.main.control";
+				type: SWALLOW;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					min: 0 292;
+					fixed: 0 1;
+					align: 0.5 1.0;
+					rel1 { relative: 0.0 1.0; }
+					rel2 { relative: 1.0 1.0; }
+				}
+			}
+#else
+			part {
+				name: "pv.trim.top.control";
+				type: SWALLOW;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					min: 0 68;
+					fixed: 0 1;
+					align: 0.5 0.0;
+					rel1 { relative: 0.0 0.0; }
+					rel2 { relative: 1.0 0.0; }
+					color: 0 0 0 0;
+				}
+			}
+
+			part {
+				name: "pv.trim.main.control";
+				type: SWALLOW;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					min: 0 160;
+					fixed: 0 1;
+					align: 0.5 1.0;
+					rel1 { relative: 0.0 1.0; }
+					rel2 { relative: 1.0 1.0; }
+				}
+			}
+#endif
+#ifdef _TRIME_VIEW_NEW_FEATURE
+			part {
+				name: "pv.trim.main.loading";
+				type: SWALLOW;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					align: 0.5 0.5;
+					rel1 { relative: 0.0 1.0; to: "pv.trim.top.control";}
+					rel2 { relative: 1.0 0.0; to: "pv.trim.main.control";}
+				}
+			}
+
+			part {
+				name: "pv.trim.main.button";
+				type: SWALLOW;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					min: 108 108;
+					max: 108 108;
+					fixed: 1 1;
+					align: 0.5 0.5;
+					rel1 { relative: 0.0 1.0; to: "pv.trim.top.control";}
+					rel2 { relative: 1.0 0.0; to: "pv.trim.main.control";}
+				}
+			}
+#else
+			part {
+				name: "pv.trim.main.loading";
+				type: SWALLOW;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 1;
+					rel1 { relative: 0.0 0.0;}
+					rel2 { relative: 1.0 1.0;}
+				}
+			}
+#endif
+		} /* parts */
+	}	/* group */
+} /* collections */

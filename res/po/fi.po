@@ -1,0 +1,390 @@
+msgid "IDS_VIDEO_OPT_DOWNLOAD"
+msgstr "Lataa"
+
+msgid "IDS_VIDEO_POP_1_FOLDER_WILL_BE_DOWNLOADED"
+msgstr "1 kansio ladataan."
+
+msgid "IDS_VIDEO_POP_1_VIDEO_WILL_BE_DOWNLOADED"
+msgstr "1 video ladataan."
+
+msgid "IDS_VIDEO_POP_ALL_FOLDERS_WILL_BE_DOWNLOADED"
+msgstr "Kaikki kansiot ladataan."
+
+msgid "IDS_VIDEO_POP_ALL_VIDEOS_WILL_BE_DOWNLOADED"
+msgstr "Kaikki videot ladataan."
+
+msgid "IDS_VIDEO_POP_PD_FOLDERS_WILL_BE_DOWNLOADED"
+msgstr "%d kansiota ladataan."
+
+msgid "IDS_VIDEO_POP_PD_VIDEOS_WILL_BE_DOWNLOADED"
+msgstr "%d videota ladataan."
+
+msgid "IDS_VIDEO_TPOP_MOBILE_DATA_TURNED_OFF_CONNECT_TO_WI_FI_NETWORK_INSTEAD_OR_TURN_ON_MOBILE_DATA_AND_TRY_AGAIN"
+msgstr "Mobiilidata on poistettu käytöstä. Muodosta sen sijaan yhteys Wi-Fi-verkon kautta tai ota mobiilidata käyttöön ja yritä uudelleen."
+
+msgid "IDS_GALLERY_OPT_PRIVATE_M_CONTENT"
+msgstr "Yksityinen"
+
+msgid "IDS_VIDEO_BODY_B"
+msgstr "t"
+
+msgid "IDS_VIDEO_BODY_GB"
+msgstr "Gt"
+
+msgid "IDS_VIDEO_BODY_KB"
+msgstr "kt"
+
+msgid "IDS_VIDEO_BODY_LOCATION"
+msgstr "Sijainti"
+
+msgid "IDS_VIDEO_BODY_MB"
+msgstr "Mt"
+
+msgid "IDS_VIDEO_BODY_UNKNOWN"
+msgstr "Tuntematon"
+
+msgid "IDS_VIDEO_BUTTON_OK"
+msgstr "OK"
+
+msgid "IDS_VIDEO_HEADER_1_FOLDER"
+msgstr "1 kansio"
+
+msgid "IDS_VIDEO_HEADER_1_VIDEO"
+msgstr "1 video"
+
+msgid "IDS_VIDEO_HEADER_ALL"
+msgstr "Kaikki"
+
+msgid "IDS_VIDEO_HEADER_FROM_DEVICE"
+msgstr "Laitteesta"
+
+msgid "IDS_VIDEO_HEADER_FROM_DROPBOX"
+msgstr "Dropboxista"
+
+msgid "IDS_VIDEO_HEADER_LAST_MODIFIED_M_DATE"
+msgstr "Muutettu viimeksi"
+
+msgid "IDS_VIDEO_OPT_CONTENT_TO_DISPLAY"
+msgstr "Näytettävä sisältö"
+
+msgid "IDS_VIDEO_OPT_SEARCH"
+msgstr "Hae"
+
+msgid "IDS_VIDEO_OPT_SHARE"
+msgstr "Jaa"
+
+msgid "IDS_VIDEO_POP_1_FOLDER_WILL_BE_DELETED"
+msgstr "1 kansio poistetaan."
+
+msgid "IDS_VIDEO_TPOP_DELETING_ING"
+msgstr "Poistetaan..."
+
+msgid "IDS_VIDEO_BODY_AFTER_YOU_RECORD_VIDEOS_USING_THE_CAMERA_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Kun olet tallentanut kameralla videoita, ne näytetään täällä."
+
+msgid "IDS_VIDEO_HEADER_PD_VIDEOS"
+msgstr "%d videota"
+
+msgid "IDS_VIDEO_HEADER_VIDEO"
+msgstr "Video"
+
+msgid "IDS_VIDEO_NPBODY_NO_VIDEOS"
+msgstr "Ei videoita"
+
+msgid "IDS_VIDEO_OPT_DETAILS"
+msgstr "Lisätiedot"
+
+msgid "IDS_VIDEO_OPT_FOLDER"
+msgstr "Kansio"
+
+msgid "IDS_VIDEO_OPT_LIST"
+msgstr "Luettelo"
+
+msgid "IDS_VIDEO_OPT_RECENTLY_ADDED_ABB"
+msgstr "Viim. lisätyt"
+
+msgid "IDS_VIDEO_OPT_RECENTLY_VIEWED_ABB"
+msgstr "Viimeksi katsotut"
+
+msgid "IDS_VIDEO_OPT_RENAME"
+msgstr "Nimeä uudelleen"
+
+msgid "IDS_VIDEO_OPT_SIZE"
+msgstr "Koko"
+
+msgid "IDS_VIDEO_OPT_SORT_BY"
+msgstr "Lajitteluperuste"
+
+msgid "IDS_VIDEO_OPT_TITLE"
+msgstr "Otsikko"
+
+msgid "IDS_VIDEO_OPT_TYPE"
+msgstr "Tyyppi"
+
+msgid "IDS_VIDEO_OPT_VIEW_AS"
+msgstr "Näyttötapa"
+
+msgid "IDS_VIDEO_POP_ALL_VIDEOS_WILL_BE_DELETED"
+msgstr "Kaikki videot poistetaan."
+
+msgid "IDS_VIDEO_POP_PD_FOLDERS_WILL_BE_DELETED"
+msgstr "%d kansiota poistetaan."
+
+msgid "IDS_VIDEO_POP_PD_VIDEOS_WILL_BE_DELETED"
+msgstr "%d videota poistetaan."
+
+msgid "IDS_VIDEO_POP_THIS_FOLDER_WILL_BE_DELETED"
+msgstr "Tämä kansio poistetaan."
+
+msgid "IDS_VIDEO_HEADER_PD_FOLDERS"
+msgstr "%d kansiota"
+
+msgid "IDS_VIDEO_HEADER_SETTINGS"
+msgstr "Asetukset"
+
+msgid "IDS_VIDEO_HEADER_UNABLE_TO_PLAY_VIDEO_ABB"
+msgstr "Videota ei voi toistaa"
+
+msgid "IDS_VIDEO_MBODY_ALIGNMENT"
+msgstr "Kohdistus"
+
+msgid "IDS_VIDEO_MBODY_FONT_SIZE"
+msgstr "Fonttikoko"
+
+msgid "IDS_VIDEO_OPT_REPEAT_SETTING_ABB"
+msgstr "Toistoasetus"
+
+msgid "IDS_VIDEO_OPT_SUBTITLES_HCC_ABB"
+msgstr "Tekstitys (CC)"
+
+msgid "IDS_VIDEO_POP_ALL_FOLDERS_WILL_BE_DELETED"
+msgstr "Kaikki kansiot poistetaan."
+
+msgid "IDS_VIDEO_SBODY_CENTRE_M_STATUS"
+msgstr "Keskelle"
+
+msgid "IDS_VIDEO_SBODY_LARGE_M_STATUS"
+msgstr "Suuri"
+
+msgid "IDS_VIDEO_SBODY_LEFT_M_STATUS"
+msgstr "Vasemmalle"
+
+msgid "IDS_VIDEO_SBODY_MEDIUM_M_STATUS"
+msgstr "Keskisuuri"
+
+msgid "IDS_VIDEO_SBODY_RIGHT_M_STATUS"
+msgstr "Oikealle"
+
+msgid "IDS_VIDEO_SBODY_SMALL_M_STATUS"
+msgstr "Pieni"
+
+msgid "IDS_VIDEO_TPOP_FILE_NAME_ALREADY_IN_USE"
+msgstr "Tiedoston nimi jo käytössä."
+
+msgid "IDS_GALLERY_OPT_REMOVE_FROM_PRIVATE"
+msgstr "Poista Yksityiset-kansiosta"
+
+msgid "IDS_GALLERY_OPT_MOVE_TO_PRIVATE"
+msgstr "Siirrä Yksityiset-kansioon"
+
+msgid "IDS_IV_POP_ENTRY_IS_EMPTY"
+msgstr "Tyhjä tieto"
+
+msgid "IDS_VPL_OPT_FORMAT"
+msgstr "Muoto"
+
+msgid "IDS_VPL_BODY_UNABLE_TO_PLAY_VIDEO_DURING_CALL"
+msgstr "Puhelun aikana ei voi toistaa videota."
+
+msgid "IDS_CLOUD_BODY_DROPBOX_ABB"
+msgstr "Dropbox"
+
+msgid "IDS_VIDEO_POP_THIS_FILE_IS_UNAVAILABLE_WHILE_OFFLINE_CHECK_NETWORK_CONNECTION_AND_TRY_AGAIN"
+msgstr "Tätä tiedostoa ei voi käyttää offline-tilassa. Tarkista verkkoyhteys ja yritä uudelleen."
+
+msgid "IDS_VIDEO_POP_THE_SELECTED_ITEM_WILL_BE_MOVED_TO_PS"
+msgstr "Valittu kohde siirretään kohteeseen %s."
+
+msgid "IDS_VIDEO_POP_THE_SELECTED_ITEMS_WILL_BE_MOVED_TO_PS"
+msgstr "Valitut kohteet siirretään kohteeseen %s."
+
+msgid "IDS_VIDEO_POP_REMOVING_ING"
+msgstr "Poistetaan..."
+
+msgid "IDS_VIDEO_POP_MOVING_ING"
+msgstr "Siirretään..."
+
+msgid "IDS_VIDEO_POP_FAILED_TO_MOVE_TO_PERSONAL_STORAGE"
+msgstr "Siirtäminen henkilökohtaiseen tallennustilaan epäonnistui."
+
+msgid "IDS_VIDEO_POP_FAILED_TO_MOVE_TO_NORMAL_STORAGE"
+msgstr "Siirtäminen normaaliin tallennustilaan epäonnistui."
+
+msgid "IDS_VIDEO_OPT_MESSAGE_ABB"
+msgstr "Viesti"
+
+msgid "IDS_VIDEO_OPT_FOLDERS_ABB"
+msgstr "Kansiot"
+
+msgid "IDS_VIDEO_OPT_EMAIL_ABB"
+msgstr "Sähköposti"
+
+msgid "IDS_VIDEO_OPT_DATE_HMOST_RECENT_ABB"
+msgstr "Päiväys (uusimmat)"
+
+msgid "IDS_VIDEO_HEADER_PD_SELECTED"
+msgstr "%d valittu"
+
+msgid "IDS_VIDEO_HEADER_DELETE_VIDEOS"
+msgstr "Poista videot"
+
+msgid "IDS_VIDEO_HEADER_DELETE_VIDEO"
+msgstr "Poista video"
+
+msgid "IDS_VIDEO_BUTTON_MOVE_ABB"
+msgstr "Siirrä"
+
+msgid "IDS_VIDEO_BODY_LONGITUDE"
+msgstr "Pituusaste"
+
+msgid "IDS_VIDEO_BODY_LATITUDE"
+msgstr "Leveysaste"
+
+msgid "IDS_VIDEO_BODY_AFTER_YOU_RECORD_VIDEOS_USING_THE_CAMERA_VIDEOS_WILL_BE_SHOWN"
+msgstr "Videot näytetään, kun olet tallentanut videoita kameralla."
+
+msgid "IDS_VIDEO_SK_CANCEL_ABB"
+msgstr "Per."
+
+msgid "IDS_VIDEO_OPT_STOP_AFTER_ALL_ABB"
+msgstr "Pysäytä kaikk. jälk."
+
+msgid "IDS_VIDEO_OPT_REPEAT_CURRENT_ABB"
+msgstr "Toista nykyinen"
+
+msgid "IDS_VIDEO_OPT_REPEAT_ALL_ABB"
+msgstr "Toista kaikki"
+
+msgid "IDS_VIDEO_BODY_RESOLUTION"
+msgstr "Tarkkuus"
+
+msgid "IDS_VIDEO_BUTTON_DELETE"
+msgstr "Poista"
+
+msgid "IDS_ST_OPT_DELETE_ALL"
+msgstr "Poista kaikki"
+
+msgid "IDS_VPL_TPOP_ONLY_AUDIO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_AUDIO"
+msgstr "Tiedosto tukee vain äänitietoja. Toistetaan ääntä."
+
+msgid "IDS_VPL_TPOP_ONLY_VIDEO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_VIDEO"
+msgstr "Tiedosto tukee vain videotietoja. Toistetaan videota."
+
+msgid "IDS_MUSIC_OPT_RENAME"
+msgstr "Nimeä uudelleen"
+
+msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
+msgstr "Kuulokkeet"
+
+msgid "IDS_VIDEO_BUTTON_DOWNLOAD"
+msgstr "Lataa"
+
+msgid "IDS_TPLATFORM_BODY_OFF"
+msgstr "Pois"
+
+msgid "IDS_TPLATFORM_BODY_ON"
+msgstr "Päälle"
+
+msgid "IDS_VIDEO_POP_1_VIDEO_WILL_BE_DELETED"
+msgstr "1 video poistetaan."
+
+msgid "IDS_SWALL_HEADER_INVALID_CHARACTER"
+msgstr "Virheellinen merkki"
+
+msgid "IDS_VIDEO_BODY_NO_SEARCH_RESULTS"
+msgstr "Ei hakutuloksia"
+
+msgid "IDS_GALLERY_HEADER_SELECT"
+msgstr "Valitse"
+
+msgid "IDS_VIDEO_BODY_LAST_MODIFIED_M_DATE_ABB"
+msgstr "Muutettu viimeksi"
+
+msgid "IDS_VIDEO_BUTTON_DONE"
+msgstr "Valmis"
+
+msgid "IDS_VIDEO_HEADER_DATE"
+msgstr "Päivämäärä"
+
+msgid "IDS_VIDEO_HEADER_LATITUDE"
+msgstr "Leveysaste"
+
+msgid "IDS_VIDEO_OPT_NAME"
+msgstr "Nimi"
+
+msgid "IDS_VIDEO_OPT_NAME_HA_Z_ABB"
+msgstr "Nimi (A–Ö)"
+
+msgid "IDS_VIDEO_OPT_VIDEOS"
+msgstr "Videot"
+
+msgid "IDS_VIDEO_TPOP_MAXIMUM_NUMBER_OF_ATTACHMENTS_HPD_EXCEEDED"
+msgstr "Liitteiden enimmäismäärä (%d) on ylitetty."
+
+msgid "IDS_VIDEO_HEADER_SELECT_ALL"
+msgstr "Valitse kaikki"
+
+msgid "IDS_VIDEO_SBODY_DEVICE_STORAGE"
+msgstr "Laitteen muisti"
+
+msgid "IDS_VIDEO_SBODY_SD_CARD"
+msgstr "SD-kortti"
+
+msgid "IDS_VIDEO_OPT_SHARE_VIA"
+msgstr "Jakotapa"
+
+msgid "IDS_VIDEO_POP_A_NETWORK_ERROR_HAS_OCCURRED_TRY_AGAIN"
+msgstr "Verkkovirhe. Yritä uudelleen."
+
+msgid "IDS_VPL_OPT_AUTO_PLAY_NEXT_ABB"
+msgstr "Toista seur. aut."
+
+msgid "IDS_VPL_POP_PROCESSING_ING"
+msgstr "Käsitellään..."
+
+msgid "IDS_MEMO_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Merkkien enimmäismäärä on saavutettu."
+
+msgid "IDS_MUSIC_OPT_DELETE"
+msgstr "Poista"
+
+msgid "IDS_MUSIC_OPT_DELETE_ALL"
+msgstr "Poista kaikki"
+
+msgid "IDS_PB_BODY_NO_SEARCH_RESULT"
+msgstr "Ei hakutuloksia"
+
+msgid "IDS_VIDEO_HEADER_SELECT_ITEM"
+msgstr "Valitse kohde"
+
+msgid "IDS_VIDEO_HEADER_SELECT_ITEMS"
+msgstr "Valitse kohteet"
+
+msgid "IDS_CLOCK_BUTTON_CANCEL"
+msgstr "Peruuta"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "VALMIS"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "PERUUTA"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DELETE_ABB"
+msgstr "POISTA"
+
+msgid "IDS_TPLATFORM_MBODY_STORAGE_LOCATION"
+msgstr "Tallennuspaikka"
+
+msgid "IDS_GALLERY_HEADER_SELECT_VIDEO"
+msgstr "Valitse video"
+

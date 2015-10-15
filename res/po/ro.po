@@ -1,0 +1,390 @@
+msgid "IDS_VIDEO_OPT_DOWNLOAD"
+msgstr "Descărcaţi"
+
+msgid "IDS_VIDEO_POP_1_FOLDER_WILL_BE_DOWNLOADED"
+msgstr "1 folder va fi descărcat."
+
+msgid "IDS_VIDEO_POP_1_VIDEO_WILL_BE_DOWNLOADED"
+msgstr "1 videoclip va fi descărcat."
+
+msgid "IDS_VIDEO_POP_ALL_FOLDERS_WILL_BE_DOWNLOADED"
+msgstr "Toate folderele vor fi descărcate."
+
+msgid "IDS_VIDEO_POP_ALL_VIDEOS_WILL_BE_DOWNLOADED"
+msgstr "Toate videoclipurile vor fi descărcate."
+
+msgid "IDS_VIDEO_POP_PD_FOLDERS_WILL_BE_DOWNLOADED"
+msgstr "%d foldere vor fi descărcate."
+
+msgid "IDS_VIDEO_POP_PD_VIDEOS_WILL_BE_DOWNLOADED"
+msgstr "%d videoclipuri vor fi descărcate."
+
+msgid "IDS_VIDEO_TPOP_MOBILE_DATA_TURNED_OFF_CONNECT_TO_WI_FI_NETWORK_INSTEAD_OR_TURN_ON_MOBILE_DATA_AND_TRY_AGAIN"
+msgstr "Datele mobile sunt dezactivate. Conectaţi-vă în schimb la o reţea Wi-Fi sau activaţi Datele mobile şi încercaţi din nou."
+
+msgid "IDS_GALLERY_OPT_PRIVATE_M_CONTENT"
+msgstr "Private"
+
+msgid "IDS_VIDEO_BODY_B"
+msgstr "B"
+
+msgid "IDS_VIDEO_BODY_GB"
+msgstr "GB"
+
+msgid "IDS_VIDEO_BODY_KB"
+msgstr "KO"
+
+msgid "IDS_VIDEO_BODY_LOCATION"
+msgstr "Locaţie"
+
+msgid "IDS_VIDEO_BODY_MB"
+msgstr "MO"
+
+msgid "IDS_VIDEO_BODY_UNKNOWN"
+msgstr "Necunoscut"
+
+msgid "IDS_VIDEO_BUTTON_OK"
+msgstr "OK"
+
+msgid "IDS_VIDEO_HEADER_1_FOLDER"
+msgstr "1 director"
+
+msgid "IDS_VIDEO_HEADER_1_VIDEO"
+msgstr "1 videoclip"
+
+msgid "IDS_VIDEO_HEADER_ALL"
+msgstr "Toate"
+
+msgid "IDS_VIDEO_HEADER_FROM_DEVICE"
+msgstr "De pe dispozitiv"
+
+msgid "IDS_VIDEO_HEADER_FROM_DROPBOX"
+msgstr "Din Dropbox"
+
+msgid "IDS_VIDEO_HEADER_LAST_MODIFIED_M_DATE"
+msgstr "Ultima modificare"
+
+msgid "IDS_VIDEO_OPT_CONTENT_TO_DISPLAY"
+msgstr "Conţinut de afişat"
+
+msgid "IDS_VIDEO_OPT_SEARCH"
+msgstr "Căutare"
+
+msgid "IDS_VIDEO_OPT_SHARE"
+msgstr "Partajaţi"
+
+msgid "IDS_VIDEO_POP_1_FOLDER_WILL_BE_DELETED"
+msgstr "1 folder va fi şters."
+
+msgid "IDS_VIDEO_TPOP_DELETING_ING"
+msgstr "Se şterge..."
+
+msgid "IDS_VIDEO_BODY_AFTER_YOU_RECORD_VIDEOS_USING_THE_CAMERA_THEY_WILL_BE_SHOWN_HERE"
+msgstr "După ce înregistraţi videoclipuri utilizând camera, acestea se vor afişa aici."
+
+msgid "IDS_VIDEO_HEADER_PD_VIDEOS"
+msgstr "%d videoclipuri"
+
+msgid "IDS_VIDEO_HEADER_VIDEO"
+msgstr "Videoclip"
+
+msgid "IDS_VIDEO_NPBODY_NO_VIDEOS"
+msgstr "Niciun videoclip"
+
+msgid "IDS_VIDEO_OPT_DETAILS"
+msgstr "Detalii"
+
+msgid "IDS_VIDEO_OPT_FOLDER"
+msgstr "Folder"
+
+msgid "IDS_VIDEO_OPT_LIST"
+msgstr "Listă"
+
+msgid "IDS_VIDEO_OPT_RECENTLY_ADDED_ABB"
+msgstr "Adăugate recent"
+
+msgid "IDS_VIDEO_OPT_RECENTLY_VIEWED_ABB"
+msgstr "Vizualizate recent"
+
+msgid "IDS_VIDEO_OPT_RENAME"
+msgstr "Redenumire"
+
+msgid "IDS_VIDEO_OPT_SIZE"
+msgstr "Dimensiune"
+
+msgid "IDS_VIDEO_OPT_SORT_BY"
+msgstr "Sortare după"
+
+msgid "IDS_VIDEO_OPT_TITLE"
+msgstr "Titlu"
+
+msgid "IDS_VIDEO_OPT_TYPE"
+msgstr "Tip"
+
+msgid "IDS_VIDEO_OPT_VIEW_AS"
+msgstr "Vizualizare ca"
+
+msgid "IDS_VIDEO_POP_ALL_VIDEOS_WILL_BE_DELETED"
+msgstr "Toate videoclipurile vor fi şterse."
+
+msgid "IDS_VIDEO_POP_PD_FOLDERS_WILL_BE_DELETED"
+msgstr "%d foldere vor fi şterse."
+
+msgid "IDS_VIDEO_POP_PD_VIDEOS_WILL_BE_DELETED"
+msgstr "%d videoclipuri vor fi şterse."
+
+msgid "IDS_VIDEO_POP_THIS_FOLDER_WILL_BE_DELETED"
+msgstr "Acest folder va fi şters."
+
+msgid "IDS_VIDEO_HEADER_PD_FOLDERS"
+msgstr "%d directoare"
+
+msgid "IDS_VIDEO_HEADER_SETTINGS"
+msgstr "Setări"
+
+msgid "IDS_VIDEO_HEADER_UNABLE_TO_PLAY_VIDEO_ABB"
+msgstr "Videoclipul nu poate fi redat"
+
+msgid "IDS_VIDEO_MBODY_ALIGNMENT"
+msgstr "Aliniere"
+
+msgid "IDS_VIDEO_MBODY_FONT_SIZE"
+msgstr "Dimensiune font"
+
+msgid "IDS_VIDEO_OPT_REPEAT_SETTING_ABB"
+msgstr "Setare repetare"
+
+msgid "IDS_VIDEO_OPT_SUBTITLES_HCC_ABB"
+msgstr "Subtitrări (complexe)"
+
+msgid "IDS_VIDEO_POP_ALL_FOLDERS_WILL_BE_DELETED"
+msgstr "Toate folderele vor fi şterse."
+
+msgid "IDS_VIDEO_SBODY_CENTRE_M_STATUS"
+msgstr "Centru"
+
+msgid "IDS_VIDEO_SBODY_LARGE_M_STATUS"
+msgstr "Mare"
+
+msgid "IDS_VIDEO_SBODY_LEFT_M_STATUS"
+msgstr "Stânga"
+
+msgid "IDS_VIDEO_SBODY_MEDIUM_M_STATUS"
+msgstr "Mediu"
+
+msgid "IDS_VIDEO_SBODY_RIGHT_M_STATUS"
+msgstr "Dreapta"
+
+msgid "IDS_VIDEO_SBODY_SMALL_M_STATUS"
+msgstr "Mic"
+
+msgid "IDS_VIDEO_TPOP_FILE_NAME_ALREADY_IN_USE"
+msgstr "Numele de fişier este deja utilizat."
+
+msgid "IDS_GALLERY_OPT_REMOVE_FROM_PRIVATE"
+msgstr "Eliminare din Private"
+
+msgid "IDS_GALLERY_OPT_MOVE_TO_PRIVATE"
+msgstr "Mutare în Private"
+
+msgid "IDS_IV_POP_ENTRY_IS_EMPTY"
+msgstr "Locaţie liberă"
+
+msgid "IDS_VPL_OPT_FORMAT"
+msgstr "Formatare"
+
+msgid "IDS_VPL_BODY_UNABLE_TO_PLAY_VIDEO_DURING_CALL"
+msgstr "Imposibil de redat videoclipul în timpul apelului"
+
+msgid "IDS_CLOUD_BODY_DROPBOX_ABB"
+msgstr "Dropbox"
+
+msgid "IDS_VIDEO_POP_THIS_FILE_IS_UNAVAILABLE_WHILE_OFFLINE_CHECK_NETWORK_CONNECTION_AND_TRY_AGAIN"
+msgstr "Acest fişier nu este disponibil offline. Verificaţi conexiunea la reţea şi încercaţi din nou."
+
+msgid "IDS_VIDEO_POP_THE_SELECTED_ITEM_WILL_BE_MOVED_TO_PS"
+msgstr "Elementul selectat va fi mutat în %s."
+
+msgid "IDS_VIDEO_POP_THE_SELECTED_ITEMS_WILL_BE_MOVED_TO_PS"
+msgstr "Elementele selectate vor fi mutate în %s."
+
+msgid "IDS_VIDEO_POP_REMOVING_ING"
+msgstr "Eliminare..."
+
+msgid "IDS_VIDEO_POP_MOVING_ING"
+msgstr "Mutare"
+
+msgid "IDS_VIDEO_POP_FAILED_TO_MOVE_TO_PERSONAL_STORAGE"
+msgstr "Nu s-a putut muta în spaţiul de stocare personal."
+
+msgid "IDS_VIDEO_POP_FAILED_TO_MOVE_TO_NORMAL_STORAGE"
+msgstr "Nu s-a putut muta în spaţiul de stocare normal."
+
+msgid "IDS_VIDEO_OPT_MESSAGE_ABB"
+msgstr "Mesaj"
+
+msgid "IDS_VIDEO_OPT_FOLDERS_ABB"
+msgstr "Foldere"
+
+msgid "IDS_VIDEO_OPT_EMAIL_ABB"
+msgstr "E-mail"
+
+msgid "IDS_VIDEO_OPT_DATE_HMOST_RECENT_ABB"
+msgstr "Dată (recente)"
+
+msgid "IDS_VIDEO_HEADER_PD_SELECTED"
+msgstr "%d selectate"
+
+msgid "IDS_VIDEO_HEADER_DELETE_VIDEOS"
+msgstr "Ştergere videoclipuri"
+
+msgid "IDS_VIDEO_HEADER_DELETE_VIDEO"
+msgstr "Ştergeţi videoclipul"
+
+msgid "IDS_VIDEO_BUTTON_MOVE_ABB"
+msgstr "Mutare"
+
+msgid "IDS_VIDEO_BODY_LONGITUDE"
+msgstr "Longitudine"
+
+msgid "IDS_VIDEO_BODY_LATITUDE"
+msgstr "Latitudine"
+
+msgid "IDS_VIDEO_BODY_AFTER_YOU_RECORD_VIDEOS_USING_THE_CAMERA_VIDEOS_WILL_BE_SHOWN"
+msgstr "După ce înregistraţi videoclipuri utilizând camera, se vor afişa videoclipurile."
+
+msgid "IDS_VIDEO_SK_CANCEL_ABB"
+msgstr "Anul."
+
+msgid "IDS_VIDEO_OPT_STOP_AFTER_ALL_ABB"
+msgstr "Oprire după toate"
+
+msgid "IDS_VIDEO_OPT_REPEAT_CURRENT_ABB"
+msgstr "Repetare actual"
+
+msgid "IDS_VIDEO_OPT_REPEAT_ALL_ABB"
+msgstr "Repetare globală"
+
+msgid "IDS_VIDEO_BODY_RESOLUTION"
+msgstr "Rezoluţie"
+
+msgid "IDS_VIDEO_BUTTON_DELETE"
+msgstr "Şterg."
+
+msgid "IDS_ST_OPT_DELETE_ALL"
+msgstr "Ştergere toate"
+
+msgid "IDS_VPL_TPOP_ONLY_AUDIO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_AUDIO"
+msgstr "Doar datele audio sunt acceptate de acest fişier. Se redă conţinut audio."
+
+msgid "IDS_VPL_TPOP_ONLY_VIDEO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_VIDEO"
+msgstr "Doar datele video sunt acceptate de acest fişier. Se redă conţinut video."
+
+msgid "IDS_MUSIC_OPT_RENAME"
+msgstr "Redenumire"
+
+msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
+msgstr "Căşti"
+
+msgid "IDS_VIDEO_BUTTON_DOWNLOAD"
+msgstr "Descărcare"
+
+msgid "IDS_TPLATFORM_BODY_OFF"
+msgstr "Oprit"
+
+msgid "IDS_TPLATFORM_BODY_ON"
+msgstr "Pornit"
+
+msgid "IDS_VIDEO_POP_1_VIDEO_WILL_BE_DELETED"
+msgstr "1 videoclip va fi şters."
+
+msgid "IDS_SWALL_HEADER_INVALID_CHARACTER"
+msgstr "Caracter nevalid"
+
+msgid "IDS_VIDEO_BODY_NO_SEARCH_RESULTS"
+msgstr "Nu există rezultate ale căutării"
+
+msgid "IDS_GALLERY_HEADER_SELECT"
+msgstr "Selectare"
+
+msgid "IDS_VIDEO_BODY_LAST_MODIFIED_M_DATE_ABB"
+msgstr "Ultima modificare"
+
+msgid "IDS_VIDEO_BUTTON_DONE"
+msgstr "Efectuat"
+
+msgid "IDS_VIDEO_HEADER_DATE"
+msgstr "Dată"
+
+msgid "IDS_VIDEO_HEADER_LATITUDE"
+msgstr "Latitudine"
+
+msgid "IDS_VIDEO_OPT_NAME"
+msgstr "Nume"
+
+msgid "IDS_VIDEO_OPT_NAME_HA_Z_ABB"
+msgstr "Nume (de la A la Z)"
+
+msgid "IDS_VIDEO_OPT_VIDEOS"
+msgstr "Videoclipuri"
+
+msgid "IDS_VIDEO_TPOP_MAXIMUM_NUMBER_OF_ATTACHMENTS_HPD_EXCEEDED"
+msgstr "S-a depăşit numărul maxim de ataşări (%d)."
+
+msgid "IDS_VIDEO_HEADER_SELECT_ALL"
+msgstr "Selectare totală"
+
+msgid "IDS_VIDEO_SBODY_DEVICE_STORAGE"
+msgstr "Spaţiu stocare dispozitiv"
+
+msgid "IDS_VIDEO_SBODY_SD_CARD"
+msgstr "Card SD"
+
+msgid "IDS_VIDEO_OPT_SHARE_VIA"
+msgstr "Partajare prin"
+
+msgid "IDS_VIDEO_POP_A_NETWORK_ERROR_HAS_OCCURRED_TRY_AGAIN"
+msgstr "A apărut o eroare de reţea. Încercaţi din nou."
+
+msgid "IDS_VPL_OPT_AUTO_PLAY_NEXT_ABB"
+msgstr "Redare auto. urm."
+
+msgid "IDS_VPL_POP_PROCESSING_ING"
+msgstr "Se procesează..."
+
+msgid "IDS_MEMO_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "A fost atins numărul maxim de caractere."
+
+msgid "IDS_MUSIC_OPT_DELETE"
+msgstr "Ştergere"
+
+msgid "IDS_MUSIC_OPT_DELETE_ALL"
+msgstr "Ştergere toate"
+
+msgid "IDS_PB_BODY_NO_SEARCH_RESULT"
+msgstr "Nici un rezultat al căutării"
+
+msgid "IDS_VIDEO_HEADER_SELECT_ITEM"
+msgstr "Selectare element"
+
+msgid "IDS_VIDEO_HEADER_SELECT_ITEMS"
+msgstr "Selectare elemente"
+
+msgid "IDS_CLOCK_BUTTON_CANCEL"
+msgstr "Anulare"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "EFECTUAT"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "ANULARE"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DELETE_ABB"
+msgstr "ŞTERGERE"
+
+msgid "IDS_TPLATFORM_MBODY_STORAGE_LOCATION"
+msgstr "Locaţie stocare"
+
+msgid "IDS_GALLERY_HEADER_SELECT_VIDEO"
+msgstr "Selectare videoclip"
+

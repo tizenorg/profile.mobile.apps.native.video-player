@@ -1,0 +1,192 @@
+/*
+* Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+
+#pragma once
+
+#ifndef TRUE
+#define TRUE 1
+#endif
+
+#ifndef FALSE
+#define FALSE 0
+#endif
+
+typedef enum {
+	VIDEO_PLAY_ROTATE_NONE = 0x00,
+	VIDEO_PLAY_ROTATE_90,
+	VIDEO_PLAY_ROTATE_180,
+	VIDEO_PLAY_ROTATE_270
+}video_play_rotate_t;
+
+
+typedef enum {
+	VIDEO_PLAY_MODE_NORMAL_VIEW = 0x00,
+}video_play_mode_t;
+
+
+typedef enum {
+	VIDEO_PLAY_TYPE_OTHER = 0x00,
+	VIDEO_PLAY_TYPE_STORE, //Currently, Don't support this type. if support this type, we need to  sync code
+	VIDEO_PLAY_TYPE_LIST,
+	VIDEO_PLAY_TYPE_GALLERY,
+	VIDEO_PLAY_TYPE_MYFILE,
+	VIDEO_PLAY_TYPE_MESSAGE,
+	VIDEO_PLAY_TYPE_EMAIL,
+	VIDEO_PLAY_TYPE_WEB,
+	VIDEO_PLAY_TYPE_MULTI_PATH,
+	VIDEO_PLAY_TYPE_PREVIEW
+}video_play_launching_type_t;
+
+
+typedef enum {
+	VIDEO_PLAY_LIST_TYPE_ALL = 0x00,
+	VIDEO_PLAY_LIST_TYPE_FOLDER,
+}video_play_list_type_t;
+
+
+typedef enum {
+	VIDEO_PLAY_CB_TYPE_REALIZE = 0x00,
+	VIDEO_PLAY_CB_TYPE_DESTORY,
+	VIDEO_PLAY_CB_TYPE_EVENT_KEY_DOWN,
+	VIDEO_PLAY_CB_TYPE_EVENT_KEY_UP
+}video_play_callback_type_t;
+
+typedef enum {
+	VIDEO_PLAY_POPUP_SOUND_ALIVE = 0x00,
+	VIDEO_PLAY_POPUP_SUBTITLE_MAIN,
+	VIDEO_PLAY_POPUP_SUBTITLE_LANGUAGE,
+	VIDEO_PLAY_POPUP_SUBTITLE_SIZE,
+	VIDEO_PLAY_POPUP_SUBTITLE_SYNC,
+	VIDEO_PLAY_POPUP_REPEAT_MODE,
+	VIDEO_PLAY_POPUP_AUDIO_TRACK
+}video_play_popup_mode_t;
+
+typedef enum {
+	VIDEO_SHARE_FILE_TRANSFER = 0x00,
+	VIDEO_SHARE_MESSAGE,
+	VIDEO_SHARE_EMAIL,
+	VIDEO_SHARE_NFC,
+	VIDEO_SHARE_WIFI_DIRECT,
+	VIDEO_SHARE_BLUETOOTH,
+	VIDEO_SHARE_FACEBOOK,
+	VIDEO_SHARE_YOUTUBE
+}video_share_mode_t;
+
+typedef enum {
+	VIDEO_SA_NONE = 0x00,
+	VIDEO_SA_NORMAL,
+	VIDEO_SA_VOICE,
+	VIDEO_SA_MOVIE,
+	VIDEO_SA_7_1_CH
+}video_sound_alive_t;
+
+typedef enum
+{
+	VIDEO_SOUND_PATH_NONE = 0x00,
+	VIDEO_SOUND_PATH_SPEAKER,
+	VIDEO_SOUND_PATH_EARJACK,
+	VIDEO_SOUND_PATH_BLUETOOTH,
+	VIDEO_SOUND_PATH_HDMI,
+	VIDEO_SOUND_PATH_MIRRORING,
+	VIDEO_SOUND_PATH_USB_AUDIO,
+	VIDEO_SOUND_PATH_MAX,
+}video_sound_path_t;
+
+
+typedef enum {
+	VIDEO_PLAY_REPEAT_NONE = 0x00,
+	VIDEO_PLAY_REPEAT_OFF,
+	VIDEO_PLAY_REPEAT_ALL_STOP,
+	VIDEO_PLAY_REPEAT_ONE,
+	VIDEO_PLAY_REPEAT_ALL,
+	VIDEO_PLAY_REPEAT_FOLDER
+}video_play_repeat_mode_t;
+
+typedef enum {
+	VIDEO_PLAY_COLOR_TONE_NORMAL = 0x00,
+	VIDEO_PLAY_COLOR_TONE_WARM,
+	VIDEO_PLAY_COLOR_TONE_COLD,
+}video_play_color_tone_t;
+
+typedef enum {
+	VIDEO_SORT_BY_NONE = 0,
+	VIDEO_SORT_BY_NAME_A_Z,
+	VIDEO_SORT_BY_NAME_Z_A,
+	VIDEO_SORT_BY_DATE_MOST_RECENT,
+	VIDEO_SORT_BY_OLDEST,
+	VIDEO_SORT_BY_MAX,
+}video_play_sort_type_t;
+
+typedef enum {
+	VIDEO_EDIT_WEATHER_TAG_NONE = -1,
+	VIDEO_EDIT_WEATHER_TAG_NO,
+	VIDEO_EDIT_WEATHER_TAG_SUNNY_DAY,
+	VIDEO_EDIT_WEATHER_TAG_CLOUDY_DAY,
+	VIDEO_EDIT_WEATHER_TAG_RAINY_DAY,
+	VIDEO_EDIT_WEATHER_TAG_SNOWY_DAY,
+	VIDEO_EDIT_WEATHER_TAG_CLEAR_DAY,
+}video_play_edit_weather_tag_t;
+
+typedef enum {
+	VIDEO_DISPLAY_LETTER_BOX = 0x00,
+	VIDEO_DISPLAY_ORIGIN,
+	VIDEO_DISPLAY_FULL,
+	VIDEO_DISPLAY_CROPPED_FULL
+}video_play_display_mode_t;
+
+typedef enum {
+	VIDEO_SUBTITLE_SIZE_SMALL = 0x00,
+	VIDEO_SUBTITLE_SIZE_MEDIUM,
+	VIDEO_SUBTITLE_SIZE_LARGE,
+}video_play_subtitle_size_t;
+
+typedef enum {
+	VIDEO_SUBTITLE_EDGE_NONE = 0x00,
+	VIDEO_SUBTITLE_EDGE_RAISED,
+	VIDEO_SUBTITLE_EDGE_DEPRESSED,
+	VIDEO_SUBTITLE_EDGE_UNIFORM,
+	VIDEO_SUBTITLE_EDGE_DROP_SHADOW,
+}video_play_subtitle_edge_t;
+
+typedef enum {
+	VIDEO_SUBTITLE_FONT_DEFAULT = 0x00,
+	VIDEO_SUBTITLE_FONT_SAMSUNG_SANS,
+	VIDEO_SUBTITLE_FONT_GEORGIA,
+	VIDEO_SUBTITLE_FONT_CHOCO_COOKY,
+	VIDEO_SUBTITLE_FONT_ROSEMARY,
+	VIDEO_SUBTITLE_FONT_COOL_JAZZ,
+}video_play_subtitle_font_t;
+
+typedef enum {
+	VIDEO_SUBTITLE_COLOR_WHITE = 0x00,
+	VIDEO_SUBTITLE_COLOR_BLACK,
+	VIDEO_SUBTITLE_COLOR_RED,
+	VIDEO_SUBTITLE_COLOR_GREEN,
+	VIDEO_SUBTITLE_COLOR_BLUE,
+	VIDEO_SUBTITLE_COLOR_YELLOW,
+	VIDEO_SUBTITLE_COLOR_MAGENTA,
+	VIDEO_SUBTITLE_COLOR_CYAN,
+	VIDEO_SUBTITLE_COLOR_CUSTOM,
+	VIDEO_SUBTITLE_COLOR_NONE
+}video_play_subtitle_color_t;
+
+typedef enum {
+	VIDEO_SUBTITLE_ALIGNMENT_LEFT = 0x00,
+	VIDEO_SUBTITLE_ALIGNMENT_CENTER,
+	VIDEO_SUBTITLE_ALIGNMENT_RIGHT
+}video_play_subtitle_alignment_t;
+

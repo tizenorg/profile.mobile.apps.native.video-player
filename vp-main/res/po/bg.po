@@ -1,0 +1,489 @@
+msgid "IDS_VIDEO_OPT_BRIGHTNESS"
+msgstr "Яркост"
+
+msgid "IDS_VIDEO_OPT_MUSIC_M_SOUNDALIVE"
+msgstr "Музика"
+
+msgid "IDS_VIDEO_OPT_VOICES_M_PERSON"
+msgstr "Гласове"
+
+msgid "IDS_VIDEO_BODY_B"
+msgstr "B"
+
+msgid "IDS_VIDEO_BODY_GB"
+msgstr "GB"
+
+msgid "IDS_VIDEO_BODY_KB"
+msgstr "KB"
+
+msgid "IDS_VIDEO_BODY_LOCATION"
+msgstr "Позиция"
+
+msgid "IDS_VIDEO_BODY_MB"
+msgstr "MB"
+
+msgid "IDS_VIDEO_BUTTON_OK"
+msgstr "OK"
+
+msgid "IDS_VIDEO_HEADER_LAST_MODIFIED_M_DATE"
+msgstr "Последна промяна"
+
+msgid "IDS_VIDEO_OPT_SHARE"
+msgstr "Споделяне"
+
+msgid "IDS_VIDEO_HEADER_CANNOT_PLAY_VIDEO_ABB"
+msgstr "Не може да се изпълни видео"
+
+msgid "IDS_VIDEO_POP_AN_ERROR_OCCURRED_WITH_THE_SUBTITLES"
+msgstr "Възникна грешка със субтитрите."
+
+msgid "IDS_VIDEO_POP_THE_FILE_IS_CORRUPTED_OR_THE_SD_CARD_HAS_BEEN_REMOVED"
+msgstr "Файлът е повреден или SD картата е премахната."
+
+msgid "IDS_VIDEO_OPT_DETAILS"
+msgstr "Детайли"
+
+msgid "IDS_VIDEO_OPT_TITLE"
+msgstr "Заглавие"
+
+msgid "IDS_VIDEO_POP_THIS_VIDEO_WILL_BE_DELETED"
+msgstr "Този видеоклип ще бъде изтрит."
+
+msgid "IDS_VIDEO_HEADER_SETTINGS"
+msgstr "Настройки"
+
+msgid "IDS_VIDEO_HEADER_UNABLE_TO_PLAY_VIDEO_ABB"
+msgstr "Не може да се възпр. видео"
+
+msgid "IDS_VIDEO_MBODY_ALIGNMENT"
+msgstr "Подравняване"
+
+msgid "IDS_VIDEO_MBODY_FONT_SIZE"
+msgstr "Р-р шрифт"
+
+msgid "IDS_VIDEO_OPT_REPEAT_SETTING_ABB"
+msgstr "Настройка за повторение"
+
+msgid "IDS_VIDEO_OPT_SUBTITLES_HCC_ABB"
+msgstr "Субтитри (CC)"
+
+msgid "IDS_VIDEO_SBODY_CENTRE_M_STATUS"
+msgstr "Център"
+
+msgid "IDS_VIDEO_SBODY_LARGE_M_STATUS"
+msgstr "Голям"
+
+msgid "IDS_VIDEO_SBODY_LEFT_M_STATUS"
+msgstr "Отляво"
+
+msgid "IDS_VIDEO_SBODY_MEDIUM_M_STATUS"
+msgstr "Средно"
+
+msgid "IDS_VIDEO_SBODY_RIGHT_M_STATUS"
+msgstr "Отдясно"
+
+msgid "IDS_VIDEO_SBODY_SMALL_M_STATUS"
+msgstr "Малък"
+
+msgid "IDS_BR_SK_NEXT"
+msgstr "Следващ"
+
+msgid "IDS_BR_SK_PREVIOUS"
+msgstr "Предиш."
+
+msgid "IDS_VPL_POP_DRM_FILES_CANNOT_BE_SHARED"
+msgstr "DRM файловете не могат да се споделят."
+
+msgid "IDS_VPL_OPT_FORMAT"
+msgstr "Формат"
+
+msgid "IDS_VPL_BODY_UNABLE_TO_PLAY_VIDEO_DURING_CALL"
+msgstr "Не може да се възпроизвежда видео по време на разговор."
+
+msgid "IDS_VIDEO_OPT_MESSAGE_ABB"
+msgstr "Съобщ-ие"
+
+msgid "IDS_VIDEO_OPT_FILE_TRANSFER_ABB"
+msgstr "Прехвърляне на файл"
+
+msgid "IDS_VIDEO_OPT_EMAIL_ABB"
+msgstr "Имейл"
+
+msgid "IDS_VIDEO_BODY_LONGITUDE"
+msgstr "Геогр. дължина"
+
+msgid "IDS_VIDEO_BODY_LATITUDE"
+msgstr "Геогр. ширина"
+
+msgid "IDS_MUSIC_BUTTON_ENABLE_MOTION"
+msgstr "Актив. движ."
+
+msgid "IDS_VPL_TPOP_SCRUBBING_AT_PSX_SPEED"
+msgstr "Търкане със скорост %sx."
+
+msgid "IDS_VPL_TAB_EXTERNAL_STORAGE"
+msgstr "Външна памет за съхр."
+
+msgid "IDS_VPL_POP_VOLUME_M_SOUND"
+msgstr "Сила звук"
+
+msgid "IDS_VPL_POP_UNSUPPORTED_VIDEO_FORMAT"
+msgstr "Неподдържан формат на видео."
+
+msgid "IDS_VPL_POP_UNSUPPORTED_FILE_TYPE"
+msgstr "Неподдържан тип файл."
+
+msgid "IDS_VPL_POP_UNSUPPORTED_AUDIO_FORMAT"
+msgstr "Неподдържан аудио формат."
+
+msgid "IDS_VPL_POP_UNABLE_TO_USE_FAST_FORWARD_AND_REWIND_WHEN_NEARBY_DEVICES_ARE_ENABLED"
+msgstr "Не може да се използва бързо превъртане напред и назад, когато близките устройства са активирани."
+
+msgid "IDS_VPL_POP_UNABLE_TO_CAPTURE"
+msgstr "Невъзможно заснемане."
+
+msgid "IDS_VPL_POP_ROTATE"
+msgstr "Завъртане"
+
+msgid "IDS_VPL_POP_PRESS_THE_BACK_KEY_AGAIN_TO_RETURN_TO_PREVIOUS_SCREEN"
+msgstr "Натиснете отново клавиша Назад, за да се върнете към предишния екран."
+
+msgid "IDS_VPL_POP_NOT_ENOUGH_MEMORY_DELETE_SOME_ITEMS"
+msgstr "Няма достатъчно памет. Изтрийте някои елементи"
+
+msgid "IDS_VPL_POP_BOOKMARK_LIST_FULL_DELETE_SOME_BOOKMARKS"
+msgstr "Списък маркери пълен. Изтрий някои маркери."
+
+msgid "IDS_VPL_OPT_YELLOW_M_COLOUR"
+msgstr "Жълто"
+
+msgid "IDS_VPL_OPT_VIRTUAL_71_CH"
+msgstr "Виртуален 7.1 кан"
+
+msgid "IDS_VPL_OPT_SUBTITLES_HCC_ABB"
+msgstr "Субтитри (CC)"
+
+msgid "IDS_VPL_OPT_SOUNDALIVE"
+msgstr "SoundAlive"
+
+msgid "IDS_VPL_OPT_REPEAT_MODE"
+msgstr "Режим на повтаряне"
+
+msgid "IDS_VPL_OPT_NO_REPEAT"
+msgstr "Без повтаряне"
+
+msgid "IDS_VPL_OPT_MAGENTA_M_COLOUR"
+msgstr "Магента"
+
+msgid "IDS_VPL_OPT_GREEN"
+msgstr "Зелено"
+
+msgid "IDS_VPL_OPT_CYAN_M_COLOUR"
+msgstr "Циан"
+
+msgid "IDS_VPL_OPT_CUSTOM"
+msgstr "По избор"
+
+msgid "IDS_VPL_OPT_CURRENT_VIDEO_HONCE_ABB"
+msgstr "Текущ клип (веднъж)"
+
+msgid "IDS_VPL_OPT_CONNECTION_INFO_ABB"
+msgstr "Инфо за връзка"
+
+msgid "IDS_VPL_OPT_CHANGE_PLAYER"
+msgstr "Смяна на плейъра"
+
+msgid "IDS_VPL_OPT_CAPTURE"
+msgstr "Снимка"
+
+msgid "IDS_VPL_OPT_ALLSHARE"
+msgstr "AllShare"
+
+msgid "IDS_VPL_HEADER_SELECT_DEVICE_ABB"
+msgstr "Избор на устройство"
+
+msgid "IDS_VPL_HEADER_AVAILABLE_DEVICES_ABB"
+msgstr "Достъпни устройства"
+
+msgid "IDS_VPL_BUTTON_SPEAKER_ABB"
+msgstr "Високог."
+
+msgid "IDS_VPL_BODY_WHITE"
+msgstr "Бял"
+
+msgid "IDS_VPL_BODY_UDRGOTHICM_M_FONT"
+msgstr "UDRGothicM"
+
+msgid "IDS_VPL_BODY_UDMINCHO_M_FONT"
+msgstr "UDMincho"
+
+msgid "IDS_VPL_BODY_ROSEMARY_M_FONT"
+msgstr "Rosemary"
+
+msgid "IDS_VPL_BODY_RED_ABB"
+msgstr "Червено"
+
+msgid "IDS_VPL_BODY_PS_SECONDS"
+msgstr "%s секунди"
+
+msgid "IDS_VPL_BODY_POP_M_FONT"
+msgstr "POP"
+
+msgid "IDS_VPL_BODY_PLAY_SPEED"
+msgstr "Скорост на възпроизвеждане"
+
+msgid "IDS_VPL_BODY_PD_SECS"
+msgstr "%d сек."
+
+msgid "IDS_VPL_BODY_OFF"
+msgstr "Изключено"
+
+msgid "IDS_VPL_BODY_NO_TITLE"
+msgstr "Няма заглавие"
+
+msgid "IDS_VPL_BODY_MY_DEVICE"
+msgstr "Моето устройство"
+
+msgid "IDS_VPL_BODY_DEFAULT_FONT"
+msgstr "Шрифт по подразбиране"
+
+msgid "IDS_VPL_BODY_COOL_JAZZ_M_FONT"
+msgstr "Cool jazz"
+
+msgid "IDS_VPL_BODY_CHOCO_COOKY_M_FONT"
+msgstr "Choco cooky"
+
+msgid "IDS_VPL_BODY_BLUE"
+msgstr "Син"
+
+msgid "IDS_VPL_BODY_BLACK"
+msgstr "Черно"
+
+msgid "IDS_VPL_BODY_ACTIVATION"
+msgstr "Активиране"
+
+msgid "IDS_SMEMO_POP_CLOSE_APPLICATION_Q"
+msgstr "Затваряне на приложението?"
+
+msgid "IDS_VIDEO_SK_CANCEL_ABB"
+msgstr "Отказ"
+
+msgid "IDS_VIDEO_OPT_STOP_AFTER_ALL_ABB"
+msgstr "Спри след всички"
+
+msgid "IDS_VIDEO_OPT_REPEAT_CURRENT_ABB"
+msgstr "Повтаряне на текущо"
+
+msgid "IDS_VIDEO_OPT_REPEAT_ALL_ABB"
+msgstr "Повторение на всички"
+
+msgid "IDS_VIDEO_BODY_RESOLUTION"
+msgstr "Разделителна способност"
+
+msgid "IDS_VIDEO_BODY_PS_SOUND_EFFECTS_NOT_SUPPORTED_BY_SPEAKER"
+msgstr "%s звукови ефекта не се поддържат от високоговорителя."
+
+msgid "IDS_MUSIC_BODY_TURN_PHONE_OVER_TO_MUTE_INCOMING_CALLS_MESSAGE_ALERTS_AND_ALARMS"
+msgstr "Завъртете телефона, за да заглушите входящите повиквания, предупрежденията за съобщения и алармите."
+
+msgid "IDS_ST_BODY_SD_CARD"
+msgstr "SD карта"
+
+msgid "IDS_VPL_TPOP_ONLY_AUDIO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_AUDIO"
+msgstr "Само аудио данни, поддържани от този файл. В момента се възпроизвежда аудио."
+
+msgid "IDS_VPL_TPOP_ONLY_VIDEO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_VIDEO"
+msgstr "Само видео данни, поддържани от този файл. В момента се възпроизвежда видео."
+
+msgid "IDS_ST_BODY_PRIVATE_STORAGE"
+msgstr "Лично място за съхранение"
+
+msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
+msgstr "Слушалки"
+
+msgid "IDS_MUSIC_OPT_SPEAKER"
+msgstr "Високогов."
+
+msgid "IDS_MUSIC_OPT_PAUSE"
+msgstr "Пауза"
+
+msgid "IDS_VIDEO_BUTTON_DOWNLOAD"
+msgstr "Изтегли"
+
+msgid "IDS_VIDEO_MBODY_SELECT_SUBTITLES_HCC"
+msgstr "Избор на субтитри (CC)"
+
+msgid "IDS_VIDEO_NPBODY_PREVIEW_SUBTITLES_HCC_ABB"
+msgstr "Преглед на субтитрите (CC)"
+
+msgid "IDS_VIDEO_OPT_REPEAT_MODE_ABB"
+msgstr "Режим на повтаряне"
+
+msgid "IDS_VIDEO_POP_UNSUPPORTED_FILE_TYPE"
+msgstr "Неподдържан тип файл."
+
+msgid "IDS_VIDEO_OPT_NORMAL_M_SOUND_ABB"
+msgstr "Нормален"
+
+msgid "IDS_VIDEO_BODY_VOICE"
+msgstr "Глас"
+
+msgid "IDS_VIDEO_BODY_MOVIES"
+msgstr "Филми"
+
+msgid "IDS_VIDEO_OPT_AUDIO_TRACK_ABB"
+msgstr "Аудио запис"
+
+msgid "IDS_VIDEO_BODY_BUFFERING_ING_ABB"
+msgstr "Буфериране..."
+
+msgid "IDS_VIDEO_BODY_FILE_FORMAT"
+msgstr "Формат на файла"
+
+msgid "IDS_VIDEO_BODY_LANGUAGE"
+msgstr "Език"
+
+msgid "IDS_VIDEO_BODY_NO_VIDEOS"
+msgstr "Няма видео"
+
+msgid "IDS_VIDEO_BODY_SIZE"
+msgstr "Размер"
+
+msgid "IDS_VIDEO_BUTTON_DONE"
+msgstr "Готово"
+
+msgid "IDS_VIDEO_BUTTON_REFRESH"
+msgstr "Обновяване"
+
+msgid "IDS_VIDEO_HEADER_DATE"
+msgstr "Дата"
+
+msgid "IDS_VIDEO_HEADER_LOADING_ING_ABB"
+msgstr "Зареждане..."
+
+msgid "IDS_VIDEO_HEADER_SUBTITLES_HCC_ABB2"
+msgstr "Субтитри (CC)"
+
+msgid "IDS_VIDEO_IOPT3_DELETE"
+msgstr "Изтриване"
+
+msgid "IDS_VIDEO_OPT_ADD_TO_HOME_SCREEN_ABB"
+msgstr "Добавяне към началния екран"
+
+msgid "IDS_VIDEO_OPT_FACEBOOK_ABB"
+msgstr "Facebook"
+
+msgid "IDS_VIDEO_OPT_HDMI"
+msgstr "HDMI"
+
+msgid "IDS_VIDEO_OPT_NAME"
+msgstr "Име"
+
+msgid "IDS_VIDEO_OPT_SOUNDALIVE_ABB2"
+msgstr "SoundAlive"
+
+msgid "IDS_VIDEO_OPT_YOUTUBE_ABB"
+msgstr "YouTube"
+
+msgid "IDS_VIDEO_POP_UNABLE_TO_PLAY_VIDEO"
+msgstr "Невъзможно възпроизвеждане на видеоклип."
+
+msgid "IDS_VIDEO_SBODY_NO_SUBTITLES_AVAILABLE_M_STATUS"
+msgstr "Няма налични субтитри"
+
+msgid "IDS_VIDEO_SK3_PLAY"
+msgstr "Изпълняване"
+
+msgid "IDS_VIDEO_SK_CLOSE"
+msgstr "Затвори"
+
+msgid "IDS_VPL_POP_INVALID_URL"
+msgstr "Невалиден URL."
+
+msgid "IDS_CHATON_HEADER_ERROR_ABB"
+msgstr "Грешка"
+
+msgid "IDS_VIDEO_SBODY_DEVICE_STORAGE"
+msgstr "Памет на устройството"
+
+msgid "IDS_COM_BODY_VIDEO_PLAYER_T_MAINMENU"
+msgstr "Видео плейър"
+
+msgid "IDS_VIDEO_OPT_SHARE_VIA"
+msgstr "Споделяне с"
+
+msgid "IDS_VIDEO_POP_A_NETWORK_ERROR_HAS_OCCURRED_TRY_AGAIN"
+msgstr "Възникна мрежова грешка. Опитайте отново."
+
+msgid "IDS_VIDEO_TPOP_ONLY_AUDIO_DATA_SUPPORTED_BY_THIS_FILE_FORMAT_NOW_PLAYING_AUDIO"
+msgstr "Само аудиоданни, поддържани от този файлов формат. В момента се възпроизвежда аудио."
+
+msgid "IDS_VIDEO_TPOP_ONLY_VIDEO_DATA_SUPPORTED_BY_THIS_FILE_FORMAT_NOW_PLAYING_VIDEO"
+msgstr "Само видео данни, поддържани от този файлов формат. В момента се възпроизвежда видео."
+
+msgid "IDS_VPL_BODY_CENTRE"
+msgstr "Център"
+
+msgid "IDS_VPL_BODY_ON"
+msgstr "Включено"
+
+msgid "IDS_VPL_BODY_SETTINGS"
+msgstr "Настройки"
+
+msgid "IDS_VPL_BODY_VIDEOS_T_MAINMENU"
+msgstr "Видео клипове"
+
+msgid "IDS_VPL_BUTTON_SHARE"
+msgstr "Сподели"
+
+msgid "IDS_VPL_HEADER_DETAILS"
+msgstr "Детайли"
+
+msgid "IDS_VPL_OPT_DELETE"
+msgstr "Изтриване"
+
+msgid "IDS_VPL_POP_BUFFERING_PDP"
+msgstr "Буфериране - %d %"
+
+msgid "IDS_VIDEO_OPT_NONE"
+msgstr "Няма"
+
+msgid "IDS_VIDEO_BODY_PD_SECS_ABB3"
+msgstr "%d сек"
+
+msgid "IDS_MUSIC_HEADER_SOUNDALIVE_ABB3"
+msgstr "SoundAlive"
+
+msgid "IDS_MP_HEADER_SELECT_AUDIO_DEVICE"
+msgstr "Избор на аудиоустройство"
+
+msgid "IDS_MUSIC_OPT_DELETE"
+msgstr "Изтриване"
+
+msgid "IDS_CLOCK_BUTTON_CANCEL"
+msgstr "Отказ"
+
+msgid "IDS_VIDEO_POP_AN_UNKNOWN_ERROR_HAS_OCCURRED_OR_THE_FILE_MAY_BE_CORRUPT"
+msgstr "Възникна непозната грешка или файлът може да е повреден."
+
+msgid "IDS_VIDEO_POP_THIS_FILE_TYPE_IS_NOT_SUPPORTED"
+msgstr "Файловият тип не се поддържа."
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "ГОТОВО"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "ОТКАЗ"
+
+msgid "IDS_TPLATFORM_MBODY_STORAGE_LOCATION"
+msgstr "Място за съхранение"
+
+msgid "IDS_GP_BODY_SUBTITLES_HCC"
+msgstr "Субтитри (CC)"
+
+msgid "IDS_GALLERY_BODY_PERSONAL_STORAGE"
+msgstr "Лично място за съхранение"
+
+msgid "IDS_ACCS_BODY_CAPTIONS_WILL_LOOK_LIKE_THIS"
+msgstr "Надписите ще изглеждат така"
+

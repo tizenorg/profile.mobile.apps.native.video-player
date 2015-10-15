@@ -1,0 +1,489 @@
+msgid "IDS_VIDEO_OPT_BRIGHTNESS"
+msgstr "Kirkkaus"
+
+msgid "IDS_VIDEO_OPT_MUSIC_M_SOUNDALIVE"
+msgstr "Musiikki"
+
+msgid "IDS_VIDEO_OPT_VOICES_M_PERSON"
+msgstr "Äänet"
+
+msgid "IDS_VIDEO_BODY_B"
+msgstr "t"
+
+msgid "IDS_VIDEO_BODY_GB"
+msgstr "Gt"
+
+msgid "IDS_VIDEO_BODY_KB"
+msgstr "kt"
+
+msgid "IDS_VIDEO_BODY_LOCATION"
+msgstr "Sijainti"
+
+msgid "IDS_VIDEO_BODY_MB"
+msgstr "Mt"
+
+msgid "IDS_VIDEO_BUTTON_OK"
+msgstr "OK"
+
+msgid "IDS_VIDEO_HEADER_LAST_MODIFIED_M_DATE"
+msgstr "Muutettu viimeksi"
+
+msgid "IDS_VIDEO_OPT_SHARE"
+msgstr "Jaa"
+
+msgid "IDS_VIDEO_HEADER_CANNOT_PLAY_VIDEO_ABB"
+msgstr "Videota ei voi toistaa"
+
+msgid "IDS_VIDEO_POP_AN_ERROR_OCCURRED_WITH_THE_SUBTITLES"
+msgstr "Tekstityksessä tapahtui virhe."
+
+msgid "IDS_VIDEO_POP_THE_FILE_IS_CORRUPTED_OR_THE_SD_CARD_HAS_BEEN_REMOVED"
+msgstr "Tiedosto on vioittunut tai SD-kortti on poistettu."
+
+msgid "IDS_VIDEO_OPT_DETAILS"
+msgstr "Lisätiedot"
+
+msgid "IDS_VIDEO_OPT_TITLE"
+msgstr "Otsikko"
+
+msgid "IDS_VIDEO_POP_THIS_VIDEO_WILL_BE_DELETED"
+msgstr "Tämä video poistetaan."
+
+msgid "IDS_VIDEO_HEADER_SETTINGS"
+msgstr "Asetukset"
+
+msgid "IDS_VIDEO_HEADER_UNABLE_TO_PLAY_VIDEO_ABB"
+msgstr "Videota ei voi toistaa"
+
+msgid "IDS_VIDEO_MBODY_ALIGNMENT"
+msgstr "Kohdistus"
+
+msgid "IDS_VIDEO_MBODY_FONT_SIZE"
+msgstr "Fonttikoko"
+
+msgid "IDS_VIDEO_OPT_REPEAT_SETTING_ABB"
+msgstr "Toistoasetus"
+
+msgid "IDS_VIDEO_OPT_SUBTITLES_HCC_ABB"
+msgstr "Tekstitys (CC)"
+
+msgid "IDS_VIDEO_SBODY_CENTRE_M_STATUS"
+msgstr "Keskelle"
+
+msgid "IDS_VIDEO_SBODY_LARGE_M_STATUS"
+msgstr "Suuri"
+
+msgid "IDS_VIDEO_SBODY_LEFT_M_STATUS"
+msgstr "Vasemmalle"
+
+msgid "IDS_VIDEO_SBODY_MEDIUM_M_STATUS"
+msgstr "Keskisuuri"
+
+msgid "IDS_VIDEO_SBODY_RIGHT_M_STATUS"
+msgstr "Oikealle"
+
+msgid "IDS_VIDEO_SBODY_SMALL_M_STATUS"
+msgstr "Pieni"
+
+msgid "IDS_BR_SK_NEXT"
+msgstr "Seuraava"
+
+msgid "IDS_BR_SK_PREVIOUS"
+msgstr "Edellinen"
+
+msgid "IDS_VPL_POP_DRM_FILES_CANNOT_BE_SHARED"
+msgstr "DRM-tiedostoja ei voi jakaa."
+
+msgid "IDS_VPL_OPT_FORMAT"
+msgstr "Muoto"
+
+msgid "IDS_VPL_BODY_UNABLE_TO_PLAY_VIDEO_DURING_CALL"
+msgstr "Puhelun aikana ei voi toistaa videota."
+
+msgid "IDS_VIDEO_OPT_MESSAGE_ABB"
+msgstr "Viesti"
+
+msgid "IDS_VIDEO_OPT_FILE_TRANSFER_ABB"
+msgstr "Tiedostonsiirto"
+
+msgid "IDS_VIDEO_OPT_EMAIL_ABB"
+msgstr "Sähköposti"
+
+msgid "IDS_VIDEO_BODY_LONGITUDE"
+msgstr "Pituusaste"
+
+msgid "IDS_VIDEO_BODY_LATITUDE"
+msgstr "Leveysaste"
+
+msgid "IDS_MUSIC_BUTTON_ENABLE_MOTION"
+msgstr "Käytä liikettä"
+
+msgid "IDS_VPL_TPOP_SCRUBBING_AT_PSX_SPEED"
+msgstr "Hangataan %s-kertaisella nopeudella."
+
+msgid "IDS_VPL_TAB_EXTERNAL_STORAGE"
+msgstr "Ulk. tallennuslaite"
+
+msgid "IDS_VPL_POP_VOLUME_M_SOUND"
+msgstr "Äänenvoimakkuus"
+
+msgid "IDS_VPL_POP_UNSUPPORTED_VIDEO_FORMAT"
+msgstr "Videomuotoa ei tueta."
+
+msgid "IDS_VPL_POP_UNSUPPORTED_FILE_TYPE"
+msgstr "Tiedostotyyppiä ei tueta."
+
+msgid "IDS_VPL_POP_UNSUPPORTED_AUDIO_FORMAT"
+msgstr "Äänimuotoa ei tueta."
+
+msgid "IDS_VPL_POP_UNABLE_TO_USE_FAST_FORWARD_AND_REWIND_WHEN_NEARBY_DEVICES_ARE_ENABLED"
+msgstr "Pikakelausta eteen- ja taaksepäin ei voi käyttää, kun lähellä olevat laitteet ovat käytössä."
+
+msgid "IDS_VPL_POP_UNABLE_TO_CAPTURE"
+msgstr "Ei voi tehdä ruudunkaappausta."
+
+msgid "IDS_VPL_POP_ROTATE"
+msgstr "Kierrä"
+
+msgid "IDS_VPL_POP_PRESS_THE_BACK_KEY_AGAIN_TO_RETURN_TO_PREVIOUS_SCREEN"
+msgstr "Palaa edelliseen näyttöön painamalla paluunäppäintä uudelleen."
+
+msgid "IDS_VPL_POP_NOT_ENOUGH_MEMORY_DELETE_SOME_ITEMS"
+msgstr "Muisti ei riitä. Poista joitain kohteita."
+
+msgid "IDS_VPL_POP_BOOKMARK_LIST_FULL_DELETE_SOME_BOOKMARKS"
+msgstr "Kirjanmerkkiluettelo täynnä. Poista kirjanmerkkejä."
+
+msgid "IDS_VPL_OPT_YELLOW_M_COLOUR"
+msgstr "Keltainen"
+
+msgid "IDS_VPL_OPT_VIRTUAL_71_CH"
+msgstr "Virtuaalinen 7.1-kanava"
+
+msgid "IDS_VPL_OPT_SUBTITLES_HCC_ABB"
+msgstr "Tekstitys (CC)"
+
+msgid "IDS_VPL_OPT_SOUNDALIVE"
+msgstr "SoundAlive"
+
+msgid "IDS_VPL_OPT_REPEAT_MODE"
+msgstr "Toistotila"
+
+msgid "IDS_VPL_OPT_NO_REPEAT"
+msgstr "Ei toistoa"
+
+msgid "IDS_VPL_OPT_MAGENTA_M_COLOUR"
+msgstr "Magenta"
+
+msgid "IDS_VPL_OPT_GREEN"
+msgstr "Vihreä"
+
+msgid "IDS_VPL_OPT_CYAN_M_COLOUR"
+msgstr "Syaani"
+
+msgid "IDS_VPL_OPT_CUSTOM"
+msgstr "Mukautettu"
+
+msgid "IDS_VPL_OPT_CURRENT_VIDEO_HONCE_ABB"
+msgstr "Nyk. video (kerran)"
+
+msgid "IDS_VPL_OPT_CONNECTION_INFO_ABB"
+msgstr "Yhteystiedot"
+
+msgid "IDS_VPL_OPT_CHANGE_PLAYER"
+msgstr "Vaihda soitinta"
+
+msgid "IDS_VPL_OPT_CAPTURE"
+msgstr "Tallenna"
+
+msgid "IDS_VPL_OPT_ALLSHARE"
+msgstr "AllShare"
+
+msgid "IDS_VPL_HEADER_SELECT_DEVICE_ABB"
+msgstr "Valitse laite"
+
+msgid "IDS_VPL_HEADER_AVAILABLE_DEVICES_ABB"
+msgstr "Käyt. olevat laitt."
+
+msgid "IDS_VPL_BUTTON_SPEAKER_ABB"
+msgstr "Kaiutin"
+
+msgid "IDS_VPL_BODY_WHITE"
+msgstr "Valkoinen"
+
+msgid "IDS_VPL_BODY_UDRGOTHICM_M_FONT"
+msgstr "UDRGothicM"
+
+msgid "IDS_VPL_BODY_UDMINCHO_M_FONT"
+msgstr "UDMincho"
+
+msgid "IDS_VPL_BODY_ROSEMARY_M_FONT"
+msgstr "Rosemary"
+
+msgid "IDS_VPL_BODY_RED_ABB"
+msgstr "Punainen"
+
+msgid "IDS_VPL_BODY_PS_SECONDS"
+msgstr "%s sekuntia"
+
+msgid "IDS_VPL_BODY_POP_M_FONT"
+msgstr "POP"
+
+msgid "IDS_VPL_BODY_PLAY_SPEED"
+msgstr "Toistonopeus"
+
+msgid "IDS_VPL_BODY_PD_SECS"
+msgstr "%d s"
+
+msgid "IDS_VPL_BODY_OFF"
+msgstr "Pois"
+
+msgid "IDS_VPL_BODY_NO_TITLE"
+msgstr "Otsikko puuttuu"
+
+msgid "IDS_VPL_BODY_MY_DEVICE"
+msgstr "Oma laite"
+
+msgid "IDS_VPL_BODY_DEFAULT_FONT"
+msgstr "Oletusfontti"
+
+msgid "IDS_VPL_BODY_COOL_JAZZ_M_FONT"
+msgstr "Cool jazz"
+
+msgid "IDS_VPL_BODY_CHOCO_COOKY_M_FONT"
+msgstr "Choco cooky"
+
+msgid "IDS_VPL_BODY_BLUE"
+msgstr "Sininen"
+
+msgid "IDS_VPL_BODY_BLACK"
+msgstr "Musta"
+
+msgid "IDS_VPL_BODY_ACTIVATION"
+msgstr "Aktivointi"
+
+msgid "IDS_SMEMO_POP_CLOSE_APPLICATION_Q"
+msgstr "Suljetaanko sovellus?"
+
+msgid "IDS_VIDEO_SK_CANCEL_ABB"
+msgstr "Per."
+
+msgid "IDS_VIDEO_OPT_STOP_AFTER_ALL_ABB"
+msgstr "Pysäytä kaikk. jälk."
+
+msgid "IDS_VIDEO_OPT_REPEAT_CURRENT_ABB"
+msgstr "Toista nykyinen"
+
+msgid "IDS_VIDEO_OPT_REPEAT_ALL_ABB"
+msgstr "Toista kaikki"
+
+msgid "IDS_VIDEO_BODY_RESOLUTION"
+msgstr "Tarkkuus"
+
+msgid "IDS_VIDEO_BODY_PS_SOUND_EFFECTS_NOT_SUPPORTED_BY_SPEAKER"
+msgstr "Kaiutin ei tue äänitehosteita %s."
+
+msgid "IDS_MUSIC_BODY_TURN_PHONE_OVER_TO_MUTE_INCOMING_CALLS_MESSAGE_ALERTS_AND_ALARMS"
+msgstr "Mykistä saapuvat puhelut, viestihälytykset ja herätykset kääntämällä puhelin ylösalaisin."
+
+msgid "IDS_ST_BODY_SD_CARD"
+msgstr "SD-kort."
+
+msgid "IDS_VPL_TPOP_ONLY_AUDIO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_AUDIO"
+msgstr "Tiedosto tukee vain äänitietoja. Toistetaan ääntä."
+
+msgid "IDS_VPL_TPOP_ONLY_VIDEO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_VIDEO"
+msgstr "Tiedosto tukee vain videotietoja. Toistetaan videota."
+
+msgid "IDS_ST_BODY_PRIVATE_STORAGE"
+msgstr "Yksityinen tallennustila"
+
+msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
+msgstr "Kuulokkeet"
+
+msgid "IDS_MUSIC_OPT_SPEAKER"
+msgstr "Kaiutin"
+
+msgid "IDS_MUSIC_OPT_PAUSE"
+msgstr "Tauko"
+
+msgid "IDS_VIDEO_BUTTON_DOWNLOAD"
+msgstr "Lataa"
+
+msgid "IDS_VIDEO_MBODY_SELECT_SUBTITLES_HCC"
+msgstr "Valitse tekstitys (CC)"
+
+msgid "IDS_VIDEO_NPBODY_PREVIEW_SUBTITLES_HCC_ABB"
+msgstr "Esikatsele tekstitys (CC)"
+
+msgid "IDS_VIDEO_OPT_REPEAT_MODE_ABB"
+msgstr "Toistotila"
+
+msgid "IDS_VIDEO_POP_UNSUPPORTED_FILE_TYPE"
+msgstr "Tiedostotyyppiä ei tueta."
+
+msgid "IDS_VIDEO_OPT_NORMAL_M_SOUND_ABB"
+msgstr "Normaali"
+
+msgid "IDS_VIDEO_BODY_VOICE"
+msgstr "Ääni"
+
+msgid "IDS_VIDEO_BODY_MOVIES"
+msgstr "Elokuvat"
+
+msgid "IDS_VIDEO_OPT_AUDIO_TRACK_ABB"
+msgstr "Ääniraita"
+
+msgid "IDS_VIDEO_BODY_BUFFERING_ING_ABB"
+msgstr "Puskuroi..."
+
+msgid "IDS_VIDEO_BODY_FILE_FORMAT"
+msgstr "Tiedostomuoto"
+
+msgid "IDS_VIDEO_BODY_LANGUAGE"
+msgstr "Kieli"
+
+msgid "IDS_VIDEO_BODY_NO_VIDEOS"
+msgstr "Ei videoita"
+
+msgid "IDS_VIDEO_BODY_SIZE"
+msgstr "Koko"
+
+msgid "IDS_VIDEO_BUTTON_DONE"
+msgstr "Valmis"
+
+msgid "IDS_VIDEO_BUTTON_REFRESH"
+msgstr "Päivitä"
+
+msgid "IDS_VIDEO_HEADER_DATE"
+msgstr "Päivämäärä"
+
+msgid "IDS_VIDEO_HEADER_LOADING_ING_ABB"
+msgstr "Ladataan..."
+
+msgid "IDS_VIDEO_HEADER_SUBTITLES_HCC_ABB2"
+msgstr "Tekstitys (CC)"
+
+msgid "IDS_VIDEO_IOPT3_DELETE"
+msgstr "Poista"
+
+msgid "IDS_VIDEO_OPT_ADD_TO_HOME_SCREEN_ABB"
+msgstr "Lisää alkunäyttöön"
+
+msgid "IDS_VIDEO_OPT_FACEBOOK_ABB"
+msgstr "Facebook"
+
+msgid "IDS_VIDEO_OPT_HDMI"
+msgstr "HDMI"
+
+msgid "IDS_VIDEO_OPT_NAME"
+msgstr "Nimi"
+
+msgid "IDS_VIDEO_OPT_SOUNDALIVE_ABB2"
+msgstr "SoundAlive"
+
+msgid "IDS_VIDEO_OPT_YOUTUBE_ABB"
+msgstr "YouTube"
+
+msgid "IDS_VIDEO_POP_UNABLE_TO_PLAY_VIDEO"
+msgstr "Videota ei voi toistaa."
+
+msgid "IDS_VIDEO_SBODY_NO_SUBTITLES_AVAILABLE_M_STATUS"
+msgstr "Tekstityksiä ei ole käytettävissä"
+
+msgid "IDS_VIDEO_SK3_PLAY"
+msgstr "Toista"
+
+msgid "IDS_VIDEO_SK_CLOSE"
+msgstr "Sulje"
+
+msgid "IDS_VPL_POP_INVALID_URL"
+msgstr "Virheellinen URL-osoite"
+
+msgid "IDS_CHATON_HEADER_ERROR_ABB"
+msgstr "Virhe"
+
+msgid "IDS_VIDEO_SBODY_DEVICE_STORAGE"
+msgstr "Laitteen muisti"
+
+msgid "IDS_COM_BODY_VIDEO_PLAYER_T_MAINMENU"
+msgstr "Videosoitin"
+
+msgid "IDS_VIDEO_OPT_SHARE_VIA"
+msgstr "Jakotapa"
+
+msgid "IDS_VIDEO_POP_A_NETWORK_ERROR_HAS_OCCURRED_TRY_AGAIN"
+msgstr "Verkkovirhe. Yritä uudelleen."
+
+msgid "IDS_VIDEO_TPOP_ONLY_AUDIO_DATA_SUPPORTED_BY_THIS_FILE_FORMAT_NOW_PLAYING_AUDIO"
+msgstr "Tämä tiedostomuoto tukee vain äänitietoja. Toistetaan ääntä."
+
+msgid "IDS_VIDEO_TPOP_ONLY_VIDEO_DATA_SUPPORTED_BY_THIS_FILE_FORMAT_NOW_PLAYING_VIDEO"
+msgstr "Tämä tiedostomuoto tukee vain videotietoja. Toistetaan videota."
+
+msgid "IDS_VPL_BODY_CENTRE"
+msgstr "Keskelle"
+
+msgid "IDS_VPL_BODY_ON"
+msgstr "Päälle"
+
+msgid "IDS_VPL_BODY_SETTINGS"
+msgstr "Asetukset"
+
+msgid "IDS_VPL_BODY_VIDEOS_T_MAINMENU"
+msgstr "Videot"
+
+msgid "IDS_VPL_BUTTON_SHARE"
+msgstr "Jaa"
+
+msgid "IDS_VPL_HEADER_DETAILS"
+msgstr "Lisätiedot"
+
+msgid "IDS_VPL_OPT_DELETE"
+msgstr "Poista"
+
+msgid "IDS_VPL_POP_BUFFERING_PDP"
+msgstr "Puskuroidaan - %d %"
+
+msgid "IDS_VIDEO_OPT_NONE"
+msgstr "Ei mitään"
+
+msgid "IDS_VIDEO_BODY_PD_SECS_ABB3"
+msgstr "%d s"
+
+msgid "IDS_MUSIC_HEADER_SOUNDALIVE_ABB3"
+msgstr "SoundAlive"
+
+msgid "IDS_MP_HEADER_SELECT_AUDIO_DEVICE"
+msgstr "Valitse äänilaite"
+
+msgid "IDS_MUSIC_OPT_DELETE"
+msgstr "Poista"
+
+msgid "IDS_CLOCK_BUTTON_CANCEL"
+msgstr "Peruuta"
+
+msgid "IDS_VIDEO_POP_AN_UNKNOWN_ERROR_HAS_OCCURRED_OR_THE_FILE_MAY_BE_CORRUPT"
+msgstr "Tuntematon virhe tai tiedosto on ehkä vioittunut."
+
+msgid "IDS_VIDEO_POP_THIS_FILE_TYPE_IS_NOT_SUPPORTED"
+msgstr "Tätä tiedostotyyppiä ei tueta."
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "VALMIS"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "PERUUTA"
+
+msgid "IDS_TPLATFORM_MBODY_STORAGE_LOCATION"
+msgstr "Tallennuspaikka"
+
+msgid "IDS_GP_BODY_SUBTITLES_HCC"
+msgstr "Tekstitys (CC)"
+
+msgid "IDS_GALLERY_BODY_PERSONAL_STORAGE"
+msgstr "Henkilökohtainen tallennustila"
+
+msgid "IDS_ACCS_BODY_CAPTIONS_WILL_LOOK_LIKE_THIS"
+msgstr "Kuvatekstit näyttävät tältä."
+

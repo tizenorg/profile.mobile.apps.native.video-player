@@ -1,0 +1,171 @@
+/*
+* Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+#include "image_res.edc"
+#include "vp_font.edc"
+
+#define LINE_RECT_COLOR		130 130 130 255
+
+collections {
+	group {
+		name: "panel";
+
+		parts {
+			part {
+				name: "panel.rect";
+				type: RECT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					rel1 { relative: 0.0 0.0;}
+					rel2 { relative: 1.0 1.0;}
+					color: 0 0 0 0;
+				}
+			}
+
+			part {
+				name: "panel.progress";
+				type: SWALLOW;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 0 78;
+					fixed: 0 1;
+					align: 0.5 0.0;
+					color: 255 0 0 255;
+					rel1 { relative: 0.0277 0.0;}
+					rel2 { relative: 0.9723 0.0;}
+				}
+				description {
+					state: "portrate" 0.0;
+					inherit: "default" 0.0;
+				}
+				description {
+					state: "landscape" 0.0;
+					inherit: "default" 0.0;
+					min: 0 78;
+					rel1 { relative: 0.01875 0.0;}
+					rel2 { relative: 0.98125 0.0;}
+				}
+				description {
+					state: "trim" 0.0;
+					inherit: "default" 0.0;
+					min: 0 183;
+					rel1 { relative: 0.0 0.0;}
+					rel2 { relative: 1.0 0.0;}
+				}
+			}
+
+			part {
+				name: "panel.control.line";
+				type: RECT;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 0;
+					min: 0 1;
+					fixed: 0 1;
+					align: 0.5 0.0;
+					rel1 { relative: 0.0 0.40625; }
+					rel2 { relative: 1.0 0.40625; }
+					color: 255 0 0 0;
+				}
+				description {
+					state: "portrate" 0.0;
+					inherit: "default" 0.0;
+				}
+				description {
+					state: "landscape" 0.0;
+					inherit: "default" 0.0;
+					min: 0 1;
+					rel1 { relative: 0.0 0.40625; }
+					rel2 { relative: 1.0 0.40625; }
+				}
+				description {
+					state: "trim" 0.0;
+					inherit: "default" 0.0;
+					min: 0 1;
+					rel1 { relative: 0.0 0.616161; }
+					rel2 { relative: 1.0 0.616161; }
+				}
+			}
+			part {
+				name: "panel.control";
+				type: SWALLOW;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 0 114;
+					fixed: 0 1;
+					align: 0.5 0.0;
+					rel1 { relative: 0.0 0.0; to_y: "panel.control.line"; }
+					rel2 { relative: 1.0 0.0; to_y: "panel.control.line"; }
+				}
+				description {
+					state: "portrate" 0.0;
+					inherit: "default" 0.0;
+				}
+				description {
+					state: "landscape" 0.0;
+					inherit: "default" 0.0;
+					min: 0 114;
+					rel1 { relative: 0.0 0.0; to_y: "panel.control.line"; }
+					rel2 { relative: 1.0 0.0; to_y: "panel.control.line"; }
+				}
+				description {
+					state: "trim" 0.0;
+					inherit: "default" 0.0;
+					min: 0 114;
+					rel1 { relative: 0.0 0.0; to_y: "panel.control.line"; }
+					rel2 { relative: 1.0 0.0; to_y: "panel.control.line"; }
+				}
+			}
+		} // parts
+
+		programs {
+			program {
+ 				signal: "signal.panel.portrate.mode";
+ 				source: "*";
+				action: STATE_SET "portrate" 0.0;
+				target: "panel.progress";
+				target: "panel.control.line";
+				target: "panel.control";
+			}
+
+			program {
+ 				signal: "signal.panel.landscape.mode";
+ 				source: "*";
+				action: STATE_SET "landscape" 0.0;
+				target: "panel.progress";
+				target: "panel.control.line";
+				target: "panel.control";
+			}
+
+			program {
+ 				signal: "signal.panel.trim.mode";
+ 				source: "*";
+				action: STATE_SET "trim" 0.0;
+				target: "panel.progress";
+				target: "panel.control.line";
+				target: "panel.control";
+			}
+		}
+	} // group
+} // collections

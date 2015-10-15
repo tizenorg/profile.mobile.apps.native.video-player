@@ -1,0 +1,600 @@
+/*
+* Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+#define PROGRESSBAR_TITLE_FONT_SIZE_INC 28
+#define PROGRESSBAR_STATUS_TEXT_FONT_SIZE_INC 20
+
+#define PROGRESSBAR_LIST_PROGRESS_STYLE_TEXT_COLOR_INC          0 0 0 255
+#define PROGRESSBAR_LIST_PROGRESS_STYLE_STATUS_TEXT_COLOR_INC          224 224 224 255
+#define PROGRESSBAR_LIST_PROCESS_WIDTH_INC 66
+#define PROGRESSBAR_LIST_PROCESS_HEIGHT_INC 66
+#define PROGRESSBAR_LIST_PROCESS_SMALL_INC 35
+#define PROGRESSBAR_LIST_PROCESS_SMALL_IMAGE "32x32"
+#define PROGRESSBAR_LIST_PROGRESS_HEIGHT_INC 8
+
+#define	GALLERY_EDC_IMAGE_LIST_PROGRESS_BG					"T01-2_progress_bg.png"
+#define	GALLERY_EDC_IMAGE_LIST_PROGRESS_BAR					"T01-2_progress_bar.png"
+
+   group { name: "elm/progressbar/horizontal/video/list_progress";
+      images {
+         image: GALLERY_EDC_IMAGE_LIST_PROGRESS_BG COMP;
+         image: GALLERY_EDC_IMAGE_LIST_PROGRESS_BAR COMP;
+      }
+      parts {
+         part { name: "elm.padding.left";
+            type: RECT;
+            scale: 1;
+            description {
+               state: "default" 0.0;
+               min: 0 0;
+               fixed: 1 0;
+               rel1 {
+                  relative: 0.0  0.0;
+                  offset: 0 0;
+               }
+               rel2 {
+                  relative: 0.0  1.0;
+                  offset: 0 0;
+               }
+               color: 0 0 0 0;
+               align: 0.0 0.0;
+            }
+         }
+         part { name: "elm.padding.right";
+            type: RECT;
+            scale: 1;
+            description {
+               state: "default" 0.0;
+               min: 0 0;
+               fixed: 1 0;
+               rel1 {
+                  relative: 1.0  0.0;
+                  offset: 0 0;
+               }
+               rel2 {
+                  relative: 1.0  1.0;
+                  offset:   0   0;
+               }
+               color: 0 0 0 0;
+               align: 1.0 0.0;
+            }
+         }
+       part { name: "elm.background.progressbar";
+            type: RECT;
+            mouse_events: 0;
+            scale: 1;
+            description {
+               state: "default" 0.0;
+               rel1 {
+                  to_x: "elm.padding.left";
+                  relative: 1.0 0.0;
+                  offset: 0 0;
+               }
+               rel2 {
+                  to_x: "elm.padding.right";
+                  relative: 0.0 1.0;
+                  offset: 0 0;
+               }
+            }
+         }
+         part { name: "elm.swallow.bar";
+            mouse_events: 0;
+            scale: 1;
+            type: SWALLOW;
+            description {
+               min: 1 PROGRESSBAR_LIST_PROGRESS_HEIGHT_INC;
+               max: 99999 PROGRESSBAR_LIST_PROGRESS_HEIGHT_INC;
+               state: "default" 0.0;
+               rel1 {
+                  to: "elm.background.progressbar";
+                  relative: 0.0 0.0;
+               }
+               rel2 {
+                  to: "elm.background.progressbar";
+                  relative: 1.0 1.0;
+               }
+            }
+         }
+         part { name: "elm.swallow.content";
+            type: SWALLOW;
+            scale: 1;
+            description { state: "default" 0.0;
+               visible: 0;
+               align: 0.0 0.5;
+               rel1 {
+                  offset: 0 0;
+                  to_y: "elm.background.progressbar";
+               }
+               rel2 {
+                  offset: 0 -1;
+                  relative: 0.0 1.0;
+                  to_y: "elm.background.progressbar";
+               }
+            }
+            description { state: "visible" 0.0;
+               inherit: "default" 0.0;
+               visible: 1;
+               aspect: 1.0 1.0;
+               aspect_preference: VERTICAL;
+               rel2.offset: 4 -1;
+            }
+         }
+         part { name: "elm.text";
+            type: TEXT;
+            mouse_events: 0;
+            scale: 1;
+            description { state: "default" 0.0;
+               visible: 0;
+               fixed: 1 1;
+               align: 0.0 0.5;
+               rel1.to_x: "elm.swallow.content";
+               rel1.relative: 1.0 0.0;
+               rel2.to_x: "elm.swallow.content";
+               rel2.relative: 1.0 1.0;
+               color: PROGRESSBAR_LIST_PROGRESS_STYLE_TEXT_COLOR_INC;
+               text {
+                  font: "Tizen:style=Medium";
+                  size: PROGRESSBAR_STATUS_TEXT_FONT_SIZE_INC;
+                  min: 0 0;
+                  align: 0.0 0.5;
+               }
+            }
+            description { state: "visible" 0.0;
+               inherit: "default" 0.0;
+               visible: 0;
+               text.min: 1 1;
+            }
+         }
+         part { name: "background";
+            mouse_events: 0;
+            scale: 1;
+            clip_to: "elm.background.progressbar";
+            description {
+               state: "default" 0.0;
+               rel1 {
+                  to: "elm.swallow.bar";
+                  relative: 0.0 0.0;
+               }
+               rel2 {
+                  to: "elm.swallow.bar";
+                  relative: 1.0 1.0;
+               }
+               image {
+                  normal: GALLERY_EDC_IMAGE_LIST_PROGRESS_BG;
+                  border: 6 6 0 0;
+                  border_scale: 1;
+               }
+            }
+         }
+         part { name: "elm.text.status";
+            type: TEXT;
+            mouse_events: 0;
+            scale: 1;
+            description { state: "default" 0.0;
+               fixed: 1 1;
+               visible: 0;
+               rel1 {
+                  to: "background";
+                  relative: 0.5 0.5;
+               }
+               rel2 {
+                  to: "background";
+                  relative: 0.5 0.5;
+               }
+               text {
+                  font: "Tizen:style=Medium";
+                  size: PROGRESSBAR_STATUS_TEXT_FONT_SIZE_INC;
+                  min: 0 0;
+                  align: 0.5 0.0;
+               }
+               color: PROGRESSBAR_LIST_PROGRESS_STYLE_TEXT_COLOR_INC;
+            }
+            description { state: "show" 0.0;
+               inherit: "default" 0.0;
+               visible: 0;
+               text.min: 1 1;
+            }
+         }
+         part { name: "elm.progress.progressbar";
+            mouse_events: 0;
+            scale: 1;
+            clip_to: "elm.background.progressbar";
+            description {
+               state: "default" 0.0;
+               min: 0 0;
+               fixed: 1 1;
+               rel1 {
+                  to: "elm.swallow.bar";
+                  relative: 0.0 0.0;
+                  offset: -2 0;
+               }
+               rel2 {
+                  to_y: "elm.swallow.bar";
+                  to_x: "elm.cur.progressbar";
+                  offset: 2 -1;
+               }
+               image {
+                  normal: GALLERY_EDC_IMAGE_LIST_PROGRESS_BAR;
+                  border: 6 6 0 0;
+                  border_scale: 1;
+               }
+            }
+            description {
+               state: "invert" 0.0;
+               inherit: "default" 0.0;
+               rel1 {
+                  to_y: "elm.swallow.bar";
+                  to_x: "elm.cur.progressbar";
+               }
+               rel2 {
+                  to: "elm.swallow.bar";
+                  relative: 1.0 1.0;
+               }
+            }
+            description {
+               state: "state_begin" 0.0;
+               inherit: "default" 0.0;
+               rel1 {
+                  to: "elm.swallow.bar";
+                  relative: 0.0 0.0;
+               }
+               rel2 {
+                  to: "elm.swallow.bar";
+                  relative: 0.1 1.0;
+               }
+            }
+            description {
+               state: "state_end" 0.0;
+               inherit: "default" 0.0;
+               rel1 {
+                  to: "elm.swallow.bar";
+                  relative: 0.9 0.0;
+               }
+               rel2 {
+                  to: "elm.swallow.bar";
+                  relative: 1.0 1.0;
+               }
+            }
+         }
+         part { name: "text-bar";
+            type: TEXT;
+            mouse_events: 0;
+            scale: 1;
+            clip_to: "progress-rect";
+            //effect: SOFT_SHADOW;
+            scale: 0;
+            description { state: "default" 0.0;
+               align: 0.0 0.0;
+               fixed: 1 1;
+               visible: 0;
+               rel1.to: "elm.text.status";
+               rel1.offset: -1 -1;
+               rel2.to: "elm.text.status";
+               text {
+                  text_source: "elm.text.status";
+                  font: "Tizen:style=Medium";
+                  size: PROGRESSBAR_STATUS_TEXT_FONT_SIZE_INC;
+                  min: 0 0;
+                  align: 0.0 0.0;
+               }
+               color: PROGRESSBAR_LIST_PROGRESS_STYLE_STATUS_TEXT_COLOR_INC;
+            }
+            description { state: "show" 0.0;
+               inherit: "default" 0.0;
+               visible: 0;
+               text.min: 1 1;
+            }
+         }
+         part { name: "elm.cur.progressbar";
+            mouse_events: 0;
+            scale: 1;
+            dragable {
+               confine: "background";
+               x: 1 1 1;
+               y: 0 0 0;
+            }
+            description { state: "default" 0.0;
+               min: 0 28;
+               fixed: 1 1;
+               visible: 0;
+               rel1 {
+                  to: "background";
+                  relative: 0 0;
+               }
+               rel2.to: "background";
+           }
+         }
+         part { name: "progress-rect";
+            type: RECT;
+            mouse_events: 0;
+            scale: 1;
+            description {
+               state: "default" 0.0;
+               rel1.to: "elm.progress.progressbar";
+               rel2.to: "elm.progress.progressbar";
+            }
+         }
+      }
+      programs {
+         program { name: "label_show";
+            signal: "elm,state,text,visible";
+            source: "elm";
+            action:  STATE_SET "visible" 0.0;
+            target: "elm.text";
+         }
+         program { name: "label_hide";
+            signal: "elm,state,text,hidden";
+            source: "elm";
+            action:  STATE_SET "default" 0.0;
+            target: "elm.text";
+         }
+         program { name: "icon_show";
+            signal: "elm,state,icon,visible";
+            source: "elm";
+            action:  STATE_SET "visible" 0.0;
+            target: "elm.swallow.content";
+         }
+         program { name: "icon_hide";
+            signal: "elm,state,icon,hidden";
+            source: "elm";
+            action:  STATE_SET "default" 0.0;
+            target: "elm.swallow.content";
+         }
+         program { name: "units_show";
+            signal: "elm,state,units,visible";
+            source: "elm";
+            action:  STATE_SET "show" 0.0;
+            target: "text-bar";
+            target: "elm.text.status";
+         }
+         program { name: "units_hide";
+            signal: "elm,state,units,hidden";
+            source: "elm";
+            action:  STATE_SET "default" 0.0;
+            target: "text-bar";
+            target: "elm.text.status";
+         }
+         program { name: "slide_to_end";
+            action:  STATE_SET "state_end" 0.0;
+            transition: LINEAR 0.5;
+            target: "elm.progress.progressbar";
+            after: "slide_to_begin";
+         }
+         program { name: "slide_to_begin";
+            signal: "elm,state,slide,begin";
+            action: STATE_SET "state_begin" 0.0;
+            target: "elm.progress.progressbar";
+            transition: LINEAR 0.5;
+            after: "slide_to_end";
+         }
+         program { name: "start_pulse";
+            signal: "elm,state,pulse,start";
+            source: "elm";
+           // after: "slide_to_end";
+         }
+         program { name: "stop_pulse";
+            signal: "elm,state,pulse,stop";
+            source: "elm";
+            action: ACTION_STOP;
+            target: "slide_to_begin";
+            target: "slide_to_end";
+            target: "start_pulse";
+            //after: "state_pulse";
+         }
+         program { name: "state_pulse";
+            signal: "elm,state,pulse";
+            source: "elm";
+            action: STATE_SET "state_begin" 0.0;
+            target: "elm.progress.progressbar";
+            after: "units_hide";
+         }
+         program { name: "state_fraction";
+            signal: "elm,state,fraction";
+            source: "elm";
+            action: ACTION_STOP;
+            target: "slide_to_begin";
+            target: "slide_to_end";
+            target: "start_pulse";
+            action: STATE_SET "default" 0.0;
+            target: "elm.progress.progressbar";
+         }
+         program { name: "set_invert_on";
+            signal: "elm,state,inverted,on";
+            source: "elm";
+            action:  STATE_SET "invert" 0.0;
+            target: "elm.progress.progressbar";
+         }
+         program { name: "set_invert_off";
+            signal: "elm,state,inverted,off";
+            source: "elm";
+            action:  STATE_SET "default" 0.0;
+            target: "elm.progress.progressbar";
+         }
+      }
+   }
+
+
+/*
+#define PROGRESS_BG_DESC( param_num ) \
+   description { state: "pulse" 0.#param_num; \
+      inherit: "default" 0.0; \
+      image { \
+         normal: GALLERY_EDC_IMAGE_LIST_PROCESS_##param_num; \
+      } \
+   }
+
+#define   PROGRESSING_DELAY    0.03
+
+   group { name: "elm/progressbar/horizontal/gallery/list_process";
+      images {
+         image: GALLERY_EDC_IMAGE_LIST_PROCESS_01 COMP;
+         image: GALLERY_EDC_IMAGE_LIST_PROCESS_02 COMP;
+         image: GALLERY_EDC_IMAGE_LIST_PROCESS_03 COMP;
+         image: GALLERY_EDC_IMAGE_LIST_PROCESS_04 COMP;
+         image: GALLERY_EDC_IMAGE_LIST_PROCESS_05 COMP;
+         image: GALLERY_EDC_IMAGE_LIST_PROCESS_06 COMP;
+         image: GALLERY_EDC_IMAGE_LIST_PROCESS_07 COMP;
+         image: GALLERY_EDC_IMAGE_LIST_PROCESS_08 COMP;
+         image: GALLERY_EDC_IMAGE_LIST_PROCESS_09 COMP;
+         image: GALLERY_EDC_IMAGE_LIST_PROCESS_10 COMP;
+         image: GALLERY_EDC_IMAGE_LIST_PROCESS_11 COMP;
+         image: GALLERY_EDC_IMAGE_LIST_PROCESS_12 COMP;
+         image: GALLERY_EDC_IMAGE_LIST_PROCESS_13 COMP;
+         image: GALLERY_EDC_IMAGE_LIST_PROCESS_14 COMP;
+         image: GALLERY_EDC_IMAGE_LIST_PROCESS_15 COMP;
+         image: GALLERY_EDC_IMAGE_LIST_PROCESS_16 COMP;
+         image: GALLERY_EDC_IMAGE_LIST_PROCESS_17 COMP;
+         image: GALLERY_EDC_IMAGE_LIST_PROCESS_18 COMP;
+         image: GALLERY_EDC_IMAGE_LIST_PROCESS_19 COMP;
+         image: GALLERY_EDC_IMAGE_LIST_PROCESS_20 COMP;
+         image: GALLERY_EDC_IMAGE_LIST_PROCESS_21 COMP;
+         image: GALLERY_EDC_IMAGE_LIST_PROCESS_22 COMP;
+         image: GALLERY_EDC_IMAGE_LIST_PROCESS_23 COMP;
+         image: GALLERY_EDC_IMAGE_LIST_PROCESS_24 COMP;
+         image: GALLERY_EDC_IMAGE_LIST_PROCESS_25 COMP;
+         image: GALLERY_EDC_IMAGE_LIST_PROCESS_26 COMP;
+         image: GALLERY_EDC_IMAGE_LIST_PROCESS_27 COMP;
+         image: GALLERY_EDC_IMAGE_LIST_PROCESS_28 COMP;
+         image: GALLERY_EDC_IMAGE_LIST_PROCESS_29 COMP;
+         image: GALLERY_EDC_IMAGE_LIST_PROCESS_30 COMP;
+      }
+      parts {
+         part { name: "elm.background.progressbar";
+            mouse_events: 0;
+            scale: 1;
+            type: RECT;
+            description {
+               state: "default" 0.0;
+            }
+         }
+         part { name: "elm.swallow.bar";
+            mouse_events: 0;
+            scale: 1;
+            type: SWALLOW;
+            description { state: "default" 0.0;
+               min: 0 0;
+               max: 0 0;
+               visible: 0;
+            }
+         }
+         part { name: "elm.swallow.content";
+            type: SWALLOW;
+            scale: 1;
+            description { state: "default" 0.0;
+               min: 0 0;
+               max: 0 0;
+               visible: 0;
+            }
+         }
+         part { name: "background";
+            mouse_events: 0;
+            scale: 1;
+            clip_to: "elm.background.progressbar";
+            description {
+               state: "default" 0.0;
+               min: PROGRESSBAR_LIST_PROCESS_WIDTH_INC PROGRESSBAR_LIST_PROCESS_HEIGHT_INC;
+               max: PROGRESSBAR_LIST_PROCESS_WIDTH_INC PROGRESSBAR_LIST_PROCESS_HEIGHT_INC;
+               visible: 1;
+               aspect: 1.0 1.0;
+               aspect_preference: BOTH;
+               image {
+                  normal: GALLERY_EDC_IMAGE_LIST_PROCESS_01;
+               }
+            }
+            description { state: "pulse" 0.0;
+               inherit: "default" 0.0;
+               image {
+                  normal: GALLERY_EDC_IMAGE_LIST_PROCESS_01;
+               }
+            }
+            PROGRESS_BG_DESC( 01 )
+            PROGRESS_BG_DESC( 02 )
+            PROGRESS_BG_DESC( 03 )
+            PROGRESS_BG_DESC( 04 )
+            PROGRESS_BG_DESC( 05 )
+            PROGRESS_BG_DESC( 06 )
+            PROGRESS_BG_DESC( 07 )
+            PROGRESS_BG_DESC( 08 )
+            PROGRESS_BG_DESC( 09 )
+            PROGRESS_BG_DESC( 10 )
+            PROGRESS_BG_DESC( 11 )
+            PROGRESS_BG_DESC( 12 )
+            PROGRESS_BG_DESC( 13 )
+            PROGRESS_BG_DESC( 14 )
+            PROGRESS_BG_DESC( 15 )
+            PROGRESS_BG_DESC( 16 )
+            PROGRESS_BG_DESC( 17 )
+            PROGRESS_BG_DESC( 18 )
+            PROGRESS_BG_DESC( 19 )
+            PROGRESS_BG_DESC( 20 )
+            PROGRESS_BG_DESC( 21 )
+            PROGRESS_BG_DESC( 22 )
+            PROGRESS_BG_DESC( 23 )
+            PROGRESS_BG_DESC( 24 )
+            PROGRESS_BG_DESC( 25 )
+            PROGRESS_BG_DESC( 26 )
+            PROGRESS_BG_DESC( 27 )
+            PROGRESS_BG_DESC( 28 )
+            PROGRESS_BG_DESC( 29 )
+            PROGRESS_BG_DESC( 30 )
+         }
+      }
+      script {
+         public pulse_state;
+      }
+      programs {
+         program { name: "continue_pulse";
+            script {
+               new Float:state;
+               state = get_float(pulse_state);
+               set_state(PART:"background", "pulse", state);
+               state += 0.01;
+               if( state > 0.30 )
+                  state = 0.01;
+               set_float(pulse_state, state);
+            }
+               after: "delay";
+         }
+         program { name: "delay";
+            action: STATE_SET "pulse" 0.10;
+            target: "background";
+            in: PROGRESSING_DELAY 0.0;
+            after: "continue_pulse";
+         }
+         program { name: "start_pulse";
+            signal: "elm,state,pulse,start";
+            source: "elm";
+            script {
+               set_float(pulse_state, 0.0);
+            }
+            after: "continue_pulse";
+         }
+         program { name: "stop_pulse";
+            signal: "elm,state,pulse,stop";
+            source: "elm";
+            action: ACTION_STOP;
+            target: "continue_pulse";
+            target: "delay";
+            target: "start_pulse";
+            after: "init_pulse";
+         }
+         program { name: "init_pulse";
+            action: STATE_SET "default" 0.0;
+            target: "background";
+         }
+      }
+   }
+*/

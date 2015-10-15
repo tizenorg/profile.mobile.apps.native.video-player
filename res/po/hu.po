@@ -1,0 +1,390 @@
+msgid "IDS_VIDEO_OPT_DOWNLOAD"
+msgstr "Letöltés"
+
+msgid "IDS_VIDEO_POP_1_FOLDER_WILL_BE_DOWNLOADED"
+msgstr "Letölt 1 mappát."
+
+msgid "IDS_VIDEO_POP_1_VIDEO_WILL_BE_DOWNLOADED"
+msgstr "Letölt 1 videót."
+
+msgid "IDS_VIDEO_POP_ALL_FOLDERS_WILL_BE_DOWNLOADED"
+msgstr "Az összes mappát letölti."
+
+msgid "IDS_VIDEO_POP_ALL_VIDEOS_WILL_BE_DOWNLOADED"
+msgstr "Az összes videót letölti."
+
+msgid "IDS_VIDEO_POP_PD_FOLDERS_WILL_BE_DOWNLOADED"
+msgstr "Letölt %d mappát."
+
+msgid "IDS_VIDEO_POP_PD_VIDEOS_WILL_BE_DOWNLOADED"
+msgstr "Letölt %d videót."
+
+msgid "IDS_VIDEO_TPOP_MOBILE_DATA_TURNED_OFF_CONNECT_TO_WI_FI_NETWORK_INSTEAD_OR_TURN_ON_MOBILE_DATA_AND_TRY_AGAIN"
+msgstr "A mobil internetkapcsolat ki van kapcsolva. Kapcsolódjon Wi-Fi-hálózathoz, vagy kapcsolja be a mobil internetkapcsolatot, és próbálja újra."
+
+msgid "IDS_GALLERY_OPT_PRIVATE_M_CONTENT"
+msgstr "Privát"
+
+msgid "IDS_VIDEO_BODY_B"
+msgstr "B"
+
+msgid "IDS_VIDEO_BODY_GB"
+msgstr "GB"
+
+msgid "IDS_VIDEO_BODY_KB"
+msgstr "KB"
+
+msgid "IDS_VIDEO_BODY_LOCATION"
+msgstr "Hely"
+
+msgid "IDS_VIDEO_BODY_MB"
+msgstr "MB"
+
+msgid "IDS_VIDEO_BODY_UNKNOWN"
+msgstr "Ismeretlen"
+
+msgid "IDS_VIDEO_BUTTON_OK"
+msgstr "OK"
+
+msgid "IDS_VIDEO_HEADER_1_FOLDER"
+msgstr "1 mappa"
+
+msgid "IDS_VIDEO_HEADER_1_VIDEO"
+msgstr "1 videó"
+
+msgid "IDS_VIDEO_HEADER_ALL"
+msgstr "Mind"
+
+msgid "IDS_VIDEO_HEADER_FROM_DEVICE"
+msgstr "Az eszközről"
+
+msgid "IDS_VIDEO_HEADER_FROM_DROPBOX"
+msgstr "A Dropboxból"
+
+msgid "IDS_VIDEO_HEADER_LAST_MODIFIED_M_DATE"
+msgstr "Legutóbbi módosítás"
+
+msgid "IDS_VIDEO_OPT_CONTENT_TO_DISPLAY"
+msgstr "Megjelenítendő tartalom"
+
+msgid "IDS_VIDEO_OPT_SEARCH"
+msgstr "Keresés"
+
+msgid "IDS_VIDEO_OPT_SHARE"
+msgstr "Megosztás"
+
+msgid "IDS_VIDEO_POP_1_FOLDER_WILL_BE_DELETED"
+msgstr "1 mappát törölni fog."
+
+msgid "IDS_VIDEO_TPOP_DELETING_ING"
+msgstr "Törlés..."
+
+msgid "IDS_VIDEO_BODY_AFTER_YOU_RECORD_VIDEOS_USING_THE_CAMERA_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Itt jelennek majd meg a fényképezővel rögzített videók."
+
+msgid "IDS_VIDEO_HEADER_PD_VIDEOS"
+msgstr "%d videó"
+
+msgid "IDS_VIDEO_HEADER_VIDEO"
+msgstr "Videó"
+
+msgid "IDS_VIDEO_NPBODY_NO_VIDEOS"
+msgstr "Nincs videó"
+
+msgid "IDS_VIDEO_OPT_DETAILS"
+msgstr "Részletek"
+
+msgid "IDS_VIDEO_OPT_FOLDER"
+msgstr "Mappa"
+
+msgid "IDS_VIDEO_OPT_LIST"
+msgstr "Lista"
+
+msgid "IDS_VIDEO_OPT_RECENTLY_ADDED_ABB"
+msgstr "Legut. ho.adott"
+
+msgid "IDS_VIDEO_OPT_RECENTLY_VIEWED_ABB"
+msgstr "Legutóbb megtekintett"
+
+msgid "IDS_VIDEO_OPT_RENAME"
+msgstr "Átnevez"
+
+msgid "IDS_VIDEO_OPT_SIZE"
+msgstr "Méret"
+
+msgid "IDS_VIDEO_OPT_SORT_BY"
+msgstr "Rendezés szempontja"
+
+msgid "IDS_VIDEO_OPT_TITLE"
+msgstr "Cím"
+
+msgid "IDS_VIDEO_OPT_TYPE"
+msgstr "Típus"
+
+msgid "IDS_VIDEO_OPT_VIEW_AS"
+msgstr "Megjelenítés módja"
+
+msgid "IDS_VIDEO_POP_ALL_VIDEOS_WILL_BE_DELETED"
+msgstr "Minden videót törölni fog."
+
+msgid "IDS_VIDEO_POP_PD_FOLDERS_WILL_BE_DELETED"
+msgstr "Törölni fogja a(z) %d mappát."
+
+msgid "IDS_VIDEO_POP_PD_VIDEOS_WILL_BE_DELETED"
+msgstr "%d videót törölni fog."
+
+msgid "IDS_VIDEO_POP_THIS_FOLDER_WILL_BE_DELETED"
+msgstr "Törölni fogja a mappát."
+
+msgid "IDS_VIDEO_HEADER_PD_FOLDERS"
+msgstr "%d mappa"
+
+msgid "IDS_VIDEO_HEADER_SETTINGS"
+msgstr "Beállítások"
+
+msgid "IDS_VIDEO_HEADER_UNABLE_TO_PLAY_VIDEO_ABB"
+msgstr "Nem lehet lejátszani a videót"
+
+msgid "IDS_VIDEO_MBODY_ALIGNMENT"
+msgstr "Igazítás"
+
+msgid "IDS_VIDEO_MBODY_FONT_SIZE"
+msgstr "Betűméret"
+
+msgid "IDS_VIDEO_OPT_REPEAT_SETTING_ABB"
+msgstr "Ismétlési beállítás"
+
+msgid "IDS_VIDEO_OPT_SUBTITLES_HCC_ABB"
+msgstr "Feliratok (hangfelirat)"
+
+msgid "IDS_VIDEO_POP_ALL_FOLDERS_WILL_BE_DELETED"
+msgstr "Minden mappát törölni fog."
+
+msgid "IDS_VIDEO_SBODY_CENTRE_M_STATUS"
+msgstr "Középső"
+
+msgid "IDS_VIDEO_SBODY_LARGE_M_STATUS"
+msgstr "Nagy"
+
+msgid "IDS_VIDEO_SBODY_LEFT_M_STATUS"
+msgstr "Balra"
+
+msgid "IDS_VIDEO_SBODY_MEDIUM_M_STATUS"
+msgstr "Közepes"
+
+msgid "IDS_VIDEO_SBODY_RIGHT_M_STATUS"
+msgstr "Jobbra"
+
+msgid "IDS_VIDEO_SBODY_SMALL_M_STATUS"
+msgstr "Kicsi"
+
+msgid "IDS_VIDEO_TPOP_FILE_NAME_ALREADY_IN_USE"
+msgstr "Ilyen fájlnév már van."
+
+msgid "IDS_GALLERY_OPT_REMOVE_FROM_PRIVATE"
+msgstr "Eltávolítás a Privátból"
+
+msgid "IDS_GALLERY_OPT_MOVE_TO_PRIVATE"
+msgstr "Áthelyezés a Privátba"
+
+msgid "IDS_IV_POP_ENTRY_IS_EMPTY"
+msgstr "A bejegyzés üres."
+
+msgid "IDS_VPL_OPT_FORMAT"
+msgstr "Formátum"
+
+msgid "IDS_VPL_BODY_UNABLE_TO_PLAY_VIDEO_DURING_CALL"
+msgstr "Hívás közben nem lehet videót lejátszani."
+
+msgid "IDS_CLOUD_BODY_DROPBOX_ABB"
+msgstr "Dropbox"
+
+msgid "IDS_VIDEO_POP_THIS_FILE_IS_UNAVAILABLE_WHILE_OFFLINE_CHECK_NETWORK_CONNECTION_AND_TRY_AGAIN"
+msgstr "Offline állapotban ez a fájl nem elérhető. Ellenőrizze a hálózati kapcsolatot, és próbálja újra."
+
+msgid "IDS_VIDEO_POP_THE_SELECTED_ITEM_WILL_BE_MOVED_TO_PS"
+msgstr "A kijelölt tételt a(z) %s mappába helyezi."
+
+msgid "IDS_VIDEO_POP_THE_SELECTED_ITEMS_WILL_BE_MOVED_TO_PS"
+msgstr "A kijelölt tételeket a(z) %s mappába helyezi."
+
+msgid "IDS_VIDEO_POP_REMOVING_ING"
+msgstr "Eltávolítás..."
+
+msgid "IDS_VIDEO_POP_MOVING_ING"
+msgstr "Áthelyezés..."
+
+msgid "IDS_VIDEO_POP_FAILED_TO_MOVE_TO_PERSONAL_STORAGE"
+msgstr "Nem sikerült áthelyezni a személyes tárhelyre."
+
+msgid "IDS_VIDEO_POP_FAILED_TO_MOVE_TO_NORMAL_STORAGE"
+msgstr "Nem sikerült áthelyezni a normál tárhelyre."
+
+msgid "IDS_VIDEO_OPT_MESSAGE_ABB"
+msgstr "Üzenet"
+
+msgid "IDS_VIDEO_OPT_FOLDERS_ABB"
+msgstr "Mappák"
+
+msgid "IDS_VIDEO_OPT_EMAIL_ABB"
+msgstr "E-mail"
+
+msgid "IDS_VIDEO_OPT_DATE_HMOST_RECENT_ABB"
+msgstr "Dátum (legújabb)"
+
+msgid "IDS_VIDEO_HEADER_PD_SELECTED"
+msgstr "%d kiválasztva"
+
+msgid "IDS_VIDEO_HEADER_DELETE_VIDEOS"
+msgstr "Videók törlése"
+
+msgid "IDS_VIDEO_HEADER_DELETE_VIDEO"
+msgstr "Videó törlése"
+
+msgid "IDS_VIDEO_BUTTON_MOVE_ABB"
+msgstr "Áthelyezés"
+
+msgid "IDS_VIDEO_BODY_LONGITUDE"
+msgstr "Hosszúság"
+
+msgid "IDS_VIDEO_BODY_LATITUDE"
+msgstr "Szélesség"
+
+msgid "IDS_VIDEO_BODY_AFTER_YOU_RECORD_VIDEOS_USING_THE_CAMERA_VIDEOS_WILL_BE_SHOWN"
+msgstr "Ha majd készít videofelvételeket a fényképező használatával, azok megjelennek itt."
+
+msgid "IDS_VIDEO_SK_CANCEL_ABB"
+msgstr "Mégse"
+
+msgid "IDS_VIDEO_OPT_STOP_AFTER_ALL_ABB"
+msgstr "Mégis leállítja"
+
+msgid "IDS_VIDEO_OPT_REPEAT_CURRENT_ABB"
+msgstr "Aktuális ismétlése"
+
+msgid "IDS_VIDEO_OPT_REPEAT_ALL_ABB"
+msgstr "Összes ismétlése"
+
+msgid "IDS_VIDEO_BODY_RESOLUTION"
+msgstr "Felbontás"
+
+msgid "IDS_VIDEO_BUTTON_DELETE"
+msgstr "Törlés"
+
+msgid "IDS_ST_OPT_DELETE_ALL"
+msgstr "Összes törlése"
+
+msgid "IDS_VPL_TPOP_ONLY_AUDIO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_AUDIO"
+msgstr "A fájl csak hangadatokat támogat. Jelenleg hanglejátszás zajlik."
+
+msgid "IDS_VPL_TPOP_ONLY_VIDEO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_VIDEO"
+msgstr "A fájl csak videóadatokat támogat. Jelenleg videólejátszás zajlik."
+
+msgid "IDS_MUSIC_OPT_RENAME"
+msgstr "Átnevezés"
+
+msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
+msgstr "Fejhallgató"
+
+msgid "IDS_VIDEO_BUTTON_DOWNLOAD"
+msgstr "Letöltés"
+
+msgid "IDS_TPLATFORM_BODY_OFF"
+msgstr "Ki"
+
+msgid "IDS_TPLATFORM_BODY_ON"
+msgstr "Be"
+
+msgid "IDS_VIDEO_POP_1_VIDEO_WILL_BE_DELETED"
+msgstr "1 videót törölni fog."
+
+msgid "IDS_SWALL_HEADER_INVALID_CHARACTER"
+msgstr "Érvénytelen karakter"
+
+msgid "IDS_VIDEO_BODY_NO_SEARCH_RESULTS"
+msgstr "Nincs találat"
+
+msgid "IDS_GALLERY_HEADER_SELECT"
+msgstr "Kiválasztás"
+
+msgid "IDS_VIDEO_BODY_LAST_MODIFIED_M_DATE_ABB"
+msgstr "Legutóbbi módosítás"
+
+msgid "IDS_VIDEO_BUTTON_DONE"
+msgstr "Kész"
+
+msgid "IDS_VIDEO_HEADER_DATE"
+msgstr "Dátum"
+
+msgid "IDS_VIDEO_HEADER_LATITUDE"
+msgstr "Szélesség"
+
+msgid "IDS_VIDEO_OPT_NAME"
+msgstr "Név"
+
+msgid "IDS_VIDEO_OPT_NAME_HA_Z_ABB"
+msgstr "Név (A–Z)"
+
+msgid "IDS_VIDEO_OPT_VIDEOS"
+msgstr "Videók"
+
+msgid "IDS_VIDEO_TPOP_MAXIMUM_NUMBER_OF_ATTACHMENTS_HPD_EXCEEDED"
+msgstr "Túllépte a mellékletek maximális számát (%d)."
+
+msgid "IDS_VIDEO_HEADER_SELECT_ALL"
+msgstr "Mind kijelöli"
+
+msgid "IDS_VIDEO_SBODY_DEVICE_STORAGE"
+msgstr "Eszköz tárhelye"
+
+msgid "IDS_VIDEO_SBODY_SD_CARD"
+msgstr "SD-kártya"
+
+msgid "IDS_VIDEO_OPT_SHARE_VIA"
+msgstr "Megosztás"
+
+msgid "IDS_VIDEO_POP_A_NETWORK_ERROR_HAS_OCCURRED_TRY_AGAIN"
+msgstr "Hálózati hiba történt. Próbálja újra."
+
+msgid "IDS_VPL_OPT_AUTO_PLAY_NEXT_ABB"
+msgstr "Automatikus lejátszás"
+
+msgid "IDS_VPL_POP_PROCESSING_ING"
+msgstr "Feldolgozás folyamatban"
+
+msgid "IDS_MEMO_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Elérte a karakterek maximális számát."
+
+msgid "IDS_MUSIC_OPT_DELETE"
+msgstr "Törlés"
+
+msgid "IDS_MUSIC_OPT_DELETE_ALL"
+msgstr "Összes törlése"
+
+msgid "IDS_PB_BODY_NO_SEARCH_RESULT"
+msgstr "Nincs találat"
+
+msgid "IDS_VIDEO_HEADER_SELECT_ITEM"
+msgstr "Elem kiválasztása"
+
+msgid "IDS_VIDEO_HEADER_SELECT_ITEMS"
+msgstr "Jelöljön ki tételeket"
+
+msgid "IDS_CLOCK_BUTTON_CANCEL"
+msgstr "Mégse"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "KÉSZ"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "MÉGSE"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DELETE_ABB"
+msgstr "TÖRLÉS"
+
+msgid "IDS_TPLATFORM_MBODY_STORAGE_LOCATION"
+msgstr "Mentési hely"
+
+msgid "IDS_GALLERY_HEADER_SELECT_VIDEO"
+msgstr "Videó kiválasztása"
+

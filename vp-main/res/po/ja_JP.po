@@ -1,0 +1,489 @@
+msgid "IDS_VIDEO_OPT_BRIGHTNESS"
+msgstr "明るさ"
+
+msgid "IDS_VIDEO_OPT_MUSIC_M_SOUNDALIVE"
+msgstr "音楽"
+
+msgid "IDS_VIDEO_OPT_VOICES_M_PERSON"
+msgstr "音声"
+
+msgid "IDS_VIDEO_BODY_B"
+msgstr "B"
+
+msgid "IDS_VIDEO_BODY_GB"
+msgstr "GB"
+
+msgid "IDS_VIDEO_BODY_KB"
+msgstr "KB"
+
+msgid "IDS_VIDEO_BODY_LOCATION"
+msgstr "場所"
+
+msgid "IDS_VIDEO_BODY_MB"
+msgstr "MB"
+
+msgid "IDS_VIDEO_BUTTON_OK"
+msgstr "OK"
+
+msgid "IDS_VIDEO_HEADER_LAST_MODIFIED_M_DATE"
+msgstr "最終更新日"
+
+msgid "IDS_VIDEO_OPT_SHARE"
+msgstr "共有"
+
+msgid "IDS_VIDEO_HEADER_CANNOT_PLAY_VIDEO_ABB"
+msgstr "動画の再生不可"
+
+msgid "IDS_VIDEO_POP_AN_ERROR_OCCURRED_WITH_THE_SUBTITLES"
+msgstr "字幕にエラーが発生しました。"
+
+msgid "IDS_VIDEO_POP_THE_FILE_IS_CORRUPTED_OR_THE_SD_CARD_HAS_BEEN_REMOVED"
+msgstr "ファイルが破損しているか、外部SDカードが取り外されています。"
+
+msgid "IDS_VIDEO_OPT_DETAILS"
+msgstr "詳細"
+
+msgid "IDS_VIDEO_OPT_TITLE"
+msgstr "タイトル"
+
+msgid "IDS_VIDEO_POP_THIS_VIDEO_WILL_BE_DELETED"
+msgstr "この動画を削除します。"
+
+msgid "IDS_VIDEO_HEADER_SETTINGS"
+msgstr "設定"
+
+msgid "IDS_VIDEO_HEADER_UNABLE_TO_PLAY_VIDEO_ABB"
+msgstr "動画再生不可"
+
+msgid "IDS_VIDEO_MBODY_ALIGNMENT"
+msgstr "配置"
+
+msgid "IDS_VIDEO_MBODY_FONT_SIZE"
+msgstr "文字サイズ"
+
+msgid "IDS_VIDEO_OPT_REPEAT_SETTING_ABB"
+msgstr "リピート設定"
+
+msgid "IDS_VIDEO_OPT_SUBTITLES_HCC_ABB"
+msgstr "字幕(CC)"
+
+msgid "IDS_VIDEO_SBODY_CENTRE_M_STATUS"
+msgstr "中央"
+
+msgid "IDS_VIDEO_SBODY_LARGE_M_STATUS"
+msgstr "大"
+
+msgid "IDS_VIDEO_SBODY_LEFT_M_STATUS"
+msgstr "左"
+
+msgid "IDS_VIDEO_SBODY_MEDIUM_M_STATUS"
+msgstr "中"
+
+msgid "IDS_VIDEO_SBODY_RIGHT_M_STATUS"
+msgstr "右"
+
+msgid "IDS_VIDEO_SBODY_SMALL_M_STATUS"
+msgstr "小"
+
+msgid "IDS_BR_SK_NEXT"
+msgstr "次へ"
+
+msgid "IDS_BR_SK_PREVIOUS"
+msgstr "前へ"
+
+msgid "IDS_VPL_POP_DRM_FILES_CANNOT_BE_SHARED"
+msgstr "DRMファイルは共有できません。"
+
+msgid "IDS_VPL_OPT_FORMAT"
+msgstr "ファイル形式"
+
+msgid "IDS_VPL_BODY_UNABLE_TO_PLAY_VIDEO_DURING_CALL"
+msgstr "通話中はビデオ再生できません"
+
+msgid "IDS_VIDEO_OPT_MESSAGE_ABB"
+msgstr "ﾒｯｾｰｼﾞ"
+
+msgid "IDS_VIDEO_OPT_FILE_TRANSFER_ABB"
+msgstr "ファイル転送"
+
+msgid "IDS_VIDEO_OPT_EMAIL_ABB"
+msgstr "Eメール"
+
+msgid "IDS_VIDEO_BODY_LONGITUDE"
+msgstr "経度"
+
+msgid "IDS_VIDEO_BODY_LATITUDE"
+msgstr "緯度"
+
+msgid "IDS_MUSIC_BUTTON_ENABLE_MOTION"
+msgstr "モーションを使用"
+
+msgid "IDS_VPL_TPOP_SCRUBBING_AT_PSX_SPEED"
+msgstr "%sxの速度でスクラブ再生中です。"
+
+msgid "IDS_VPL_TAB_EXTERNAL_STORAGE"
+msgstr "外部ストレージ"
+
+msgid "IDS_VPL_POP_VOLUME_M_SOUND"
+msgstr "音量"
+
+msgid "IDS_VPL_POP_UNSUPPORTED_VIDEO_FORMAT"
+msgstr "未対応ビデオ形式"
+
+msgid "IDS_VPL_POP_UNSUPPORTED_FILE_TYPE"
+msgstr "未対応のファイルです。"
+
+msgid "IDS_VPL_POP_UNSUPPORTED_AUDIO_FORMAT"
+msgstr "サポートされていないオーディオ形式"
+
+msgid "IDS_VPL_POP_UNABLE_TO_USE_FAST_FORWARD_AND_REWIND_WHEN_NEARBY_DEVICES_ARE_ENABLED"
+msgstr "周辺のデバイスが有効な場合、早送りや早戻しは使用できません。"
+
+msgid "IDS_VPL_POP_UNABLE_TO_CAPTURE"
+msgstr "キャプチャできません。"
+
+msgid "IDS_VPL_POP_ROTATE"
+msgstr "回転"
+
+msgid "IDS_VPL_POP_PRESS_THE_BACK_KEY_AGAIN_TO_RETURN_TO_PREVIOUS_SCREEN"
+msgstr "前画面に戻るには、戻るキーをもう一度押してください。"
+
+msgid "IDS_VPL_POP_NOT_ENOUGH_MEMORY_DELETE_SOME_ITEMS"
+msgstr "メモリが不足しています。不要なアイテムを削除してください。"
+
+msgid "IDS_VPL_POP_BOOKMARK_LIST_FULL_DELETE_SOME_BOOKMARKS"
+msgstr "ブックマークリストがいっぱいです。いくつか削除してください。"
+
+msgid "IDS_VPL_OPT_YELLOW_M_COLOUR"
+msgstr "黄"
+
+msgid "IDS_VPL_OPT_VIRTUAL_71_CH"
+msgstr "バーチャル7.1ch"
+
+msgid "IDS_VPL_OPT_SUBTITLES_HCC_ABB"
+msgstr "字幕(CC)"
+
+msgid "IDS_VPL_OPT_SOUNDALIVE"
+msgstr "SoundAlive"
+
+msgid "IDS_VPL_OPT_REPEAT_MODE"
+msgstr "再生パターン"
+
+msgid "IDS_VPL_OPT_NO_REPEAT"
+msgstr "1回再生"
+
+msgid "IDS_VPL_OPT_MAGENTA_M_COLOUR"
+msgstr "マゼンダ"
+
+msgid "IDS_VPL_OPT_GREEN"
+msgstr "緑"
+
+msgid "IDS_VPL_OPT_CYAN_M_COLOUR"
+msgstr "シアン"
+
+msgid "IDS_VPL_OPT_CUSTOM"
+msgstr "カスタム"
+
+msgid "IDS_VPL_OPT_CURRENT_VIDEO_HONCE_ABB"
+msgstr "現在の動画(1回)"
+
+msgid "IDS_VPL_OPT_CONNECTION_INFO_ABB"
+msgstr "接続情報"
+
+msgid "IDS_VPL_OPT_CHANGE_PLAYER"
+msgstr "プレーヤーを変更"
+
+msgid "IDS_VPL_OPT_CAPTURE"
+msgstr "キャプチャ"
+
+msgid "IDS_VPL_OPT_ALLSHARE"
+msgstr "AllShare"
+
+msgid "IDS_VPL_HEADER_SELECT_DEVICE_ABB"
+msgstr "デバイス選択"
+
+msgid "IDS_VPL_HEADER_AVAILABLE_DEVICES_ABB"
+msgstr "接続可能デバイス"
+
+msgid "IDS_VPL_BUTTON_SPEAKER_ABB"
+msgstr "ｽﾋﾟｰｶｰ"
+
+msgid "IDS_VPL_BODY_WHITE"
+msgstr "白"
+
+msgid "IDS_VPL_BODY_UDRGOTHICM_M_FONT"
+msgstr "UD丸ゴシック"
+
+msgid "IDS_VPL_BODY_UDMINCHO_M_FONT"
+msgstr "UD明朝"
+
+msgid "IDS_VPL_BODY_ROSEMARY_M_FONT"
+msgstr "ローズマリー"
+
+msgid "IDS_VPL_BODY_RED_ABB"
+msgstr "レッド"
+
+msgid "IDS_VPL_BODY_PS_SECONDS"
+msgstr "%s秒"
+
+msgid "IDS_VPL_BODY_POP_M_FONT"
+msgstr "ポップ"
+
+msgid "IDS_VPL_BODY_PLAY_SPEED"
+msgstr "再生スピード"
+
+msgid "IDS_VPL_BODY_PD_SECS"
+msgstr "%d秒"
+
+msgid "IDS_VPL_BODY_OFF"
+msgstr "OFF"
+
+msgid "IDS_VPL_BODY_NO_TITLE"
+msgstr "件名なし"
+
+msgid "IDS_VPL_BODY_MY_DEVICE"
+msgstr "マイデバイス"
+
+msgid "IDS_VPL_BODY_DEFAULT_FONT"
+msgstr "標準フォント"
+
+msgid "IDS_VPL_BODY_COOL_JAZZ_M_FONT"
+msgstr "クールジャズ"
+
+msgid "IDS_VPL_BODY_CHOCO_COOKY_M_FONT"
+msgstr "チョコクッキー"
+
+msgid "IDS_VPL_BODY_BLUE"
+msgstr "青"
+
+msgid "IDS_VPL_BODY_BLACK"
+msgstr "黒"
+
+msgid "IDS_VPL_BODY_ACTIVATION"
+msgstr "アクティベーション"
+
+msgid "IDS_SMEMO_POP_CLOSE_APPLICATION_Q"
+msgstr "アプリケーションを終了しますか？"
+
+msgid "IDS_VIDEO_SK_CANCEL_ABB"
+msgstr "ｷｬﾝｾﾙ"
+
+msgid "IDS_VIDEO_OPT_STOP_AFTER_ALL_ABB"
+msgstr "終了後に停止"
+
+msgid "IDS_VIDEO_OPT_REPEAT_CURRENT_ABB"
+msgstr "現在の動画をリピート"
+
+msgid "IDS_VIDEO_OPT_REPEAT_ALL_ABB"
+msgstr "全てリピート"
+
+msgid "IDS_VIDEO_BODY_RESOLUTION"
+msgstr "解像度"
+
+msgid "IDS_VIDEO_BODY_PS_SOUND_EFFECTS_NOT_SUPPORTED_BY_SPEAKER"
+msgstr "%sサウンドエフェクトは、スピーカーに対応していません。"
+
+msgid "IDS_MUSIC_BODY_TURN_PHONE_OVER_TO_MUTE_INCOMING_CALLS_MESSAGE_ALERTS_AND_ALARMS"
+msgstr "端末を伏せると、着信音やメッセージの通知音、アラーム音を消音します。"
+
+msgid "IDS_ST_BODY_SD_CARD"
+msgstr "外部SDカード"
+
+msgid "IDS_VPL_TPOP_ONLY_AUDIO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_AUDIO"
+msgstr "このファイルはオーディオデータのみ再生することができます。音声のみ再生します。"
+
+msgid "IDS_VPL_TPOP_ONLY_VIDEO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_VIDEO"
+msgstr "このファイルは動画データのみ再生することができます。動画のみ再生します。"
+
+msgid "IDS_ST_BODY_PRIVATE_STORAGE"
+msgstr "プライベートストレージ"
+
+msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
+msgstr "ヘッドホン"
+
+msgid "IDS_MUSIC_OPT_SPEAKER"
+msgstr "スピーカー"
+
+msgid "IDS_MUSIC_OPT_PAUSE"
+msgstr "一時停止"
+
+msgid "IDS_VIDEO_BUTTON_DOWNLOAD"
+msgstr "ダウンロード"
+
+msgid "IDS_VIDEO_MBODY_SELECT_SUBTITLES_HCC"
+msgstr "字幕(CC)を選択"
+
+msgid "IDS_VIDEO_NPBODY_PREVIEW_SUBTITLES_HCC_ABB"
+msgstr "字幕(CC)をプレビュー"
+
+msgid "IDS_VIDEO_OPT_REPEAT_MODE_ABB"
+msgstr "リピートモード"
+
+msgid "IDS_VIDEO_POP_UNSUPPORTED_FILE_TYPE"
+msgstr "未対応のファイルです。"
+
+msgid "IDS_VIDEO_OPT_NORMAL_M_SOUND_ABB"
+msgstr "標準"
+
+msgid "IDS_VIDEO_BODY_VOICE"
+msgstr "音声"
+
+msgid "IDS_VIDEO_BODY_MOVIES"
+msgstr "動画"
+
+msgid "IDS_VIDEO_OPT_AUDIO_TRACK_ABB"
+msgstr "オーディオトラック"
+
+msgid "IDS_VIDEO_BODY_BUFFERING_ING_ABB"
+msgstr "バッファ中..."
+
+msgid "IDS_VIDEO_BODY_FILE_FORMAT"
+msgstr "ファイル形式"
+
+msgid "IDS_VIDEO_BODY_LANGUAGE"
+msgstr "言語"
+
+msgid "IDS_VIDEO_BODY_NO_VIDEOS"
+msgstr "動画がありません。"
+
+msgid "IDS_VIDEO_BODY_SIZE"
+msgstr "サイズ"
+
+msgid "IDS_VIDEO_BUTTON_DONE"
+msgstr "完了"
+
+msgid "IDS_VIDEO_BUTTON_REFRESH"
+msgstr "更新"
+
+msgid "IDS_VIDEO_HEADER_DATE"
+msgstr "日付"
+
+msgid "IDS_VIDEO_HEADER_LOADING_ING_ABB"
+msgstr "ロード中..."
+
+msgid "IDS_VIDEO_HEADER_SUBTITLES_HCC_ABB2"
+msgstr "字幕(CC)"
+
+msgid "IDS_VIDEO_IOPT3_DELETE"
+msgstr "削除"
+
+msgid "IDS_VIDEO_OPT_ADD_TO_HOME_SCREEN_ABB"
+msgstr "ホーム画面に追加"
+
+msgid "IDS_VIDEO_OPT_FACEBOOK_ABB"
+msgstr "Facebook"
+
+msgid "IDS_VIDEO_OPT_HDMI"
+msgstr "HDMI"
+
+msgid "IDS_VIDEO_OPT_NAME"
+msgstr "名前"
+
+msgid "IDS_VIDEO_OPT_SOUNDALIVE_ABB2"
+msgstr "SoundAlive"
+
+msgid "IDS_VIDEO_OPT_YOUTUBE_ABB"
+msgstr "YouTube"
+
+msgid "IDS_VIDEO_POP_UNABLE_TO_PLAY_VIDEO"
+msgstr "動画を再生できません。"
+
+msgid "IDS_VIDEO_SBODY_NO_SUBTITLES_AVAILABLE_M_STATUS"
+msgstr "利用可能な字幕がありません。"
+
+msgid "IDS_VIDEO_SK3_PLAY"
+msgstr "再生"
+
+msgid "IDS_VIDEO_SK_CLOSE"
+msgstr "閉じる"
+
+msgid "IDS_VPL_POP_INVALID_URL"
+msgstr "無効なURLです。"
+
+msgid "IDS_CHATON_HEADER_ERROR_ABB"
+msgstr "エラー"
+
+msgid "IDS_VIDEO_SBODY_DEVICE_STORAGE"
+msgstr "システムメモリ(本体)"
+
+msgid "IDS_COM_BODY_VIDEO_PLAYER_T_MAINMENU"
+msgstr "動画"
+
+msgid "IDS_VIDEO_OPT_SHARE_VIA"
+msgstr "共有"
+
+msgid "IDS_VIDEO_POP_A_NETWORK_ERROR_HAS_OCCURRED_TRY_AGAIN"
+msgstr "ネットワークエラーが発生しました。再度お試しください。"
+
+msgid "IDS_VIDEO_TPOP_ONLY_AUDIO_DATA_SUPPORTED_BY_THIS_FILE_FORMAT_NOW_PLAYING_AUDIO"
+msgstr "このファイル形式はオーディオデータのみ再生することができます。音声のみ再生します。"
+
+msgid "IDS_VIDEO_TPOP_ONLY_VIDEO_DATA_SUPPORTED_BY_THIS_FILE_FORMAT_NOW_PLAYING_VIDEO"
+msgstr "このファイルフォーマットは、動画データのみ対応してします。現在、動画を再生しています。"
+
+msgid "IDS_VPL_BODY_CENTRE"
+msgstr "中央"
+
+msgid "IDS_VPL_BODY_ON"
+msgstr "ON"
+
+msgid "IDS_VPL_BODY_SETTINGS"
+msgstr "設定"
+
+msgid "IDS_VPL_BODY_VIDEOS_T_MAINMENU"
+msgstr "動画"
+
+msgid "IDS_VPL_BUTTON_SHARE"
+msgstr "共有"
+
+msgid "IDS_VPL_HEADER_DETAILS"
+msgstr "詳細"
+
+msgid "IDS_VPL_OPT_DELETE"
+msgstr "削除"
+
+msgid "IDS_VPL_POP_BUFFERING_PDP"
+msgstr "バッファ中...- %d%"
+
+msgid "IDS_VIDEO_OPT_NONE"
+msgstr "点灯状態を保つ"
+
+msgid "IDS_VIDEO_BODY_PD_SECS_ABB3"
+msgstr "%d秒"
+
+msgid "IDS_MUSIC_HEADER_SOUNDALIVE_ABB3"
+msgstr "SoundAlive"
+
+msgid "IDS_MP_HEADER_SELECT_AUDIO_DEVICE"
+msgstr "オーディオデバイスを選択"
+
+msgid "IDS_MUSIC_OPT_DELETE"
+msgstr "削除"
+
+msgid "IDS_CLOCK_BUTTON_CANCEL"
+msgstr "キャンセル"
+
+msgid "IDS_VIDEO_POP_AN_UNKNOWN_ERROR_HAS_OCCURRED_OR_THE_FILE_MAY_BE_CORRUPT"
+msgstr "不明なエラーが発生しているか、ファイルが破損しています。"
+
+msgid "IDS_VIDEO_POP_THIS_FILE_TYPE_IS_NOT_SUPPORTED"
+msgstr "このファイルタイプには対応していません。"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "完了"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "キャンセル"
+
+msgid "IDS_TPLATFORM_MBODY_STORAGE_LOCATION"
+msgstr "保存場所"
+
+msgid "IDS_GP_BODY_SUBTITLES_HCC"
+msgstr "字幕(CC)"
+
+msgid "IDS_GALLERY_BODY_PERSONAL_STORAGE"
+msgstr "パーソナルストレージ"
+
+msgid "IDS_ACCS_BODY_CAPTIONS_WILL_LOOK_LIKE_THIS"
+msgstr "字幕はこのように表示されます。"
+

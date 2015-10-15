@@ -1,0 +1,489 @@
+msgid "IDS_VIDEO_OPT_BRIGHTNESS"
+msgstr "Φωτεινότητα"
+
+msgid "IDS_VIDEO_OPT_MUSIC_M_SOUNDALIVE"
+msgstr "Μουσική"
+
+msgid "IDS_VIDEO_OPT_VOICES_M_PERSON"
+msgstr "Φωνές"
+
+msgid "IDS_VIDEO_BODY_B"
+msgstr "B"
+
+msgid "IDS_VIDEO_BODY_GB"
+msgstr "GB"
+
+msgid "IDS_VIDEO_BODY_KB"
+msgstr "KB"
+
+msgid "IDS_VIDEO_BODY_LOCATION"
+msgstr "Τοποθεσία"
+
+msgid "IDS_VIDEO_BODY_MB"
+msgstr "MB"
+
+msgid "IDS_VIDEO_BUTTON_OK"
+msgstr "OK"
+
+msgid "IDS_VIDEO_HEADER_LAST_MODIFIED_M_DATE"
+msgstr "Τελευταία τροποποίηση"
+
+msgid "IDS_VIDEO_OPT_SHARE"
+msgstr "Κοινή χρήση"
+
+msgid "IDS_VIDEO_HEADER_CANNOT_PLAY_VIDEO_ABB"
+msgstr "Αδύνατη η αναπαραγωγή βίντεο"
+
+msgid "IDS_VIDEO_POP_AN_ERROR_OCCURRED_WITH_THE_SUBTITLES"
+msgstr "Παρουσιάστηκε σφάλμα με τους υπότιτλους."
+
+msgid "IDS_VIDEO_POP_THE_FILE_IS_CORRUPTED_OR_THE_SD_CARD_HAS_BEEN_REMOVED"
+msgstr "Το αρχείο είναι κατεστραμμένο ή έχει αφαιρεθεί η κάρτα SD."
+
+msgid "IDS_VIDEO_OPT_DETAILS"
+msgstr "Λεπτομέρειες"
+
+msgid "IDS_VIDEO_OPT_TITLE"
+msgstr "Τίτλος"
+
+msgid "IDS_VIDEO_POP_THIS_VIDEO_WILL_BE_DELETED"
+msgstr "Το βίντεο θα διαγραφεί."
+
+msgid "IDS_VIDEO_HEADER_SETTINGS"
+msgstr "Ρυθμίσεις"
+
+msgid "IDS_VIDEO_HEADER_UNABLE_TO_PLAY_VIDEO_ABB"
+msgstr "Αδύν. η αναπαρ. του βίντεο"
+
+msgid "IDS_VIDEO_MBODY_ALIGNMENT"
+msgstr "Στοίχιση"
+
+msgid "IDS_VIDEO_MBODY_FONT_SIZE"
+msgstr "Μέγ. γραμματοσειράς"
+
+msgid "IDS_VIDEO_OPT_REPEAT_SETTING_ABB"
+msgstr "Επανάληψη ρύθμισης"
+
+msgid "IDS_VIDEO_OPT_SUBTITLES_HCC_ABB"
+msgstr "Υπότιτλοι (CC)"
+
+msgid "IDS_VIDEO_SBODY_CENTRE_M_STATUS"
+msgstr "Σεντρ"
+
+msgid "IDS_VIDEO_SBODY_LARGE_M_STATUS"
+msgstr "Μεγάλο"
+
+msgid "IDS_VIDEO_SBODY_LEFT_M_STATUS"
+msgstr "Αριστερό"
+
+msgid "IDS_VIDEO_SBODY_MEDIUM_M_STATUS"
+msgstr "Μεσαίο"
+
+msgid "IDS_VIDEO_SBODY_RIGHT_M_STATUS"
+msgstr "Δεξιά"
+
+msgid "IDS_VIDEO_SBODY_SMALL_M_STATUS"
+msgstr "Μικρό"
+
+msgid "IDS_BR_SK_NEXT"
+msgstr "Επόμενο"
+
+msgid "IDS_BR_SK_PREVIOUS"
+msgstr "Προηγούμενο"
+
+msgid "IDS_VPL_POP_DRM_FILES_CANNOT_BE_SHARED"
+msgstr "Δεν είναι δυνατή η κοινή χρήση αρχείων DRM."
+
+msgid "IDS_VPL_OPT_FORMAT"
+msgstr "Μορφή"
+
+msgid "IDS_VPL_BODY_UNABLE_TO_PLAY_VIDEO_DURING_CALL"
+msgstr "Δεν είναι δυνατή η αναπαραγωγή βίντεο κατά την κλήση."
+
+msgid "IDS_VIDEO_OPT_MESSAGE_ABB"
+msgstr "Μήνυμα"
+
+msgid "IDS_VIDEO_OPT_FILE_TRANSFER_ABB"
+msgstr "Μεταφορά αρχείου"
+
+msgid "IDS_VIDEO_OPT_EMAIL_ABB"
+msgstr "Email"
+
+msgid "IDS_VIDEO_BODY_LONGITUDE"
+msgstr "Γεωγραφικό μήκος"
+
+msgid "IDS_VIDEO_BODY_LATITUDE"
+msgstr "Γεωγραφικό πλάτος"
+
+msgid "IDS_MUSIC_BUTTON_ENABLE_MOTION"
+msgstr "Ενερ. κίνησης"
+
+msgid "IDS_VPL_TPOP_SCRUBBING_AT_PSX_SPEED"
+msgstr "Ταχύτητα ρυθμού ολίσθησης %sx."
+
+msgid "IDS_VPL_TAB_EXTERNAL_STORAGE"
+msgstr "Εξωτ. χώρος αποθήκ."
+
+msgid "IDS_VPL_POP_VOLUME_M_SOUND"
+msgstr "Ένταση"
+
+msgid "IDS_VPL_POP_UNSUPPORTED_VIDEO_FORMAT"
+msgstr "Μη υποστηριζόμενη μορφή βίντεο."
+
+msgid "IDS_VPL_POP_UNSUPPORTED_FILE_TYPE"
+msgstr "Μη υποστηριζόμενος τύπος αρχείου."
+
+msgid "IDS_VPL_POP_UNSUPPORTED_AUDIO_FORMAT"
+msgstr "Μη υποστηριζόμενη μορφή ήχου."
+
+msgid "IDS_VPL_POP_UNABLE_TO_USE_FAST_FORWARD_AND_REWIND_WHEN_NEARBY_DEVICES_ARE_ENABLED"
+msgstr "Δεν είναι δυνατή η χρήση της γρήγορης προώθησης και επαναφοράς, όταν είναι ενεργοποιημένες κοντινές συσκευές."
+
+msgid "IDS_VPL_POP_UNABLE_TO_CAPTURE"
+msgstr "Δεν είναι δυνατή η λήψη."
+
+msgid "IDS_VPL_POP_ROTATE"
+msgstr "Περιστροφή"
+
+msgid "IDS_VPL_POP_PRESS_THE_BACK_KEY_AGAIN_TO_RETURN_TO_PREVIOUS_SCREEN"
+msgstr "Πατήστε το πλήκτρο επιστροφής ξανά για να επιστρέψετε στην προηγούμενη οθόνη."
+
+msgid "IDS_VPL_POP_NOT_ENOUGH_MEMORY_DELETE_SOME_ITEMS"
+msgstr "Δεν υπάρχει αρκετή μνήμη. Διαγράψτε ορισμένα στοιχεία"
+
+msgid "IDS_VPL_POP_BOOKMARK_LIST_FULL_DELETE_SOME_BOOKMARKS"
+msgstr "Η λίστα σελιδοδεικτών είναι πλήρης. Θέλετε να διαγράψετε μερικούς σελιδοδείκτες."
+
+msgid "IDS_VPL_OPT_YELLOW_M_COLOUR"
+msgstr "Κίτρινο"
+
+msgid "IDS_VPL_OPT_VIRTUAL_71_CH"
+msgstr "Εικονικό κανάλι 7.1"
+
+msgid "IDS_VPL_OPT_SUBTITLES_HCC_ABB"
+msgstr "Υπότιτλοι (CC)"
+
+msgid "IDS_VPL_OPT_SOUNDALIVE"
+msgstr "SoundAlive"
+
+msgid "IDS_VPL_OPT_REPEAT_MODE"
+msgstr "Λειτουργία επανάληψης"
+
+msgid "IDS_VPL_OPT_NO_REPEAT"
+msgstr "Χωρίς επανάληψη"
+
+msgid "IDS_VPL_OPT_MAGENTA_M_COLOUR"
+msgstr "Ματζέντα"
+
+msgid "IDS_VPL_OPT_GREEN"
+msgstr "Πράσινο"
+
+msgid "IDS_VPL_OPT_CYAN_M_COLOUR"
+msgstr "Γαλάζιο"
+
+msgid "IDS_VPL_OPT_CUSTOM"
+msgstr "Προσαρ."
+
+msgid "IDS_VPL_OPT_CURRENT_VIDEO_HONCE_ABB"
+msgstr "Τρεχ.βίντ.(μία φορά)"
+
+msgid "IDS_VPL_OPT_CONNECTION_INFO_ABB"
+msgstr "Πληροφορίες σύνδεσης"
+
+msgid "IDS_VPL_OPT_CHANGE_PLAYER"
+msgstr "Αλλαγή player"
+
+msgid "IDS_VPL_OPT_CAPTURE"
+msgstr "Λήψη"
+
+msgid "IDS_VPL_OPT_ALLSHARE"
+msgstr "AllShare"
+
+msgid "IDS_VPL_HEADER_SELECT_DEVICE_ABB"
+msgstr "Επιλογή συσκευής"
+
+msgid "IDS_VPL_HEADER_AVAILABLE_DEVICES_ABB"
+msgstr "Διαθέσιμες συσκευές"
+
+msgid "IDS_VPL_BUTTON_SPEAKER_ABB"
+msgstr "Ηχείο"
+
+msgid "IDS_VPL_BODY_WHITE"
+msgstr "Λευκό"
+
+msgid "IDS_VPL_BODY_UDRGOTHICM_M_FONT"
+msgstr "UDRGothicM"
+
+msgid "IDS_VPL_BODY_UDMINCHO_M_FONT"
+msgstr "UDMincho"
+
+msgid "IDS_VPL_BODY_ROSEMARY_M_FONT"
+msgstr "Rosemary"
+
+msgid "IDS_VPL_BODY_RED_ABB"
+msgstr "Κόκκινο"
+
+msgid "IDS_VPL_BODY_PS_SECONDS"
+msgstr "%s δευτερόλεπτα"
+
+msgid "IDS_VPL_BODY_POP_M_FONT"
+msgstr "POP"
+
+msgid "IDS_VPL_BODY_PLAY_SPEED"
+msgstr "Ταχύτητα αναπαραγωγής"
+
+msgid "IDS_VPL_BODY_PD_SECS"
+msgstr "%d δευτ."
+
+msgid "IDS_VPL_BODY_OFF"
+msgstr "Ανενεργό"
+
+msgid "IDS_VPL_BODY_NO_TITLE"
+msgstr "Χωρίς τίτλο"
+
+msgid "IDS_VPL_BODY_MY_DEVICE"
+msgstr "Η συσκευή μου"
+
+msgid "IDS_VPL_BODY_DEFAULT_FONT"
+msgstr "Προεπιλεγμένη γραμματοσειρά"
+
+msgid "IDS_VPL_BODY_COOL_JAZZ_M_FONT"
+msgstr "Cool jazz"
+
+msgid "IDS_VPL_BODY_CHOCO_COOKY_M_FONT"
+msgstr "Choco cooky"
+
+msgid "IDS_VPL_BODY_BLUE"
+msgstr "Μπλε"
+
+msgid "IDS_VPL_BODY_BLACK"
+msgstr "Mαύρο"
+
+msgid "IDS_VPL_BODY_ACTIVATION"
+msgstr "Ενεργοποίηση"
+
+msgid "IDS_SMEMO_POP_CLOSE_APPLICATION_Q"
+msgstr "Τερματισμός εφαρμογής;"
+
+msgid "IDS_VIDEO_SK_CANCEL_ABB"
+msgstr "Άκυρο"
+
+msgid "IDS_VIDEO_OPT_STOP_AFTER_ALL_ABB"
+msgstr "Όλα και μετά διακοπή"
+
+msgid "IDS_VIDEO_OPT_REPEAT_CURRENT_ABB"
+msgstr "Επανάληψη τρέχοντος"
+
+msgid "IDS_VIDEO_OPT_REPEAT_ALL_ABB"
+msgstr "Επανάληψη όλων"
+
+msgid "IDS_VIDEO_BODY_RESOLUTION"
+msgstr "Ανάλυση"
+
+msgid "IDS_VIDEO_BODY_PS_SOUND_EFFECTS_NOT_SUPPORTED_BY_SPEAKER"
+msgstr "Τα εφέ ήχου %s δεν υποστηρίζονται από το ηχείο."
+
+msgid "IDS_MUSIC_BODY_TURN_PHONE_OVER_TO_MUTE_INCOMING_CALLS_MESSAGE_ALERTS_AND_ALARMS"
+msgstr "Για την πραγματοποίηση σίγασης των εισερχόμενων κλήσεων, των ειδοποιήσεων μηνυμάτων και των αφυπνίσεων, γυρίστε ανάποδα το τηλέφωνο."
+
+msgid "IDS_ST_BODY_SD_CARD"
+msgstr "Κάρτα SD"
+
+msgid "IDS_VPL_TPOP_ONLY_AUDIO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_AUDIO"
+msgstr "Υποστηρίζονται μόνο δεδομένα ήχου από αυτό το αρχείο. Γίνεται αναπαραγωγή του ήχου."
+
+msgid "IDS_VPL_TPOP_ONLY_VIDEO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_VIDEO"
+msgstr "Υποστηρίζονται μόνο δεδομένα βίντεο από αυτό το αρχείο. Γίνεται αναπαραγωγή του βίντεο."
+
+msgid "IDS_ST_BODY_PRIVATE_STORAGE"
+msgstr "Απόρρητος χώρος αποθήκευσης"
+
+msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
+msgstr "Ακουστικά"
+
+msgid "IDS_MUSIC_OPT_SPEAKER"
+msgstr "Ηχείο"
+
+msgid "IDS_MUSIC_OPT_PAUSE"
+msgstr "Παύση"
+
+msgid "IDS_VIDEO_BUTTON_DOWNLOAD"
+msgstr "Λήψη"
+
+msgid "IDS_VIDEO_MBODY_SELECT_SUBTITLES_HCC"
+msgstr "Επιλογή υπότιτλων (CC)"
+
+msgid "IDS_VIDEO_NPBODY_PREVIEW_SUBTITLES_HCC_ABB"
+msgstr "Προεπισκόπηση υποτίτλων (CC)"
+
+msgid "IDS_VIDEO_OPT_REPEAT_MODE_ABB"
+msgstr "Λειτ. επανάληψης"
+
+msgid "IDS_VIDEO_POP_UNSUPPORTED_FILE_TYPE"
+msgstr "Μη υποστηριζόμενος τύπος αρχείου."
+
+msgid "IDS_VIDEO_OPT_NORMAL_M_SOUND_ABB"
+msgstr "Κανονικό"
+
+msgid "IDS_VIDEO_BODY_VOICE"
+msgstr "Φωνή"
+
+msgid "IDS_VIDEO_BODY_MOVIES"
+msgstr "Ταινίες"
+
+msgid "IDS_VIDEO_OPT_AUDIO_TRACK_ABB"
+msgstr "Ηχητικό κομμάτι"
+
+msgid "IDS_VIDEO_BODY_BUFFERING_ING_ABB"
+msgstr "Buffering..."
+
+msgid "IDS_VIDEO_BODY_FILE_FORMAT"
+msgstr "Μορφή αρχείου"
+
+msgid "IDS_VIDEO_BODY_LANGUAGE"
+msgstr "Γλώσσα"
+
+msgid "IDS_VIDEO_BODY_NO_VIDEOS"
+msgstr "Δεν βρέθηκαν βίντεο"
+
+msgid "IDS_VIDEO_BODY_SIZE"
+msgstr "Μέγεθος"
+
+msgid "IDS_VIDEO_BUTTON_DONE"
+msgstr "Τέλος"
+
+msgid "IDS_VIDEO_BUTTON_REFRESH"
+msgstr "Ανανέωση"
+
+msgid "IDS_VIDEO_HEADER_DATE"
+msgstr "Ημερομηνία"
+
+msgid "IDS_VIDEO_HEADER_LOADING_ING_ABB"
+msgstr "Φόρτωση..."
+
+msgid "IDS_VIDEO_HEADER_SUBTITLES_HCC_ABB2"
+msgstr "Υπότιτλοι (CC)"
+
+msgid "IDS_VIDEO_IOPT3_DELETE"
+msgstr "Διαγραφή"
+
+msgid "IDS_VIDEO_OPT_ADD_TO_HOME_SCREEN_ABB"
+msgstr "Προσθήκη στην αρχική οθόνη"
+
+msgid "IDS_VIDEO_OPT_FACEBOOK_ABB"
+msgstr "Facebook"
+
+msgid "IDS_VIDEO_OPT_HDMI"
+msgstr "HDMI"
+
+msgid "IDS_VIDEO_OPT_NAME"
+msgstr "Όνομα"
+
+msgid "IDS_VIDEO_OPT_SOUNDALIVE_ABB2"
+msgstr "SoundAlive"
+
+msgid "IDS_VIDEO_OPT_YOUTUBE_ABB"
+msgstr "YouTube"
+
+msgid "IDS_VIDEO_POP_UNABLE_TO_PLAY_VIDEO"
+msgstr "Δεν είναι δυνατή η αναπαραγωγή βίντεο."
+
+msgid "IDS_VIDEO_SBODY_NO_SUBTITLES_AVAILABLE_M_STATUS"
+msgstr "Δεν υπάρχουν διαθέσιμοι υπότιτλοι"
+
+msgid "IDS_VIDEO_SK3_PLAY"
+msgstr "Αναπαραγωγή"
+
+msgid "IDS_VIDEO_SK_CLOSE"
+msgstr "Κλείσιμο"
+
+msgid "IDS_VPL_POP_INVALID_URL"
+msgstr "Άκυρο URL."
+
+msgid "IDS_CHATON_HEADER_ERROR_ABB"
+msgstr "Σφάλμα"
+
+msgid "IDS_VIDEO_SBODY_DEVICE_STORAGE"
+msgstr "Χώρος αποθήκευσης συσκευής"
+
+msgid "IDS_COM_BODY_VIDEO_PLAYER_T_MAINMENU"
+msgstr "Αναπαραγ. Βίντεο"
+
+msgid "IDS_VIDEO_OPT_SHARE_VIA"
+msgstr "Κοινή χρήση μέσω"
+
+msgid "IDS_VIDEO_POP_A_NETWORK_ERROR_HAS_OCCURRED_TRY_AGAIN"
+msgstr "Προέκυψε σφάλμα δικτύου. Δοκιμάστε ξανά."
+
+msgid "IDS_VIDEO_TPOP_ONLY_AUDIO_DATA_SUPPORTED_BY_THIS_FILE_FORMAT_NOW_PLAYING_AUDIO"
+msgstr "Υποστηρίζονται μόνο δεδομένα ήχου από αυτήν τη μορφή αρχείου. Γίνεται αναπαραγωγή του ήχου."
+
+msgid "IDS_VIDEO_TPOP_ONLY_VIDEO_DATA_SUPPORTED_BY_THIS_FILE_FORMAT_NOW_PLAYING_VIDEO"
+msgstr "Υποστηρίζονται μόνο δεδομένα βίντεο από αυτήν τη μορφή αρχείου. Γίνεται αναπαραγωγή του βίντεο."
+
+msgid "IDS_VPL_BODY_CENTRE"
+msgstr "Κέντρο"
+
+msgid "IDS_VPL_BODY_ON"
+msgstr "Ενεργό"
+
+msgid "IDS_VPL_BODY_SETTINGS"
+msgstr "Ρυθμίσεις"
+
+msgid "IDS_VPL_BODY_VIDEOS_T_MAINMENU"
+msgstr "Βίντεο"
+
+msgid "IDS_VPL_BUTTON_SHARE"
+msgstr "Κοιν.χρ"
+
+msgid "IDS_VPL_HEADER_DETAILS"
+msgstr "Λεπτομέρειες"
+
+msgid "IDS_VPL_OPT_DELETE"
+msgstr "Διαγραφή"
+
+msgid "IDS_VPL_POP_BUFFERING_PDP"
+msgstr "Προσωρινή αποθήκευση - %d%"
+
+msgid "IDS_VIDEO_OPT_NONE"
+msgstr "Κανένα"
+
+msgid "IDS_VIDEO_BODY_PD_SECS_ABB3"
+msgstr "%d δευτ."
+
+msgid "IDS_MUSIC_HEADER_SOUNDALIVE_ABB3"
+msgstr "SoundAlive"
+
+msgid "IDS_MP_HEADER_SELECT_AUDIO_DEVICE"
+msgstr "Επιλογή συσκευής ήχου"
+
+msgid "IDS_MUSIC_OPT_DELETE"
+msgstr "Διαγραφή"
+
+msgid "IDS_CLOCK_BUTTON_CANCEL"
+msgstr "Ακύρωση"
+
+msgid "IDS_VIDEO_POP_AN_UNKNOWN_ERROR_HAS_OCCURRED_OR_THE_FILE_MAY_BE_CORRUPT"
+msgstr "Προέκυψε άγνωστο σφάλμα ή το αρχείο μπορεί να είναι κατεστραμμένο."
+
+msgid "IDS_VIDEO_POP_THIS_FILE_TYPE_IS_NOT_SUPPORTED"
+msgstr "Αυτός ο τύπος αρχείου δεν υποστηρίζεται."
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "ΤΕΛΟΣ"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "ΑΚΥΡΟ"
+
+msgid "IDS_TPLATFORM_MBODY_STORAGE_LOCATION"
+msgstr "Θέση αποθήκευσης"
+
+msgid "IDS_GP_BODY_SUBTITLES_HCC"
+msgstr "Υπότιτλοι (CC)"
+
+msgid "IDS_GALLERY_BODY_PERSONAL_STORAGE"
+msgstr "Προσωπικός χώρος αποθήκευσης"
+
+msgid "IDS_ACCS_BODY_CAPTIONS_WILL_LOOK_LIKE_THIS"
+msgstr "Οι λεζάντες θα έχουν την εξής μορφή"
+

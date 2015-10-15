@@ -1,0 +1,489 @@
+msgid "IDS_VIDEO_OPT_BRIGHTNESS"
+msgstr "Brillantor"
+
+msgid "IDS_VIDEO_OPT_MUSIC_M_SOUNDALIVE"
+msgstr "Música"
+
+msgid "IDS_VIDEO_OPT_VOICES_M_PERSON"
+msgstr "Veus"
+
+msgid "IDS_VIDEO_BODY_B"
+msgstr "B"
+
+msgid "IDS_VIDEO_BODY_GB"
+msgstr "GB"
+
+msgid "IDS_VIDEO_BODY_KB"
+msgstr "KB"
+
+msgid "IDS_VIDEO_BODY_LOCATION"
+msgstr "Ubicació"
+
+msgid "IDS_VIDEO_BODY_MB"
+msgstr "MB"
+
+msgid "IDS_VIDEO_BUTTON_OK"
+msgstr "Acceptar"
+
+msgid "IDS_VIDEO_HEADER_LAST_MODIFIED_M_DATE"
+msgstr "Última modificació"
+
+msgid "IDS_VIDEO_OPT_SHARE"
+msgstr "Compartir"
+
+msgid "IDS_VIDEO_HEADER_CANNOT_PLAY_VIDEO_ABB"
+msgstr "No es pot reproduir vídeo"
+
+msgid "IDS_VIDEO_POP_AN_ERROR_OCCURRED_WITH_THE_SUBTITLES"
+msgstr "S'ha produït un error amb els subtítols."
+
+msgid "IDS_VIDEO_POP_THE_FILE_IS_CORRUPTED_OR_THE_SD_CARD_HAS_BEEN_REMOVED"
+msgstr "El fitxer està malmès o s'ha tret la targeta SD."
+
+msgid "IDS_VIDEO_OPT_DETAILS"
+msgstr "Detalls"
+
+msgid "IDS_VIDEO_OPT_TITLE"
+msgstr "Títol"
+
+msgid "IDS_VIDEO_POP_THIS_VIDEO_WILL_BE_DELETED"
+msgstr "S'esborrarà aquest vídeo"
+
+msgid "IDS_VIDEO_HEADER_SETTINGS"
+msgstr "Ajustaments"
+
+msgid "IDS_VIDEO_HEADER_UNABLE_TO_PLAY_VIDEO_ABB"
+msgstr "No es pot reproduir el vídeo"
+
+msgid "IDS_VIDEO_MBODY_ALIGNMENT"
+msgstr "Alineació"
+
+msgid "IDS_VIDEO_MBODY_FONT_SIZE"
+msgstr "Mida font"
+
+msgid "IDS_VIDEO_OPT_REPEAT_SETTING_ABB"
+msgstr "Repetir ajustament"
+
+msgid "IDS_VIDEO_OPT_SUBTITLES_HCC_ABB"
+msgstr "Subtítols"
+
+msgid "IDS_VIDEO_SBODY_CENTRE_M_STATUS"
+msgstr "Centre"
+
+msgid "IDS_VIDEO_SBODY_LARGE_M_STATUS"
+msgstr "Gran"
+
+msgid "IDS_VIDEO_SBODY_LEFT_M_STATUS"
+msgstr "Esquerra"
+
+msgid "IDS_VIDEO_SBODY_MEDIUM_M_STATUS"
+msgstr "Mitjana"
+
+msgid "IDS_VIDEO_SBODY_RIGHT_M_STATUS"
+msgstr "Dreta"
+
+msgid "IDS_VIDEO_SBODY_SMALL_M_STATUS"
+msgstr "Petita"
+
+msgid "IDS_BR_SK_NEXT"
+msgstr "Següent"
+
+msgid "IDS_BR_SK_PREVIOUS"
+msgstr "Anterior"
+
+msgid "IDS_VPL_POP_DRM_FILES_CANNOT_BE_SHARED"
+msgstr "Els fitxers DRM no es poden compartir."
+
+msgid "IDS_VPL_OPT_FORMAT"
+msgstr "Format"
+
+msgid "IDS_VPL_BODY_UNABLE_TO_PLAY_VIDEO_DURING_CALL"
+msgstr "No es pot reproduir un vídeo durant una trucada"
+
+msgid "IDS_VIDEO_OPT_MESSAGE_ABB"
+msgstr "Missatge"
+
+msgid "IDS_VIDEO_OPT_FILE_TRANSFER_ABB"
+msgstr "Transfer fitxers"
+
+msgid "IDS_VIDEO_OPT_EMAIL_ABB"
+msgstr "Correu elec"
+
+msgid "IDS_VIDEO_BODY_LONGITUDE"
+msgstr "Longitud"
+
+msgid "IDS_VIDEO_BODY_LATITUDE"
+msgstr "Latitud"
+
+msgid "IDS_MUSIC_BUTTON_ENABLE_MOTION"
+msgstr "Habilitar mov"
+
+msgid "IDS_VPL_TPOP_SCRUBBING_AT_PSX_SPEED"
+msgstr "Desplaçament a una velocitat de %sx."
+
+msgid "IDS_VPL_TAB_EXTERNAL_STORAGE"
+msgstr "Emmagatzematge extern"
+
+msgid "IDS_VPL_POP_VOLUME_M_SOUND"
+msgstr "Volum"
+
+msgid "IDS_VPL_POP_UNSUPPORTED_VIDEO_FORMAT"
+msgstr "Format de vídeo no compatible"
+
+msgid "IDS_VPL_POP_UNSUPPORTED_FILE_TYPE"
+msgstr "No s'admet el tipus de fitxer"
+
+msgid "IDS_VPL_POP_UNSUPPORTED_AUDIO_FORMAT"
+msgstr "Format d'àudio no compatible"
+
+msgid "IDS_VPL_POP_UNABLE_TO_USE_FAST_FORWARD_AND_REWIND_WHEN_NEARBY_DEVICES_ARE_ENABLED"
+msgstr "No es pot utilitzar avançament ràpid i rebobinar quan s'han habilitat dispositius propers"
+
+msgid "IDS_VPL_POP_UNABLE_TO_CAPTURE"
+msgstr "No es pot capturar"
+
+msgid "IDS_VPL_POP_ROTATE"
+msgstr "Girar"
+
+msgid "IDS_VPL_POP_PRESS_THE_BACK_KEY_AGAIN_TO_RETURN_TO_PREVIOUS_SCREEN"
+msgstr "Torni a prémer la tecla de retorn per a tornar a la pàgina anterior"
+
+msgid "IDS_VPL_POP_NOT_ENOUGH_MEMORY_DELETE_SOME_ITEMS"
+msgstr "No hi ha prou memòria. Esborrar-ne alguns elements."
+
+msgid "IDS_VPL_POP_BOOKMARK_LIST_FULL_DELETE_SOME_BOOKMARKS"
+msgstr "Llista de preferits plena. Esborrar alguns preferits."
+
+msgid "IDS_VPL_OPT_YELLOW_M_COLOUR"
+msgstr "Groc"
+
+msgid "IDS_VPL_OPT_VIRTUAL_71_CH"
+msgstr "7.1 canals virtuals"
+
+msgid "IDS_VPL_OPT_SUBTITLES_HCC_ABB"
+msgstr "Subtítols"
+
+msgid "IDS_VPL_OPT_SOUNDALIVE"
+msgstr "SoundAlive"
+
+msgid "IDS_VPL_OPT_REPEAT_MODE"
+msgstr "Mode repetició"
+
+msgid "IDS_VPL_OPT_NO_REPEAT"
+msgstr "No repetir"
+
+msgid "IDS_VPL_OPT_MAGENTA_M_COLOUR"
+msgstr "Magenta"
+
+msgid "IDS_VPL_OPT_GREEN"
+msgstr "Verd"
+
+msgid "IDS_VPL_OPT_CYAN_M_COLOUR"
+msgstr "Cian"
+
+msgid "IDS_VPL_OPT_CUSTOM"
+msgstr "Personalitzar"
+
+msgid "IDS_VPL_OPT_CURRENT_VIDEO_HONCE_ABB"
+msgstr "Víd actual (un cop)"
+
+msgid "IDS_VPL_OPT_CONNECTION_INFO_ABB"
+msgstr "Info de connexió"
+
+msgid "IDS_VPL_OPT_CHANGE_PLAYER"
+msgstr "Canviar reprod"
+
+msgid "IDS_VPL_OPT_CAPTURE"
+msgstr "Captura"
+
+msgid "IDS_VPL_OPT_ALLSHARE"
+msgstr "AllShare"
+
+msgid "IDS_VPL_HEADER_SELECT_DEVICE_ABB"
+msgstr "Seleccionar dispositiu"
+
+msgid "IDS_VPL_HEADER_AVAILABLE_DEVICES_ABB"
+msgstr "Dispositius dispon"
+
+msgid "IDS_VPL_BUTTON_SPEAKER_ABB"
+msgstr "Altaveu"
+
+msgid "IDS_VPL_BODY_WHITE"
+msgstr "Blanc"
+
+msgid "IDS_VPL_BODY_UDRGOTHICM_M_FONT"
+msgstr "UDRGothicM"
+
+msgid "IDS_VPL_BODY_UDMINCHO_M_FONT"
+msgstr "UDMincho"
+
+msgid "IDS_VPL_BODY_ROSEMARY_M_FONT"
+msgstr "Rosemary"
+
+msgid "IDS_VPL_BODY_RED_ABB"
+msgstr "Vermell"
+
+msgid "IDS_VPL_BODY_PS_SECONDS"
+msgstr "%s segons"
+
+msgid "IDS_VPL_BODY_POP_M_FONT"
+msgstr "POP"
+
+msgid "IDS_VPL_BODY_PLAY_SPEED"
+msgstr "Velocitat de reproducció"
+
+msgid "IDS_VPL_BODY_PD_SECS"
+msgstr "%d s"
+
+msgid "IDS_VPL_BODY_OFF"
+msgstr "Desactivat"
+
+msgid "IDS_VPL_BODY_NO_TITLE"
+msgstr "Sense títol"
+
+msgid "IDS_VPL_BODY_MY_DEVICE"
+msgstr "El meu dispositiu"
+
+msgid "IDS_VPL_BODY_DEFAULT_FONT"
+msgstr "Font predeterminada"
+
+msgid "IDS_VPL_BODY_COOL_JAZZ_M_FONT"
+msgstr "Cool jazz"
+
+msgid "IDS_VPL_BODY_CHOCO_COOKY_M_FONT"
+msgstr "Choco cooky"
+
+msgid "IDS_VPL_BODY_BLUE"
+msgstr "Blau"
+
+msgid "IDS_VPL_BODY_BLACK"
+msgstr "Negre"
+
+msgid "IDS_VPL_BODY_ACTIVATION"
+msgstr "Activació"
+
+msgid "IDS_SMEMO_POP_CLOSE_APPLICATION_Q"
+msgstr "Tancar aplicació?"
+
+msgid "IDS_VIDEO_SK_CANCEL_ABB"
+msgstr "Canc"
+
+msgid "IDS_VIDEO_OPT_STOP_AFTER_ALL_ABB"
+msgstr "Aturar després tot"
+
+msgid "IDS_VIDEO_OPT_REPEAT_CURRENT_ABB"
+msgstr "Repetir actual"
+
+msgid "IDS_VIDEO_OPT_REPEAT_ALL_ABB"
+msgstr "Repetir tot"
+
+msgid "IDS_VIDEO_BODY_RESOLUTION"
+msgstr "Resolució"
+
+msgid "IDS_VIDEO_BODY_PS_SOUND_EFFECTS_NOT_SUPPORTED_BY_SPEAKER"
+msgstr "Els efectes de so de %s no són compatibles amb l'altaveu"
+
+msgid "IDS_MUSIC_BODY_TURN_PHONE_OVER_TO_MUTE_INCOMING_CALLS_MESSAGE_ALERTS_AND_ALARMS"
+msgstr "Giri el telèfon per silenciar trucades d'entrada, avisos de missatges i alarmes"
+
+msgid "IDS_ST_BODY_SD_CARD"
+msgstr "Targ SD"
+
+msgid "IDS_VPL_TPOP_ONLY_AUDIO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_AUDIO"
+msgstr "Aquest fitxer només admet dades d'àudio. Ara està reproduint àudio."
+
+msgid "IDS_VPL_TPOP_ONLY_VIDEO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_VIDEO"
+msgstr "Aquest fitxer només admet dades de vídeo. Ara està reproduint vídeo."
+
+msgid "IDS_ST_BODY_PRIVATE_STORAGE"
+msgstr "Emmagatzematge privat"
+
+msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
+msgstr "Auriculars"
+
+msgid "IDS_MUSIC_OPT_SPEAKER"
+msgstr "Altaveu"
+
+msgid "IDS_MUSIC_OPT_PAUSE"
+msgstr "Pausa"
+
+msgid "IDS_VIDEO_BUTTON_DOWNLOAD"
+msgstr "Descarregar"
+
+msgid "IDS_VIDEO_MBODY_SELECT_SUBTITLES_HCC"
+msgstr "Selec subtítols (CC)"
+
+msgid "IDS_VIDEO_NPBODY_PREVIEW_SUBTITLES_HCC_ABB"
+msgstr "Previsualitzar subtítols (CC)"
+
+msgid "IDS_VIDEO_OPT_REPEAT_MODE_ABB"
+msgstr "Mode Repetició"
+
+msgid "IDS_VIDEO_POP_UNSUPPORTED_FILE_TYPE"
+msgstr "No s'admet el tipus de fitxer"
+
+msgid "IDS_VIDEO_OPT_NORMAL_M_SOUND_ABB"
+msgstr "Normal"
+
+msgid "IDS_VIDEO_BODY_VOICE"
+msgstr "Veu"
+
+msgid "IDS_VIDEO_BODY_MOVIES"
+msgstr "Pel·lícules"
+
+msgid "IDS_VIDEO_OPT_AUDIO_TRACK_ABB"
+msgstr "Pista d'àudio"
+
+msgid "IDS_VIDEO_BODY_BUFFERING_ING_ABB"
+msgstr "Em mem int..."
+
+msgid "IDS_VIDEO_BODY_FILE_FORMAT"
+msgstr "Format del fitxer"
+
+msgid "IDS_VIDEO_BODY_LANGUAGE"
+msgstr "Idioma"
+
+msgid "IDS_VIDEO_BODY_NO_VIDEOS"
+msgstr "Cap vídeo"
+
+msgid "IDS_VIDEO_BODY_SIZE"
+msgstr "Mida"
+
+msgid "IDS_VIDEO_BUTTON_DONE"
+msgstr "Fet"
+
+msgid "IDS_VIDEO_BUTTON_REFRESH"
+msgstr "Actualitzar"
+
+msgid "IDS_VIDEO_HEADER_DATE"
+msgstr "Data"
+
+msgid "IDS_VIDEO_HEADER_LOADING_ING_ABB"
+msgstr "Carregant..."
+
+msgid "IDS_VIDEO_HEADER_SUBTITLES_HCC_ABB2"
+msgstr "Subtítols (CC)"
+
+msgid "IDS_VIDEO_IOPT3_DELETE"
+msgstr "Esborrar"
+
+msgid "IDS_VIDEO_OPT_ADD_TO_HOME_SCREEN_ABB"
+msgstr "Afegir a pantalla d'inici"
+
+msgid "IDS_VIDEO_OPT_FACEBOOK_ABB"
+msgstr "Facebook"
+
+msgid "IDS_VIDEO_OPT_HDMI"
+msgstr "HDMI"
+
+msgid "IDS_VIDEO_OPT_NAME"
+msgstr "Nom"
+
+msgid "IDS_VIDEO_OPT_SOUNDALIVE_ABB2"
+msgstr "SoundAlive"
+
+msgid "IDS_VIDEO_OPT_YOUTUBE_ABB"
+msgstr "YouTube"
+
+msgid "IDS_VIDEO_POP_UNABLE_TO_PLAY_VIDEO"
+msgstr "No es pot reproduir el vídeo"
+
+msgid "IDS_VIDEO_SBODY_NO_SUBTITLES_AVAILABLE_M_STATUS"
+msgstr "No hi ha subtítols disponibles"
+
+msgid "IDS_VIDEO_SK3_PLAY"
+msgstr "Reproduir"
+
+msgid "IDS_VIDEO_SK_CLOSE"
+msgstr "Tancar"
+
+msgid "IDS_VPL_POP_INVALID_URL"
+msgstr "URL no vàlida"
+
+msgid "IDS_CHATON_HEADER_ERROR_ABB"
+msgstr "Error"
+
+msgid "IDS_VIDEO_SBODY_DEVICE_STORAGE"
+msgstr "Emmagatzematge de dispositiu"
+
+msgid "IDS_COM_BODY_VIDEO_PLAYER_T_MAINMENU"
+msgstr "Reproductor de vídeo"
+
+msgid "IDS_VIDEO_OPT_SHARE_VIA"
+msgstr "Compartir mitjançant"
+
+msgid "IDS_VIDEO_POP_A_NETWORK_ERROR_HAS_OCCURRED_TRY_AGAIN"
+msgstr "S'ha produït un error de xarxa. Torni a intentar-ho."
+
+msgid "IDS_VIDEO_TPOP_ONLY_AUDIO_DATA_SUPPORTED_BY_THIS_FILE_FORMAT_NOW_PLAYING_AUDIO"
+msgstr "Aquest format de fitxer només admet dades d'àudio. Ara està reproduint àudio."
+
+msgid "IDS_VIDEO_TPOP_ONLY_VIDEO_DATA_SUPPORTED_BY_THIS_FILE_FORMAT_NOW_PLAYING_VIDEO"
+msgstr "Aquest format de fitxer només admet dades de vídeo. Ara està reproduint vídeo."
+
+msgid "IDS_VPL_BODY_CENTRE"
+msgstr "Centre"
+
+msgid "IDS_VPL_BODY_ON"
+msgstr "Activat"
+
+msgid "IDS_VPL_BODY_SETTINGS"
+msgstr "Ajustaments"
+
+msgid "IDS_VPL_BODY_VIDEOS_T_MAINMENU"
+msgstr "Vídeos"
+
+msgid "IDS_VPL_BUTTON_SHARE"
+msgstr "Compart"
+
+msgid "IDS_VPL_HEADER_DETAILS"
+msgstr "Detalls"
+
+msgid "IDS_VPL_OPT_DELETE"
+msgstr "Esborrar"
+
+msgid "IDS_VPL_POP_BUFFERING_PDP"
+msgstr "Emmagatzemant a memòria interna: %d%"
+
+msgid "IDS_VIDEO_OPT_NONE"
+msgstr "Cap"
+
+msgid "IDS_VIDEO_BODY_PD_SECS_ABB3"
+msgstr "%d s"
+
+msgid "IDS_MUSIC_HEADER_SOUNDALIVE_ABB3"
+msgstr "SoundAlive"
+
+msgid "IDS_MP_HEADER_SELECT_AUDIO_DEVICE"
+msgstr "Seleccionar dispositiu d'àudio"
+
+msgid "IDS_MUSIC_OPT_DELETE"
+msgstr "Esborrar"
+
+msgid "IDS_CLOCK_BUTTON_CANCEL"
+msgstr "Cancel"
+
+msgid "IDS_VIDEO_POP_AN_UNKNOWN_ERROR_HAS_OCCURRED_OR_THE_FILE_MAY_BE_CORRUPT"
+msgstr "S'ha produït un error desconegut o el fitxer pot estar malmès."
+
+msgid "IDS_VIDEO_POP_THIS_FILE_TYPE_IS_NOT_SUPPORTED"
+msgstr "El tipus de fitxer no és compatible."
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "REALITZAT"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "CANCEL·LAR"
+
+msgid "IDS_TPLATFORM_MBODY_STORAGE_LOCATION"
+msgstr "Ubicació d'emmagatzematge"
+
+msgid "IDS_GP_BODY_SUBTITLES_HCC"
+msgstr "Subtítols (CC)"
+
+msgid "IDS_GALLERY_BODY_PERSONAL_STORAGE"
+msgstr "Emmagatzematge personal"
+
+msgid "IDS_ACCS_BODY_CAPTIONS_WILL_LOOK_LIKE_THIS"
+msgstr "Les anotacions es veuran així"
+

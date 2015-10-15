@@ -1,0 +1,390 @@
+msgid "IDS_VIDEO_OPT_DOWNLOAD"
+msgstr "Download"
+
+msgid "IDS_VIDEO_POP_1_FOLDER_WILL_BE_DOWNLOADED"
+msgstr "1 folder will be downloaded."
+
+msgid "IDS_VIDEO_POP_1_VIDEO_WILL_BE_DOWNLOADED"
+msgstr "1 video will be downloaded."
+
+msgid "IDS_VIDEO_POP_ALL_FOLDERS_WILL_BE_DOWNLOADED"
+msgstr "All folders will be downloaded."
+
+msgid "IDS_VIDEO_POP_ALL_VIDEOS_WILL_BE_DOWNLOADED"
+msgstr "All videos will be downloaded."
+
+msgid "IDS_VIDEO_POP_PD_FOLDERS_WILL_BE_DOWNLOADED"
+msgstr "%d folders will be downloaded."
+
+msgid "IDS_VIDEO_POP_PD_VIDEOS_WILL_BE_DOWNLOADED"
+msgstr "%d videos will be downloaded."
+
+msgid "IDS_VIDEO_TPOP_MOBILE_DATA_TURNED_OFF_CONNECT_TO_WI_FI_NETWORK_INSTEAD_OR_TURN_ON_MOBILE_DATA_AND_TRY_AGAIN"
+msgstr "Mobile data off. Connect to Wi-Fi network instead, or turn on Mobile data and try again."
+
+msgid "IDS_GALLERY_OPT_PRIVATE_M_CONTENT"
+msgstr "Private"
+
+msgid "IDS_VIDEO_BODY_B"
+msgstr "B"
+
+msgid "IDS_VIDEO_BODY_GB"
+msgstr "GB"
+
+msgid "IDS_VIDEO_BODY_KB"
+msgstr "KB"
+
+msgid "IDS_VIDEO_BODY_LOCATION"
+msgstr "Location"
+
+msgid "IDS_VIDEO_BODY_MB"
+msgstr "MB"
+
+msgid "IDS_VIDEO_BODY_UNKNOWN"
+msgstr "Unknown"
+
+msgid "IDS_VIDEO_BUTTON_OK"
+msgstr "OK"
+
+msgid "IDS_VIDEO_HEADER_1_FOLDER"
+msgstr "1 folder"
+
+msgid "IDS_VIDEO_HEADER_1_VIDEO"
+msgstr "1 video"
+
+msgid "IDS_VIDEO_HEADER_ALL"
+msgstr "All"
+
+msgid "IDS_VIDEO_HEADER_FROM_DEVICE"
+msgstr "From device"
+
+msgid "IDS_VIDEO_HEADER_FROM_DROPBOX"
+msgstr "From Dropbox"
+
+msgid "IDS_VIDEO_HEADER_LAST_MODIFIED_M_DATE"
+msgstr "Last modified"
+
+msgid "IDS_VIDEO_OPT_CONTENT_TO_DISPLAY"
+msgstr "Content to show"
+
+msgid "IDS_VIDEO_OPT_SEARCH"
+msgstr "Search"
+
+msgid "IDS_VIDEO_OPT_SHARE"
+msgstr "Share"
+
+msgid "IDS_VIDEO_POP_1_FOLDER_WILL_BE_DELETED"
+msgstr "1 folder will be deleted."
+
+msgid "IDS_VIDEO_TPOP_DELETING_ING"
+msgstr "Deleting..."
+
+msgid "IDS_VIDEO_BODY_AFTER_YOU_RECORD_VIDEOS_USING_THE_CAMERA_THEY_WILL_BE_SHOWN_HERE"
+msgstr "After you record videos using the camera, they will be shown here."
+
+msgid "IDS_VIDEO_HEADER_PD_VIDEOS"
+msgstr "%d videos"
+
+msgid "IDS_VIDEO_HEADER_VIDEO"
+msgstr "Video"
+
+msgid "IDS_VIDEO_NPBODY_NO_VIDEOS"
+msgstr "No videos"
+
+msgid "IDS_VIDEO_OPT_DETAILS"
+msgstr "Details"
+
+msgid "IDS_VIDEO_OPT_FOLDER"
+msgstr "Folder"
+
+msgid "IDS_VIDEO_OPT_LIST"
+msgstr "List"
+
+msgid "IDS_VIDEO_OPT_RECENTLY_ADDED_ABB"
+msgstr "Recently added"
+
+msgid "IDS_VIDEO_OPT_RECENTLY_VIEWED_ABB"
+msgstr "Recently viewed"
+
+msgid "IDS_VIDEO_OPT_RENAME"
+msgstr "Rename"
+
+msgid "IDS_VIDEO_OPT_SIZE"
+msgstr "Size"
+
+msgid "IDS_VIDEO_OPT_SORT_BY"
+msgstr "Sort by"
+
+msgid "IDS_VIDEO_OPT_TITLE"
+msgstr "Title"
+
+msgid "IDS_VIDEO_OPT_TYPE"
+msgstr "Type"
+
+msgid "IDS_VIDEO_OPT_VIEW_AS"
+msgstr "View as"
+
+msgid "IDS_VIDEO_POP_ALL_VIDEOS_WILL_BE_DELETED"
+msgstr "All videos will be deleted."
+
+msgid "IDS_VIDEO_POP_PD_FOLDERS_WILL_BE_DELETED"
+msgstr "%d folders will be deleted."
+
+msgid "IDS_VIDEO_POP_PD_VIDEOS_WILL_BE_DELETED"
+msgstr "%d videos will be deleted."
+
+msgid "IDS_VIDEO_POP_THIS_FOLDER_WILL_BE_DELETED"
+msgstr "This folder will be deleted."
+
+msgid "IDS_VIDEO_HEADER_PD_FOLDERS"
+msgstr "%d folders"
+
+msgid "IDS_VIDEO_HEADER_SETTINGS"
+msgstr "Settings"
+
+msgid "IDS_VIDEO_HEADER_UNABLE_TO_PLAY_VIDEO_ABB"
+msgstr "Unable to play video"
+
+msgid "IDS_VIDEO_MBODY_ALIGNMENT"
+msgstr "Alignment"
+
+msgid "IDS_VIDEO_MBODY_FONT_SIZE"
+msgstr "Font size"
+
+msgid "IDS_VIDEO_OPT_REPEAT_SETTING_ABB"
+msgstr "Repeat setting"
+
+msgid "IDS_VIDEO_OPT_SUBTITLES_HCC_ABB"
+msgstr "Subtitles (CC)"
+
+msgid "IDS_VIDEO_POP_ALL_FOLDERS_WILL_BE_DELETED"
+msgstr "All folders will be deleted."
+
+msgid "IDS_VIDEO_SBODY_CENTRE_M_STATUS"
+msgstr "Center"
+
+msgid "IDS_VIDEO_SBODY_LARGE_M_STATUS"
+msgstr "Large"
+
+msgid "IDS_VIDEO_SBODY_LEFT_M_STATUS"
+msgstr "Left"
+
+msgid "IDS_VIDEO_SBODY_MEDIUM_M_STATUS"
+msgstr "Medium"
+
+msgid "IDS_VIDEO_SBODY_RIGHT_M_STATUS"
+msgstr "Right"
+
+msgid "IDS_VIDEO_SBODY_SMALL_M_STATUS"
+msgstr "Small"
+
+msgid "IDS_VIDEO_TPOP_FILE_NAME_ALREADY_IN_USE"
+msgstr "File name already in use."
+
+msgid "IDS_GALLERY_OPT_REMOVE_FROM_PRIVATE"
+msgstr "Remove from Private"
+
+msgid "IDS_GALLERY_OPT_MOVE_TO_PRIVATE"
+msgstr "Move to Private"
+
+msgid "IDS_IV_POP_ENTRY_IS_EMPTY"
+msgstr "Entry is empty."
+
+msgid "IDS_VPL_OPT_FORMAT"
+msgstr "Format"
+
+msgid "IDS_VPL_BODY_UNABLE_TO_PLAY_VIDEO_DURING_CALL"
+msgstr "Unable to play video during call."
+
+msgid "IDS_CLOUD_BODY_DROPBOX_ABB"
+msgstr "Dropbox"
+
+msgid "IDS_VIDEO_POP_THIS_FILE_IS_UNAVAILABLE_WHILE_OFFLINE_CHECK_NETWORK_CONNECTION_AND_TRY_AGAIN"
+msgstr "This file is unavailable while offline. Check network connection and try again."
+
+msgid "IDS_VIDEO_POP_THE_SELECTED_ITEM_WILL_BE_MOVED_TO_PS"
+msgstr "The selected item will be moved to %s."
+
+msgid "IDS_VIDEO_POP_THE_SELECTED_ITEMS_WILL_BE_MOVED_TO_PS"
+msgstr "The selected items will be moved to %s."
+
+msgid "IDS_VIDEO_POP_REMOVING_ING"
+msgstr "Removing..."
+
+msgid "IDS_VIDEO_POP_MOVING_ING"
+msgstr "Moving..."
+
+msgid "IDS_VIDEO_POP_FAILED_TO_MOVE_TO_PERSONAL_STORAGE"
+msgstr "Failed to move to personal storage."
+
+msgid "IDS_VIDEO_POP_FAILED_TO_MOVE_TO_NORMAL_STORAGE"
+msgstr "Failed to move to normal storage."
+
+msgid "IDS_VIDEO_OPT_MESSAGE_ABB"
+msgstr "Message"
+
+msgid "IDS_VIDEO_OPT_FOLDERS_ABB"
+msgstr "Folders"
+
+msgid "IDS_VIDEO_OPT_EMAIL_ABB"
+msgstr "Email"
+
+msgid "IDS_VIDEO_OPT_DATE_HMOST_RECENT_ABB"
+msgstr "Date (most recent)"
+
+msgid "IDS_VIDEO_HEADER_PD_SELECTED"
+msgstr "%d selected"
+
+msgid "IDS_VIDEO_HEADER_DELETE_VIDEOS"
+msgstr "Delete videos"
+
+msgid "IDS_VIDEO_HEADER_DELETE_VIDEO"
+msgstr "Delete video"
+
+msgid "IDS_VIDEO_BUTTON_MOVE_ABB"
+msgstr "Move"
+
+msgid "IDS_VIDEO_BODY_LONGITUDE"
+msgstr "Longitude"
+
+msgid "IDS_VIDEO_BODY_LATITUDE"
+msgstr "Latitude"
+
+msgid "IDS_VIDEO_BODY_AFTER_YOU_RECORD_VIDEOS_USING_THE_CAMERA_VIDEOS_WILL_BE_SHOWN"
+msgstr "After you record videos using the camera, videos will be shown."
+
+msgid "IDS_VIDEO_SK_CANCEL_ABB"
+msgstr "Cancel"
+
+msgid "IDS_VIDEO_OPT_STOP_AFTER_ALL_ABB"
+msgstr "Stop after all"
+
+msgid "IDS_VIDEO_OPT_REPEAT_CURRENT_ABB"
+msgstr "Repeat current"
+
+msgid "IDS_VIDEO_OPT_REPEAT_ALL_ABB"
+msgstr "Repeat all"
+
+msgid "IDS_VIDEO_BODY_RESOLUTION"
+msgstr "Resolution"
+
+msgid "IDS_VIDEO_BUTTON_DELETE"
+msgstr "Delete"
+
+msgid "IDS_ST_OPT_DELETE_ALL"
+msgstr "Delete all"
+
+msgid "IDS_VPL_TPOP_ONLY_AUDIO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_AUDIO"
+msgstr "Only audio data supported by this file. Now playing audio."
+
+msgid "IDS_VPL_TPOP_ONLY_VIDEO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_VIDEO"
+msgstr "Only video data supported by this file. Now playing video."
+
+msgid "IDS_MUSIC_OPT_RENAME"
+msgstr "Rename"
+
+msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
+msgstr "Headphones"
+
+msgid "IDS_VIDEO_BUTTON_DOWNLOAD"
+msgstr "Download"
+
+msgid "IDS_TPLATFORM_BODY_OFF"
+msgstr "Off"
+
+msgid "IDS_TPLATFORM_BODY_ON"
+msgstr "On"
+
+msgid "IDS_VIDEO_POP_1_VIDEO_WILL_BE_DELETED"
+msgstr "1 video will be deleted."
+
+msgid "IDS_SWALL_HEADER_INVALID_CHARACTER"
+msgstr "Invalid character"
+
+msgid "IDS_VIDEO_BODY_NO_SEARCH_RESULTS"
+msgstr "No search results"
+
+msgid "IDS_GALLERY_HEADER_SELECT"
+msgstr "Select"
+
+msgid "IDS_VIDEO_BODY_LAST_MODIFIED_M_DATE_ABB"
+msgstr "Last modified"
+
+msgid "IDS_VIDEO_BUTTON_DONE"
+msgstr "Done"
+
+msgid "IDS_VIDEO_HEADER_DATE"
+msgstr "Date"
+
+msgid "IDS_VIDEO_HEADER_LATITUDE"
+msgstr "Latitude"
+
+msgid "IDS_VIDEO_OPT_NAME"
+msgstr "Name"
+
+msgid "IDS_VIDEO_OPT_NAME_HA_Z_ABB"
+msgstr "Name (A-Z)"
+
+msgid "IDS_VIDEO_OPT_VIDEOS"
+msgstr "Videos"
+
+msgid "IDS_VIDEO_TPOP_MAXIMUM_NUMBER_OF_ATTACHMENTS_HPD_EXCEEDED"
+msgstr "Maximum number of attachments (%d) exceeded."
+
+msgid "IDS_VIDEO_HEADER_SELECT_ALL"
+msgstr "Select all"
+
+msgid "IDS_VIDEO_SBODY_DEVICE_STORAGE"
+msgstr "Device storage"
+
+msgid "IDS_VIDEO_SBODY_SD_CARD"
+msgstr "SD card"
+
+msgid "IDS_VIDEO_OPT_SHARE_VIA"
+msgstr "Share via"
+
+msgid "IDS_VIDEO_POP_A_NETWORK_ERROR_HAS_OCCURRED_TRY_AGAIN"
+msgstr "A network error has occurred. Try again."
+
+msgid "IDS_VPL_OPT_AUTO_PLAY_NEXT_ABB"
+msgstr "Auto play next"
+
+msgid "IDS_VPL_POP_PROCESSING_ING"
+msgstr "Processing..."
+
+msgid "IDS_MEMO_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Maximum number of characters reached."
+
+msgid "IDS_MUSIC_OPT_DELETE"
+msgstr "Delete"
+
+msgid "IDS_MUSIC_OPT_DELETE_ALL"
+msgstr "Delete all"
+
+msgid "IDS_PB_BODY_NO_SEARCH_RESULT"
+msgstr "No search result"
+
+msgid "IDS_VIDEO_HEADER_SELECT_ITEM"
+msgstr "Select item"
+
+msgid "IDS_VIDEO_HEADER_SELECT_ITEMS"
+msgstr "Select items"
+
+msgid "IDS_CLOCK_BUTTON_CANCEL"
+msgstr "Cancel"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "DONE"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "CANCEL"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DELETE_ABB"
+msgstr "DELETE"
+
+msgid "IDS_TPLATFORM_MBODY_STORAGE_LOCATION"
+msgstr "Storage location"
+
+msgid "IDS_GALLERY_HEADER_SELECT_VIDEO"
+msgstr "Select video"
+

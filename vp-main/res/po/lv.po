@@ -1,0 +1,489 @@
+msgid "IDS_VIDEO_OPT_BRIGHTNESS"
+msgstr "Spilgtums"
+
+msgid "IDS_VIDEO_OPT_MUSIC_M_SOUNDALIVE"
+msgstr "Mūzika"
+
+msgid "IDS_VIDEO_OPT_VOICES_M_PERSON"
+msgstr "Balsis"
+
+msgid "IDS_VIDEO_BODY_B"
+msgstr "B"
+
+msgid "IDS_VIDEO_BODY_GB"
+msgstr "GB"
+
+msgid "IDS_VIDEO_BODY_KB"
+msgstr "KB"
+
+msgid "IDS_VIDEO_BODY_LOCATION"
+msgstr "Atrašanās vieta"
+
+msgid "IDS_VIDEO_BODY_MB"
+msgstr "MB"
+
+msgid "IDS_VIDEO_BUTTON_OK"
+msgstr "Labi"
+
+msgid "IDS_VIDEO_HEADER_LAST_MODIFIED_M_DATE"
+msgstr "Pēdējo reizi mainīts"
+
+msgid "IDS_VIDEO_OPT_SHARE"
+msgstr "Kopīgot"
+
+msgid "IDS_VIDEO_HEADER_CANNOT_PLAY_VIDEO_ABB"
+msgstr "Nevar demonstrēt videoklipu"
+
+msgid "IDS_VIDEO_POP_AN_ERROR_OCCURRED_WITH_THE_SUBTITLES"
+msgstr "Radās subtitru kļūda."
+
+msgid "IDS_VIDEO_POP_THE_FILE_IS_CORRUPTED_OR_THE_SD_CARD_HAS_BEEN_REMOVED"
+msgstr "Fails ir bojāts vai arī ir izņemta SD karte."
+
+msgid "IDS_VIDEO_OPT_DETAILS"
+msgstr "Dati"
+
+msgid "IDS_VIDEO_OPT_TITLE"
+msgstr "Nosaukums"
+
+msgid "IDS_VIDEO_POP_THIS_VIDEO_WILL_BE_DELETED"
+msgstr "Šis videoklips tiks izdzēsts."
+
+msgid "IDS_VIDEO_HEADER_SETTINGS"
+msgstr "Iestatījumi"
+
+msgid "IDS_VIDEO_HEADER_UNABLE_TO_PLAY_VIDEO_ABB"
+msgstr "Nevar demonstrēt video"
+
+msgid "IDS_VIDEO_MBODY_ALIGNMENT"
+msgstr "Līdzinājums"
+
+msgid "IDS_VIDEO_MBODY_FONT_SIZE"
+msgstr "Fonta lielums"
+
+msgid "IDS_VIDEO_OPT_REPEAT_SETTING_ABB"
+msgstr "Atkārtošanas iestatījums"
+
+msgid "IDS_VIDEO_OPT_SUBTITLES_HCC_ABB"
+msgstr "Subtitri (slēptie titri)"
+
+msgid "IDS_VIDEO_SBODY_CENTRE_M_STATUS"
+msgstr "Centrā"
+
+msgid "IDS_VIDEO_SBODY_LARGE_M_STATUS"
+msgstr "Liels"
+
+msgid "IDS_VIDEO_SBODY_LEFT_M_STATUS"
+msgstr "Pa kreisi"
+
+msgid "IDS_VIDEO_SBODY_MEDIUM_M_STATUS"
+msgstr "Vidējs"
+
+msgid "IDS_VIDEO_SBODY_RIGHT_M_STATUS"
+msgstr "Pa labi"
+
+msgid "IDS_VIDEO_SBODY_SMALL_M_STATUS"
+msgstr "Mazs"
+
+msgid "IDS_BR_SK_NEXT"
+msgstr "Nāk."
+
+msgid "IDS_BR_SK_PREVIOUS"
+msgstr "Iepriekš."
+
+msgid "IDS_VPL_POP_DRM_FILES_CANNOT_BE_SHARED"
+msgstr "DRM failus nevar kopīgot."
+
+msgid "IDS_VPL_OPT_FORMAT"
+msgstr "Formāts"
+
+msgid "IDS_VPL_BODY_UNABLE_TO_PLAY_VIDEO_DURING_CALL"
+msgstr "Sarunas laikā nevar demonstrēt video."
+
+msgid "IDS_VIDEO_OPT_MESSAGE_ABB"
+msgstr "Ziņa"
+
+msgid "IDS_VIDEO_OPT_FILE_TRANSFER_ABB"
+msgstr "Failu pārsūtīšana"
+
+msgid "IDS_VIDEO_OPT_EMAIL_ABB"
+msgstr "E-pasts"
+
+msgid "IDS_VIDEO_BODY_LONGITUDE"
+msgstr "Garums"
+
+msgid "IDS_VIDEO_BODY_LATITUDE"
+msgstr "Platums"
+
+msgid "IDS_MUSIC_BUTTON_ENABLE_MOTION"
+msgstr "Akt. kustību"
+
+msgid "IDS_VPL_TPOP_SCRUBBING_AT_PSX_SPEED"
+msgstr "Pārtīšanas ātrums: %sx."
+
+msgid "IDS_VPL_TAB_EXTERNAL_STORAGE"
+msgstr "Ārējā krātuve"
+
+msgid "IDS_VPL_POP_VOLUME_M_SOUND"
+msgstr "Skaļums"
+
+msgid "IDS_VPL_POP_UNSUPPORTED_VIDEO_FORMAT"
+msgstr "Neatbalstīts videoklipa formāts."
+
+msgid "IDS_VPL_POP_UNSUPPORTED_FILE_TYPE"
+msgstr "Neatbalstīts faila veids."
+
+msgid "IDS_VPL_POP_UNSUPPORTED_AUDIO_FORMAT"
+msgstr "Neatbalstīts audio formāts."
+
+msgid "IDS_VPL_POP_UNABLE_TO_USE_FAST_FORWARD_AND_REWIND_WHEN_NEARBY_DEVICES_ARE_ENABLED"
+msgstr "Nevar izmantot tīšanu uz priekšu un atpakaļ, ja ir aktivizētas tuvumā esošās ierīces."
+
+msgid "IDS_VPL_POP_UNABLE_TO_CAPTURE"
+msgstr "Nevar uzņemt."
+
+msgid "IDS_VPL_POP_ROTATE"
+msgstr "Pagriezt"
+
+msgid "IDS_VPL_POP_PRESS_THE_BACK_KEY_AGAIN_TO_RETURN_TO_PREVIOUS_SCREEN"
+msgstr "Nospiediet vēlreiz taustiņu Atpakaļ, lai atgrieztos iepriekšējā ekrānā."
+
+msgid "IDS_VPL_POP_NOT_ENOUGH_MEMORY_DELETE_SOME_ITEMS"
+msgstr "Nepietiek atmiņas. Izdzēsiet dažus vienumus"
+
+msgid "IDS_VPL_POP_BOOKMARK_LIST_FULL_DELETE_SOME_BOOKMARKS"
+msgstr "Grāmatzīmju saraksts ir pilns.\nIzdzēsiet daļu grāmatzīmju."
+
+msgid "IDS_VPL_OPT_YELLOW_M_COLOUR"
+msgstr "Dzeltens"
+
+msgid "IDS_VPL_OPT_VIRTUAL_71_CH"
+msgstr "Virtuālais 7.1 kan."
+
+msgid "IDS_VPL_OPT_SUBTITLES_HCC_ABB"
+msgstr "Subtitri (slēptie titri)"
+
+msgid "IDS_VPL_OPT_SOUNDALIVE"
+msgstr "SoundAlive"
+
+msgid "IDS_VPL_OPT_REPEAT_MODE"
+msgstr "Atkārtošanas režīms"
+
+msgid "IDS_VPL_OPT_NO_REPEAT"
+msgstr "Neatkārtot"
+
+msgid "IDS_VPL_OPT_MAGENTA_M_COLOUR"
+msgstr "Fuksīna krāsā"
+
+msgid "IDS_VPL_OPT_GREEN"
+msgstr "Zaļš"
+
+msgid "IDS_VPL_OPT_CYAN_M_COLOUR"
+msgstr "Zilganzaļš"
+
+msgid "IDS_VPL_OPT_CUSTOM"
+msgstr "Pielāgota"
+
+msgid "IDS_VPL_OPT_CURRENT_VIDEO_HONCE_ABB"
+msgstr "Pašr. video (vienr.)"
+
+msgid "IDS_VPL_OPT_CONNECTION_INFO_ABB"
+msgstr "Savienojuma dati"
+
+msgid "IDS_VPL_OPT_CHANGE_PLAYER"
+msgstr "Mainīt spēlētāju"
+
+msgid "IDS_VPL_OPT_CAPTURE"
+msgstr "Tvert"
+
+msgid "IDS_VPL_OPT_ALLSHARE"
+msgstr "AllShare"
+
+msgid "IDS_VPL_HEADER_SELECT_DEVICE_ABB"
+msgstr "Izvēlieties ierīci"
+
+msgid "IDS_VPL_HEADER_AVAILABLE_DEVICES_ABB"
+msgstr "Pieejamās ierīces"
+
+msgid "IDS_VPL_BUTTON_SPEAKER_ABB"
+msgstr "Skaļrunis"
+
+msgid "IDS_VPL_BODY_WHITE"
+msgstr "Balts"
+
+msgid "IDS_VPL_BODY_UDRGOTHICM_M_FONT"
+msgstr "UDRGothicM"
+
+msgid "IDS_VPL_BODY_UDMINCHO_M_FONT"
+msgstr "UDMincho"
+
+msgid "IDS_VPL_BODY_ROSEMARY_M_FONT"
+msgstr "Rosemary"
+
+msgid "IDS_VPL_BODY_RED_ABB"
+msgstr "Sarkani"
+
+msgid "IDS_VPL_BODY_PS_SECONDS"
+msgstr "%s sekundes"
+
+msgid "IDS_VPL_BODY_POP_M_FONT"
+msgstr "POP"
+
+msgid "IDS_VPL_BODY_PLAY_SPEED"
+msgstr "Demonstrēšanas ātrums"
+
+msgid "IDS_VPL_BODY_PD_SECS"
+msgstr "%d sek."
+
+msgid "IDS_VPL_BODY_OFF"
+msgstr "Izslēgts"
+
+msgid "IDS_VPL_BODY_NO_TITLE"
+msgstr "Nav nosaukuma"
+
+msgid "IDS_VPL_BODY_MY_DEVICE"
+msgstr "Mana ierīce"
+
+msgid "IDS_VPL_BODY_DEFAULT_FONT"
+msgstr "Noklusējuma fonts"
+
+msgid "IDS_VPL_BODY_COOL_JAZZ_M_FONT"
+msgstr "Cool jazz"
+
+msgid "IDS_VPL_BODY_CHOCO_COOKY_M_FONT"
+msgstr "Choco cooky"
+
+msgid "IDS_VPL_BODY_BLUE"
+msgstr "Zils"
+
+msgid "IDS_VPL_BODY_BLACK"
+msgstr "Melni"
+
+msgid "IDS_VPL_BODY_ACTIVATION"
+msgstr "Aktivizēšana"
+
+msgid "IDS_SMEMO_POP_CLOSE_APPLICATION_Q"
+msgstr "Vai aizvērt programmu?"
+
+msgid "IDS_VIDEO_SK_CANCEL_ABB"
+msgstr "Atcelt"
+
+msgid "IDS_VIDEO_OPT_STOP_AFTER_ALL_ABB"
+msgstr "Pārtraukt"
+
+msgid "IDS_VIDEO_OPT_REPEAT_CURRENT_ABB"
+msgstr "Atkārtot pašreizējo"
+
+msgid "IDS_VIDEO_OPT_REPEAT_ALL_ABB"
+msgstr "Atkārtot visu"
+
+msgid "IDS_VIDEO_BODY_RESOLUTION"
+msgstr "Izšķirtspēja"
+
+msgid "IDS_VIDEO_BODY_PS_SOUND_EFFECTS_NOT_SUPPORTED_BY_SPEAKER"
+msgstr "Skaļrunis nenodrošina %s skaņas efektus."
+
+msgid "IDS_MUSIC_BODY_TURN_PHONE_OVER_TO_MUTE_INCOMING_CALLS_MESSAGE_ALERTS_AND_ALARMS"
+msgstr "Apvērsiet tālruni, lai izslēgtu ienākošos zvanus, ziņu signālu un modinātāja skaņu."
+
+msgid "IDS_ST_BODY_SD_CARD"
+msgstr "SD karte"
+
+msgid "IDS_VPL_TPOP_ONLY_AUDIO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_AUDIO"
+msgstr "Šis fails atbalsta tikai audio datus. Tagad atskaņo audio."
+
+msgid "IDS_VPL_TPOP_ONLY_VIDEO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_VIDEO"
+msgstr "Šis fails atbalsta tikai video datus. Tagad demonstrē video."
+
+msgid "IDS_ST_BODY_PRIVATE_STORAGE"
+msgstr "Privātā krātuve"
+
+msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
+msgstr "Austiņas"
+
+msgid "IDS_MUSIC_OPT_SPEAKER"
+msgstr "Skaļrunis"
+
+msgid "IDS_MUSIC_OPT_PAUSE"
+msgstr "Pauze"
+
+msgid "IDS_VIDEO_BUTTON_DOWNLOAD"
+msgstr "Lejupielādēt"
+
+msgid "IDS_VIDEO_MBODY_SELECT_SUBTITLES_HCC"
+msgstr "Izvēlēties subtitrus (CC)"
+
+msgid "IDS_VIDEO_NPBODY_PREVIEW_SUBTITLES_HCC_ABB"
+msgstr "Priekšskatīt subtitrus (CC)"
+
+msgid "IDS_VIDEO_OPT_REPEAT_MODE_ABB"
+msgstr "Atkārtošanas režīms"
+
+msgid "IDS_VIDEO_POP_UNSUPPORTED_FILE_TYPE"
+msgstr "Neatbalstīts faila veids."
+
+msgid "IDS_VIDEO_OPT_NORMAL_M_SOUND_ABB"
+msgstr "Parasta"
+
+msgid "IDS_VIDEO_BODY_VOICE"
+msgstr "Balss"
+
+msgid "IDS_VIDEO_BODY_MOVIES"
+msgstr "Filmas"
+
+msgid "IDS_VIDEO_OPT_AUDIO_TRACK_ABB"
+msgstr "Audio ieraksts"
+
+msgid "IDS_VIDEO_BODY_BUFFERING_ING_ABB"
+msgstr "Buferizācija"
+
+msgid "IDS_VIDEO_BODY_FILE_FORMAT"
+msgstr "Faila formāts"
+
+msgid "IDS_VIDEO_BODY_LANGUAGE"
+msgstr "Valoda"
+
+msgid "IDS_VIDEO_BODY_NO_VIDEOS"
+msgstr "Nav videoklipu"
+
+msgid "IDS_VIDEO_BODY_SIZE"
+msgstr "Lielums"
+
+msgid "IDS_VIDEO_BUTTON_DONE"
+msgstr "Gatavs"
+
+msgid "IDS_VIDEO_BUTTON_REFRESH"
+msgstr "Atsvaidzināt"
+
+msgid "IDS_VIDEO_HEADER_DATE"
+msgstr "Datums"
+
+msgid "IDS_VIDEO_HEADER_LOADING_ING_ABB"
+msgstr "Ielādē..."
+
+msgid "IDS_VIDEO_HEADER_SUBTITLES_HCC_ABB2"
+msgstr "Subtitri (CC)"
+
+msgid "IDS_VIDEO_IOPT3_DELETE"
+msgstr "Dzēst"
+
+msgid "IDS_VIDEO_OPT_ADD_TO_HOME_SCREEN_ABB"
+msgstr "Pievienot sākuma ekrānam"
+
+msgid "IDS_VIDEO_OPT_FACEBOOK_ABB"
+msgstr "Facebook"
+
+msgid "IDS_VIDEO_OPT_HDMI"
+msgstr "HDMI"
+
+msgid "IDS_VIDEO_OPT_NAME"
+msgstr "Vārds"
+
+msgid "IDS_VIDEO_OPT_SOUNDALIVE_ABB2"
+msgstr "SoundAlive"
+
+msgid "IDS_VIDEO_OPT_YOUTUBE_ABB"
+msgstr "YouTube"
+
+msgid "IDS_VIDEO_POP_UNABLE_TO_PLAY_VIDEO"
+msgstr "Nevar demonstrēt video."
+
+msgid "IDS_VIDEO_SBODY_NO_SUBTITLES_AVAILABLE_M_STATUS"
+msgstr "Subtitri nav pieejami"
+
+msgid "IDS_VIDEO_SK3_PLAY"
+msgstr "Atskaņot"
+
+msgid "IDS_VIDEO_SK_CLOSE"
+msgstr "Aizvērt"
+
+msgid "IDS_VPL_POP_INVALID_URL"
+msgstr "Nederīgs URL."
+
+msgid "IDS_CHATON_HEADER_ERROR_ABB"
+msgstr "Kļūda"
+
+msgid "IDS_VIDEO_SBODY_DEVICE_STORAGE"
+msgstr "Ierīces krātuve"
+
+msgid "IDS_COM_BODY_VIDEO_PLAYER_T_MAINMENU"
+msgstr "Video Atskaņotājs"
+
+msgid "IDS_VIDEO_OPT_SHARE_VIA"
+msgstr "Kopīgot, izmantojot"
+
+msgid "IDS_VIDEO_POP_A_NETWORK_ERROR_HAS_OCCURRED_TRY_AGAIN"
+msgstr "Radās tīkla kļūda. Mēģiniet vēlreiz."
+
+msgid "IDS_VIDEO_TPOP_ONLY_AUDIO_DATA_SUPPORTED_BY_THIS_FILE_FORMAT_NOW_PLAYING_AUDIO"
+msgstr "Šis faila formāts atbalsta tikai audio datus. Tagad atskaņo audio."
+
+msgid "IDS_VIDEO_TPOP_ONLY_VIDEO_DATA_SUPPORTED_BY_THIS_FILE_FORMAT_NOW_PLAYING_VIDEO"
+msgstr "Šis faila formāts atbalsta tikai video datus. Šobrīd tiek demonstrēts videoklips."
+
+msgid "IDS_VPL_BODY_CENTRE"
+msgstr "Centrā"
+
+msgid "IDS_VPL_BODY_ON"
+msgstr "Ieslēgts"
+
+msgid "IDS_VPL_BODY_SETTINGS"
+msgstr "Iestatījumi"
+
+msgid "IDS_VPL_BODY_VIDEOS_T_MAINMENU"
+msgstr "Videoklipi"
+
+msgid "IDS_VPL_BUTTON_SHARE"
+msgstr "Kopl."
+
+msgid "IDS_VPL_HEADER_DETAILS"
+msgstr "Dati"
+
+msgid "IDS_VPL_OPT_DELETE"
+msgstr "Dzēst"
+
+msgid "IDS_VPL_POP_BUFFERING_PDP"
+msgstr "Buferizācija - %d%"
+
+msgid "IDS_VIDEO_OPT_NONE"
+msgstr "Nav"
+
+msgid "IDS_VIDEO_BODY_PD_SECS_ABB3"
+msgstr "%d sek."
+
+msgid "IDS_MUSIC_HEADER_SOUNDALIVE_ABB3"
+msgstr "SoundAlive"
+
+msgid "IDS_MP_HEADER_SELECT_AUDIO_DEVICE"
+msgstr "Izvēlēties audio ierīci"
+
+msgid "IDS_MUSIC_OPT_DELETE"
+msgstr "Dzēst"
+
+msgid "IDS_CLOCK_BUTTON_CANCEL"
+msgstr "Atcelt"
+
+msgid "IDS_VIDEO_POP_AN_UNKNOWN_ERROR_HAS_OCCURRED_OR_THE_FILE_MAY_BE_CORRUPT"
+msgstr "Radās nezināma kļūda vai fails, iespējams, ir bojāts."
+
+msgid "IDS_VIDEO_POP_THIS_FILE_TYPE_IS_NOT_SUPPORTED"
+msgstr "Šis faila veids netiek atbalstīts."
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "GATAVS"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "ATCELT"
+
+msgid "IDS_TPLATFORM_MBODY_STORAGE_LOCATION"
+msgstr "Krātuves atrašanās vieta"
+
+msgid "IDS_GP_BODY_SUBTITLES_HCC"
+msgstr "Subtitri (pēc pieprasījuma)"
+
+msgid "IDS_GALLERY_BODY_PERSONAL_STORAGE"
+msgstr "Personiskā krātuve"
+
+msgid "IDS_ACCS_BODY_CAPTIONS_WILL_LOOK_LIKE_THIS"
+msgstr "Titri izskatīsies šādi"
+

@@ -1,0 +1,2840 @@
+/*
+* Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+
+
+#define NAVIFRAME_TITLE_BG_COLOR_INC 				0 0 0 0
+#define NAVIFRAME_TOOLBAR_BG_COLOR_INC 			0 0 0 0
+#define NAVIFRAME_TITLE_TOP_PADDING_INC 				0 16
+#define NAVIFRAME_TITLE_H_INC 						50
+#define NAVIFRAME_TOOLBAR_HEIGHT_INC 				0
+#define NAVIFRAME_TITLE_FUNC_BTN_SIZE_INC 			63 63
+
+#define NAVIFRAME_PADDING_INC 						20 0
+#define NAVIFRAME_PADDING2_INC 						26 0
+#define NAVIFRAME_PADDING3_INC 						8 0
+
+#define NAVIFRAME_BOTTOM_TEXT_PADDING_INC 			0 11
+#define NAVIFRAME_BOTTOM_RIGHT_PADDING_INC 		26 11
+#define NAVIFRAME_BOTTOM_PADDING_INC 				0 10
+
+#define NAVIFRAME_VIEW_TRANS_TIME 					0.3
+
+#define NAVIFRAME_TOP_LINE_COLOR					0 0 0 0
+
+//tag buddy
+#define NAVIFRAME_TAG_TOP_PADDING					116
+#define NAVIFRAME_TAG_RIGHT_PADDING					26
+#define NAVIFRAME_TAG_LEFT_PADDING					26
+#define NAVIFRAME_TAG_HEIGHT						192
+
+
+group {
+	name:"elm/naviframe/item/playview/basic/default";
+	alias:"elm/naviframe/item/playview/1line/default";
+	script  {
+		public tbar_bg = 0;					//Toolbar BG Show call count
+		public buttons_visible = 0;			//when both buttons are visible
+		public toolbar_buttons_visible = 0; 	//when both toolbar buttons are visible
+	}
+	parts {
+		part {
+			name: "base";
+			type: RECT;
+			mouse_events:  0;
+			description {
+				state: "default" 0.0;
+				visible: 0;
+			}
+			description {
+				state: "left" 0.0;
+				inherit: "default" 0.0;
+				rel1.relative: -1.0 0.0;
+				rel2.relative: 0.0 1.0;
+			}
+			description {
+				state: "right" 0.0;
+				inherit: "default" 0.0;
+				rel1.relative: 1.0 0.0;
+				rel2.relative: 2.0 1.0;
+			}
+		}
+
+		part {
+			name: "title_swallow";
+			type: RECT;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				min: 0 0;
+				align: 0.0 1.0;
+				fixed: 0 1;
+				visible: 1;
+				rel1 { relative: 0.0 0.0; to: "base"; }
+				rel2 { relative: 1.0 0.0; to: "base"; }
+				color: NAVIFRAME_TITLE_BG_COLOR_INC;
+			}
+			description {
+				state: "hide" 0.0;
+				inherit: "default" 0.0;
+				min: 0 NAVIFRAME_TITLE_H_INC;
+				fixed: 0 1;
+				rel1 { relative: 0.0 0.0; to: "base"; }
+				rel2 { relative: 1.0 0.0; to: "base"; }
+			}
+		}
+
+		part {
+			name: "title_bg";
+			type: RECT;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				min: 0 NAVIFRAME_TITLE_H_INC;
+				align: 0.0 0.0;
+				fixed: 0 1;
+				visible: 1;
+				rel1 { relative: 0.0 0.0; to: "title_swallow"; }
+				rel2 { relative: 1.0 0.0; to: "title_swallow"; }
+				color: NAVIFRAME_TITLE_BG_COLOR_INC;
+			}
+/*
+			description {
+				state: "hide" 0.0;
+				inherit: "default" 0.0;
+				min: 0 0;
+				fixed: 0 1;
+				rel1 { relative: 0.0 0.0; to: "base"; }
+				rel2 { relative: 1.0 0.0; to: "base"; }
+			}
+*/
+		}
+		part {
+			name: "title_line";
+			type: RECT;
+			mouse_events: 0;
+			description {
+				state: "default" 0.0;
+				min: 0 2;
+				align: 0.0 0.0;
+				fixed: 0 1;
+				visible: 1;
+				rel1 { relative: 0.0 0.0; to: "title_swallow"; }
+				rel2 { relative: 1.0 0.0; to: "title_swallow"; }
+				color: NAVIFRAME_TOP_LINE_COLOR;
+			}
+/*
+			description {
+				state: "hide" 0.0;
+				inherit: "default" 0.0;
+				min: 0 0;
+			}
+*/
+		}
+		part {
+			name: "title_clip";
+			type: RECT;
+			mouse_events: 0;
+			description {
+				state: "default" 0.0;
+				rel1 { to: "title_bg"; }
+				rel2 { to: "title_bg"; }
+			}
+		}
+		part {
+			name: "top_padding";
+			type: RECT;
+			mouse_events: 0;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				min: NAVIFRAME_TITLE_TOP_PADDING_INC;
+				fixed: 0 1;
+				align: 0.0 0.0;
+				rel1 { relative: 0.0 0.0; to: "title_bg"; }
+				rel2 { relative: 1.0 0.0; to: "title_bg"; }
+				visible: 0;
+			}
+		}/*
+		part {
+			name: "padding_center_text1";
+			type: RECT;
+			scale: 1;
+			mouse_events: 0;
+			description {
+				state: "default" 0.0;
+				min: NAVIFRAME_PADDING_INC;
+				visible: 0;
+				fixed: 1 0;
+				align: 0.0 0.0;
+				rel1 { relative: 1.0 0.0; to: "title_left_btn"; }
+				rel2 { relative: 1.0 1.0; to: "title_left_btn"; }
+			}
+		}*/
+		part {
+			name: "padding_center_text1";
+			type: RECT;
+			mouse_events: 0;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				min: 45 0;
+				fixed: 1 0;
+				align: 0.0 0.5;
+				rel1 { relative: 0.0 0.0; to: "title_bg"; }
+				rel2 { relative: 0.0 1.0; to: "title_bg"; }
+				visible: 0;
+			}
+		}
+
+		part {
+			name: "elm.swallow.content";
+			type: SWALLOW;
+			scale: 1;
+			repeat_events: 0;
+			clip_to: "content_clip";
+			description {
+				state: "default" 0.0;
+				align: 0.0 0.0;
+				// _NATIVE_BUFFER_SYNC
+				rel1 { relative: 0.0 0.0; to: "base"; }
+				rel2 { relative: 1.0 1.0; to: "base"; }
+				/*
+				rel1.relative: 0.0 1.0;
+				rel1.to_x: "base";
+				rel1.to_y: "title_bg";
+				rel2.relative: 1.0 0.0;
+				rel2.to_x: "base";
+				rel2.to_y: "toolbar_bg";
+				*/
+			}
+			description {
+				state: "sip_visible" 0.0;
+				inherit: "default" 0.0;
+				rel2.relative: 1.0 1.0;
+				rel2.to: "base";
+			}
+		}
+		part {
+			name: "content_clip";
+			type: RECT;
+			mouse_events: 0;
+			description {
+				state: "default" 0.0;
+				rel1.to: "elm.swallow.content";
+				rel2.to: "elm.swallow.content";
+			}
+		}
+		part {
+			name: "padding_center_text2";
+			type: RECT;
+			mouse_events: 0;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				min: 45 0;
+				fixed: 1 0;
+				align: 1.0 0.5;
+				rel1 { relative: 1.0 0.0; to: "title_bg"; }
+				rel2 { relative: 1.0 1.0; to: "title_bg"; }
+				visible: 0;
+			}
+		}
+		part {
+			name: "padding_bottom_text";
+			type: RECT;
+			mouse_events: 0;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				min: NAVIFRAME_BOTTOM_TEXT_PADDING_INC;
+				fixed: 0 1;
+				align: 0.0 1.0;
+				rel1 { relative: 0.0 1.0; to: "title_bg"; }
+				rel2 { relative: 1.0 1.0; to: "title_bg"; }
+				visible: 0;
+			}
+		}
+		part {
+			name: "elm.text.title";
+			type: TEXT;
+			effect: FAR_SHADOW BOTTOM;
+			scale: 1;
+			repeat_events: 1;
+			clip_to: "title_clip";
+			description {
+				state: "default" 0.0;
+				text {
+					min: 0 0;
+					max: 1 0;
+					size: 18;
+				}
+/*	chageable GUI
+				color: VIDEO_TITLE_FONT_DEFAULT_COLOR;
+				color3: 0 0 0 255;
+				align: 0.5 0.5;
+*/
+				color: 240 240 240 255;
+
+				fixed: 1 1;
+				rel1 { relative: 1.0 1.0; to_x: "padding_center_text1"; to_y: "top_padding"; }
+				rel2 { relative: 0.0 0.0; to_x: "padding_center_text2"; to_y: "padding_bottom_text"; }
+			}
+		}
+		part {
+			name: "access.title";
+			type: RECT;
+			repeat_events: 1;
+			description {
+				state: "default" 0.0;
+				fixed: 1 1;
+				rel1.to: "title_bg";
+				rel2.to: "title_bg";
+				color: 0 0 0 0;
+			}
+		}
+
+		part {
+			name: "padding_before_text";
+			type: RECT;
+			scale: 1;
+			mouse_events: 0;
+			description {
+				state: "default" 0.0;
+				align: 1.0 0.5;
+				rel1 { relative: 0.0 0.0; to: "elm.text.title"; }
+				rel2 { relative: 0.0 1.0; to: "elm.text.title"; }
+				fixed: 1 0;
+				min: NAVIFRAME_PADDING_INC;
+				visible: 0;
+			}
+		}
+
+		part {
+			name: "click_event_area";
+			type: RECT;
+			ignore_flags: ON_HOLD;
+			repeat_events: 1;
+			description {
+				state: "default" 0.0;
+				rel1 { to: "title_bg"; }
+				rel2 { to: "title_bg"; }
+				visible: 0;
+			}
+		}
+
+		part {
+			name: "title_btns_padding";
+			type: RECT;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				min: NAVIFRAME_PADDING2_INC;
+				fixed: 1 1;
+				align: 0.0 0.5;
+				visible: 0;
+				rel1 { relative: 0.0 0.0; to: "title_bg"; }
+				rel2 { relative: 0.0 1.0; to: "title_bg"; }
+			}
+		}
+
+		part {
+			name: "bottom_right_padding";
+			type: RECT;
+			mouse_events: 0;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				min: 0 0;
+				fixed: 1 1;
+				align: 1.0 1.0;
+				rel1 { relative: 1.0 1.0; to: "title_bg"; }
+				rel2 { relative: 1.0 1.0; to: "title_bg"; }
+				visible: 0;
+			}
+			description {
+				state: "visible" 0.0;
+				inherit: "default" 0.0;
+				min: NAVIFRAME_BOTTOM_RIGHT_PADDING_INC;
+			}
+		}
+
+		part {
+			name: "title_left_btn";
+			type: SWALLOW;
+			scale: 1;
+			clip_to: "title_clip";
+			description {
+				state: "default" 0.0;
+				max: NAVIFRAME_TITLE_FUNC_BTN_SIZE_INC;
+				fixed: 1 1;
+				align: 0.0 0.5;
+				rel1 { relative: 0.5 0.0; to: "title_btns_padding"; }
+				rel2 { relative: 0.5 1.0; to: "title_btns_padding"; }
+			}
+		}
+		part {
+			name: "title_right_btn";
+			type: SWALLOW;
+			scale: 1;
+			clip_to: "title_clip";
+			description {
+				state: "default" 0.0;
+				max: NAVIFRAME_TITLE_FUNC_BTN_SIZE_INC;
+				align: 1 0.5;
+				fixed: 1 1;
+				rel1 { relative: 1.0 1.0; to_x: "title_bg"; to_y: "top_padding"; }
+				rel2 { relative: 0.0 0.0; to: "bottom_right_padding"; }
+			}
+		}
+		part {
+			name: "toolbar_bg";
+			type: RECT;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				min: 0 0;
+				max: 999999 0;
+				fixed: 0 1;
+				align: 0.0 1.0;
+				visible: 0;
+				rel1 { to: "base"; }
+				rel2 { to: "base"; }
+				color: NAVIFRAME_TOOLBAR_BG_COLOR_INC;
+			}
+			description {
+				state: "visible" 0.0;
+				inherit: "default" 0.0;
+				min: 0 NAVIFRAME_TOOLBAR_HEIGHT_INC;
+				max: 999999 NAVIFRAME_TOOLBAR_HEIGHT_INC;
+				visible: 1;
+			}
+			description {
+				state: "sip_visible" 0.0;
+				inherit: "default" 0.0;
+				align: 0.0 0.0;
+				min: 1 NAVIFRAME_TITLE_H_INC;
+				rel1 { to: "title_bg"; }
+				rel2 { to: "title_bg"; }
+				visible: 1;
+			}
+		}
+		part {
+			name: "pv.tag.left.padding";
+			type: SPACER;
+			mouse_events: 0;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				min: NAVIFRAME_TAG_LEFT_PADDING 0;
+				fixed: 1 0;
+				align: 0.0 0.5;
+				rel1 { relative: 0.0 0.0;}
+				rel2 { relative: 0.0 1.0;}
+			}
+		}
+		part {
+			name: "pv.tag.right.padding";
+			type: SPACER;
+			mouse_events: 0;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				min: NAVIFRAME_TAG_RIGHT_PADDING 0;
+				fixed: 1 0;
+				align: 1.0 0.5;
+				rel1 { relative: 1.0 0.0;}
+				rel2 { relative: 1.0 1.0;}
+			}
+		}
+		part {
+			name: "pv.tag.top.padding";
+			type: SPACER;
+			mouse_events: 0;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				min: 0 NAVIFRAME_TAG_TOP_PADDING;
+				fixed: 0 1;
+				align: 0.5 0.0;
+				rel1 { relative: 1.0 0.0; to: "pv.tag.left.padding";}
+				rel2 { relative: 0.0 0.0; to: "pv.tag.right.padding";}
+			}
+		}
+		part {
+			name: "pv.tag.bg";
+			type: SWALLOW;
+			mouse_events: 1;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				visible: 1;
+				min: 0 NAVIFRAME_TAG_HEIGHT;
+				fixed: 0 1;
+				align: 0.5 0.0;
+				rel1 { relative: 0.0 1.0;  to:"pv.tag.top.padding";}
+				rel2 { relative: 1.0 1.0;  to:"pv.tag.top.padding";}
+				color: 90 46 7 255;
+			}
+			description {
+				state: "hide" 0.0;
+				inherit: "default" 0.0;
+				visible: 0;
+			}
+		}
+	}
+	programs {
+		program {
+			name: "content_new_pushed";
+			signal: "elm,state,new,pushed,internal";
+			source: "";
+			action: STATE_SET "default" 0.0;
+			target: "base";
+			transition: DECELERATE NAVIFRAME_VIEW_TRANS_TIME;
+			after: "show_finished";
+		}
+		program {
+			name: "content_cur_pushed";
+			signal: "elm,state,cur,pushed,internal";
+			source: "";
+			action: STATE_SET "left" 0.0;
+			target: "base";
+			transition: DECELERATE NAVIFRAME_VIEW_TRANS_TIME;
+			after: "pushed_finished";
+		}
+		program {
+			name: "content_prev_popped";
+			signal: "elm,state,prev,popped,internal";
+			source: "";
+			action: STATE_SET "default" 0.0;
+			target: "base";
+			transition: DECELERATE NAVIFRAME_VIEW_TRANS_TIME;
+			after: "show_finished";
+		}
+		program {
+			name: "content_cur_popped";
+			signal: "elm,state,cur,popped,internal";
+			source: "";
+			action: STATE_SET "right" 0.0;
+			target: "base";
+			transition: DECELERATE NAVIFRAME_VIEW_TRANS_TIME;
+			after: "popped_finished";
+		}
+		program {
+			name: "cur_pushed";
+			signal: "elm,state,cur,pushed";
+			source: "elm";
+			script {
+				set_state(PART:"base", "default", 0.0);
+				emit("elm,state,cur,pushed,internal", "");
+			}
+		}
+		program {
+			name: "new_pushed";
+			signal: "elm,state,new,pushed";
+			source: "elm";
+			script {
+				set_state(PART:"base", "right", 0.0);
+				emit("elm,state,new,pushed,internal", "");
+			}
+		}
+		program {
+			name: "prev_popped";
+			signal: "elm,state,prev,popped";
+			source: "elm";
+			script {
+				set_state(PART:"base", "left", 0.0);
+				emit("elm,state,prev,popped,internal", "");
+			}
+		}
+		program {
+			name: "cur_popped";
+			signal: "elm,state,cur,popped";
+			source: "elm";
+			script {
+				set_state(PART:"base", "default", 0.0);
+				emit("elm,state,cur,popped,internal", "");
+			}
+		}
+		program {
+			name: "visible";
+			signal: "elm,state,visible";
+			source: "elm";
+			action: STATE_SET "default" 0.0;
+			target: "base";
+		}
+		program {
+			name: "title_show";
+			signal: "elm,state,title,show";
+			source: "elm";
+			action: STATE_SET "default" 0.0;
+			target: "title_swallow";
+			transition: LINEAR 0.2;
+			after: "show_finished";
+		}
+		program {
+			name: "title_hide";
+			signal: "elm,state,title,hide";
+			source: "elm";
+			action: STATE_SET "hide" 0.0;
+			target: "title_swallow";
+			transition: LINEAR 0.2;
+			after: "hide_finished";
+		}
+		program {
+			name: "no_effect_title_hide";
+			signal: "elm,state,title,no,effect,hide";
+			source: "elm";
+			action: STATE_SET "hide" 0.0;
+			target: "title_swallow";
+			transition: LINEAR 0.0;
+			after: "hide_finished";
+		}
+		program {
+			name: "subtitle_show";
+			signal: "elm,state,subtitle,show";
+			source: "elm";
+			script {
+				set_state(PART:"elm.text.title", "subtitle_is_set", 0.0);
+			}
+		}
+		program {
+			name: "subtitle_hide";
+			signal: "elm,state,subtitle,hide";
+			source: "elm";
+			script {
+				set_state(PART:"elm.text.title", "default", 0.0);
+			}
+		}
+		program {
+			name: "prev_btn_show";
+			signal: "elm,state,prev_btn,show";
+			source: "elm";
+			script {
+				emit("elm,state,toolbar_bg,show", "elm");
+			}
+		}
+		program {
+			name: "prev_btn_hide";
+			signal: "elm,state,prev_btn,hide";
+			source: "elm";
+			script {
+				emit("elm,state,toolbar_bg,hide", "elm");
+			}
+		}
+		program {
+			name: "sip_show";
+			signal: "elm,state,sip,shown";
+			source: "";
+			script {
+				if (get_int(tbar_bg) <= 0)
+					set_state(PART:"toolbar_bg", "default", 0.0);
+				else
+				{
+					set_state(PART:"toolbar_bg", "sip_visible", 0.0);
+					set_state(PART:"elm.swallow.content", "sip_visible", 0.0);
+				}
+			}
+		}
+
+		program {
+			name: "sip_hide";
+			signal: "elm,state,sip,hidden";
+			source: "";
+			script {
+				if (get_int(tbar_bg) <= 0)
+					set_state(PART:"toolbar_bg", "default", 0.0);
+				else
+				{
+					set_state(PART:"toolbar_bg", "visible", 0.0);
+					set_state(PART:"elm.swallow.content", "default", 0.0);
+				}
+			}
+		}
+		program {
+			name: "left_btn_show";
+			signal: "elm,state,title_left_btn,show";
+			source: "elm";
+			script {
+				set_int(buttons_visible, get_int(buttons_visible) + 1);
+				set_state(PART:"bottom_right_padding", "visible", 0.0);
+			}
+		}
+		program {
+			name: "left_btn_hide";
+			signal: "elm,state,title_left_btn,hide";
+			source: "elm";
+			script {
+				set_int(buttons_visible, get_int(buttons_visible) - 1);
+				if (get_int(buttons_visible) == 0)
+					set_state(PART:"bottom_right_padding", "default", 0.0);
+			}
+		}
+		program {
+			name: "right_btn_show";
+			signal: "elm,state,title_right_btn,show";
+			source: "elm";
+			action: STATE_SET "visible" 0.0;
+			script {
+				set_int(buttons_visible, get_int(buttons_visible) + 1);
+				set_state(PART:"bottom_right_padding", "visible", 0.0);
+			}
+		}
+		program {
+			name: "right_btn_hide";
+			signal: "elm,state,title_right_btn,hide";
+			source: "elm";
+			action: STATE_SET "default" 0.0;
+			script {
+				set_int(buttons_visible, get_int(buttons_visible) - 1);
+				if (get_int(buttons_visible) == 0)
+					set_state(PART:"bottom_right_padding", "default", 0.0);
+			}
+		}
+
+		program {
+			name: "toolbar_bg_show";
+			signal: "elm,state,toolbar_bg,show";
+			source: "elm";
+			script {
+				set_state(PART:"toolbar_bg", "visible", 0.0);
+				set_int(tbar_bg, get_int(tbar_bg) + 1);
+			}
+		}
+		program {
+			name: "toolbar_bg_hide";
+			signal: "elm,state,toolbar_bg,hide";
+			source: "elm";
+			script {
+				set_int(tbar_bg, get_int(tbar_bg) - 1);
+				if (get_int(tbar_bg) <= 0)
+					set_state(PART:"toolbar_bg", "default", 0.0);
+			}
+		}
+		program {
+			name: "toolbar_open";
+			signal: "elm,state,toolbar,open";
+			source: "";
+			action: STATE_SET "visible" 0.0;
+			target: "toolbar_bg";
+			transition: LINEAR 0.2;
+		}
+		program {
+			name: "toolbar_close";
+			signal: "elm,state,toolbar,close";
+			source: "";
+			action: STATE_SET "default" 0.0;
+			target: "toolbar_bg";
+			transition: LINEAR 0.2;
+		}
+
+		program {
+			name: "show_finished";
+			action: SIGNAL_EMIT "elm,action,show,finished" "";
+		}
+		program {
+			name: "hide_finished";
+			action: SIGNAL_EMIT "elm,action,hide,finished" "";
+		}
+
+		program {
+			name: "pushed_finished";
+			action: SIGNAL_EMIT "elm,action,pushed,finished" "";
+		}
+		program {
+			name: "popped_finished";
+			action: SIGNAL_EMIT "elm,action,popped,finished" "";
+		}
+		program {
+			name: "title_clicked";
+			signal: "mouse,clicked,1";
+			source: "click_event_area";
+			action: SIGNAL_EMIT "elm,action,title,clicked" "";
+		}
+		program {
+			name: "display_mode_compress";
+			signal: "display,mode,compress";
+			source: "";
+			action: SIGNAL_EMIT "elm,state,toolbar,instant_close" "";
+		}
+		program {
+			name: "display_mode_default";
+			signal: "display,mode,default";
+			source: "";
+			action: SIGNAL_EMIT "elm,state,toolbar,instant_open" "";
+		}
+		program {
+			name: "pv.tag.bg.hide";
+			signal: "signal.pv.tag.bg.hide";
+			source: "*";
+			action: STATE_SET "hide" 0.0;
+			target: "pv.tag.bg";
+		}
+		program {
+			name: "pv.tag.bg.show";
+			signal: "signal.pv.tag.bg.show";
+			source: "*";
+			action: STATE_SET "default" 0.0;
+			target: "pv.tag.bg";
+		}
+	}
+}
+
+
+
+group {
+	name:"elm/naviframe/item/playview/multiwin/default";
+	script  {
+		public tbar_bg = 0;					//Toolbar BG Show call count
+		public buttons_visible = 0;			//when both buttons are visible
+		public toolbar_buttons_visible = 0; 	//when both toolbar buttons are visible
+	}
+	parts {
+		part {
+			name: "base";
+			type: RECT;
+			mouse_events:  0;
+			description {
+				state: "default" 0.0;
+				visible: 0;
+			}
+			description {
+				state: "left" 0.0;
+				inherit: "default" 0.0;
+				rel1.relative: -1.0 0.0;
+				rel2.relative: 0.0 1.0;
+			}
+			description {
+				state: "right" 0.0;
+				inherit: "default" 0.0;
+				rel1.relative: 1.0 0.0;
+				rel2.relative: 2.0 1.0;
+			}
+		}
+		part {
+			name: "title_bg";
+			type: RECT;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				min: 0 0;
+				align: 0.0 0.0;
+				fixed: 0 1;
+				visible: 1;
+				rel1 { relative: 0.0 0.0; to: "base"; }
+				rel2 { relative: 1.0 0.0; to: "base"; }
+				color: NAVIFRAME_TITLE_BG_COLOR_INC;
+			}
+			description {
+				state: "hide" 0.0;
+				inherit: "default" 0.0;
+				min: 0 0;
+				fixed: 0 1;
+				rel1 { relative: 0.0 0.0; to: "base"; }
+				rel2 { relative: 1.0 0.0; to: "base"; }
+			}
+		}
+		part {
+			name: "title_clip";
+			type: RECT;
+			mouse_events: 0;
+			description {
+				state: "default" 0.0;
+				rel1 { to: "title_bg"; }
+				rel2 { to: "title_bg"; }
+			}
+		}
+		part {
+			name: "top_padding";
+			type: RECT;
+			mouse_events: 0;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				min: 0 0;
+				fixed: 0 1;
+				align: 0.0 0.0;
+				rel1 { relative: 0.0 0.0; to: "title_bg"; }
+				rel2 { relative: 1.0 0.0; to: "title_bg"; }
+				visible: 0;
+			}
+		}
+		part {
+			name: "padding_center_text1";
+			type: RECT;
+			scale: 1;
+			mouse_events: 0;
+			description {
+				state: "default" 0.0;
+				min: 0 0;
+				fixed: 1 0;
+				align: 0.0 0.0;
+				rel1 { relative: 0.0 0.0; to: "title_bg"; }
+				rel2 { relative: 0.0 1.0; to: "title_bg"; }
+				visible: 0;
+			}
+		}
+
+		part {
+			name: "elm.swallow.content";
+			type: SWALLOW;
+			scale: 1;
+			repeat_events: 0;
+			clip_to: "content_clip";
+			description {
+				state: "default" 0.0;
+				align: 0.0 0.0;
+				rel1.relative: 0.0 1.0;
+				rel1.to_x: "base";
+				rel1.to_y: "title_bg";
+				rel2.relative: 1.0 0.0;
+				rel2.to_x: "base";
+				rel2.to_y: "toolbar_bg";
+			}
+			description {
+				state: "sip_visible" 0.0;
+				inherit: "default" 0.0;
+				rel2.relative: 1.0 1.0;
+				rel2.to: "base";
+			}
+		}
+		part {
+			name: "content_clip";
+			type: RECT;
+			mouse_events: 0;
+			description {
+				state: "default" 0.0;
+				rel1.to: "elm.swallow.content";
+				rel2.to: "elm.swallow.content";
+			}
+		}
+		part {
+			name: "padding_center_text2";
+			type: RECT;
+			mouse_events: 0;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				min: 0 0;
+				fixed: 1 0;
+				align: 1.0 0.5;
+				rel1 { relative: 0.0 0.0; to: "title_btns_padding_ext"; }
+				rel2 { relative: 0.0 1.0; to: "title_btns_padding_ext"; }
+				visible: 0;
+			}
+		}
+		part {
+			name: "padding_bottom_text";
+			type: RECT;
+			mouse_events: 0;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				min: 0 0;
+				fixed: 0 1;
+				align: 0.0 1.0;
+				rel1 { relative: 0.0 1.0; to: "title_bg"; }
+				rel2 { relative: 1.0 1.0; to: "title_bg"; }
+				visible: 0;
+			}
+		}
+		part {
+			name: "elm.text.title";
+			type: TEXT;
+			effect: FAR_SHADOW BOTTOM;
+			scale: 1;
+			repeat_events: 1;
+			clip_to: "title_clip";
+			description {
+				state: "default" 0.0;
+				text {
+					font: VIDEO_TITLE_FONT_STYLE;
+					size: VIDEO_TITLE_FONT_SIZE;
+					min: 0 0;
+					max: 1 0;
+					align: 0.0 0.5;
+				}
+				color: VIDEO_TITLE_FONT_DEFAULT_COLOR;
+				color3: 0 0 0 255;
+				align: 0.0 0.5;
+				fixed: 1 1;
+				rel1 { relative: 1.0 1.0; to_x: "padding_center_text1"; to_y: "top_padding"; }
+				rel2 { relative: 0.0 0.0; to_x: "padding_center_text2"; to_y: "padding_bottom_text"; }
+			}
+		}
+		part {
+			name: "access.title";
+			type: RECT;
+			repeat_events: 1;
+			description {
+				state: "default" 0.0;
+				fixed: 1 1;
+				rel1.to: "title_bg";
+				rel2.to: "title_bg";
+				color: 0 0 0 0;
+			}
+		}
+
+		part {
+			name: "padding_before_text";
+			type: RECT;
+			scale: 1;
+			mouse_events: 0;
+			description {
+				state: "default" 0.0;
+				align: 1.0 0.5;
+				rel1 { relative: 0.0 0.0; to: "elm.text.title"; }
+				rel2 { relative: 0.0 1.0; to: "elm.text.title"; }
+				fixed: 1 0;
+				min: 0 0;
+				visible: 0;
+			}
+		}
+
+		part {
+			name: "click_event_area";
+			type: RECT;
+			ignore_flags: ON_HOLD;
+			repeat_events: 1;
+			description {
+				state: "default" 0.0;
+				rel1 { to: "title_bg"; }
+				rel2 { to: "title_bg"; }
+				visible: 0;
+			}
+		}
+		part {
+			name: "title_left_btn_ext";
+			type: SWALLOW;
+			scale: 1;
+			clip_to: "title_clip";
+			description {
+				state: "default" 0.0;
+				max: 0 0;
+				fixed: 1 1;
+				align: 1 0.5;
+				rel1 { relative: 0.0 0.0; to: "title_btns_padding_ext"; }
+				rel2 { relative: 0.0 1.0; to: "title_btns_padding_ext"; }
+			}
+		}
+		part {
+			name: "title_btns_padding_ext";
+			type: RECT;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				min: 0 0;
+				fixed: 1 1;
+				align: 1 0.5;
+				visible: 0;
+				rel1 { relative: 0.0 0.0; to: "title_left_btn"; }
+				rel2 { relative: 0.0 1.0; to: "title_left_btn"; }
+			}
+			description {
+				state: "visible" 0.0;
+				inherit: "default" 0.0;
+				min: 0 0;
+			}
+		}
+		part {
+			name: "title_left_btn";
+			type: SWALLOW;
+			scale: 1;
+			clip_to: "title_clip";
+			description {
+				state: "default" 0.0;
+				max: 0 0;
+				fixed: 1 1;
+				align: 1 0.5;
+				rel1 { relative: 0.0 0.0; to: "title_btns_padding"; }
+				rel2 { relative: 0.0 1.0; to: "title_btns_padding"; }
+			}
+		}
+		part {
+			name: "title_btns_padding";
+			type: RECT;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				min: 0 0;
+				fixed: 1 1;
+				align: 1 0.5;
+				visible: 0;
+				rel1 { relative: 0.0 0.0; to: "title_right_btn"; }
+				rel2 { relative: 0.0 1.0; to: "title_right_btn"; }
+			}
+			description {
+				state: "visible" 0.0;
+				inherit: "default" 0.0;
+				min: 0 0;
+			}
+		}
+		part {
+			name: "bottom_right_padding";
+			type: RECT;
+			mouse_events: 0;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				min: 0 0;
+				fixed: 1 1;
+				align: 1.0 1.0;
+				rel1 { relative: 1.0 1.0; to: "title_bg"; }
+				rel2 { relative: 1.0 1.0; to: "title_bg"; }
+				visible: 0;
+			}
+			description {
+				state: "visible" 0.0;
+				inherit: "default" 0.0;
+				min: 0 0;
+			}
+		}
+		part {
+			name: "title_right_btn";
+			type: SWALLOW;
+			scale: 1;
+			clip_to: "title_clip";
+			description {
+				state: "default" 0.0;
+				max: 0 0;
+				align: 1 0.5;
+				fixed: 1 1;
+				rel1 { relative: 1.0 1.0; to_x: "title_bg"; to_y: "top_padding"; }
+				rel2 { relative: 0.0 0.0; to: "bottom_right_padding"; }
+			}
+		}
+		part {
+			name: "toolbar_bg";
+			type: RECT;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				min: 0 0;
+				max: 999999 0;
+				fixed: 0 1;
+				align: 0.0 1.0;
+				visible: 0;
+				rel1 { to: "base"; }
+				rel2 { to: "base"; }
+				color: 0 0 0 0;
+			}
+			description {
+				state: "visible" 0.0;
+				inherit: "default" 0.0;
+				min: 0 0;
+				max: 999999 0;
+				visible: 1;
+			}
+			description {
+				state: "sip_visible" 0.0;
+				inherit: "default" 0.0;
+				align: 0.0 0.0;
+				min: 1 0;
+				rel1 { to: "title_bg"; }
+				rel2 { to: "title_bg"; }
+				visible: 1;
+			}
+		}
+	}
+	programs {
+		program {
+			name: "content_new_pushed";
+			signal: "elm,state,new,pushed,internal";
+			source: "";
+			action: STATE_SET "default" 0.0;
+			target: "base";
+			transition: DECELERATE NAVIFRAME_VIEW_TRANS_TIME;
+			after: "show_finished";
+		}
+		program {
+			name: "content_cur_pushed";
+			signal: "elm,state,cur,pushed,internal";
+			source: "";
+			action: STATE_SET "left" 0.0;
+			target: "base";
+			transition: DECELERATE NAVIFRAME_VIEW_TRANS_TIME;
+			after: "pushed_finished";
+		}
+		program {
+			name: "content_prev_popped";
+			signal: "elm,state,prev,popped,internal";
+			source: "";
+			action: STATE_SET "default" 0.0;
+			target: "base";
+			transition: DECELERATE NAVIFRAME_VIEW_TRANS_TIME;
+			after: "show_finished";
+		}
+		program {
+			name: "content_cur_popped";
+			signal: "elm,state,cur,popped,internal";
+			source: "";
+			action: STATE_SET "right" 0.0;
+			target: "base";
+			transition: DECELERATE NAVIFRAME_VIEW_TRANS_TIME;
+			after: "popped_finished";
+		}
+		program {
+			name: "cur_pushed";
+			signal: "elm,state,cur,pushed";
+			source: "elm";
+			script {
+				set_state(PART:"base", "default", 0.0);
+				emit("elm,state,cur,pushed,internal", "");
+			}
+		}
+		program {
+			name: "new_pushed";
+			signal: "elm,state,new,pushed";
+			source: "elm";
+			script {
+				set_state(PART:"base", "right", 0.0);
+				emit("elm,state,new,pushed,internal", "");
+			}
+		}
+		program {
+			name: "prev_popped";
+			signal: "elm,state,prev,popped";
+			source: "elm";
+			script {
+				set_state(PART:"base", "left", 0.0);
+				emit("elm,state,prev,popped,internal", "");
+			}
+		}
+		program {
+			name: "cur_popped";
+			signal: "elm,state,cur,popped";
+			source: "elm";
+			script {
+				set_state(PART:"base", "default", 0.0);
+				emit("elm,state,cur,popped,internal", "");
+			}
+		}
+		program {
+			name: "visible";
+			signal: "elm,state,visible";
+			source: "elm";
+			action: STATE_SET "default" 0.0;
+			target: "base";
+		}
+		program {
+			name: "title_show";
+			signal: "elm,state,title,show";
+			source: "elm";
+			action: STATE_SET "default" 0.0;
+			target: "title_bg";
+			transition: LINEAR 0.4;
+			after: "show_finished";
+		}
+		program {
+			name: "title_hide";
+			signal: "elm,state,title,hide";
+			source: "elm";
+			action: STATE_SET "hide" 0.0;
+			target: "title_bg";
+			transition: LINEAR 0.4;
+			after: "hide_finished";
+		}
+		program {
+			name: "subtitle_show";
+			signal: "elm,state,subtitle,show";
+			source: "elm";
+			script {
+				set_state(PART:"elm.text.title", "subtitle_is_set", 0.0);
+			}
+		}
+		program {
+			name: "subtitle_hide";
+			signal: "elm,state,subtitle,hide";
+			source: "elm";
+			script {
+				set_state(PART:"elm.text.title", "default", 0.0);
+			}
+		}
+		program {
+			name: "prev_btn_show";
+			signal: "elm,state,prev_btn,show";
+			source: "elm";
+			script {
+				emit("elm,state,toolbar_bg,show", "elm");
+			}
+		}
+		program {
+			name: "prev_btn_hide";
+			signal: "elm,state,prev_btn,hide";
+			source: "elm";
+			script {
+				emit("elm,state,toolbar_bg,hide", "elm");
+			}
+		}
+		program {
+			name: "sip_show";
+			signal: "elm,state,sip,shown";
+			source: "";
+			script {
+				if (get_int(tbar_bg) <= 0)
+					set_state(PART:"toolbar_bg", "default", 0.0);
+				else
+				{
+					set_state(PART:"toolbar_bg", "sip_visible", 0.0);
+					set_state(PART:"elm.swallow.content", "sip_visible", 0.0);
+				}
+			}
+		}
+
+		program {
+			name: "sip_hide";
+			signal: "elm,state,sip,hidden";
+			source: "";
+			script {
+				if (get_int(tbar_bg) <= 0)
+					set_state(PART:"toolbar_bg", "default", 0.0);
+				else
+				{
+					set_state(PART:"toolbar_bg", "visible", 0.0);
+					set_state(PART:"elm.swallow.content", "default", 0.0);
+				}
+			}
+		}
+		program {
+			name: "left_btn_show";
+			signal: "elm,state,title_left_btn,show";
+			source: "elm";
+			script {
+				set_int(buttons_visible, get_int(buttons_visible) + 1);
+				set_state(PART:"bottom_right_padding", "visible", 0.0);
+				if (get_int(buttons_visible) >= 2)
+					set_state(PART:"title_btns_padding", "visible", 0.0);
+			}
+		}
+		program {
+			name: "left_btn_hide";
+			signal: "elm,state,title_left_btn,hide";
+			source: "elm";
+			script {
+				set_int(buttons_visible, get_int(buttons_visible) - 1);
+				set_state(PART:"title_btns_padding", "default", 0.0);
+				if (get_int(buttons_visible) == 0)
+					set_state(PART:"bottom_right_padding", "default", 0.0);
+			}
+		}
+		program {
+			name: "right_btn_show";
+			signal: "elm,state,title_right_btn,show";
+			source: "elm";
+			action: STATE_SET "visible" 0.0;
+			script {
+				set_int(buttons_visible, get_int(buttons_visible) + 1);
+				set_state(PART:"bottom_right_padding", "visible", 0.0);
+				if (get_int(buttons_visible) >= 2)
+					set_state(PART:"title_btns_padding", "visible", 0.0);
+			}
+		}
+		program {
+			name: "right_btn_hide";
+			signal: "elm,state,title_right_btn,hide";
+			source: "elm";
+			action: STATE_SET "default" 0.0;
+			script {
+				set_int(buttons_visible, get_int(buttons_visible) - 1);
+				set_state(PART:"title_btns_padding", "default", 0.0);
+				if (get_int(buttons_visible) == 0)
+					set_state(PART:"bottom_right_padding", "default", 0.0);
+			}
+		}
+
+		program {
+			name: "toolbar_bg_show";
+			signal: "elm,state,toolbar_bg,show";
+			source: "elm";
+			script {
+				set_state(PART:"toolbar_bg", "visible", 0.0);
+				set_int(tbar_bg, get_int(tbar_bg) + 1);
+			}
+		}
+		program {
+			name: "toolbar_bg_hide";
+			signal: "elm,state,toolbar_bg,hide";
+			source: "elm";
+			script {
+				set_int(tbar_bg, get_int(tbar_bg) - 1);
+				if (get_int(tbar_bg) <= 0)
+					set_state(PART:"toolbar_bg", "default", 0.0);
+			}
+		}
+		program {
+			name: "toolbar_open";
+			signal: "elm,state,toolbar,open";
+			source: "";
+			action: STATE_SET "visible" 0.0;
+			target: "toolbar_bg";
+			transition: LINEAR 0.2;
+		}
+		program {
+			name: "toolbar_close";
+			signal: "elm,state,toolbar,close";
+			source: "";
+			action: STATE_SET "default" 0.0;
+			target: "toolbar_bg";
+			transition: LINEAR 0.2;
+		}
+
+		program {
+			name: "show_finished";
+			action: SIGNAL_EMIT "elm,action,show,finished" "";
+		}
+		program {
+			name: "hide_finished";
+			action: SIGNAL_EMIT "elm,action,hide,finished" "";
+		}
+
+		program {
+			name: "pushed_finished";
+			action: SIGNAL_EMIT "elm,action,pushed,finished" "";
+		}
+		program {
+			name: "popped_finished";
+			action: SIGNAL_EMIT "elm,action,popped,finished" "";
+		}
+		program {
+			name: "title_clicked";
+			signal: "mouse,clicked,1";
+			source: "click_event_area";
+			action: SIGNAL_EMIT "elm,action,title,clicked" "";
+		}
+		program {
+			name: "display_mode_compress";
+			signal: "display,mode,compress";
+			source: "";
+			action: SIGNAL_EMIT "elm,state,toolbar,instant_close" "";
+		}
+		program {
+			name: "display_mode_default";
+			signal: "display,mode,default";
+			source: "";
+			action: SIGNAL_EMIT "elm,state,toolbar,instant_open" "";
+		}
+	}
+}
+
+group {
+	name:"elm/naviframe/item/playview/trim/default";
+	script  {
+		public tbar_bg = 0;					//Toolbar BG Show call count
+		public buttons_visible = 0;			//when both buttons are visible
+		public toolbar_buttons_visible = 0; 	//when both toolbar buttons are visible
+	}
+	parts {
+		part {
+			name: "base";
+			type: RECT;
+			mouse_events:  0;
+			description {
+				state: "default" 0.0;
+				visible: 0;
+			}
+			description {
+				state: "left" 0.0;
+				inherit: "default" 0.0;
+				rel1.relative: -1.0 0.0;
+				rel2.relative: 0.0 1.0;
+			}
+			description {
+				state: "right" 0.0;
+				inherit: "default" 0.0;
+				rel1.relative: 1.0 0.0;
+				rel2.relative: 2.0 1.0;
+			}
+		}
+		part {
+			name: "title_bg";
+			type: RECT;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				min: 0 NAVIFRAME_TITLE_H_INC;
+				align: 0.0 0.0;
+				fixed: 0 1;
+				visible: 1;
+				rel1 { relative: 0.0 0.0; to: "base"; }
+				rel2 { relative: 1.0 0.0; to: "base"; }
+				color: NAVIFRAME_TITLE_BG_COLOR_INC;
+			}
+			description {
+				state: "hide" 0.0;
+				inherit: "default" 0.0;
+				min: 0 0;
+				fixed: 0 1;
+				rel1 { relative: 0.0 0.0; to: "base"; }
+				rel2 { relative: 1.0 0.0; to: "base"; }
+			}
+		}
+		part {
+			name: "title_line";
+			type: RECT;
+			mouse_events: 0;
+			description {
+				state: "default" 0.0;
+				min: 0 6;
+				align: 0.0 0.0;
+				fixed: 0 1;
+				visible: 1;
+				rel1 { relative: 0.0 0.0; to: "title_bg"; }
+				rel2 { relative: 1.0 0.0; to: "title_bg"; }
+				color: NAVIFRAME_TOP_LINE_COLOR;
+			}
+			description {
+				state: "hide" 0.0;
+				inherit: "default" 0.0;
+				visible: 0;
+				min: 0 0;
+			}
+		}
+		part {
+			name: "title_clip";
+			type: RECT;
+			mouse_events: 0;
+			description {
+				state: "default" 0.0;
+				rel1 { to: "title_bg"; }
+				rel2 { to: "title_bg"; }
+			}
+		}
+		part {
+			name: "top_padding";
+			type: RECT;
+			mouse_events: 0;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				min: NAVIFRAME_TITLE_TOP_PADDING_INC;
+				fixed: 0 1;
+				align: 0.0 0.0;
+				rel1 { relative: 0.0 0.0; to: "title_bg"; }
+				rel2 { relative: 1.0 0.0; to: "title_bg"; }
+				visible: 0;
+			}
+		}
+		part {
+			name: "padding_center_text1";
+			type: RECT;
+			scale: 1;
+			mouse_events: 0;
+			description {
+				state: "default" 0.0;
+				min: NAVIFRAME_PADDING_INC;
+				visible: 0;
+				fixed: 1 0;
+				align: 0.0 0.0;
+				rel1 { relative: 0.0 0.0; to: "title_bg"; }
+				rel2 { relative: 0.0 1.0; to: "title_bg"; }
+			}
+		}
+
+		part {
+			name: "elm.swallow.content";
+			type: SWALLOW;
+			scale: 1;
+			repeat_events: 0;
+			clip_to: "content_clip";
+			description {
+				state: "default" 0.0;
+				align: 0.0 0.0;
+				rel1.relative: 0.0 1.0;
+				rel1.to_x: "base";
+				rel1.to_y: "title_bg";
+				rel2.relative: 1.0 0.0;
+				rel2.to_x: "base";
+				rel2.to_y: "toolbar_bg";
+			}
+			description {
+				state: "sip_visible" 0.0;
+				inherit: "default" 0.0;
+				rel2.relative: 1.0 1.0;
+				rel2.to: "base";
+			}
+		}
+		part {
+			name: "content_clip";
+			type: RECT;
+			mouse_events: 0;
+			description {
+				state: "default" 0.0;
+				rel1.to: "elm.swallow.content";
+				rel2.to: "elm.swallow.content";
+			}
+		}
+		part {
+			name: "padding_center_text2";
+			type: RECT;
+			mouse_events: 0;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				min: NAVIFRAME_PADDING2_INC;
+				fixed: 1 0;
+				align: 1.0 0.5;
+				rel1 { relative: 0.0 0.0; to: "title_left_btn"; }
+				rel2 { relative: 0.0 1.0; to: "title_left_btn"; }
+				visible: 0;
+			}
+		}
+		part {
+			name: "padding_bottom_text";
+			type: RECT;
+			mouse_events: 0;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				min: NAVIFRAME_BOTTOM_TEXT_PADDING_INC;
+				fixed: 0 1;
+				align: 0.0 1.0;
+				rel1 { relative: 0.0 1.0; to: "title_bg"; }
+				rel2 { relative: 1.0 1.0; to: "title_bg"; }
+				visible: 0;
+			}
+		}
+		part {
+			name: "elm.text.title";
+			type: TEXT;
+			effect: FAR_SHADOW BOTTOM;
+			scale: 1;
+			repeat_events: 1;
+			clip_to: "title_clip";
+			description {
+				state: "default" 0.0;
+				text {
+					font: VIDEO_TITLE_FONT_STYLE;
+					size: VIDEO_TITLE_FONT_SIZE;
+					min: 0 0;
+					max: 1 0;
+					align: 0.0 0.5;
+				}
+				color: VIDEO_TITLE_FONT_DEFAULT_COLOR;
+				color3: 0 0 0 255;
+				align: 0.0 0.5;
+				fixed: 1 1;
+				rel1 { relative: 1.0 1.0; to_x: "padding_center_text1"; to_y: "top_padding"; }
+				rel2 { relative: 0.0 0.0; to_x: "padding_center_text2"; to_y: "padding_bottom_text"; }
+			}
+		}
+
+		part {
+			name: "access.title";
+			type: RECT;
+			repeat_events: 1;
+			description {
+				state: "default" 0.0;
+				fixed: 1 1;
+				rel1.to: "title_bg";
+				rel2.to: "title_bg";
+				color: 0 0 0 0;
+			}
+		}
+
+		part {
+			name: "padding_before_text";
+			type: RECT;
+			scale: 1;
+			mouse_events: 0;
+			description {
+				state: "default" 0.0;
+				align: 1.0 0.5;
+				rel1 { relative: 0.0 0.0; to: "elm.text.title"; }
+				rel2 { relative: 0.0 1.0; to: "elm.text.title"; }
+				fixed: 1 0;
+				min: NAVIFRAME_PADDING_INC;
+				visible: 0;
+			}
+		}
+
+		part {
+			name: "click_event_area";
+			type: RECT;
+			ignore_flags: ON_HOLD;
+			repeat_events: 1;
+			description {
+				state: "default" 0.0;
+				rel1 { to: "title_bg"; }
+				rel2 { to: "title_bg"; }
+				visible: 0;
+			}
+		}
+		part {
+			name: "title_left_btn_line_shadow";
+			type: RECT;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				visible: 1;
+				min: 1 48;
+				fixed: 1 1;
+				align: 1.0 0.5;
+				rel1 { relative: 0.0 0.5; to_x: "title_left_btn_line"; to_y: "title_bg"; }
+				rel2 { relative: 0.0 0.5; to_x: "title_left_btn_line"; to_y: "title_bg"; }
+				color: 0 0 0 81;
+			}
+		}
+
+		part {
+			name: "title_left_btn_line";
+			type: RECT;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				visible: 1;
+				min: 2 48;
+				fixed: 1 1;
+				align: 1.0 0.5;
+				rel1 { relative: 0.0 0.5; to_x: "title_left_btns_padding"; to_y: "title_bg"; }
+				rel2 { relative: 0.0 0.5; to_x: "title_left_btns_padding"; to_y: "title_bg"; }
+				color: 255 255 255 81;
+			}
+		}
+
+		part {
+			name: "title_left_btns_padding";
+			type: RECT;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				min: NAVIFRAME_PADDING2_INC;
+				fixed: 1 1;
+				align: 1.0 0.5;
+				visible: 0;
+				rel1 { relative: 0.0 0.0; to_x: "title_left_btn"; to_y: "title_bg"; }
+				rel2 { relative: 0.0 1.0; to_x: "title_left_btn"; to_y: "title_bg"; }
+			}
+		}
+
+		part {
+			name: "title_left_btn";
+			type: SWALLOW;
+			scale: 1;
+			clip_to: "title_clip";
+			description {
+				state: "default" 0.0;
+				max: NAVIFRAME_TITLE_FUNC_BTN_SIZE_INC;
+				fixed: 1 1;
+				align: 1.0 0.5;
+				rel1 { relative: 0.0 0.0; to: "title_btns_padding"; }
+				rel2 { relative: 0.0 1.0; to: "title_btns_padding"; }
+			}
+		}
+
+		part {
+			name: "title_btns_padding";
+			type: RECT;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				min: NAVIFRAME_PADDING2_INC;
+				fixed: 1 1;
+				align: 1.0 0.5;
+				visible: 0;
+				rel1 { relative: 0.0 0.0; to_x: "title_right_btn_line"; to_y: "title_bg"; }
+				rel2 { relative: 0.0 1.0; to_x: "title_right_btn_line"; to_y: "title_bg"; }
+			}
+		}
+
+		part {
+			name: "title_right_btn_line_shadow";
+			type: RECT;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				visible: 1;
+				min: 1 48;
+				fixed: 1 1;
+				align: 1.0 0.5;
+				rel1 { relative: 0.0 0.5; to_x: "title_right_btn_line"; to_y: "title_bg"; }
+				rel2 { relative: 0.0 0.5; to_x: "title_right_btn_line"; to_y: "title_bg"; }
+				color: 0 0 0 81;
+			}
+		}
+
+		part {
+			name: "title_right_btn_line";
+			type: RECT;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				visible: 1;
+				min: 2 48;
+				fixed: 1 1;
+				align: 1.0 0.5;
+				rel1 { relative: 0.0 0.5; to_x: "title_btns_line_padding"; to_y: "title_bg"; }
+				rel2 { relative: 0.0 0.5; to_x: "title_btns_line_padding"; to_y: "title_bg"; }
+				color: 255 255 255 81;
+			}
+		}
+
+		part {
+			name: "title_btns_line_padding";
+			type: RECT;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				min: NAVIFRAME_PADDING2_INC;
+				fixed: 1 1;
+				align: 1.0 0.5;
+				visible: 0;
+				rel1 { relative: 0.0 0.0; to_x: "title_right_btn"; to_y: "title_bg"; }
+				rel2 { relative: 0.0 1.0; to_x: "title_right_btn"; to_y: "title_bg"; }
+			}
+		}
+
+		part {
+			name: "bottom_right_padding";
+			type: RECT;
+			mouse_events: 0;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				min: 0 0;
+				fixed: 1 1;
+				align: 1.0 1.0;
+				rel1 { relative: 1.0 1.0; to: "title_bg"; }
+				rel2 { relative: 1.0 1.0; to: "title_bg"; }
+				visible: 0;
+			}
+			description {
+				state: "visible" 0.0;
+				inherit: "default" 0.0;
+				min: NAVIFRAME_PADDING2_INC;
+			}
+		}
+
+
+		part {
+			name: "title_right_btn";
+			type: SWALLOW;
+			scale: 1;
+			clip_to: "title_clip";
+			description {
+				state: "default" 0.0;
+				max: NAVIFRAME_TITLE_FUNC_BTN_SIZE_INC;
+				align: 1.0 0.5;
+				fixed: 1 1;
+				rel1 { relative: 0.0 0.5; to_x: "bottom_right_padding"; to_y: "title_bg"; }
+				rel2 { relative: 0.0 0.5; to_x: "bottom_right_padding"; to_y: "title_bg"; }
+			}
+		}
+
+		part {
+			name: "toolbar_bg";
+			type: RECT;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				min: 0 0;
+				max: 999999 0;
+				fixed: 0 1;
+				align: 0.0 1.0;
+				visible: 0;
+				rel1 { to: "base"; }
+				rel2 { to: "base"; }
+				color: NAVIFRAME_TOOLBAR_BG_COLOR_INC;
+			}
+			description {
+				state: "visible" 0.0;
+				inherit: "default" 0.0;
+				min: 0 NAVIFRAME_TOOLBAR_HEIGHT_INC;
+				max: 999999 NAVIFRAME_TOOLBAR_HEIGHT_INC;
+				visible: 1;
+			}
+			description {
+				state: "sip_visible" 0.0;
+				inherit: "default" 0.0;
+				align: 0.0 0.0;
+				min: 1 NAVIFRAME_TITLE_H_INC;
+				rel1 { to: "title_bg"; }
+				rel2 { to: "title_bg"; }
+				visible: 1;
+			}
+		}
+	}
+	programs {
+		program {
+			name: "content_new_pushed";
+			signal: "elm,state,new,pushed,internal";
+			source: "";
+			action: STATE_SET "default" 0.0;
+			target: "base";
+			transition: DECELERATE NAVIFRAME_VIEW_TRANS_TIME;
+			after: "show_finished";
+		}
+		program {
+			name: "content_cur_pushed";
+			signal: "elm,state,cur,pushed,internal";
+			source: "";
+			action: STATE_SET "left" 0.0;
+			target: "base";
+			transition: DECELERATE NAVIFRAME_VIEW_TRANS_TIME;
+			after: "pushed_finished";
+		}
+		program {
+			name: "content_prev_popped";
+			signal: "elm,state,prev,popped,internal";
+			source: "";
+			action: STATE_SET "default" 0.0;
+			target: "base";
+			transition: DECELERATE NAVIFRAME_VIEW_TRANS_TIME;
+			after: "show_finished";
+		}
+		program {
+			name: "content_cur_popped";
+			signal: "elm,state,cur,popped,internal";
+			source: "";
+			action: STATE_SET "right" 0.0;
+			target: "base";
+			transition: DECELERATE NAVIFRAME_VIEW_TRANS_TIME;
+			after: "popped_finished";
+		}
+		program {
+			name: "cur_pushed";
+			signal: "elm,state,cur,pushed";
+			source: "elm";
+			script {
+				set_state(PART:"base", "default", 0.0);
+				emit("elm,state,cur,pushed,internal", "");
+			}
+		}
+		program {
+			name: "new_pushed";
+			signal: "elm,state,new,pushed";
+			source: "elm";
+			script {
+				set_state(PART:"base", "right", 0.0);
+				emit("elm,state,new,pushed,internal", "");
+			}
+		}
+		program {
+			name: "prev_popped";
+			signal: "elm,state,prev,popped";
+			source: "elm";
+			script {
+				set_state(PART:"base", "left", 0.0);
+				emit("elm,state,prev,popped,internal", "");
+			}
+		}
+		program {
+			name: "cur_popped";
+			signal: "elm,state,cur,popped";
+			source: "elm";
+			script {
+				set_state(PART:"base", "default", 0.0);
+				emit("elm,state,cur,popped,internal", "");
+			}
+		}
+		program {
+			name: "visible";
+			signal: "elm,state,visible";
+			source: "elm";
+			action: STATE_SET "default" 0.0;
+			target: "base";
+		}
+		program {
+			name: "title_show";
+			signal: "elm,state,title,show";
+			source: "elm";
+			action: STATE_SET "default" 0.0;
+			target: "title_bg";
+			target: "title_line";
+		}
+		program {
+			name: "title_hide";
+			signal: "elm,state,title,hide";
+			source: "elm";
+			action: STATE_SET "hide" 0.0;
+			target: "title_bg";
+			target: "title_line";
+		}
+		program {
+			name: "subtitle_show";
+			signal: "elm,state,subtitle,show";
+			source: "elm";
+			script {
+				set_state(PART:"elm.text.title", "subtitle_is_set", 0.0);
+			}
+		}
+		program {
+			name: "subtitle_hide";
+			signal: "elm,state,subtitle,hide";
+			source: "elm";
+			script {
+				set_state(PART:"elm.text.title", "default", 0.0);
+			}
+		}
+		program {
+			name: "prev_btn_show";
+			signal: "elm,state,prev_btn,show";
+			source: "elm";
+			script {
+				emit("elm,state,toolbar_bg,show", "elm");
+			}
+		}
+		program {
+			name: "prev_btn_hide";
+			signal: "elm,state,prev_btn,hide";
+			source: "elm";
+			script {
+				emit("elm,state,toolbar_bg,hide", "elm");
+			}
+		}
+		program {
+			name: "sip_show";
+			signal: "elm,state,sip,shown";
+			source: "";
+			script {
+				if (get_int(tbar_bg) <= 0)
+					set_state(PART:"toolbar_bg", "default", 0.0);
+				else
+				{
+					set_state(PART:"toolbar_bg", "sip_visible", 0.0);
+					set_state(PART:"elm.swallow.content", "sip_visible", 0.0);
+				}
+			}
+		}
+
+		program {
+			name: "sip_hide";
+			signal: "elm,state,sip,hidden";
+			source: "";
+			script {
+				if (get_int(tbar_bg) <= 0)
+					set_state(PART:"toolbar_bg", "default", 0.0);
+				else
+				{
+					set_state(PART:"toolbar_bg", "visible", 0.0);
+					set_state(PART:"elm.swallow.content", "default", 0.0);
+				}
+			}
+		}
+		program {
+			name: "left_btn_show";
+			signal: "elm,state,title_left_btn,show";
+			source: "elm";
+			script {
+				set_int(buttons_visible, get_int(buttons_visible) + 1);
+				set_state(PART:"bottom_right_padding", "visible", 0.0);
+			}
+		}
+		program {
+			name: "left_btn_hide";
+			signal: "elm,state,title_left_btn,hide";
+			source: "elm";
+			script {
+				set_int(buttons_visible, get_int(buttons_visible) - 1);
+				if (get_int(buttons_visible) == 0)
+					set_state(PART:"bottom_right_padding", "default", 0.0);
+			}
+		}
+		program {
+			name: "right_btn_show";
+			signal: "elm,state,title_right_btn,show";
+			source: "elm";
+			action: STATE_SET "visible" 0.0;
+			script {
+				set_int(buttons_visible, get_int(buttons_visible) + 1);
+				set_state(PART:"bottom_right_padding", "visible", 0.0);
+			}
+		}
+		program {
+			name: "right_btn_hide";
+			signal: "elm,state,title_right_btn,hide";
+			source: "elm";
+			action: STATE_SET "default" 0.0;
+			script {
+				set_int(buttons_visible, get_int(buttons_visible) - 1);
+				if (get_int(buttons_visible) == 0)
+					set_state(PART:"bottom_right_padding", "default", 0.0);
+			}
+		}
+
+		program {
+			name: "toolbar_bg_show";
+			signal: "elm,state,toolbar_bg,show";
+			source: "elm";
+			script {
+				set_state(PART:"toolbar_bg", "visible", 0.0);
+				set_int(tbar_bg, get_int(tbar_bg) + 1);
+			}
+		}
+		program {
+			name: "toolbar_bg_hide";
+			signal: "elm,state,toolbar_bg,hide";
+			source: "elm";
+			script {
+				set_int(tbar_bg, get_int(tbar_bg) - 1);
+				if (get_int(tbar_bg) <= 0)
+					set_state(PART:"toolbar_bg", "default", 0.0);
+			}
+		}
+		program {
+			name: "toolbar_open";
+			signal: "elm,state,toolbar,open";
+			source: "";
+			action: STATE_SET "visible" 0.0;
+			target: "toolbar_bg";
+			transition: LINEAR 0.2;
+		}
+		program {
+			name: "toolbar_close";
+			signal: "elm,state,toolbar,close";
+			source: "";
+			action: STATE_SET "default" 0.0;
+			target: "toolbar_bg";
+			transition: LINEAR 0.2;
+		}
+
+		program {
+			name: "show_finished";
+			action: SIGNAL_EMIT "elm,action,show,finished" "";
+		}
+		program {
+			name: "hide_finished";
+			action: SIGNAL_EMIT "elm,action,hide,finished" "";
+		}
+
+		program {
+			name: "pushed_finished";
+			action: SIGNAL_EMIT "elm,action,pushed,finished" "";
+		}
+		program {
+			name: "popped_finished";
+			action: SIGNAL_EMIT "elm,action,popped,finished" "";
+		}
+		program {
+			name: "title_clicked";
+			signal: "mouse,clicked,1";
+			source: "click_event_area";
+			action: SIGNAL_EMIT "elm,action,title,clicked" "";
+		}
+		program {
+			name: "display_mode_compress";
+			signal: "display,mode,compress";
+			source: "";
+			action: SIGNAL_EMIT "elm,state,toolbar,instant_close" "";
+		}
+		program {
+			name: "display_mode_default";
+			signal: "display,mode,default";
+			source: "";
+			action: SIGNAL_EMIT "elm,state,toolbar,instant_open" "";
+		}
+	}
+}
+
+
+
+group {
+	name:"elm/naviframe/item/playview/chapter/default";
+	script  {
+		public tbar_bg = 0;					//Toolbar BG Show call count
+		public buttons_visible = 0;			//when both buttons are visible
+		public toolbar_buttons_visible = 0; 	//when both toolbar buttons are visible
+	}
+	parts {
+		part {
+			name: "base";
+			type: RECT;
+			mouse_events:  0;
+			description {
+				state: "default" 0.0;
+				visible: 0;
+			}
+			description {
+				state: "left" 0.0;
+				inherit: "default" 0.0;
+				rel1.relative: -1.0 0.0;
+				rel2.relative: 0.0 1.0;
+			}
+			description {
+				state: "right" 0.0;
+				inherit: "default" 0.0;
+				rel1.relative: 1.0 0.0;
+				rel2.relative: 2.0 1.0;
+			}
+		}
+		part {
+			name: "title_bg";
+			type: RECT;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				min: 0 0;
+				align: 0.0 0.0;
+				fixed: 0 1;
+				visible: 1;
+				rel1 { relative: 0.0 0.0; to: "base"; }
+				rel2 { relative: 1.0 0.0; to: "base"; }
+				color: NAVIFRAME_TITLE_BG_COLOR_INC;
+			}
+			description {
+				state: "hide" 0.0;
+				inherit: "default" 0.0;
+				min: 0 0;
+				fixed: 0 1;
+				rel1 { relative: 0.0 0.0; to: "base"; }
+				rel2 { relative: 1.0 0.0; to: "base"; }
+			}
+		}
+		part {
+			name: "title_line";
+			type: RECT;
+			mouse_events: 0;
+			description {
+				state: "default" 0.0;
+				min: 0 6;
+				align: 0.0 0.0;
+				fixed: 0 1;
+				visible: 1;
+				rel1 { relative: 0.0 0.0; to: "title_bg"; }
+				rel2 { relative: 1.0 0.0; to: "title_bg"; }
+				color: NAVIFRAME_TOP_LINE_COLOR;
+			}
+			description {
+				state: "hide" 0.0;
+				inherit: "default" 0.0;
+				min: 0 0;
+			}
+		}
+		part {
+			name: "title_clip";
+			type: RECT;
+			mouse_events: 0;
+			description {
+				state: "default" 0.0;
+				rel1 { to: "title_bg"; }
+				rel2 { to: "title_bg"; }
+			}
+		}
+		part {
+			name: "top_padding";
+			type: RECT;
+			mouse_events: 0;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				min: 0 0;
+				fixed: 0 1;
+				align: 0.0 0.0;
+				rel1 { relative: 0.0 0.0; to: "title_bg"; }
+				rel2 { relative: 1.0 0.0; to: "title_bg"; }
+				visible: 0;
+			}
+		}
+		part {
+			name: "padding_center_text1";
+			type: RECT;
+			scale: 1;
+			mouse_events: 0;
+			description {
+				state: "default" 0.0;
+				min: 0 0;
+				fixed: 1 0;
+				align: 0.0 0.0;
+				rel1 { relative: 0.0 0.0; to: "title_bg"; }
+				rel2 { relative: 0.0 1.0; to: "title_bg"; }
+				visible: 0;
+			}
+		}
+
+		part {
+			name: "elm.swallow.content";
+			type: SWALLOW;
+			scale: 1;
+			repeat_events: 0;
+			clip_to: "content_clip";
+			description {
+				state: "default" 0.0;
+				align: 0.0 0.0;
+				rel1.relative: 0.0 1.0;
+				rel1.to_x: "base";
+				rel1.to_y: "title_bg";
+				rel2.relative: 1.0 0.0;
+				rel2.to_x: "base";
+				rel2.to_y: "toolbar_bg";
+			}
+			description {
+				state: "sip_visible" 0.0;
+				inherit: "default" 0.0;
+				rel2.relative: 1.0 1.0;
+				rel2.to: "base";
+			}
+		}
+		part {
+			name: "content_clip";
+			type: RECT;
+			mouse_events: 0;
+			description {
+				state: "default" 0.0;
+				rel1.to: "elm.swallow.content";
+				rel2.to: "elm.swallow.content";
+			}
+		}
+		part {
+			name: "padding_center_text2";
+			type: RECT;
+			mouse_events: 0;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				min: 0 0;
+				fixed: 1 0;
+				align: 1.0 0.5;
+				rel1 { relative: 0.0 0.0; to: "title_btns_padding_ext"; }
+				rel2 { relative: 0.0 1.0; to: "title_btns_padding_ext"; }
+				visible: 0;
+			}
+		}
+		part {
+			name: "padding_bottom_text";
+			type: RECT;
+			mouse_events: 0;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				min: 0 0;
+				fixed: 0 1;
+				align: 0.0 1.0;
+				rel1 { relative: 0.0 1.0; to: "title_bg"; }
+				rel2 { relative: 1.0 1.0; to: "title_bg"; }
+				visible: 0;
+			}
+		}
+
+		part {
+			name: "elm.text.title";
+			type: TEXT;
+			effect: FAR_SHADOW BOTTOM;
+			scale: 1;
+			repeat_events: 1;
+			clip_to: "title_clip";
+			description {
+				state: "default" 0.0;
+				text {
+					font: VIDEO_TITLE_FONT_STYLE;
+					size: VIDEO_TITLE_FONT_SIZE;
+					min: 0 0;
+					max: 1 0;
+					align: 0.5 0.5;
+				}
+				color: VIDEO_TITLE_FONT_DEFAULT_COLOR;
+				color3: 0 0 0 255;
+				align: 0.5 0.5;
+				fixed: 1 1;
+				rel1 { relative: 1.0 1.0; to_x: "padding_center_text1"; to_y: "top_padding"; }
+				rel2 { relative: 0.0 0.0; to_x: "padding_center_text2"; to_y: "padding_bottom_text"; }
+			}
+		}
+
+		part {
+			name: "access.title";
+			type: RECT;
+			repeat_events: 1;
+			description {
+				state: "default" 0.0;
+				fixed: 1 1;
+				rel1.to: "title_bg";
+				rel2.to: "title_bg";
+				color: 0 0 0 0;
+			}
+		}
+
+		part {
+			name: "padding_before_text";
+			type: RECT;
+			scale: 1;
+			mouse_events: 0;
+			description {
+				state: "default" 0.0;
+				align: 1.0 0.5;
+				rel1 { relative: 0.0 0.0; to: "elm.text.title"; }
+				rel2 { relative: 0.0 1.0; to: "elm.text.title"; }
+				fixed: 1 0;
+				min: 0 0;
+				visible: 0;
+			}
+		}
+
+		part {
+			name: "click_event_area";
+			type: RECT;
+			ignore_flags: ON_HOLD;
+			repeat_events: 1;
+			description {
+				state: "default" 0.0;
+				rel1 { to: "title_bg"; }
+				rel2 { to: "title_bg"; }
+				visible: 0;
+			}
+		}
+		part {
+			name: "title_left_btn_ext";
+			type: SWALLOW;
+			scale: 1;
+			clip_to: "title_clip";
+			description {
+				state: "default" 0.0;
+				max: 0 0;
+				fixed: 1 1;
+				align: 1 0.5;
+				rel1 { relative: 0.0 0.0; to: "title_btns_padding_ext"; }
+				rel2 { relative: 0.0 1.0; to: "title_btns_padding_ext"; }
+			}
+		}
+		part {
+			name: "title_btns_padding_ext";
+			type: RECT;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				min: 0 0;
+				fixed: 1 1;
+				align: 1 0.5;
+				visible: 0;
+				rel1 { relative: 0.0 0.0; to: "title_left_btn"; }
+				rel2 { relative: 0.0 1.0; to: "title_left_btn"; }
+			}
+			description {
+				state: "visible" 0.0;
+				inherit: "default" 0.0;
+				min: 0 0;
+			}
+		}
+		part {
+			name: "title_left_btn";
+			type: SWALLOW;
+			scale: 1;
+			clip_to: "title_clip";
+			description {
+				state: "default" 0.0;
+				max: 0 0;
+				fixed: 1 1;
+				align: 1 0.5;
+				rel1 { relative: 0.0 0.0; to: "title_btns_padding"; }
+				rel2 { relative: 0.0 1.0; to: "title_btns_padding"; }
+			}
+		}
+		part {
+			name: "title_btns_padding";
+			type: RECT;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				min: 0 0;
+				fixed: 1 1;
+				align: 1 0.5;
+				visible: 0;
+				rel1 { relative: 0.0 0.0; to: "title_right_btn"; }
+				rel2 { relative: 0.0 1.0; to: "title_right_btn"; }
+			}
+			description {
+				state: "visible" 0.0;
+				inherit: "default" 0.0;
+				min: 0 0;
+			}
+		}
+		part {
+			name: "bottom_right_padding";
+			type: RECT;
+			mouse_events: 0;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				min: 0 0;
+				fixed: 1 1;
+				align: 1.0 1.0;
+				rel1 { relative: 1.0 1.0; to: "title_bg"; }
+				rel2 { relative: 1.0 1.0; to: "title_bg"; }
+				visible: 0;
+			}
+			description {
+				state: "visible" 0.0;
+				inherit: "default" 0.0;
+				min: 0 0;
+			}
+		}
+		part {
+			name: "title_right_btn";
+			type: SWALLOW;
+			scale: 1;
+			clip_to: "title_clip";
+			description {
+				state: "default" 0.0;
+				max: 0 0;
+				align: 1 0.5;
+				fixed: 1 1;
+				rel1 { relative: 1.0 1.0; to_x: "title_bg"; to_y: "top_padding"; }
+				rel2 { relative: 0.0 0.0; to: "bottom_right_padding"; }
+			}
+		}
+		part {
+			name: "toolbar_bg";
+			type: RECT;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				min: 0 0;
+				max: 999999 0;
+				fixed: 0 1;
+				align: 0.0 1.0;
+				visible: 0;
+				rel1 { to: "base"; }
+				rel2 { to: "base"; }
+				color: 0 0 0 255;
+			}
+			description {
+				state: "visible" 0.0;
+				inherit: "default" 0.0;
+				min: 0 98;
+				max: 999999 98;
+				visible: 1;
+			}
+			description {
+				state: "sip_visible" 0.0;
+				inherit: "default" 0.0;
+				align: 0.0 0.0;
+				min: 1 0;
+				rel1 { to: "title_bg"; }
+				rel2 { to: "title_bg"; }
+				visible: 1;
+			}
+		}
+		part {
+			name: "prev_btn_bg";
+			type: RECT;
+			scale: 1;
+			mouse_events: 0;
+			description {
+				state: "default" 0.0;
+				min: 112 0;
+				fixed: 1 0;
+				align: 1.0 0.0;
+				rel1 { relative: 1.0 0.0; to: "toolbar_bg"; }
+				rel2.to: "toolbar_bg";
+				visible: 0;
+			}
+		}
+		part {
+			name: "elm.swallow.prev_btn";
+			type: SWALLOW;
+			scale: 1;
+			clip_to: "toolbar_clip";
+			description {
+				state: "default" 0.0;
+				max: 85 98;
+				fixed: 1 1;
+				align: 0.5 0.5;
+				rel1.to: "prev_btn_bg";
+				rel2.to: "prev_btn_bg";
+			}
+		}
+		part {
+			name: "toolbar_clip";
+			type: RECT;
+			mouse_events: 0;
+			description {
+				state: "default" 0.0;
+				rel1 { to: "toolbar_bg"; }
+				rel2 { to: "toolbar_bg"; }
+			}
+		}
+	}
+
+	programs {
+		program {
+			name: "content_new_pushed";
+			signal: "elm,state,new,pushed,internal";
+			source: "";
+			action: STATE_SET "default" 0.0;
+			target: "base";
+			transition: DECELERATE NAVIFRAME_VIEW_TRANS_TIME;
+			after: "show_finished";
+		}
+		program {
+			name: "content_cur_pushed";
+			signal: "elm,state,cur,pushed,internal";
+			source: "";
+			action: STATE_SET "left" 0.0;
+			target: "base";
+			transition: DECELERATE NAVIFRAME_VIEW_TRANS_TIME;
+			after: "pushed_finished";
+		}
+		program {
+			name: "content_prev_popped";
+			signal: "elm,state,prev,popped,internal";
+			source: "";
+			action: STATE_SET "default" 0.0;
+			target: "base";
+			transition: DECELERATE NAVIFRAME_VIEW_TRANS_TIME;
+			after: "show_finished";
+		}
+		program {
+			name: "content_cur_popped";
+			signal: "elm,state,cur,popped,internal";
+			source: "";
+			action: STATE_SET "right" 0.0;
+			target: "base";
+			transition: DECELERATE NAVIFRAME_VIEW_TRANS_TIME;
+			after: "popped_finished";
+		}
+		program {
+			name: "cur_pushed";
+			signal: "elm,state,cur,pushed";
+			source: "elm";
+			script {
+				set_state(PART:"base", "default", 0.0);
+				emit("elm,state,cur,pushed,internal", "");
+			}
+		}
+		program {
+			name: "new_pushed";
+			signal: "elm,state,new,pushed";
+			source: "elm";
+			script {
+				set_state(PART:"base", "right", 0.0);
+				emit("elm,state,new,pushed,internal", "");
+			}
+		}
+		program {
+			name: "prev_popped";
+			signal: "elm,state,prev,popped";
+			source: "elm";
+			script {
+				set_state(PART:"base", "left", 0.0);
+				emit("elm,state,prev,popped,internal", "");
+			}
+		}
+		program {
+			name: "cur_popped";
+			signal: "elm,state,cur,popped";
+			source: "elm";
+			script {
+				set_state(PART:"base", "default", 0.0);
+				emit("elm,state,cur,popped,internal", "");
+			}
+		}
+		program {
+			name: "visible";
+			signal: "elm,state,visible";
+			source: "elm";
+			action: STATE_SET "default" 0.0;
+			target: "base";
+		}
+		program {
+			name: "title_show";
+			signal: "elm,state,title,show";
+			source: "elm";
+			action: STATE_SET "default" 0.0;
+			target: "title_bg";
+			target: "title_line";
+			transition: LINEAR 0.4;
+			after: "show_finished";
+		}
+		program {
+			name: "title_hide";
+			signal: "elm,state,title,hide";
+			source: "elm";
+			action: STATE_SET "hide" 0.0;
+			target: "title_bg";
+			target: "title_line";
+			transition: LINEAR 0.4;
+			after: "hide_finished";
+		}
+		program {
+			name: "subtitle_show";
+			signal: "elm,state,subtitle,show";
+			source: "elm";
+			script {
+				set_state(PART:"elm.text.title", "subtitle_is_set", 0.0);
+			}
+		}
+		program {
+			name: "subtitle_hide";
+			signal: "elm,state,subtitle,hide";
+			source: "elm";
+			script {
+				set_state(PART:"elm.text.title", "default", 0.0);
+			}
+		}
+		program {
+			name: "prev_btn_show";
+			signal: "elm,state,prev_btn,show";
+			source: "elm";
+			script {
+				emit("elm,state,toolbar_bg,show", "elm");
+			}
+		}
+		program {
+			name: "prev_btn_hide";
+			signal: "elm,state,prev_btn,hide";
+			source: "elm";
+			script {
+				emit("elm,state,toolbar_bg,hide", "elm");
+			}
+		}
+		program {
+			name: "sip_show";
+			signal: "elm,state,sip,shown";
+			source: "";
+			script {
+				if (get_int(tbar_bg) <= 0)
+					set_state(PART:"toolbar_bg", "default", 0.0);
+				else
+				{
+					set_state(PART:"toolbar_bg", "sip_visible", 0.0);
+					set_state(PART:"elm.swallow.content", "sip_visible", 0.0);
+				}
+			}
+		}
+
+		program {
+			name: "sip_hide";
+			signal: "elm,state,sip,hidden";
+			source: "";
+			script {
+				if (get_int(tbar_bg) <= 0)
+					set_state(PART:"toolbar_bg", "default", 0.0);
+				else
+				{
+					set_state(PART:"toolbar_bg", "visible", 0.0);
+					set_state(PART:"elm.swallow.content", "default", 0.0);
+				}
+			}
+		}
+		program {
+			name: "left_btn_show";
+			signal: "elm,state,title_left_btn,show";
+			source: "elm";
+			script {
+				set_int(buttons_visible, get_int(buttons_visible) + 1);
+				set_state(PART:"bottom_right_padding", "visible", 0.0);
+				if (get_int(buttons_visible) >= 2)
+					set_state(PART:"title_btns_padding", "visible", 0.0);
+			}
+		}
+		program {
+			name: "left_btn_hide";
+			signal: "elm,state,title_left_btn,hide";
+			source: "elm";
+			script {
+				set_int(buttons_visible, get_int(buttons_visible) - 1);
+				set_state(PART:"title_btns_padding", "default", 0.0);
+				if (get_int(buttons_visible) == 0)
+					set_state(PART:"bottom_right_padding", "default", 0.0);
+			}
+		}
+		program {
+			name: "right_btn_show";
+			signal: "elm,state,title_right_btn,show";
+			source: "elm";
+			action: STATE_SET "visible" 0.0;
+			script {
+				set_int(buttons_visible, get_int(buttons_visible) + 1);
+				set_state(PART:"bottom_right_padding", "visible", 0.0);
+				if (get_int(buttons_visible) >= 2)
+					set_state(PART:"title_btns_padding", "visible", 0.0);
+			}
+		}
+		program {
+			name: "right_btn_hide";
+			signal: "elm,state,title_right_btn,hide";
+			source: "elm";
+			action: STATE_SET "default" 0.0;
+			script {
+				set_int(buttons_visible, get_int(buttons_visible) - 1);
+				set_state(PART:"title_btns_padding", "default", 0.0);
+				if (get_int(buttons_visible) == 0)
+					set_state(PART:"bottom_right_padding", "default", 0.0);
+			}
+		}
+
+		program {
+			name: "toolbar_bg_show";
+			signal: "elm,state,toolbar_bg,show";
+			source: "elm";
+			script {
+				set_state(PART:"toolbar_bg", "visible", 0.0);
+				set_int(tbar_bg, get_int(tbar_bg) + 1);
+			}
+		}
+		program {
+			name: "toolbar_bg_hide";
+			signal: "elm,state,toolbar_bg,hide";
+			source: "elm";
+			script {
+				set_int(tbar_bg, get_int(tbar_bg) - 1);
+				if (get_int(tbar_bg) <= 0)
+					set_state(PART:"toolbar_bg", "default", 0.0);
+			}
+		}
+		program {
+			name: "toolbar_open";
+			signal: "elm,state,toolbar,open";
+			source: "";
+			action: STATE_SET "visible" 0.0;
+			target: "toolbar_bg";
+			transition: LINEAR 0.2;
+		}
+		program {
+			name: "toolbar_close";
+			signal: "elm,state,toolbar,close";
+			source: "";
+			action: STATE_SET "default" 0.0;
+			target: "toolbar_bg";
+			transition: LINEAR 0.2;
+		}
+
+		program {
+			name: "show_finished";
+			action: SIGNAL_EMIT "elm,action,show,finished" "";
+		}
+		program {
+			name: "hide_finished";
+			action: SIGNAL_EMIT "elm,action,hide,finished" "";
+		}
+
+		program {
+			name: "pushed_finished";
+			action: SIGNAL_EMIT "elm,action,pushed,finished" "";
+		}
+		program {
+			name: "popped_finished";
+			action: SIGNAL_EMIT "elm,action,popped,finished" "";
+		}
+		program {
+			name: "title_clicked";
+			signal: "mouse,clicked,1";
+			source: "click_event_area";
+			action: SIGNAL_EMIT "elm,action,title,clicked" "";
+		}
+		program {
+			name: "display_mode_compress";
+			signal: "display,mode,compress";
+			source: "";
+			action: SIGNAL_EMIT "elm,state,toolbar,instant_close" "";
+		}
+		program {
+			name: "display_mode_default";
+			signal: "display,mode,default";
+			source: "";
+			action: SIGNAL_EMIT "elm,state,toolbar,instant_open" "";
+		}
+	}
+}
+

@@ -1,0 +1,390 @@
+msgid "IDS_VIDEO_OPT_DOWNLOAD"
+msgstr "Preuzmi"
+
+msgid "IDS_VIDEO_POP_1_FOLDER_WILL_BE_DOWNLOADED"
+msgstr "Jedan folder će biti izbrisan."
+
+msgid "IDS_VIDEO_POP_1_VIDEO_WILL_BE_DOWNLOADED"
+msgstr "Jedan video zapis će biti preuzet."
+
+msgid "IDS_VIDEO_POP_ALL_FOLDERS_WILL_BE_DOWNLOADED"
+msgstr "Svi folderi će biti preuzeti."
+
+msgid "IDS_VIDEO_POP_ALL_VIDEOS_WILL_BE_DOWNLOADED"
+msgstr "Svi video zapisi će biti preuzeti."
+
+msgid "IDS_VIDEO_POP_PD_FOLDERS_WILL_BE_DOWNLOADED"
+msgstr "Biće preuzet sledeći broj foldera: %d."
+
+msgid "IDS_VIDEO_POP_PD_VIDEOS_WILL_BE_DOWNLOADED"
+msgstr "Biće preuzet sledeći broj video zapisa: %d."
+
+msgid "IDS_VIDEO_TPOP_MOBILE_DATA_TURNED_OFF_CONNECT_TO_WI_FI_NETWORK_INSTEAD_OR_TURN_ON_MOBILE_DATA_AND_TRY_AGAIN"
+msgstr "Prenos podataka putem mobilne telefonije je isključen. Umesto toga, poveži se na Wi-Fi mrežu ili uključi Prenos podataka putem mobilne telefonije i pokušaj ponovo."
+
+msgid "IDS_GALLERY_OPT_PRIVATE_M_CONTENT"
+msgstr "Privatni"
+
+msgid "IDS_VIDEO_BODY_B"
+msgstr "B"
+
+msgid "IDS_VIDEO_BODY_GB"
+msgstr "GB"
+
+msgid "IDS_VIDEO_BODY_KB"
+msgstr "KB"
+
+msgid "IDS_VIDEO_BODY_LOCATION"
+msgstr "Lokacija"
+
+msgid "IDS_VIDEO_BODY_MB"
+msgstr "MB"
+
+msgid "IDS_VIDEO_BODY_UNKNOWN"
+msgstr "Nepoznato"
+
+msgid "IDS_VIDEO_BUTTON_OK"
+msgstr "OK"
+
+msgid "IDS_VIDEO_HEADER_1_FOLDER"
+msgstr "1 folder(a)"
+
+msgid "IDS_VIDEO_HEADER_1_VIDEO"
+msgstr "1 video"
+
+msgid "IDS_VIDEO_HEADER_ALL"
+msgstr "Sve"
+
+msgid "IDS_VIDEO_HEADER_FROM_DEVICE"
+msgstr "U uređaju"
+
+msgid "IDS_VIDEO_HEADER_FROM_DROPBOX"
+msgstr "U Dropbox-u"
+
+msgid "IDS_VIDEO_HEADER_LAST_MODIFIED_M_DATE"
+msgstr "Poslednja izmena"
+
+msgid "IDS_VIDEO_OPT_CONTENT_TO_DISPLAY"
+msgstr "Sadržaj za prikazivanje"
+
+msgid "IDS_VIDEO_OPT_SEARCH"
+msgstr "Pretraga"
+
+msgid "IDS_VIDEO_OPT_SHARE"
+msgstr "Podeli"
+
+msgid "IDS_VIDEO_POP_1_FOLDER_WILL_BE_DELETED"
+msgstr "Biće izbrisan 1 folder."
+
+msgid "IDS_VIDEO_TPOP_DELETING_ING"
+msgstr "Brisanje..."
+
+msgid "IDS_VIDEO_BODY_AFTER_YOU_RECORD_VIDEOS_USING_THE_CAMERA_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Nakon snimanja video zapisa kamerom, oni će se prikazati ovde."
+
+msgid "IDS_VIDEO_HEADER_PD_VIDEOS"
+msgstr "%d video zapisa"
+
+msgid "IDS_VIDEO_HEADER_VIDEO"
+msgstr "Video zapis"
+
+msgid "IDS_VIDEO_NPBODY_NO_VIDEOS"
+msgstr "Nema video zapisa"
+
+msgid "IDS_VIDEO_OPT_DETAILS"
+msgstr "Detalji"
+
+msgid "IDS_VIDEO_OPT_FOLDER"
+msgstr "Folder"
+
+msgid "IDS_VIDEO_OPT_LIST"
+msgstr "Lista"
+
+msgid "IDS_VIDEO_OPT_RECENTLY_ADDED_ABB"
+msgstr "Nedavno dodato"
+
+msgid "IDS_VIDEO_OPT_RECENTLY_VIEWED_ABB"
+msgstr "Nedavno prikazano"
+
+msgid "IDS_VIDEO_OPT_RENAME"
+msgstr "Preimenuj"
+
+msgid "IDS_VIDEO_OPT_SIZE"
+msgstr "Veličina"
+
+msgid "IDS_VIDEO_OPT_SORT_BY"
+msgstr "Sortiraj po"
+
+msgid "IDS_VIDEO_OPT_TITLE"
+msgstr "Naslov"
+
+msgid "IDS_VIDEO_OPT_TYPE"
+msgstr "Tip"
+
+msgid "IDS_VIDEO_OPT_VIEW_AS"
+msgstr "Prikaži kao"
+
+msgid "IDS_VIDEO_POP_ALL_VIDEOS_WILL_BE_DELETED"
+msgstr "Svi video zapisi će biti izbrisani."
+
+msgid "IDS_VIDEO_POP_PD_FOLDERS_WILL_BE_DELETED"
+msgstr "Biće izbrisano %d foldera."
+
+msgid "IDS_VIDEO_POP_PD_VIDEOS_WILL_BE_DELETED"
+msgstr "%d video zapisi biće izbrisani."
+
+msgid "IDS_VIDEO_POP_THIS_FOLDER_WILL_BE_DELETED"
+msgstr "Ovaj folder će biti izbrisan."
+
+msgid "IDS_VIDEO_HEADER_PD_FOLDERS"
+msgstr "%d foldera"
+
+msgid "IDS_VIDEO_HEADER_SETTINGS"
+msgstr "Podešavanja"
+
+msgid "IDS_VIDEO_HEADER_UNABLE_TO_PLAY_VIDEO_ABB"
+msgstr "Nemoguća reprodukcija videa"
+
+msgid "IDS_VIDEO_MBODY_ALIGNMENT"
+msgstr "Poravnanje"
+
+msgid "IDS_VIDEO_MBODY_FONT_SIZE"
+msgstr "Veličina slova"
+
+msgid "IDS_VIDEO_OPT_REPEAT_SETTING_ABB"
+msgstr "Podešavanje ponavljanja"
+
+msgid "IDS_VIDEO_OPT_SUBTITLES_HCC_ABB"
+msgstr "Titlovi"
+
+msgid "IDS_VIDEO_POP_ALL_FOLDERS_WILL_BE_DELETED"
+msgstr "Biće izbrisani svi folderi."
+
+msgid "IDS_VIDEO_SBODY_CENTRE_M_STATUS"
+msgstr "Središnje"
+
+msgid "IDS_VIDEO_SBODY_LARGE_M_STATUS"
+msgstr "Velika"
+
+msgid "IDS_VIDEO_SBODY_LEFT_M_STATUS"
+msgstr "Levo"
+
+msgid "IDS_VIDEO_SBODY_MEDIUM_M_STATUS"
+msgstr "Srednji"
+
+msgid "IDS_VIDEO_SBODY_RIGHT_M_STATUS"
+msgstr "Desno"
+
+msgid "IDS_VIDEO_SBODY_SMALL_M_STATUS"
+msgstr "Mala"
+
+msgid "IDS_VIDEO_TPOP_FILE_NAME_ALREADY_IN_USE"
+msgstr "Naziv fajla već u upotrebi."
+
+msgid "IDS_GALLERY_OPT_REMOVE_FROM_PRIVATE"
+msgstr "Ukloni iz režima Privatno"
+
+msgid "IDS_GALLERY_OPT_MOVE_TO_PRIVATE"
+msgstr "Premesti u folder Privatno"
+
+msgid "IDS_IV_POP_ENTRY_IS_EMPTY"
+msgstr "Unos je prazan."
+
+msgid "IDS_VPL_OPT_FORMAT"
+msgstr "Format"
+
+msgid "IDS_VPL_BODY_UNABLE_TO_PLAY_VIDEO_DURING_CALL"
+msgstr "Nemoguće reprodukovati video tokom poziva."
+
+msgid "IDS_CLOUD_BODY_DROPBOX_ABB"
+msgstr "Dropbox"
+
+msgid "IDS_VIDEO_POP_THIS_FILE_IS_UNAVAILABLE_WHILE_OFFLINE_CHECK_NETWORK_CONNECTION_AND_TRY_AGAIN"
+msgstr "Ovaj fajl nije dostupan dok si offline. Proveri mrežnu vezu i pokušaj ponovo."
+
+msgid "IDS_VIDEO_POP_THE_SELECTED_ITEM_WILL_BE_MOVED_TO_PS"
+msgstr "Izabrana stavka će biti premeštena u %s."
+
+msgid "IDS_VIDEO_POP_THE_SELECTED_ITEMS_WILL_BE_MOVED_TO_PS"
+msgstr "Izabrane stavke će biti premeštene u %s."
+
+msgid "IDS_VIDEO_POP_REMOVING_ING"
+msgstr "Uklanjanje..."
+
+msgid "IDS_VIDEO_POP_MOVING_ING"
+msgstr "Premeštanje"
+
+msgid "IDS_VIDEO_POP_FAILED_TO_MOVE_TO_PERSONAL_STORAGE"
+msgstr "Neuspešno premeštanje u ličnu memoriju."
+
+msgid "IDS_VIDEO_POP_FAILED_TO_MOVE_TO_NORMAL_STORAGE"
+msgstr "Neuspešno premeštanje u običnu memoriju."
+
+msgid "IDS_VIDEO_OPT_MESSAGE_ABB"
+msgstr "Poruka"
+
+msgid "IDS_VIDEO_OPT_FOLDERS_ABB"
+msgstr "Folderi"
+
+msgid "IDS_VIDEO_OPT_EMAIL_ABB"
+msgstr "E-pošta"
+
+msgid "IDS_VIDEO_OPT_DATE_HMOST_RECENT_ABB"
+msgstr "Datum (najnovije)"
+
+msgid "IDS_VIDEO_HEADER_PD_SELECTED"
+msgstr "Izabrano: %d"
+
+msgid "IDS_VIDEO_HEADER_DELETE_VIDEOS"
+msgstr "Izbrisati video zapise"
+
+msgid "IDS_VIDEO_HEADER_DELETE_VIDEO"
+msgstr "Izbriši video zapis"
+
+msgid "IDS_VIDEO_BUTTON_MOVE_ABB"
+msgstr "Premesti"
+
+msgid "IDS_VIDEO_BODY_LONGITUDE"
+msgstr "Geografska dužina"
+
+msgid "IDS_VIDEO_BODY_LATITUDE"
+msgstr "Geografska širina"
+
+msgid "IDS_VIDEO_BODY_AFTER_YOU_RECORD_VIDEOS_USING_THE_CAMERA_VIDEOS_WILL_BE_SHOWN"
+msgstr "Nakon što snimiš video zapise pomoću kamere, oni će se prikazati."
+
+msgid "IDS_VIDEO_SK_CANCEL_ABB"
+msgstr "Otkaži"
+
+msgid "IDS_VIDEO_OPT_STOP_AFTER_ALL_ABB"
+msgstr "Zaustavi nakon svega"
+
+msgid "IDS_VIDEO_OPT_REPEAT_CURRENT_ABB"
+msgstr "Ponovi aktuelno"
+
+msgid "IDS_VIDEO_OPT_REPEAT_ALL_ABB"
+msgstr "Ponovi sve"
+
+msgid "IDS_VIDEO_BODY_RESOLUTION"
+msgstr "Rezolucija"
+
+msgid "IDS_VIDEO_BUTTON_DELETE"
+msgstr "Obriši"
+
+msgid "IDS_ST_OPT_DELETE_ALL"
+msgstr "Izbriši sve"
+
+msgid "IDS_VPL_TPOP_ONLY_AUDIO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_AUDIO"
+msgstr "Ovaj fajl podržava samo zvučne podatke. Sada se reprodukuje zvuk."
+
+msgid "IDS_VPL_TPOP_ONLY_VIDEO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_VIDEO"
+msgstr "Ovaj fajl podržava samo video podatke. Sada se reprodukuje video zapis."
+
+msgid "IDS_MUSIC_OPT_RENAME"
+msgstr "Preimenuj"
+
+msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
+msgstr "Slušalice"
+
+msgid "IDS_VIDEO_BUTTON_DOWNLOAD"
+msgstr "Preuzmi"
+
+msgid "IDS_TPLATFORM_BODY_OFF"
+msgstr "Isključeno"
+
+msgid "IDS_TPLATFORM_BODY_ON"
+msgstr "Uključeno"
+
+msgid "IDS_VIDEO_POP_1_VIDEO_WILL_BE_DELETED"
+msgstr "Jedan video zapis će se izbrisati."
+
+msgid "IDS_SWALL_HEADER_INVALID_CHARACTER"
+msgstr "Neispravan karakter"
+
+msgid "IDS_VIDEO_BODY_NO_SEARCH_RESULTS"
+msgstr "Nema rezultata pretrage"
+
+msgid "IDS_GALLERY_HEADER_SELECT"
+msgstr "Izaberi"
+
+msgid "IDS_VIDEO_BODY_LAST_MODIFIED_M_DATE_ABB"
+msgstr "Poslednja izmena"
+
+msgid "IDS_VIDEO_BUTTON_DONE"
+msgstr "Gotovo"
+
+msgid "IDS_VIDEO_HEADER_DATE"
+msgstr "Datum"
+
+msgid "IDS_VIDEO_HEADER_LATITUDE"
+msgstr "Geografska širina"
+
+msgid "IDS_VIDEO_OPT_NAME"
+msgstr "Ime"
+
+msgid "IDS_VIDEO_OPT_NAME_HA_Z_ABB"
+msgstr "Ime (A-Z)"
+
+msgid "IDS_VIDEO_OPT_VIDEOS"
+msgstr "Video zapisi"
+
+msgid "IDS_VIDEO_TPOP_MAXIMUM_NUMBER_OF_ATTACHMENTS_HPD_EXCEEDED"
+msgstr "Prekoračen je maksimalan broj priloga (%d)."
+
+msgid "IDS_VIDEO_HEADER_SELECT_ALL"
+msgstr "Izaberi sve"
+
+msgid "IDS_VIDEO_SBODY_DEVICE_STORAGE"
+msgstr "Skladišna lokacija uređaja"
+
+msgid "IDS_VIDEO_SBODY_SD_CARD"
+msgstr "SD kartica"
+
+msgid "IDS_VIDEO_OPT_SHARE_VIA"
+msgstr "Podeli putem"
+
+msgid "IDS_VIDEO_POP_A_NETWORK_ERROR_HAS_OCCURRED_TRY_AGAIN"
+msgstr "Došlo je do greške na mreži. Pokušaj ponovo."
+
+msgid "IDS_VPL_OPT_AUTO_PLAY_NEXT_ABB"
+msgstr "Auto. pusti sled."
+
+msgid "IDS_VPL_POP_PROCESSING_ING"
+msgstr "Obrada..."
+
+msgid "IDS_MEMO_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Dostignut je maksimalan broj karaktera."
+
+msgid "IDS_MUSIC_OPT_DELETE"
+msgstr "Izbriši"
+
+msgid "IDS_MUSIC_OPT_DELETE_ALL"
+msgstr "Izbriši sve"
+
+msgid "IDS_PB_BODY_NO_SEARCH_RESULT"
+msgstr "Nema rezultata pretrage"
+
+msgid "IDS_VIDEO_HEADER_SELECT_ITEM"
+msgstr "Izaberi objekat"
+
+msgid "IDS_VIDEO_HEADER_SELECT_ITEMS"
+msgstr "Izaberi stavke"
+
+msgid "IDS_CLOCK_BUTTON_CANCEL"
+msgstr "Otkaži"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "GOTOVO"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "OTKAŽI"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DELETE_ABB"
+msgstr "IZBRIŠI"
+
+msgid "IDS_TPLATFORM_MBODY_STORAGE_LOCATION"
+msgstr "Skladišna lokacija"
+
+msgid "IDS_GALLERY_HEADER_SELECT_VIDEO"
+msgstr "Izaberi video zapis"
+

@@ -1,0 +1,489 @@
+msgid "IDS_VIDEO_OPT_BRIGHTNESS"
+msgstr "Jasność"
+
+msgid "IDS_VIDEO_OPT_MUSIC_M_SOUNDALIVE"
+msgstr "Muzyka"
+
+msgid "IDS_VIDEO_OPT_VOICES_M_PERSON"
+msgstr "Głosowy"
+
+msgid "IDS_VIDEO_BODY_B"
+msgstr "B"
+
+msgid "IDS_VIDEO_BODY_GB"
+msgstr "GB"
+
+msgid "IDS_VIDEO_BODY_KB"
+msgstr "kB"
+
+msgid "IDS_VIDEO_BODY_LOCATION"
+msgstr "Lokalizacja"
+
+msgid "IDS_VIDEO_BODY_MB"
+msgstr "MB"
+
+msgid "IDS_VIDEO_BUTTON_OK"
+msgstr "OK"
+
+msgid "IDS_VIDEO_HEADER_LAST_MODIFIED_M_DATE"
+msgstr "Ostatnia modyfikacja"
+
+msgid "IDS_VIDEO_OPT_SHARE"
+msgstr "Udostępniaj"
+
+msgid "IDS_VIDEO_HEADER_CANNOT_PLAY_VIDEO_ABB"
+msgstr "Nie można odtworzyć filmu"
+
+msgid "IDS_VIDEO_POP_AN_ERROR_OCCURRED_WITH_THE_SUBTITLES"
+msgstr "Wystąpił błąd związany z napisami."
+
+msgid "IDS_VIDEO_POP_THE_FILE_IS_CORRUPTED_OR_THE_SD_CARD_HAS_BEEN_REMOVED"
+msgstr "Plik jest uszkodzony lub wyjęto kartę pamięci."
+
+msgid "IDS_VIDEO_OPT_DETAILS"
+msgstr "Szczegóły"
+
+msgid "IDS_VIDEO_OPT_TITLE"
+msgstr "Tytuł"
+
+msgid "IDS_VIDEO_POP_THIS_VIDEO_WILL_BE_DELETED"
+msgstr "Ten film wideo zostanie usunięty."
+
+msgid "IDS_VIDEO_HEADER_SETTINGS"
+msgstr "Ustawienia"
+
+msgid "IDS_VIDEO_HEADER_UNABLE_TO_PLAY_VIDEO_ABB"
+msgstr "Nie można odtworzyć filmu"
+
+msgid "IDS_VIDEO_MBODY_ALIGNMENT"
+msgstr "Wyrównanie"
+
+msgid "IDS_VIDEO_MBODY_FONT_SIZE"
+msgstr "Rozmiar tekstu"
+
+msgid "IDS_VIDEO_OPT_REPEAT_SETTING_ABB"
+msgstr "Ustawienie powtarzania"
+
+msgid "IDS_VIDEO_OPT_SUBTITLES_HCC_ABB"
+msgstr "Napisy (kodowane)"
+
+msgid "IDS_VIDEO_SBODY_CENTRE_M_STATUS"
+msgstr "Pośrodku"
+
+msgid "IDS_VIDEO_SBODY_LARGE_M_STATUS"
+msgstr "Duży"
+
+msgid "IDS_VIDEO_SBODY_LEFT_M_STATUS"
+msgstr "Do lewej"
+
+msgid "IDS_VIDEO_SBODY_MEDIUM_M_STATUS"
+msgstr "Średnia"
+
+msgid "IDS_VIDEO_SBODY_RIGHT_M_STATUS"
+msgstr "Do prawej"
+
+msgid "IDS_VIDEO_SBODY_SMALL_M_STATUS"
+msgstr "Mały"
+
+msgid "IDS_BR_SK_NEXT"
+msgstr "Dalej"
+
+msgid "IDS_BR_SK_PREVIOUS"
+msgstr "Wstecz"
+
+msgid "IDS_VPL_POP_DRM_FILES_CANNOT_BE_SHARED"
+msgstr "Nie można udostępnić plików DRM."
+
+msgid "IDS_VPL_OPT_FORMAT"
+msgstr "Format"
+
+msgid "IDS_VPL_BODY_UNABLE_TO_PLAY_VIDEO_DURING_CALL"
+msgstr "Nie można odtwarzać wideo podczas połączenia."
+
+msgid "IDS_VIDEO_OPT_MESSAGE_ABB"
+msgstr "Wiadom."
+
+msgid "IDS_VIDEO_OPT_FILE_TRANSFER_ABB"
+msgstr "Przesyłanie plików"
+
+msgid "IDS_VIDEO_OPT_EMAIL_ABB"
+msgstr "Email"
+
+msgid "IDS_VIDEO_BODY_LONGITUDE"
+msgstr "Długość geogr."
+
+msgid "IDS_VIDEO_BODY_LATITUDE"
+msgstr "Szerokość geogr."
+
+msgid "IDS_MUSIC_BUTTON_ENABLE_MOTION"
+msgstr "Wł. f. ruchu"
+
+msgid "IDS_VPL_TPOP_SCRUBBING_AT_PSX_SPEED"
+msgstr "Przewijanie z szybkością %s."
+
+msgid "IDS_VPL_TAB_EXTERNAL_STORAGE"
+msgstr "Pamięć zewnętrzna"
+
+msgid "IDS_VPL_POP_VOLUME_M_SOUND"
+msgstr "Głośność"
+
+msgid "IDS_VPL_POP_UNSUPPORTED_VIDEO_FORMAT"
+msgstr "Nieobsługiwany format wideo."
+
+msgid "IDS_VPL_POP_UNSUPPORTED_FILE_TYPE"
+msgstr "Nieobsługiwany typ pliku."
+
+msgid "IDS_VPL_POP_UNSUPPORTED_AUDIO_FORMAT"
+msgstr "Nieobsługiwany format dźwięku."
+
+msgid "IDS_VPL_POP_UNABLE_TO_USE_FAST_FORWARD_AND_REWIND_WHEN_NEARBY_DEVICES_ARE_ENABLED"
+msgstr "Nie można używać przewijania do przodu ani do tyłu, gdy włączone są urządzenia w pobliżu."
+
+msgid "IDS_VPL_POP_UNABLE_TO_CAPTURE"
+msgstr "Nie można przechwycić."
+
+msgid "IDS_VPL_POP_ROTATE"
+msgstr "Obróć"
+
+msgid "IDS_VPL_POP_PRESS_THE_BACK_KEY_AGAIN_TO_RETURN_TO_PREVIOUS_SCREEN"
+msgstr "Naciśnij ponownie klawisz wstecz, aby wrócić do poprzedniego ekranu."
+
+msgid "IDS_VPL_POP_NOT_ENOUGH_MEMORY_DELETE_SOME_ITEMS"
+msgstr "Brak pamięci. Usuń niektóre elementy"
+
+msgid "IDS_VPL_POP_BOOKMARK_LIST_FULL_DELETE_SOME_BOOKMARKS"
+msgstr "Lista zakładek pełna. Usuń niektóre zakładki."
+
+msgid "IDS_VPL_OPT_YELLOW_M_COLOUR"
+msgstr "Żółty"
+
+msgid "IDS_VPL_OPT_VIRTUAL_71_CH"
+msgstr "Wirtualne 7.1"
+
+msgid "IDS_VPL_OPT_SUBTITLES_HCC_ABB"
+msgstr "Napisy (kodowane)"
+
+msgid "IDS_VPL_OPT_SOUNDALIVE"
+msgstr "SoundAlive"
+
+msgid "IDS_VPL_OPT_REPEAT_MODE"
+msgstr "Tryb powtarzania"
+
+msgid "IDS_VPL_OPT_NO_REPEAT"
+msgstr "Bez powtarzania"
+
+msgid "IDS_VPL_OPT_MAGENTA_M_COLOUR"
+msgstr "Amarantowy"
+
+msgid "IDS_VPL_OPT_GREEN"
+msgstr "Zielony"
+
+msgid "IDS_VPL_OPT_CYAN_M_COLOUR"
+msgstr "Cyjan"
+
+msgid "IDS_VPL_OPT_CUSTOM"
+msgstr "Niestandardowa"
+
+msgid "IDS_VPL_OPT_CURRENT_VIDEO_HONCE_ABB"
+msgstr "Bieżący film (raz)"
+
+msgid "IDS_VPL_OPT_CONNECTION_INFO_ABB"
+msgstr "Inform. o połączeniu"
+
+msgid "IDS_VPL_OPT_CHANGE_PLAYER"
+msgstr "Zmień odtwarzacz"
+
+msgid "IDS_VPL_OPT_CAPTURE"
+msgstr "Przechwyć"
+
+msgid "IDS_VPL_OPT_ALLSHARE"
+msgstr "AllShare"
+
+msgid "IDS_VPL_HEADER_SELECT_DEVICE_ABB"
+msgstr "Wybierz urządzenie"
+
+msgid "IDS_VPL_HEADER_AVAILABLE_DEVICES_ABB"
+msgstr "Dostępne urządzenia"
+
+msgid "IDS_VPL_BUTTON_SPEAKER_ABB"
+msgstr "Głośnik"
+
+msgid "IDS_VPL_BODY_WHITE"
+msgstr "Biały"
+
+msgid "IDS_VPL_BODY_UDRGOTHICM_M_FONT"
+msgstr "UDRGothicM"
+
+msgid "IDS_VPL_BODY_UDMINCHO_M_FONT"
+msgstr "UDMincho"
+
+msgid "IDS_VPL_BODY_ROSEMARY_M_FONT"
+msgstr "Rosemary"
+
+msgid "IDS_VPL_BODY_RED_ABB"
+msgstr "Czerwony"
+
+msgid "IDS_VPL_BODY_PS_SECONDS"
+msgstr "%s s"
+
+msgid "IDS_VPL_BODY_POP_M_FONT"
+msgstr "POP"
+
+msgid "IDS_VPL_BODY_PLAY_SPEED"
+msgstr "Szybkość odtwarzania"
+
+msgid "IDS_VPL_BODY_PD_SECS"
+msgstr "%d sek."
+
+msgid "IDS_VPL_BODY_OFF"
+msgstr "Wyłącz"
+
+msgid "IDS_VPL_BODY_NO_TITLE"
+msgstr "Brak tytułu"
+
+msgid "IDS_VPL_BODY_MY_DEVICE"
+msgstr "Moje urządzenie"
+
+msgid "IDS_VPL_BODY_DEFAULT_FONT"
+msgstr "Czcionka domyślna"
+
+msgid "IDS_VPL_BODY_COOL_JAZZ_M_FONT"
+msgstr "Cool jazz"
+
+msgid "IDS_VPL_BODY_CHOCO_COOKY_M_FONT"
+msgstr "Choco cooky"
+
+msgid "IDS_VPL_BODY_BLUE"
+msgstr "Niebieski"
+
+msgid "IDS_VPL_BODY_BLACK"
+msgstr "Czarny"
+
+msgid "IDS_VPL_BODY_ACTIVATION"
+msgstr "Aktywacja"
+
+msgid "IDS_SMEMO_POP_CLOSE_APPLICATION_Q"
+msgstr "Zamknąć aplikację?"
+
+msgid "IDS_VIDEO_SK_CANCEL_ABB"
+msgstr "Anul."
+
+msgid "IDS_VIDEO_OPT_STOP_AFTER_ALL_ABB"
+msgstr "Zatrzymaj po wszyst."
+
+msgid "IDS_VIDEO_OPT_REPEAT_CURRENT_ABB"
+msgstr "Powtórz bieżący"
+
+msgid "IDS_VIDEO_OPT_REPEAT_ALL_ABB"
+msgstr "Powtórz wszystkie"
+
+msgid "IDS_VIDEO_BODY_RESOLUTION"
+msgstr "Rozdzielczość"
+
+msgid "IDS_VIDEO_BODY_PS_SOUND_EFFECTS_NOT_SUPPORTED_BY_SPEAKER"
+msgstr "Efekty dźwiękowe %s nie są obsługiwane przez głośnik."
+
+msgid "IDS_MUSIC_BODY_TURN_PHONE_OVER_TO_MUTE_INCOMING_CALLS_MESSAGE_ALERTS_AND_ALARMS"
+msgstr "Odwróć telefon, aby wyciszyć połączenia przychodzące, dźwięki wiad. i alarmy."
+
+msgid "IDS_ST_BODY_SD_CARD"
+msgstr "Karta pamięci"
+
+msgid "IDS_VPL_TPOP_ONLY_AUDIO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_AUDIO"
+msgstr "Ten plik obsługuje tylko dane audio. Trwa odtwarzanie dźwięku."
+
+msgid "IDS_VPL_TPOP_ONLY_VIDEO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_VIDEO"
+msgstr "Ten plik obsługuje tylko dane wideo. Trwa odtwarzanie wideo."
+
+msgid "IDS_ST_BODY_PRIVATE_STORAGE"
+msgstr "Pamięć prywatna"
+
+msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
+msgstr "Słuchawki"
+
+msgid "IDS_MUSIC_OPT_SPEAKER"
+msgstr "Głośnik"
+
+msgid "IDS_MUSIC_OPT_PAUSE"
+msgstr "Pauza"
+
+msgid "IDS_VIDEO_BUTTON_DOWNLOAD"
+msgstr "Pobierz"
+
+msgid "IDS_VIDEO_MBODY_SELECT_SUBTITLES_HCC"
+msgstr "Wybierz napisy (kodowane)"
+
+msgid "IDS_VIDEO_NPBODY_PREVIEW_SUBTITLES_HCC_ABB"
+msgstr "Podgląd napisów (kodowane)"
+
+msgid "IDS_VIDEO_OPT_REPEAT_MODE_ABB"
+msgstr "Tryb powtarzania"
+
+msgid "IDS_VIDEO_POP_UNSUPPORTED_FILE_TYPE"
+msgstr "Nieobsługiwany typ pliku."
+
+msgid "IDS_VIDEO_OPT_NORMAL_M_SOUND_ABB"
+msgstr "Normalna"
+
+msgid "IDS_VIDEO_BODY_VOICE"
+msgstr "Głosowy"
+
+msgid "IDS_VIDEO_BODY_MOVIES"
+msgstr "Filmy"
+
+msgid "IDS_VIDEO_OPT_AUDIO_TRACK_ABB"
+msgstr "Ścieżka dźwiękowa"
+
+msgid "IDS_VIDEO_BODY_BUFFERING_ING_ABB"
+msgstr "Buforowan..."
+
+msgid "IDS_VIDEO_BODY_FILE_FORMAT"
+msgstr "Format pliku"
+
+msgid "IDS_VIDEO_BODY_LANGUAGE"
+msgstr "Język"
+
+msgid "IDS_VIDEO_BODY_NO_VIDEOS"
+msgstr "Brak filmów wideo"
+
+msgid "IDS_VIDEO_BODY_SIZE"
+msgstr "Rozmiar"
+
+msgid "IDS_VIDEO_BUTTON_DONE"
+msgstr "Gotowe"
+
+msgid "IDS_VIDEO_BUTTON_REFRESH"
+msgstr "Odśwież"
+
+msgid "IDS_VIDEO_HEADER_DATE"
+msgstr "Data"
+
+msgid "IDS_VIDEO_HEADER_LOADING_ING_ABB"
+msgstr "Ładowanie..."
+
+msgid "IDS_VIDEO_HEADER_SUBTITLES_HCC_ABB2"
+msgstr "Napisy (kodowane)"
+
+msgid "IDS_VIDEO_IOPT3_DELETE"
+msgstr "Usuń"
+
+msgid "IDS_VIDEO_OPT_ADD_TO_HOME_SCREEN_ABB"
+msgstr "Dodaj do ekranu startowego"
+
+msgid "IDS_VIDEO_OPT_FACEBOOK_ABB"
+msgstr "Facebook"
+
+msgid "IDS_VIDEO_OPT_HDMI"
+msgstr "HDMI"
+
+msgid "IDS_VIDEO_OPT_NAME"
+msgstr "Nazwa"
+
+msgid "IDS_VIDEO_OPT_SOUNDALIVE_ABB2"
+msgstr "SoundAlive"
+
+msgid "IDS_VIDEO_OPT_YOUTUBE_ABB"
+msgstr "YouTube"
+
+msgid "IDS_VIDEO_POP_UNABLE_TO_PLAY_VIDEO"
+msgstr "Nie można odtworzyć filmu."
+
+msgid "IDS_VIDEO_SBODY_NO_SUBTITLES_AVAILABLE_M_STATUS"
+msgstr "Brak dostępnych napisów"
+
+msgid "IDS_VIDEO_SK3_PLAY"
+msgstr "Odtwórz"
+
+msgid "IDS_VIDEO_SK_CLOSE"
+msgstr "Zamknij"
+
+msgid "IDS_VPL_POP_INVALID_URL"
+msgstr "Nieprawidłowy adres URL"
+
+msgid "IDS_CHATON_HEADER_ERROR_ABB"
+msgstr "Błąd"
+
+msgid "IDS_VIDEO_SBODY_DEVICE_STORAGE"
+msgstr "Pamięć urządzenia"
+
+msgid "IDS_COM_BODY_VIDEO_PLAYER_T_MAINMENU"
+msgstr "Odtwarzacz wideo"
+
+msgid "IDS_VIDEO_OPT_SHARE_VIA"
+msgstr "Udostępnij przez"
+
+msgid "IDS_VIDEO_POP_A_NETWORK_ERROR_HAS_OCCURRED_TRY_AGAIN"
+msgstr "Wystąpił błąd sieci. Spróbuj później."
+
+msgid "IDS_VIDEO_TPOP_ONLY_AUDIO_DATA_SUPPORTED_BY_THIS_FILE_FORMAT_NOW_PLAYING_AUDIO"
+msgstr "Ten format plików obsługuje tylko dane audio. Trwa odtwarzanie dźwięku."
+
+msgid "IDS_VIDEO_TPOP_ONLY_VIDEO_DATA_SUPPORTED_BY_THIS_FILE_FORMAT_NOW_PLAYING_VIDEO"
+msgstr "Ten format pliku obsługuje tylko dane wideo. Trwa odtwarzanie wideo."
+
+msgid "IDS_VPL_BODY_CENTRE"
+msgstr "Centrum"
+
+msgid "IDS_VPL_BODY_ON"
+msgstr "Włącz"
+
+msgid "IDS_VPL_BODY_SETTINGS"
+msgstr "Ustawienia"
+
+msgid "IDS_VPL_BODY_VIDEOS_T_MAINMENU"
+msgstr "Filmy"
+
+msgid "IDS_VPL_BUTTON_SHARE"
+msgstr "Udost."
+
+msgid "IDS_VPL_HEADER_DETAILS"
+msgstr "Szczegóły"
+
+msgid "IDS_VPL_OPT_DELETE"
+msgstr "Usuń"
+
+msgid "IDS_VPL_POP_BUFFERING_PDP"
+msgstr "Buforowanie — %d%"
+
+msgid "IDS_VIDEO_OPT_NONE"
+msgstr "Brak"
+
+msgid "IDS_VIDEO_BODY_PD_SECS_ABB3"
+msgstr "%d s"
+
+msgid "IDS_MUSIC_HEADER_SOUNDALIVE_ABB3"
+msgstr "SoundAlive"
+
+msgid "IDS_MP_HEADER_SELECT_AUDIO_DEVICE"
+msgstr "Wybór urządzenia audio"
+
+msgid "IDS_MUSIC_OPT_DELETE"
+msgstr "Usuń"
+
+msgid "IDS_CLOCK_BUTTON_CANCEL"
+msgstr "Anuluj"
+
+msgid "IDS_VIDEO_POP_AN_UNKNOWN_ERROR_HAS_OCCURRED_OR_THE_FILE_MAY_BE_CORRUPT"
+msgstr "Wystąpił nieznany błąd lub plik może być uszkodzony."
+
+msgid "IDS_VIDEO_POP_THIS_FILE_TYPE_IS_NOT_SUPPORTED"
+msgstr "Ten typ plików nie jest obsługiwany."
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "GOTOWE"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "ANULUJ"
+
+msgid "IDS_TPLATFORM_MBODY_STORAGE_LOCATION"
+msgstr "Położenie pamięci"
+
+msgid "IDS_GP_BODY_SUBTITLES_HCC"
+msgstr "Napisy (kodowane)"
+
+msgid "IDS_GALLERY_BODY_PERSONAL_STORAGE"
+msgstr "Pamięć osobista"
+
+msgid "IDS_ACCS_BODY_CAPTIONS_WILL_LOOK_LIKE_THIS"
+msgstr "Tak będą wyglądać napisy"
+

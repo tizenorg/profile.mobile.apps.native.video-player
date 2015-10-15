@@ -1,0 +1,489 @@
+msgid "IDS_VIDEO_OPT_BRIGHTNESS"
+msgstr "Yorqinlik"
+
+msgid "IDS_VIDEO_OPT_MUSIC_M_SOUNDALIVE"
+msgstr "Musiqa"
+
+msgid "IDS_VIDEO_OPT_VOICES_M_PERSON"
+msgstr "Ovozlar"
+
+msgid "IDS_VIDEO_BODY_B"
+msgstr "B"
+
+msgid "IDS_VIDEO_BODY_GB"
+msgstr "Gb"
+
+msgid "IDS_VIDEO_BODY_KB"
+msgstr "KB"
+
+msgid "IDS_VIDEO_BODY_LOCATION"
+msgstr "Joylashuv"
+
+msgid "IDS_VIDEO_BODY_MB"
+msgstr "Mb"
+
+msgid "IDS_VIDEO_BUTTON_OK"
+msgstr "OK"
+
+msgid "IDS_VIDEO_HEADER_LAST_MODIFIED_M_DATE"
+msgstr "Oxirgi o‘zgartirilgan"
+
+msgid "IDS_VIDEO_OPT_SHARE"
+msgstr "Ulashish"
+
+msgid "IDS_VIDEO_HEADER_CANNOT_PLAY_VIDEO_ABB"
+msgstr "Videoni o‘ynatib bo‘lmaydi"
+
+msgid "IDS_VIDEO_POP_AN_ERROR_OCCURRED_WITH_THE_SUBTITLES"
+msgstr "Subtitrlar bilan bog‘liq xato yuz berdi."
+
+msgid "IDS_VIDEO_POP_THE_FILE_IS_CORRUPTED_OR_THE_SD_CARD_HAS_BEEN_REMOVED"
+msgstr "Fayl shikastlangan yoki SD-karta olib tashlangan."
+
+msgid "IDS_VIDEO_OPT_DETAILS"
+msgstr "Tafsilotlar"
+
+msgid "IDS_VIDEO_OPT_TITLE"
+msgstr "Sarlavha"
+
+msgid "IDS_VIDEO_POP_THIS_VIDEO_WILL_BE_DELETED"
+msgstr "Ushbu video o'chiriladi."
+
+msgid "IDS_VIDEO_HEADER_SETTINGS"
+msgstr "Parametrlar"
+
+msgid "IDS_VIDEO_HEADER_UNABLE_TO_PLAY_VIDEO_ABB"
+msgstr "Videoni o‘ynatib bo‘lmaydi"
+
+msgid "IDS_VIDEO_MBODY_ALIGNMENT"
+msgstr "Tenglashtirish"
+
+msgid "IDS_VIDEO_MBODY_FONT_SIZE"
+msgstr "Shrift o‘lchami"
+
+msgid "IDS_VIDEO_OPT_REPEAT_SETTING_ABB"
+msgstr "Takrorlash parametri"
+
+msgid "IDS_VIDEO_OPT_SUBTITLES_HCC_ABB"
+msgstr "Subtitrlar (CC)"
+
+msgid "IDS_VIDEO_SBODY_CENTRE_M_STATUS"
+msgstr "Markaz"
+
+msgid "IDS_VIDEO_SBODY_LARGE_M_STATUS"
+msgstr "Katta"
+
+msgid "IDS_VIDEO_SBODY_LEFT_M_STATUS"
+msgstr "Chap"
+
+msgid "IDS_VIDEO_SBODY_MEDIUM_M_STATUS"
+msgstr "O‘rta"
+
+msgid "IDS_VIDEO_SBODY_RIGHT_M_STATUS"
+msgstr "O‘ng"
+
+msgid "IDS_VIDEO_SBODY_SMALL_M_STATUS"
+msgstr "Kichik"
+
+msgid "IDS_BR_SK_NEXT"
+msgstr "Keyingi"
+
+msgid "IDS_BR_SK_PREVIOUS"
+msgstr "Avvalgi"
+
+msgid "IDS_VPL_POP_DRM_FILES_CANNOT_BE_SHARED"
+msgstr "DRM fayllarini ulashib bo‘lmaydi."
+
+msgid "IDS_VPL_OPT_FORMAT"
+msgstr "Format"
+
+msgid "IDS_VPL_BODY_UNABLE_TO_PLAY_VIDEO_DURING_CALL"
+msgstr "Qo‘ng‘iroq mobaynida video o‘ynatib bo‘lmaydi."
+
+msgid "IDS_VIDEO_OPT_MESSAGE_ABB"
+msgstr "Xabar"
+
+msgid "IDS_VIDEO_OPT_FILE_TRANSFER_ABB"
+msgstr "Faylni uzatish"
+
+msgid "IDS_VIDEO_OPT_EMAIL_ABB"
+msgstr "E-pochta"
+
+msgid "IDS_VIDEO_BODY_LONGITUDE"
+msgstr "Uzunlik"
+
+msgid "IDS_VIDEO_BODY_LATITUDE"
+msgstr "Kenglik"
+
+msgid "IDS_MUSIC_BUTTON_ENABLE_MOTION"
+msgstr "Harakatni yoq"
+
+msgid "IDS_VPL_TPOP_SCRUBBING_AT_PSX_SPEED"
+msgstr "%sx tezlikda tozalash."
+
+msgid "IDS_VPL_TAB_EXTERNAL_STORAGE"
+msgstr "Tashqi xotira"
+
+msgid "IDS_VPL_POP_VOLUME_M_SOUND"
+msgstr "Ovoz Balandliigi"
+
+msgid "IDS_VPL_POP_UNSUPPORTED_VIDEO_FORMAT"
+msgstr "Qo‘llab-quvvatlanmaydigan video format."
+
+msgid "IDS_VPL_POP_UNSUPPORTED_FILE_TYPE"
+msgstr "Qo‘llab-quvvatlanmaydigan fayl turi."
+
+msgid "IDS_VPL_POP_UNSUPPORTED_AUDIO_FORMAT"
+msgstr "Qo‘llab-quvvatlanmaydigan audio format."
+
+msgid "IDS_VPL_POP_UNABLE_TO_USE_FAST_FORWARD_AND_REWIND_WHEN_NEARBY_DEVICES_ARE_ENABLED"
+msgstr "Yaqin-atrofdagi qurilmalar yoqilgan vaqtda tez oldinga o‘tkazish yoki orqaga qaytarishdan foydalanib bo‘lmaydi."
+
+msgid "IDS_VPL_POP_UNABLE_TO_CAPTURE"
+msgstr "Suratga olib bo‘lmaydi."
+
+msgid "IDS_VPL_POP_ROTATE"
+msgstr "Aylantirish"
+
+msgid "IDS_VPL_POP_PRESS_THE_BACK_KEY_AGAIN_TO_RETURN_TO_PREVIOUS_SCREEN"
+msgstr "Avvalgi ekranga qaytish uchun “orqaga” tugmasini bosing."
+
+msgid "IDS_VPL_POP_NOT_ENOUGH_MEMORY_DELETE_SOME_ITEMS"
+msgstr "Xotira yetarli emas. Ba’zi elementlarni o'chiring"
+
+msgid "IDS_VPL_POP_BOOKMARK_LIST_FULL_DELETE_SOME_BOOKMARKS"
+msgstr "Saqlangan veb-hujjat ro‘yxati to‘la. Ba’zi veb-hujjatlarni o'chirib tashlash."
+
+msgid "IDS_VPL_OPT_YELLOW_M_COLOUR"
+msgstr "Sariq"
+
+msgid "IDS_VPL_OPT_VIRTUAL_71_CH"
+msgstr "Virtual 7.1 k"
+
+msgid "IDS_VPL_OPT_SUBTITLES_HCC_ABB"
+msgstr "Subtitrlar (CC)"
+
+msgid "IDS_VPL_OPT_SOUNDALIVE"
+msgstr "SoundAlive"
+
+msgid "IDS_VPL_OPT_REPEAT_MODE"
+msgstr "Takrorlash rejimi"
+
+msgid "IDS_VPL_OPT_NO_REPEAT"
+msgstr "Takrorlanish yo‘q"
+
+msgid "IDS_VPL_OPT_MAGENTA_M_COLOUR"
+msgstr "Qirmizi"
+
+msgid "IDS_VPL_OPT_GREEN"
+msgstr "Yashil"
+
+msgid "IDS_VPL_OPT_CYAN_M_COLOUR"
+msgstr "Moviy"
+
+msgid "IDS_VPL_OPT_CUSTOM"
+msgstr "Sozlanadigan"
+
+msgid "IDS_VPL_OPT_CURRENT_VIDEO_HONCE_ABB"
+msgstr "Video (bir marta)"
+
+msgid "IDS_VPL_OPT_CONNECTION_INFO_ABB"
+msgstr "Ulanish ma’lumoti"
+
+msgid "IDS_VPL_OPT_CHANGE_PLAYER"
+msgstr "Pleyerni o‘zgartirish"
+
+msgid "IDS_VPL_OPT_CAPTURE"
+msgstr "Rasmga olish"
+
+msgid "IDS_VPL_OPT_ALLSHARE"
+msgstr "AllShare"
+
+msgid "IDS_VPL_HEADER_SELECT_DEVICE_ABB"
+msgstr "Qurilma tanlash"
+
+msgid "IDS_VPL_HEADER_AVAILABLE_DEVICES_ABB"
+msgstr "Mavjud qurilmalar"
+
+msgid "IDS_VPL_BUTTON_SPEAKER_ABB"
+msgstr "Dinamik"
+
+msgid "IDS_VPL_BODY_WHITE"
+msgstr "Oq"
+
+msgid "IDS_VPL_BODY_UDRGOTHICM_M_FONT"
+msgstr "UDRGothicM"
+
+msgid "IDS_VPL_BODY_UDMINCHO_M_FONT"
+msgstr "UDMincho"
+
+msgid "IDS_VPL_BODY_ROSEMARY_M_FONT"
+msgstr "Rosemary"
+
+msgid "IDS_VPL_BODY_RED_ABB"
+msgstr "Qizil"
+
+msgid "IDS_VPL_BODY_PS_SECONDS"
+msgstr "%s soniya"
+
+msgid "IDS_VPL_BODY_POP_M_FONT"
+msgstr "POP"
+
+msgid "IDS_VPL_BODY_PLAY_SPEED"
+msgstr "Ijro tezligi"
+
+msgid "IDS_VPL_BODY_PD_SECS"
+msgstr "%d soniya"
+
+msgid "IDS_VPL_BODY_OFF"
+msgstr "O‘ch."
+
+msgid "IDS_VPL_BODY_NO_TITLE"
+msgstr "Sarlavha yo‘q"
+
+msgid "IDS_VPL_BODY_MY_DEVICE"
+msgstr "Qurilma"
+
+msgid "IDS_VPL_BODY_DEFAULT_FONT"
+msgstr "Birlamchi o'rnatilgan shrift"
+
+msgid "IDS_VPL_BODY_COOL_JAZZ_M_FONT"
+msgstr "Cool jazz"
+
+msgid "IDS_VPL_BODY_CHOCO_COOKY_M_FONT"
+msgstr "Choco cooky"
+
+msgid "IDS_VPL_BODY_BLUE"
+msgstr "Ko‘k"
+
+msgid "IDS_VPL_BODY_BLACK"
+msgstr "Qora"
+
+msgid "IDS_VPL_BODY_ACTIVATION"
+msgstr "Faollashtirish"
+
+msgid "IDS_SMEMO_POP_CLOSE_APPLICATION_Q"
+msgstr "Ilova yopilsinmi?"
+
+msgid "IDS_VIDEO_SK_CANCEL_ABB"
+msgstr "Bek/q."
+
+msgid "IDS_VIDEO_OPT_STOP_AFTER_ALL_ABB"
+msgstr "Baridan keyin to‘xta"
+
+msgid "IDS_VIDEO_OPT_REPEAT_CURRENT_ABB"
+msgstr "Joriyni takrorlash"
+
+msgid "IDS_VIDEO_OPT_REPEAT_ALL_ABB"
+msgstr "Barini takrorlash"
+
+msgid "IDS_VIDEO_BODY_RESOLUTION"
+msgstr "Rezolyutsiya"
+
+msgid "IDS_VIDEO_BODY_PS_SOUND_EFFECTS_NOT_SUPPORTED_BY_SPEAKER"
+msgstr "%s ovoz effektlari dinamik tomonidan qo‘llab-quvvatlanmaydi."
+
+msgid "IDS_MUSIC_BODY_TURN_PHONE_OVER_TO_MUTE_INCOMING_CALLS_MESSAGE_ALERTS_AND_ALARMS"
+msgstr "Kiruvchi qo‘ng‘iroqlar, xabar signallari va budilniklar ovozini o‘chirish uchun telefonni teskari o‘giring."
+
+msgid "IDS_ST_BODY_SD_CARD"
+msgstr "SD-karta"
+
+msgid "IDS_VPL_TPOP_ONLY_AUDIO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_AUDIO"
+msgstr "Faqat audio ma’lumot ushbu fayl tomonidan qo‘llab-quvvatlanadi. Hozirda o‘ynayotgan audio."
+
+msgid "IDS_VPL_TPOP_ONLY_VIDEO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_VIDEO"
+msgstr "Faqat video ma’lumot ushbu fayl tomonidan qo‘llab-quvvatlanadi. Hozirda o‘ynayotgan video."
+
+msgid "IDS_ST_BODY_PRIVATE_STORAGE"
+msgstr "Maxfiy xotira"
+
+msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
+msgstr "Quloqliklar"
+
+msgid "IDS_MUSIC_OPT_SPEAKER"
+msgstr "Dinamik"
+
+msgid "IDS_MUSIC_OPT_PAUSE"
+msgstr "To‘xtatib turish"
+
+msgid "IDS_VIDEO_BUTTON_DOWNLOAD"
+msgstr "Yuklab olish"
+
+msgid "IDS_VIDEO_MBODY_SELECT_SUBTITLES_HCC"
+msgstr "Subtitrni tanlash (CC)"
+
+msgid "IDS_VIDEO_NPBODY_PREVIEW_SUBTITLES_HCC_ABB"
+msgstr "Subtitr dast/ko‘rish (CC)"
+
+msgid "IDS_VIDEO_OPT_REPEAT_MODE_ABB"
+msgstr "Takrorlash rejimi"
+
+msgid "IDS_VIDEO_POP_UNSUPPORTED_FILE_TYPE"
+msgstr "Qo‘llab-quvvatlanmaydigan fayl turi."
+
+msgid "IDS_VIDEO_OPT_NORMAL_M_SOUND_ABB"
+msgstr "Normal"
+
+msgid "IDS_VIDEO_BODY_VOICE"
+msgstr "Ovoz"
+
+msgid "IDS_VIDEO_BODY_MOVIES"
+msgstr "Filmlar"
+
+msgid "IDS_VIDEO_OPT_AUDIO_TRACK_ABB"
+msgstr "Audio trek"
+
+msgid "IDS_VIDEO_BODY_BUFFERING_ING_ABB"
+msgstr "Buferlash..."
+
+msgid "IDS_VIDEO_BODY_FILE_FORMAT"
+msgstr "Fayl formati"
+
+msgid "IDS_VIDEO_BODY_LANGUAGE"
+msgstr "Til"
+
+msgid "IDS_VIDEO_BODY_NO_VIDEOS"
+msgstr "Videolar yo‘q"
+
+msgid "IDS_VIDEO_BODY_SIZE"
+msgstr "O‘lcham"
+
+msgid "IDS_VIDEO_BUTTON_DONE"
+msgstr "OK"
+
+msgid "IDS_VIDEO_BUTTON_REFRESH"
+msgstr "Yangilash"
+
+msgid "IDS_VIDEO_HEADER_DATE"
+msgstr "Sana"
+
+msgid "IDS_VIDEO_HEADER_LOADING_ING_ABB"
+msgstr "Yuklanmoqda..."
+
+msgid "IDS_VIDEO_HEADER_SUBTITLES_HCC_ABB2"
+msgstr "Subtitrlar (CC)"
+
+msgid "IDS_VIDEO_IOPT3_DELETE"
+msgstr "O'chirish"
+
+msgid "IDS_VIDEO_OPT_ADD_TO_HOME_SCREEN_ABB"
+msgstr "Asosiy ekranga qo‘shish"
+
+msgid "IDS_VIDEO_OPT_FACEBOOK_ABB"
+msgstr "Facebook"
+
+msgid "IDS_VIDEO_OPT_HDMI"
+msgstr "HDMI"
+
+msgid "IDS_VIDEO_OPT_NAME"
+msgstr "Ism"
+
+msgid "IDS_VIDEO_OPT_SOUNDALIVE_ABB2"
+msgstr "SoundAlive"
+
+msgid "IDS_VIDEO_OPT_YOUTUBE_ABB"
+msgstr "YouTube"
+
+msgid "IDS_VIDEO_POP_UNABLE_TO_PLAY_VIDEO"
+msgstr "Videoni o‘ynatib bo‘lmaydi."
+
+msgid "IDS_VIDEO_SBODY_NO_SUBTITLES_AVAILABLE_M_STATUS"
+msgstr "Subtitrlar yo‘q"
+
+msgid "IDS_VIDEO_SK3_PLAY"
+msgstr "O‘ynatish"
+
+msgid "IDS_VIDEO_SK_CLOSE"
+msgstr "Yopish"
+
+msgid "IDS_VPL_POP_INVALID_URL"
+msgstr "Noto‘g‘ri URL."
+
+msgid "IDS_CHATON_HEADER_ERROR_ABB"
+msgstr "Xato"
+
+msgid "IDS_VIDEO_SBODY_DEVICE_STORAGE"
+msgstr "Qurilma xotirasi"
+
+msgid "IDS_COM_BODY_VIDEO_PLAYER_T_MAINMENU"
+msgstr "Video pleyer"
+
+msgid "IDS_VIDEO_OPT_SHARE_VIA"
+msgstr "Quyidagi orqali ulashish"
+
+msgid "IDS_VIDEO_POP_A_NETWORK_ERROR_HAS_OCCURRED_TRY_AGAIN"
+msgstr "Tarmoq xatosi yuz berdi. Qayta urinib ko‘ring."
+
+msgid "IDS_VIDEO_TPOP_ONLY_AUDIO_DATA_SUPPORTED_BY_THIS_FILE_FORMAT_NOW_PLAYING_AUDIO"
+msgstr "Faqat audio ma’lumot ushbu fayl formati tomonidan qo‘llab-quvvatlanadi. Hozirda o‘ynayotgan audio."
+
+msgid "IDS_VIDEO_TPOP_ONLY_VIDEO_DATA_SUPPORTED_BY_THIS_FILE_FORMAT_NOW_PLAYING_VIDEO"
+msgstr "Faqat video ma’lumot ushbu fayl formati tomonidan qo‘llab-quvvatlanadi. Hozirda o‘ynayotgan video."
+
+msgid "IDS_VPL_BODY_CENTRE"
+msgstr "Markaz"
+
+msgid "IDS_VPL_BODY_ON"
+msgstr "Yoq."
+
+msgid "IDS_VPL_BODY_SETTINGS"
+msgstr "Parametrlar"
+
+msgid "IDS_VPL_BODY_VIDEOS_T_MAINMENU"
+msgstr "Videolar"
+
+msgid "IDS_VPL_BUTTON_SHARE"
+msgstr "Ulash."
+
+msgid "IDS_VPL_HEADER_DETAILS"
+msgstr "Tafsilotlar"
+
+msgid "IDS_VPL_OPT_DELETE"
+msgstr "O'chirish"
+
+msgid "IDS_VPL_POP_BUFFERING_PDP"
+msgstr "Buferlash - %d%"
+
+msgid "IDS_VIDEO_OPT_NONE"
+msgstr "Yo‘q"
+
+msgid "IDS_VIDEO_BODY_PD_SECS_ABB3"
+msgstr "%d soniya"
+
+msgid "IDS_MUSIC_HEADER_SOUNDALIVE_ABB3"
+msgstr "SoundAlive"
+
+msgid "IDS_MP_HEADER_SELECT_AUDIO_DEVICE"
+msgstr "Audio qurilmani tanlash"
+
+msgid "IDS_MUSIC_OPT_DELETE"
+msgstr "Yo‘q qilish"
+
+msgid "IDS_CLOCK_BUTTON_CANCEL"
+msgstr "Bekor qilish"
+
+msgid "IDS_VIDEO_POP_AN_UNKNOWN_ERROR_HAS_OCCURRED_OR_THE_FILE_MAY_BE_CORRUPT"
+msgstr "Noma’lum xato yuz berdi yoki zararlangan bo‘lishi mumkin."
+
+msgid "IDS_VIDEO_POP_THIS_FILE_TYPE_IS_NOT_SUPPORTED"
+msgstr "Bu fayl turi qo‘llab-quvvatlanmaydi."
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "BAJARILDI"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "BEKOR QILISH"
+
+msgid "IDS_TPLATFORM_MBODY_STORAGE_LOCATION"
+msgstr "Xotira joylashuvi"
+
+msgid "IDS_GP_BODY_SUBTITLES_HCC"
+msgstr "Subtitrlar (CC)"
+
+msgid "IDS_GALLERY_BODY_PERSONAL_STORAGE"
+msgstr "Shaxsiy ombor"
+
+msgid "IDS_ACCS_BODY_CAPTIONS_WILL_LOOK_LIKE_THIS"
+msgstr "Sarlavhalar quyidagi ko‘rinishda bo‘ladi"
+

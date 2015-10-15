@@ -1,0 +1,390 @@
+msgid "IDS_VIDEO_OPT_DOWNLOAD"
+msgstr "Lejupielādēt"
+
+msgid "IDS_VIDEO_POP_1_FOLDER_WILL_BE_DOWNLOADED"
+msgstr "Tiks lejupielādēta 1 mape."
+
+msgid "IDS_VIDEO_POP_1_VIDEO_WILL_BE_DOWNLOADED"
+msgstr "Tiks lejupielādēts 1 videoklips."
+
+msgid "IDS_VIDEO_POP_ALL_FOLDERS_WILL_BE_DOWNLOADED"
+msgstr "Tiks lejupielādētas visas mapes."
+
+msgid "IDS_VIDEO_POP_ALL_VIDEOS_WILL_BE_DOWNLOADED"
+msgstr "Tiks lejupielādēti visi videoklipi."
+
+msgid "IDS_VIDEO_POP_PD_FOLDERS_WILL_BE_DOWNLOADED"
+msgstr "Tiks lejupielādētas %d mapes."
+
+msgid "IDS_VIDEO_POP_PD_VIDEOS_WILL_BE_DOWNLOADED"
+msgstr "Tiks lejupielādēti %d videoklipi."
+
+msgid "IDS_VIDEO_TPOP_MOBILE_DATA_TURNED_OFF_CONNECT_TO_WI_FI_NETWORK_INSTEAD_OR_TURN_ON_MOBILE_DATA_AND_TRY_AGAIN"
+msgstr "Mobilie dati ir izslēgti. Izveidojiet savienojumu ar Wi-Fi tīklu vai ieslēdziet mobilos datus un mēģiniet vēlreiz."
+
+msgid "IDS_GALLERY_OPT_PRIVATE_M_CONTENT"
+msgstr "Privāts"
+
+msgid "IDS_VIDEO_BODY_B"
+msgstr "B"
+
+msgid "IDS_VIDEO_BODY_GB"
+msgstr "GB"
+
+msgid "IDS_VIDEO_BODY_KB"
+msgstr "KB"
+
+msgid "IDS_VIDEO_BODY_LOCATION"
+msgstr "Atrašanās vieta"
+
+msgid "IDS_VIDEO_BODY_MB"
+msgstr "MB"
+
+msgid "IDS_VIDEO_BODY_UNKNOWN"
+msgstr "Nezināms"
+
+msgid "IDS_VIDEO_BUTTON_OK"
+msgstr "Labi"
+
+msgid "IDS_VIDEO_HEADER_1_FOLDER"
+msgstr "1 mape"
+
+msgid "IDS_VIDEO_HEADER_1_VIDEO"
+msgstr "1 videoklips"
+
+msgid "IDS_VIDEO_HEADER_ALL"
+msgstr "Visas"
+
+msgid "IDS_VIDEO_HEADER_FROM_DEVICE"
+msgstr "No ierīces"
+
+msgid "IDS_VIDEO_HEADER_FROM_DROPBOX"
+msgstr "No Dropbox"
+
+msgid "IDS_VIDEO_HEADER_LAST_MODIFIED_M_DATE"
+msgstr "Pēdējo reizi mainīts"
+
+msgid "IDS_VIDEO_OPT_CONTENT_TO_DISPLAY"
+msgstr "Parādāmais saturs"
+
+msgid "IDS_VIDEO_OPT_SEARCH"
+msgstr "Meklēt"
+
+msgid "IDS_VIDEO_OPT_SHARE"
+msgstr "Kopīgot"
+
+msgid "IDS_VIDEO_POP_1_FOLDER_WILL_BE_DELETED"
+msgstr "Tiks izdzēsta 1 mape."
+
+msgid "IDS_VIDEO_TPOP_DELETING_ING"
+msgstr "Dzēš..."
+
+msgid "IDS_VIDEO_BODY_AFTER_YOU_RECORD_VIDEOS_USING_THE_CAMERA_THEY_WILL_BE_SHOWN_HERE"
+msgstr "Kad būsit ierakstījis videoklipus, izmantojot kameru, tie būs redzami šeit."
+
+msgid "IDS_VIDEO_HEADER_PD_VIDEOS"
+msgstr "%d videoklipi"
+
+msgid "IDS_VIDEO_HEADER_VIDEO"
+msgstr "Video"
+
+msgid "IDS_VIDEO_NPBODY_NO_VIDEOS"
+msgstr "Nav videoklipu"
+
+msgid "IDS_VIDEO_OPT_DETAILS"
+msgstr "Dati"
+
+msgid "IDS_VIDEO_OPT_FOLDER"
+msgstr "Mape"
+
+msgid "IDS_VIDEO_OPT_LIST"
+msgstr "Saraksts"
+
+msgid "IDS_VIDEO_OPT_RECENTLY_ADDED_ABB"
+msgstr "Nesen pievien."
+
+msgid "IDS_VIDEO_OPT_RECENTLY_VIEWED_ABB"
+msgstr "Pēdējie skatītie"
+
+msgid "IDS_VIDEO_OPT_RENAME"
+msgstr "Pārdēvēt"
+
+msgid "IDS_VIDEO_OPT_SIZE"
+msgstr "Lielums"
+
+msgid "IDS_VIDEO_OPT_SORT_BY"
+msgstr "Kārtot pēc"
+
+msgid "IDS_VIDEO_OPT_TITLE"
+msgstr "Nosaukums"
+
+msgid "IDS_VIDEO_OPT_TYPE"
+msgstr "Veids"
+
+msgid "IDS_VIDEO_OPT_VIEW_AS"
+msgstr "Skatīt kā"
+
+msgid "IDS_VIDEO_POP_ALL_VIDEOS_WILL_BE_DELETED"
+msgstr "Visi videoklipi tiks izdzēsti."
+
+msgid "IDS_VIDEO_POP_PD_FOLDERS_WILL_BE_DELETED"
+msgstr "Tiks izdzēstas %d mapes."
+
+msgid "IDS_VIDEO_POP_PD_VIDEOS_WILL_BE_DELETED"
+msgstr "%d videoklipi tiks izdzēsti."
+
+msgid "IDS_VIDEO_POP_THIS_FOLDER_WILL_BE_DELETED"
+msgstr "Šī mape tiks izdzēsta."
+
+msgid "IDS_VIDEO_HEADER_PD_FOLDERS"
+msgstr "%d mapes"
+
+msgid "IDS_VIDEO_HEADER_SETTINGS"
+msgstr "Iestatījumi"
+
+msgid "IDS_VIDEO_HEADER_UNABLE_TO_PLAY_VIDEO_ABB"
+msgstr "Nevar demonstrēt video"
+
+msgid "IDS_VIDEO_MBODY_ALIGNMENT"
+msgstr "Līdzinājums"
+
+msgid "IDS_VIDEO_MBODY_FONT_SIZE"
+msgstr "Fonta lielums"
+
+msgid "IDS_VIDEO_OPT_REPEAT_SETTING_ABB"
+msgstr "Atkārtošanas iestatījums"
+
+msgid "IDS_VIDEO_OPT_SUBTITLES_HCC_ABB"
+msgstr "Subtitri (slēptie titri)"
+
+msgid "IDS_VIDEO_POP_ALL_FOLDERS_WILL_BE_DELETED"
+msgstr "Tiks izdzēstas visas mapes."
+
+msgid "IDS_VIDEO_SBODY_CENTRE_M_STATUS"
+msgstr "Centrā"
+
+msgid "IDS_VIDEO_SBODY_LARGE_M_STATUS"
+msgstr "Liels"
+
+msgid "IDS_VIDEO_SBODY_LEFT_M_STATUS"
+msgstr "Pa kreisi"
+
+msgid "IDS_VIDEO_SBODY_MEDIUM_M_STATUS"
+msgstr "Vidējs"
+
+msgid "IDS_VIDEO_SBODY_RIGHT_M_STATUS"
+msgstr "Pa labi"
+
+msgid "IDS_VIDEO_SBODY_SMALL_M_STATUS"
+msgstr "Mazs"
+
+msgid "IDS_VIDEO_TPOP_FILE_NAME_ALREADY_IN_USE"
+msgstr "Faila nosaukums jau tiek lietots"
+
+msgid "IDS_GALLERY_OPT_REMOVE_FROM_PRIVATE"
+msgstr "Noņemt no mapes Privāti"
+
+msgid "IDS_GALLERY_OPT_MOVE_TO_PRIVATE"
+msgstr "Pārvietot uz privāto krātuvi"
+
+msgid "IDS_IV_POP_ENTRY_IS_EMPTY"
+msgstr "Ieraksts nav norādīts."
+
+msgid "IDS_VPL_OPT_FORMAT"
+msgstr "Formāts"
+
+msgid "IDS_VPL_BODY_UNABLE_TO_PLAY_VIDEO_DURING_CALL"
+msgstr "Sarunas laikā nevar demonstrēt video."
+
+msgid "IDS_CLOUD_BODY_DROPBOX_ABB"
+msgstr "Dropbox"
+
+msgid "IDS_VIDEO_POP_THIS_FILE_IS_UNAVAILABLE_WHILE_OFFLINE_CHECK_NETWORK_CONNECTION_AND_TRY_AGAIN"
+msgstr "Šis fails nav pieejams bezsaistē. Pārbaudiet savienojumu ar tīklu un mēģiniet vēlreiz."
+
+msgid "IDS_VIDEO_POP_THE_SELECTED_ITEM_WILL_BE_MOVED_TO_PS"
+msgstr "Izvēlētais objekts tiks pārvietots uz %s."
+
+msgid "IDS_VIDEO_POP_THE_SELECTED_ITEMS_WILL_BE_MOVED_TO_PS"
+msgstr "Izvēlētie objekti tiks pārvietoti uz %s."
+
+msgid "IDS_VIDEO_POP_REMOVING_ING"
+msgstr "Noņem..."
+
+msgid "IDS_VIDEO_POP_MOVING_ING"
+msgstr "Pārvieto..."
+
+msgid "IDS_VIDEO_POP_FAILED_TO_MOVE_TO_PERSONAL_STORAGE"
+msgstr "Neizdevās pārvietot uz privāto krātuvi."
+
+msgid "IDS_VIDEO_POP_FAILED_TO_MOVE_TO_NORMAL_STORAGE"
+msgstr "Neizdevās pārvietot uz parasto krātuvi."
+
+msgid "IDS_VIDEO_OPT_MESSAGE_ABB"
+msgstr "Ziņa"
+
+msgid "IDS_VIDEO_OPT_FOLDERS_ABB"
+msgstr "Mapes"
+
+msgid "IDS_VIDEO_OPT_EMAIL_ABB"
+msgstr "E-pasts"
+
+msgid "IDS_VIDEO_OPT_DATE_HMOST_RECENT_ABB"
+msgstr "Datums (jaunākais)"
+
+msgid "IDS_VIDEO_HEADER_PD_SELECTED"
+msgstr "Izvēlēti: %d"
+
+msgid "IDS_VIDEO_HEADER_DELETE_VIDEOS"
+msgstr "Dzēst videoklipus"
+
+msgid "IDS_VIDEO_HEADER_DELETE_VIDEO"
+msgstr "Dzēst videoklipu"
+
+msgid "IDS_VIDEO_BUTTON_MOVE_ABB"
+msgstr "Pārvietot"
+
+msgid "IDS_VIDEO_BODY_LONGITUDE"
+msgstr "Garums"
+
+msgid "IDS_VIDEO_BODY_LATITUDE"
+msgstr "Platums"
+
+msgid "IDS_VIDEO_BODY_AFTER_YOU_RECORD_VIDEOS_USING_THE_CAMERA_VIDEOS_WILL_BE_SHOWN"
+msgstr "Videoklipi tiks parādīti, kad tie būs ierakstīti ar kameru."
+
+msgid "IDS_VIDEO_SK_CANCEL_ABB"
+msgstr "Atcelt"
+
+msgid "IDS_VIDEO_OPT_STOP_AFTER_ALL_ABB"
+msgstr "Pārtraukt"
+
+msgid "IDS_VIDEO_OPT_REPEAT_CURRENT_ABB"
+msgstr "Atkārtot pašreizējo"
+
+msgid "IDS_VIDEO_OPT_REPEAT_ALL_ABB"
+msgstr "Atkārtot visu"
+
+msgid "IDS_VIDEO_BODY_RESOLUTION"
+msgstr "Izšķirtspēja"
+
+msgid "IDS_VIDEO_BUTTON_DELETE"
+msgstr "Dzēst"
+
+msgid "IDS_ST_OPT_DELETE_ALL"
+msgstr "Dzēst visu"
+
+msgid "IDS_VPL_TPOP_ONLY_AUDIO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_AUDIO"
+msgstr "Šis fails atbalsta tikai audio datus. Tagad atskaņo audio."
+
+msgid "IDS_VPL_TPOP_ONLY_VIDEO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_VIDEO"
+msgstr "Šis fails atbalsta tikai video datus. Tagad demonstrē video."
+
+msgid "IDS_MUSIC_OPT_RENAME"
+msgstr "Pārdēvēt"
+
+msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
+msgstr "Austiņas"
+
+msgid "IDS_VIDEO_BUTTON_DOWNLOAD"
+msgstr "Lejupielādēt"
+
+msgid "IDS_TPLATFORM_BODY_OFF"
+msgstr "Izslēgts"
+
+msgid "IDS_TPLATFORM_BODY_ON"
+msgstr "Ieslēgts"
+
+msgid "IDS_VIDEO_POP_1_VIDEO_WILL_BE_DELETED"
+msgstr "Tiks izdzēsts 1 videoklips."
+
+msgid "IDS_SWALL_HEADER_INVALID_CHARACTER"
+msgstr "Nederīga rakstzīme"
+
+msgid "IDS_VIDEO_BODY_NO_SEARCH_RESULTS"
+msgstr "Nav meklēšanas rezultātu"
+
+msgid "IDS_GALLERY_HEADER_SELECT"
+msgstr "Izvēlēties"
+
+msgid "IDS_VIDEO_BODY_LAST_MODIFIED_M_DATE_ABB"
+msgstr "Pēdējo reizi mainīts"
+
+msgid "IDS_VIDEO_BUTTON_DONE"
+msgstr "Gatavs"
+
+msgid "IDS_VIDEO_HEADER_DATE"
+msgstr "Datums"
+
+msgid "IDS_VIDEO_HEADER_LATITUDE"
+msgstr "Platums"
+
+msgid "IDS_VIDEO_OPT_NAME"
+msgstr "Vārds"
+
+msgid "IDS_VIDEO_OPT_NAME_HA_Z_ABB"
+msgstr "Nosaukums (A-Z)"
+
+msgid "IDS_VIDEO_OPT_VIDEOS"
+msgstr "Video"
+
+msgid "IDS_VIDEO_TPOP_MAXIMUM_NUMBER_OF_ATTACHMENTS_HPD_EXCEEDED"
+msgstr "Pārsniegts maksimālais pielikumu skaits (%d)."
+
+msgid "IDS_VIDEO_HEADER_SELECT_ALL"
+msgstr "Izvēlēties visu"
+
+msgid "IDS_VIDEO_SBODY_DEVICE_STORAGE"
+msgstr "Ierīces krātuve"
+
+msgid "IDS_VIDEO_SBODY_SD_CARD"
+msgstr "SD karte"
+
+msgid "IDS_VIDEO_OPT_SHARE_VIA"
+msgstr "Kopīgot, izmantojot"
+
+msgid "IDS_VIDEO_POP_A_NETWORK_ERROR_HAS_OCCURRED_TRY_AGAIN"
+msgstr "Radās tīkla kļūda. Mēģiniet vēlreiz."
+
+msgid "IDS_VPL_OPT_AUTO_PLAY_NEXT_ABB"
+msgstr "Autom.dem. nākamo"
+
+msgid "IDS_VPL_POP_PROCESSING_ING"
+msgstr "Notiek apstrāde..."
+
+msgid "IDS_MEMO_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Sasniegts maksimālais rakstzīmju skaits."
+
+msgid "IDS_MUSIC_OPT_DELETE"
+msgstr "Dzēst"
+
+msgid "IDS_MUSIC_OPT_DELETE_ALL"
+msgstr "Dzēst visu"
+
+msgid "IDS_PB_BODY_NO_SEARCH_RESULT"
+msgstr "Rezultāta nav"
+
+msgid "IDS_VIDEO_HEADER_SELECT_ITEM"
+msgstr "Izvēlieties objektu"
+
+msgid "IDS_VIDEO_HEADER_SELECT_ITEMS"
+msgstr "Izvēlēties objektus"
+
+msgid "IDS_CLOCK_BUTTON_CANCEL"
+msgstr "Atcelt"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "GATAVS"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "ATCELT"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DELETE_ABB"
+msgstr "DZĒST"
+
+msgid "IDS_TPLATFORM_MBODY_STORAGE_LOCATION"
+msgstr "Krātuves atrašanās vieta"
+
+msgid "IDS_GALLERY_HEADER_SELECT_VIDEO"
+msgstr "Izvēlēties video"
+

@@ -1,0 +1,489 @@
+msgid "IDS_VIDEO_OPT_BRIGHTNESS"
+msgstr "Jas"
+
+msgid "IDS_VIDEO_OPT_MUSIC_M_SOUNDALIVE"
+msgstr "Hudba"
+
+msgid "IDS_VIDEO_OPT_VOICES_M_PERSON"
+msgstr "Hlasy"
+
+msgid "IDS_VIDEO_BODY_B"
+msgstr "B"
+
+msgid "IDS_VIDEO_BODY_GB"
+msgstr "GB"
+
+msgid "IDS_VIDEO_BODY_KB"
+msgstr "kB"
+
+msgid "IDS_VIDEO_BODY_LOCATION"
+msgstr "GPS"
+
+msgid "IDS_VIDEO_BODY_MB"
+msgstr "MB"
+
+msgid "IDS_VIDEO_BUTTON_OK"
+msgstr "OK"
+
+msgid "IDS_VIDEO_HEADER_LAST_MODIFIED_M_DATE"
+msgstr "Naposledy upravené"
+
+msgid "IDS_VIDEO_OPT_SHARE"
+msgstr "Zdieľať"
+
+msgid "IDS_VIDEO_HEADER_CANNOT_PLAY_VIDEO_ABB"
+msgstr "Video sa nedá prehrať"
+
+msgid "IDS_VIDEO_POP_AN_ERROR_OCCURRED_WITH_THE_SUBTITLES"
+msgstr "Vyskytla sa chyba titulkov."
+
+msgid "IDS_VIDEO_POP_THE_FILE_IS_CORRUPTED_OR_THE_SD_CARD_HAS_BEEN_REMOVED"
+msgstr "Súbor je poškodený alebo karta SD bola odstránená."
+
+msgid "IDS_VIDEO_OPT_DETAILS"
+msgstr "Podrobnosti"
+
+msgid "IDS_VIDEO_OPT_TITLE"
+msgstr "Názov"
+
+msgid "IDS_VIDEO_POP_THIS_VIDEO_WILL_BE_DELETED"
+msgstr "Toto video sa odstráni."
+
+msgid "IDS_VIDEO_HEADER_SETTINGS"
+msgstr "Nastavenia"
+
+msgid "IDS_VIDEO_HEADER_UNABLE_TO_PLAY_VIDEO_ABB"
+msgstr "Nedá sa prehrať video"
+
+msgid "IDS_VIDEO_MBODY_ALIGNMENT"
+msgstr "Zarovnanie"
+
+msgid "IDS_VIDEO_MBODY_FONT_SIZE"
+msgstr "Veľkosť písma"
+
+msgid "IDS_VIDEO_OPT_REPEAT_SETTING_ABB"
+msgstr "Nastavenie opakovania"
+
+msgid "IDS_VIDEO_OPT_SUBTITLES_HCC_ABB"
+msgstr "Titulky (skryté)"
+
+msgid "IDS_VIDEO_SBODY_CENTRE_M_STATUS"
+msgstr "Stred"
+
+msgid "IDS_VIDEO_SBODY_LARGE_M_STATUS"
+msgstr "Veľké"
+
+msgid "IDS_VIDEO_SBODY_LEFT_M_STATUS"
+msgstr "Vľavo"
+
+msgid "IDS_VIDEO_SBODY_MEDIUM_M_STATUS"
+msgstr "Stredné"
+
+msgid "IDS_VIDEO_SBODY_RIGHT_M_STATUS"
+msgstr "Vpravo"
+
+msgid "IDS_VIDEO_SBODY_SMALL_M_STATUS"
+msgstr "Malé"
+
+msgid "IDS_BR_SK_NEXT"
+msgstr "Ďalej"
+
+msgid "IDS_BR_SK_PREVIOUS"
+msgstr "Predch."
+
+msgid "IDS_VPL_POP_DRM_FILES_CANNOT_BE_SHARED"
+msgstr "Súbory DRM nemožno zdieľať."
+
+msgid "IDS_VPL_OPT_FORMAT"
+msgstr "Formát"
+
+msgid "IDS_VPL_BODY_UNABLE_TO_PLAY_VIDEO_DURING_CALL"
+msgstr "Počas hovoru sa nedá prehrávať video."
+
+msgid "IDS_VIDEO_OPT_MESSAGE_ABB"
+msgstr "Správa"
+
+msgid "IDS_VIDEO_OPT_FILE_TRANSFER_ABB"
+msgstr "Prenos súborov"
+
+msgid "IDS_VIDEO_OPT_EMAIL_ABB"
+msgstr "E-mail"
+
+msgid "IDS_VIDEO_BODY_LONGITUDE"
+msgstr "Zemepisná dĺžka"
+
+msgid "IDS_VIDEO_BODY_LATITUDE"
+msgstr "Zemepisná šírka"
+
+msgid "IDS_MUSIC_BUTTON_ENABLE_MOTION"
+msgstr "Povoliť pohyb"
+
+msgid "IDS_VPL_TPOP_SCRUBBING_AT_PSX_SPEED"
+msgstr "Posúvanie rýchlosťou %sx."
+
+msgid "IDS_VPL_TAB_EXTERNAL_STORAGE"
+msgstr "Exter. úložný priestor"
+
+msgid "IDS_VPL_POP_VOLUME_M_SOUND"
+msgstr "Hlasitosť"
+
+msgid "IDS_VPL_POP_UNSUPPORTED_VIDEO_FORMAT"
+msgstr "Nepodporovaný formát videa."
+
+msgid "IDS_VPL_POP_UNSUPPORTED_FILE_TYPE"
+msgstr "Nepodporovaný typ súboru."
+
+msgid "IDS_VPL_POP_UNSUPPORTED_AUDIO_FORMAT"
+msgstr "Nepodporovaný formát zvuku."
+
+msgid "IDS_VPL_POP_UNABLE_TO_USE_FAST_FORWARD_AND_REWIND_WHEN_NEARBY_DEVICES_ARE_ENABLED"
+msgstr "Keď sú povolené blízke zariadenia, nemožno použiť prevíjanie dopredu a dozadu."
+
+msgid "IDS_VPL_POP_UNABLE_TO_CAPTURE"
+msgstr "Nedá sa snímať."
+
+msgid "IDS_VPL_POP_ROTATE"
+msgstr "Otočiť"
+
+msgid "IDS_VPL_POP_PRESS_THE_BACK_KEY_AGAIN_TO_RETURN_TO_PREVIOUS_SCREEN"
+msgstr "Opätovným stlačením tlačidla návratu sa vrátite na predchádzajúcu obrazovku."
+
+msgid "IDS_VPL_POP_NOT_ENOUGH_MEMORY_DELETE_SOME_ITEMS"
+msgstr "Nedostatok pamäte. Vymažte niektoré položky"
+
+msgid "IDS_VPL_POP_BOOKMARK_LIST_FULL_DELETE_SOME_BOOKMARKS"
+msgstr "Zoznam záložiek je plný. Vymažte niektoré záložky."
+
+msgid "IDS_VPL_OPT_YELLOW_M_COLOUR"
+msgstr "Žltá"
+
+msgid "IDS_VPL_OPT_VIRTUAL_71_CH"
+msgstr "Virtuálny 7.1-kanálový zvuk"
+
+msgid "IDS_VPL_OPT_SUBTITLES_HCC_ABB"
+msgstr "Titulky (skryté)"
+
+msgid "IDS_VPL_OPT_SOUNDALIVE"
+msgstr "SoundAlive"
+
+msgid "IDS_VPL_OPT_REPEAT_MODE"
+msgstr "Režim opakovania"
+
+msgid "IDS_VPL_OPT_NO_REPEAT"
+msgstr "Bez opakovania"
+
+msgid "IDS_VPL_OPT_MAGENTA_M_COLOUR"
+msgstr "Purpurová"
+
+msgid "IDS_VPL_OPT_GREEN"
+msgstr "Zelená"
+
+msgid "IDS_VPL_OPT_CYAN_M_COLOUR"
+msgstr "Azúrová"
+
+msgid "IDS_VPL_OPT_CUSTOM"
+msgstr "Vlastné"
+
+msgid "IDS_VPL_OPT_CURRENT_VIDEO_HONCE_ABB"
+msgstr "Aktuálne video (raz)"
+
+msgid "IDS_VPL_OPT_CONNECTION_INFO_ABB"
+msgstr "Inform. o pripojení"
+
+msgid "IDS_VPL_OPT_CHANGE_PLAYER"
+msgstr "Zmeniť prehrávač"
+
+msgid "IDS_VPL_OPT_CAPTURE"
+msgstr "Nasnímať"
+
+msgid "IDS_VPL_OPT_ALLSHARE"
+msgstr "AllShare"
+
+msgid "IDS_VPL_HEADER_SELECT_DEVICE_ABB"
+msgstr "Vybrať zariadenie"
+
+msgid "IDS_VPL_HEADER_AVAILABLE_DEVICES_ABB"
+msgstr "Dostupné zariadenia"
+
+msgid "IDS_VPL_BUTTON_SPEAKER_ABB"
+msgstr "Reproduk."
+
+msgid "IDS_VPL_BODY_WHITE"
+msgstr "Biela"
+
+msgid "IDS_VPL_BODY_UDRGOTHICM_M_FONT"
+msgstr "UDRGothicM"
+
+msgid "IDS_VPL_BODY_UDMINCHO_M_FONT"
+msgstr "UDMincho"
+
+msgid "IDS_VPL_BODY_ROSEMARY_M_FONT"
+msgstr "Rozmarín"
+
+msgid "IDS_VPL_BODY_RED_ABB"
+msgstr "Červená"
+
+msgid "IDS_VPL_BODY_PS_SECONDS"
+msgstr "%s s"
+
+msgid "IDS_VPL_BODY_POP_M_FONT"
+msgstr "POP"
+
+msgid "IDS_VPL_BODY_PLAY_SPEED"
+msgstr "Rýchlosť prehrávania"
+
+msgid "IDS_VPL_BODY_PD_SECS"
+msgstr "%d s"
+
+msgid "IDS_VPL_BODY_OFF"
+msgstr "Vyp."
+
+msgid "IDS_VPL_BODY_NO_TITLE"
+msgstr "Žiadny názov"
+
+msgid "IDS_VPL_BODY_MY_DEVICE"
+msgstr "Moje zariadenie"
+
+msgid "IDS_VPL_BODY_DEFAULT_FONT"
+msgstr "Predvolené písmo"
+
+msgid "IDS_VPL_BODY_COOL_JAZZ_M_FONT"
+msgstr "Cool jazz"
+
+msgid "IDS_VPL_BODY_CHOCO_COOKY_M_FONT"
+msgstr "Choco cooky"
+
+msgid "IDS_VPL_BODY_BLUE"
+msgstr "Modrá"
+
+msgid "IDS_VPL_BODY_BLACK"
+msgstr "Čierna"
+
+msgid "IDS_VPL_BODY_ACTIVATION"
+msgstr "Aktivácia"
+
+msgid "IDS_SMEMO_POP_CLOSE_APPLICATION_Q"
+msgstr "Zavrieť aplikáciu?"
+
+msgid "IDS_VIDEO_SK_CANCEL_ABB"
+msgstr "Zruš."
+
+msgid "IDS_VIDEO_OPT_STOP_AFTER_ALL_ABB"
+msgstr "Zastaviť po všetkých"
+
+msgid "IDS_VIDEO_OPT_REPEAT_CURRENT_ABB"
+msgstr "Opakovať aktuálne"
+
+msgid "IDS_VIDEO_OPT_REPEAT_ALL_ABB"
+msgstr "Opakovať všetko"
+
+msgid "IDS_VIDEO_BODY_RESOLUTION"
+msgstr "Rozlíšenie"
+
+msgid "IDS_VIDEO_BODY_PS_SOUND_EFFECTS_NOT_SUPPORTED_BY_SPEAKER"
+msgstr "Reproduktor nepodporuje zvukové efekty %s."
+
+msgid "IDS_MUSIC_BODY_TURN_PHONE_OVER_TO_MUTE_INCOMING_CALLS_MESSAGE_ALERTS_AND_ALARMS"
+msgstr "Prevrátením telefónu stlmíte prichádzajúce hovory, upozornenia na správy a budíky."
+
+msgid "IDS_ST_BODY_SD_CARD"
+msgstr "Karta SD"
+
+msgid "IDS_VPL_TPOP_ONLY_AUDIO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_AUDIO"
+msgstr "Tento súbor podporuje iba zvukové údaje. Teraz sa prehráva zvuk."
+
+msgid "IDS_VPL_TPOP_ONLY_VIDEO_DATA_SUPPORTED_BY_THIS_FILE_NOW_PLAYING_VIDEO"
+msgstr "Tento súbor podporuje iba obrazové údaje. Teraz sa prehráva video."
+
+msgid "IDS_ST_BODY_PRIVATE_STORAGE"
+msgstr "Súkromné úložisko"
+
+msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
+msgstr "Slúchadlá"
+
+msgid "IDS_MUSIC_OPT_SPEAKER"
+msgstr "Reproduktor"
+
+msgid "IDS_MUSIC_OPT_PAUSE"
+msgstr "Pauza"
+
+msgid "IDS_VIDEO_BUTTON_DOWNLOAD"
+msgstr "Stiahnuť"
+
+msgid "IDS_VIDEO_MBODY_SELECT_SUBTITLES_HCC"
+msgstr "Vybrať titulky (skryté)"
+
+msgid "IDS_VIDEO_NPBODY_PREVIEW_SUBTITLES_HCC_ABB"
+msgstr "Ukážka titulkov (skryté tit.)"
+
+msgid "IDS_VIDEO_OPT_REPEAT_MODE_ABB"
+msgstr "Režim opakovania"
+
+msgid "IDS_VIDEO_POP_UNSUPPORTED_FILE_TYPE"
+msgstr "Nepodporovaný typ súboru."
+
+msgid "IDS_VIDEO_OPT_NORMAL_M_SOUND_ABB"
+msgstr "Normálny"
+
+msgid "IDS_VIDEO_BODY_VOICE"
+msgstr "Hlas"
+
+msgid "IDS_VIDEO_BODY_MOVIES"
+msgstr "Filmy"
+
+msgid "IDS_VIDEO_OPT_AUDIO_TRACK_ABB"
+msgstr "Zvuková stopa"
+
+msgid "IDS_VIDEO_BODY_BUFFERING_ING_ABB"
+msgstr "Do medzip..."
+
+msgid "IDS_VIDEO_BODY_FILE_FORMAT"
+msgstr "Formát súboru"
+
+msgid "IDS_VIDEO_BODY_LANGUAGE"
+msgstr "Jazyk"
+
+msgid "IDS_VIDEO_BODY_NO_VIDEOS"
+msgstr "Žiadne videá"
+
+msgid "IDS_VIDEO_BODY_SIZE"
+msgstr "Veľkosť"
+
+msgid "IDS_VIDEO_BUTTON_DONE"
+msgstr "Hotovo"
+
+msgid "IDS_VIDEO_BUTTON_REFRESH"
+msgstr "Obnoviť"
+
+msgid "IDS_VIDEO_HEADER_DATE"
+msgstr "Dátum"
+
+msgid "IDS_VIDEO_HEADER_LOADING_ING_ABB"
+msgstr "Načítava sa..."
+
+msgid "IDS_VIDEO_HEADER_SUBTITLES_HCC_ABB2"
+msgstr "Titulky (skryté)"
+
+msgid "IDS_VIDEO_IOPT3_DELETE"
+msgstr "Odstrániť"
+
+msgid "IDS_VIDEO_OPT_ADD_TO_HOME_SCREEN_ABB"
+msgstr "Pridať na úvodnú obrazovku"
+
+msgid "IDS_VIDEO_OPT_FACEBOOK_ABB"
+msgstr "Facebook"
+
+msgid "IDS_VIDEO_OPT_HDMI"
+msgstr "HDMI"
+
+msgid "IDS_VIDEO_OPT_NAME"
+msgstr "Meno"
+
+msgid "IDS_VIDEO_OPT_SOUNDALIVE_ABB2"
+msgstr "SoundAlive"
+
+msgid "IDS_VIDEO_OPT_YOUTUBE_ABB"
+msgstr "YouTube"
+
+msgid "IDS_VIDEO_POP_UNABLE_TO_PLAY_VIDEO"
+msgstr "Nedá sa prehrať video."
+
+msgid "IDS_VIDEO_SBODY_NO_SUBTITLES_AVAILABLE_M_STATUS"
+msgstr "Žiadne dostupné titulky"
+
+msgid "IDS_VIDEO_SK3_PLAY"
+msgstr "Prehrať"
+
+msgid "IDS_VIDEO_SK_CLOSE"
+msgstr "Zavrieť"
+
+msgid "IDS_VPL_POP_INVALID_URL"
+msgstr "Neplatná adresa URL."
+
+msgid "IDS_CHATON_HEADER_ERROR_ABB"
+msgstr "Chyba"
+
+msgid "IDS_VIDEO_SBODY_DEVICE_STORAGE"
+msgstr "Úložisko zariadenia"
+
+msgid "IDS_COM_BODY_VIDEO_PLAYER_T_MAINMENU"
+msgstr "Prehrávač videí"
+
+msgid "IDS_VIDEO_OPT_SHARE_VIA"
+msgstr "Zdieľať cez"
+
+msgid "IDS_VIDEO_POP_A_NETWORK_ERROR_HAS_OCCURRED_TRY_AGAIN"
+msgstr "Vyskytla sa chyba siete. Skúste to znova."
+
+msgid "IDS_VIDEO_TPOP_ONLY_AUDIO_DATA_SUPPORTED_BY_THIS_FILE_FORMAT_NOW_PLAYING_AUDIO"
+msgstr "Tento formát súboru podporuje iba zvukové údaje. Teraz sa prehráva zvuk."
+
+msgid "IDS_VIDEO_TPOP_ONLY_VIDEO_DATA_SUPPORTED_BY_THIS_FILE_FORMAT_NOW_PLAYING_VIDEO"
+msgstr "Tento formát súboru podporuje iba obrazové údaje. Teraz sa prehráva video."
+
+msgid "IDS_VPL_BODY_CENTRE"
+msgstr "Stred"
+
+msgid "IDS_VPL_BODY_ON"
+msgstr "Zap."
+
+msgid "IDS_VPL_BODY_SETTINGS"
+msgstr "Nastavenia"
+
+msgid "IDS_VPL_BODY_VIDEOS_T_MAINMENU"
+msgstr "Videá"
+
+msgid "IDS_VPL_BUTTON_SHARE"
+msgstr "Zdieľať"
+
+msgid "IDS_VPL_HEADER_DETAILS"
+msgstr "Podrobnosti"
+
+msgid "IDS_VPL_OPT_DELETE"
+msgstr "Odstrániť"
+
+msgid "IDS_VPL_POP_BUFFERING_PDP"
+msgstr "Ukladá sa do medzipamäte – %d %"
+
+msgid "IDS_VIDEO_OPT_NONE"
+msgstr "Žiadne"
+
+msgid "IDS_VIDEO_BODY_PD_SECS_ABB3"
+msgstr "%d s"
+
+msgid "IDS_MUSIC_HEADER_SOUNDALIVE_ABB3"
+msgstr "SoundAlive"
+
+msgid "IDS_MP_HEADER_SELECT_AUDIO_DEVICE"
+msgstr "Vybrať zvukové zariadenie"
+
+msgid "IDS_MUSIC_OPT_DELETE"
+msgstr "Odstrániť"
+
+msgid "IDS_CLOCK_BUTTON_CANCEL"
+msgstr "Zrušiť"
+
+msgid "IDS_VIDEO_POP_AN_UNKNOWN_ERROR_HAS_OCCURRED_OR_THE_FILE_MAY_BE_CORRUPT"
+msgstr "Vyskytla sa neznáma chyba alebo súbor je možno poškodený."
+
+msgid "IDS_VIDEO_POP_THIS_FILE_TYPE_IS_NOT_SUPPORTED"
+msgstr "Tento typ súboru nie je podporovaný."
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "HOTOVO"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "ZRUŠIŤ"
+
+msgid "IDS_TPLATFORM_MBODY_STORAGE_LOCATION"
+msgstr "Umiest. úlož. priestoru"
+
+msgid "IDS_GP_BODY_SUBTITLES_HCC"
+msgstr "Titulky (skryté)"
+
+msgid "IDS_GALLERY_BODY_PERSONAL_STORAGE"
+msgstr "Osobný úložný priestor"
+
+msgid "IDS_ACCS_BODY_CAPTIONS_WILL_LOOK_LIKE_THIS"
+msgstr "Titulky budú vyzerať takto"
+

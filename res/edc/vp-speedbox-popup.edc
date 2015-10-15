@@ -1,0 +1,348 @@
+/*
+* Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+#include "image_res.edc"
+#include "vp_font.edc"
+
+#define SPEED_BOX_BG_COLOR 0 0 0 77
+#define SPEED_BOX_PRESS_BG_COLOR 42 137 194 255
+#define SPEED_BOX_LINE_COLOR 200 200 200 255
+
+collections {
+	group {
+		name: "speedbox";
+		parts {
+
+			part {
+				name: "speedbox.bg.rect";
+				type: RECT;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 0;
+					rel1 { relative: 0.0 0.0;}
+					rel2 { relative: 1.0 1.0;}
+					color: 0 0 0 255;
+				}
+				description {
+					state: "show" 0.0;
+					inherit: "default" 0.0;
+					visible: 1;
+				}
+			}
+
+			part {
+				name: "speedbox.bg";
+				type: IMAGE;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 0;
+					rel1 { relative: 0.0 0.0;}
+					rel2 { relative: 1.0 1.0;}
+					image {normal: "white/common/T01-2_popup_bg.png"; border: 10 10 10 10;}
+				}
+				description {
+					state: "show" 0.0;
+					inherit: "default" 0.0;
+					visible: 1;
+				}
+			}
+
+			part {
+				name: "speedbox.step.1";
+				type: RECT;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 0;
+					min: 112 99;
+					fixed: 1 1;
+					align: 0.5 1.0;
+					rel1 { relative: 0.5 1.0; to: "speedbox.bg";}
+					rel2 { relative: 0.5 1.0; to: "speedbox.bg";}
+					color: SPEED_BOX_BG_COLOR;
+				}
+				description {
+					state: "show" 0.0;
+					inherit: "default" 0.0;
+					visible: 1;
+				}
+				description {
+					state: "focus" 0.0;
+					inherit: "default" 0.0;
+					visible: 1;
+					color: SPEED_BOX_PRESS_BG_COLOR;
+				}
+			}
+
+			part {
+				name: "speedbox.step.2";
+				type: RECT;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 0;
+					min: 112 99;
+					fixed: 1 1;
+					align: 0.5 1.0;
+					rel1 { relative: 0.5 0.0; to: "speedbox.step.1";}
+					rel2 { relative: 0.5 0.0; to: "speedbox.step.1";}
+					color: SPEED_BOX_BG_COLOR;
+				}
+				description {
+					state: "show" 0.0;
+					inherit: "default" 0.0;
+					visible: 1;
+				}
+				description {
+					state: "focus" 0.0;
+					inherit: "default" 0.0;
+					visible: 1;
+					color: SPEED_BOX_PRESS_BG_COLOR;
+				}
+			}
+
+			part {
+				name: "speedbox.step.3";
+				type: RECT;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 0;
+					min: 112 99;
+					fixed: 1 1;
+					align: 0.5 1.0;
+					rel1 { relative: 0.5 0.0; to: "speedbox.step.2";}
+					rel2 { relative: 0.5 0.0; to: "speedbox.step.2";}
+					color: SPEED_BOX_BG_COLOR;
+				}
+				description {
+					state: "hide" 0.0;
+					inherit: "default" 0.0;
+					visible: 1;
+				}
+				description {
+					state: "focus" 0.0;
+					inherit: "default" 0.0;
+					visible: 1;
+					color: SPEED_BOX_PRESS_BG_COLOR;
+				}
+			}
+
+			part {
+				name: "speedbox.step.1.line";
+				type: RECT;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 0;
+					min: 110 1;
+					fixed: 1 1;
+					align: 0.5 1.0;
+					rel1 { relative: 0.5 0.0; to: "speedbox.step.1";}
+					rel2 { relative: 0.5 0.0; to: "speedbox.step.1";}
+					color: SPEED_BOX_LINE_COLOR;
+				}
+				description {
+					state: "show" 0.0;
+					inherit: "default" 0.0;
+					visible: 1;
+				}
+			}
+
+			part {
+				name: "speedbox.step.2.line";
+				type: RECT;
+				mouse_events: 1;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 0;
+					min: 110 1;
+					fixed: 1 1;
+					align: 0.5 1.0;
+					rel1 { relative: 0.5 0.0; to: "speedbox.step.2";}
+					rel2 { relative: 0.5 0.0; to: "speedbox.step.2";}
+					color: SPEED_BOX_LINE_COLOR;
+				}
+				description {
+					state: "show" 0.0;
+					inherit: "default" 0.0;
+					visible: 1;
+				}
+			}
+
+			part {
+				name: "speedbox.step.1.txt";
+				type: TEXT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 0;
+					align: 0.0 0.0;
+					rel1 { relative: 0.0 0.0; to: "speedbox.step.1";}
+					rel2 { relative: 1.0 1.0; to: "speedbox.step.1";}
+					color: FONT_PLAYBACK_SPEED_BTN_COLOR;
+					text {
+						font: FONT_PLAYBACK_SPEED_FONT;
+						size: FONT_PLAYBACK_SPEED_BTN_SIZE;
+						text: "x2";
+						align: 0.5 0.5;
+					}
+				}
+				description {
+					state: "show" 0.0;
+					inherit: "default" 0.0;
+					visible: 1;
+				}
+			}
+
+			part {
+				name: "speedbox.step.2.txt";
+				type: TEXT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 0;
+					align: 0.0 0.0;
+					rel1 { relative: 0.0 0.0; to: "speedbox.step.2";}
+					rel2 { relative: 1.0 1.0; to: "speedbox.step.2";}
+					color: FONT_PLAYBACK_SPEED_BTN_COLOR;
+					text {
+						font: FONT_PLAYBACK_SPEED_FONT;
+						size: FONT_PLAYBACK_SPEED_BTN_SIZE;
+						text: "x3";
+						align: 0.5 0.5;
+					}
+				}
+				description {
+					state: "show" 0.0;
+					inherit: "default" 0.0;
+					visible: 1;
+				}
+			}
+
+			part {
+				name: "speedbox.step.3.txt";
+				type: TEXT;
+				mouse_events: 0;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					visible: 0;
+					align: 0.0 0.0;
+					rel1 { relative: 0.0 0.0; to: "speedbox.step.3";}
+					rel2 { relative: 1.0 1.0; to: "speedbox.step.3";}
+					color: FONT_PLAYBACK_SPEED_BTN_COLOR;
+					text {
+						font: FONT_PLAYBACK_SPEED_FONT;
+						size: FONT_PLAYBACK_SPEED_BTN_SIZE;
+						text: "x4";
+						align: 0.5 0.5;
+					}
+				}
+				description {
+					state: "show" 0.0;
+					inherit: "default" 0.0;
+					visible: 1;
+				}
+			}
+		} /* parts */
+		programs {
+			program {
+				signal: "signal.speedbox.visible.on";
+				source: "*";
+				after: "set.speedbox.visible.on";
+			}
+
+			program {
+				signal: "signal.speedbox.visible.off";
+				source: "*";
+				after: "set.speedbox.visible.off";
+			}
+
+			program {
+				name: "set.speedbox.visible.on";
+				source: "*";
+				action: STATE_SET "show" 0.0;
+
+				target: "speedbox.bg.rect";
+				target: "speedbox.bg";
+				target: "speedbox.step.1";
+				target: "speedbox.step.2";
+				target: "speedbox.step.3";
+				target: "speedbox.step.1.line";
+				target: "speedbox.step.2.line";
+				target: "speedbox.step.1.txt";
+				target: "speedbox.step.2.txt";
+				target: "speedbox.step.3.txt";
+			}
+
+			program {
+				name: "set.speedbox.visible.off";
+				source: "*";
+				action: STATE_SET "default" 0.0;
+				target: "speedbox.bg.rect";
+				target: "speedbox.bg";
+				target: "speedbox.step.1";
+				target: "speedbox.step.2";
+				target: "speedbox.step.3";
+				target: "speedbox.step.1.line";
+				target: "speedbox.step.2.line";
+				target: "speedbox.step.1.txt";
+				target: "speedbox.step.2.txt";
+				target: "speedbox.step.3.txt";
+			}
+			program {
+ 				signal: "signal.speedbox.set.mode.1";
+ 				source: "*";
+				script {
+					set_state(PART:"speedbox.step.1", "focus", 0.0);
+					set_state(PART:"speedbox.step.2", "show", 0.0);
+					set_state(PART:"speedbox.step.3", "show", 0.0);
+				}
+			}
+			program {
+ 				signal: "signal.speedbox.set.mode.2";
+ 				source: "*";
+				script {
+					set_state(PART:"speedbox.step.1", "show", 0.0);
+					set_state(PART:"speedbox.step.2", "focus", 0.0);
+					set_state(PART:"speedbox.step.3", "show", 0.0);
+				}
+			}
+			program {
+ 				signal: "signal.speedbox.set.mode.3";
+ 				source: "*";
+				script {
+					set_state(PART:"speedbox.step.1", "show", 0.0);
+					set_state(PART:"speedbox.step.2", "show", 0.0);
+					set_state(PART:"speedbox.step.3", "focus", 0.0);
+				}
+			}
+
+		} /* programs */
+	} /* groups */
+} /* collections */
