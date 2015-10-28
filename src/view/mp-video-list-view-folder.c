@@ -908,7 +908,7 @@ static void __mp_folder_view_popup_delete_cb(void *pUserData,
 
 	int nFolderItemIndex = (int) pUserData;
 	MpListViewAsType type = MP_LIST_VIEW_AS_FOLDER_LIST;
-	mp_util_remove_question_popup((void *) nFolderItemIndex, type,
+	mp_util_remove_question_popup(nFolderItemIndex, type,
 				      __mp_folder_view_respones_delete_popup_cb,
 				      __mp_folder_view_delete_popup_cb,
 				      __mp_folder_view_mouse_back_up_popup_cb,

@@ -452,7 +452,7 @@ static void __mp_folder_item_view_delete_btn_cb(void *pUserData, Evas_Object *pO
 
 	int nVideoItemIndex = (int)pUserData;
 	MpListViewAsType type = MP_LIST_VIEW_AS_THUMBNAIL_LIST;
-	mp_util_remove_question_popup((void*)nVideoItemIndex, type, __mp_folder_item_view_respones_delete_popup_cb, __mp_folder_item_view_respones_cancel_popup_cb, __mp_folder_item_view_HW_mouse_back_up_popup_cb, __mp_folder_item_view_HW_key_back_popup_cb);
+	mp_util_remove_question_popup(nVideoItemIndex, type, __mp_folder_item_view_respones_delete_popup_cb, __mp_folder_item_view_respones_cancel_popup_cb, __mp_folder_item_view_HW_mouse_back_up_popup_cb, __mp_folder_item_view_HW_key_back_popup_cb);
 }
 #endif
 

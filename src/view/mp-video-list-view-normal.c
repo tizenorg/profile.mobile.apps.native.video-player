@@ -936,7 +936,7 @@ static void __mp_normal_view_delete_cb(void *pUserData,
 
 	int nVideoItemIndex = (int) pUserData;
 	MpListViewAsType type = MP_LIST_VIEW_AS_NORMAL_LIST;
-	mp_util_remove_question_popup((void *) nVideoItemIndex, type,
+	mp_util_remove_question_popup(nVideoItemIndex, type,
 				      mp_normal_view_respones_delete_popup_cb,
 				      mp_normal_view_detail_video_popup_cb,
 				      mp_normal_view_detail_mouse_back_popup_cb,

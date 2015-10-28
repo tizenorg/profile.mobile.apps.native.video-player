@@ -710,7 +710,7 @@ bool mp_util_remove_all_videos_question_popup(void *pUserData,
 }
 
 
-bool mp_util_remove_question_popup(void *pUserData,
+bool mp_util_remove_question_popup(int pUserData,
 				   MpListViewAsType viewType,
 				   void *PopupDeleteButtonCallbackFunc,
 				   void *PopupCancelButtonCallbackFunc,
@@ -777,7 +777,7 @@ bool mp_util_remove_question_popup(void *pUserData,
 	if (PopupCancelButtonCallbackFunc) {
 		evas_object_smart_callback_add(pButton, "clicked",
 					       PopupCancelButtonCallbackFunc,
-					       pUserData);
+					       (void *)pUserData);
 	}
 
 	pButton = elm_button_add(pPopUpHandle);
@@ -791,18 +791,18 @@ bool mp_util_remove_question_popup(void *pUserData,
 	if (PopupDeleteButtonCallbackFunc) {
 		evas_object_smart_callback_add(pButton, "clicked",
 					       PopupDeleteButtonCallbackFunc,
-					       pUserData);
+					       (void *)pUserData);
 	}
 
 	if (PopupHWMouseBackUpCbFunc) {
 		evas_object_event_callback_add(pPopUpHandle,
 					       EVAS_CALLBACK_MOUSE_UP,
 					       PopupHWMouseBackUpCbFunc,
-					       pUserData);
+					       (void *)pUserData);
 	}
 
 	if (PopupHWKeyBackCbFunc) {
-		/*evas_object_event_callback_add(pPopUpHandle, EVAS_CALLBACK_KEY_DOWN, PopupHWKeyBackCbFunc, pUserData);*/
+		/*evas_object_event_callback_add(pPopUpHandle, EVAS_CALLBACK_KEY_DOWN, PopupHWKeyBackCbFunc, (void *)pUserData);*/
 	}
 	/*elm_popup_timeout_set(pPopUpHandle, 3.0);*/
 
@@ -1173,7 +1173,7 @@ char *mp_util_get_file_size(unsigned long long size)
 		snprintf(pTmp, FILE_SIZE_LEN_MAX, "%0.1lf%s", nSize_t,
 			 VIDEOS_DETAILVIEW_BODY_GB);
 	} else {
-		snprintf(pTmp, FILE_SIZE_LEN_MAX, "%zu%s", 0,
+		snprintf(pTmp, FILE_SIZE_LEN_MAX, "%zu%s", (size_t)0,
 			 VIDEOS_DETAILVIEW_BODY_MB);
 	}
 

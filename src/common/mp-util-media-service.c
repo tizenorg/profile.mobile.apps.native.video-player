@@ -821,6 +821,7 @@ bool mp_util_svc_index_list_for_search_view(const char *keyword, void **index_li
 {
 	media_info_h pVideoItem = NULL;
 	Eina_List *pIterateList = NULL;
+	Eina_List *pSearchList = NULL;
 	int index = 0;
 
 	if (!VideoItemList) {
@@ -833,13 +834,19 @@ bool mp_util_svc_index_list_for_search_view(const char *keyword, void **index_li
 		return FALSE;
 	}
 
+	if (!index_list) {
+		VideoLogError("List IS null");
+		return FALSE;
+	}
+	pSearchList = (Eina_List *)(*index_list);
+
 	EINA_LIST_FOREACH(VideoItemList, pIterateList, pVideoItem) {
 		if (pVideoItem) {
 			char *szTitle = NULL;
 			media_info_get_display_name(pVideoItem, &szTitle);
 
 			if (szTitle && mp_util_str_str_same_case(szTitle, keyword)) {
-				*index_list = eina_list_append(*index_list, (const void*)index);
+				pSearchList = eina_list_append(pSearchList, (const void*)index);
 			}
 			MP_FREE_STRING(szTitle);
 		}

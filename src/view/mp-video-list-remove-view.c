@@ -419,7 +419,7 @@ static void __mp_remove_view_run_delete_items_cb(void *data, Evas_Object *obj, c
 		if (g_pListRemoveViewHandle->bSelectallCheckBoxState)
 			mp_util_remove_all_videos_question_popup((void *) NULL, type, mp_remove_view_response_done_delete_items_popup_cb, mp_remove_view_response_cancel_delete_items_popup_cb, mp_remove_view_HW_mouse_back_popup_cb, mp_remove_view_HW_key_back_popup_cb);
 		else
-			mp_util_remove_question_popup((void *)(-nSelectCounter), type, mp_remove_view_response_done_delete_items_popup_cb, mp_remove_view_response_cancel_delete_items_popup_cb, mp_remove_view_HW_mouse_back_popup_cb, mp_remove_view_HW_key_back_popup_cb);
+			mp_util_remove_question_popup((-nSelectCounter), type, mp_remove_view_response_done_delete_items_popup_cb, mp_remove_view_response_cancel_delete_items_popup_cb, mp_remove_view_HW_mouse_back_popup_cb, mp_remove_view_HW_key_back_popup_cb);
 		//g_pListRemoveViewHandle->nSelectCounterForEditList = 0;
 	}
 }

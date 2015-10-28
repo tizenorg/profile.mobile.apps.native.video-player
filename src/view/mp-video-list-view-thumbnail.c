@@ -929,7 +929,7 @@ static void __mp_thumbnail_view_pop_up_delete_cb(void *pUserData,
 		return;
 	}
 	int nVideoItemIndex = (int) pUserData;
-	mp_util_remove_question_popup((void *) nVideoItemIndex,
+	mp_util_remove_question_popup(nVideoItemIndex,
 				      (MpListViewAsType) 0,
 				      __mp_thumbnail_view_respones_delete_popup_cb,
 				      __mp_thumbnail_view_detail_video_popup_cb,

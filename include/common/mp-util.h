@@ -102,7 +102,7 @@ void mp_util_delete_popup_handle(void);
 bool mp_util_notify_popup(void *pUserData, char *szTitle, char *szContents, void *PopupButtonCallbackFunc);
 bool mp_util_yes_no_popup(void *pUserData, char *szTitle, char *szContents, void *PopupYesButtonCallbackFunc, void *PopupNoButtonCallbackFunc);
 bool mp_util_remove_all_videos_question_popup(void *pUserData, MpListViewAsType viewType, void *PopupDeleteButtonCallbackFunc, void *PopupCancelButtonCallbackFunc, void *PopupHWMouseBackUpCbFunc, void *PopupHWKeyBackCbFunc);
-bool mp_util_remove_question_popup(void *pUserData, MpListViewAsType viewType, void *PopupDeleteButtonCallbackFunc, void *PopupCancelButtonCallbackFunc, void *PopupHWMouseBackUpCbFunc, void *PopupHWKeyBackCbFunc);
+bool mp_util_remove_question_popup(int pUserData, MpListViewAsType viewType, void *PopupDeleteButtonCallbackFunc, void *PopupCancelButtonCallbackFunc, void *PopupHWMouseBackUpCbFunc, void *PopupHWKeyBackCbFunc);
 bool mp_util_remove_folder_question_popup(void *pUserData, void *PopupDeleteButtonCallbackFunc, void *PopupCancelButtonCallbackFunc, void *PopupHWMouseBackUpCbFunc, void *PopupHWKeyBackCbFunc);
 bool mp_util_download_question_popup(void *pUserData, char *szTitle, char *szContents, void *PopupCancelBtnCallbackFunc, void *PopupDownloadBtnCallbackFunc);
 bool mp_util_progress_popup(char* szLabel);
