@@ -141,17 +141,6 @@ if [ ! -d %{buildroot}/opt/usr/apps/org.tizen.videos/data/ ]
 then
         mkdir -p %{buildroot}/opt/usr/apps/org.tizen.videos/data/
 fi
-
-if [ ! -f %{buildroot}/opt/usr/apps/org.tizen.videos/data/.video-thumb.db ];
-	rm -rf %{buildroot}/opt/usr/apps/org.tizen.videos/data/.video-thumb.db*
-then
-	echo -e "install video thumb DB in install"
-	sqlite3 %{buildroot}/opt/usr/apps/org.tizen.videos/data/.video-thumb.db 'PRAGMA journal_mode=PERSIST;
-	CREATE TABLE video_preview(preview_uuid INTEGER PRIMARY KEY AUTOINCREMENT, file_path TEXT, file_size INTEGER,  last_hit_date INTEGER, media_id TEXT);
-	CREATE TABLE video_thumb(thumb_uuid INTEGER PRIMARY KEY AUTOINCREMENT, thumb_idx INTEGER, file_path TEXT, file_size INTEGER,  media_id TEXT);
-	CREATE TABLE video_chapter(chapter_uuid INTEGER PRIMARY KEY AUTOINCREMENT, chapter_idx INTEGER, file_path TEXT, file_size INTEGER,  media_id TEXT);'
-fi
-
 %make_install
 execstack -c %{buildroot}/usr/apps/org.tizen.videos/bin/videos
 mkdir -p %{buildroot}/usr/share/license
@@ -200,19 +189,6 @@ then
         mkdir -p %{buildroot}/opt/usr/media/.video_thumb/sdp
 fi
 
-if [ ! -f %{buildroot}/opt/usr/apps/org.tizen.videos/data/.video-thumb.db ];
-	rm -rf %{buildroot}/opt/usr/apps/org.tizen.videos/data/.video-thumb.db*
-then
-	echo -e "install video thumb DB in postfile"
-	sqlite3 %{buildroot}/opt/usr/apps/org.tizen.videos/data/.video-thumb.db 'PRAGMA journal_mode=PERSIST;
-	CREATE TABLE video_preview(preview_uuid INTEGER PRIMARY KEY AUTOINCREMENT, file_path TEXT, file_size INTEGER,  last_hit_date INTEGER, media_id TEXT);
-	CREATE TABLE video_thumb(thumb_uuid INTEGER PRIMARY KEY AUTOINCREMENT, thumb_idx INTEGER, file_path TEXT, file_size INTEGER,  media_id TEXT);
-	CREATE TABLE video_chapter(chapter_uuid INTEGER PRIMARY KEY AUTOINCREMENT, chapter_idx INTEGER, file_path TEXT, file_size INTEGER,  media_id TEXT);'
-fi
-
-chmod 660 %{buildroot}/opt/usr/apps/org.tizen.videos/data/.video-thumb.db
-chmod 660 %{buildroot}/opt/usr/apps/org.tizen.videos/data/.video-thumb.db-journal
-
 # Change file owner
 chown -R app:app /opt/usr/apps/org.tizen.videos/data
 chown -R app:app /opt/usr/apps/org.tizen.video-player/data
@@ -220,9 +196,6 @@ chown -R 5000:5000 /opt/usr/media/.video_thumb
 chown -R 5000:5000 /opt/usr/media/.cur_video_thumb
 chown -R 5000:5000 /opt/usr/media/.video_thumb/tmp
 chown -R 5000:5000 /opt/usr/media/.video_thumb/sdp
-
-chown -R 5000:5000 /opt/usr/apps/org.tizen.videos/data/.video-thumb.db
-chown -R 5000:5000 /opt/usr/apps/org.tizen.videos/data/.video-thumb.db-journal
 
 chmod 777 /opt/usr/apps/org.tizen.videos/data
 chmod 777 /opt/usr/apps/org.tizen.video-player/shared/data
