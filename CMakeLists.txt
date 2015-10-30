@@ -107,13 +107,13 @@ ENDFOREACH(flag)
 
 SET(EXTRA_CFLAGS "${EXTRA_CFLAGS} -DMACHINE_$ENV{MACHINE}")
 
-SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${EXTRA_CFLAGS} -Werror -fPIC  -fvisibility=hidden")
+SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${EXTRA_CFLAGS} -fPIC  -fvisibility=hidden")
 
 SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS}  -fdata-sections -ffunction-sections -Wl,--gc-sections")
 SET(CMAKE_C_FLAGS_DEBUG "-O0 -Wall -g -fpie")
 SET(CMAKE_C_FLAGS_RELEASE "-O2 -Wall -g -fpie")
 SET(CMAKE_CXX_FLAGS "${CMAKE_C_FLAGS} ${EXTRA_CFLAGS} -Xassembler -W -fPIC")
-SET(CMAKE_EXE_LINKER_FLAGS "-Wl,--as-needed -pie")
+SET(CMAKE_EXE_LINKER_FLAGS "-Wl,--as-needed -pie -Wl,-z,noexecstack")
 
 
 #SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${EXTRA_CFLAGS}")

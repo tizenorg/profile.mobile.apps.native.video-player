@@ -142,7 +142,7 @@ then
         mkdir -p %{buildroot}/opt/usr/apps/org.tizen.videos/data/
 fi
 %make_install
-execstack -c %{buildroot}/usr/apps/org.tizen.videos/bin/videos
+#execstack -c %{buildroot}/usr/apps/org.tizen.videos/bin/videos
 mkdir -p %{buildroot}/usr/share/license
 cp LICENSE %{buildroot}/usr/share/license/%{name}
 %define tizen_sign 1
