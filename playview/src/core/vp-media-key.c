@@ -35,8 +35,8 @@ static void _vp_media_key_destroy_handle(MediaKey *pMediaKey);
 
 /* callback functions */
 static void __vp_media_key_event_cb(media_key_e nKey,
-				    media_key_event_e nEvent,
-				    void *pUserData)
+                                    media_key_event_e nEvent,
+                                    void *pUserData)
 {
 	if (!pUserData) {
 		VideoLogError("User data is NULL.");
@@ -63,36 +63,36 @@ static void __vp_media_key_event_cb(media_key_e nKey,
 	switch (nKey) {
 	case MEDIA_KEY_PLAY:
 		pMediaKey->pEventCb(VP_MEDIA_KEY_PLAY, bReleased,
-				    pMediaKey->pUserData);
+		                    pMediaKey->pUserData);
 		break;
 	case MEDIA_KEY_PAUSE:
 		pMediaKey->pEventCb(VP_MEDIA_KEY_PAUSE, bReleased,
-				    pMediaKey->pUserData);
+		                    pMediaKey->pUserData);
 		break;
 
 	case MEDIA_KEY_PLAYPAUSE:
 		pMediaKey->pEventCb(VP_MEDIA_KEY_PLAYPAUSE, bReleased,
-				    pMediaKey->pUserData);
+		                    pMediaKey->pUserData);
 		break;
 	case MEDIA_KEY_PREVIOUS:
 		pMediaKey->pEventCb(VP_MEDIA_KEY_PREVIOUS, bReleased,
-				    pMediaKey->pUserData);
+		                    pMediaKey->pUserData);
 		break;
 	case MEDIA_KEY_REWIND:
 		pMediaKey->pEventCb(VP_MEDIA_KEY_REWIND, bReleased,
-				    pMediaKey->pUserData);
+		                    pMediaKey->pUserData);
 		break;
 	case MEDIA_KEY_NEXT:
 		pMediaKey->pEventCb(VP_MEDIA_KEY_NEXT, bReleased,
-				    pMediaKey->pUserData);
+		                    pMediaKey->pUserData);
 		break;
 	case MEDIA_KEY_FASTFORWARD:
 		pMediaKey->pEventCb(VP_MEDIA_KEY_FASTFORWARD, bReleased,
-				    pMediaKey->pUserData);
+		                    pMediaKey->pUserData);
 		break;
 	case MEDIA_KEY_STOP:
 		pMediaKey->pEventCb(VP_MEDIA_KEY_STOP, bReleased,
-				    pMediaKey->pUserData);
+		                    pMediaKey->pUserData);
 		break;
 	default:
 		VideoLogWarning("Undefined key : %d", nKey);
@@ -116,7 +116,7 @@ static void _vp_media_key_destroy_handle(MediaKey *pMediaKey)
 
 /* external functions */
 media_key_handle vp_media_key_create(Evas_Object *pWin,
-				     MediaKeyEventCbFunc pEventCb)
+                                     MediaKeyEventCbFunc pEventCb)
 {
 	if (pWin == NULL) {
 		VideoLogError("pWin is NULL");
@@ -188,7 +188,7 @@ bool vp_media_key_unrealize(media_key_handle pMediaKeyHandle)
 }
 
 bool vp_media_key_set_user_data(media_key_handle pMediaKeyHandle,
-				void *pUserData)
+                                void *pUserData)
 {
 	if (pMediaKeyHandle == NULL) {
 		VideoLogError("pMediaKeyHandle is NULL");

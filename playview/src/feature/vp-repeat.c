@@ -48,18 +48,18 @@ typedef struct _RepeatPopup {
 
 static void _vp_repeat_destroy_handle(RepeatPopup *pRepeat);
 static void __vp_repeat_genlist_item_selected_cb(void *pUserData,
-		Evas_Object *pObject,
-		void *pEventInfo);
+                        Evas_Object *pObject,
+                        void *pEventInfo);
 
 
 static void __vp_repeat_genlist_realized(void *data, Evas_Object *obj,
-		void *event_info)
+                        void *event_info)
 {
 	VP_GENLIST_HIDE_BOTTOMLINE(data, obj, event_info);
 }
 
 static void __vp_repeat_popup_rotate_cb(void *data, Evas_Object *obj,
-					void *event_info)
+                                        void *event_info)
 {
 	RepeatPopup *pRepeat = (RepeatPopup *) data;
 	if (!pRepeat) {
@@ -70,14 +70,14 @@ static void __vp_repeat_popup_rotate_cb(void *data, Evas_Object *obj,
 		return;
 	}
 	vp_popup_set_popup_min_size(pRepeat->pParent, pRepeat->pBox,
-				    pRepeat->nListCount, VIDEO_POPUP_DEFAULT);
+	                            pRepeat->nListCount, VIDEO_POPUP_DEFAULT);
 
 }
 
 /* callback functions */
 static char *__vp_repeat_genlist_text_get_cb(const void *pUserData,
-		Evas_Object *pObj,
-		const char *pPart)
+                                Evas_Object *pObj,
+                                const char *pPart)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -94,9 +94,9 @@ static char *__vp_repeat_genlist_text_get_cb(const void *pUserData,
 }
 
 static Evas_Object *__vp_repeat_genlist_content_get_cb(const void
-		*pUserData,
-		Evas_Object *pObj,
-		const char *pPart)
+                                *pUserData,
+                                Evas_Object *pObj,
+                                const char *pPart)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -109,8 +109,8 @@ static Evas_Object *__vp_repeat_genlist_content_get_cb(const void
 		Evas_Object *pRadioObj = NULL;
 
 		RepeatPopup *pRepeat =
-			(RepeatPopup *) evas_object_data_get(pObj,
-					VP_REPEAT_GENLIST_DATA_KEY);
+		    (RepeatPopup *) evas_object_data_get(pObj,
+		            VP_REPEAT_GENLIST_DATA_KEY);
 		if (pRepeat == NULL) {
 			VideoLogWarning("evas_object_data_get is fail");
 			return NULL;
@@ -133,8 +133,8 @@ static Evas_Object *__vp_repeat_genlist_content_get_cb(const void
 		elm_radio_group_add(pRadioObj, pRepeat->pRadio);
 		elm_radio_value_set(pRepeat->pRadio, pRepeat->repeatMode);
 		evas_object_smart_callback_add(pRadioObj, "changed",
-					       __vp_repeat_genlist_item_selected_cb,
-					       pRepeat);
+		                               __vp_repeat_genlist_item_selected_cb,
+		                               pRepeat);
 		evas_object_show(pRadioObj);
 
 		return pRadioObj;
@@ -144,8 +144,8 @@ static Evas_Object *__vp_repeat_genlist_content_get_cb(const void
 }
 
 static void __vp_repeat_genlist_item_selected_cb(void *pUserData,
-		Evas_Object *pObject,
-		void *pEventInfo)
+                                Evas_Object *pObject,
+                                void *pEventInfo)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -158,7 +158,7 @@ static void __vp_repeat_genlist_item_selected_cb(void *pUserData,
 
 	Elm_Object_Item *pItem = (Elm_Object_Item *) pEventInfo;
 	Elm_Object_Item *pSelectedItem =
-		elm_genlist_selected_item_get(pObject);
+	    elm_genlist_selected_item_get(pObject);
 	if (pSelectedItem) {
 		elm_genlist_item_selected_set(pSelectedItem, EINA_FALSE);
 	}
@@ -191,13 +191,13 @@ static void __vp_repeat_genlist_item_selected_cb(void *pUserData,
 	VideoLogInfo("repeatMode=%d", pRepeat->repeatMode);
 	if (pRepeat->pCloseCb) {
 		pRepeat->pCloseCb((int) nType, FALSE,
-				  (void *) pRepeat->pUserData);
+		                  (void *) pRepeat->pUserData);
 	}
 }
 
 static void __vp_repeat_popup_key_event_cb(void *pUserData,
-		Evas_Object *pObj,
-		void *pEventInfo)
+                        Evas_Object *pObj,
+                        void *pEventInfo)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -208,15 +208,15 @@ static void __vp_repeat_popup_key_event_cb(void *pUserData,
 
 	if (pRepeat->pCloseCb) {
 		pRepeat->pCloseCb(VIDEO_PLAY_REPEAT_NONE, FALSE,
-				  (void *) pRepeat->pUserData);
+		                  (void *) pRepeat->pUserData);
 	}
 }
 
 
 static void __vp_repeat_popup_mouse_event_cb(void *pUserData,
-		Evas *pEvas,
-		Evas_Object *pObj,
-		void *pEventInfo)
+        Evas *pEvas,
+        Evas_Object *pObj,
+        void *pEventInfo)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -235,7 +235,7 @@ static void __vp_repeat_popup_mouse_event_cb(void *pUserData,
 
 		if (pRepeat->pCloseCb) {
 			pRepeat->pCloseCb(VIDEO_PLAY_REPEAT_NONE, FALSE,
-					  (void *) pRepeat->pUserData);
+			                  (void *) pRepeat->pUserData);
 		}
 	}
 }
@@ -249,9 +249,9 @@ static void _vp_repeat_destroy_handle(RepeatPopup *pRepeat)
 		return;
 	}
 	evas_object_smart_callback_del(pRepeat->pGenList, "realized",
-				       __vp_repeat_genlist_realized);
+	                               __vp_repeat_genlist_realized);
 	evas_object_smart_callback_del(pRepeat->pParent, "rotation,changed",
-				       __vp_repeat_popup_rotate_cb);
+	                               __vp_repeat_popup_rotate_cb);
 
 
 	VP_EVAS_DEL(pRepeat->pRadio);
@@ -282,7 +282,7 @@ static Evas_Object *_vp_repeat_create_genlist(Evas_Object *pParent)
 
 	pObj = elm_genlist_add(pParent);
 	evas_object_size_hint_weight_set(pObj, EVAS_HINT_EXPAND,
-					 EVAS_HINT_EXPAND);
+	                                 EVAS_HINT_EXPAND);
 	evas_object_size_hint_align_set(pObj, EVAS_HINT_FILL, EVAS_HINT_FILL);
 	evas_object_show(pObj);
 	return pObj;
@@ -290,7 +290,7 @@ static Evas_Object *_vp_repeat_create_genlist(Evas_Object *pParent)
 
 
 static bool _vp_repeat_add_genlist_item(Evas_Object *pObj,
-					void *pUserData)
+                                        void *pUserData)
 {
 	if (pObj == NULL) {
 		VideoLogError("pObj is NULL");
@@ -310,40 +310,40 @@ static bool _vp_repeat_add_genlist_item(Evas_Object *pObj,
 
 	pRepeat->st_Repeat_Itc = elm_genlist_item_class_new();
 
-	if (pRepeat->st_Repeat_Itc != NULL) {	
+	if (pRepeat->st_Repeat_Itc != NULL) {
 		pRepeat->st_Repeat_Itc->version = ELM_GENLIST_ITEM_CLASS_VERSION;
 		pRepeat->st_Repeat_Itc->item_style = "1line";
 		pRepeat->st_Repeat_Itc->func.text_get =
-			(void *) __vp_repeat_genlist_text_get_cb;
+		    (void *) __vp_repeat_genlist_text_get_cb;
 		pRepeat->st_Repeat_Itc->func.content_get =
-			(void *) __vp_repeat_genlist_content_get_cb;
+		    (void *) __vp_repeat_genlist_content_get_cb;
 		pRepeat->st_Repeat_Itc->func.state_get = NULL;
 		pRepeat->st_Repeat_Itc->func.del = NULL;
 		pRepeat->nListCount = 0;
 
 		elm_genlist_item_append(pObj, pRepeat->st_Repeat_Itc,
-				(void *) VP_PLAY_STRING_REPEAT_OFF, NULL,
-				ELM_GENLIST_ITEM_NONE,
-				__vp_repeat_genlist_item_selected_cb,
-				pUserData);
+		                        (void *) VP_PLAY_STRING_REPEAT_OFF, NULL,
+		                        ELM_GENLIST_ITEM_NONE,
+		                        __vp_repeat_genlist_item_selected_cb,
+		                        pUserData);
 		pRepeat->nListCount++;
 		elm_genlist_item_append(pObj, pRepeat->st_Repeat_Itc,
-				(void *) VP_PLAY_STRING_REPEAT_ALL_OFF, NULL,
-				ELM_GENLIST_ITEM_NONE,
-				__vp_repeat_genlist_item_selected_cb,
-				pUserData);
+		                        (void *) VP_PLAY_STRING_REPEAT_ALL_OFF, NULL,
+		                        ELM_GENLIST_ITEM_NONE,
+		                        __vp_repeat_genlist_item_selected_cb,
+		                        pUserData);
 		pRepeat->nListCount++;
 		elm_genlist_item_append(pObj, pRepeat->st_Repeat_Itc,
-				(void *) VP_PLAY_STRING_REPEAT_ONE, NULL,
-				ELM_GENLIST_ITEM_NONE,
-				__vp_repeat_genlist_item_selected_cb,
-				pUserData);
+		                        (void *) VP_PLAY_STRING_REPEAT_ONE, NULL,
+		                        ELM_GENLIST_ITEM_NONE,
+		                        __vp_repeat_genlist_item_selected_cb,
+		                        pUserData);
 		pRepeat->nListCount++;
 		elm_genlist_item_append(pObj, pRepeat->st_Repeat_Itc,
-				(void *) VP_PLAY_STRING_REPEAT_ALL, NULL,
-				ELM_GENLIST_ITEM_NONE,
-				__vp_repeat_genlist_item_selected_cb,
-				pUserData);
+		                        (void *) VP_PLAY_STRING_REPEAT_ALL, NULL,
+		                        ELM_GENLIST_ITEM_NONE,
+		                        __vp_repeat_genlist_item_selected_cb,
+		                        pUserData);
 		pRepeat->nListCount++;
 	}
 
@@ -352,7 +352,7 @@ static bool _vp_repeat_add_genlist_item(Evas_Object *pObj,
 
 /* external functions */
 repeat_handle vp_repeat_create(Evas_Object *pParent, char *pMediaUrl,
-			       PopupCloseCbFunc pCloseCb)
+                               PopupCloseCbFunc pCloseCb)
 {
 	if (pParent == NULL) {
 		VideoLogError("pParent is NULL");
@@ -379,11 +379,11 @@ repeat_handle vp_repeat_create(Evas_Object *pParent, char *pMediaUrl,
 	VP_STRDUP(pRepeat->pMediUrl, pMediaUrl);
 
 	pRepeat->pPopup =
-		vp_popup_create(pParent, POPUP_STYLE_MENU_LIST_NO_CANCEL_BTN,
-				VP_PLAY_STRING_POPUP_REPEAT_SETTING, NULL, 0.0,
-				NULL, __vp_repeat_popup_key_event_cb,
-				__vp_repeat_popup_mouse_event_cb,
-				(void *) pRepeat);
+	    vp_popup_create(pParent, POPUP_STYLE_MENU_LIST_NO_CANCEL_BTN,
+	                    VP_PLAY_STRING_POPUP_REPEAT_SETTING, NULL, 0.0,
+	                    NULL, __vp_repeat_popup_key_event_cb,
+	                    __vp_repeat_popup_mouse_event_cb,
+	                    (void *) pRepeat);
 
 	if (pRepeat->pPopup == NULL) {
 		VideoLogError("vp_popup_create fail");
@@ -397,7 +397,7 @@ repeat_handle vp_repeat_create(Evas_Object *pParent, char *pMediaUrl,
 		return NULL;
 	}
 	evas_object_data_set(pRepeat->pGenList, VP_REPEAT_GENLIST_DATA_KEY,
-			     (void *) pRepeat);
+	                     (void *) pRepeat);
 
 	pRepeat->pRadio = elm_radio_add(pRepeat->pGenList);
 
@@ -407,9 +407,9 @@ repeat_handle vp_repeat_create(Evas_Object *pParent, char *pMediaUrl,
 		return NULL;
 	}
 	evas_object_smart_callback_add(pRepeat->pGenList, "realized",
-				       __vp_repeat_genlist_realized, NULL);
+	                               __vp_repeat_genlist_realized, NULL);
 	evas_object_smart_callback_add(pRepeat->pParent, "rotation,changed",
-				       __vp_repeat_popup_rotate_cb, pRepeat);
+	                               __vp_repeat_popup_rotate_cb, pRepeat);
 
 	int nType = 0;
 
@@ -420,7 +420,7 @@ repeat_handle vp_repeat_create(Evas_Object *pParent, char *pMediaUrl,
 
 	pRepeat->pBox = elm_box_add(pRepeat->pPopup);
 	vp_popup_set_popup_min_size(pRepeat->pParent, pRepeat->pBox,
-				    pRepeat->nListCount, VIDEO_POPUP_DEFAULT);
+	                            pRepeat->nListCount, VIDEO_POPUP_DEFAULT);
 
 	elm_box_pack_end(pRepeat->pBox, pRepeat->pGenList);
 

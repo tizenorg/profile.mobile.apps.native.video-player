@@ -43,7 +43,7 @@ typedef struct _MultiPath {
 
 /* internal functions */
 static bool _vp_multi_path_write_multi_path_set_position(char *szURL,
-		int nPosition)
+                        int nPosition)
 {
 	FILE *fp = fopen(VP_PLAY_MULTIPATH_INI_PATH, "w");
 
@@ -64,10 +64,10 @@ static bool _vp_multi_path_write_multi_path_set_position(char *szURL,
 
 /* external functions */
 bool vp_multi_path_add_item(GList **pList,
-			    const char *szURL,
-			    char *szTitle,
-			    char *szSubTitle,
-			    int nPosition, int nDuration, bool bIsSameAP)
+                            const char *szURL,
+                            char *szTitle,
+                            char *szSubTitle,
+                            int nPosition, int nDuration, bool bIsSameAP)
 {
 	if (!szURL) {
 		VideoLogError("szURL is NULL");
@@ -136,7 +136,7 @@ bool vp_multi_path_clear_item(GList *pList)
 }
 
 bool vp_multi_path_set_item_subtitle(const char *szMediaURL,
-				     char *szSubtitleURL, GList *pList)
+                                     char *szSubtitleURL, GList *pList)
 {
 	if (!pList) {
 		VideoLogError("pList is NULL");
@@ -171,7 +171,7 @@ bool vp_multi_path_set_item_subtitle(const char *szMediaURL,
 }
 
 bool vp_multi_path_set_item_position(const char *szMediaURL,
-				     int nPosition, GList *pList)
+                                     int nPosition, GList *pList)
 {
 	if (!pList) {
 		VideoLogError("pList is NULL");
@@ -199,8 +199,8 @@ bool vp_multi_path_set_item_position(const char *szMediaURL,
 		if (!strcmp(szMediaURL, pPath->szURL)) {
 			pPath->nStartPosition = nPosition;
 			_vp_multi_path_write_multi_path_set_position((char *)
-					szMediaURL,
-					nPosition);
+			        szMediaURL,
+			        nPosition);
 		}
 	}
 
@@ -208,9 +208,9 @@ bool vp_multi_path_set_item_position(const char *szMediaURL,
 }
 
 bool vp_multi_path_get_current_item(const char *szMediaURL, char **szURL,
-				    char **szTitle, char **szSubtitle,
-				    int *nPosition, int *nDuration,
-				    bool *bIsSameAP, GList *pList)
+                                    char **szTitle, char **szSubtitle,
+                                    int *nPosition, int *nDuration,
+                                    bool *bIsSameAP, GList *pList)
 {
 	if (!szMediaURL) {
 		VideoLogError("No exist szMediaID.");
@@ -254,9 +254,9 @@ bool vp_multi_path_get_current_item(const char *szMediaURL, char **szURL,
 
 
 bool vp_multi_path_get_next_item(const char *szMediaURL, char **szURL,
-				 char **szSubtitle, int *nPosition,
-				 int *nDuration, bool bLoop,
-				 GList *pList)
+                                 char **szSubtitle, int *nPosition,
+                                 int *nDuration, bool bLoop,
+                                 GList *pList)
 {
 	if (!szMediaURL) {
 		VideoLogError("No exist szMediaID.");
@@ -316,9 +316,9 @@ bool vp_multi_path_get_next_item(const char *szMediaURL, char **szURL,
 }
 
 bool vp_multi_path_get_prev_item(const char *szMediaURL, char **szURL,
-				 char **szSubtitle, int *nPosition,
-				 int *nDuration, bool bLoop,
-				 GList *pList)
+                                 char **szSubtitle, int *nPosition,
+                                 int *nDuration, bool bLoop,
+                                 GList *pList)
 {
 	if (!szMediaURL) {
 		VideoLogError("No exist szMediaID.");

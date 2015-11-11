@@ -74,19 +74,19 @@ static void _vp_language_get_list(xmlNodePtr cur)
 	for (cur_node = cur; cur_node; cur_node = cur_node->next) {
 		if (cur_node->type == XML_ELEMENT_NODE) {
 			pId =
-				(char *) g_strdup((char *)
-						  xmlGetProp(cur_node,
-							     (const xmlChar *) "id"));
+			    (char *)g_strdup((char *)
+			                      xmlGetProp(cur_node,
+			                                 (const xmlChar *) "id"));
 			pName =
-				(char *) g_strdup((char *)
-						  xmlGetProp(cur_node,
-							     (const xmlChar *) "string"));
+			    (char *)g_strdup((char *)
+			                      xmlGetProp(cur_node,
+			                                 (const xmlChar *) "string"));
 			pMcc =
-				(char *) g_strdup((char *)
-						  xmlGetProp(cur_node,
-							     (const xmlChar *) "mcc"));
+			    (char *)g_strdup((char *)
+			                      xmlGetProp(cur_node,
+			                                 (const xmlChar *) "mcc"));
 			stLanguage *szNode =
-				(stLanguage *) calloc(1, sizeof(stLanguage));
+			    (stLanguage *)calloc(1, sizeof(stLanguage));
 			if (szNode) {
 				szNode->szLanguageCode = pId;
 				szNode->szLanguageName = pName;

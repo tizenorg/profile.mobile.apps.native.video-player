@@ -174,7 +174,7 @@ void vp_chapter_db_destroy(vp_chapter_db_h hChapterDB)
 }
 
 bool vp_chapter_db_set_media_id(vp_chapter_db_h hChapterDB,
-				const char *szMediaID)
+                                const char *szMediaID)
 {
 	if (hChapterDB == NULL) {
 		vp_dbgE("hChapterDB is NULL");
@@ -196,7 +196,7 @@ bool vp_chapter_db_set_media_id(vp_chapter_db_h hChapterDB,
 }
 
 bool vp_chapter_db_set_media_url(vp_chapter_db_h hChapterDB,
-				 const char *szMediaURL)
+                                 const char *szMediaURL)
 {
 	if (hChapterDB == NULL) {
 		vp_dbgE("hChapterDB is NULL");
@@ -216,7 +216,7 @@ bool vp_chapter_db_set_media_url(vp_chapter_db_h hChapterDB,
 	VP_STRDUP(pChapterDB->szMediaURL, szMediaURL);
 
 	if (!vp_media_content_util_get_video_id
-			(szMediaURL, &(pChapterDB->szMediaID))) {
+	        (szMediaURL, &(pChapterDB->szMediaID))) {
 		vp_dbgE("vp_media_content_util_get_video_id is fail");
 		return FALSE;
 	}
@@ -225,7 +225,7 @@ bool vp_chapter_db_set_media_url(vp_chapter_db_h hChapterDB,
 }
 
 bool vp_chapter_db_get_items(vp_chapter_db_h hChapterDB,
-			     GList **pChapterList)
+                             GList **pChapterList)
 {
 	if (hChapterDB == NULL) {
 		vp_dbgE("hChapterDB is NULL");
@@ -240,7 +240,7 @@ bool vp_chapter_db_get_items(vp_chapter_db_h hChapterDB,
 	}
 
 	char *szSql =
-		sqlite3_mprintf(CHAPTER_DB_SELECT_QUERY, pChapterDB->szMediaID);
+	    sqlite3_mprintf(CHAPTER_DB_SELECT_QUERY, pChapterDB->szMediaID);
 	sqlite3_stmt *stmt = NULL;
 
 	if (!vp_db_util_query_prepare(szSql, &stmt)) {
@@ -268,7 +268,7 @@ bool vp_chapter_db_get_items(vp_chapter_db_h hChapterDB,
 
 		pItem->nIdx = (int) sqlite3_column_int(stmt, 1);
 		VP_STRDUP(pItem->szChapterPath,
-			  (char *) sqlite3_column_text(stmt, 2));
+		          (char *) sqlite3_column_text(stmt, 2));
 		pItem->nFileSize = (int) sqlite3_column_int(stmt, 3);
 
 		*pChapterList = g_list_append(*pChapterList, pItem);
@@ -290,7 +290,7 @@ bool vp_chapter_db_get_items(vp_chapter_db_h hChapterDB,
 }
 
 bool vp_chapter_db_get_all_items_media_id(vp_chapter_db_h hChapterDB,
-		GList **pChapterList)
+        GList **pChapterList)
 {
 	if (hChapterDB == NULL) {
 		vp_dbgE("hChapterDB is NULL");
@@ -334,7 +334,7 @@ bool vp_chapter_db_get_all_items_media_id(vp_chapter_db_h hChapterDB,
 }
 
 bool vp_chapter_db_insert(vp_chapter_db_h hChapterDB,
-			  const char *szChapterPath, int nIdx)
+                          const char *szChapterPath, int nIdx)
 {
 	if (hChapterDB == NULL) {
 		vp_dbgE("hChapterDB is NULL");
@@ -357,8 +357,8 @@ bool vp_chapter_db_insert(vp_chapter_db_h hChapterDB,
 	long long nSize = vp_file_size(szChapterPath);
 
 	char *szSql =
-		sqlite3_mprintf(CHAPTER_DB_INSERT_QUERY, nIdx, szChapterPath,
-				(int) nSize, pChapterDB->szMediaID);
+	    sqlite3_mprintf(CHAPTER_DB_INSERT_QUERY, nIdx, szChapterPath,
+	                    (int) nSize, pChapterDB->szMediaID);
 	vp_sdbg("%s", szSql);
 
 	sqlite3_stmt *stmt = NULL;
@@ -405,7 +405,7 @@ bool vp_chapter_db_delete(vp_chapter_db_h hChapterDB)
 	_vp_chapter_db_delete_items(pChapterDB->szMediaID);
 
 	char *szSql =
-		sqlite3_mprintf(CHAPTER_DB_DELETE_QUERY, pChapterDB->szMediaID);
+	    sqlite3_mprintf(CHAPTER_DB_DELETE_QUERY, pChapterDB->szMediaID);
 	vp_sdbg("%s", szSql);
 
 	sqlite3_stmt *stmt = NULL;

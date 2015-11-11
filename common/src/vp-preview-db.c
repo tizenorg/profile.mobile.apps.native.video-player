@@ -172,7 +172,7 @@ void vp_preview_db_destroy(vp_preview_db_h hPreviewDB)
 }
 
 bool vp_preview_db_set_media_id(vp_preview_db_h hPreviewDB,
-				const char *szMediaID)
+                                const char *szMediaID)
 {
 	if (hPreviewDB == NULL) {
 		vp_dbgE("hPreviewDB is NULL");
@@ -194,7 +194,7 @@ bool vp_preview_db_set_media_id(vp_preview_db_h hPreviewDB,
 }
 
 bool vp_preview_db_set_media_url(vp_preview_db_h hPreviewDB,
-				 const char *szMediaURL)
+                                 const char *szMediaURL)
 {
 	if (hPreviewDB == NULL) {
 		vp_dbgE("hPreviewDB is NULL");
@@ -214,7 +214,7 @@ bool vp_preview_db_set_media_url(vp_preview_db_h hPreviewDB,
 	VP_STRDUP(pPreviewDB->szMediaURL, szMediaURL);
 
 	if (!vp_media_content_util_get_video_id
-			(szMediaURL, &(pPreviewDB->szMediaID))) {
+	        (szMediaURL, &(pPreviewDB->szMediaID))) {
 		vp_dbgE("vp_media_content_util_get_video_id is fail");
 		return FALSE;
 	}
@@ -224,7 +224,7 @@ bool vp_preview_db_set_media_url(vp_preview_db_h hPreviewDB,
 
 
 bool vp_preview_db_get_file_path(vp_preview_db_h hPreviewDB,
-				 char **szFilePath)
+                                 char **szFilePath)
 {
 	if (hPreviewDB == NULL) {
 		vp_dbgE("hPreviewDB is NULL");
@@ -239,7 +239,7 @@ bool vp_preview_db_get_file_path(vp_preview_db_h hPreviewDB,
 	}
 
 	char *szSql =
-		sqlite3_mprintf(PREVIEW_DB_SELECT_QUERY, pPreviewDB->szMediaID);
+	    sqlite3_mprintf(PREVIEW_DB_SELECT_QUERY, pPreviewDB->szMediaID);
 	sqlite3_stmt *stmt = NULL;
 
 	if (!vp_db_util_query_prepare(szSql, &stmt)) {
@@ -277,7 +277,7 @@ bool vp_preview_db_get_file_path(vp_preview_db_h hPreviewDB,
 }
 
 bool vp_preview_db_get_file_size(vp_preview_db_h hPreviewDB,
-				 int *nFileSize)
+                                 int *nFileSize)
 {
 	if (hPreviewDB == NULL) {
 		vp_dbgE("hPreviewDB is NULL");
@@ -292,7 +292,7 @@ bool vp_preview_db_get_file_size(vp_preview_db_h hPreviewDB,
 	}
 
 	char *szSql =
-		sqlite3_mprintf(PREVIEW_DB_SELECT_QUERY, pPreviewDB->szMediaID);
+	    sqlite3_mprintf(PREVIEW_DB_SELECT_QUERY, pPreviewDB->szMediaID);
 	sqlite3_stmt *stmt = NULL;
 
 	if (!vp_db_util_query_prepare(szSql, &stmt)) {
@@ -343,7 +343,7 @@ bool vp_preview_db_item_count(vp_preview_db_h hPreviewDB, int *nCount)
 }
 
 bool vp_preview_db_get_all_items_media_id(vp_preview_db_h hPreviewDB,
-		GList **pPreviewList)
+        GList **pPreviewList)
 {
 	if (hPreviewDB == NULL) {
 		vp_dbgE("hPreviewDB is NULL");
@@ -387,7 +387,7 @@ bool vp_preview_db_get_all_items_media_id(vp_preview_db_h hPreviewDB,
 }
 
 bool vp_preview_db_insert(vp_preview_db_h hPreviewDB,
-			  const char *szPreviewPath)
+                          const char *szPreviewPath)
 {
 	if (hPreviewDB == NULL) {
 		vp_dbgE("hPreviewDB is NULL");
@@ -409,8 +409,8 @@ bool vp_preview_db_insert(vp_preview_db_h hPreviewDB,
 	long long nSize = vp_file_size(szPreviewPath);
 
 	char *szSql =
-		sqlite3_mprintf(PREVIEW_DB_INSERT_QUERY, szPreviewPath,
-				(int) nSize, pPreviewDB->szMediaID);
+	    sqlite3_mprintf(PREVIEW_DB_INSERT_QUERY, szPreviewPath,
+	                    (int) nSize, pPreviewDB->szMediaID);
 	vp_sdbg("%s", szSql);
 
 	sqlite3_stmt *stmt = NULL;
@@ -457,7 +457,7 @@ bool vp_preview_db_delete(vp_preview_db_h hPreviewDB)
 	_vp_preview_db_delete_item(pPreviewDB->szMediaID);
 
 	char *szSql =
-		sqlite3_mprintf(PREVIEW_DB_DELETE_QUERY, pPreviewDB->szMediaID);
+	    sqlite3_mprintf(PREVIEW_DB_DELETE_QUERY, pPreviewDB->szMediaID);
 	vp_sdbg("%s", szSql);
 
 	sqlite3_stmt *stmt = NULL;

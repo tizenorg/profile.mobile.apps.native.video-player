@@ -21,9 +21,9 @@
 #include "vp-play-log.h"
 
 Evas_Object *vp_button_create(Evas_Object *pParent, const char *pStyle,
-			      const char *pTxt, Evas_Smart_Cb pClickFunc,
-			      Evas_Smart_Cb pPressFunc,
-			      Evas_Smart_Cb pUnpressFunc, void *pUserData)
+                              const char *pTxt, Evas_Smart_Cb pClickFunc,
+                              Evas_Smart_Cb pPressFunc,
+                              Evas_Smart_Cb pUnpressFunc, void *pUserData)
 {
 	if (!pParent) {
 		VideoLogError("pParent is NULL");
@@ -47,22 +47,22 @@ Evas_Object *vp_button_create(Evas_Object *pParent, const char *pStyle,
 	}
 
 	evas_object_size_hint_weight_set(pObj, EVAS_HINT_EXPAND,
-					 EVAS_HINT_EXPAND);
+	                                 EVAS_HINT_EXPAND);
 	evas_object_size_hint_align_set(pObj, EVAS_HINT_FILL, EVAS_HINT_FILL);
 
 	evas_object_smart_callback_add(pObj, "clicked", pClickFunc,
-				       pUserData);
+	                               pUserData);
 	evas_object_smart_callback_add(pObj, "pressed", pPressFunc,
-				       pUserData);
+	                               pUserData);
 	evas_object_smart_callback_add(pObj, "unpressed", pUnpressFunc,
-				       pUserData);
+	                               pUserData);
 
 	return pObj;
 }
 
 Evas_Object *vp_button_create_icon(Evas_Object *pParent,
-				   const char *pEdjPath,
-				   const char *pGroupName)
+                                   const char *pEdjPath,
+                                   const char *pGroupName)
 {
 	if (!pParent) {
 		VideoLogError("pParent is NULL");
@@ -76,7 +76,7 @@ Evas_Object *vp_button_create_icon(Evas_Object *pParent,
 		return NULL;
 	}
 	evas_object_size_hint_weight_set(pObj, EVAS_HINT_EXPAND,
-					 EVAS_HINT_EXPAND);
+	                                 EVAS_HINT_EXPAND);
 	evas_object_size_hint_align_set(pObj, EVAS_HINT_FILL, EVAS_HINT_FILL);
 
 	return pObj;
@@ -84,8 +84,8 @@ Evas_Object *vp_button_create_icon(Evas_Object *pParent,
 
 
 Evas_Object *vp_button_create_image(Evas_Object *pParent,
-				    const char *pEdjPath,
-				    const char *pGroupName)
+                                    const char *pEdjPath,
+                                    const char *pGroupName)
 {
 	if (!pParent) {
 		VideoLogError("pParent is NULL");
@@ -103,11 +103,11 @@ Evas_Object *vp_button_create_image(Evas_Object *pParent,
 }
 
 Evas_Object *vp_navirame_button_create(Evas_Object *pParent,
-				       const char *pStyle,
-				       const char *pEdjPath,
-				       const char *pGroupName,
-				       Evas_Smart_Cb pClickFunc,
-				       void *pUserData)
+                                       const char *pStyle,
+                                       const char *pEdjPath,
+                                       const char *pGroupName,
+                                       Evas_Smart_Cb pClickFunc,
+                                       void *pUserData)
 {
 	if (!pParent) {
 		VideoLogError("pParent is NULL");
@@ -116,8 +116,9 @@ Evas_Object *vp_navirame_button_create(Evas_Object *pParent,
 
 	Evas_Object *pImage = NULL;
 	Evas_Object *btn = elm_button_add(pParent);
-	if (!btn)
+	if (!btn) {
 		return NULL;
+	}
 
 	if (pStyle) {
 		elm_object_style_set(btn, pStyle);
@@ -128,7 +129,7 @@ Evas_Object *vp_navirame_button_create(Evas_Object *pParent,
 	pImage = elm_image_add(pParent);
 	elm_image_file_set(pImage, pEdjPath, pGroupName);
 	evas_object_size_hint_aspect_set(pImage, EVAS_ASPECT_CONTROL_BOTH, 1,
-					 1);
+	                                 1);
 	elm_image_resizable_set(pImage, EINA_TRUE, EINA_TRUE);
 	elm_object_part_content_set(btn, "icon", pImage);
 

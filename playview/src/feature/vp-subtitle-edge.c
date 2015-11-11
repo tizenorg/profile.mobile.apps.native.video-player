@@ -48,22 +48,21 @@ typedef struct _SubtitleEdgePopup {
 
 
 static void _vp_subtitle_edge_destroy_handle(SubtitleEdgePopup *
-		pSubtitleEdge);
+        pSubtitleEdge);
 static void __vp_subtitle_edge_genlist_item_selected_cb(void *pUserData,
-		Evas_Object *
-		pObject,
-		void *pEventInfo);
+                        Evas_Object *pObject,
+                        void *pEventInfo);
 
 static void __vp_subtitle_edge_genlist_realized(void *data,
-		Evas_Object *obj,
-		void *event_info)
+                        Evas_Object *obj,
+                        void *event_info)
 {
 	VP_GENLIST_HIDE_BOTTOMLINE(data, obj, event_info);
 }
 
 static void __vp_subtitle_edge_popup_rotate_cb(void *data,
-		Evas_Object *obj,
-		void *event_info)
+                        Evas_Object *obj,
+                        void *event_info)
 {
 	SubtitleEdgePopup *pSubtitleEdge = (SubtitleEdgePopup *) data;
 	if (!pSubtitleEdge) {
@@ -74,16 +73,16 @@ static void __vp_subtitle_edge_popup_rotate_cb(void *data,
 		return;
 	}
 	vp_popup_set_popup_min_size(pSubtitleEdge->pParent,
-				    pSubtitleEdge->pBox,
-				    pSubtitleEdge->nListCount,
-				    VIDEO_POPUP_DEFAULT);
+	                            pSubtitleEdge->pBox,
+	                            pSubtitleEdge->nListCount,
+	                            VIDEO_POPUP_DEFAULT);
 
 }
 
 /* callback functions */
 static char *__vp_subtitle_edge_genlist_text_get_cb(const void *pUserData,
-		Evas_Object *pObj,
-		const char *pPart)
+                        Evas_Object *pObj,
+                        const char *pPart)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -100,11 +99,9 @@ static char *__vp_subtitle_edge_genlist_text_get_cb(const void *pUserData,
 }
 
 static Evas_Object *__vp_subtitle_edge_genlist_content_get_cb(const void
-		*pUserData,
-		Evas_Object
-		* pObj,
-		const char
-		*pPart)
+                        *pUserData,
+                        Evas_Object *pObj,
+                        const char *pPart)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -117,8 +114,8 @@ static Evas_Object *__vp_subtitle_edge_genlist_content_get_cb(const void
 		Evas_Object *pRadioObj = NULL;
 
 		SubtitleEdgePopup *pSubtitleEdge =
-			(SubtitleEdgePopup *) evas_object_data_get(pObj,
-					VP_SUBTITLE_EDGE_GENLIST_DATA_KEY);
+		    (SubtitleEdgePopup *) evas_object_data_get(pObj,
+		            VP_SUBTITLE_EDGE_GENLIST_DATA_KEY);
 		if (pSubtitleEdge == NULL) {
 			VideoLogWarning("evas_object_data_get is fail");
 			return NULL;
@@ -138,10 +135,10 @@ static Evas_Object *__vp_subtitle_edge_genlist_content_get_cb(const void
 		elm_radio_state_value_set(pRadioObj, nEdge);
 		elm_radio_group_add(pRadioObj, pSubtitleEdge->pRadio);
 		elm_radio_value_set(pSubtitleEdge->pRadio,
-				    pSubtitleEdge->currentSubtitleEdge);
+		                    pSubtitleEdge->currentSubtitleEdge);
 		evas_object_smart_callback_add(pRadioObj, "changed",
-					       __vp_subtitle_edge_genlist_item_selected_cb,
-					       pSubtitleEdge);
+		                               __vp_subtitle_edge_genlist_item_selected_cb,
+		                               pSubtitleEdge);
 		evas_object_show(pRadioObj);
 
 		return pRadioObj;
@@ -151,9 +148,8 @@ static Evas_Object *__vp_subtitle_edge_genlist_content_get_cb(const void
 }
 
 static void __vp_subtitle_edge_genlist_item_selected_cb(void *pUserData,
-		Evas_Object *
-		pObject,
-		void *pEventInfo)
+                        Evas_Object *pObject,
+                        void *pEventInfo)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -166,7 +162,7 @@ static void __vp_subtitle_edge_genlist_item_selected_cb(void *pUserData,
 
 	Elm_Object_Item *pItem = (Elm_Object_Item *) pEventInfo;
 	Elm_Object_Item *pSelectedItem =
-		elm_genlist_selected_item_get(pObject);
+	    elm_genlist_selected_item_get(pObject);
 	if (pSelectedItem) {
 		elm_genlist_item_selected_set(pSelectedItem, EINA_FALSE);
 	}
@@ -192,13 +188,13 @@ static void __vp_subtitle_edge_genlist_item_selected_cb(void *pUserData,
 	pSubtitleEdge->currentSubtitleEdge = nEdge;
 	if (pSubtitleEdge->pCloseCb) {
 		pSubtitleEdge->pCloseCb(nEdge, FALSE,
-					(void *) pSubtitleEdge->pUserData);
+		                        (void *) pSubtitleEdge->pUserData);
 	}
 }
 
 static void __vp_subtitle_edge_popup_key_event_cb(void *pUserData,
-		Evas_Object *pObj,
-		void *pEventInfo)
+                        Evas_Object *pObj,
+                        void *pEventInfo)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -209,14 +205,14 @@ static void __vp_subtitle_edge_popup_key_event_cb(void *pUserData,
 
 	if (pSubtitleEdge->pCloseCb) {
 		pSubtitleEdge->pCloseCb(-1, FALSE,
-					(void *) pSubtitleEdge->pUserData);
+		                        (void *) pSubtitleEdge->pUserData);
 	}
 }
 
 static void __vp_subtitle_edge_popup_mouse_event_cb(void *pUserData,
-		Evas *pEvas,
-		Evas_Object *pObj,
-		void *pEventInfo)
+                        Evas *pEvas,
+                        Evas_Object *pObj,
+                        void *pEventInfo)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -232,11 +228,11 @@ static void __vp_subtitle_edge_popup_mouse_event_cb(void *pUserData,
 
 	if (ev->button == 3) {
 		SubtitleEdgePopup *pSubtitleEdge =
-			(SubtitleEdgePopup *) pUserData;
+		    (SubtitleEdgePopup *) pUserData;
 
 		if (pSubtitleEdge->pCloseCb) {
 			pSubtitleEdge->pCloseCb(-1, FALSE,
-						(void *) pSubtitleEdge->pUserData);
+			                        (void *) pSubtitleEdge->pUserData);
 		}
 	}
 }
@@ -245,7 +241,7 @@ static void __vp_subtitle_edge_popup_mouse_event_cb(void *pUserData,
 
 /* internal functions */
 static void _vp_subtitle_edge_destroy_handle(SubtitleEdgePopup *
-		pSubtitleEdge)
+                pSubtitleEdge)
 {
 	if (pSubtitleEdge == NULL) {
 		VideoLogError("pSubtitleEdge is NULL");
@@ -253,10 +249,10 @@ static void _vp_subtitle_edge_destroy_handle(SubtitleEdgePopup *
 	}
 
 	evas_object_smart_callback_del(pSubtitleEdge->pParent,
-				       "rotation,changed",
-				       __vp_subtitle_edge_popup_rotate_cb);
+	                               "rotation,changed",
+	                               __vp_subtitle_edge_popup_rotate_cb);
 	evas_object_smart_callback_del(pSubtitleEdge->pGenList, "realized",
-				       __vp_subtitle_edge_genlist_realized);
+	                               __vp_subtitle_edge_genlist_realized);
 
 	VP_EVAS_DEL(pSubtitleEdge->pRadio);
 	VP_EVAS_DEL(pSubtitleEdge->pGenList);
@@ -275,7 +271,7 @@ static void _vp_subtitle_edge_destroy_handle(SubtitleEdgePopup *
 
 
 static Evas_Object *_vp_subtitle_edge_create_genlist(Evas_Object *
-		pParent)
+                        pParent)
 {
 	if (pParent == NULL) {
 		VideoLogError("pParent is NULL");
@@ -286,7 +282,7 @@ static Evas_Object *_vp_subtitle_edge_create_genlist(Evas_Object *
 
 	pObj = elm_genlist_add(pParent);
 	evas_object_size_hint_weight_set(pObj, EVAS_HINT_EXPAND,
-					 EVAS_HINT_EXPAND);
+	                                 EVAS_HINT_EXPAND);
 	evas_object_size_hint_align_set(pObj, EVAS_HINT_FILL, EVAS_HINT_FILL);
 	evas_object_show(pObj);
 	return pObj;
@@ -294,7 +290,7 @@ static Evas_Object *_vp_subtitle_edge_create_genlist(Evas_Object *
 
 
 static bool _vp_subtitle_edge_add_genlist_item(Evas_Object *pObj,
-		void *pUserData)
+                void *pUserData)
 {
 	if (pObj == NULL) {
 		VideoLogError("pObj is NULL");
@@ -312,46 +308,46 @@ static bool _vp_subtitle_edge_add_genlist_item(Evas_Object *pObj,
 
 	if (pSubtitleEdge->st_SubtitleEdge_Itc != NULL) {
 		pSubtitleEdge->st_SubtitleEdge_Itc->version =
-			ELM_GENLIST_ITEM_CLASS_VERSION;
+		    ELM_GENLIST_ITEM_CLASS_VERSION;
 		pSubtitleEdge->st_SubtitleEdge_Itc->item_style =
-			"1text.1icon.3/popup";
+		    "1text.1icon.3/popup";
 		pSubtitleEdge->st_SubtitleEdge_Itc->func.text_get =
-			(void *) __vp_subtitle_edge_genlist_text_get_cb;
+		    (void *) __vp_subtitle_edge_genlist_text_get_cb;
 		pSubtitleEdge->st_SubtitleEdge_Itc->func.content_get =
-			(void *) __vp_subtitle_edge_genlist_content_get_cb;
+		    (void *) __vp_subtitle_edge_genlist_content_get_cb;
 		pSubtitleEdge->st_SubtitleEdge_Itc->func.state_get = NULL;
 		pSubtitleEdge->st_SubtitleEdge_Itc->func.del = NULL;
 		pSubtitleEdge->nListCount = 0;
 
 		elm_genlist_item_append(pObj, pSubtitleEdge->st_SubtitleEdge_Itc,
-				(void *) VP_PLAY_STRING_EDGE_NO_EDGE, NULL,
-				ELM_GENLIST_ITEM_NONE,
-				__vp_subtitle_edge_genlist_item_selected_cb,
-				pUserData);
+		                        (void *) VP_PLAY_STRING_EDGE_NO_EDGE, NULL,
+		                        ELM_GENLIST_ITEM_NONE,
+		                        __vp_subtitle_edge_genlist_item_selected_cb,
+		                        pUserData);
 		pSubtitleEdge->nListCount++;
 		elm_genlist_item_append(pObj, pSubtitleEdge->st_SubtitleEdge_Itc,
-				(void *) VP_PLAY_STRING_EDGE_RAISED, NULL,
-				ELM_GENLIST_ITEM_NONE,
-				__vp_subtitle_edge_genlist_item_selected_cb,
-				pUserData);
+		                        (void *) VP_PLAY_STRING_EDGE_RAISED, NULL,
+		                        ELM_GENLIST_ITEM_NONE,
+		                        __vp_subtitle_edge_genlist_item_selected_cb,
+		                        pUserData);
 		pSubtitleEdge->nListCount++;
 		elm_genlist_item_append(pObj, pSubtitleEdge->st_SubtitleEdge_Itc,
-				(void *) VP_PLAY_STRING_EDGE_DEPRESSED, NULL,
-				ELM_GENLIST_ITEM_NONE,
-				__vp_subtitle_edge_genlist_item_selected_cb,
-				pUserData);
+		                        (void *) VP_PLAY_STRING_EDGE_DEPRESSED, NULL,
+		                        ELM_GENLIST_ITEM_NONE,
+		                        __vp_subtitle_edge_genlist_item_selected_cb,
+		                        pUserData);
 		pSubtitleEdge->nListCount++;
 		elm_genlist_item_append(pObj, pSubtitleEdge->st_SubtitleEdge_Itc,
-				(void *) VP_PLAY_STRING_EDGE_UNIFORM, NULL,
-				ELM_GENLIST_ITEM_NONE,
-				__vp_subtitle_edge_genlist_item_selected_cb,
-				pUserData);
+		                        (void *) VP_PLAY_STRING_EDGE_UNIFORM, NULL,
+		                        ELM_GENLIST_ITEM_NONE,
+		                        __vp_subtitle_edge_genlist_item_selected_cb,
+		                        pUserData);
 		pSubtitleEdge->nListCount++;
 		elm_genlist_item_append(pObj, pSubtitleEdge->st_SubtitleEdge_Itc,
-				(void *) VP_PLAY_STRING_EDGE_DROP_SHADOW,
-				NULL, ELM_GENLIST_ITEM_NONE,
-				__vp_subtitle_edge_genlist_item_selected_cb,
-				pUserData);
+		                        (void *) VP_PLAY_STRING_EDGE_DROP_SHADOW,
+		                        NULL, ELM_GENLIST_ITEM_NONE,
+		                        __vp_subtitle_edge_genlist_item_selected_cb,
+		                        pUserData);
 		pSubtitleEdge->nListCount++;
 	}
 
@@ -360,8 +356,8 @@ static bool _vp_subtitle_edge_add_genlist_item(Evas_Object *pObj,
 
 /* external functions */
 subtitle_edge_handle vp_subtitle_edge_create(Evas_Object *pParent,
-		PopupCloseCbFunc pCloseCb,
-		int nDefaultSize)
+                        PopupCloseCbFunc pCloseCb,
+                        int nDefaultSize)
 {
 	if (pParent == NULL) {
 		VideoLogError("pParent is NULL");
@@ -381,11 +377,11 @@ subtitle_edge_handle vp_subtitle_edge_create(Evas_Object *pParent,
 	pSubtitleEdge->pCloseCb = pCloseCb;
 
 	pSubtitleEdge->pPopup =
-		vp_popup_create(pParent, POPUP_STYLE_MENU_LIST_NO_CANCEL_BTN,
-				VP_PLAY_STRING_SUBTITLE_EDGE, NULL, 0.0, NULL,
-				__vp_subtitle_edge_popup_key_event_cb,
-				__vp_subtitle_edge_popup_mouse_event_cb,
-				(void *) pSubtitleEdge);
+	    vp_popup_create(pParent, POPUP_STYLE_MENU_LIST_NO_CANCEL_BTN,
+	                    VP_PLAY_STRING_SUBTITLE_EDGE, NULL, 0.0, NULL,
+	                    __vp_subtitle_edge_popup_key_event_cb,
+	                    __vp_subtitle_edge_popup_mouse_event_cb,
+	                    (void *) pSubtitleEdge);
 	if (pSubtitleEdge->pPopup == NULL) {
 		VideoLogError("vp_popup_create fail");
 		_vp_subtitle_edge_destroy_handle(pSubtitleEdge);
@@ -393,38 +389,38 @@ subtitle_edge_handle vp_subtitle_edge_create(Evas_Object *pParent,
 	}
 
 	pSubtitleEdge->pGenList =
-		_vp_subtitle_edge_create_genlist(pSubtitleEdge->pPopup);
+	    _vp_subtitle_edge_create_genlist(pSubtitleEdge->pPopup);
 	if (pSubtitleEdge->pGenList == NULL) {
 		VideoLogError("_vp_subtitle_size_create_genlist fail");
 		_vp_subtitle_edge_destroy_handle(pSubtitleEdge);
 		return NULL;
 	}
 	evas_object_data_set(pSubtitleEdge->pGenList,
-			     VP_SUBTITLE_EDGE_GENLIST_DATA_KEY,
-			     (void *) pSubtitleEdge);
+	                     VP_SUBTITLE_EDGE_GENLIST_DATA_KEY,
+	                     (void *) pSubtitleEdge);
 	evas_object_smart_callback_add(pSubtitleEdge->pGenList, "realized",
-				       __vp_subtitle_edge_genlist_realized,
-				       NULL);
+	                               __vp_subtitle_edge_genlist_realized,
+	                               NULL);
 
 	pSubtitleEdge->pRadio = elm_radio_add(pSubtitleEdge->pGenList);
 
 	if (!_vp_subtitle_edge_add_genlist_item
-			(pSubtitleEdge->pGenList, (void *) pSubtitleEdge)) {
+	        (pSubtitleEdge->pGenList, (void *) pSubtitleEdge)) {
 		VideoLogError("_vp_subtitle_size_add_genlist_item fail");
 		return FALSE;
 	}
 	//elm_radio_value_set(pSubtitleEdge->pRadio, nDefaultSize);
 	pSubtitleEdge->currentSubtitleEdge = nDefaultSize;
 	evas_object_smart_callback_add(pSubtitleEdge->pParent,
-				       "rotation,changed",
-				       __vp_subtitle_edge_popup_rotate_cb,
-				       pSubtitleEdge);
+	                               "rotation,changed",
+	                               __vp_subtitle_edge_popup_rotate_cb,
+	                               pSubtitleEdge);
 
 	pSubtitleEdge->pBox = elm_box_add(pSubtitleEdge->pPopup);
 	vp_popup_set_popup_min_size(pSubtitleEdge->pParent,
-				    pSubtitleEdge->pBox,
-				    pSubtitleEdge->nListCount,
-				    VIDEO_POPUP_DEFAULT);
+	                            pSubtitleEdge->pBox,
+	                            pSubtitleEdge->nListCount,
+	                            VIDEO_POPUP_DEFAULT);
 	elm_box_pack_end(pSubtitleEdge->pBox, pSubtitleEdge->pGenList);
 	elm_object_content_set(pSubtitleEdge->pPopup, pSubtitleEdge->pBox);
 
@@ -439,7 +435,7 @@ void vp_subtitle_edge_destroy(subtitle_edge_handle pSubtitleEdgeHandle)
 	}
 
 	SubtitleEdgePopup *pSubtitleEdge =
-		(SubtitleEdgePopup *) pSubtitleEdgeHandle;
+	    (SubtitleEdgePopup *) pSubtitleEdgeHandle;
 
 	_vp_subtitle_edge_destroy_handle(pSubtitleEdge);
 
@@ -453,7 +449,7 @@ bool vp_subtitle_edge_realize(subtitle_edge_handle pSubtitleEdgeHandle)
 	}
 
 	SubtitleEdgePopup *pSubtitleEdge =
-		(SubtitleEdgePopup *) pSubtitleEdgeHandle;
+	    (SubtitleEdgePopup *) pSubtitleEdgeHandle;
 
 	evas_object_show(pSubtitleEdge->pPopup);
 
@@ -468,7 +464,7 @@ bool vp_subtitle_edge_unrealize(subtitle_edge_handle pSubtitleEdgeHandle)
 	}
 
 	SubtitleEdgePopup *pSubtitleEdge =
-		(SubtitleEdgePopup *) pSubtitleEdgeHandle;
+	    (SubtitleEdgePopup *) pSubtitleEdgeHandle;
 
 	evas_object_hide(pSubtitleEdge->pPopup);
 
@@ -476,7 +472,7 @@ bool vp_subtitle_edge_unrealize(subtitle_edge_handle pSubtitleEdgeHandle)
 }
 
 bool vp_subtitle_edge_set_user_data(subtitle_edge_handle
-				    pSubtitleEdgeHandle, void *pUserData)
+                                    pSubtitleEdgeHandle, void *pUserData)
 {
 	if (pSubtitleEdgeHandle == NULL) {
 		VideoLogError("pSubtitleEdgeHandle is NULL");
@@ -484,7 +480,7 @@ bool vp_subtitle_edge_set_user_data(subtitle_edge_handle
 	}
 
 	SubtitleEdgePopup *pSubtitleEdge =
-		(SubtitleEdgePopup *) pSubtitleEdgeHandle;
+	    (SubtitleEdgePopup *) pSubtitleEdgeHandle;
 
 	pSubtitleEdge->pUserData = pUserData;
 

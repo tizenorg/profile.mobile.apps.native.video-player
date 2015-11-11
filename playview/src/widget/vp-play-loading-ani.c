@@ -24,7 +24,7 @@
 
 
 Evas_Object *vp_play_loading_ani_create(Evas_Object *pParent,
-					video_loading_size_t nSize)
+                                        video_loading_size_t nSize)
 {
 	if (pParent == NULL) {
 		VideoLogError("pParent is NULL");
@@ -33,17 +33,18 @@ Evas_Object *vp_play_loading_ani_create(Evas_Object *pParent,
 
 	Evas_Object *progressbar = NULL;
 	progressbar = elm_progressbar_add(pParent);
-	if (nSize == VIDEO_LOADING_SIZE_SMALL)
+	if (nSize == VIDEO_LOADING_SIZE_SMALL) {
 		elm_object_style_set(progressbar, "process_small");
-	else if (nSize == VIDEO_LOADING_SIZE_MIDUM)
+	} else if (nSize == VIDEO_LOADING_SIZE_MIDUM) {
 		elm_object_style_set(progressbar, "process_medium");
-	else if (nSize == VIDEO_LOADING_SIZE_LARGE)
+	} else if (nSize == VIDEO_LOADING_SIZE_LARGE) {
 		elm_object_style_set(progressbar, "process_large");
-	else
+	} else {
 		elm_object_style_set(progressbar, "process_Xlarge");
+	}
 	evas_object_size_hint_align_set(progressbar, EVAS_HINT_FILL, 0.5);
 	evas_object_size_hint_weight_set(progressbar, EVAS_HINT_EXPAND,
-					 EVAS_HINT_EXPAND);
+	                                 EVAS_HINT_EXPAND);
 	evas_object_show(progressbar);
 	elm_progressbar_pulse(progressbar, EINA_TRUE);
 

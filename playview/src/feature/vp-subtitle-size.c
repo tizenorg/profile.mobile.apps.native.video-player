@@ -48,22 +48,21 @@ typedef struct _SubtitleSizePopup {
 
 
 static void _vp_subtitle_size_destroy_handle(SubtitleSizePopup *
-		pSubtitleSize);
+                        pSubtitleSize);
 static void __vp_subtitle_size_genlist_item_selected_cb(void *pUserData,
-		Evas_Object *
-		pObject,
-		void *pEventInfo);
+                        Evas_Object *pObject,
+                        void *pEventInfo);
 
 static void __vp_subtitle_size_genlist_realized(void *data,
-		Evas_Object *obj,
-		void *event_info)
+                        Evas_Object *obj,
+                        void *event_info)
 {
 	VP_GENLIST_HIDE_BOTTOMLINE(data, obj, event_info);
 }
 
 static void __vp_subtitle_size_popup_rotate_cb(void *data,
-		Evas_Object *obj,
-		void *event_info)
+                        Evas_Object *obj,
+                        void *event_info)
 {
 	SubtitleSizePopup *pSubtitleSize = (SubtitleSizePopup *) data;
 	if (!pSubtitleSize) {
@@ -74,16 +73,16 @@ static void __vp_subtitle_size_popup_rotate_cb(void *data,
 		return;
 	}
 	vp_popup_set_popup_min_size(pSubtitleSize->pParent,
-				    pSubtitleSize->pBox,
-				    pSubtitleSize->nListCount,
-				    VIDEO_POPUP_DEFAULT);
+	                            pSubtitleSize->pBox,
+	                            pSubtitleSize->nListCount,
+	                            VIDEO_POPUP_DEFAULT);
 
 }
 
 /* callback functions */
 static char *__vp_subtitle_size_genlist_text_get_cb(const void *pUserData,
-		Evas_Object *pObj,
-		const char *pPart)
+                        Evas_Object *pObj,
+                        const char *pPart)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -105,7 +104,7 @@ static char *__vp_subtitle_size_genlist_text_get_cb(const void *pUserData,
 		}
 
 		snprintf(szTmp, VP_STRING_LEN_MAX - 1,
-			 "<font_size=%d>%s</font_size>", nSize, szTxt);
+		         "<font_size=%d>%s</font_size>", nSize, szTxt);
 
 		return strdup(szTmp);
 	}
@@ -114,11 +113,9 @@ static char *__vp_subtitle_size_genlist_text_get_cb(const void *pUserData,
 }
 
 static Evas_Object *__vp_subtitle_size_genlist_content_get_cb(const void
-		*pUserData,
-		Evas_Object
-		* pObj,
-		const char
-		*pPart)
+                        *pUserData,
+                        Evas_Object *pObj,
+                        const char *pPart)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -131,8 +128,8 @@ static Evas_Object *__vp_subtitle_size_genlist_content_get_cb(const void
 		Evas_Object *pRadioObj = NULL;
 
 		SubtitleSizePopup *pSubtitleSize =
-			(SubtitleSizePopup *) evas_object_data_get(pObj,
-					VP_SUBTITLE_SIZE_GENLIST_DATA_KEY);
+		    (SubtitleSizePopup *) evas_object_data_get(pObj,
+		            VP_SUBTITLE_SIZE_GENLIST_DATA_KEY);
 		if (pSubtitleSize == NULL) {
 			VideoLogWarning("evas_object_data_get is fail");
 			return NULL;
@@ -150,10 +147,10 @@ static Evas_Object *__vp_subtitle_size_genlist_content_get_cb(const void
 		elm_radio_state_value_set(pRadioObj, nSize);
 		elm_radio_group_add(pRadioObj, pSubtitleSize->pRadio);
 		elm_radio_value_set(pSubtitleSize->pRadio,
-				    pSubtitleSize->currentSubtitleSize);
+		                    pSubtitleSize->currentSubtitleSize);
 		evas_object_smart_callback_add(pRadioObj, "changed",
-					       __vp_subtitle_size_genlist_item_selected_cb,
-					       pSubtitleSize);
+		                               __vp_subtitle_size_genlist_item_selected_cb,
+		                               pSubtitleSize);
 		evas_object_show(pRadioObj);
 
 		return pRadioObj;
@@ -163,9 +160,8 @@ static Evas_Object *__vp_subtitle_size_genlist_content_get_cb(const void
 }
 
 static void __vp_subtitle_size_genlist_item_selected_cb(void *pUserData,
-		Evas_Object *
-		pObject,
-		void *pEventInfo)
+                        Evas_Object *pObject,
+                        void *pEventInfo)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -178,7 +174,7 @@ static void __vp_subtitle_size_genlist_item_selected_cb(void *pUserData,
 
 	Elm_Object_Item *pItem = (Elm_Object_Item *) pEventInfo;
 	Elm_Object_Item *pSelectedItem =
-		elm_genlist_selected_item_get(pObject);
+	    elm_genlist_selected_item_get(pObject);
 	if (pSelectedItem) {
 		elm_genlist_item_selected_set(pSelectedItem, EINA_FALSE);
 	}
@@ -202,13 +198,13 @@ static void __vp_subtitle_size_genlist_item_selected_cb(void *pUserData,
 	pSubtitleSize->currentSubtitleSize = nSize;
 	if (pSubtitleSize->pCloseCb) {
 		pSubtitleSize->pCloseCb(nSize, FALSE,
-					(void *) pSubtitleSize->pUserData);
+		                        (void *) pSubtitleSize->pUserData);
 	}
 }
 
 static void __vp_subtitle_size_popup_key_event_cb(void *pUserData,
-		Evas_Object *pObj,
-		void *pEventInfo)
+                        Evas_Object *pObj,
+                        void *pEventInfo)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -219,14 +215,14 @@ static void __vp_subtitle_size_popup_key_event_cb(void *pUserData,
 
 	if (pSubtitleSize->pCloseCb) {
 		pSubtitleSize->pCloseCb(-1, FALSE,
-					(void *) pSubtitleSize->pUserData);
+		                        (void *) pSubtitleSize->pUserData);
 	}
 }
 
 static void __vp_subtitle_size_popup_mouse_event_cb(void *pUserData,
-		Evas *pEvas,
-		Evas_Object *pObj,
-		void *pEventInfo)
+                        Evas *pEvas,
+                        Evas_Object *pObj,
+                        void *pEventInfo)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -242,11 +238,11 @@ static void __vp_subtitle_size_popup_mouse_event_cb(void *pUserData,
 
 	if (ev->button == 3) {
 		SubtitleSizePopup *pSubtitleSize =
-			(SubtitleSizePopup *) pUserData;
+		    (SubtitleSizePopup *) pUserData;
 
 		if (pSubtitleSize->pCloseCb) {
 			pSubtitleSize->pCloseCb(-1, FALSE,
-						(void *) pSubtitleSize->pUserData);
+			                        (void *) pSubtitleSize->pUserData);
 		}
 	}
 }
@@ -255,7 +251,7 @@ static void __vp_subtitle_size_popup_mouse_event_cb(void *pUserData,
 
 /* internal functions */
 static void _vp_subtitle_size_destroy_handle(SubtitleSizePopup *
-		pSubtitleSize)
+        pSubtitleSize)
 {
 	if (pSubtitleSize == NULL) {
 		VideoLogError("pSubtitleSize is NULL");
@@ -263,10 +259,10 @@ static void _vp_subtitle_size_destroy_handle(SubtitleSizePopup *
 	}
 
 	evas_object_smart_callback_del(pSubtitleSize->pParent,
-				       "rotation,changed",
-				       __vp_subtitle_size_popup_rotate_cb);
+	                               "rotation,changed",
+	                               __vp_subtitle_size_popup_rotate_cb);
 	evas_object_smart_callback_del(pSubtitleSize->pGenList, "realized",
-				       __vp_subtitle_size_genlist_realized);
+	                               __vp_subtitle_size_genlist_realized);
 
 	VP_EVAS_DEL(pSubtitleSize->pRadio);
 	VP_EVAS_DEL(pSubtitleSize->pGenList);
@@ -285,7 +281,7 @@ static void _vp_subtitle_size_destroy_handle(SubtitleSizePopup *
 
 
 static Evas_Object *_vp_subtitle_size_create_genlist(Evas_Object *
-		pParent)
+        pParent)
 {
 	if (pParent == NULL) {
 		VideoLogError("pParent is NULL");
@@ -296,7 +292,7 @@ static Evas_Object *_vp_subtitle_size_create_genlist(Evas_Object *
 
 	pObj = elm_genlist_add(pParent);
 	evas_object_size_hint_weight_set(pObj, EVAS_HINT_EXPAND,
-					 EVAS_HINT_EXPAND);
+	                                 EVAS_HINT_EXPAND);
 	evas_object_size_hint_align_set(pObj, EVAS_HINT_FILL, EVAS_HINT_FILL);
 	evas_object_show(pObj);
 	return pObj;
@@ -304,7 +300,7 @@ static Evas_Object *_vp_subtitle_size_create_genlist(Evas_Object *
 
 
 static bool _vp_subtitle_size_add_genlist_item(Evas_Object *pObj,
-		void *pUserData)
+        void *pUserData)
 {
 	if (pObj == NULL) {
 		VideoLogError("pObj is NULL");
@@ -322,34 +318,34 @@ static bool _vp_subtitle_size_add_genlist_item(Evas_Object *pObj,
 
 	if (pSubtitleSize->st_SubtitleSize_Itc != NULL) {
 		pSubtitleSize->st_SubtitleSize_Itc->version =
-			ELM_GENLIST_ITEM_CLASS_VERSION;
+		    ELM_GENLIST_ITEM_CLASS_VERSION;
 		pSubtitleSize->st_SubtitleSize_Itc->item_style = "1line";
 		pSubtitleSize->st_SubtitleSize_Itc->func.text_get =
-			(void *) __vp_subtitle_size_genlist_text_get_cb;
+		    (void *) __vp_subtitle_size_genlist_text_get_cb;
 		pSubtitleSize->st_SubtitleSize_Itc->func.content_get =
-			(void *) __vp_subtitle_size_genlist_content_get_cb;
+		    (void *) __vp_subtitle_size_genlist_content_get_cb;
 		pSubtitleSize->st_SubtitleSize_Itc->func.state_get = NULL;
 		pSubtitleSize->st_SubtitleSize_Itc->func.del = NULL;
 		pSubtitleSize->nListCount = 0;
 
-		elm_genlist_item_append(pObj, 
-				pSubtitleSize->st_SubtitleSize_Itc,
-				(void *) VP_PLAY_STRING_SUBTITLE_SIZE_LARGE,
-				NULL, ELM_GENLIST_ITEM_NONE,
-				__vp_subtitle_size_genlist_item_selected_cb,
-				pUserData);
+		elm_genlist_item_append(pObj,
+		                        pSubtitleSize->st_SubtitleSize_Itc,
+		                        (void *) VP_PLAY_STRING_SUBTITLE_SIZE_LARGE,
+		                        NULL, ELM_GENLIST_ITEM_NONE,
+		                        __vp_subtitle_size_genlist_item_selected_cb,
+		                        pUserData);
 		pSubtitleSize->nListCount++;
 		elm_genlist_item_append(pObj, pSubtitleSize->st_SubtitleSize_Itc,
-				(void *) VP_PLAY_STRING_SUBTITLE_SIZE_MEDIUM,
-				NULL, ELM_GENLIST_ITEM_NONE,
-				__vp_subtitle_size_genlist_item_selected_cb,
-				pUserData);
+		                        (void *) VP_PLAY_STRING_SUBTITLE_SIZE_MEDIUM,
+		                        NULL, ELM_GENLIST_ITEM_NONE,
+		                        __vp_subtitle_size_genlist_item_selected_cb,
+		                        pUserData);
 		pSubtitleSize->nListCount++;
 		elm_genlist_item_append(pObj, pSubtitleSize->st_SubtitleSize_Itc,
-				(void *) VP_PLAY_STRING_SUBTITLE_SIZE_SMALL,
-				NULL, ELM_GENLIST_ITEM_NONE,
-				__vp_subtitle_size_genlist_item_selected_cb,
-				pUserData);
+		                        (void *) VP_PLAY_STRING_SUBTITLE_SIZE_SMALL,
+		                        NULL, ELM_GENLIST_ITEM_NONE,
+		                        __vp_subtitle_size_genlist_item_selected_cb,
+		                        pUserData);
 		pSubtitleSize->nListCount++;
 	}
 
@@ -358,8 +354,8 @@ static bool _vp_subtitle_size_add_genlist_item(Evas_Object *pObj,
 
 /* external functions */
 subtitle_size_handle vp_subtitle_size_create(Evas_Object *pParent,
-		PopupCloseCbFunc pCloseCb,
-		int nDefaultSize)
+        PopupCloseCbFunc pCloseCb,
+        int nDefaultSize)
 {
 	if (pParent == NULL) {
 		VideoLogError("pParent is NULL");
@@ -379,11 +375,11 @@ subtitle_size_handle vp_subtitle_size_create(Evas_Object *pParent,
 	pSubtitleSize->pCloseCb = pCloseCb;
 
 	pSubtitleSize->pPopup =
-		vp_popup_create(pParent, POPUP_STYLE_MENU_LIST_NO_CANCEL_BTN,
-				VP_PLAY_STRING_SUBTITLE_SIZE, NULL, 0.0, NULL,
-				__vp_subtitle_size_popup_key_event_cb,
-				__vp_subtitle_size_popup_mouse_event_cb,
-				(void *) pSubtitleSize);
+	    vp_popup_create(pParent, POPUP_STYLE_MENU_LIST_NO_CANCEL_BTN,
+	                    VP_PLAY_STRING_SUBTITLE_SIZE, NULL, 0.0, NULL,
+	                    __vp_subtitle_size_popup_key_event_cb,
+	                    __vp_subtitle_size_popup_mouse_event_cb,
+	                    (void *) pSubtitleSize);
 	if (pSubtitleSize->pPopup == NULL) {
 		VideoLogError("vp_popup_create fail");
 		_vp_subtitle_size_destroy_handle(pSubtitleSize);
@@ -391,38 +387,38 @@ subtitle_size_handle vp_subtitle_size_create(Evas_Object *pParent,
 	}
 
 	pSubtitleSize->pGenList =
-		_vp_subtitle_size_create_genlist(pSubtitleSize->pPopup);
+	    _vp_subtitle_size_create_genlist(pSubtitleSize->pPopup);
 	if (pSubtitleSize->pGenList == NULL) {
 		VideoLogError("_vp_subtitle_size_create_genlist fail");
 		_vp_subtitle_size_destroy_handle(pSubtitleSize);
 		return NULL;
 	}
 	evas_object_data_set(pSubtitleSize->pGenList,
-			     VP_SUBTITLE_SIZE_GENLIST_DATA_KEY,
-			     (void *) pSubtitleSize);
+	                     VP_SUBTITLE_SIZE_GENLIST_DATA_KEY,
+	                     (void *) pSubtitleSize);
 	evas_object_smart_callback_add(pSubtitleSize->pGenList, "realized",
-				       __vp_subtitle_size_genlist_realized,
-				       NULL);
+	                               __vp_subtitle_size_genlist_realized,
+	                               NULL);
 
 	pSubtitleSize->pRadio = elm_radio_add(pSubtitleSize->pGenList);
 
 	if (!_vp_subtitle_size_add_genlist_item
-			(pSubtitleSize->pGenList, (void *) pSubtitleSize)) {
+	        (pSubtitleSize->pGenList, (void *) pSubtitleSize)) {
 		VideoLogError("_vp_subtitle_size_add_genlist_item fail");
 		return FALSE;
 	}
 	//elm_radio_value_set(pSubtitleSize->pRadio, nDefaultSize);
 	pSubtitleSize->currentSubtitleSize = nDefaultSize;
 	evas_object_smart_callback_add(pSubtitleSize->pParent,
-				       "rotation,changed",
-				       __vp_subtitle_size_popup_rotate_cb,
-				       pSubtitleSize);
+	                               "rotation,changed",
+	                               __vp_subtitle_size_popup_rotate_cb,
+	                               pSubtitleSize);
 
 	pSubtitleSize->pBox = elm_box_add(pSubtitleSize->pPopup);
 	vp_popup_set_popup_min_size(pSubtitleSize->pParent,
-				    pSubtitleSize->pBox,
-				    pSubtitleSize->nListCount,
-				    VIDEO_POPUP_DEFAULT);
+	                            pSubtitleSize->pBox,
+	                            pSubtitleSize->nListCount,
+	                            VIDEO_POPUP_DEFAULT);
 	elm_box_pack_end(pSubtitleSize->pBox, pSubtitleSize->pGenList);
 	elm_object_content_set(pSubtitleSize->pPopup, pSubtitleSize->pBox);
 
@@ -437,7 +433,7 @@ void vp_subtitle_size_destroy(subtitle_size_handle pSubtitleSizeHandle)
 	}
 
 	SubtitleSizePopup *pSubtitleSize =
-		(SubtitleSizePopup *) pSubtitleSizeHandle;
+	    (SubtitleSizePopup *) pSubtitleSizeHandle;
 
 	_vp_subtitle_size_destroy_handle(pSubtitleSize);
 
@@ -451,7 +447,7 @@ bool vp_subtitle_size_realize(subtitle_size_handle pSubtitleSizeHandle)
 	}
 
 	SubtitleSizePopup *pSubtitleSize =
-		(SubtitleSizePopup *) pSubtitleSizeHandle;
+	    (SubtitleSizePopup *) pSubtitleSizeHandle;
 
 	evas_object_show(pSubtitleSize->pPopup);
 
@@ -466,7 +462,7 @@ bool vp_subtitle_size_unrealize(subtitle_size_handle pSubtitleSizeHandle)
 	}
 
 	SubtitleSizePopup *pSubtitleSize =
-		(SubtitleSizePopup *) pSubtitleSizeHandle;
+	    (SubtitleSizePopup *) pSubtitleSizeHandle;
 
 	evas_object_hide(pSubtitleSize->pPopup);
 
@@ -474,7 +470,7 @@ bool vp_subtitle_size_unrealize(subtitle_size_handle pSubtitleSizeHandle)
 }
 
 bool vp_subtitle_size_set_user_data(subtitle_size_handle
-				    pSubtitleSizeHandle, void *pUserData)
+                                    pSubtitleSizeHandle, void *pUserData)
 {
 	if (pSubtitleSizeHandle == NULL) {
 		VideoLogError("pSubtitleSizeHandle is NULL");
@@ -482,7 +478,7 @@ bool vp_subtitle_size_set_user_data(subtitle_size_handle
 	}
 
 	SubtitleSizePopup *pSubtitleSize =
-		(SubtitleSizePopup *) pSubtitleSizeHandle;
+	    (SubtitleSizePopup *) pSubtitleSizeHandle;
 
 	pSubtitleSize->pUserData = pUserData;
 

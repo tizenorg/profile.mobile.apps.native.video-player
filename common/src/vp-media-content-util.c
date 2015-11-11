@@ -23,7 +23,7 @@
 
 /* callback functions */
 static bool __vp_media_content_info_cb(media_info_h pMediaHandle,
-				       void *pUserData)
+                                       void *pUserData)
 {
 	media_info_h *pAssignItem = (media_info_h *) pUserData;
 
@@ -58,7 +58,7 @@ static bool __vp_media_content_info_cb(media_info_h pMediaHandle,
 
 /* external functions */
 bool vp_media_content_util_get_video_id(const char *szFilePath,
-					char **szVideoID)
+                                        char **szVideoID)
 {
 	if (szFilePath == NULL) {
 		vp_dbgE("szFilePath is NULL");
@@ -86,17 +86,17 @@ bool vp_media_content_util_get_video_id(const char *szFilePath,
 	}
 
 	nRet =
-		media_filter_set_condition(pFilterHandle, szTmpStr,
-					   MEDIA_CONTENT_COLLATE_DEFAULT);
+	    media_filter_set_condition(pFilterHandle, szTmpStr,
+	                               MEDIA_CONTENT_COLLATE_DEFAULT);
 	if (nRet != MEDIA_CONTENT_ERROR_NONE) {
 		vp_dbgE("media_filter_set_condition is fail : 0x%x", nRet);
 		goto Execption;
 	}
 
 	nRet =
-		media_info_foreach_media_from_db(pFilterHandle,
-				__vp_media_content_info_cb,
-				&pMediaHandle);
+	    media_info_foreach_media_from_db(pFilterHandle,
+	                                     __vp_media_content_info_cb,
+	                                     &pMediaHandle);
 	if (nRet != MEDIA_CONTENT_ERROR_NONE) {
 		vp_dbgE("media_filter_set_condition is fail : 0x%x", nRet);
 		goto Execption;
@@ -174,17 +174,17 @@ bool vp_media_content_util_get_first_video(char **szFilePath)
 	}
 
 	nRet =
-		media_filter_set_condition(pFilterHandle, szTmpStr,
-					   MEDIA_CONTENT_COLLATE_DEFAULT);
+	    media_filter_set_condition(pFilterHandle, szTmpStr,
+	                               MEDIA_CONTENT_COLLATE_DEFAULT);
 	if (nRet != MEDIA_CONTENT_ERROR_NONE) {
 		vp_dbgE("media_filter_set_condition is fail : 0x%x", nRet);
 		goto Execption;
 	}
 
 	nRet =
-		media_filter_set_order(pFilterHandle, MEDIA_CONTENT_ORDER_DESC,
-				       MEDIA_MODIFIED_TIME,
-				       MEDIA_CONTENT_COLLATE_NOCASE);
+	    media_filter_set_order(pFilterHandle, MEDIA_CONTENT_ORDER_DESC,
+	                           MEDIA_MODIFIED_TIME,
+	                           MEDIA_CONTENT_COLLATE_NOCASE);
 	if (nRet != MEDIA_CONTENT_ERROR_NONE) {
 		vp_dbgE("media_filter_set_order is fail : 0x%x", nRet);
 		goto Execption;
@@ -197,9 +197,9 @@ bool vp_media_content_util_get_first_video(char **szFilePath)
 	}
 
 	nRet =
-		media_info_foreach_media_from_db(pFilterHandle,
-				__vp_media_content_info_cb,
-				&pMediaHandle);
+	    media_info_foreach_media_from_db(pFilterHandle,
+	                                     __vp_media_content_info_cb,
+	                                     &pMediaHandle);
 	if (nRet != MEDIA_CONTENT_ERROR_NONE) {
 		vp_dbgE("media_info_foreach_media_from_db is fail : 0x%x", nRet);
 		goto Execption;

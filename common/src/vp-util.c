@@ -78,8 +78,7 @@ static char *__vp_util_get_string(const char *ID)
 	char *str;
 	if (strstr(ID, "IDS_COM") || strstr(ID, "IDS_IDLE")) {
 		str = dgettext("sys_string", ID);
-	}
-	else {
+	} else {
 		str = dgettext("video-player", ID);
 	}
 	return str;
@@ -87,12 +86,13 @@ static char *__vp_util_get_string(const char *ID)
 
 static Vp_Storage __vp_util_get_storage_type(const char *filepath)
 {
-	if (!filepath)
+	if (!filepath) {
 		return VP_STORAGE_NONE;
+	}
 
 	if (g_str_has_prefix(filepath, CLOUD_FOLDER)) {
 		return VP_STORAGE_CLOUD;/*store in cloud server*/
-	}else if (g_str_has_prefix(filepath, PHONE_FOLDER)) {
+	} else if (g_str_has_prefix(filepath, PHONE_FOLDER)) {
 		return VP_STORAGE_PHONE;/*store in phone*/
 	} else if (g_str_has_prefix(filepath, MEMORY_FOLDER)) {
 		return VP_STORAGE_MMC;	/*store in MMC*/
@@ -107,8 +107,9 @@ static Vp_Storage __vp_util_get_storage_type(const char *filepath)
 
 static char *__vp_util_get_logic_path(const char *full_path)
 {
-	if (!full_path)
+	if (!full_path) {
 		return NULL;
+	}
 
 	Vp_Storage store_type = VP_STORAGE_NONE;
 	int root_len = 0;
@@ -134,15 +135,17 @@ static char *__vp_util_get_logic_path(const char *full_path)
 	/*size of path is DIR_PATH_LEN_MAX+1*/
 	char *logic_path = NULL;
 	logic_path = (char *)malloc(DIR_PATH_LEN_MAX + 1);
-	if (logic_path == NULL)
+	if (logic_path == NULL) {
 		return NULL;
+	}
 
 	memset(logic_path, 0, DIR_PATH_LEN_MAX + 1);
 
 	g_strlcpy(logic_path, full_path + root_len, DIR_PATH_LEN_MAX);
 
-	if (strlen(logic_path) == 0)
+	if (strlen(logic_path) == 0) {
 		g_strlcpy(logic_path, "/", DIR_PATH_LEN_MAX);
+	}
 
 	return logic_path;
 }
@@ -191,14 +194,14 @@ char *vp_util_convert_file_location(const char *szFileLocation)
 }
 
 int vp_util_image_rotate(unsigned char *dest, int *dest_width, int *dest_height, const image_util_rotation_e dest_rotation,
-		const unsigned char *src, const int src_w, const int src_h, const image_util_colorspace_e colorspace)
+                         const unsigned char *src, const int src_w, const int src_h, const image_util_colorspace_e colorspace)
 {
 	if (!dest || !dest_width || !dest_height || !src) {
 		return IMAGE_UTIL_ERROR_INVALID_PARAMETER;
 	}
 
 	if (IMAGE_UTIL_COLORSPACE_RGB888 != colorspace || src_w <= 0 || src_h <= 0
-		 || dest_rotation <= IMAGE_UTIL_ROTATION_NONE || dest_rotation > IMAGE_UTIL_ROTATION_FLIP_VERT) {
+	        || dest_rotation <= IMAGE_UTIL_ROTATION_NONE || dest_rotation > IMAGE_UTIL_ROTATION_FLIP_VERT) {
 		return IMAGE_UTIL_ERROR_INVALID_PARAMETER;
 	}
 
@@ -209,45 +212,45 @@ int vp_util_image_rotate(unsigned char *dest, int *dest_width, int *dest_height,
 	int x = 0, y = 0;
 
 	switch (dest_rotation) {
-		case IMAGE_UTIL_ROTATION_90:
-		{
-			const rgb888 * const src_col_0 = (rgb888*) (src + (src_h - 1) * src_stride);
-			for (y = 0; y < dest_h; y++) {
-				rgb888 * const dest_row = (rgb888*) (dest + y * dest_stride);
-				const rgb888 * const src_col = (src_col_0 + y);
-				for (x = 0; x < dest_w; x++) {
-					dest_row[x] = *(rgb888*)((uchar*)src_col - x * src_stride);
-				}
+	case IMAGE_UTIL_ROTATION_90: {
+		const rgb888 * const src_col_0 = (rgb888*)(src + (src_h - 1) * src_stride);
+		for (y = 0; y < dest_h; y++) {
+			rgb888 * const dest_row = (rgb888*)(dest + y * dest_stride);
+			const rgb888 * const src_col = (src_col_0 + y);
+			for (x = 0; x < dest_w; x++) {
+				dest_row[x] = *(rgb888*)((uchar*)src_col - x * src_stride);
 			}
-		} break;
+		}
+	}
+	break;
 
-		case IMAGE_UTIL_ROTATION_180:
-		{
-			const rgb888 * const src_row_rev_0 = (rgb888*) (src + (src_h - 1) * src_stride
-					+ (src_w - 1) * sizeof(rgb888));
-			for (y = 0; y < dest_h; y++) {
-				rgb888 * const dest_row = (rgb888*) (dest + y * dest_stride);
-				const rgb888 * const src_row_rev = (rgb888*) ((uchar*)src_row_rev_0 - y * src_stride);
-				for (x = 0; x < dest_w; x++) {
-					dest_row[x] = *(src_row_rev - x);
-				}
+	case IMAGE_UTIL_ROTATION_180: {
+		const rgb888 * const src_row_rev_0 = (rgb888*)(src + (src_h - 1) * src_stride
+		                                     + (src_w - 1) * sizeof(rgb888));
+		for (y = 0; y < dest_h; y++) {
+			rgb888 * const dest_row = (rgb888*)(dest + y * dest_stride);
+			const rgb888 * const src_row_rev = (rgb888*)((uchar*)src_row_rev_0 - y * src_stride);
+			for (x = 0; x < dest_w; x++) {
+				dest_row[x] = *(src_row_rev - x);
 			}
-		} break;
+		}
+	}
+	break;
 
-		case IMAGE_UTIL_ROTATION_270:
-		{
-			const rgb888 * const src_col_rev_0 = (rgb888*) (src + (src_w - 1) * sizeof(rgb888));
-			for (y = 0; y < dest_h; y++) {
-				rgb888 * const dest_row = (rgb888*) (dest + y * dest_stride);
-				const rgb888 * const src_col_rev = (src_col_rev_0 - y);
-				for (x = 0; x < dest_w; x++) {
-					dest_row[x] = *(rgb888*)((uchar*)src_col_rev + x * src_stride);
-				}
+	case IMAGE_UTIL_ROTATION_270: {
+		const rgb888 * const src_col_rev_0 = (rgb888*)(src + (src_w - 1) * sizeof(rgb888));
+		for (y = 0; y < dest_h; y++) {
+			rgb888 * const dest_row = (rgb888*)(dest + y * dest_stride);
+			const rgb888 * const src_col_rev = (src_col_rev_0 - y);
+			for (x = 0; x < dest_w; x++) {
+				dest_row[x] = *(rgb888*)((uchar*)src_col_rev + x * src_stride);
 			}
-		} break;
+		}
+	}
+	break;
 
-		default:
-			return IMAGE_UTIL_ERROR_INVALID_PARAMETER;
+	default:
+		return IMAGE_UTIL_ERROR_INVALID_PARAMETER;
 	}
 
 	*dest_width = dest_w;
@@ -272,7 +275,7 @@ void vp_util_release_cpu()
 }
 
 int vp_util_image_resize(unsigned char *dest, const int *dest_width , const int *dest_height, const unsigned char *src,
-										const int src_w, const int src_h, const image_util_colorspace_e colorspace)
+                         const int src_w, const int src_h, const image_util_colorspace_e colorspace)
 {
 	if (!dest || !dest_width || !dest_height || !src) {
 		return IMAGE_UTIL_ERROR_INVALID_PARAMETER;
@@ -282,7 +285,7 @@ int vp_util_image_resize(unsigned char *dest, const int *dest_width , const int 
 	int dest_h = *dest_height;
 
 	if ((IMAGE_UTIL_COLORSPACE_RGB888 != colorspace && IMAGE_UTIL_COLORSPACE_RGBA8888 != colorspace)
-			|| src_w <= 0 || src_h <= 0 || dest_w <= 0 || dest_h <= 0) {
+	        || src_w <= 0 || src_h <= 0 || dest_w <= 0 || dest_h <= 0) {
 		return IMAGE_UTIL_ERROR_INVALID_PARAMETER;
 	}
 
@@ -295,8 +298,8 @@ int vp_util_image_resize(unsigned char *dest, const int *dest_width , const int 
 	u_int32_t red, green, blue, alpha;
 	red = green = blue = alpha = 0;
 	int x = 0, y = 0;
-	const float coef_x = (float) (src_w) / (float) (dest_w);
-	const float coef_y = (float) (src_h) / (float) (dest_h);
+	const float coef_x = (float)(src_w) / (float)(dest_w);
+	const float coef_y = (float)(src_h) / (float)(dest_h);
 	const float add_x = 0.5f * coef_x - 0.5f;
 	const float add_y = 0.5f * coef_y - 0.5f;
 	transform *transform_x = NULL, *transform_y = NULL;
@@ -356,13 +359,13 @@ int vp_util_image_resize(unsigned char *dest, const int *dest_width , const int 
 				c3 = t_x.coef * (1 - t_y.coef);
 				c4 = (1 - t_x.coef) * (1 - t_y.coef);
 				red = pixel1.r * c1 + pixel2.r * c2 + pixel3.r * c3
-						+ pixel4.r * c4;
+				      + pixel4.r * c4;
 				green = pixel1.g * c1 + pixel2.g * c2 + pixel3.g * c3
-						+ pixel4.g * c4;
+				        + pixel4.g * c4;
 				blue = pixel1.b * c1 + pixel2.b * c2 + pixel3.b * c3
-						+ pixel4.b * c4;
+				       + pixel4.b * c4;
 				alpha = pixel1.a * c1 + pixel2.a * c2 + pixel3.a * c3
-						+ pixel4.a * c4;
+				        + pixel4.a * c4;
 				dest_row[x].r = red;
 				dest_row[x].g = green;
 				dest_row[x].b = blue;
@@ -387,11 +390,11 @@ int vp_util_image_resize(unsigned char *dest, const int *dest_width , const int 
 				c3 = t_x.coef * (1 - t_y.coef);
 				c4 = (1 - t_x.coef) * (1 - t_y.coef);
 				red = pixel1.r * c1 + pixel2.r * c2 + pixel3.r * c3
-						+ pixel4.r * c4;
+				      + pixel4.r * c4;
 				green = pixel1.g * c1 + pixel2.g * c2 + pixel3.g * c3
-						+ pixel4.g * c4;
+				        + pixel4.g * c4;
 				blue = pixel1.b * c1 + pixel2.b * c2 + pixel3.b * c3
-						+ pixel4.b * c4;
+				       + pixel4.b * c4;
 
 				dest_row[x].r = red;
 				dest_row[x].g = green;
@@ -400,8 +403,8 @@ int vp_util_image_resize(unsigned char *dest, const int *dest_width , const int 
 		}
 	}
 
-	free (transform_x);
-	free (transform_y);
+	free(transform_x);
+	free(transform_y);
 
 	return IMAGE_UTIL_ERROR_NONE;
 }

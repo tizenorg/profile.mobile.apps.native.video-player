@@ -68,7 +68,7 @@ typedef struct _SubtitlePopup {
 	void 			*pUserData;
 	PopupCloseCbFunc	pCloseCb;
 
-}SubtitlePopup;
+} SubtitlePopup;
 
 static void _vp_subtitle_destroy_handle(SubtitlePopup *pSubtitle);
 char *_vp_subtitle_get_opacity(char *colorHex);
@@ -124,7 +124,7 @@ static void __vp_subtitle_popup_size_set(SubtitlePopup *pSubtitle)
 		return;
 	}
 
-	int nWidth= 0, nHeight = 0;
+	int nWidth = 0, nHeight = 0;
 	if (vp_popup_check_landspace_by_win(pSubtitle->pParent)) {
 		nWidth = 480;
 		nHeight = VP_POPUP_MAX_HEIGHT_L;
@@ -133,16 +133,15 @@ static void __vp_subtitle_popup_size_set(SubtitlePopup *pSubtitle)
 		nHeight = VP_POPUP_MAX_HEIGHT;
 	}
 	VideoLogInfo("nWidth=%d, nHeight=%d", nWidth, nHeight);
-	evas_object_size_hint_min_set(pSubtitle->pBox, nWidth,  (nHeight) * VP_SCALE);
+	evas_object_size_hint_min_set(pSubtitle->pBox, nWidth, (nHeight) * VP_SCALE);
 	//evas_object_size_hint_min_set(pSubtitle->pPopupTitle, nWidth * VP_SCALE,  (VP_POPUP_TITLE_HEIGHT) * VP_SCALE);
-	evas_object_size_hint_min_set(pSubtitle->pContentBox, nWidth, (nHeight-VP_POPUP_TITLE_HEIGHT) * VP_SCALE);
+	evas_object_size_hint_min_set(pSubtitle->pContentBox, nWidth, (nHeight - VP_POPUP_TITLE_HEIGHT) * VP_SCALE);
 }
 
 static void __vp_subtitle_popup_rotate_cb(void *data, Evas_Object *obj, void *event_info)
 {
 	SubtitlePopup *pSubtitle = (SubtitlePopup *)data;
-	if (!pSubtitle)
-	{
+	if (!pSubtitle) {
 		VideoLogError("pSubtitle IS null");
 		return;
 	}
@@ -195,7 +194,7 @@ static char *_vp_play_subtitle_text_get(SubtitleInfo *pSubtitleInfo, bool bActiv
 	char *szTxtFormat = NULL;
 	char *szColor = NULL;
 	char *szBGColor = NULL;
-	char *szBGColorOn= NULL;
+	char *szBGColorOn = NULL;
 	char *szFontEdge = NULL;
 	char *szAlignment = NULL;
 	char *szFontWeight = NULL;
@@ -204,11 +203,9 @@ static char *_vp_play_subtitle_text_get(SubtitleInfo *pSubtitleInfo, bool bActiv
 
 	if (pSubtitleInfo->nFontSize == VIDEO_SUBTITLE_SIZE_SMALL) {
 		nSize = VP_SUBTITLE_SIZE_SMALL_VALUE * pSubtitleInfo->fZoom;
-	}
-	else if (pSubtitleInfo->nFontSize == VIDEO_SUBTITLE_SIZE_LARGE) {
+	} else if (pSubtitleInfo->nFontSize == VIDEO_SUBTITLE_SIZE_LARGE) {
 		nSize = VP_SUBTITLE_SIZE_LARGE_VALUE * pSubtitleInfo->fZoom;
-	}
-	else {
+	} else {
 		nSize = VP_SUBTITLE_SIZE_MEDIUM_VALUE * pSubtitleInfo->fZoom;
 	}
 
@@ -223,26 +220,21 @@ static char *_vp_play_subtitle_text_get(SubtitleInfo *pSubtitleInfo, bool bActiv
 #ifndef SUBTITLE_K_FEATURE
 	if (pSubtitleInfo->nTextColor == VIDEO_SUBTITLE_COLOR_BLACK) {
 		szColor = g_strdup_printf("#000000");
-	}
-	else if (pSubtitleInfo->nTextColor == VIDEO_SUBTITLE_COLOR_BLUE) {
+	} else if (pSubtitleInfo->nTextColor == VIDEO_SUBTITLE_COLOR_BLUE) {
 		szColor = g_strdup_printf("#0000FF");
-	}
-	else if (pSubtitleInfo->nTextColor == VIDEO_SUBTITLE_COLOR_GREEN) {
+	} else if (pSubtitleInfo->nTextColor == VIDEO_SUBTITLE_COLOR_GREEN) {
 		szColor = g_strdup_printf("#00FF00");
-	}
-	else if (pSubtitleInfo->nTextColor == VIDEO_SUBTITLE_COLOR_WHITE) {
+	} else if (pSubtitleInfo->nTextColor == VIDEO_SUBTITLE_COLOR_WHITE) {
 		szColor = g_strdup_printf("#FFFFFF");
 	}
 
 	if (pSubtitleInfo->nBGColor == VIDEO_SUBTITLE_COLOR_NONE) {
 		szBGColorOn = g_strdup_printf("off");
 		szBGColor = g_strdup_printf("#000000");
-	}
-	else if (pSubtitleInfo->nBGColor == VIDEO_SUBTITLE_COLOR_BLACK) {
+	} else if (pSubtitleInfo->nBGColor == VIDEO_SUBTITLE_COLOR_BLACK) {
 		szBGColorOn = g_strdup_printf("on");
 		szBGColor = g_strdup_printf("#000000");
-	}
-	else if (pSubtitleInfo->nBGColor == VIDEO_SUBTITLE_COLOR_WHITE) {
+	} else if (pSubtitleInfo->nBGColor == VIDEO_SUBTITLE_COLOR_WHITE) {
 		szBGColorOn = g_strdup_printf("on");
 		szBGColor = g_strdup_printf("#FFFFFF");
 	}
@@ -264,11 +256,9 @@ static char *_vp_play_subtitle_text_get(SubtitleInfo *pSubtitleInfo, bool bActiv
 
 	if (pSubtitleInfo->eAlignment == VIDEO_SUBTITLE_ALIGNMENT_LEFT) {
 		szAlignment = g_strdup_printf("left");
-	}
-	else if (pSubtitleInfo->eAlignment == VIDEO_SUBTITLE_ALIGNMENT_CENTER) {
+	} else if (pSubtitleInfo->eAlignment == VIDEO_SUBTITLE_ALIGNMENT_CENTER) {
 		szAlignment = g_strdup_printf("center");
-	}
-	else if (pSubtitleInfo->eAlignment == VIDEO_SUBTITLE_ALIGNMENT_RIGHT) {
+	} else if (pSubtitleInfo->eAlignment == VIDEO_SUBTITLE_ALIGNMENT_RIGHT) {
 		szAlignment = g_strdup_printf("right");
 	}
 
@@ -300,29 +290,21 @@ static char *__vp_subtitle_get_color_and_opacity(char *szColorHex)
 
 	if (!strncasecmp(szColorHex, "#000000", VP_SUBTITLE_COLOR_LEN)) {
 		szColorAndOpacity = g_strdup_printf("%s,%s", VP_PLAY_STRING_SUBTITLE_COLOR_BLACK, szOpacity);
-	}
-	else if (!strncasecmp(szColorHex, "#0000ff", VP_SUBTITLE_COLOR_LEN)) {
+	} else if (!strncasecmp(szColorHex, "#0000ff", VP_SUBTITLE_COLOR_LEN)) {
 		szColorAndOpacity = g_strdup_printf("%s,%s", VP_PLAY_STRING_SUBTITLE_COLOR_BLUE, szOpacity);
-	}
-	else if (!strncasecmp(szColorHex, "#00ff00", VP_SUBTITLE_COLOR_LEN)) {
+	} else if (!strncasecmp(szColorHex, "#00ff00", VP_SUBTITLE_COLOR_LEN)) {
 		szColorAndOpacity = g_strdup_printf("%s,%s", VP_PLAY_STRING_SUBTITLE_COLOR_GREEN, szOpacity);
-	}
-	else if (!strncasecmp(szColorHex, "#ffffff", VP_SUBTITLE_COLOR_LEN)) {
+	} else if (!strncasecmp(szColorHex, "#ffffff", VP_SUBTITLE_COLOR_LEN)) {
 		szColorAndOpacity = g_strdup_printf("%s,%s", VP_PLAY_STRING_SUBTITLE_COLOR_WHITE, szOpacity);
-	}
-	else if (!strncasecmp(szColorHex, "#ff0000", VP_SUBTITLE_COLOR_LEN)) {
+	} else if (!strncasecmp(szColorHex, "#ff0000", VP_SUBTITLE_COLOR_LEN)) {
 		szColorAndOpacity = g_strdup_printf("%s,%s", VP_PLAY_STRING_SUBTITLE_COLOR_RED, szOpacity);
-	}
-	else if (!strncasecmp(szColorHex, "#ffff00", VP_SUBTITLE_COLOR_LEN)) {
+	} else if (!strncasecmp(szColorHex, "#ffff00", VP_SUBTITLE_COLOR_LEN)) {
 		szColorAndOpacity = g_strdup_printf("%s,%s", VP_PLAY_STRING_SUBTITLE_COLOR_YELLOW, szOpacity);
-	}
-	else if (!strncasecmp(szColorHex, "#ff00ff", VP_SUBTITLE_COLOR_LEN)) {
+	} else if (!strncasecmp(szColorHex, "#ff00ff", VP_SUBTITLE_COLOR_LEN)) {
 		szColorAndOpacity = g_strdup_printf("%s,%s", VP_PLAY_STRING_SUBTITLE_COLOR_MAGENTA, szOpacity);
-	}
-	else if (!strncasecmp(szColorHex, "#00ffff", VP_SUBTITLE_COLOR_LEN)) {
+	} else if (!strncasecmp(szColorHex, "#00ffff", VP_SUBTITLE_COLOR_LEN)) {
 		szColorAndOpacity = g_strdup_printf("%s,%s", VP_PLAY_STRING_SUBTITLE_COLOR_CYAN, szOpacity);
-	}
-	else {
+	} else {
 		szColorAndOpacity = g_strdup_printf("%s,%s", VP_PLAY_STRING_SUBTITLE_COLOR_CUSTOM, szOpacity);
 	}
 
@@ -337,11 +319,12 @@ static char *__vp_subtitle_genlist_text_get_cb(const void *pUserData, Evas_Objec
 		return NULL;
 	}
 
-	char *szTxt= (char *)pUserData;
+	char *szTxt = (char *)pUserData;
 
 	if (!strcmp(pPart, "elm.text.main.left")) {
-		if (!g_strcmp0(VP_PLAY_STRING_ACTIVATION, szTxt))
+		if (!g_strcmp0(VP_PLAY_STRING_ACTIVATION, szTxt)) {
 			return strdup(szTxt);
+		}
 	}
 
 	if (!g_strcmp0(VP_PLAY_STRING_SETTINGS, szTxt)) {
@@ -351,7 +334,7 @@ static char *__vp_subtitle_genlist_text_get_cb(const void *pUserData, Evas_Objec
 	}
 
 	if (!g_strcmp0(VP_PLAY_STRING_SUBTITLE_SELECT_SUBTITLES, szTxt)
-		|| !g_strcmp0(VP_PLAY_STRING_SUBTITLE_ALIGNMENT, szTxt) || !g_strcmp0(VP_PLAY_STRING_SUBTITLE_SIZE, szTxt)) {
+	        || !g_strcmp0(VP_PLAY_STRING_SUBTITLE_ALIGNMENT, szTxt) || !g_strcmp0(VP_PLAY_STRING_SUBTITLE_SIZE, szTxt)) {
 		if (!strcmp(pPart, "elm.text.main.left.top")) {
 			return strdup(szTxt);
 		} else if (!strcmp(pPart, "elm.text.sub.left.bottom")) {
@@ -373,33 +356,26 @@ static char *__vp_subtitle_genlist_text_get_cb(const void *pUserData, Evas_Objec
 				if (pSubtitleInfo->szURL) {
 					return vp_util_convert_file_location(pSubtitleInfo->szURL);
 				}
-			}
-			else if (!strcmp(szTxt, VP_PLAY_STRING_SUBTITLE_ALIGNMENT)) {
-				switch (pSubtitleInfo->eAlignment)
-				{
-					case VIDEO_SUBTITLE_ALIGNMENT_LEFT:
-						{
-							return strdup(VP_PLAY_STRING_ALIGNMENT_LEFT);
-						}
-					case VIDEO_SUBTITLE_ALIGNMENT_CENTER:
-						{
-							return strdup(VP_PLAY_STRING_ALIGNMENT_CENTER);
-						}
-					case VIDEO_SUBTITLE_ALIGNMENT_RIGHT:
-						{
-							return strdup(VP_PLAY_STRING_ALIGNMENT_RIGHT);
-						}
-					default: break;
+			} else if (!strcmp(szTxt, VP_PLAY_STRING_SUBTITLE_ALIGNMENT)) {
+				switch (pSubtitleInfo->eAlignment) {
+				case VIDEO_SUBTITLE_ALIGNMENT_LEFT: {
+					return strdup(VP_PLAY_STRING_ALIGNMENT_LEFT);
 				}
-			}
-			else if (!strcmp(szTxt, VP_PLAY_STRING_SUBTITLE_SIZE)) {
+				case VIDEO_SUBTITLE_ALIGNMENT_CENTER: {
+					return strdup(VP_PLAY_STRING_ALIGNMENT_CENTER);
+				}
+				case VIDEO_SUBTITLE_ALIGNMENT_RIGHT: {
+					return strdup(VP_PLAY_STRING_ALIGNMENT_RIGHT);
+				}
+				default:
+					break;
+				}
+			} else if (!strcmp(szTxt, VP_PLAY_STRING_SUBTITLE_SIZE)) {
 				if (pSubtitleInfo->nFontSize == VIDEO_SUBTITLE_SIZE_LARGE) {
 					return strdup(VP_PLAY_STRING_SUBTITLE_SIZE_LARGE);
-				}
-				else if (pSubtitleInfo->nFontSize == VIDEO_SUBTITLE_SIZE_MEDIUM) {
+				} else if (pSubtitleInfo->nFontSize == VIDEO_SUBTITLE_SIZE_MEDIUM) {
 					return strdup(VP_PLAY_STRING_SUBTITLE_SIZE_MEDIUM);
-				}
-				else if (pSubtitleInfo->nFontSize == VIDEO_SUBTITLE_SIZE_SMALL) {
+				} else if (pSubtitleInfo->nFontSize == VIDEO_SUBTITLE_SIZE_SMALL) {
 					return strdup(VP_PLAY_STRING_SUBTITLE_SIZE_SMALL);
 				}
 			}
@@ -408,11 +384,9 @@ static char *__vp_subtitle_genlist_text_get_cb(const void *pUserData, Evas_Objec
 #if 1
 	if (!strcmp(pPart, "elm.text")) {
 		return strdup(szTxt);
-	}
-	else if (!strcmp(pPart, "elm.text.1")) {
+	} else if (!strcmp(pPart, "elm.text.1")) {
 		return strdup(szTxt);
-	}
-	else if (!strcmp(pPart, "elm.text.2")) {
+	} else if (!strcmp(pPart, "elm.text.2")) {
 
 		SubtitlePopup *pSubtitle = (SubtitlePopup *)evas_object_data_get(pObj , VP_SUBTITLE_GENLIST_DATA_KEY);
 		if (pSubtitle == NULL) {
@@ -431,29 +405,25 @@ static char *__vp_subtitle_genlist_text_get_cb(const void *pUserData, Evas_Objec
 			snprintf(szTemp, sizeof(szTemp), "%0.1f", pSubtitleInfo->fSync);
 
 			return g_strdup_printf(VP_PLAY_STRING_SUBTITLE_SECS, szTemp);
-		}
-		else if (!strcmp(szTxt, VP_PLAY_STRING_SUBTITLE_LANGUAGE)) {
+		} else if (!strcmp(szTxt, VP_PLAY_STRING_SUBTITLE_LANGUAGE)) {
 			if (pSubtitleInfo->szLanguage) {
 				return strdup(pSubtitleInfo->szLanguage);
 			}
 		}
 #ifdef SUBTITLE_K_FEATURE
 		else if (!strcmp(szTxt, VP_PLAY_STRING_SUBTITLE_ALIGNMENT)) {
-			switch (pSubtitleInfo->eAlignment)
-			{
-				case VIDEO_SUBTITLE_ALIGNMENT_LEFT:
-					{
-						return strdup(VP_PLAY_STRING_ALIGNMENT_LEFT);
-					}
-				case VIDEO_SUBTITLE_ALIGNMENT_CENTER:
-					{
-						return strdup(VP_PLAY_STRING_ALIGNMENT_CENTER);
-					}
-				case VIDEO_SUBTITLE_ALIGNMENT_RIGHT:
-					{
-						return strdup(VP_PLAY_STRING_ALIGNMENT_RIGHT);
-					}
-				default: break;
+			switch (pSubtitleInfo->eAlignment) {
+			case VIDEO_SUBTITLE_ALIGNMENT_LEFT: {
+				return strdup(VP_PLAY_STRING_ALIGNMENT_LEFT);
+			}
+			case VIDEO_SUBTITLE_ALIGNMENT_CENTER: {
+				return strdup(VP_PLAY_STRING_ALIGNMENT_CENTER);
+			}
+			case VIDEO_SUBTITLE_ALIGNMENT_RIGHT: {
+				return strdup(VP_PLAY_STRING_ALIGNMENT_RIGHT);
+			}
+			default:
+				break;
 			}
 		}
 #endif
@@ -461,39 +431,34 @@ static char *__vp_subtitle_genlist_text_get_cb(const void *pUserData, Evas_Objec
 			if (pSubtitleInfo->szURL) {
 				return vp_util_convert_file_location(pSubtitleInfo->szURL);
 			}
-		}
-		else if (!strcmp(szTxt, VP_PLAY_STRING_SUBTITLE_FONT)) {
+		} else if (!strcmp(szTxt, VP_PLAY_STRING_SUBTITLE_FONT)) {
 			if (pSubtitleInfo->szFontName) {
 				return strdup(pSubtitleInfo->szFontName);
 			}
-		}
-		else if (!strcmp(szTxt, VP_PLAY_STRING_SUBTITLE_SIZE)) {
+		} else if (!strcmp(szTxt, VP_PLAY_STRING_SUBTITLE_SIZE)) {
 			if (pSubtitleInfo->nFontSize == VIDEO_SUBTITLE_SIZE_LARGE) {
 				return strdup(VP_PLAY_STRING_SUBTITLE_SIZE_LARGE);
-			}
-			else if (pSubtitleInfo->nFontSize == VIDEO_SUBTITLE_SIZE_MEDIUM) {
+			} else if (pSubtitleInfo->nFontSize == VIDEO_SUBTITLE_SIZE_MEDIUM) {
 				return strdup(VP_PLAY_STRING_SUBTITLE_SIZE_MEDIUM);
-			}
-			else if (pSubtitleInfo->nFontSize == VIDEO_SUBTITLE_SIZE_SMALL) {
+			} else if (pSubtitleInfo->nFontSize == VIDEO_SUBTITLE_SIZE_SMALL) {
 				return strdup(VP_PLAY_STRING_SUBTITLE_SIZE_SMALL);
 			}
 		}
 //#ifdef SUBTITLE_K_FEATURE
 		else if (!strcmp(szTxt, VP_PLAY_STRING_SUBTITLE_EDGE)) {
-			switch (pSubtitleInfo->nEdge)
-			{
-				case VP_SUBTITLE_EDGE_NO_EDGE:
-					return strdup(VP_PLAY_STRING_EDGE_NO_EDGE);
-				case VP_SUBTITLE_EDGE_RAISED:
-					return strdup(VP_PLAY_STRING_EDGE_RAISED);
-				case VP_SUBTITLE_EDGE_DEPRESSED:
-					return strdup(VP_PLAY_STRING_EDGE_DEPRESSED);
-				case VP_SUBTITLE_EDGE_UNIFORM:
-					return strdup(VP_PLAY_STRING_EDGE_UNIFORM);
-				case VP_SUBTITLE_EDGE_DROP_SHADOW:
-					return strdup(VP_PLAY_STRING_EDGE_DROP_SHADOW);
-				default:
-					return strdup(VP_PLAY_STRING_EDGE_NO_EDGE);
+			switch (pSubtitleInfo->nEdge) {
+			case VP_SUBTITLE_EDGE_NO_EDGE:
+				return strdup(VP_PLAY_STRING_EDGE_NO_EDGE);
+			case VP_SUBTITLE_EDGE_RAISED:
+				return strdup(VP_PLAY_STRING_EDGE_RAISED);
+			case VP_SUBTITLE_EDGE_DEPRESSED:
+				return strdup(VP_PLAY_STRING_EDGE_DEPRESSED);
+			case VP_SUBTITLE_EDGE_UNIFORM:
+				return strdup(VP_PLAY_STRING_EDGE_UNIFORM);
+			case VP_SUBTITLE_EDGE_DROP_SHADOW:
+				return strdup(VP_PLAY_STRING_EDGE_DROP_SHADOW);
+			default:
+				return strdup(VP_PLAY_STRING_EDGE_NO_EDGE);
 			}
 		}
 //#endif
@@ -501,29 +466,23 @@ static char *__vp_subtitle_genlist_text_get_cb(const void *pUserData, Evas_Objec
 #ifndef SUBTITLE_K_FEATURE
 			if (pSubtitleInfo->nTextColor == VIDEO_SUBTITLE_COLOR_BLACK) {
 				return strdup(VP_PLAY_STRING_SUBTITLE_COLOR_BLACK);
-			}
-			else if (pSubtitleInfo->nTextColor == VIDEO_SUBTITLE_COLOR_BLUE) {
+			} else if (pSubtitleInfo->nTextColor == VIDEO_SUBTITLE_COLOR_BLUE) {
 				return strdup(VP_PLAY_STRING_SUBTITLE_COLOR_BLUE);
-			}
-			else if (pSubtitleInfo->nTextColor == VIDEO_SUBTITLE_COLOR_GREEN) {
+			} else if (pSubtitleInfo->nTextColor == VIDEO_SUBTITLE_COLOR_GREEN) {
 				return strdup(VP_PLAY_STRING_SUBTITLE_COLOR_GREEN);
-			}
-			else if (pSubtitleInfo->nTextColor == VIDEO_SUBTITLE_COLOR_WHITE) {
+			} else if (pSubtitleInfo->nTextColor == VIDEO_SUBTITLE_COLOR_WHITE) {
 				return strdup(VP_PLAY_STRING_SUBTITLE_COLOR_WHITE);
 			}
 #else
 			return __vp_subtitle_get_color_and_opacity(pSubtitleInfo->pTextColorHex);
 #endif
-		}
-		else if (!strcmp(szTxt, VP_PLAY_STRING_SUBTITLE_BG_COLOR)) {
+		} else if (!strcmp(szTxt, VP_PLAY_STRING_SUBTITLE_BG_COLOR)) {
 #ifndef SUBTITLE_K_FEATURE
 			if (pSubtitleInfo->nBGColor == VIDEO_SUBTITLE_COLOR_BLACK) {
 				return strdup(VP_PLAY_STRING_SUBTITLE_COLOR_BLACK);
-			}
-			else if (pSubtitleInfo->nBGColor == VIDEO_SUBTITLE_COLOR_WHITE) {
+			} else if (pSubtitleInfo->nBGColor == VIDEO_SUBTITLE_COLOR_WHITE) {
 				return strdup(VP_PLAY_STRING_SUBTITLE_COLOR_WHITE);
-			}
-			else if (pSubtitleInfo->nBGColor == VIDEO_SUBTITLE_COLOR_NONE) {
+			} else if (pSubtitleInfo->nBGColor == VIDEO_SUBTITLE_COLOR_NONE) {
 				return strdup(VP_PLAY_STRING_SUBTITLE_COLOR_NONE);
 			}
 #else
@@ -580,7 +539,7 @@ static Evas_Object *__vp_subtitle_genlist_content_get_cb(void *data, Evas_Object
 }
 
 
-static void __vp_subtitle_genlist_item_selected_cb(void *pUserData,Evas_Object *pObject,void *pEventInfo)
+static void __vp_subtitle_genlist_item_selected_cb(void *pUserData, Evas_Object *pObject, void *pEventInfo)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -608,15 +567,13 @@ static void __vp_subtitle_genlist_item_selected_cb(void *pUserData,Evas_Object *
 		if (pSubtitle->pCloseCb) {
 			pSubtitle->pCloseCb((int)nType, TRUE, (void *)pSubtitle->pUserData);
 		}
-	}
-	else if (!strcmp(szTxt, VP_PLAY_STRING_SUBTITLE_SELECT_SUBTITLES)) {
+	} else if (!strcmp(szTxt, VP_PLAY_STRING_SUBTITLE_SELECT_SUBTITLES)) {
 		VideoLogWarning("SELECT SUBTITLE ITEM (VP_PLAY_STRING_SUBTITLE_SELECT_SUBTITLES)");
 		nType = VP_SUBTITLE_MODE_SELECT;
 		if (pSubtitle->pCloseCb) {
 			pSubtitle->pCloseCb((int)nType, TRUE, (void *)pSubtitle->pUserData);
 		}
-	}
-	else if (!strcmp(szTxt, VP_PLAY_STRING_SUBTITLE_LANGUAGE)) {
+	} else if (!strcmp(szTxt, VP_PLAY_STRING_SUBTITLE_LANGUAGE)) {
 		VideoLogWarning("SELECT SUBTITLE ITEM (VP_PLAY_STRING_SUBTITLE_LANGUAGE)");
 		nType = VP_SUBTITLE_MODE_LANGUAGE;
 		if (pSubtitle->pCloseCb) {
@@ -638,8 +595,7 @@ static void __vp_subtitle_genlist_item_selected_cb(void *pUserData,Evas_Object *
 		if (pSubtitle->pCloseCb) {
 			pSubtitle->pCloseCb((int)nType, TRUE, (void *)pSubtitle->pUserData);
 		}
-	}
-	else if (!strcmp(szTxt, VP_PLAY_STRING_SUBTITLE_SIZE)) {
+	} else if (!strcmp(szTxt, VP_PLAY_STRING_SUBTITLE_SIZE)) {
 		VideoLogWarning("SELECT SUBTITLE ITEM (VP_PLAY_STRING_SUBTITLE_SIZE)");
 		nType = VP_SUBTITLE_MODE_SIZE;
 		if (pSubtitle->pCloseCb) {
@@ -653,15 +609,13 @@ static void __vp_subtitle_genlist_item_selected_cb(void *pUserData,Evas_Object *
 		if (pSubtitle->pCloseCb) {
 			pSubtitle->pCloseCb((int)nType, TRUE, (void *)pSubtitle->pUserData);
 		}
-	}
-	else if (!strcmp(szTxt, VP_PLAY_STRING_SUBTITLE_TEXT)) {
+	} else if (!strcmp(szTxt, VP_PLAY_STRING_SUBTITLE_TEXT)) {
 		VideoLogWarning("SELECT SUBTITLE ITEM (VP_PLAY_STRING_SUBTITLE_TEXT)");
 		nType = VP_SUBTITLE_MODE_TEXT;
 		if (pSubtitle->pCloseCb) {
 			pSubtitle->pCloseCb((int)nType, TRUE, (void *)pSubtitle->pUserData);
 		}
-	}
-	else if (!strcmp(szTxt, VP_PLAY_STRING_SUBTITLE_BG_COLOR)) {
+	} else if (!strcmp(szTxt, VP_PLAY_STRING_SUBTITLE_BG_COLOR)) {
 		VideoLogWarning("SELECT SUBTITLE ITEM (VP_PLAY_STRING_SUBTITLE_BG_COLOR)");
 		nType = VP_SUBTITLE_MODE_BG_COLOR;
 		if (pSubtitle->pCloseCb) {
@@ -719,8 +673,7 @@ static void _vp_subtitle_destroy_subtitle_info(SubtitlePopup *pSubtitle)
 		return;
 	}
 
-	if (pSubtitle->pSubtitleInfo)
-	{
+	if (pSubtitle->pSubtitleInfo) {
 		VP_FREE(pSubtitle->pSubtitleInfo->szFontName);
 		VP_FREE(pSubtitle->pSubtitleInfo->szLanguage);
 		VP_FREE(pSubtitle->pSubtitleInfo->szText);
@@ -860,7 +813,7 @@ static bool _vp_subtitle_add_genlist_item(Evas_Object *pObj, void *pUserData)
 	}
 
 	pSubtitle->st_Subtitle_Itc_1 = elm_genlist_item_class_new();
-	
+
 	if (pSubtitle->st_Subtitle_Itc_1 != NULL) {
 		pSubtitle->st_Subtitle_Itc_1->version = ELM_GENLIST_ITEM_CLASS_VERSION;
 		pSubtitle->st_Subtitle_Itc_1->item_style = "1line";
@@ -871,7 +824,7 @@ static bool _vp_subtitle_add_genlist_item(Evas_Object *pObj, void *pUserData)
 	}
 
 	pSubtitle->st_Subtitle_Itc_2 = elm_genlist_item_class_new();
-	
+
 	if (pSubtitle->st_Subtitle_Itc_2 != NULL) {
 		pSubtitle->st_Subtitle_Itc_2->version = ELM_GENLIST_ITEM_CLASS_VERSION;
 		pSubtitle->st_Subtitle_Itc_2->item_style = "2line.top";
@@ -891,7 +844,7 @@ static bool _vp_subtitle_add_genlist_item(Evas_Object *pObj, void *pUserData)
 		pSubtitle->st_Subtitle_Itc_1icon->func.state_get = NULL;
 		pSubtitle->st_Subtitle_Itc_1icon->func.del = NULL;
 	}
-	
+
 	if (pSubtitle->st_Subtitle_Itc_groupindex != NULL) {
 		pSubtitle->st_Subtitle_Itc_groupindex = elm_genlist_item_class_new();
 		pSubtitle->st_Subtitle_Itc_groupindex->version = ELM_GENLIST_ITEM_CLASS_VERSION;
@@ -984,7 +937,7 @@ static void _vp_subtitle_create_title(SubtitlePopup *pSubtitle)
 	elm_object_style_set(btn, "naviframe/title_right");
 	evas_object_smart_callback_add(btn, "clicked", (Evas_Smart_Cb)_vp_subtitle_done_button_cb, pSubtitle);
 	elm_object_part_content_set(pSubtitle->pPopupTitle, "elm.swallow.title.right.icon", btn);
-	elm_object_text_set(btn,VP_PLAY_STRING_SUBTITLE_DONE);
+	elm_object_text_set(btn, VP_PLAY_STRING_SUBTITLE_DONE);
 
 	elm_box_pack_end(pSubtitle->pBox, pSubtitle->pPopupTitle);
 	evas_object_show(pSubtitle->pPopupTitle);
@@ -1089,11 +1042,11 @@ static Evas_Object *_vp_subtitle_popup_create(Evas_Object *pParent, Eext_Event_C
 	Evas_Object *pObj = NULL;
 
 	pObj = vp_popup_create(pParent, 0 ,
-						NULL,
-						NULL, 0.0, NULL,
-						pCancelKeyCb,
-						pCancelMouseCb,
-						(void *)pUserData);
+	                       NULL,
+	                       NULL, 0.0, NULL,
+	                       pCancelKeyCb,
+	                       pCancelMouseCb,
+	                       (void *)pUserData);
 
 	return pObj;
 }
@@ -1305,7 +1258,7 @@ bool vp_subtitle_update(subtitle_popup_handle pSubtitleHandle, SubtitleInfo *pSu
 		return FALSE;
 	}
 
-	if (pSubtitleInfo== NULL) {
+	if (pSubtitleInfo == NULL) {
 		VideoLogError("pSubtitleInfo is NULL");
 		return FALSE;
 	}
@@ -1348,7 +1301,7 @@ char *_vp_subtitle_get_opacity(char *colorHex)
 		return NULL;
 	}
 
-	char *szOpacity = g_strndup(colorHex+7, 2);
+	char *szOpacity = g_strndup(colorHex + 7, 2);
 
 	float fOpacity = strtol(szOpacity, NULL, 16);
 
@@ -1356,6 +1309,6 @@ char *_vp_subtitle_get_opacity(char *colorHex)
 
 	VP_FREE(szOpacity);
 
-	return g_strdup_printf("%d%%", (int)((fOpacity*100)/255.0 + 0.5));
+	return g_strdup_printf("%d%%", (int)((fOpacity * 100) / 255.0 + 0.5));
 }
 

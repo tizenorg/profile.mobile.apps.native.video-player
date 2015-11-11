@@ -48,18 +48,18 @@ typedef struct _SoundPathPopup {
 } SoundPathPopup;
 
 static void __vp_sound_path_genlist_item_selected_cb(void *pUserData,
-		Evas_Object *
-		pObject,
-		void *pEventInfo);
+        Evas_Object *
+        pObject,
+        void *pEventInfo);
 
 static void __vp_sound_genlist_realized(void *data, Evas_Object *obj,
-					void *event_info)
+                                        void *event_info)
 {
 	VP_GENLIST_HIDE_BOTTOMLINE(data, obj, event_info);
 }
 
 static void __vp_sound_path_popup_rotate_cb(void *data, Evas_Object *obj,
-		void *event_info)
+        void *event_info)
 {
 	SoundPathPopup *pSoundPath = (SoundPathPopup *) data;
 	if (!pSoundPath) {
@@ -70,8 +70,8 @@ static void __vp_sound_path_popup_rotate_cb(void *data, Evas_Object *obj,
 		return;
 	}
 	vp_popup_set_popup_min_size(pSoundPath->pParent, pSoundPath->pBox,
-				    pSoundPath->nItemCnt,
-				    VIDEO_POPUP_DEFAULT);
+	                            pSoundPath->nItemCnt,
+	                            VIDEO_POPUP_DEFAULT);
 
 }
 
@@ -82,10 +82,10 @@ static void _vp_sound_path_destroy_handle(SoundPathPopup *pSoundPath)
 		return;
 	}
 	evas_object_smart_callback_del(pSoundPath->pParent,
-				       "rotation,changed",
-				       __vp_sound_path_popup_rotate_cb);
+	                               "rotation,changed",
+	                               __vp_sound_path_popup_rotate_cb);
 	evas_object_smart_callback_del(pSoundPath->pGenList, "realized",
-				       __vp_sound_genlist_realized);
+	                               __vp_sound_genlist_realized);
 
 	VP_EVAS_DEL(pSoundPath->pRadio);
 	VP_EVAS_DEL(pSoundPath->pGenList);
@@ -107,8 +107,8 @@ static void _vp_sound_path_destroy_handle(SoundPathPopup *pSoundPath)
 
 /* callback functions */
 static char *__vp_sound_path_genlist_text_get_cb(const void *pUserData,
-		Evas_Object *pObj,
-		const char *pPart)
+                        Evas_Object *pObj,
+                        const char *pPart)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -125,11 +125,9 @@ static char *__vp_sound_path_genlist_text_get_cb(const void *pUserData,
 }
 
 static Evas_Object *__vp_sound_path_genlist_content_get_cb(const void
-		*pUserData,
-		Evas_Object *
-		pObj,
-		const char
-		*pPart)
+                                *pUserData,
+                                Evas_Object *pObj,
+                                const char *pPart)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -143,8 +141,8 @@ static Evas_Object *__vp_sound_path_genlist_content_get_cb(const void
 		Evas_Object *pLayout = NULL;
 
 		SoundPathPopup *pSoundPath =
-			(SoundPathPopup *) evas_object_data_get(pObj,
-					VP_SOUND_PATH_GENLIST_DATA_KEY);
+		    (SoundPathPopup *) evas_object_data_get(pObj,
+		            VP_SOUND_PATH_GENLIST_DATA_KEY);
 		if (pSoundPath == NULL) {
 			VideoLogWarning("evas_object_data_get is fail");
 			return NULL;
@@ -170,21 +168,21 @@ static Evas_Object *__vp_sound_path_genlist_content_get_cb(const void
 		pRadioObj = elm_radio_add(pLayout);
 
 		elm_layout_theme_set(pLayout, "layout", "list/C/type.2",
-				     "default");
+		                     "default");
 		elm_radio_group_add(pRadioObj, pSoundPath->pRadio);
 		elm_radio_state_value_set(pRadioObj, nType);
 
 		if (nType == pSoundPath->soundPathType) {
 			VideoLogInfo("pSoundPath->soundPathType = %d",
-				     pSoundPath->soundPathType);
+			             pSoundPath->soundPathType);
 			elm_radio_value_set(pSoundPath->pRadio, nType);
 		}
 
 		evas_object_smart_callback_add(pRadioObj, "changed",
-					       __vp_sound_path_genlist_item_selected_cb,
-					       (void *) pUserData);
+		                               __vp_sound_path_genlist_item_selected_cb,
+		                               (void *) pUserData);
 		elm_object_part_content_set(pLayout, "elm.swallow.content",
-					    pRadioObj);
+		                            pRadioObj);
 		evas_object_show(pRadioObj);
 		evas_object_show(pLayout);
 
@@ -194,9 +192,8 @@ static Evas_Object *__vp_sound_path_genlist_content_get_cb(const void
 }
 
 static void __vp_sound_path_genlist_item_selected_cb(void *pUserData,
-		Evas_Object *
-		pObject,
-		void *pEventInfo)
+                                Evas_Object *pObject,
+                                void *pEventInfo)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -253,13 +250,13 @@ static void __vp_sound_path_genlist_item_selected_cb(void *pUserData,
 	pSoundPath->soundPathType = nType;
 	if (pSoundPath->pCloseCb) {
 		pSoundPath->pCloseCb((int) nType, FALSE,
-				     (void *) pSoundPath->pUserData);
+		                     (void *) pSoundPath->pUserData);
 	}
 }
 
 static void __vp_sound_path_popup_key_event_cb(void *pUserData,
-		Evas_Object *pObj,
-		void *pEventInfo)
+                        Evas_Object *pObj,
+                        void *pEventInfo)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -270,14 +267,14 @@ static void __vp_sound_path_popup_key_event_cb(void *pUserData,
 
 	if (pSoundPath->pCloseCb) {
 		pSoundPath->pCloseCb(VIDEO_SOUND_PATH_NONE, FALSE,
-				     (void *) pSoundPath->pUserData);
+		                     (void *) pSoundPath->pUserData);
 	}
 }
 
 static void __vp_sound_path_popup_mouse_event_cb(void *pUserData,
-		Evas *pEvas,
-		Evas_Object *pObj,
-		void *pEventInfo)
+                        Evas *pEvas,
+                        Evas_Object *pObj,
+                        void *pEventInfo)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -296,7 +293,7 @@ static void __vp_sound_path_popup_mouse_event_cb(void *pUserData,
 
 		if (pSoundPath->pCloseCb) {
 			pSoundPath->pCloseCb(VIDEO_SOUND_PATH_NONE, FALSE,
-					     (void *) pSoundPath->pUserData);
+			                     (void *) pSoundPath->pUserData);
 		}
 	}
 }
@@ -312,7 +309,7 @@ static Evas_Object *_vp_sound_path_create_genlist(Evas_Object *pParent)
 
 	pObj = elm_genlist_add(pParent);
 	evas_object_size_hint_weight_set(pObj, EVAS_HINT_EXPAND,
-					 EVAS_HINT_EXPAND);
+	                                 EVAS_HINT_EXPAND);
 	evas_object_size_hint_align_set(pObj, EVAS_HINT_FILL, EVAS_HINT_FILL);
 	evas_object_show(pObj);
 	return pObj;
@@ -320,7 +317,7 @@ static Evas_Object *_vp_sound_path_create_genlist(Evas_Object *pParent)
 
 
 static bool _vp_sound_path_add_genlist_item(Evas_Object *pObj,
-		void *pUserData)
+                                void *pUserData)
 {
 	if (pObj == NULL) {
 		VideoLogError("pObj is NULL");
@@ -335,14 +332,14 @@ static bool _vp_sound_path_add_genlist_item(Evas_Object *pObj,
 	}
 
 	pSoundPath->st_Sp_Itc = elm_genlist_item_class_new();
-	
+
 	if (pSoundPath->st_Sp_Itc != NULL) {
 		pSoundPath->st_Sp_Itc->version = ELM_GENLIST_ITEM_CLASS_VERSION;
 		pSoundPath->st_Sp_Itc->item_style = "1line";
 		pSoundPath->st_Sp_Itc->func.text_get =
-			(void *) __vp_sound_path_genlist_text_get_cb;
+		    (void *) __vp_sound_path_genlist_text_get_cb;
 		pSoundPath->st_Sp_Itc->func.content_get =
-			(void *) __vp_sound_path_genlist_content_get_cb;
+		    (void *) __vp_sound_path_genlist_content_get_cb;
 		pSoundPath->st_Sp_Itc->func.state_get = NULL;
 		pSoundPath->st_Sp_Itc->func.del = NULL;
 	}
@@ -353,60 +350,60 @@ static bool _vp_sound_path_add_genlist_item(Evas_Object *pObj,
 			VP_STRDUP(pSoundPath->szBTName, szBTName);
 			VP_FREE(szBTName);
 			elm_genlist_item_append(pObj, pSoundPath->st_Sp_Itc,
-						(void *) pSoundPath->szBTName, NULL,
-						ELM_GENLIST_ITEM_NONE,
-						__vp_sound_path_genlist_item_selected_cb,
-						pUserData);
+			                        (void *) pSoundPath->szBTName, NULL,
+			                        ELM_GENLIST_ITEM_NONE,
+			                        __vp_sound_path_genlist_item_selected_cb,
+			                        pUserData);
 			pSoundPath->nItemCnt++;
 		}
 	}
 
 	if (vp_sound_device_is_enable(VP_SOUND_DEVICE_HDMI, pSoundPath)) {
 		elm_genlist_item_append(pObj, pSoundPath->st_Sp_Itc,
-					(void *) VP_PLAY_STRING_SOUND_HDMI, NULL,
-					ELM_GENLIST_ITEM_NONE,
-					__vp_sound_path_genlist_item_selected_cb,
-					pUserData);
+		                        (void *) VP_PLAY_STRING_SOUND_HDMI, NULL,
+		                        ELM_GENLIST_ITEM_NONE,
+		                        __vp_sound_path_genlist_item_selected_cb,
+		                        pUserData);
 		pSoundPath->nItemCnt++;
 	}
 
 	if (vp_sound_device_is_enable(VP_SOUND_DEVICE_MIRRORING, pSoundPath)) {
 		elm_genlist_item_append(pObj, pSoundPath->st_Sp_Itc,
-					(void *) VP_PLAY_STRING_SOUND_MIRRORING,
-					NULL, ELM_GENLIST_ITEM_NONE,
-					__vp_sound_path_genlist_item_selected_cb,
-					pUserData);
+		                        (void *) VP_PLAY_STRING_SOUND_MIRRORING,
+		                        NULL, ELM_GENLIST_ITEM_NONE,
+		                        __vp_sound_path_genlist_item_selected_cb,
+		                        pUserData);
 		pSoundPath->nItemCnt++;
 	}
 
 	if (vp_sound_device_is_enable(VP_SOUND_DEVICE_USB_AUDIO, pSoundPath)) {
 		elm_genlist_item_append(pObj, pSoundPath->st_Sp_Itc,
-					(void *) VP_PLAY_STRING_SOUND_USB_AUDIO,
-					NULL, ELM_GENLIST_ITEM_NONE,
-					__vp_sound_path_genlist_item_selected_cb,
-					pUserData);
+		                        (void *) VP_PLAY_STRING_SOUND_USB_AUDIO,
+		                        NULL, ELM_GENLIST_ITEM_NONE,
+		                        __vp_sound_path_genlist_item_selected_cb,
+		                        pUserData);
 		pSoundPath->nItemCnt++;
 	}
 
 	if (vp_sound_device_is_enable(VP_SOUND_DEVICE_EARJACK, pSoundPath)) {
 		elm_genlist_item_append(pObj, pSoundPath->st_Sp_Itc,
-					(void *) VP_PLAY_STRING_SOUND_EARJACK,
-					NULL, ELM_GENLIST_ITEM_NONE,
-					__vp_sound_path_genlist_item_selected_cb,
-					pUserData);
+		                        (void *) VP_PLAY_STRING_SOUND_EARJACK,
+		                        NULL, ELM_GENLIST_ITEM_NONE,
+		                        __vp_sound_path_genlist_item_selected_cb,
+		                        pUserData);
 		pSoundPath->nItemCnt++;
 	}
 
 	if (vp_sound_device_is_enable(VP_SOUND_DEVICE_EARJACK, pSoundPath)
-			&& vp_sound_device_is_enable(VP_SOUND_DEVICE_BLUETOOTH,
-					pSoundPath)) {
+	        && vp_sound_device_is_enable(VP_SOUND_DEVICE_BLUETOOTH,
+	                                     pSoundPath)) {
 		VideoLogError("Skip for sound policy");
 	} else {
 		elm_genlist_item_append(pObj, pSoundPath->st_Sp_Itc,
-					(void *) VP_PLAY_STRING_SOUND_SPEAKER,
-					NULL, ELM_GENLIST_ITEM_NONE,
-					__vp_sound_path_genlist_item_selected_cb,
-					pUserData);
+		                        (void *) VP_PLAY_STRING_SOUND_SPEAKER,
+		                        NULL, ELM_GENLIST_ITEM_NONE,
+		                        __vp_sound_path_genlist_item_selected_cb,
+		                        pUserData);
 		pSoundPath->nItemCnt++;
 	}
 
@@ -415,7 +412,7 @@ static bool _vp_sound_path_add_genlist_item(Evas_Object *pObj,
 
 /* external functions */
 sound_path_handle vp_sound_path_create(Evas_Object *pParent,
-				       PopupCloseCbFunc pCloseCb)
+                                       PopupCloseCbFunc pCloseCb)
 {
 	if (pParent == NULL) {
 		VideoLogError("pParent is NULL");
@@ -436,11 +433,11 @@ sound_path_handle vp_sound_path_create(Evas_Object *pParent,
 	pSoundPath->pCloseCb = pCloseCb;
 
 	pSoundPath->pPopup =
-		vp_popup_create(pParent, POPUP_STYLE_MENU_LIST_NO_CANCEL_BTN,
-				VP_PLAY_STRING_SOUND_PATH, NULL, 0.0, NULL,
-				__vp_sound_path_popup_key_event_cb,
-				__vp_sound_path_popup_mouse_event_cb,
-				(void *) pSoundPath);
+	    vp_popup_create(pParent, POPUP_STYLE_MENU_LIST_NO_CANCEL_BTN,
+	                    VP_PLAY_STRING_SOUND_PATH, NULL, 0.0, NULL,
+	                    __vp_sound_path_popup_key_event_cb,
+	                    __vp_sound_path_popup_mouse_event_cb,
+	                    (void *) pSoundPath);
 	if (pSoundPath->pPopup == NULL) {
 		VideoLogError("vp_popup_create fail");
 		_vp_sound_path_destroy_handle(pSoundPath);
@@ -448,23 +445,23 @@ sound_path_handle vp_sound_path_create(Evas_Object *pParent,
 	}
 
 	pSoundPath->pGenList =
-		_vp_sound_path_create_genlist(pSoundPath->pPopup);
+	    _vp_sound_path_create_genlist(pSoundPath->pPopup);
 	if (pSoundPath->pGenList == NULL) {
 		VideoLogError("_vp_sound_path_create_genlist fail");
 		_vp_sound_path_destroy_handle(pSoundPath);
 		return NULL;
 	}
 	evas_object_smart_callback_add(pSoundPath->pGenList, "realized",
-				       __vp_sound_genlist_realized, NULL);
+	                               __vp_sound_genlist_realized, NULL);
 
 	evas_object_data_set(pSoundPath->pGenList,
-			     VP_SOUND_PATH_GENLIST_DATA_KEY,
-			     (void *) pSoundPath);
+	                     VP_SOUND_PATH_GENLIST_DATA_KEY,
+	                     (void *) pSoundPath);
 
 	pSoundPath->pRadio = elm_radio_add(pSoundPath->pGenList);
 
 	if (!_vp_sound_path_add_genlist_item
-			(pSoundPath->pGenList, (void *) pSoundPath)) {
+	        (pSoundPath->pGenList, (void *) pSoundPath)) {
 		VideoLogError("_vp_sound_path_add_genlist_item fail");
 		_vp_sound_path_destroy_handle(pSoundPath);
 		return NULL;
@@ -478,15 +475,15 @@ sound_path_handle vp_sound_path_create(Evas_Object *pParent,
 		pSoundPath->soundPathType = nType;
 	}
 	evas_object_smart_callback_add(pSoundPath->pParent,
-				       "rotation,changed",
-				       __vp_sound_path_popup_rotate_cb,
-				       pSoundPath);
+	                               "rotation,changed",
+	                               __vp_sound_path_popup_rotate_cb,
+	                               pSoundPath);
 
 	pSoundPath->pBox = elm_box_add(pSoundPath->pPopup);
 
 	vp_popup_set_popup_min_size(pSoundPath->pParent, pSoundPath->pBox,
-				    pSoundPath->nItemCnt,
-				    VIDEO_POPUP_DEFAULT);
+	                            pSoundPath->nItemCnt,
+	                            VIDEO_POPUP_DEFAULT);
 
 
 	elm_box_pack_end(pSoundPath->pBox, pSoundPath->pGenList);
@@ -538,7 +535,7 @@ bool vp_sound_path_unrealize(sound_path_handle pSoundPathHandle)
 }
 
 bool vp_sound_path_set_user_data(sound_path_handle pSoundPathHandle,
-				 void *pUserData)
+                                 void *pUserData)
 {
 	if (pSoundPathHandle == NULL) {
 		VideoLogError("pSoundPathHandle is NULL");

@@ -76,25 +76,23 @@ typedef struct _SubtitleColorPopup {
 
 
 static void _vp_subtitle_color_destroy_handle(SubtitleColorPopup *
-		pSubtitleColor);
+        pSubtitleColor);
 
 #ifndef SUBTITLE_K_FEATURE
 static void __vp_subtitle_color_genlist_item_selected_cb(void *pUserData,
-		Evas_Object *
-		pObject,
-		void
-		*pEventInfo);
+                        Evas_Object *pObject,
+                        void *pEventInfo);
 
 static void __vp_subtitle_color_genlist_realized(void *data,
-		Evas_Object *obj,
-		void *event_info)
+                        Evas_Object *obj,
+                        void *event_info)
 {
 	VP_GENLIST_HIDE_BOTTOMLINE(data, obj, event_info);
 }
 #endif
 static void __vp_subtitle_color_popup_rotate_cb(void *data,
-		Evas_Object *obj,
-		void *event_info)
+                        Evas_Object *obj,
+                        void *event_info)
 {
 	SubtitleColorPopup *pSubtitleColor = (SubtitleColorPopup *) data;
 	if (!pSubtitleColor) {
@@ -106,19 +104,19 @@ static void __vp_subtitle_color_popup_rotate_cb(void *data,
 		return;
 	}
 	vp_popup_set_popup_min_size(pSubtitleColor->pParent,
-				    pSubtitleColor->pBox,
-				    pSubtitleColor->nListCount,
-				    VIDEO_POPUP_DEFAULT);
+	                            pSubtitleColor->pBox,
+	                            pSubtitleColor->nListCount,
+	                            VIDEO_POPUP_DEFAULT);
 #else
 	int nRotation = elm_win_rotation_get(pSubtitleColor->pParent);
 	if (nRotation == 90 || nRotation == 270)
 		elm_layout_file_set(pSubtitleColor->pLayoutOut,
-				    VP_PLAY_SUBTITLE_COLOR_POPUP_EDJ,
-				    "pv.subtitle.scroller.layout.landscape");
+		                    VP_PLAY_SUBTITLE_COLOR_POPUP_EDJ,
+		                    "pv.subtitle.scroller.layout.landscape");
 	else
 		elm_layout_file_set(pSubtitleColor->pLayoutOut,
-				    VP_PLAY_SUBTITLE_COLOR_POPUP_EDJ,
-				    "pv.subtitle.scroller.layout");
+		                    VP_PLAY_SUBTITLE_COLOR_POPUP_EDJ,
+		                    "pv.subtitle.scroller.layout");
 #endif
 }
 
@@ -126,9 +124,9 @@ static void __vp_subtitle_color_popup_rotate_cb(void *data,
 
 /* callback functions */
 static char *__vp_subtitle_color_genlist_text_get_cb(const void
-		*pUserData,
-		Evas_Object *pObj,
-		const char *pPart)
+                        *pUserData,
+                        Evas_Object *pObj,
+                        const char *pPart)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -145,11 +143,9 @@ static char *__vp_subtitle_color_genlist_text_get_cb(const void
 }
 
 static Evas_Object *__vp_subtitle_color_genlist_content_get_cb(const void
-		*pUserData,
-		Evas_Object
-		* pObj,
-		const char
-		*pPart)
+                        *pUserData,
+                        Evas_Object *pObj,
+                        const char *pPart)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -162,8 +158,8 @@ static Evas_Object *__vp_subtitle_color_genlist_content_get_cb(const void
 		Evas_Object *pRadioObj = NULL;
 
 		SubtitleColorPopup *pSubtitleColor =
-			(SubtitleColorPopup *) evas_object_data_get(pObj,
-					VP_SUBTITLE_COLOR_GENLIST_DATA_KEY);
+		    (SubtitleColorPopup *) evas_object_data_get(pObj,
+		            VP_SUBTITLE_COLOR_GENLIST_DATA_KEY);
 		if (pSubtitleColor == NULL) {
 			VideoLogWarning("evas_object_data_get is fail");
 			return NULL;
@@ -183,10 +179,10 @@ static Evas_Object *__vp_subtitle_color_genlist_content_get_cb(const void
 		elm_radio_state_value_set(pRadioObj, nColor);
 		elm_radio_group_add(pRadioObj, pSubtitleColor->pRadio);
 		elm_radio_value_set(pSubtitleColor->pRadio,
-				    pSubtitleColor->currentFontColor);
+		                    pSubtitleColor->currentFontColor);
 		evas_object_smart_callback_add(pRadioObj, "changed",
-					       __vp_subtitle_color_genlist_item_selected_cb,
-					       pSubtitleColor);
+		                               __vp_subtitle_color_genlist_item_selected_cb,
+		                               pSubtitleColor);
 		evas_object_show(pRadioObj);
 
 		return pRadioObj;
@@ -196,9 +192,8 @@ static Evas_Object *__vp_subtitle_color_genlist_content_get_cb(const void
 }
 
 static void __vp_subtitle_color_genlist_item_selected_cb(void *pUserData,
-		Evas_Object *
-		pObject,
-		void *pEventInfo)
+                        Evas_Object *pObject,
+                        void *pEventInfo)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -211,7 +206,7 @@ static void __vp_subtitle_color_genlist_item_selected_cb(void *pUserData,
 
 	Elm_Object_Item *pItem = (Elm_Object_Item *) pEventInfo;
 	Elm_Object_Item *pSelectedItem =
-		elm_genlist_selected_item_get(pObject);
+	    elm_genlist_selected_item_get(pObject);
 	if (pSelectedItem) {
 		elm_genlist_item_selected_set(pSelectedItem, EINA_FALSE);
 	}
@@ -238,15 +233,15 @@ static void __vp_subtitle_color_genlist_item_selected_cb(void *pUserData,
 	pSubtitleColor->currentFontColor = nColor;
 	if (pSubtitleColor->pCloseCb) {
 		pSubtitleColor->pCloseCb(nColor, FALSE,
-					 (void *) pSubtitleColor->pUserData);
+		                         (void *) pSubtitleColor->pUserData);
 	}
 }
 
 #endif
 
 static void __vp_subtitle_color_popup_key_event_cb(void *pUserData,
-		Evas_Object *pObj,
-		void *pEventInfo)
+                        Evas_Object *pObj,
+                        void *pEventInfo)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -258,18 +253,18 @@ static void __vp_subtitle_color_popup_key_event_cb(void *pUserData,
 	if (pSubtitleColor->pCloseCb) {
 #ifndef SUBTITLE_K_FEATURE
 		pSubtitleColor->pCloseCb(-1, FALSE,
-					 (void *) pSubtitleColor->pUserData);
+		                         (void *) pSubtitleColor->pUserData);
 #else
 		pSubtitleColor->pCloseCb(pSubtitleColor->pCurrentColorHex, FALSE,
-					 (void *) pSubtitleColor->pUserData);
+		                         (void *) pSubtitleColor->pUserData);
 #endif
 	}
 }
 
 static void __vp_subtitle_color_popup_mouse_event_cb(void *pUserData,
-		Evas *pEvas,
-		Evas_Object *pObj,
-		void *pEventInfo)
+                        Evas *pEvas,
+                        Evas_Object *pObj,
+                        void *pEventInfo)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -285,14 +280,14 @@ static void __vp_subtitle_color_popup_mouse_event_cb(void *pUserData,
 
 	if (ev->button == 3) {
 		SubtitleColorPopup *pSubtitleColor =
-			(SubtitleColorPopup *) pUserData;
+		    (SubtitleColorPopup *) pUserData;
 
 #ifndef SUBTITLE_K_FEATURE
 		pSubtitleColor->pCloseCb(-1, FALSE,
-					 (void *) pSubtitleColor->pUserData);
+		                         (void *) pSubtitleColor->pUserData);
 #else
 		pSubtitleColor->pCloseCb(pSubtitleColor->pCurrentColorHex, FALSE,
-					 (void *) pSubtitleColor->pUserData);
+		                         (void *) pSubtitleColor->pUserData);
 #endif
 	}
 }
@@ -376,7 +371,7 @@ char *_vp_subtitle_color_get_select_color(char *pColor, int nOpacity)
 }
 
 static void _vp_subtitle_color_destroy_handle(SubtitleColorPopup *
-		pSubtitleColor)
+                                pSubtitleColor)
 {
 	if (pSubtitleColor == NULL) {
 		VideoLogError("pSubtitleColor is NULL");
@@ -384,11 +379,11 @@ static void _vp_subtitle_color_destroy_handle(SubtitleColorPopup *
 	}
 
 	evas_object_smart_callback_del(pSubtitleColor->pParent,
-				       "rotation,changed",
-				       __vp_subtitle_color_popup_rotate_cb);
+	                               "rotation,changed",
+	                               __vp_subtitle_color_popup_rotate_cb);
 #ifndef SUBTITLE_K_FEATURE
 	evas_object_smart_callback_del(pSubtitleColor->pGenList, "realized",
-				       __vp_subtitle_color_genlist_realized);
+	                               __vp_subtitle_color_genlist_realized);
 #endif
 
 
@@ -409,7 +404,7 @@ static void _vp_subtitle_color_destroy_handle(SubtitleColorPopup *
 #endif
 	if (pSubtitleColor->st_SubtitleFontColor_Itc) {
 		elm_genlist_item_class_free(pSubtitleColor->
-					    st_SubtitleFontColor_Itc);
+		                            st_SubtitleFontColor_Itc);
 		pSubtitleColor->st_SubtitleFontColor_Itc = NULL;
 	}
 
@@ -420,7 +415,7 @@ static void _vp_subtitle_color_destroy_handle(SubtitleColorPopup *
 
 #ifndef SUBTITLE_K_FEATURE
 static Evas_Object *_vp_subtitle_color_create_genlist(Evas_Object *
-		pParent)
+                                pParent)
 {
 	if (pParent == NULL) {
 		VideoLogError("pParent is NULL");
@@ -431,7 +426,7 @@ static Evas_Object *_vp_subtitle_color_create_genlist(Evas_Object *
 
 	pObj = elm_genlist_add(pParent);
 	evas_object_size_hint_weight_set(pObj, EVAS_HINT_EXPAND,
-					 EVAS_HINT_EXPAND);
+	                                 EVAS_HINT_EXPAND);
 	evas_object_size_hint_align_set(pObj, EVAS_HINT_FILL, EVAS_HINT_FILL);
 	evas_object_show(pObj);
 	return pObj;
@@ -439,7 +434,7 @@ static Evas_Object *_vp_subtitle_color_create_genlist(Evas_Object *
 
 
 static bool _vp_subtitle_color_add_genlist_item(Evas_Object *pObj,
-		void *pUserData)
+                                void *pUserData)
 {
 	if (pObj == NULL) {
 		VideoLogError("pObj is NULL");
@@ -450,51 +445,51 @@ static bool _vp_subtitle_color_add_genlist_item(Evas_Object *pObj,
 
 	if (pSubtitleColor->st_SubtitleFontColor_Itc) {
 		elm_genlist_item_class_free(pSubtitleColor->
-					    st_SubtitleFontColor_Itc);
+		                            st_SubtitleFontColor_Itc);
 		pSubtitleColor->st_SubtitleFontColor_Itc = NULL;
 	}
 
 	pSubtitleColor->st_SubtitleFontColor_Itc =
-		elm_genlist_item_class_new();
+	    elm_genlist_item_class_new();
 	pSubtitleColor->st_SubtitleFontColor_Itc->version =
-		ELM_GENLIST_ITEM_CLASS_VERSION;
+	    ELM_GENLIST_ITEM_CLASS_VERSION;
 	pSubtitleColor->st_SubtitleFontColor_Itc->item_style =
-		"1text.1icon.3/popup";
+	    "1text.1icon.3/popup";
 	pSubtitleColor->st_SubtitleFontColor_Itc->func.text_get =
-		(void *) __vp_subtitle_color_genlist_text_get_cb;
+	    (void *) __vp_subtitle_color_genlist_text_get_cb;
 	pSubtitleColor->st_SubtitleFontColor_Itc->func.content_get =
-		(void *) __vp_subtitle_color_genlist_content_get_cb;
+	    (void *) __vp_subtitle_color_genlist_content_get_cb;
 	pSubtitleColor->st_SubtitleFontColor_Itc->func.state_get = NULL;
 	pSubtitleColor->st_SubtitleFontColor_Itc->func.del = NULL;
 	pSubtitleColor->nListCount = 0;
 
 	elm_genlist_item_append(pObj,
-				pSubtitleColor->st_SubtitleFontColor_Itc,
-				(void *) VP_PLAY_STRING_SUBTITLE_COLOR_WHITE,
-				NULL, ELM_GENLIST_ITEM_NONE,
-				__vp_subtitle_color_genlist_item_selected_cb,
-				pUserData);
+	                        pSubtitleColor->st_SubtitleFontColor_Itc,
+	                        (void *) VP_PLAY_STRING_SUBTITLE_COLOR_WHITE,
+	                        NULL, ELM_GENLIST_ITEM_NONE,
+	                        __vp_subtitle_color_genlist_item_selected_cb,
+	                        pUserData);
 	pSubtitleColor->nListCount++;
 	elm_genlist_item_append(pObj,
-				pSubtitleColor->st_SubtitleFontColor_Itc,
-				(void *) VP_PLAY_STRING_SUBTITLE_COLOR_BLUE,
-				NULL, ELM_GENLIST_ITEM_NONE,
-				__vp_subtitle_color_genlist_item_selected_cb,
-				pUserData);
+	                        pSubtitleColor->st_SubtitleFontColor_Itc,
+	                        (void *) VP_PLAY_STRING_SUBTITLE_COLOR_BLUE,
+	                        NULL, ELM_GENLIST_ITEM_NONE,
+	                        __vp_subtitle_color_genlist_item_selected_cb,
+	                        pUserData);
 	pSubtitleColor->nListCount++;
 	elm_genlist_item_append(pObj,
-				pSubtitleColor->st_SubtitleFontColor_Itc,
-				(void *) VP_PLAY_STRING_SUBTITLE_COLOR_GREEN,
-				NULL, ELM_GENLIST_ITEM_NONE,
-				__vp_subtitle_color_genlist_item_selected_cb,
-				pUserData);
+	                        pSubtitleColor->st_SubtitleFontColor_Itc,
+	                        (void *) VP_PLAY_STRING_SUBTITLE_COLOR_GREEN,
+	                        NULL, ELM_GENLIST_ITEM_NONE,
+	                        __vp_subtitle_color_genlist_item_selected_cb,
+	                        pUserData);
 	pSubtitleColor->nListCount++;
 	elm_genlist_item_append(pObj,
-				pSubtitleColor->st_SubtitleFontColor_Itc,
-				(void *) VP_PLAY_STRING_SUBTITLE_COLOR_BLACK,
-				NULL, ELM_GENLIST_ITEM_NONE,
-				__vp_subtitle_color_genlist_item_selected_cb,
-				pUserData);
+	                        pSubtitleColor->st_SubtitleFontColor_Itc,
+	                        (void *) VP_PLAY_STRING_SUBTITLE_COLOR_BLACK,
+	                        NULL, ELM_GENLIST_ITEM_NONE,
+	                        __vp_subtitle_color_genlist_item_selected_cb,
+	                        pUserData);
 	pSubtitleColor->nListCount++;
 
 	return TRUE;
@@ -504,8 +499,8 @@ static bool _vp_subtitle_color_add_genlist_item(Evas_Object *pObj,
 /* callback functions */
 
 static void __vp_play_subtitle_color_popup_ok_btn_cb(void *pUserData,
-		Evas_Object *pObj,
-		void *pEventInfo)
+                        Evas_Object *pObj,
+                        void *pEventInfo)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -514,21 +509,21 @@ static void __vp_play_subtitle_color_popup_ok_btn_cb(void *pUserData,
 
 	SubtitleColorPopup *pSubtitleColor = (SubtitleColorPopup *) pUserData;
 	char *pColorHex =
-		_vp_subtitle_color_get_select_color(pSubtitleColor->
-				pCurrentColorHex,
-				pSubtitleColor->nOpacityVal);
+	    _vp_subtitle_color_get_select_color(pSubtitleColor->
+	                                        pCurrentColorHex,
+	                                        pSubtitleColor->nOpacityVal);
 
 	if (pSubtitleColor->pCloseCb) {
 		pSubtitleColor->pCloseCb(pColorHex, TRUE,
-					 (void *) pSubtitleColor->pUserData);
+		                         (void *) pSubtitleColor->pUserData);
 	}
 	VP_FREE(pColorHex);
 }
 
 static void __vp_play_subtitle_color_popup_cancel_btn_cb(void *pUserData,
-		Evas_Object *
-		pObj,
-		void *pEventInfo)
+        Evas_Object *
+        pObj,
+        void *pEventInfo)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -539,13 +534,13 @@ static void __vp_play_subtitle_color_popup_cancel_btn_cb(void *pUserData,
 
 	if (pSubtitleColor->pCloseCb) {
 		pSubtitleColor->pCloseCb(pSubtitleColor->pCurrentColorHex, FALSE,
-					 (void *) pSubtitleColor->pUserData);
+		                         (void *) pSubtitleColor->pUserData);
 	}
 }
 
 static Evas_Object
 *_vp_play_subtitle_color_popup_create_ok_button(Evas_Object *pParent,
-		void *pUserData)
+                        void *pUserData)
 {
 	if (pParent == NULL) {
 		VideoLogError("pParent is NULL");
@@ -556,11 +551,11 @@ static Evas_Object
 	pObj = elm_button_add(pParent);
 	elm_object_style_set(pObj, "popup_button/default");
 	elm_object_domain_translatable_text_set(pObj, VP_SYS_STR_PREFIX,
-						VP_PLAY_STRING_COM_OK_IDS);
+	                                        VP_PLAY_STRING_COM_OK_IDS);
 	elm_object_part_content_set(pParent, "button2", pObj);
 	evas_object_smart_callback_add(pObj, "clicked",
-				       __vp_play_subtitle_color_popup_ok_btn_cb,
-				       pUserData);
+	                               __vp_play_subtitle_color_popup_ok_btn_cb,
+	                               pUserData);
 	evas_object_show(pObj);
 
 	return pObj;
@@ -568,8 +563,8 @@ static Evas_Object
 
 static Evas_Object
 *_vp_play_subtitle_color_popup_create_cancel_button(Evas_Object *
-		pParent,
-		void *pUserData)
+                        pParent,
+                        void *pUserData)
 {
 	if (pParent == NULL) {
 		VideoLogError("pParent is NULL");
@@ -580,21 +575,19 @@ static Evas_Object
 	pObj = elm_button_add(pParent);
 	elm_object_style_set(pObj, "popup_button/default");
 	elm_object_domain_translatable_text_set(pObj, VP_SYS_STR_PREFIX,
-						VP_PLAY_STRING_COM_CANCEL_IDS);
+	                                        VP_PLAY_STRING_COM_CANCEL_IDS);
 	elm_object_part_content_set(pParent, "button1", pObj);
 	evas_object_smart_callback_add(pObj, "clicked",
-				       __vp_play_subtitle_color_popup_cancel_btn_cb,
-				       pUserData);
+	                               __vp_play_subtitle_color_popup_cancel_btn_cb,
+	                               pUserData);
 	evas_object_show(pObj);
 
 	return pObj;
 }
 
 static void _vp_play_subtitle_color_popup_colorpalette_cb(void *data,
-		Evas_Object *
-		obj,
-		void
-		*event_info)
+                Evas_Object *obj,
+                void *event_info)
 {
 	if (data == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -613,14 +606,14 @@ static void _vp_play_subtitle_color_popup_colorpalette_cb(void *data,
 
 	VP_FREE(pSubtitleColor->pCurrentColorHex);
 	pSubtitleColor->pCurrentColorHex =
-		vp_play_util_convert_rgba_to_hex(r, g, b, a);
+	    vp_play_util_convert_rgba_to_hex(r, g, b, a);
 	//Need Free;
 	VideoLogInfo("p = %s", pSubtitleColor->pCurrentColorHex);
 }
 
 static void _vp_play_subtitle_color_popup_colorplane_cb(void *data,
-		Evas_Object *obj,
-		void *event_info)
+                Evas_Object *obj,
+                void *event_info)
 {
 	if (data == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -634,7 +627,7 @@ static void _vp_play_subtitle_color_popup_colorplane_cb(void *data,
 	SubtitleColorplaneData *cp = pSubtitleColor->pColorplaneData;
 	if (!cp->changed) {
 		elm_object_item_signal_emit(cp->it_last, "elm,state,custom,hide",
-					    "");
+		                            "");
 		cp->changed = EINA_TRUE;
 	}
 	elm_colorselector_color_get(cp->colorselector, &r, &g, &b, &a);
@@ -645,20 +638,17 @@ static void _vp_play_subtitle_color_popup_colorplane_cb(void *data,
 	elm_colorselector_palette_item_color_set(cp->it_last, r, g, b, a);
 	if (cp->sel_it != cp->it_last) {
 		elm_object_item_signal_emit(cp->it_last, "elm,state,selected",
-					    "elm");
+		                            "elm");
 	}
 
 	VP_FREE(pSubtitleColor->pCurrentColorHex);
 	pSubtitleColor->pCurrentColorHex =
-		vp_play_util_convert_rgba_to_hex(r, g, b, a);
+	    vp_play_util_convert_rgba_to_hex(r, g, b, a);
 
 }
 
-static void _vp_play_subtitle_color_popup_create_colorpalette(Evas_Object
-		* layout,
-		SubtitleColorPopup
-		*
-		pSubtitleColorPopup)
+static void _vp_play_subtitle_color_popup_create_colorpalette(Evas_Object *layout,
+                SubtitleColorPopup *pSubtitleColorPopup)
 {
 	if (pSubtitleColorPopup == NULL) {
 		VideoLogError("pSubtitleColorPopup is NULL");
@@ -674,8 +664,8 @@ static void _vp_play_subtitle_color_popup_create_colorpalette(Evas_Object
 	SubtitleColorplaneData *cp = pSubtitleColorPopup->pColorplaneData;
 
 	int nIndex =
-		_vp_subtitle_color_get_platte_index(pSubtitleColorPopup->
-				pCurrentColorHex);
+	    _vp_subtitle_color_get_platte_index(pSubtitleColorPopup->
+	                                        pCurrentColorHex);
 
 	/* add color palette widget */
 	Eina_List *last_list;
@@ -686,16 +676,16 @@ static void _vp_play_subtitle_color_popup_create_colorpalette(Evas_Object
 	elm_object_style_set(cp->colorselector, "colorplane");
 	//elm_colorselector_mode_set(cp->colorselector, ELM_COLORSELECTOR_PALETTE_PLANE);
 	evas_object_size_hint_fill_set(cp->colorselector, EVAS_HINT_FILL,
-				       EVAS_HINT_FILL);
+	                               EVAS_HINT_FILL);
 	evas_object_size_hint_weight_set(cp->colorselector, EVAS_HINT_EXPAND,
-					 EVAS_HINT_EXPAND);
+	                                 EVAS_HINT_EXPAND);
 	elm_object_part_content_set(layout,
-				    "pv.subtitle-color-popup.colorpalette.swallow",
-				    cp->colorselector);
+	                            "pv.subtitle-color-popup.colorpalette.swallow",
+	                            cp->colorselector);
 	evas_object_smart_callback_add(cp->colorselector,
-				       "color,item,selected",
-				       _vp_play_subtitle_color_popup_colorpalette_cb,
-				       pSubtitleColorPopup);
+	                               "color,item,selected",
+	                               _vp_play_subtitle_color_popup_colorpalette_cb,
+	                               pSubtitleColorPopup);
 
 	edje_object_message_signal_process(elm_layout_edje_get(layout));
 	elm_colorselector_palette_color_add(cp->colorselector, 255, 255, 255, 255);	//white
@@ -714,18 +704,18 @@ static void _vp_play_subtitle_color_popup_create_colorpalette(Evas_Object
 	elm_object_item_signal_emit(cp->it_last, "elm,state,custom,show", "");
 	cp->changed = EINA_FALSE;
 	evas_object_smart_callback_add(cp->colorselector, "changed",
-				       _vp_play_subtitle_color_popup_colorplane_cb,
-				       pSubtitleColorPopup);
+	                               _vp_play_subtitle_color_popup_colorplane_cb,
+	                               pSubtitleColorPopup);
 	cp->sel_it = eina_list_nth(color_list, nIndex);
 	elm_object_item_signal_emit(cp->sel_it, "elm,state,selected", "elm");
 
 	if (nIndex == 8) {
 		int r, g, b, a;
 		vp_play_util_convert_hex_to_rgba(pSubtitleColorPopup->
-						 pCurrentColorHex, &r, &g, &b,
-						 &a);
+		                                 pCurrentColorHex, &r, &g, &b,
+		                                 &a);
 		elm_colorselector_palette_item_color_set(cp->it_last, r, g, b,
-				255);
+		        255);
 	}
 }
 
@@ -744,18 +734,18 @@ static Evas_Object
 	}
 
 	elm_layout_file_set(pLayout, VP_PLAY_SUBTITLE_COLOR_POPUP_EDJ,
-			    VP_PLAY_EDJ_GROUP_PLAY_SUBTITLE_COLOR_POPUP);
+	                    VP_PLAY_EDJ_GROUP_PLAY_SUBTITLE_COLOR_POPUP);
 
 	evas_object_size_hint_weight_set(pLayout, EVAS_HINT_EXPAND,
-					 EVAS_HINT_EXPAND);
+	                                 EVAS_HINT_EXPAND);
 	evas_object_size_hint_align_set(pLayout, EVAS_HINT_FILL,
-					EVAS_HINT_FILL);
+	                                EVAS_HINT_FILL);
 
 	elm_object_part_text_set(pLayout, "pv.subtitle-color-popup.subject",
-				 VP_PLAY_STRING_SUBTITLE_TEXT);
+	                         VP_PLAY_STRING_SUBTITLE_TEXT);
 	elm_object_part_text_set(pLayout,
-				 "pv.subtitle-color-popup.opacity.text",
-				 VP_PLAY_STRING_SUBTITLE_OPACITY);
+	                         "pv.subtitle-color-popup.opacity.text",
+	                         VP_PLAY_STRING_SUBTITLE_OPACITY);
 
 	evas_object_show(pLayout);
 
@@ -764,7 +754,7 @@ static Evas_Object
 }
 
 static void _vp_play_subtitle_color_update_text(SubtitleColorPopup *
-		pSubtitleColorPopup)
+                        pSubtitleColorPopup)
 {
 	if (pSubtitleColorPopup == NULL) {
 		VideoLogError("pSubtitleColorPopup is NULL");
@@ -774,16 +764,16 @@ static void _vp_play_subtitle_color_update_text(SubtitleColorPopup *
 	char szValue[6] = { 0, };
 
 	snprintf(szValue, 6, "%2d %%",
-		 (int) pSubtitleColorPopup->nOpacityVal);
+	         (int) pSubtitleColorPopup->nOpacityVal);
 	elm_object_part_text_set(pSubtitleColorPopup->pLayout,
-				 "pv.subtitle-color-popup.opacity.percent",
-				 szValue);
+	                         "pv.subtitle-color-popup.opacity.percent",
+	                         szValue);
 
 }
 
 static void __vp_play_subtitle_color_btn_clicked_cb(void *pUserData,
-		Evas_Object *pObj,
-		void *pEvent)
+                        Evas_Object *pObj,
+                        void *pEvent)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -791,7 +781,7 @@ static void __vp_play_subtitle_color_btn_clicked_cb(void *pUserData,
 	}
 
 	SubtitleColorPopup *pSubtitleColorPopup =
-		(SubtitleColorPopup *) pUserData;
+	    (SubtitleColorPopup *) pUserData;
 
 	int nValue = elm_slider_value_get(pSubtitleColorPopup->pSlider);
 	VideoLogDebug("== %d ==", nValue);
@@ -829,8 +819,8 @@ static void __vp_play_subtitle_color_btn_clicked_cb(void *pUserData,
 }
 
 static bool _vp_play_subtitle_color_popup_create_button(Evas_Object *
-		pParent,
-		void *pUserData)
+                        pParent,
+                        void *pUserData)
 {
 	if (pParent == NULL) {
 		VideoLogError("pParent is NULL");
@@ -838,82 +828,80 @@ static bool _vp_play_subtitle_color_popup_create_button(Evas_Object *
 	}
 
 	SubtitleColorPopup *pSubtitleColorPopup =
-		(SubtitleColorPopup *) pUserData;
+	    (SubtitleColorPopup *) pUserData;
 
 	pSubtitleColorPopup->pDelButton =
-		vp_button_create(pParent, "playview/custom/flat_63_78/default",
-				 NULL,
-				 (Evas_Smart_Cb)
-				 __vp_play_subtitle_color_btn_clicked_cb,
-				 (Evas_Smart_Cb) NULL, (Evas_Smart_Cb) NULL,
-				 (void *) pSubtitleColorPopup);
+	    vp_button_create(pParent, "playview/custom/flat_63_78/default",
+	                     NULL,
+	                     (Evas_Smart_Cb)
+	                     __vp_play_subtitle_color_btn_clicked_cb,
+	                     (Evas_Smart_Cb) NULL, (Evas_Smart_Cb) NULL,
+	                     (void *) pSubtitleColorPopup);
 
 	pSubtitleColorPopup->pAddButton =
-		vp_button_create(pParent, "playview/custom/flat_63_78/default",
-				 NULL,
-				 (Evas_Smart_Cb)
-				 __vp_play_subtitle_color_btn_clicked_cb,
-				 (Evas_Smart_Cb) NULL, (Evas_Smart_Cb) NULL,
-				 (void *) pSubtitleColorPopup);
+	    vp_button_create(pParent, "playview/custom/flat_63_78/default",
+	                     NULL,
+	                     (Evas_Smart_Cb)
+	                     __vp_play_subtitle_color_btn_clicked_cb,
+	                     (Evas_Smart_Cb) NULL, (Evas_Smart_Cb) NULL,
+	                     (void *) pSubtitleColorPopup);
 
 	Evas_Object *pIcon = NULL;
 
 	pIcon =
-		vp_button_create_icon(pSubtitleColorPopup->pDelButton,
-				      VP_PLAY_RESROUCE_EDJ_PATH,
-				      VP_PLAY_RES_BUTTON_DEL);
+	    vp_button_create_icon(pSubtitleColorPopup->pDelButton,
+	                          VP_PLAY_RESROUCE_EDJ_PATH,
+	                          VP_PLAY_RES_BUTTON_DEL);
 	elm_object_part_content_set(pSubtitleColorPopup->pDelButton,
-				    VP_PLAY_SWALLOW_BUTTON_ICON, pIcon);
+	                            VP_PLAY_SWALLOW_BUTTON_ICON, pIcon);
 
 	pIcon =
-		vp_button_create_icon(pSubtitleColorPopup->pDelButton,
-				      VP_PLAY_RESROUCE_EDJ_PATH,
-				      VP_PLAY_RES_BUTTON_DEL_PRESS);
+	    vp_button_create_icon(pSubtitleColorPopup->pDelButton,
+	                          VP_PLAY_RESROUCE_EDJ_PATH,
+	                          VP_PLAY_RES_BUTTON_DEL_PRESS);
 	elm_object_part_content_set(pSubtitleColorPopup->pDelButton,
-				    VP_PLAY_SWALLOW_BUTTON_PRESS_ICON, pIcon);
+	                            VP_PLAY_SWALLOW_BUTTON_PRESS_ICON, pIcon);
 
 	pIcon =
-		vp_button_create_icon(pSubtitleColorPopup->pDelButton,
-				      VP_PLAY_RESROUCE_EDJ_PATH,
-				      VP_PLAY_RES_BUTTON_DEL);
+	    vp_button_create_icon(pSubtitleColorPopup->pDelButton,
+	                          VP_PLAY_RESROUCE_EDJ_PATH,
+	                          VP_PLAY_RES_BUTTON_DEL);
 	elm_object_part_content_set(pSubtitleColorPopup->pDelButton,
-				    VP_PLAY_SWALLOW_BUTTON_DIM_ICON, pIcon);
+	                            VP_PLAY_SWALLOW_BUTTON_DIM_ICON, pIcon);
 
 	pIcon =
-		vp_button_create_icon(pSubtitleColorPopup->pAddButton,
-				      VP_PLAY_RESROUCE_EDJ_PATH,
-				      VP_PLAY_RES_BUTTON_ADD);
+	    vp_button_create_icon(pSubtitleColorPopup->pAddButton,
+	                          VP_PLAY_RESROUCE_EDJ_PATH,
+	                          VP_PLAY_RES_BUTTON_ADD);
 	elm_object_part_content_set(pSubtitleColorPopup->pAddButton,
-				    VP_PLAY_SWALLOW_BUTTON_ICON, pIcon);
+	                            VP_PLAY_SWALLOW_BUTTON_ICON, pIcon);
 
 	pIcon =
-		vp_button_create_icon(pSubtitleColorPopup->pAddButton,
-				      VP_PLAY_RESROUCE_EDJ_PATH,
-				      VP_PLAY_RES_BUTTON_ADD_PRESS);
+	    vp_button_create_icon(pSubtitleColorPopup->pAddButton,
+	                          VP_PLAY_RESROUCE_EDJ_PATH,
+	                          VP_PLAY_RES_BUTTON_ADD_PRESS);
 	elm_object_part_content_set(pSubtitleColorPopup->pAddButton,
-				    VP_PLAY_SWALLOW_BUTTON_PRESS_ICON, pIcon);
+	                            VP_PLAY_SWALLOW_BUTTON_PRESS_ICON, pIcon);
 
 	pIcon =
-		vp_button_create_icon(pSubtitleColorPopup->pAddButton,
-				      VP_PLAY_RESROUCE_EDJ_PATH,
-				      VP_PLAY_RES_BUTTON_ADD);
+	    vp_button_create_icon(pSubtitleColorPopup->pAddButton,
+	                          VP_PLAY_RESROUCE_EDJ_PATH,
+	                          VP_PLAY_RES_BUTTON_ADD);
 	elm_object_part_content_set(pSubtitleColorPopup->pAddButton,
-				    VP_PLAY_SWALLOW_BUTTON_DIM_ICON, pIcon);
+	                            VP_PLAY_SWALLOW_BUTTON_DIM_ICON, pIcon);
 
 	elm_object_part_content_set(pParent, "elm.swallow.icon.1",
-				    pSubtitleColorPopup->pDelButton);
+	                            pSubtitleColorPopup->pDelButton);
 	elm_object_part_content_set(pParent, "elm.swallow.icon.2",
-				    pSubtitleColorPopup->pAddButton);
+	                            pSubtitleColorPopup->pAddButton);
 
 	return TRUE;
 }
 
 static void __vp_play_subtitle_color_popup_slider_change_cb(void
-		*pUserData,
-		Evas_Object *
-		pObj,
-		void
-		*pEventInfo)
+                        *pUserData,
+                        Evas_Object *pObj,
+                        void *pEventInfo)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -945,7 +933,7 @@ static void __vp_play_subtitle_color_popup_slider_change_cb(void
 
 static Evas_Object
 *_vp_play_subtitle_color_popup_create_slider(Evas_Object *pParent,
-		void *pUserData)
+        void *pUserData)
 {
 	if (pParent == NULL) {
 		VideoLogError("pParent is NULL");
@@ -960,8 +948,8 @@ static Evas_Object
 
 	elm_slider_min_max_set(pObj, 0, 100);
 	evas_object_smart_callback_add(pObj, "changed",
-				       __vp_play_subtitle_color_popup_slider_change_cb,
-				       pUserData);
+	                               __vp_play_subtitle_color_popup_slider_change_cb,
+	                               pUserData);
 
 	return pObj;
 }
@@ -971,14 +959,14 @@ static Evas_Object
 /* external functions */
 #ifndef SUBTITLE_K_FEATURE
 subtitle_color_handle vp_subtitle_color_create(Evas_Object *pParent,
-		SubtitlePopupCloseCbFunc
-		pCloseCb,
-		int nDefaultColor)
+        SubtitlePopupCloseCbFunc
+        pCloseCb,
+        int nDefaultColor)
 #else
 subtitle_color_handle vp_subtitle_color_hex_create(Evas_Object *pParent,
-		SubtitlePopupCloseCbFunc
-		pCloseCb,
-		char *pDefaultColor)
+        SubtitlePopupCloseCbFunc
+        pCloseCb,
+        char *pDefaultColor)
 #endif
 {
 	if (pParent == NULL) {
@@ -1000,18 +988,18 @@ subtitle_color_handle vp_subtitle_color_hex_create(Evas_Object *pParent,
 
 #ifndef SUBTITLE_K_FEATURE
 	pSubtitleColor->pPopup =
-		vp_popup_create(pParent, POPUP_STYLE_MENU_LIST_NO_CANCEL_BTN,
-				VP_PLAY_STRING_SUBTITLE_TEXT, NULL, 0.0, NULL,
-				__vp_subtitle_color_popup_key_event_cb,
-				__vp_subtitle_color_popup_mouse_event_cb,
-				(void *) pSubtitleColor);
+	    vp_popup_create(pParent, POPUP_STYLE_MENU_LIST_NO_CANCEL_BTN,
+	                    VP_PLAY_STRING_SUBTITLE_TEXT, NULL, 0.0, NULL,
+	                    __vp_subtitle_color_popup_key_event_cb,
+	                    __vp_subtitle_color_popup_mouse_event_cb,
+	                    (void *) pSubtitleColor);
 #else
 	pSubtitleColor->pPopup =
-		vp_popup_create(pParent, POPUP_STYLE_EXPAND_WITH_CANCEL_BTN,
-				VP_PLAY_STRING_SUBTITLE_COLOR_AND_OPACITY, NULL,
-				0.0, NULL, __vp_subtitle_color_popup_key_event_cb,
-				__vp_subtitle_color_popup_mouse_event_cb,
-				(void *) pSubtitleColor);
+	    vp_popup_create(pParent, POPUP_STYLE_EXPAND_WITH_CANCEL_BTN,
+	                    VP_PLAY_STRING_SUBTITLE_COLOR_AND_OPACITY, NULL,
+	                    0.0, NULL, __vp_subtitle_color_popup_key_event_cb,
+	                    __vp_subtitle_color_popup_mouse_event_cb,
+	                    (void *) pSubtitleColor);
 #endif
 	if (pSubtitleColor->pPopup == NULL) {
 		VideoLogError("vp_popup_create fail");
@@ -1020,47 +1008,47 @@ subtitle_color_handle vp_subtitle_color_hex_create(Evas_Object *pParent,
 	}
 #ifndef SUBTITLE_K_FEATURE
 	pSubtitleColor->pGenList =
-		_vp_subtitle_color_create_genlist(pSubtitleColor->pPopup);
+	    _vp_subtitle_color_create_genlist(pSubtitleColor->pPopup);
 	if (pSubtitleColor->pGenList == NULL) {
 		VideoLogError("_vp_subtitle_color_create_genlist fail");
 		_vp_subtitle_color_destroy_handle(pSubtitleColor);
 		return NULL;
 	}
 	evas_object_data_set(pSubtitleColor->pGenList,
-			     VP_SUBTITLE_COLOR_GENLIST_DATA_KEY,
-			     (void *) pSubtitleColor);
+	                     VP_SUBTITLE_COLOR_GENLIST_DATA_KEY,
+	                     (void *) pSubtitleColor);
 	evas_object_smart_callback_add(pSubtitleColor->pGenList, "realized",
-				       __vp_subtitle_color_genlist_realized,
-				       NULL);
+	                               __vp_subtitle_color_genlist_realized,
+	                               NULL);
 
 	pSubtitleColor->nDefaultIndex = nDefaultColor;
 	pSubtitleColor->pRadio = elm_radio_add(pSubtitleColor->pGenList);
 
 	if (!_vp_subtitle_color_add_genlist_item
-			(pSubtitleColor->pGenList, (void *) pSubtitleColor)) {
+	        (pSubtitleColor->pGenList, (void *) pSubtitleColor)) {
 		VideoLogError("_vp_subtitle_color_add_genlist_item fail");
 		return FALSE;
 	}
 	//elm_radio_value_set(pSubtitleColor->pRadio, nDefaultColor);
 	pSubtitleColor->currentFontColor = nDefaultColor;
 	evas_object_smart_callback_add(pSubtitleColor->pParent,
-				       "rotation,changed",
-				       __vp_subtitle_color_popup_rotate_cb,
-				       pSubtitleColor);
+	                               "rotation,changed",
+	                               __vp_subtitle_color_popup_rotate_cb,
+	                               pSubtitleColor);
 
 	pSubtitleColor->pBox = elm_box_add(pSubtitleColor->pPopup);
 	vp_popup_set_popup_min_size(pSubtitleColor->pParent,
-				    pSubtitleColor->pBox,
-				    pSubtitleColor->nListCount,
-				    VIDEO_POPUP_DEFAULT);
+	                            pSubtitleColor->pBox,
+	                            pSubtitleColor->nListCount,
+	                            VIDEO_POPUP_DEFAULT);
 	elm_box_pack_end(pSubtitleColor->pBox, pSubtitleColor->pGenList);
 	elm_object_content_set(pSubtitleColor->pPopup, pSubtitleColor->pBox);
 #else
 	pSubtitleColor->pCurrentColorHex = strdup(pDefaultColor);
 
 	pSubtitleColor->pCancelButton =
-		_vp_play_subtitle_color_popup_create_cancel_button
-		(pSubtitleColor->pPopup, (void *) pSubtitleColor);
+	    _vp_play_subtitle_color_popup_create_cancel_button
+	    (pSubtitleColor->pPopup, (void *) pSubtitleColor);
 	if (pSubtitleColor->pCancelButton == NULL) {
 		VideoLogError("_vp_play_speed_popup_create_cancel_button fail");
 		_vp_subtitle_color_destroy_handle(pSubtitleColor);
@@ -1068,10 +1056,10 @@ subtitle_color_handle vp_subtitle_color_hex_create(Evas_Object *pParent,
 	}
 
 	pSubtitleColor->pOkButton =
-		_vp_play_subtitle_color_popup_create_ok_button(pSubtitleColor->
-				pPopup,
-				(void *)
-				pSubtitleColor);
+	    _vp_play_subtitle_color_popup_create_ok_button(pSubtitleColor->
+	            pPopup,
+	            (void *)
+	            pSubtitleColor);
 	if (pSubtitleColor->pOkButton == NULL) {
 		VideoLogError("_vp_play_speed_popup_create_ok_button fail");
 		_vp_subtitle_color_destroy_handle(pSubtitleColor);
@@ -1079,8 +1067,8 @@ subtitle_color_handle vp_subtitle_color_hex_create(Evas_Object *pParent,
 	}
 
 	pSubtitleColor->pLayout =
-		_vp_play_subtitle_color_popup_create_layout(pSubtitleColor->
-				pPopup);
+	    _vp_play_subtitle_color_popup_create_layout(pSubtitleColor->
+	            pPopup);
 	if (pSubtitleColor->pLayout == NULL) {
 		VideoLogError("_vp_play_speed_popup_create_layout fail");
 		_vp_subtitle_color_destroy_handle(pSubtitleColor);
@@ -1088,36 +1076,37 @@ subtitle_color_handle vp_subtitle_color_hex_create(Evas_Object *pParent,
 	}
 
 	pSubtitleColor->pColorplaneData =
-		(SubtitleColorplaneData *) malloc(sizeof(SubtitleColorplaneData));
-	if (!pSubtitleColor->pColorplaneData)
+	    (SubtitleColorplaneData *) malloc(sizeof(SubtitleColorplaneData));
+	if (!pSubtitleColor->pColorplaneData) {
 		return NULL;
+	}
 	memset(pSubtitleColor->pColorplaneData, 0,
 	       sizeof(SubtitleColorplaneData));
 
 	_vp_play_subtitle_color_popup_create_colorpalette(pSubtitleColor->
-			pLayout,
-			pSubtitleColor);
+	        pLayout,
+	        pSubtitleColor);
 
 	pSubtitleColor->pSlider =
-		_vp_play_subtitle_color_popup_create_slider(pSubtitleColor->
-				pLayout,
-				pSubtitleColor);
+	    _vp_play_subtitle_color_popup_create_slider(pSubtitleColor->
+	            pLayout,
+	            pSubtitleColor);
 	if (pSubtitleColor->pSlider == NULL) {
 		VideoLogError("_vp_play_subtitle_color_popup_create_slider fail");
 		_vp_subtitle_color_destroy_handle(pSubtitleColor);
 		return NULL;
 	}
 	_vp_play_subtitle_color_popup_create_button(pSubtitleColor->pLayout,
-			pSubtitleColor);
+	        pSubtitleColor);
 	pSubtitleColor->nOpacityVal =
-		_vp_subtitle_color_get_opacity(pSubtitleColor->pCurrentColorHex);
+	    _vp_subtitle_color_get_opacity(pSubtitleColor->pCurrentColorHex);
 	elm_slider_value_set(pSubtitleColor->pSlider,
-			     (int) pSubtitleColor->nOpacityVal);
+	                     (int) pSubtitleColor->nOpacityVal);
 	_vp_play_subtitle_color_update_text(pSubtitleColor);
 
 	elm_object_part_content_set(pSubtitleColor->pLayout,
-				    "elm.swallow.content",
-				    pSubtitleColor->pSlider);
+	                            "elm.swallow.content",
+	                            pSubtitleColor->pSlider);
 
 	//Used for scroller layout:
 	//popup->LayoutOut->Scroller->pLayout
@@ -1125,36 +1114,36 @@ subtitle_color_handle vp_subtitle_color_hex_create(Evas_Object *pParent,
 	int nRotation = elm_win_rotation_get(pSubtitleColor->pParent);
 	if (nRotation == 90 || nRotation == 270)
 		elm_layout_file_set(pSubtitleColor->pLayoutOut,
-				    VP_PLAY_SUBTITLE_COLOR_POPUP_EDJ,
-				    "pv.subtitle.scroller.layout.landscape");
+		                    VP_PLAY_SUBTITLE_COLOR_POPUP_EDJ,
+		                    "pv.subtitle.scroller.layout.landscape");
 	else
 		elm_layout_file_set(pSubtitleColor->pLayoutOut,
-				    VP_PLAY_SUBTITLE_COLOR_POPUP_EDJ,
-				    "pv.subtitle.scroller.layout");
+		                    VP_PLAY_SUBTITLE_COLOR_POPUP_EDJ,
+		                    "pv.subtitle.scroller.layout");
 	evas_object_size_hint_weight_set(pSubtitleColor->pLayoutOut,
-					 EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
+	                                 EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
 
 	pSubtitleColor->pScroller =
-		elm_scroller_add(pSubtitleColor->pLayoutOut);
+	    elm_scroller_add(pSubtitleColor->pLayoutOut);
 	elm_scroller_bounce_set(pSubtitleColor->pScroller, EINA_TRUE,
-				EINA_TRUE);
+	                        EINA_TRUE);
 	elm_scroller_policy_set(pSubtitleColor->pScroller,
-				ELM_SCROLLER_POLICY_OFF,
-				ELM_SCROLLER_POLICY_AUTO);
+	                        ELM_SCROLLER_POLICY_OFF,
+	                        ELM_SCROLLER_POLICY_AUTO);
 	evas_object_show(pSubtitleColor->pScroller);
 	elm_object_content_set(pSubtitleColor->pScroller,
-			       pSubtitleColor->pLayout);
+	                       pSubtitleColor->pLayout);
 
 	elm_object_part_content_set(pSubtitleColor->pLayoutOut,
-				    "elm.swallow.content",
-				    pSubtitleColor->pScroller);
+	                            "elm.swallow.content",
+	                            pSubtitleColor->pScroller);
 	elm_object_content_set(pSubtitleColor->pPopup,
-			       pSubtitleColor->pLayoutOut);
+	                       pSubtitleColor->pLayoutOut);
 
 	evas_object_smart_callback_add(pSubtitleColor->pParent,
-				       "rotation,changed",
-				       __vp_subtitle_color_popup_rotate_cb,
-				       pSubtitleColor);
+	                               "rotation,changed",
+	                               __vp_subtitle_color_popup_rotate_cb,
+	                               pSubtitleColor);
 	evas_object_show(pSubtitleColor->pLayout);
 
 #endif
@@ -1169,7 +1158,7 @@ void vp_subtitle_color_destroy(subtitle_color_handle pSubtitleColorHandle)
 	}
 
 	SubtitleColorPopup *pSubtitleColor =
-		(SubtitleColorPopup *) pSubtitleColorHandle;
+	    (SubtitleColorPopup *) pSubtitleColorHandle;
 
 	_vp_subtitle_color_destroy_handle(pSubtitleColor);
 
@@ -1183,7 +1172,7 @@ bool vp_subtitle_color_realize(subtitle_color_handle pSubtitleColorHandle)
 	}
 
 	SubtitleColorPopup *pSubtitleColor =
-		(SubtitleColorPopup *) pSubtitleColorHandle;
+	    (SubtitleColorPopup *) pSubtitleColorHandle;
 
 	evas_object_show(pSubtitleColor->pPopup);
 
@@ -1191,7 +1180,7 @@ bool vp_subtitle_color_realize(subtitle_color_handle pSubtitleColorHandle)
 }
 
 bool vp_subtitle_color_unrealize(subtitle_color_handle
-				 pSubtitleColorHandle)
+                                 pSubtitleColorHandle)
 {
 	if (pSubtitleColorHandle == NULL) {
 		VideoLogError("pSubtitleColorHandle is NULL");
@@ -1199,7 +1188,7 @@ bool vp_subtitle_color_unrealize(subtitle_color_handle
 	}
 
 	SubtitleColorPopup *pSubtitleColor =
-		(SubtitleColorPopup *) pSubtitleColorHandle;
+	    (SubtitleColorPopup *) pSubtitleColorHandle;
 
 	evas_object_hide(pSubtitleColor->pPopup);
 
@@ -1207,8 +1196,8 @@ bool vp_subtitle_color_unrealize(subtitle_color_handle
 }
 
 bool vp_subtitle_color_set_user_data(subtitle_color_handle
-				     pSubtitleColorHandle,
-				     void *pUserData)
+                                     pSubtitleColorHandle,
+                                     void *pUserData)
 {
 	if (pSubtitleColorHandle == NULL) {
 		VideoLogError("pSubtitleColorHandle is NULL");
@@ -1216,7 +1205,7 @@ bool vp_subtitle_color_set_user_data(subtitle_color_handle
 	}
 
 	SubtitleColorPopup *pSubtitleColor =
-		(SubtitleColorPopup *) pSubtitleColorHandle;
+	    (SubtitleColorPopup *) pSubtitleColorHandle;
 
 	pSubtitleColor->pUserData = pUserData;
 

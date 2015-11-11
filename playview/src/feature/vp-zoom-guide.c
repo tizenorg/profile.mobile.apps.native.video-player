@@ -51,9 +51,9 @@ typedef struct _ZoomGuideWidget {
 
 
 static void _vp_zoom_guide_destory_handle(ZoomGuideWidget *
-		pZoomGuideWidget);
+                                        pZoomGuideWidget);
 static void _vp_zoom_guide_update_item(ZoomGuideWidget *pZoomGuideWidget,
-				       bool bUpdate);
+                                       bool bUpdate);
 
 
 /* callback functions */
@@ -67,7 +67,7 @@ static Eina_Bool __vp_zoom_guide_hide_timer_cb(void *pUserData)
 	ZoomGuideWidget *pZoomGuideWidget = (ZoomGuideWidget *) pUserData;
 
 	elm_object_signal_emit(pZoomGuideWidget->pLayout,
-			       VP_NORMAL_SIGNAL_ZOOM_GUIDE_HIDE, "*");
+	                       VP_NORMAL_SIGNAL_ZOOM_GUIDE_HIDE, "*");
 
 	evas_object_hide(pZoomGuideWidget->pLayout);
 	evas_object_hide(pZoomGuideWidget->pItemLayout);
@@ -78,7 +78,7 @@ static Eina_Bool __vp_zoom_guide_hide_timer_cb(void *pUserData)
 
 
 static void __vp_zoom_guide_resize_cb(void *pUserData, Evas *pEvas,
-				      Evas_Object *pObj, void *pEvent)
+                                      Evas_Object *pObj, void *pEvent)
 {
 	if (!pUserData) {
 		VideoLogError("[ERR] No Exist pUserData.");
@@ -89,12 +89,12 @@ static void __vp_zoom_guide_resize_cb(void *pUserData, Evas *pEvas,
 	Evas_Coord_Rectangle rtCurRect = { 0, };
 
 	evas_object_geometry_get(pObj, &(rtCurRect.x), &(rtCurRect.y),
-				 &(rtCurRect.w), &(rtCurRect.h));
+	                         &(rtCurRect.w), &(rtCurRect.h));
 
 	if (pZoomGuideWidget->rtOldRect.x != rtCurRect.x ||
-			pZoomGuideWidget->rtOldRect.y != rtCurRect.y ||
-			pZoomGuideWidget->rtOldRect.w != rtCurRect.w ||
-			pZoomGuideWidget->rtOldRect.h != rtCurRect.h) {
+	        pZoomGuideWidget->rtOldRect.y != rtCurRect.y ||
+	        pZoomGuideWidget->rtOldRect.w != rtCurRect.w ||
+	        pZoomGuideWidget->rtOldRect.h != rtCurRect.h) {
 
 		pZoomGuideWidget->rtOldRect.x = rtCurRect.x;
 		pZoomGuideWidget->rtOldRect.y = rtCurRect.y;
@@ -109,7 +109,7 @@ static void __vp_zoom_guide_resize_cb(void *pUserData, Evas *pEvas,
 
 /* internal functions */
 static void _vp_zoom_guide_update_item(ZoomGuideWidget *pZoomGuideWidget,
-				       bool bUpdate)
+                                       bool bUpdate)
 {
 	if (pZoomGuideWidget == NULL) {
 		VideoLogError("pZoomGuideWidget is NULL");
@@ -132,15 +132,15 @@ static void _vp_zoom_guide_update_item(ZoomGuideWidget *pZoomGuideWidget,
 	Evas_Coord_Rectangle nDstRect = { 0, };
 
 	evas_object_geometry_get(pParent, &(nRect.x), &(nRect.y), &(nRect.w),
-				 &(nRect.h));
+	                         &(nRect.h));
 
 	nDstRect.w = nRect.w * pZoomGuideWidget->fZoomValue;
 	nDstRect.h = nRect.h * pZoomGuideWidget->fZoomValue;
 
 	nDstRect.x =
-		nRect.x + (nRect.w * pZoomGuideWidget->fPosX) - (nDstRect.w / 2);
+	    nRect.x + (nRect.w * pZoomGuideWidget->fPosX) - (nDstRect.w / 2);
 	nDstRect.y =
-		nRect.y + (nRect.h * pZoomGuideWidget->fPosY) - (nDstRect.h / 2);
+	    nRect.y + (nRect.h * pZoomGuideWidget->fPosY) - (nDstRect.h / 2);
 
 	if (nDstRect.x < nRect.x) {
 		nDstRect.x = nRect.x;
@@ -159,29 +159,29 @@ static void _vp_zoom_guide_update_item(ZoomGuideWidget *pZoomGuideWidget,
 	}
 
 	pZoomGuideWidget->fResultPosX =
-		(double)((double)(nDstRect.x - nRect.x) / (double)(nRect.w));
+	    (double)((double)(nDstRect.x - nRect.x) / (double)(nRect.w));
 	pZoomGuideWidget->fResultPosY =
-		(double)((double)(nDstRect.y - nRect.y) / (double)(nRect.h));
+	    (double)((double)(nDstRect.y - nRect.y) / (double)(nRect.h));
 
 	evas_object_move(pItem, nDstRect.x, nDstRect.y);
 	evas_object_resize(pItem, nDstRect.w, nDstRect.h);
 
 	if (bUpdate) {
 		elm_object_signal_emit(pZoomGuideWidget->pLayout,
-				       VP_NORMAL_SIGNAL_ZOOM_GUIDE_SHOW, "*");
+		                       VP_NORMAL_SIGNAL_ZOOM_GUIDE_SHOW, "*");
 		evas_object_show(pZoomGuideWidget->pLayout);
 		evas_object_show(pZoomGuideWidget->pItemLayout);
 
 		VP_EVAS_TIMER_DEL(pZoomGuideWidget->pHideTimer);
 		pZoomGuideWidget->pHideTimer =
-			ecore_timer_add(1.5, __vp_zoom_guide_hide_timer_cb,
-					(void *) pZoomGuideWidget);
+		    ecore_timer_add(1.5, __vp_zoom_guide_hide_timer_cb,
+		                    (void *) pZoomGuideWidget);
 	}
 
 }
 
 static void _vp_zoom_guide_destory_handle(ZoomGuideWidget *
-		pZoomGuideWidget)
+        pZoomGuideWidget)
 {
 	if (pZoomGuideWidget == NULL) {
 		VideoLogError("pZoomGuideWidget is NULL");
@@ -197,7 +197,7 @@ static void _vp_zoom_guide_destory_handle(ZoomGuideWidget *
 }
 
 static Evas_Object *_vp_zoom_guide_create_layout(Evas_Object *pParent,
-		void *pUserData)
+        void *pUserData)
 {
 	if (!pParent) {
 		VideoLogError("Parent is NULL");
@@ -214,17 +214,17 @@ static Evas_Object *_vp_zoom_guide_create_layout(Evas_Object *pParent,
 	}
 
 	bRet =
-		elm_layout_file_set(pObj, VP_PLAY_ZOOM_GUIDE_EDJ_PATH,
-				    VP_PLAY_EDJ_GROUP_ZOOM_GUIDE);
+	    elm_layout_file_set(pObj, VP_PLAY_ZOOM_GUIDE_EDJ_PATH,
+	                        VP_PLAY_EDJ_GROUP_ZOOM_GUIDE);
 	if (bRet != EINA_TRUE) {
 		VideoLogError("elm_layout_file_set fail");
 		return NULL;
 	}
 	evas_object_event_callback_add(pObj, EVAS_CALLBACK_RESIZE,
-				       __vp_zoom_guide_resize_cb, pUserData);
+	                               __vp_zoom_guide_resize_cb, pUserData);
 
 	evas_object_event_callback_add(pObj, EVAS_CALLBACK_MOVE,
-				       __vp_zoom_guide_resize_cb, pUserData);
+	                               __vp_zoom_guide_resize_cb, pUserData);
 
 
 	evas_object_show(pObj);
@@ -235,7 +235,7 @@ static Evas_Object *_vp_zoom_guide_create_layout(Evas_Object *pParent,
 
 
 static Evas_Object *_vp_zoom_guide_create_item_layout(Evas_Object *
-		pParent)
+        pParent)
 {
 	if (!pParent) {
 		VideoLogError("Parent is NULL");
@@ -252,8 +252,8 @@ static Evas_Object *_vp_zoom_guide_create_item_layout(Evas_Object *
 	}
 
 	bRet =
-		elm_layout_file_set(pObj, VP_PLAY_ZOOM_GUIDE_EDJ_PATH,
-				    VP_PLAY_EDJ_GROUP_ZOOM_GUIDE_ITEM);
+	    elm_layout_file_set(pObj, VP_PLAY_ZOOM_GUIDE_EDJ_PATH,
+	                        VP_PLAY_EDJ_GROUP_ZOOM_GUIDE_ITEM);
 	if (bRet != EINA_TRUE) {
 		VideoLogError("elm_layout_file_set fail");
 		return NULL;
@@ -276,14 +276,14 @@ static bool _vp_zoom_guide_init_layout(ZoomGuideWidget *pZoomGuideWidget)
 	Evas_Object *pParent = pZoomGuideWidget->pParent;
 
 	pZoomGuideWidget->pLayout =
-		_vp_zoom_guide_create_layout(pParent, (void *) pZoomGuideWidget);
+	    _vp_zoom_guide_create_layout(pParent, (void *) pZoomGuideWidget);
 	if (pZoomGuideWidget->pLayout == NULL) {
 		VideoLogError("_vp_zoom_guide_create_layout is fail");
 		return FALSE;
 	}
 
 	pZoomGuideWidget->pItemLayout =
-		_vp_zoom_guide_create_item_layout(pZoomGuideWidget->pLayout);
+	    _vp_zoom_guide_create_item_layout(pZoomGuideWidget->pLayout);
 	if (pZoomGuideWidget->pItemLayout == NULL) {
 		VideoLogError("_vp_zoom_guide_create_item_layout is fail");
 		return FALSE;
@@ -381,7 +381,7 @@ Evas_Object *vp_zoom_guide_get_object(zoom_guide_handle pWidgetHandle)
 }
 
 bool vp_zoom_guide_set_zoom_value(zoom_guide_handle pWidgetHandle,
-				  double fZoomVal)
+                                  double fZoomVal)
 {
 	if (pWidgetHandle == NULL) {
 		VideoLogError("pWidgetHandle is NULL");
@@ -398,7 +398,7 @@ bool vp_zoom_guide_set_zoom_value(zoom_guide_handle pWidgetHandle,
 }
 
 bool vp_zoom_guide_get_zoom_value(zoom_guide_handle pWidgetHandle,
-				  double *fZoomVal)
+                                  double *fZoomVal)
 {
 	if (pWidgetHandle == NULL) {
 		VideoLogError("pWidgetHandle is NULL");
@@ -413,7 +413,7 @@ bool vp_zoom_guide_get_zoom_value(zoom_guide_handle pWidgetHandle,
 }
 
 bool vp_zoom_guide_set_move_position(zoom_guide_handle pWidgetHandle,
-				     double fPosX, double fPosY)
+                                     double fPosX, double fPosY)
 {
 	if (pWidgetHandle == NULL) {
 		VideoLogError("pWidgetHandle is NULL");
@@ -448,7 +448,7 @@ bool vp_zoom_guide_set_move_position(zoom_guide_handle pWidgetHandle,
 
 
 bool vp_zoom_guide_get_move_position(zoom_guide_handle pWidgetHandle,
-				     double *fPosX, double *fPosY)
+                                     double *fPosX, double *fPosY)
 {
 	if (pWidgetHandle == NULL) {
 		VideoLogError("pWidgetHandle is NULL");
@@ -464,7 +464,7 @@ bool vp_zoom_guide_get_move_position(zoom_guide_handle pWidgetHandle,
 }
 
 bool vp_zoom_guide_get_real_position(zoom_guide_handle pWidgetHandle,
-				     double *fPosX, double *fPosY)
+                                     double *fPosX, double *fPosY)
 {
 	if (pWidgetHandle == NULL) {
 		VideoLogError("pWidgetHandle is NULL");
