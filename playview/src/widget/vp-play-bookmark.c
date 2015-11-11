@@ -46,9 +46,9 @@
 #define VP_BOOKMARK_PLAY_TIME_LENGTH 	9
 #define VP_BOOKMARK_PLAY_TIME_FORMAT 	"02u:%02u:%02u"
 #define VP_BOOKMARK_PLAY_TIME_ARGS(t) \
-        (t) / (60 * 60), \
-        ((t) / 60) % 60, \
-        (t) % 60
+	(t) / (60 * 60), \
+	((t) / 60) % 60, \
+	(t) % 60
 
 typedef struct _BookmarkItem {
 	Elm_Object_Item *pElmItem;
@@ -80,16 +80,16 @@ typedef struct _BookmarkWidget {
 } BookmarkWidget;
 
 static void _vp_play_bookmark_destory_handle(BookmarkWidget *
-		pBookmarkWidget);
+        pBookmarkWidget);
 static void _vp_play_bookmark_gengrid_item_update(BookmarkWidget *
-		pBookmarkWidget);
+        pBookmarkWidget);
 static void _vp_play_bookmark_gengrid_item_clear(BookmarkWidget *
-		pBookmarkWidget);
+        pBookmarkWidget);
 /* callbackk functions */
 
 static void __vp_play_bookmark_delete_btn_clicked_cb(void *pUserData,
-		Evas_Object *pObj,
-		void *pEvent)
+        Evas_Object *pObj,
+        void *pEvent)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -104,8 +104,8 @@ static void __vp_play_bookmark_delete_btn_clicked_cb(void *pUserData,
 }
 
 static void __vp_play_bookmark_delete_btn_press_cb(void *pUserData,
-		Evas_Object *pObj,
-		void *pEvent)
+        Evas_Object *pObj,
+        void *pEvent)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -120,20 +120,20 @@ static void __vp_play_bookmark_delete_btn_press_cb(void *pUserData,
 
 	Evas_Object *pIcon = NULL;
 	pIcon =
-		elm_object_part_content_get(pObj, VP_PLAY_SWALLOW_BUTTON_ICON);
+	    elm_object_part_content_get(pObj, VP_PLAY_SWALLOW_BUTTON_ICON);
 	if (pIcon) {
 		evas_object_del(pIcon);
 		pIcon = NULL;
 	}
 
 	pIcon =
-		vp_button_create_icon(pObj, VP_PLAY_RESROUCE_EDJ_PATH,
-				      VP_PLAY_BOOKMARK_RES_DEL_PRESS);
+	    vp_button_create_icon(pObj, VP_PLAY_RESROUCE_EDJ_PATH,
+	                          VP_PLAY_BOOKMARK_RES_DEL_PRESS);
 	elm_object_part_content_set(pObj, VP_PLAY_SWALLOW_BUTTON_ICON, pIcon);
 
 	BookmarkWidget *pBookmarkWidget =
-		(BookmarkWidget *) evas_object_data_get(pObj,
-				VP_BOOKMARK_GENGRID_ITEM_DATA_KEY);
+	    (BookmarkWidget *) evas_object_data_get(pObj,
+	            VP_BOOKMARK_GENGRID_ITEM_DATA_KEY);
 	if (pBookmarkWidget == NULL) {
 		VideoLogError("pBookmarkWidget is NULL");
 		return;
@@ -146,13 +146,13 @@ static void __vp_play_bookmark_delete_btn_press_cb(void *pUserData,
 	}
 
 	if (!vp_media_contents_bookmark_delete
-			(pBookmarkWidget->szMediaID, pBookmarkItem->nPos)) {
+	        (pBookmarkWidget->szMediaID, pBookmarkItem->nPos)) {
 		VideoLogError("vp_media_contents_bookmark_delete is fail");
 		return;
 	}
 
 	pBookmarkWidget->pItemList =
-		g_list_remove(pBookmarkWidget->pItemList, (void *) pBookmarkItem);
+	    g_list_remove(pBookmarkWidget->pItemList, (void *) pBookmarkItem);
 
 	VP_EVAS_ITEM_DEL(pBookmarkItem->pElmItem);
 
@@ -164,8 +164,8 @@ static void __vp_play_bookmark_delete_btn_press_cb(void *pUserData,
 }
 
 static void __vp_play_bookmark_delete_btn_unpress_cb(void *pUserData,
-		Evas_Object *pObj,
-		void *pEvent)
+        Evas_Object *pObj,
+        void *pEvent)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -180,25 +180,25 @@ static void __vp_play_bookmark_delete_btn_unpress_cb(void *pUserData,
 
 	Evas_Object *pIcon = NULL;
 	pIcon =
-		elm_object_part_content_get(pObj, VP_PLAY_SWALLOW_BUTTON_ICON);
+	    elm_object_part_content_get(pObj, VP_PLAY_SWALLOW_BUTTON_ICON);
 	if (pIcon) {
 		evas_object_del(pIcon);
 		pIcon = NULL;
 	}
 
 	pIcon =
-		vp_button_create_icon(pObj, VP_PLAY_RESROUCE_EDJ_PATH,
-				      VP_PLAY_BOOKMARK_RES_DEL);
+	    vp_button_create_icon(pObj, VP_PLAY_RESROUCE_EDJ_PATH,
+	                          VP_PLAY_BOOKMARK_RES_DEL);
 	elm_object_part_content_set(pObj, VP_PLAY_SWALLOW_BUTTON_ICON, pIcon);
 
 }
 
 static Evas_Object *__vp_play_bookmark_gengrid_icon_get_cb(const void
-		*pUserData,
-		Evas_Object *
-		pObj,
-		const char
-		*pPart)
+        *pUserData,
+        Evas_Object *
+        pObj,
+        const char
+        *pPart)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -230,28 +230,28 @@ static Evas_Object *__vp_play_bookmark_gengrid_icon_get_cb(const void
 			return NULL;
 		}
 		elm_layout_file_set(layout, VP_PLAY_BOOKMARK_ITEM_EDJ_PATH,
-				    VP_PLAY_EDJ_GROUP_BOOKMARK_ITEM);
+		                    VP_PLAY_EDJ_GROUP_BOOKMARK_ITEM);
 		elm_bg_load_size_set(bg, VP_BOOKMARK_THUMB_WIDTH,
-				     VP_BOOKMARK_THUMB_HEIGHT);
+		                     VP_BOOKMARK_THUMB_HEIGHT);
 		elm_bg_file_set(bg, pBookmarkItem->szFilePath, NULL);
 		evas_object_size_hint_max_set(bg, VP_BOOKMARK_THUMB_WIDTH,
-					      VP_BOOKMARK_THUMB_HEIGHT);
+		                              VP_BOOKMARK_THUMB_HEIGHT);
 
 		evas_object_size_hint_weight_set(bg, EVAS_HINT_EXPAND,
-						 EVAS_HINT_EXPAND);
+		                                 EVAS_HINT_EXPAND);
 		evas_object_size_hint_align_set(bg, EVAS_HINT_FILL,
-						EVAS_HINT_FILL);
+		                                EVAS_HINT_FILL);
 
 		elm_object_part_content_set(layout,
-					    VP_PLAY_SWALLOW_BOOKMARK_ITEM_ICON,
-					    bg);
+		                            VP_PLAY_SWALLOW_BOOKMARK_ITEM_ICON,
+		                            bg);
 
 		snprintf(buf, VP_BOOKMARK_PLAY_TIME_LENGTH,
-			 "%" VP_BOOKMARK_PLAY_TIME_FORMAT,
-			 VP_BOOKMARK_PLAY_TIME_ARGS(pBookmarkItem->nPos / 1000));
+		         "%" VP_BOOKMARK_PLAY_TIME_FORMAT,
+		         VP_BOOKMARK_PLAY_TIME_ARGS(pBookmarkItem->nPos / 1000));
 
 		elm_object_part_text_set(layout,
-					 VP_PLAY_SWALLOW_BOOKMARK_ITEM_TXT, buf);
+		                         VP_PLAY_SWALLOW_BOOKMARK_ITEM_TXT, buf);
 
 		evas_object_show(bg);
 		evas_object_show(layout);
@@ -260,8 +260,8 @@ static Evas_Object *__vp_play_bookmark_gengrid_icon_get_cb(const void
 
 	} else if (!strcmp(pPart, "elm.swallow.end")) {
 		BookmarkWidget *pBookmarkWidget =
-			(BookmarkWidget *) evas_object_data_get(pObj,
-					VP_BOOKMARK_GENGRID_DATA_KEY);
+		    (BookmarkWidget *) evas_object_data_get(pObj,
+		            VP_BOOKMARK_GENGRID_DATA_KEY);
 		if (pBookmarkWidget == NULL) {
 			VideoLogError("pBookmarkWidget is NULL");
 			return NULL;
@@ -276,29 +276,29 @@ static Evas_Object *__vp_play_bookmark_gengrid_icon_get_cb(const void
 
 		layout = elm_layout_add(pObj);
 		elm_layout_file_set(layout, VP_PLAY_BOOKMARK_ITEM_EDJ_PATH,
-				    VP_PLAY_EDJ_GROUP_BOOKMARK_ITEM_END);
+		                    VP_PLAY_EDJ_GROUP_BOOKMARK_ITEM_END);
 		pBtn =
-			vp_button_create(layout, "playview/custom/icon_48_48", NULL,
-					 (Evas_Smart_Cb)
-					 __vp_play_bookmark_delete_btn_clicked_cb,
-					 (Evas_Smart_Cb)
-					 __vp_play_bookmark_delete_btn_press_cb,
-					 (Evas_Smart_Cb)
-					 __vp_play_bookmark_delete_btn_unpress_cb,
-					 (void *) pBookmarkItem);
+		    vp_button_create(layout, "playview/custom/icon_48_48", NULL,
+		                     (Evas_Smart_Cb)
+		                     __vp_play_bookmark_delete_btn_clicked_cb,
+		                     (Evas_Smart_Cb)
+		                     __vp_play_bookmark_delete_btn_press_cb,
+		                     (Evas_Smart_Cb)
+		                     __vp_play_bookmark_delete_btn_unpress_cb,
+		                     (void *) pBookmarkItem);
 
 		evas_object_data_set(pBtn, VP_BOOKMARK_GENGRID_ITEM_DATA_KEY,
-				     (void *) pBookmarkWidget);
+		                     (void *) pBookmarkWidget);
 
 		pIcon =
-			vp_button_create_icon(pBtn, VP_PLAY_RESROUCE_EDJ_PATH,
-					      VP_PLAY_BOOKMARK_RES_DEL);
+		    vp_button_create_icon(pBtn, VP_PLAY_RESROUCE_EDJ_PATH,
+		                          VP_PLAY_BOOKMARK_RES_DEL);
 		elm_object_part_content_set(pBtn, VP_PLAY_SWALLOW_BUTTON_ICON,
-					    pIcon);
+		                            pIcon);
 
 		elm_object_part_content_set(layout,
-					    VP_PLAY_SWALLOW_BOOKMARK_ITEM_DEL,
-					    pBtn);
+		                            VP_PLAY_SWALLOW_BOOKMARK_ITEM_DEL,
+		                            pBtn);
 
 		evas_object_show(pBtn);
 		evas_object_show(layout);
@@ -311,8 +311,8 @@ static Evas_Object *__vp_play_bookmark_gengrid_icon_get_cb(const void
 
 
 static void __vp_play_bookmark_longpress_cb(void *pUserData,
-		Evas_Object *pObj,
-		void *pEvent)
+        Evas_Object *pObj,
+        void *pEvent)
 {
 	VideoLogInfo("");
 
@@ -336,13 +336,13 @@ static void __vp_play_bookmark_longpress_cb(void *pUserData,
 }
 
 static void __vp_play_bookmark_scroll_cb(void *pUserData,
-		Evas_Object *pObj, void *pEvent)
+        Evas_Object *pObj, void *pEvent)
 {
 	return;
 }
 
 static void __vp_play_bookmark_change_cb(void *pUserData,
-		Evas_Object *pObj, void *pEvent)
+        Evas_Object *pObj, void *pEvent)
 {
 	if (pUserData == NULL) {
 		VideoLogError("bookmark data is NULL");
@@ -355,13 +355,13 @@ static void __vp_play_bookmark_change_cb(void *pUserData,
 	}
 
 	elm_gengrid_item_bring_in(pBookmarkWidget->pLastItem,
-				  ELM_GENGRID_ITEM_SCROLLTO_MIDDLE);
+	                          ELM_GENGRID_ITEM_SCROLLTO_MIDDLE);
 	pBookmarkWidget->pLastItem = NULL;
 }
 
 static void __vp_play_bookmark_pressed_cb(void *pUserData,
-		Evas_Object *pObj,
-		void *pEvent)
+        Evas_Object *pObj,
+        void *pEvent)
 {
 	if (pUserData == NULL) {
 		VideoLogError("bookmark data is NULL");
@@ -378,8 +378,8 @@ static void __vp_play_bookmark_pressed_cb(void *pUserData,
 
 
 static void __vp_play_bookmark_released_cb(void *pUserData,
-		Evas_Object *pObj,
-		void *pEvent)
+        Evas_Object *pObj,
+        void *pEvent)
 {
 	if (pUserData == NULL) {
 		VideoLogError("bookmark data is NULL");
@@ -392,8 +392,8 @@ static void __vp_play_bookmark_released_cb(void *pUserData,
 
 
 static void __vp_play_bookmark_item_select_cb(void *pUserData,
-		Evas_Object *pObj,
-		void *pEvent)
+        Evas_Object *pObj,
+        void *pEvent)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -408,8 +408,8 @@ static void __vp_play_bookmark_item_select_cb(void *pUserData,
 	BookmarkWidget *pBookmarkWidget = (BookmarkWidget *) pUserData;
 	BookmarkItem *pBookmarkItem = NULL;
 	pBookmarkItem =
-		(BookmarkItem *) elm_object_item_data_get((Elm_Object_Item *)
-				pEvent);
+	    (BookmarkItem *) elm_object_item_data_get((Elm_Object_Item *)
+	            pEvent);
 
 	elm_gengrid_item_selected_set(pBookmarkItem->pElmItem, EINA_FALSE);
 
@@ -422,16 +422,16 @@ static void __vp_play_bookmark_item_select_cb(void *pUserData,
 	} else {
 		if (pBookmarkWidget->pSelectCb) {
 			pBookmarkWidget->pSelectCb(pBookmarkItem->nPos,
-						   pBookmarkItem->szFilePath,
-						   pBookmarkWidget->pUserData);
+			                           pBookmarkItem->szFilePath,
+			                           pBookmarkWidget->pUserData);
 		}
 	}
 }
 
 
 static void __vp_play_bookmark_btn_clicked_cb(void *pUserData,
-		Evas_Object *pObj,
-		void *pEvent)
+        Evas_Object *pObj,
+        void *pEvent)
 {
 	if (pUserData == NULL) {
 		VideoLogError("bookmark data is NULL");
@@ -454,8 +454,8 @@ static void __vp_play_bookmark_btn_clicked_cb(void *pUserData,
 }
 
 static void __vp_play_bookmark_btn_press_cb(void *pUserData,
-		Evas_Object *pObj,
-		void *pEvent)
+        Evas_Object *pObj,
+        void *pEvent)
 {
 	if (!pUserData) {
 		VideoLogError("pUserData is NULL");
@@ -470,25 +470,25 @@ static void __vp_play_bookmark_btn_press_cb(void *pUserData,
 	if (pBookmarkWidget->pAddButton == pObj) {
 		Evas_Object *pIcon = NULL;
 		pIcon =
-			elm_object_part_content_get(pBookmarkWidget->pAddButton,
-						    VP_PLAY_SWALLOW_BUTTON_ICON);
+		    elm_object_part_content_get(pBookmarkWidget->pAddButton,
+		                                VP_PLAY_SWALLOW_BUTTON_ICON);
 		if (pIcon) {
 			evas_object_del(pIcon);
 			pIcon = NULL;
 		}
 
 		pIcon =
-			vp_button_create_icon(pBookmarkWidget->pAddButton,
-					      VP_PLAY_RESROUCE_EDJ_PATH,
-					      VP_PLAY_BOOKMARK_RES_ADD_PRESS);
+		    vp_button_create_icon(pBookmarkWidget->pAddButton,
+		                          VP_PLAY_RESROUCE_EDJ_PATH,
+		                          VP_PLAY_BOOKMARK_RES_ADD_PRESS);
 		elm_object_part_content_set(pBookmarkWidget->pAddButton,
-					    VP_PLAY_SWALLOW_BUTTON_ICON, pIcon);
+		                            VP_PLAY_SWALLOW_BUTTON_ICON, pIcon);
 	}
 }
 
 static void __vp_play_bookmark_btn_unpress_cb(void *pUserData,
-		Evas_Object *pObj,
-		void *pEvent)
+        Evas_Object *pObj,
+        void *pEvent)
 {
 	if (!pUserData) {
 		VideoLogError("pUserData is NULL");
@@ -504,19 +504,19 @@ static void __vp_play_bookmark_btn_unpress_cb(void *pUserData,
 	if (pBookmarkWidget->pAddButton == pObj) {
 		Evas_Object *pIcon = NULL;
 		pIcon =
-			elm_object_part_content_get(pBookmarkWidget->pAddButton,
-						    VP_PLAY_SWALLOW_BUTTON_ICON);
+		    elm_object_part_content_get(pBookmarkWidget->pAddButton,
+		                                VP_PLAY_SWALLOW_BUTTON_ICON);
 		if (pIcon) {
 			evas_object_del(pIcon);
 			pIcon = NULL;
 		}
 
 		pIcon =
-			vp_button_create_icon(pBookmarkWidget->pAddButton,
-					      VP_PLAY_RESROUCE_EDJ_PATH,
-					      VP_PLAY_BOOKMARK_RES_ADD);
+		    vp_button_create_icon(pBookmarkWidget->pAddButton,
+		                          VP_PLAY_RESROUCE_EDJ_PATH,
+		                          VP_PLAY_BOOKMARK_RES_ADD);
 		elm_object_part_content_set(pBookmarkWidget->pAddButton,
-					    VP_PLAY_SWALLOW_BUTTON_ICON, pIcon);
+		                            VP_PLAY_SWALLOW_BUTTON_ICON, pIcon);
 	}
 }
 
@@ -524,7 +524,7 @@ static void __vp_play_bookmark_btn_unpress_cb(void *pUserData,
 /* internal functions */
 
 static void _vp_play_bookmark_destory_handle(BookmarkWidget *
-		pBookmarkWidget)
+        pBookmarkWidget)
 {
 	if (pBookmarkWidget == NULL) {
 		VideoLogError("pBookmarkWidget is NULL");
@@ -549,8 +549,8 @@ static void _vp_play_bookmark_destory_handle(BookmarkWidget *
 }
 
 static Elm_Object_Item *_vp_play_bookmark_find_before_item(GList *pList,
-		int nPosition,
-		int *nPos)
+        int nPosition,
+        int *nPos)
 {
 	if (pList == NULL) {
 		VideoLogError("pBookmarkItem list is NULL");
@@ -567,7 +567,7 @@ static Elm_Object_Item *_vp_play_bookmark_find_before_item(GList *pList,
 		if (pBookmarkItem) {
 			if (pBookmarkItem->nPos > nPosition) {
 				VideoLogError("Item : %d , nPosition : %d",
-					      pBookmarkItem->nPos, nPosition);
+				              pBookmarkItem->nPos, nPosition);
 				*nPos = idx + 1;
 				return pBookmarkItem->pElmItem;
 			}
@@ -579,7 +579,7 @@ static Elm_Object_Item *_vp_play_bookmark_find_before_item(GList *pList,
 
 
 static gint __vp_play_bookmark_compare_cb(BookmarkItem *pItem1,
-		BookmarkItem *pItem2)
+        BookmarkItem *pItem2)
 {
 	if (pItem1 == NULL) {
 		VideoLogError("pItem1 is NULL");
@@ -600,8 +600,8 @@ static gint __vp_play_bookmark_compare_cb(BookmarkItem *pItem1,
 
 
 static void _vp_play_bookmark_gengrid_item_append(BookmarkWidget *
-		pBookmarkWidget,
-		BookmarkItem *pItem)
+        pBookmarkWidget,
+        BookmarkItem *pItem)
 {
 	if (pBookmarkWidget == NULL) {
 		VideoLogError("pBookmarkWidget is NULL");
@@ -623,42 +623,42 @@ static void _vp_play_bookmark_gengrid_item_append(BookmarkWidget *
 	pBookmarkWidget->pItemClass->item_style = "bookmark";
 	pBookmarkWidget->pItemClass->func.text_get = NULL;
 	pBookmarkWidget->pItemClass->func.content_get =
-		(void *) __vp_play_bookmark_gengrid_icon_get_cb;
+	    (void *) __vp_play_bookmark_gengrid_icon_get_cb;
 	pBookmarkWidget->pItemClass->func.state_get = NULL;
 	pBookmarkWidget->pItemClass->func.del = NULL;
 
 	Elm_Object_Item *pBeforeItem = NULL;
 	int nPos = 0;
 	pBeforeItem =
-		_vp_play_bookmark_find_before_item(pBookmarkWidget->pItemList,
-				pItem->nPos, &nPos);
+	    _vp_play_bookmark_find_before_item(pBookmarkWidget->pItemList,
+	                                       pItem->nPos, &nPos);
 
 	if (pBeforeItem) {
 		pItem->pElmItem =
-			elm_gengrid_item_insert_before(pBookmarkWidget->pGengrid,
-						       pBookmarkWidget->pItemClass,
-						       (void *) pItem, pBeforeItem,
-						       __vp_play_bookmark_item_select_cb,
-						       (void *) pBookmarkWidget);
+		    elm_gengrid_item_insert_before(pBookmarkWidget->pGengrid,
+		                                   pBookmarkWidget->pItemClass,
+		                                   (void *) pItem, pBeforeItem,
+		                                   __vp_play_bookmark_item_select_cb,
+		                                   (void *) pBookmarkWidget);
 	} else {
 		pItem->pElmItem =
-			elm_gengrid_item_append(pBookmarkWidget->pGengrid,
-						pBookmarkWidget->pItemClass,
-						(void *) pItem,
-						__vp_play_bookmark_item_select_cb,
-						(void *) pBookmarkWidget);
+		    elm_gengrid_item_append(pBookmarkWidget->pGengrid,
+		                            pBookmarkWidget->pItemClass,
+		                            (void *) pItem,
+		                            __vp_play_bookmark_item_select_cb,
+		                            (void *) pBookmarkWidget);
 	}
 
 	pBookmarkWidget->pLastItem = pItem->pElmItem;
 
 	pBookmarkWidget->pItemList =
-		g_list_insert_sorted(pBookmarkWidget->pItemList, pItem,
-				     (GCompareFunc)
-				     __vp_play_bookmark_compare_cb);
+	    g_list_insert_sorted(pBookmarkWidget->pItemList, pItem,
+	                         (GCompareFunc)
+	                         __vp_play_bookmark_compare_cb);
 }
 
 static void _vp_play_bookmark_gengrid_item_update(BookmarkWidget *
-		pBookmarkWidget)
+        pBookmarkWidget)
 {
 	if (pBookmarkWidget == NULL) {
 		VideoLogError("pBookmarkWidget is NULL");
@@ -677,20 +677,20 @@ static void _vp_play_bookmark_gengrid_item_update(BookmarkWidget *
 	for (i = 0; i < nCount; i++) {
 		BookmarkItem *pBookmarkItem = NULL;
 		pBookmarkItem =
-			(BookmarkItem *) g_list_nth_data(pBookmarkWidget->pItemList,
-					i);
+		    (BookmarkItem *) g_list_nth_data(pBookmarkWidget->pItemList,
+		                                     i);
 		if (pBookmarkItem) {
 			if (pBookmarkItem->pElmItem) {
 				elm_gengrid_item_update(pBookmarkItem->pElmItem);
 				elm_gengrid_item_selected_set(pBookmarkItem->pElmItem,
-							      EINA_FALSE);
+				                              EINA_FALSE);
 			}
 		}
 	}
 }
 
 static void _vp_play_bookmark_gengrid_item_clear(BookmarkWidget *
-		pBookmarkWidget)
+        pBookmarkWidget)
 {
 	if (pBookmarkWidget == NULL) {
 		VideoLogError("pBookmarkWidget is NULL");
@@ -710,8 +710,8 @@ static void _vp_play_bookmark_gengrid_item_clear(BookmarkWidget *
 		BookmarkItem *pBookmarkItem = NULL;
 
 		pBookmarkItem =
-			(BookmarkItem *) g_list_nth_data(pBookmarkWidget->pItemList,
-					i);
+		    (BookmarkItem *) g_list_nth_data(pBookmarkWidget->pItemList,
+		                                     i);
 		if (pBookmarkItem) {
 			VP_FREE(pBookmarkItem->szFilePath);
 			VP_FREE(pBookmarkItem);
@@ -740,8 +740,8 @@ static Evas_Object *_vp_play_bookmark_create_layout(Evas_Object *pParent)
 	}
 
 	bRet =
-		elm_layout_file_set(pObj, VP_PLAY_BOOKMARK_EDJ_PATH,
-				    VP_PLAY_EDJ_GROUP_BOOKMARK);
+	    elm_layout_file_set(pObj, VP_PLAY_BOOKMARK_EDJ_PATH,
+	                        VP_PLAY_EDJ_GROUP_BOOKMARK);
 	if (bRet != EINA_TRUE) {
 		VideoLogError("elm_layout_file_set fail");
 		return NULL;
@@ -752,7 +752,7 @@ static Evas_Object *_vp_play_bookmark_create_layout(Evas_Object *pParent)
 
 
 static Evas_Object *_vp_play_bookmark_create_gengrid(Evas_Object *
-		pParent)
+        pParent)
 {
 	if (!pParent) {
 		VideoLogError("Parent is NULL");
@@ -768,21 +768,21 @@ static Evas_Object *_vp_play_bookmark_create_gengrid(Evas_Object *
 	}
 
 	elm_gengrid_item_size_set(pObj, VP_BOOKMARK_ITEM_WIDTH,
-				  VP_BOOKMARK_ITEM_HEIGHT);
+	                          VP_BOOKMARK_ITEM_HEIGHT);
 
 	elm_gengrid_align_set(pObj, 0.0, 0.0);
 	elm_gengrid_horizontal_set(pObj, EINA_TRUE);
 	elm_gengrid_multi_select_set(pObj, EINA_TRUE);
 	evas_object_size_hint_weight_set(pObj, EVAS_HINT_EXPAND,
-					 EVAS_HINT_EXPAND);
+	                                 EVAS_HINT_EXPAND);
 	evas_object_show(pObj);
 
 	return pObj;
 }
 
 static void _vp_play_bookmark_layout_del_cb(void *data, Evas *e,
-		Evas_Object *obj,
-		void *event_info)
+        Evas_Object *obj,
+        void *event_info)
 {
 	if (data == NULL) {
 		VideoLogError("pBookmarkWidget is NULL");
@@ -796,7 +796,7 @@ static void _vp_play_bookmark_layout_del_cb(void *data, Evas *e,
 }
 
 static bool _vp_play_bookmark_init_layout(BookmarkWidget *
-		pBookmarkWidget)
+        pBookmarkWidget)
 {
 	if (pBookmarkWidget == NULL) {
 		VideoLogError("pBookmarkWidget is NULL");
@@ -811,29 +811,29 @@ static bool _vp_play_bookmark_init_layout(BookmarkWidget *
 		return FALSE;
 	}
 	evas_object_event_callback_add(pBookmarkWidget->pLayout,
-				       EVAS_CALLBACK_DEL,
-				       _vp_play_bookmark_layout_del_cb,
-				       (void *) pBookmarkWidget);
+	                               EVAS_CALLBACK_DEL,
+	                               _vp_play_bookmark_layout_del_cb,
+	                               (void *) pBookmarkWidget);
 
 	pBookmarkWidget->pGengrid =
-		_vp_play_bookmark_create_gengrid(pBookmarkWidget->pLayout);
+	    _vp_play_bookmark_create_gengrid(pBookmarkWidget->pLayout);
 	if (pBookmarkWidget->pGengrid == NULL) {
 		VideoLogError("_vp_play_bookmark_create_gengrid is fail");
 		return FALSE;
 	}
 
 	evas_object_data_set(pBookmarkWidget->pGengrid,
-			     VP_BOOKMARK_GENGRID_DATA_KEY,
-			     (void *) pBookmarkWidget);
+	                     VP_BOOKMARK_GENGRID_DATA_KEY,
+	                     (void *) pBookmarkWidget);
 
 	pBookmarkWidget->pAddButton =
-		vp_button_create(pParent, "playview/custom/icon_44_44", NULL,
-				 (Evas_Smart_Cb)
-				 __vp_play_bookmark_btn_clicked_cb,
-				 (Evas_Smart_Cb) __vp_play_bookmark_btn_press_cb,
-				 (Evas_Smart_Cb)
-				 __vp_play_bookmark_btn_unpress_cb,
-				 (void *) pBookmarkWidget);
+	    vp_button_create(pParent, "playview/custom/icon_44_44", NULL,
+	                     (Evas_Smart_Cb)
+	                     __vp_play_bookmark_btn_clicked_cb,
+	                     (Evas_Smart_Cb) __vp_play_bookmark_btn_press_cb,
+	                     (Evas_Smart_Cb)
+	                     __vp_play_bookmark_btn_unpress_cb,
+	                     (void *) pBookmarkWidget);
 	if (!pBookmarkWidget->pAddButton) {
 		VideoLogError("elm_button_add is fail");
 		return FALSE;
@@ -841,35 +841,35 @@ static bool _vp_play_bookmark_init_layout(BookmarkWidget *
 
 	Evas_Object *pIcon = NULL;
 	pIcon =
-		vp_button_create_icon(pBookmarkWidget->pAddButton,
-				      VP_PLAY_RESROUCE_EDJ_PATH,
-				      VP_PLAY_BOOKMARK_RES_ADD);
+	    vp_button_create_icon(pBookmarkWidget->pAddButton,
+	                          VP_PLAY_RESROUCE_EDJ_PATH,
+	                          VP_PLAY_BOOKMARK_RES_ADD);
 	elm_object_part_content_set(pBookmarkWidget->pAddButton,
-				    VP_PLAY_SWALLOW_BUTTON_ICON, pIcon);
+	                            VP_PLAY_SWALLOW_BUTTON_ICON, pIcon);
 
 	elm_object_part_content_set(pBookmarkWidget->pLayout,
-				    VP_PLAY_SWALLOW_BOOKMARK_ADD_BUTTON,
-				    pBookmarkWidget->pAddButton);
+	                            VP_PLAY_SWALLOW_BOOKMARK_ADD_BUTTON,
+	                            pBookmarkWidget->pAddButton);
 	elm_object_part_content_set(pBookmarkWidget->pLayout,
-				    VP_PLAY_SWALLOW_BOOKMARK_LIST,
-				    pBookmarkWidget->pGengrid);
+	                            VP_PLAY_SWALLOW_BOOKMARK_LIST,
+	                            pBookmarkWidget->pGengrid);
 
 	evas_object_smart_callback_add(pBookmarkWidget->pGengrid,
-				       "longpressed",
-				       __vp_play_bookmark_longpress_cb,
-				       (void *) pBookmarkWidget);
+	                               "longpressed",
+	                               __vp_play_bookmark_longpress_cb,
+	                               (void *) pBookmarkWidget);
 	evas_object_smart_callback_add(pBookmarkWidget->pGengrid, "scroll",
-				       __vp_play_bookmark_scroll_cb,
-				       (void *) pBookmarkWidget);
+	                               __vp_play_bookmark_scroll_cb,
+	                               (void *) pBookmarkWidget);
 	evas_object_smart_callback_add(pBookmarkWidget->pGengrid, "changed",
-				       __vp_play_bookmark_change_cb,
-				       (void *) pBookmarkWidget);
+	                               __vp_play_bookmark_change_cb,
+	                               (void *) pBookmarkWidget);
 	evas_object_smart_callback_add(pBookmarkWidget->pGengrid, "pressed",
-				       __vp_play_bookmark_pressed_cb,
-				       (void *) pBookmarkWidget);
+	                               __vp_play_bookmark_pressed_cb,
+	                               (void *) pBookmarkWidget);
 	evas_object_smart_callback_add(pBookmarkWidget->pGengrid, "released",
-				       __vp_play_bookmark_released_cb,
-				       (void *) pBookmarkWidget);
+	                               __vp_play_bookmark_released_cb,
+	                               (void *) pBookmarkWidget);
 
 	return TRUE;
 }
@@ -946,7 +946,7 @@ bool vp_play_bookmark_realize(bookmark_handle pWidgetHandle)
 	int nCnt = 0;
 	int idx = 0;
 	if (!vp_media_contents_bookmark_list_get
-			(pBookmarkWidget->szMediaID, &pList)) {
+	        (pBookmarkWidget->szMediaID, &pList)) {
 		VideoLogError("vp_media_contents_bookmark_list_get is Fail");
 		return FALSE;
 	}
@@ -960,7 +960,7 @@ bool vp_play_bookmark_realize(bookmark_handle pWidgetHandle)
 			char *szPath = NULL;
 			int nPos = 0;
 			if (!vp_media_contents_bookmark_get_item_info
-					(pItem, &szPath, &nPos)) {
+			        (pItem, &szPath, &nPos)) {
 				VideoLogWarning
 				("vp_media_contents_bookmark_get_item_info is Fail");
 				continue;
@@ -979,7 +979,7 @@ bool vp_play_bookmark_realize(bookmark_handle pWidgetHandle)
 			VP_FREE(szPath);
 
 			_vp_play_bookmark_gengrid_item_append(pBookmarkWidget,
-							      pBookmarkItem);
+			                                      pBookmarkItem);
 		}
 	}
 
@@ -1020,7 +1020,7 @@ bool vp_play_bookmark_unrealize(bookmark_handle pWidgetHandle)
 }
 
 bool vp_play_bookmark_is_realize(bookmark_handle pWidgetHandle,
-				 bool *bIsRealize)
+                                 bool *bIsRealize)
 {
 	if (pWidgetHandle == NULL) {
 		VideoLogError("pWidgetHandle is NULL");
@@ -1048,8 +1048,8 @@ Evas_Object *vp_play_bookmark_get_object(bookmark_handle pWidgetHandle)
 }
 
 bool vp_play_bookmark_set_capture_callback(bookmark_handle pWidgetHandle,
-		BookmarkCaptureStartCbFunc
-		func)
+        BookmarkCaptureStartCbFunc
+        func)
 {
 	if (pWidgetHandle == NULL) {
 		VideoLogError("pWidgetHandle is NULL");
@@ -1064,9 +1064,9 @@ bool vp_play_bookmark_set_capture_callback(bookmark_handle pWidgetHandle,
 }
 
 bool vp_play_bookmark_set_item_select_callback(bookmark_handle
-		pWidgetHandle,
-		BookmarkItemSelectCbFunc
-		func)
+        pWidgetHandle,
+        BookmarkItemSelectCbFunc
+        func)
 {
 	if (pWidgetHandle == NULL) {
 		VideoLogError("pWidgetHandle is NULL");
@@ -1081,7 +1081,7 @@ bool vp_play_bookmark_set_item_select_callback(bookmark_handle
 }
 
 bool vp_play_bookmark_set_user_param(bookmark_handle pWidgetHandle,
-				     void *pUserData)
+                                     void *pUserData)
 {
 	if (pWidgetHandle == NULL) {
 		VideoLogError("pWidgetHandle is NULL");
@@ -1096,7 +1096,7 @@ bool vp_play_bookmark_set_user_param(bookmark_handle pWidgetHandle,
 }
 
 bool vp_play_bookmark_set_media_url(bookmark_handle pWidgetHandle,
-				    const char *szMediaURL)
+                                    const char *szMediaURL)
 {
 	if (pWidgetHandle == NULL) {
 		VideoLogError("pWidgetHandle is NULL");
@@ -1114,7 +1114,7 @@ bool vp_play_bookmark_set_media_url(bookmark_handle pWidgetHandle,
 	VP_STRDUP(pBookmarkWidget->szMediaURL, szMediaURL);
 
 	if (!vp_media_contents_get_video_id
-			(szMediaURL, &(pBookmarkWidget->szMediaID))) {
+	        (szMediaURL, &(pBookmarkWidget->szMediaID))) {
 		VideoLogError("vp_media_contents_get_video_id is fail");
 		return FALSE;
 	}
@@ -1125,7 +1125,7 @@ bool vp_play_bookmark_set_media_url(bookmark_handle pWidgetHandle,
 }
 
 bool vp_play_bookmark_set_edit_mode(bookmark_handle pWidgetHandle,
-				    bool bEditMode)
+                                    bool bEditMode)
 {
 	if (pWidgetHandle == NULL) {
 		VideoLogError("pWidgetHandle is NULL");
@@ -1143,7 +1143,7 @@ bool vp_play_bookmark_set_edit_mode(bookmark_handle pWidgetHandle,
 }
 
 bool vp_play_bookmark_get_edit_mode(bookmark_handle pWidgetHandle,
-				    bool *bEditMode)
+                                    bool *bEditMode)
 {
 	if (pWidgetHandle == NULL) {
 		VideoLogError("pWidgetHandle is NULL");
@@ -1158,7 +1158,7 @@ bool vp_play_bookmark_get_edit_mode(bookmark_handle pWidgetHandle,
 }
 
 bool vp_play_bookmark_get_pressed_status(bookmark_handle pWidgetHandle,
-		bool *bPressed)
+        bool *bPressed)
 {
 	if (pWidgetHandle == NULL) {
 		VideoLogError("pWidgetHandle is NULL");
@@ -1174,7 +1174,7 @@ bool vp_play_bookmark_get_pressed_status(bookmark_handle pWidgetHandle,
 }
 
 bool vp_play_bookmark_insert_item(bookmark_handle pWidgetHandle,
-				  const char *szBookmarkURL, int nPos)
+                                  const char *szBookmarkURL, int nPos)
 {
 	if (pWidgetHandle == NULL) {
 		VideoLogError("pWidgetHandle is NULL");
@@ -1184,7 +1184,7 @@ bool vp_play_bookmark_insert_item(bookmark_handle pWidgetHandle,
 	BookmarkWidget *pBookmarkWidget = (BookmarkWidget *) pWidgetHandle;
 
 	if (!vp_media_contents_bookmark_insert
-			(pBookmarkWidget->szMediaID, nPos, szBookmarkURL)) {
+	        (pBookmarkWidget->szMediaID, nPos, szBookmarkURL)) {
 		VideoLogError("vp_media_contents_bookmark_insert is fail");
 		return FALSE;
 	}
@@ -1205,7 +1205,7 @@ bool vp_play_bookmark_insert_item(bookmark_handle pWidgetHandle,
 }
 
 bool vp_play_bookmark_get_item_count(bookmark_handle pWidgetHandle,
-				     int *nCount)
+                                     int *nCount)
 {
 	if (pWidgetHandle == NULL) {
 		VideoLogError("pWidgetHandle is NULL");

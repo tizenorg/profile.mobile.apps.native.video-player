@@ -61,22 +61,22 @@ typedef struct _SubtitleFontPopup {
 
 
 static void _vp_subtitle_font_destroy_handle(SubtitleFontPopup *
-		pSubtitleFont);
+        pSubtitleFont);
 static void __vp_subtitle_font_genlist_item_selected_cb(void *pUserData,
-		Evas_Object *
-		pObject,
-		void *pEventInfo);
+        Evas_Object *
+        pObject,
+        void *pEventInfo);
 
 static void __vp_subtitle_font_genlist_realized(void *data,
-		Evas_Object *obj,
-		void *event_info)
+        Evas_Object *obj,
+        void *event_info)
 {
 	VP_GENLIST_HIDE_BOTTOMLINE(data, obj, event_info);
 }
 
 static void __vp_subtitle_font_popup_rotate_cb(void *data,
-		Evas_Object *obj,
-		void *event_info)
+        Evas_Object *obj,
+        void *event_info)
 {
 	SubtitleFontPopup *pSubtitleFont = (SubtitleFontPopup *) data;
 	if (!pSubtitleFont) {
@@ -87,16 +87,16 @@ static void __vp_subtitle_font_popup_rotate_cb(void *data,
 		return;
 	}
 	vp_popup_set_popup_min_size(pSubtitleFont->pParent,
-				    pSubtitleFont->pBox,
-				    pSubtitleFont->nAppendCount,
-				    VIDEO_POPUP_DEFAULT);
+	                            pSubtitleFont->pBox,
+	                            pSubtitleFont->nAppendCount,
+	                            VIDEO_POPUP_DEFAULT);
 
 }
 
 /* callback functions */
 static char *__vp_subtitle_font_genlist_text_get_cb(const void *pUserData,
-		Evas_Object *pObj,
-		const char *pPart)
+        Evas_Object *pObj,
+        const char *pPart)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -109,39 +109,39 @@ static char *__vp_subtitle_font_genlist_text_get_cb(const void *pUserData,
 		char *szFormat = NULL;
 		if (strcmp(szTxt, VP_PLAY_STRING_COM_DEFAULT) == 0) {
 			szFormat =
-				g_strdup_printf("<font='%s'>%s</font>",
-						VP_FONT_DEFAULT_FONT_NAME,
-						VP_PLAY_STRING_FONT_DEFAULT);
+			    g_strdup_printf("<font='%s'>%s</font>",
+			                    VP_FONT_DEFAULT_FONT_NAME,
+			                    VP_PLAY_STRING_FONT_DEFAULT);
 		} else if (strcmp(szTxt, VP_FONT_UDRGOTHIC_FONT_NAME) == 0) {
 			szFormat =
-				g_strdup_printf("<font='%s'>%s</font>",
-						VP_FONT_UDRGOTHIC_FONT_NAME,
-						VP_PLAY_STRING_FONT_UDRCOTHICM);
+			    g_strdup_printf("<font='%s'>%s</font>",
+			                    VP_FONT_UDRGOTHIC_FONT_NAME,
+			                    VP_PLAY_STRING_FONT_UDRCOTHICM);
 		} else if (strcmp(szTxt, VP_FONT_UDMINCHO_FONT_NAME) == 0) {
 			szFormat =
-				g_strdup_printf("<font='%s'>%s</font>",
-						VP_FONT_UDMINCHO_FONT_NAME,
-						VP_PLAY_STRING_FONT_UDMINCHO);
+			    g_strdup_printf("<font='%s'>%s</font>",
+			                    VP_FONT_UDMINCHO_FONT_NAME,
+			                    VP_PLAY_STRING_FONT_UDMINCHO);
 		} else if (strcmp(szTxt, VP_FONT_POP_FONT_NAME) == 0) {
 			szFormat =
-				g_strdup_printf("<font='%s'>%s</font>",
-						VP_FONT_POP_FONT_NAME,
-						VP_PLAY_STRING_FONT_POP);
+			    g_strdup_printf("<font='%s'>%s</font>",
+			                    VP_FONT_POP_FONT_NAME,
+			                    VP_PLAY_STRING_FONT_POP);
 		} else if (strcmp(szTxt, VP_FONT_CHOCOCOOKY_FONT_NAME) == 0) {
 			szFormat =
-				g_strdup_printf("<font='%s'>%s</font>",
-						VP_FONT_CHOCOCOOKY_FONT_NAME,
-						VP_PLAY_STRING_FONT_CHOCO_COOKY);
+			    g_strdup_printf("<font='%s'>%s</font>",
+			                    VP_FONT_CHOCOCOOKY_FONT_NAME,
+			                    VP_PLAY_STRING_FONT_CHOCO_COOKY);
 		} else if (strcmp(szTxt, VP_FONT_COOLJAZZ_FONT_NAME) == 0) {
 			szFormat =
-				g_strdup_printf("<font='%s'>%s</font>",
-						VP_FONT_COOLJAZZ_FONT_NAME,
-						VP_PLAY_STRING_FONT_COOL_JAZZ);
+			    g_strdup_printf("<font='%s'>%s</font>",
+			                    VP_FONT_COOLJAZZ_FONT_NAME,
+			                    VP_PLAY_STRING_FONT_COOL_JAZZ);
 		} else if (strcmp(szTxt, VP_FONT_ROSEMARY_FONT_NAME) == 0) {
 			szFormat =
-				g_strdup_printf("<font='%s'>%s</font>",
-						VP_FONT_ROSEMARY_FONT_NAME,
-						VP_PLAY_STRING_FONT_ROSEMARY);
+			    g_strdup_printf("<font='%s'>%s</font>",
+			                    VP_FONT_ROSEMARY_FONT_NAME,
+			                    VP_PLAY_STRING_FONT_ROSEMARY);
 		}
 
 		return szFormat;
@@ -151,11 +151,11 @@ static char *__vp_subtitle_font_genlist_text_get_cb(const void *pUserData,
 }
 
 static Evas_Object *__vp_subtitle_font_genlist_content_get_cb(const void
-		*pUserData,
-		Evas_Object
-		* pObj,
-		const char
-		*pPart)
+        *pUserData,
+        Evas_Object
+        * pObj,
+        const char
+        *pPart)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -168,8 +168,8 @@ static Evas_Object *__vp_subtitle_font_genlist_content_get_cb(const void
 		Evas_Object *pRadioObj = NULL;
 
 		SubtitleFontPopup *pSubtitleFont =
-			(SubtitleFontPopup *) evas_object_data_get(pObj,
-					VP_SUBTITLE_FONT_GENLIST_DATA_KEY);
+		    (SubtitleFontPopup *) evas_object_data_get(pObj,
+		            VP_SUBTITLE_FONT_GENLIST_DATA_KEY);
 		if (pSubtitleFont == NULL) {
 			VideoLogWarning("evas_object_data_get is fail");
 			return NULL;
@@ -183,7 +183,7 @@ static Evas_Object *__vp_subtitle_font_genlist_content_get_cb(const void
 		for (i = 0; i < nCount; i++) {
 			char *szName = NULL;
 			szName =
-				(char *)g_list_nth_data(pSubtitleFont->pFontList, i);
+			    (char *)g_list_nth_data(pSubtitleFont->pFontList, i);
 			if (szName == NULL) {
 				continue;
 			}
@@ -197,10 +197,10 @@ static Evas_Object *__vp_subtitle_font_genlist_content_get_cb(const void
 		elm_radio_state_value_set(pRadioObj, nIndex);
 		elm_radio_group_add(pRadioObj, pSubtitleFont->pRadio);
 		elm_radio_value_set(pSubtitleFont->pRadio,
-				    pSubtitleFont->nCurrentFontIdx);
+		                    pSubtitleFont->nCurrentFontIdx);
 		evas_object_smart_callback_add(pRadioObj, "changed",
-					       __vp_subtitle_font_genlist_item_selected_cb,
-					       pSubtitleFont);
+		                               __vp_subtitle_font_genlist_item_selected_cb,
+		                               pSubtitleFont);
 		evas_object_show(pRadioObj);
 
 		return pRadioObj;
@@ -210,9 +210,9 @@ static Evas_Object *__vp_subtitle_font_genlist_content_get_cb(const void
 }
 
 static void __vp_subtitle_font_genlist_item_selected_cb(void *pUserData,
-		Evas_Object *
-		pObject,
-		void *pEventInfo)
+        Evas_Object *
+        pObject,
+        void *pEventInfo)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -225,7 +225,7 @@ static void __vp_subtitle_font_genlist_item_selected_cb(void *pUserData,
 
 	Elm_Object_Item *pItem = (Elm_Object_Item *) pEventInfo;
 	Elm_Object_Item *pSelectedItem =
-		elm_genlist_selected_item_get(pObject);
+	    elm_genlist_selected_item_get(pObject);
 	if (pSelectedItem) {
 		elm_genlist_item_selected_set(pSelectedItem, EINA_FALSE);
 	}
@@ -246,7 +246,7 @@ static void __vp_subtitle_font_genlist_item_selected_cb(void *pUserData,
 		for (i = 0; i < nCount; i++) {
 			char *szName = NULL;
 			szName =
-				(char *)g_list_nth_data(pSubtitleFont->pFontList, i);
+			    (char *)g_list_nth_data(pSubtitleFont->pFontList, i);
 			if (szName == NULL) {
 				continue;
 			}
@@ -265,8 +265,8 @@ static void __vp_subtitle_font_genlist_item_selected_cb(void *pUserData,
 }
 
 static void __vp_subtitle_font_popup_key_event_cb(void *pUserData,
-		Evas_Object *pObj,
-		void *pEventInfo)
+        Evas_Object *pObj,
+        void *pEventInfo)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -281,9 +281,9 @@ static void __vp_subtitle_font_popup_key_event_cb(void *pUserData,
 }
 
 static void __vp_subtitle_font_popup_mouse_event_cb(void *pUserData,
-		Evas *pEvas,
-		Evas_Object *pObj,
-		void *pEventInfo)
+        Evas *pEvas,
+        Evas_Object *pObj,
+        void *pEventInfo)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -299,11 +299,11 @@ static void __vp_subtitle_font_popup_mouse_event_cb(void *pUserData,
 
 	if (ev->button == 3) {
 		SubtitleFontPopup *pSubtitleFont =
-			(SubtitleFontPopup *) pUserData;
+		    (SubtitleFontPopup *) pUserData;
 
 		if (pSubtitleFont->pCloseCb) {
 			pSubtitleFont->pCloseCb(NULL,
-						(void *) pSubtitleFont->pUserData);
+			                        (void *) pSubtitleFont->pUserData);
 		}
 	}
 }
@@ -312,7 +312,7 @@ static void __vp_subtitle_font_popup_mouse_event_cb(void *pUserData,
 
 /* internal functions */
 static void _vp_subtitle_font_destroy_handle(SubtitleFontPopup *
-		pSubtitleFont)
+        pSubtitleFont)
 {
 	if (pSubtitleFont == NULL) {
 		VideoLogError("pSubtitleFont is NULL");
@@ -321,10 +321,10 @@ static void _vp_subtitle_font_destroy_handle(SubtitleFontPopup *
 	int nCount = 0;
 	int i = 0;
 	evas_object_smart_callback_del(pSubtitleFont->pParent,
-				       "rotation,changed",
-				       __vp_subtitle_font_popup_rotate_cb);
+	                               "rotation,changed",
+	                               __vp_subtitle_font_popup_rotate_cb);
 	evas_object_smart_callback_del(pSubtitleFont->pGenList, "realized",
-				       __vp_subtitle_font_genlist_realized);
+	                               __vp_subtitle_font_genlist_realized);
 
 	VP_EVAS_DEL(pSubtitleFont->pRadio);
 	VP_EVAS_DEL(pSubtitleFont->pGenList);
@@ -355,7 +355,7 @@ static void _vp_subtitle_font_destroy_handle(SubtitleFontPopup *
 
 
 static Evas_Object *_vp_subtitle_font_create_genlist(Evas_Object *
-		pParent)
+        pParent)
 {
 	if (pParent == NULL) {
 		VideoLogError("pParent is NULL");
@@ -366,14 +366,14 @@ static Evas_Object *_vp_subtitle_font_create_genlist(Evas_Object *
 
 	pObj = elm_genlist_add(pParent);
 	evas_object_size_hint_weight_set(pObj, EVAS_HINT_EXPAND,
-					 EVAS_HINT_EXPAND);
+	                                 EVAS_HINT_EXPAND);
 	evas_object_size_hint_align_set(pObj, EVAS_HINT_FILL, EVAS_HINT_FILL);
 	evas_object_show(pObj);
 	return pObj;
 }
 
 static bool _vp_subtitle_font_add_genlist_item(Evas_Object *pObj,
-		void *pUserData)
+        void *pUserData)
 {
 	if (pObj == NULL) {
 		VideoLogError("pObj is NULL");
@@ -391,21 +391,21 @@ static bool _vp_subtitle_font_add_genlist_item(Evas_Object *pObj,
 
 	if (pSubtitleFont->st_SubtitleFont_Itc != NULL) {
 		pSubtitleFont->st_SubtitleFont_Itc->version =
-			ELM_GENLIST_ITEM_CLASS_VERSION;
+		    ELM_GENLIST_ITEM_CLASS_VERSION;
 		pSubtitleFont->st_SubtitleFont_Itc->item_style =
-			"video.multiline/1text.1icon";
+		    "video.multiline/1text.1icon";
 		pSubtitleFont->st_SubtitleFont_Itc->func.text_get =
-			(void *) __vp_subtitle_font_genlist_text_get_cb;
+		    (void *) __vp_subtitle_font_genlist_text_get_cb;
 		pSubtitleFont->st_SubtitleFont_Itc->func.content_get =
-			(void *) __vp_subtitle_font_genlist_content_get_cb;
+		    (void *) __vp_subtitle_font_genlist_content_get_cb;
 		pSubtitleFont->st_SubtitleFont_Itc->func.state_get = NULL;
 		pSubtitleFont->st_SubtitleFont_Itc->func.del = NULL;
 
 		elm_genlist_item_append(pObj, pSubtitleFont->st_SubtitleFont_Itc,
-				(void *) VP_PLAY_STRING_COM_DEFAULT, NULL,
-				ELM_GENLIST_ITEM_NONE,
-				__vp_subtitle_font_genlist_item_selected_cb,
-				pUserData);
+		                        (void *) VP_PLAY_STRING_COM_DEFAULT, NULL,
+		                        ELM_GENLIST_ITEM_NONE,
+		                        __vp_subtitle_font_genlist_item_selected_cb,
+		                        pUserData);
 		pSubtitleFont->nAppendCount++;
 
 		int nCount = 0;
@@ -419,10 +419,10 @@ static bool _vp_subtitle_font_add_genlist_item(Evas_Object *pObj,
 				continue;
 			}
 			elm_genlist_item_append(pObj, pSubtitleFont->st_SubtitleFont_Itc,
-					(void *) szName, NULL,
-					ELM_GENLIST_ITEM_NONE,
-					__vp_subtitle_font_genlist_item_selected_cb,
-					pUserData);
+			                        (void *) szName, NULL,
+			                        ELM_GENLIST_ITEM_NONE,
+			                        __vp_subtitle_font_genlist_item_selected_cb,
+			                        pUserData);
 			pSubtitleFont->nAppendCount++;
 		}
 	}
@@ -430,7 +430,7 @@ static bool _vp_subtitle_font_add_genlist_item(Evas_Object *pObj,
 }
 
 static bool __vp_subtitle_font_load_font_list(SubtitleFontPopup *
-		pSubtitleFont)
+        pSubtitleFont)
 {
 	if (pSubtitleFont == NULL) {
 		VideoLogError("pSubtitleFont is NULL");
@@ -468,19 +468,19 @@ static bool __vp_subtitle_font_load_font_list(SubtitleFontPopup *
 			FcChar8 *szFile = NULL;
 
 			if (FcPatternGetString(fs->fonts[j], FC_FILE, 0, &szFile) ==
-					FcResultMatch) {
+			        FcResultMatch) {
 				if (szFile == NULL) {
 					continue;
 				}
 				if (strncmp
-						((const char *) szFile, VP_FONT_PRELOAD_FONT_PATH,
-						 nPreloadPathLen) == 0
-						|| strncmp((const char *) szFile,
-							   VP_FONT_DOWNLOADED_FONT_PATH,
-							   nDownloadPathLen) == 0) {
+				        ((const char *) szFile, VP_FONT_PRELOAD_FONT_PATH,
+				         nPreloadPathLen) == 0
+				        || strncmp((const char *) szFile,
+				                   VP_FONT_DOWNLOADED_FONT_PATH,
+				                   nDownloadPathLen) == 0) {
 					if (FcPatternGetString
-							(fs->fonts[j], FC_FAMILY, 0,
-							 &szfamily) == FcResultMatch) {
+					        (fs->fonts[j], FC_FAMILY, 0,
+					         &szfamily) == FcResultMatch) {
 						bool bIsExist = FALSE;
 
 						if (szfamily == NULL) {
@@ -492,17 +492,17 @@ static bool __vp_subtitle_font_load_font_list(SubtitleFontPopup *
 							int nIdx = 0;
 
 							nCount =
-								g_list_length(pSubtitleFont->pFontList);
+							    g_list_length(pSubtitleFont->pFontList);
 							for (nIdx = 0; nIdx < nCount; nIdx++) {
 								char *szListName = NULL;
 								szListName =
-									(char *)
-									g_list_nth_data(pSubtitleFont->
-											pFontList, nIdx);
+								    (char *)
+								    g_list_nth_data(pSubtitleFont->
+								                    pFontList, nIdx);
 								if (szListName) {
 									if (strcmp
-											((char *)szfamily,
-											 szListName) == 0) {
+									        ((char *)szfamily,
+									         szListName) == 0) {
 										bIsExist = TRUE;
 									}
 								}
@@ -510,44 +510,44 @@ static bool __vp_subtitle_font_load_font_list(SubtitleFontPopup *
 						}
 						if (bIsExist == FALSE) {
 							if ((strcmp
-									((char *)szfamily,
-									 VP_FONT_UDRGOTHIC_FONT_NAME) == 0)
-									||
-									(strcmp
-									 ((char *)szfamily,
-									  VP_FONT_UDMINCHO_FONT_NAME) == 0)
-									||
-									(strcmp
-									 ((char *)szfamily,
-									  VP_FONT_POP_FONT_NAME) == 0)
-									||
-									(strcmp
-									 ((char *)szfamily,
-									  VP_FONT_CHOCOCOOKY_FONT_NAME) == 0)
-									||
-									(strcmp
-									 ((char *)szfamily,
-									  VP_FONT_COOLJAZZ_FONT_NAME) == 0)
-									||
-									(strcmp
-									 ((char *)szfamily,
-									  VP_FONT_ROSEMARY_FONT_NAME) == 0)) {
+							        ((char *)szfamily,
+							         VP_FONT_UDRGOTHIC_FONT_NAME) == 0)
+							        ||
+							        (strcmp
+							         ((char *)szfamily,
+							          VP_FONT_UDMINCHO_FONT_NAME) == 0)
+							        ||
+							        (strcmp
+							         ((char *)szfamily,
+							          VP_FONT_POP_FONT_NAME) == 0)
+							        ||
+							        (strcmp
+							         ((char *)szfamily,
+							          VP_FONT_CHOCOCOOKY_FONT_NAME) == 0)
+							        ||
+							        (strcmp
+							         ((char *)szfamily,
+							          VP_FONT_COOLJAZZ_FONT_NAME) == 0)
+							        ||
+							        (strcmp
+							         ((char *)szfamily,
+							          VP_FONT_ROSEMARY_FONT_NAME) == 0)) {
 								char *szFontName = NULL;
 								VP_STRDUP(szFontName, (char *)szfamily);
 								if (szFontName) {
 									pSubtitleFont->pFontList =
-										g_list_append(pSubtitleFont->
-											      pFontList, szFontName);
+									    g_list_append(pSubtitleFont->
+									                  pFontList, szFontName);
 									if (strcmp
-											(pSubtitleFont->szCurrentFont,
-											 szFontName) == 0) {
+									        (pSubtitleFont->szCurrentFont,
+									         szFontName) == 0) {
 										pSubtitleFont->nCurrentFontIdx =
-											g_list_length(pSubtitleFont->
-												      pFontList);
+										    g_list_length(pSubtitleFont->
+										                  pFontList);
 									}
 								}
 								VideoLogError("==> [%d] : %s ", j,
-									      szfamily);
+								              szfamily);
 							}
 						}
 					}
@@ -566,8 +566,8 @@ static bool __vp_subtitle_font_load_font_list(SubtitleFontPopup *
 
 /* external functions */
 subtitle_font_handle vp_subtitle_font_create(Evas_Object *pParent,
-		SubtitleFontCbFunc pCloseCb,
-		char *szCurrentFont)
+        SubtitleFontCbFunc pCloseCb,
+        char *szCurrentFont)
 {
 	if (pParent == NULL) {
 		VideoLogError("pParent is NULL");
@@ -594,11 +594,11 @@ subtitle_font_handle vp_subtitle_font_create(Evas_Object *pParent,
 	pSubtitleFont->nCurrentFontIdx = 0;
 
 	pSubtitleFont->pPopup =
-		vp_popup_create(pParent, POPUP_STYLE_MENU_LIST_NO_CANCEL_BTN,
-				VP_PLAY_STRING_SUBTITLE_FONT, NULL, 0.0, NULL,
-				__vp_subtitle_font_popup_key_event_cb,
-				__vp_subtitle_font_popup_mouse_event_cb,
-				(void *) pSubtitleFont);
+	    vp_popup_create(pParent, POPUP_STYLE_MENU_LIST_NO_CANCEL_BTN,
+	                    VP_PLAY_STRING_SUBTITLE_FONT, NULL, 0.0, NULL,
+	                    __vp_subtitle_font_popup_key_event_cb,
+	                    __vp_subtitle_font_popup_mouse_event_cb,
+	                    (void *) pSubtitleFont);
 	if (pSubtitleFont->pPopup == NULL) {
 		VideoLogError("vp_popup_create fail");
 		_vp_subtitle_font_destroy_handle(pSubtitleFont);
@@ -606,18 +606,18 @@ subtitle_font_handle vp_subtitle_font_create(Evas_Object *pParent,
 	}
 
 	pSubtitleFont->pGenList =
-		_vp_subtitle_font_create_genlist(pSubtitleFont->pPopup);
+	    _vp_subtitle_font_create_genlist(pSubtitleFont->pPopup);
 	if (pSubtitleFont->pGenList == NULL) {
 		VideoLogError("_vp_subtitle_font_create_genlist fail");
 		_vp_subtitle_font_destroy_handle(pSubtitleFont);
 		return NULL;
 	}
 	evas_object_data_set(pSubtitleFont->pGenList,
-			     VP_SUBTITLE_FONT_GENLIST_DATA_KEY,
-			     (void *) pSubtitleFont);
+	                     VP_SUBTITLE_FONT_GENLIST_DATA_KEY,
+	                     (void *) pSubtitleFont);
 	evas_object_smart_callback_add(pSubtitleFont->pGenList, "realized",
-				       __vp_subtitle_font_genlist_realized,
-				       NULL);
+	                               __vp_subtitle_font_genlist_realized,
+	                               NULL);
 
 	pSubtitleFont->pRadio = elm_radio_add(pSubtitleFont->pGenList);
 
@@ -626,21 +626,21 @@ subtitle_font_handle vp_subtitle_font_create(Evas_Object *pParent,
 	elm_genlist_mode_set(pSubtitleFont->pGenList, ELM_LIST_COMPRESS);
 
 	if (!_vp_subtitle_font_add_genlist_item
-			(pSubtitleFont->pGenList, (void *) pSubtitleFont)) {
+	        (pSubtitleFont->pGenList, (void *) pSubtitleFont)) {
 		VideoLogError("_vp_subtitle_font_add_genlist_item fail");
 		return FALSE;
 	}
 	//elm_radio_value_set(pSubtitleFont->pRadio, pSubtitleFont->nCurrentFontIdx);
 	evas_object_smart_callback_add(pSubtitleFont->pParent,
-				       "rotation,changed",
-				       __vp_subtitle_font_popup_rotate_cb,
-				       pSubtitleFont);
+	                               "rotation,changed",
+	                               __vp_subtitle_font_popup_rotate_cb,
+	                               pSubtitleFont);
 
 	pSubtitleFont->pBox = elm_box_add(pSubtitleFont->pPopup);
 	vp_popup_set_popup_min_size(pSubtitleFont->pParent,
-				    pSubtitleFont->pBox,
-				    pSubtitleFont->nAppendCount,
-				    VIDEO_POPUP_DEFAULT);
+	                            pSubtitleFont->pBox,
+	                            pSubtitleFont->nAppendCount,
+	                            VIDEO_POPUP_DEFAULT);
 
 	elm_box_pack_end(pSubtitleFont->pBox, pSubtitleFont->pGenList);
 	elm_object_content_set(pSubtitleFont->pPopup, pSubtitleFont->pBox);
@@ -656,7 +656,7 @@ void vp_subtitle_font_destroy(subtitle_font_handle pSubtitleFontHandle)
 	}
 
 	SubtitleFontPopup *pSubtitleFont =
-		(SubtitleFontPopup *) pSubtitleFontHandle;
+	    (SubtitleFontPopup *) pSubtitleFontHandle;
 
 	_vp_subtitle_font_destroy_handle(pSubtitleFont);
 
@@ -670,7 +670,7 @@ bool vp_subtitle_font_realize(subtitle_font_handle pSubtitleFontHandle)
 	}
 
 	SubtitleFontPopup *pSubtitleFont =
-		(SubtitleFontPopup *) pSubtitleFontHandle;
+	    (SubtitleFontPopup *) pSubtitleFontHandle;
 
 	evas_object_show(pSubtitleFont->pPopup);
 
@@ -685,7 +685,7 @@ bool vp_subtitle_font_unrealize(subtitle_font_handle pSubtitleFontHandle)
 	}
 
 	SubtitleFontPopup *pSubtitleFont =
-		(SubtitleFontPopup *) pSubtitleFontHandle;
+	    (SubtitleFontPopup *) pSubtitleFontHandle;
 
 	evas_object_hide(pSubtitleFont->pPopup);
 
@@ -693,7 +693,7 @@ bool vp_subtitle_font_unrealize(subtitle_font_handle pSubtitleFontHandle)
 }
 
 bool vp_subtitle_font_set_user_data(subtitle_font_handle
-				    pSubtitleFontHandle, void *pUserData)
+                                    pSubtitleFontHandle, void *pUserData)
 {
 	if (pSubtitleFontHandle == NULL) {
 		VideoLogError("pSubtitleFontHandle is NULL");
@@ -701,7 +701,7 @@ bool vp_subtitle_font_set_user_data(subtitle_font_handle
 	}
 
 	SubtitleFontPopup *pSubtitleFont =
-		(SubtitleFontPopup *) pSubtitleFontHandle;
+	    (SubtitleFontPopup *) pSubtitleFontHandle;
 
 	pSubtitleFont->pUserData = pUserData;
 

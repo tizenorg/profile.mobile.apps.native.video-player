@@ -43,7 +43,7 @@ static sqlite3 *_vp_db_util_connect_db()
 	ret = sqlite3_open(VIDEO_THUMB_DB_NAME, &pSqlite);
 	if (SQLITE_OK != ret) {
 		vp_dbgE("sqlite3_open fail [0x%x] : %s", ret,
-			sqlite3_errmsg(pSqlite));
+		        sqlite3_errmsg(pSqlite));
 		return NULL;
 	}
 

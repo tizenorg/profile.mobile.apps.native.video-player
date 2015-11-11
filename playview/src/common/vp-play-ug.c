@@ -47,9 +47,9 @@
 
 /* callback functions */
 static void __vp_play_ug_reply_cb(app_control_h pRequest,
-				  app_control_h pReply,
-				  app_control_result_e nResult,
-				  void *pUserData)
+                                  app_control_h pReply,
+                                  app_control_result_e nResult,
+                                  void *pUserData)
 {
 	if (pRequest) {
 		char *appId;
@@ -68,7 +68,7 @@ static void __vp_play_ug_reply_cb(app_control_h pRequest,
 }
 
 bool vp_play_app_launch_videos(Evas_Object *pWin, bool bRaise,
-			       void *pUserData)
+                               void *pUserData)
 {
 	app_control_h pService = NULL;
 
@@ -80,27 +80,27 @@ bool vp_play_app_launch_videos(Evas_Object *pWin, bool bRaise,
 	}
 
 	nRet =
-		app_control_set_operation(pService, APP_CONTROL_OPERATION_VIEW);
+	    app_control_set_operation(pService, APP_CONTROL_OPERATION_VIEW);
 	if (nRet != APP_CONTROL_ERROR_NONE) {
 		VideoLogError("app_control_set_operation is fail [0x%x]", nRet);
 		goto Execption;
 	}
 	if (bRaise) {
 		nRet =
-			app_control_add_extra_data(pService, VP_VIDEOS_ONLY_RAISE,
-						   VP_VIDEOS_VALUE_TRUE);
+		    app_control_add_extra_data(pService, VP_VIDEOS_ONLY_RAISE,
+		                               VP_VIDEOS_VALUE_TRUE);
 		if (nRet != APP_CONTROL_ERROR_NONE) {
 			VideoLogError("app_control_add_extra_data is fail [0x%x]",
-				      nRet);
+			              nRet);
 			goto Execption;
 		}
 	} else {
 		nRet =
-			app_control_add_extra_data(pService, VP_VIDEOS_ONLY_RAISE,
-						   VP_VIDEOS_VALUE_FALSE);
+		    app_control_add_extra_data(pService, VP_VIDEOS_ONLY_RAISE,
+		                               VP_VIDEOS_VALUE_FALSE);
 		if (nRet != APP_CONTROL_ERROR_NONE) {
 			VideoLogError("app_control_add_extra_data is fail [0x%x]",
-				      nRet);
+			              nRet);
 			goto Execption;
 		}
 	}
@@ -112,11 +112,11 @@ bool vp_play_app_launch_videos(Evas_Object *pWin, bool bRaise,
 	}
 
 	nRet =
-		app_control_send_launch_request(pService, __vp_play_ug_reply_cb,
-						pUserData);
+	    app_control_send_launch_request(pService, __vp_play_ug_reply_cb,
+	                                    pUserData);
 	if (nRet != APP_CONTROL_ERROR_NONE) {
 		VideoLogError("app_control_send_launch_request is fail [0x%x]",
-			      nRet);
+		              nRet);
 		goto Execption;
 	}
 
@@ -134,8 +134,8 @@ Execption:
 }
 
 bool vp_play_app_launch_share_panel(Evas_Object *pWin,
-				    const char *szMediaURL,
-				    void *pUserData)
+                                    const char *szMediaURL,
+                                    void *pUserData)
 {
 	if (szMediaURL == NULL) {
 		VideoLogError("szMediaURL is NULL");
@@ -177,11 +177,11 @@ bool vp_play_app_launch_share_panel(Evas_Object *pWin,
 	}
 
 	nRet =
-		app_control_send_launch_request(pService, __vp_play_ug_reply_cb,
-						pUserData);
+	    app_control_send_launch_request(pService, __vp_play_ug_reply_cb,
+	                                    pUserData);
 	if (nRet != APP_CONTROL_ERROR_NONE) {
 		VideoLogError("app_control_send_launch_request is fail [0x%x]",
-			      nRet);
+		              nRet);
 		goto Execption;
 	}
 	VP_FREE(szFileName);

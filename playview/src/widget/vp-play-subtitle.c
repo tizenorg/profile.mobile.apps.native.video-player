@@ -42,12 +42,12 @@
 #define VP_SUBTITLE_LANDSCAPE_H               		530
 
 #define VP_NORMAL_SUTITLE_TEXT_STYLE \
-		"DEFAULT='font=Tizen:style=Roman align=center valign=bottom wrap=word'"\
-		"br='\n'" \
-		"ps='ps'" \
-		"hilight='+ font=Tizen:style=Roman'" \
-		"b='+ font=Tizen:style=Roman'" \
-		"tab='\t'"
+	"DEFAULT='font=Tizen:style=Roman align=center valign=bottom wrap=word'"\
+	"br='\n'" \
+	"ps='ps'" \
+	"hilight='+ font=Tizen:style=Roman'" \
+	"b='+ font=Tizen:style=Roman'" \
+	"tab='\t'"
 
 void _vp_play_subtitle_destroy_handle(Subtitle *pSubtitle);
 /* callback functions */
@@ -73,8 +73,8 @@ void _vp_play_subtitle_destroy_handle(Subtitle *pSubtitle)
 }
 
 static Evas_Object *_vp_play_subtitle_create_layout(Evas_Object *pParent,
-		vp_subtitle_type_t
-		nType)
+        vp_subtitle_type_t
+        nType)
 {
 	if (!pParent) {
 		VideoLogError("Parent is NULL");
@@ -93,12 +93,12 @@ static Evas_Object *_vp_play_subtitle_create_layout(Evas_Object *pParent,
 	if (nType == VP_SUBTITLE_TYPE_NORMAL) {
 		//bRet = elm_layout_file_set(pObj, VP_PLAY_SUBTITLE_EDJ_PATH, VP_PLAY_EDJ_GROUP_SUBTITLE);
 		bRet =
-			elm_layout_file_set(pObj, VP_PLAY_SUBTITLE_EDJ_PATH,
-					    VP_PLAY_EDJ_GROUP_SUBTITLE_MULTI);
+		    elm_layout_file_set(pObj, VP_PLAY_SUBTITLE_EDJ_PATH,
+		                        VP_PLAY_EDJ_GROUP_SUBTITLE_MULTI);
 	} else if (nType == VP_SUBTITLE_TYPE_MULTI) {
 		bRet =
-			elm_layout_file_set(pObj, VP_PLAY_SUBTITLE_EDJ_PATH,
-					    VP_PLAY_EDJ_GROUP_SUBTITLE_MULTI);
+		    elm_layout_file_set(pObj, VP_PLAY_SUBTITLE_EDJ_PATH,
+		                        VP_PLAY_EDJ_GROUP_SUBTITLE_MULTI);
 	}
 
 	if (bRet != EINA_TRUE) {
@@ -110,8 +110,8 @@ static Evas_Object *_vp_play_subtitle_create_layout(Evas_Object *pParent,
 }
 
 static void _vp_play_subtitle_layout_del_cb(void *pUserData, Evas *e,
-		Evas_Object *pObject,
-		void *pEventInfo)
+        Evas_Object *pObject,
+        void *pEventInfo)
 {
 	if (!pUserData) {
 		VideoLogError("pSubtitle is NULL");
@@ -123,7 +123,7 @@ static void _vp_play_subtitle_layout_del_cb(void *pUserData, Evas *e,
 }
 
 static bool _vp_play_subtitle_init_layout(Subtitle *pSubtitle,
-		vp_subtitle_type_t nType)
+        vp_subtitle_type_t nType)
 {
 	if (pSubtitle == NULL) {
 		VideoLogError("pSubtitle is NULL");
@@ -140,8 +140,8 @@ static bool _vp_play_subtitle_init_layout(Subtitle *pSubtitle,
 	pSubtitle->pTextBlock = NULL;
 
 	evas_object_event_callback_add(pSubtitle->pLayout, EVAS_CALLBACK_DEL,
-				       _vp_play_subtitle_layout_del_cb,
-				       (void *) pSubtitle);
+	                               _vp_play_subtitle_layout_del_cb,
+	                               (void *) pSubtitle);
 
 	return TRUE;
 }
@@ -245,22 +245,22 @@ void vp_play_subtitle_text_update(Subtitle *pSubtitle, const char *szTxt)
 
 #ifdef SUBTITLE_K_FEATURE
 	szTxtFormat =
-		g_strdup_printf(VP_SUBTITLE_STRING_TXT_FORMAT, nSize, szFontEdge,
-				pSubtitle->szFontName, szFontWeight, szColor,
-				szBGColor, szBGColorOn, szAlignment, szOutput);
+	    g_strdup_printf(VP_SUBTITLE_STRING_TXT_FORMAT, nSize, szFontEdge,
+	                    pSubtitle->szFontName, szFontWeight, szColor,
+	                    szBGColor, szBGColorOn, szAlignment, szOutput);
 #else
 	szTxtFormat =
-		g_strdup_printf(VP_SUBTITLE_STRING_TXT_FORMAT, nSize, szFontEdge,
-				pSubtitle->szFontName, szFontWeight, szColor,
-				szBGColor, szBGColorOn, szOutput);
+	    g_strdup_printf(VP_SUBTITLE_STRING_TXT_FORMAT, nSize, szFontEdge,
+	                    pSubtitle->szFontName, szFontWeight, szColor,
+	                    szBGColor, szBGColorOn, szOutput);
 #endif
 
 	if (pSubtitle->pTextBlock) {
 		evas_object_textblock_text_markup_set(pSubtitle->pTextBlock,
-						      szTxtFormat);
+		                                      szTxtFormat);
 	} else {
 		elm_object_part_text_set(pSubtitle->pLayout,
-					 VP_PLAY_PART_SUBTITLE_TEXT, szTxtFormat);
+		                         VP_PLAY_PART_SUBTITLE_TEXT, szTxtFormat);
 	}
 
 	VP_FREE(szFontEdge);
@@ -280,7 +280,7 @@ void vp_play_subtitle_text_update(Subtitle *pSubtitle, const char *szTxt)
 
 /* external functions */
 subtitle_handle vp_play_subtitle_create(Evas_Object *pParent,
-					vp_subtitle_type_t nType)
+                                        vp_subtitle_type_t nType)
 {
 	if (pParent == NULL) {
 		VideoLogError("pParent is NULL");
@@ -363,7 +363,7 @@ bool vp_play_subtitle_unrealize(subtitle_handle pWidgetHandle)
 }
 
 bool vp_play_subtitle_is_realize(subtitle_handle pWidgetHandle,
-				 bool *bIsRealize)
+                                 bool *bIsRealize)
 {
 	if (pWidgetHandle == NULL) {
 		VideoLogError("pWidgetHandle is NULL");
@@ -391,7 +391,7 @@ Evas_Object *vp_play_subtitle_get_object(subtitle_handle pWidgetHandle)
 }
 
 bool vp_play_subtitle_set_font(subtitle_handle pWidgetHandle,
-			       char *szFontName)
+                               char *szFontName)
 {
 	if (pWidgetHandle == NULL) {
 		VideoLogError("pWidgetHandle is NULL");
@@ -417,7 +417,7 @@ bool vp_play_subtitle_set_font(subtitle_handle pWidgetHandle,
 }
 
 bool vp_play_subtitle_get_font(subtitle_handle pWidgetHandle,
-			       char **szFontName)
+                               char **szFontName)
 {
 	if (pWidgetHandle == NULL) {
 		VideoLogError("pWidgetHandle is NULL");
@@ -469,7 +469,7 @@ bool vp_play_subtitle_get_edge(subtitle_handle pWidgetHandle, int *nEdge)
 }
 
 bool vp_play_subtitle_set_size(subtitle_handle pWidgetHandle,
-			       video_subtitle_size_t nSize)
+                               video_subtitle_size_t nSize)
 {
 	if (pWidgetHandle == NULL) {
 		VideoLogError("pWidgetHandle is NULL");
@@ -489,7 +489,7 @@ bool vp_play_subtitle_set_size(subtitle_handle pWidgetHandle,
 }
 
 bool vp_play_subtitle_get_size(subtitle_handle pWidgetHandle,
-			       video_subtitle_size_t *nSize)
+                               video_subtitle_size_t *nSize)
 {
 	if (pWidgetHandle == NULL) {
 		VideoLogError("pWidgetHandle is NULL");
@@ -504,7 +504,7 @@ bool vp_play_subtitle_get_size(subtitle_handle pWidgetHandle,
 }
 
 bool vp_play_subtitle_set_size_zoom(subtitle_handle pWidgetHandle,
-				    float fZoom)
+                                    float fZoom)
 {
 	if (pWidgetHandle == NULL) {
 		VideoLogError("pWidgetHandle is NULL");
@@ -526,7 +526,7 @@ bool vp_play_subtitle_set_size_zoom(subtitle_handle pWidgetHandle,
 }
 
 bool vp_play_subtitle_get_size_zoom(subtitle_handle pWidgetHandle,
-				    float *fZoom)
+                                    float *fZoom)
 {
 	if (pWidgetHandle == NULL) {
 		VideoLogError("pWidgetHandle is NULL");
@@ -542,7 +542,7 @@ bool vp_play_subtitle_get_size_zoom(subtitle_handle pWidgetHandle,
 
 #ifndef SUBTITLE_K_FEATURE
 bool vp_play_subtitle_set_color(subtitle_handle pWidgetHandle,
-				video_subtitle_color_t nColor)
+                                video_subtitle_color_t nColor)
 {
 	if (pWidgetHandle == NULL) {
 		VideoLogError("pWidgetHandle is NULL");
@@ -561,7 +561,7 @@ bool vp_play_subtitle_set_color(subtitle_handle pWidgetHandle,
 }
 
 bool vp_play_subtitle_get_color(subtitle_handle pWidgetHandle,
-				video_subtitle_color_t *nColor)
+                                video_subtitle_color_t *nColor)
 {
 	if (pWidgetHandle == NULL) {
 		VideoLogError("pWidgetHandle is NULL");
@@ -576,7 +576,7 @@ bool vp_play_subtitle_get_color(subtitle_handle pWidgetHandle,
 }
 
 bool vp_play_subtitle_set_bg_color(subtitle_handle pWidgetHandle,
-				   video_subtitle_color_t nColor)
+                                   video_subtitle_color_t nColor)
 {
 	if (pWidgetHandle == NULL) {
 		VideoLogError("pWidgetHandle is NULL");
@@ -596,7 +596,7 @@ bool vp_play_subtitle_set_bg_color(subtitle_handle pWidgetHandle,
 }
 
 bool vp_play_subtitle_get_bg_color(subtitle_handle pWidgetHandle,
-				   video_subtitle_color_t *nColor)
+                                   video_subtitle_color_t *nColor)
 {
 	if (pWidgetHandle == NULL) {
 		VideoLogError("pWidgetHandle is NULL");
@@ -611,7 +611,7 @@ bool vp_play_subtitle_get_bg_color(subtitle_handle pWidgetHandle,
 }
 #else
 bool vp_play_subtitle_get_color(subtitle_handle pWidgetHandle,
-				char **pColorHex)
+                                char **pColorHex)
 {
 	if (pWidgetHandle == NULL) {
 		VideoLogError("pWidgetHandle is NULL");
@@ -631,7 +631,7 @@ bool vp_play_subtitle_get_color(subtitle_handle pWidgetHandle,
 }
 
 bool vp_play_subtitle_set_color(subtitle_handle pWidgetHandle,
-				char *pColorHex)
+                                char *pColorHex)
 {
 	if (pWidgetHandle == NULL) {
 		VideoLogError("pWidgetHandle is NULL");
@@ -651,7 +651,7 @@ bool vp_play_subtitle_set_color(subtitle_handle pWidgetHandle,
 }
 
 bool vp_play_subtitle_get_bg_color(subtitle_handle pWidgetHandle,
-				   char **pColorHex)
+                                   char **pColorHex)
 {
 	if (pWidgetHandle == NULL) {
 		VideoLogError("pWidgetHandle is NULL");
@@ -671,7 +671,7 @@ bool vp_play_subtitle_get_bg_color(subtitle_handle pWidgetHandle,
 }
 
 bool vp_play_subtitle_set_bg_color(subtitle_handle pWidgetHandle,
-				   char *pColorHex)
+                                   char *pColorHex)
 {
 	if (pWidgetHandle == NULL) {
 		VideoLogError("pWidgetHandle is NULL");
@@ -692,7 +692,7 @@ bool vp_play_subtitle_set_bg_color(subtitle_handle pWidgetHandle,
 #endif
 
 bool vp_play_subtitle_set_text(subtitle_handle pWidgetHandle,
-			       const char *szText)
+                               const char *szText)
 {
 	if (pWidgetHandle == NULL) {
 		VideoLogError("pWidgetHandle is NULL");
@@ -712,7 +712,7 @@ bool vp_play_subtitle_set_text(subtitle_handle pWidgetHandle,
 }
 
 bool vp_play_subtitle_get_text(subtitle_handle pWidgetHandle,
-			       char **szText)
+                               char **szText)
 {
 	if (pWidgetHandle == NULL) {
 		VideoLogError("pWidgetHandle is NULL");
@@ -727,7 +727,7 @@ bool vp_play_subtitle_get_text(subtitle_handle pWidgetHandle,
 
 #ifdef SUBTITLE_K_FEATURE
 bool vp_play_subtitle_set_alignment(subtitle_handle pWidgetHandle,
-				    vp_subtitle_alignment_t nAlignment)
+                                    vp_subtitle_alignment_t nAlignment)
 {
 	if (pWidgetHandle == NULL) {
 		VideoLogError("pWidgetHandle is NULL");
@@ -748,7 +748,7 @@ bool vp_play_subtitle_set_alignment(subtitle_handle pWidgetHandle,
 }
 
 bool vp_play_subtitle_get_alignment(subtitle_handle pWidgetHandle,
-				    vp_subtitle_alignment_t *nAlignment)
+                                    vp_subtitle_alignment_t *nAlignment)
 {
 	if (pWidgetHandle == NULL) {
 		VideoLogError("pWidgetHandle is NULL");
@@ -763,7 +763,7 @@ bool vp_play_subtitle_get_alignment(subtitle_handle pWidgetHandle,
 }
 
 bool vp_play_subtitle_set_caption_win_color(subtitle_handle pWidgetHandle,
-		bool bShowCaption)
+        bool bShowCaption)
 {
 	if (pWidgetHandle == NULL) {
 		VideoLogError("pWidgetHandle is NULL");
@@ -775,8 +775,8 @@ bool vp_play_subtitle_set_caption_win_color(subtitle_handle pWidgetHandle,
 	if (!bShowCaption) {
 		VideoLogWarning("Hide caption window!");
 		vp_play_util_set_object_color(_EDJ(pSubtitle->pLayout), 0, 0, 0,
-					      0,
-					      VP_SUBTITLE_SET_CAPTION_WINDOW_COLOR_ID);
+		                              0,
+		                              VP_SUBTITLE_SET_CAPTION_WINDOW_COLOR_ID);
 		return TRUE;
 	}
 
@@ -788,8 +788,8 @@ bool vp_play_subtitle_set_caption_win_color(subtitle_handle pWidgetHandle,
 		("pText is NULL or length is zero, need hide caption window!");
 		pSubtitle->bShowCaptionWin = FALSE;
 		vp_play_util_set_object_color(_EDJ(pSubtitle->pLayout), 0, 0, 0,
-					      0,
-					      VP_SUBTITLE_SET_CAPTION_WINDOW_COLOR_ID);
+		                              0,
+		                              VP_SUBTITLE_SET_CAPTION_WINDOW_COLOR_ID);
 		if (pText) {
 			VP_FREE(pText);
 		}
@@ -798,7 +798,7 @@ bool vp_play_subtitle_set_caption_win_color(subtitle_handle pWidgetHandle,
 
 	char *pCaptionWinColorHex = NULL;
 	if (!vp_play_preference_get_subtitle_caption_win_color_hex_key
-			(&pCaptionWinColorHex)) {
+	        (&pCaptionWinColorHex)) {
 		VideoLogWarning
 		("vp_play_preference_get_subtitle_caption_win_color_hex_key failed");
 	}
@@ -811,19 +811,19 @@ bool vp_play_subtitle_set_caption_win_color(subtitle_handle pWidgetHandle,
 		int b = 0;
 		int a = 0;
 		vp_play_util_convert_hex_to_rgba(pCaptionWinColorHex, &r, &g, &b,
-						 &a);
+		                                 &a);
 		vp_play_util_set_object_color(elm_layout_edje_get
-					      (pSubtitle->pLayout), r, g, b, a,
-					      VP_SUBTITLE_SET_CAPTION_WINDOW_COLOR_ID);
+		                              (pSubtitle->pLayout), r, g, b, a,
+		                              VP_SUBTITLE_SET_CAPTION_WINDOW_COLOR_ID);
 	}
 	VP_FREE(pText);
 	return TRUE;
 }
 
 bool vp_play_subtitle_get_geometry(subtitle_handle pWidgetHandle,
-				   bool bLandscape, Evas_Coord *x,
-				   Evas_Coord *y, Evas_Coord *w,
-				   Evas_Coord *h)
+                                   bool bLandscape, Evas_Coord *x,
+                                   Evas_Coord *y, Evas_Coord *w,
+                                   Evas_Coord *h)
 {
 	if (pWidgetHandle == NULL) {
 		VideoLogError("pWidgetHandle is NULL");
@@ -854,7 +854,7 @@ bool vp_play_subtitle_get_geometry(subtitle_handle pWidgetHandle,
 #endif
 
 bool vp_play_subtitle_get_size_formatted(subtitle_handle pWidgetHandle,
-		Evas_Coord *ww, Evas_Coord *hh)
+        Evas_Coord *ww, Evas_Coord *hh)
 {
 	if (pWidgetHandle == NULL) {
 		VideoLogError("pWidgetHandle is NULL");
@@ -868,7 +868,7 @@ bool vp_play_subtitle_get_size_formatted(subtitle_handle pWidgetHandle,
 	}
 
 	evas_object_textblock_size_formatted_get(pSubtitle->pTextBlock, ww,
-			hh);
+	        hh);
 
 	return TRUE;
 }

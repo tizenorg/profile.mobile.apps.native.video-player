@@ -53,17 +53,17 @@ typedef struct _SettingPopup {
 
 static void _vp_setting_destroy_handle(SettingPopup *pSetting);
 static void __vp_setting_genlist_realized(void *data, Evas_Object *obj,
-		void *event_info);
+        void *event_info);
 static void __vp_setting_popup_rotate_cb(void *data, Evas_Object *obj,
-		void *event_info);
+        void *event_info);
 
 
 /* callback functions */
 
 
 static char *__vp_setting_genlist_text_get_cb(const void *pUserData,
-		Evas_Object *pObj,
-		const char *pPart)
+        Evas_Object *pObj,
+        const char *pPart)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -77,8 +77,8 @@ static char *__vp_setting_genlist_text_get_cb(const void *pUserData,
 	} else if (!strcmp(pPart, "elm.text.2")) {
 
 		SettingPopup *pSetting =
-			(SettingPopup *) evas_object_data_get(pObj,
-					VP_SETTING_GENLIST_DATA_KEY);
+		    (SettingPopup *) evas_object_data_get(pObj,
+		            VP_SETTING_GENLIST_DATA_KEY);
 		if (pSetting == NULL) {
 			return NULL;
 		}
@@ -108,7 +108,7 @@ static char *__vp_setting_genlist_text_get_cb(const void *pUserData,
 			if (pSettingInfo->nRepeatMode == VIDEO_PLAY_REPEAT_OFF) {
 				return strdup(VP_PLAY_STRING_REPEAT_OFF);
 			} else if (pSettingInfo->nRepeatMode ==
-					VIDEO_PLAY_REPEAT_ALL_STOP) {
+			           VIDEO_PLAY_REPEAT_ALL_STOP) {
 				return strdup(VP_PLAY_STRING_REPEAT_ALL_OFF);
 			} else if (pSettingInfo->nRepeatMode == VIDEO_PLAY_REPEAT_ONE) {
 				return strdup(VP_PLAY_STRING_REPEAT_ONE);
@@ -140,8 +140,8 @@ static char *__vp_setting_genlist_text_get_cb(const void *pUserData,
 }
 
 static void __vp_setting_genlist_item_selected_cb(void *pUserData,
-		Evas_Object *pObject,
-		void *pEventInfo)
+        Evas_Object *pObject,
+        void *pEventInfo)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -188,8 +188,8 @@ static void __vp_setting_genlist_item_selected_cb(void *pUserData,
 }
 
 static void __vp_setting_popup_key_event_cb(void *pUserData,
-		Evas_Object *pObj,
-		void *pEventInfo)
+        Evas_Object *pObj,
+        void *pEventInfo)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -199,14 +199,14 @@ static void __vp_setting_popup_key_event_cb(void *pUserData,
 
 	if (pSetting->pCloseCb) {
 		pSetting->pCloseCb(VP_SETTING_MODE_NONE, FALSE,
-				   (void *) pSetting->pUserData);
+		                   (void *) pSetting->pUserData);
 	}
 }
 
 static void __vp_setting_popup_mouse_event_cb(void *pUserData,
-		Evas *pEvas,
-		Evas_Object *pObj,
-		void *pEventInfo)
+        Evas *pEvas,
+        Evas_Object *pObj,
+        void *pEventInfo)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -225,7 +225,7 @@ static void __vp_setting_popup_mouse_event_cb(void *pUserData,
 
 		if (pSetting->pCloseCb) {
 			pSetting->pCloseCb(VP_SETTING_MODE_NONE, FALSE,
-					   (void *) pSetting->pUserData);
+			                   (void *) pSetting->pUserData);
 		}
 	}
 }
@@ -240,9 +240,9 @@ static void _vp_setting_destroy_handle(SettingPopup *pSetting)
 		return;
 	}
 	evas_object_smart_callback_del(pSetting->pGenList, "realized",
-				       __vp_setting_genlist_realized);
+	                               __vp_setting_genlist_realized);
 	evas_object_smart_callback_del(pSetting->pParent, "rotation,changed",
-				       __vp_setting_popup_rotate_cb);
+	                               __vp_setting_popup_rotate_cb);
 
 
 	VP_EVAS_DEL(pSetting->pGenList);
@@ -273,7 +273,7 @@ static Evas_Object *_vp_setting_create_genlist(Evas_Object *pParent)
 
 	pObj = elm_genlist_add(pParent);
 	evas_object_size_hint_weight_set(pObj, EVAS_HINT_EXPAND,
-					 EVAS_HINT_EXPAND);
+	                                 EVAS_HINT_EXPAND);
 	evas_object_size_hint_align_set(pObj, EVAS_HINT_FILL, EVAS_HINT_FILL);
 	evas_object_show(pObj);
 	return pObj;
@@ -281,7 +281,7 @@ static Evas_Object *_vp_setting_create_genlist(Evas_Object *pParent)
 
 
 static bool _vp_setting_add_genlist_item(Evas_Object *pObj,
-		void *pUserData)
+        void *pUserData)
 {
 	if (pObj == NULL) {
 		VideoLogError("pObj is NULL");
@@ -319,7 +319,7 @@ static bool _vp_setting_add_genlist_item(Evas_Object *pObj,
 		pSetting->st_Setting_Itc->version = ELM_GENLIST_ITEM_CLASS_VERSION;
 		pSetting->st_Setting_Itc->item_style = "2text.2/popup";
 		pSetting->st_Setting_Itc->func.text_get =
-			(void *) __vp_setting_genlist_text_get_cb;
+		    (void *) __vp_setting_genlist_text_get_cb;
 		pSetting->st_Setting_Itc->func.content_get = NULL;
 		pSetting->st_Setting_Itc->func.state_get = NULL;
 		pSetting->st_Setting_Itc->func.del = NULL;
@@ -327,60 +327,60 @@ static bool _vp_setting_add_genlist_item(Evas_Object *pObj,
 
 	if (bStreaming == FALSE) {
 		elm_genlist_item_append(pObj, pSetting->st_Setting_Itc,
-					(void *) VP_PLAY_STRING_POPUP_PLAY_SPEED,
-					NULL, ELM_GENLIST_ITEM_NONE,
-					__vp_setting_genlist_item_selected_cb,
-					(void *) pSetting);
+		                        (void *) VP_PLAY_STRING_POPUP_PLAY_SPEED,
+		                        NULL, ELM_GENLIST_ITEM_NONE,
+		                        __vp_setting_genlist_item_selected_cb,
+		                        (void *) pSetting);
 		pSetting->nAppendItemCnt++;
 	}
 
 	elm_genlist_item_append(pObj, pSetting->st_Setting_Itc,
-				(void *) VP_PLAY_STRING_POPUP_SOUND_ALIVE,
-				NULL, ELM_GENLIST_ITEM_NONE,
-				__vp_setting_genlist_item_selected_cb,
-				(void *) pSetting);
+	                        (void *) VP_PLAY_STRING_POPUP_SOUND_ALIVE,
+	                        NULL, ELM_GENLIST_ITEM_NONE,
+	                        __vp_setting_genlist_item_selected_cb,
+	                        (void *) pSetting);
 	pSetting->nAppendItemCnt++;
 
 
 	if (bStreaming == FALSE) {
 		elm_genlist_item_append(pObj, pSetting->st_Setting_Itc,
-					(void *) VP_PLAY_STRING_POPUP_AUDIO_TRACK,
-					NULL, ELM_GENLIST_ITEM_NONE,
-					__vp_setting_genlist_item_selected_cb,
-					(void *) pSetting);
+		                        (void *) VP_PLAY_STRING_POPUP_AUDIO_TRACK,
+		                        NULL, ELM_GENLIST_ITEM_NONE,
+		                        __vp_setting_genlist_item_selected_cb,
+		                        (void *) pSetting);
 		pSetting->nAppendItemCnt++;
 		elm_genlist_item_append(pObj, pSetting->st_Setting_Itc,
-					(void *)
-					VP_PLAY_STRING_POPUP_REPEAT_SETTING, NULL,
-					ELM_GENLIST_ITEM_NONE,
-					__vp_setting_genlist_item_selected_cb,
-					(void *) pSetting);
+		                        (void *)
+		                        VP_PLAY_STRING_POPUP_REPEAT_SETTING, NULL,
+		                        ELM_GENLIST_ITEM_NONE,
+		                        __vp_setting_genlist_item_selected_cb,
+		                        (void *) pSetting);
 		pSetting->nAppendItemCnt++;
 
 		if (bDrm == FALSE && bExternalVideoMode == FALSE) {
 			elm_genlist_item_append(pObj, pSetting->st_Setting_Itc,
-						(void *) VP_PLAY_STRING_POPUP_CAPTURE,
-						NULL, ELM_GENLIST_ITEM_NONE,
-						__vp_setting_genlist_item_selected_cb,
-						(void *) pSetting);
+			                        (void *) VP_PLAY_STRING_POPUP_CAPTURE,
+			                        NULL, ELM_GENLIST_ITEM_NONE,
+			                        __vp_setting_genlist_item_selected_cb,
+			                        (void *) pSetting);
 			pSetting->nAppendItemCnt++;
 		}
 	}
 
 	if (bStreaming == FALSE && bDrm == FALSE) {
 		elm_genlist_item_append(pObj, pSetting->st_Setting_Itc,
-					(void *) VP_PLAY_STRING_POPUP_TAG_BUDDY,
-					NULL, ELM_GENLIST_ITEM_NONE,
-					__vp_setting_genlist_item_selected_cb,
-					(void *) pSetting);
+		                        (void *) VP_PLAY_STRING_POPUP_TAG_BUDDY,
+		                        NULL, ELM_GENLIST_ITEM_NONE,
+		                        __vp_setting_genlist_item_selected_cb,
+		                        (void *) pSetting);
 		pSetting->nAppendItemCnt++;
 		if (bShowEditWeather == TRUE) {
 			elm_genlist_item_append(pObj, pSetting->st_Setting_Itc,
-						(void *)
-						VP_PLAY_STRING_POPUP_EDIT_WEATHER_TAG,
-						NULL, ELM_GENLIST_ITEM_NONE,
-						__vp_setting_genlist_item_selected_cb,
-						(void *) pSetting);
+			                        (void *)
+			                        VP_PLAY_STRING_POPUP_EDIT_WEATHER_TAG,
+			                        NULL, ELM_GENLIST_ITEM_NONE,
+			                        __vp_setting_genlist_item_selected_cb,
+			                        (void *) pSetting);
 			pSetting->nAppendItemCnt++;
 		}
 	}
@@ -389,13 +389,13 @@ static bool _vp_setting_add_genlist_item(Evas_Object *pObj,
 }
 
 static void __vp_setting_genlist_realized(void *data, Evas_Object *obj,
-		void *event_info)
+        void *event_info)
 {
 	VP_GENLIST_HIDE_BOTTOMLINE(data, obj, event_info);
 }
 
 static void __vp_setting_popup_rotate_cb(void *data, Evas_Object *obj,
-		void *event_info)
+        void *event_info)
 {
 	SettingPopup *pSetting = (SettingPopup *) data;
 	if (!pSetting) {
@@ -406,15 +406,15 @@ static void __vp_setting_popup_rotate_cb(void *data, Evas_Object *obj,
 		return;
 	}
 	vp_popup_set_popup_min_size(pSetting->pParent, pSetting->pBox,
-				    pSetting->nAppendItemCnt,
-				    VIDEO_POPUP_2_TEXT);
+	                            pSetting->nAppendItemCnt,
+	                            VIDEO_POPUP_2_TEXT);
 
 }
 
 /* external functions */
 setting_popup_handle vp_setting_create(Evas_Object *pParent,
-				       SettingInfo *pSettingInfo,
-				       PopupCloseCbFunc pCloseCb)
+                                       SettingInfo *pSettingInfo,
+                                       PopupCloseCbFunc pCloseCb)
 {
 	if (pParent == NULL) {
 		VideoLogError("pParent is NULL");
@@ -445,30 +445,30 @@ setting_popup_handle vp_setting_create(Evas_Object *pParent,
 	pSetting->pSettingInfo->fSpeed = pSettingInfo->fSpeed;
 	pSetting->pSettingInfo->nSoundAlive = pSettingInfo->nSoundAlive;
 	VP_STRDUP(pSetting->pSettingInfo->szAudioTrack,
-		  pSettingInfo->szAudioTrack);
+	          pSettingInfo->szAudioTrack);
 	pSetting->pSettingInfo->nRepeatMode = pSettingInfo->nRepeatMode;
 	pSetting->pSettingInfo->bCapture = pSettingInfo->bCapture;
 	pSetting->pSettingInfo->bTagBuddy = pSettingInfo->bTagBuddy;
 	pSetting->pSettingInfo->bEditWeatherTag =
-		pSettingInfo->bEditWeatherTag;
+	    pSettingInfo->bEditWeatherTag;
 	pSetting->pSettingInfo->bStreaming = pSettingInfo->bStreaming;
 	pSetting->pSettingInfo->bRepeat = pSettingInfo->bRepeat;
 	pSetting->pSettingInfo->bSelectSubtitle =
-		pSettingInfo->bSelectSubtitle;
+	    pSettingInfo->bSelectSubtitle;
 	pSetting->pSettingInfo->bDrm = pSettingInfo->bDrm;
 	pSetting->pSettingInfo->bExternalMode = pSettingInfo->bExternalMode;
 	pSetting->pSettingInfo->bShowEditWeather =
-		pSettingInfo->bShowEditWeather;
+	    pSettingInfo->bShowEditWeather;
 
 	pSetting->pParent = pParent;
 	pSetting->pCloseCb = pCloseCb;
 
 	pSetting->pPopup =
-		vp_popup_create(pParent, POPUP_STYLE_MENU_LIST_NO_CANCEL_BTN,
-				VP_PLAY_STRING_SETTINGS, NULL, 0.0, NULL,
-				__vp_setting_popup_key_event_cb,
-				__vp_setting_popup_mouse_event_cb,
-				(void *) pSetting);
+	    vp_popup_create(pParent, POPUP_STYLE_MENU_LIST_NO_CANCEL_BTN,
+	                    VP_PLAY_STRING_SETTINGS, NULL, 0.0, NULL,
+	                    __vp_setting_popup_key_event_cb,
+	                    __vp_setting_popup_mouse_event_cb,
+	                    (void *) pSetting);
 	if (pSetting->pPopup == NULL) {
 		VideoLogError("vp_popup_create fail");
 		_vp_setting_destroy_handle(pSetting);
@@ -482,25 +482,25 @@ setting_popup_handle vp_setting_create(Evas_Object *pParent,
 		return NULL;
 	}
 	evas_object_data_set(pSetting->pGenList, VP_SETTING_GENLIST_DATA_KEY,
-			     (void *) pSetting);
+	                     (void *) pSetting);
 	vp_language_list_create();
 
 	if (!_vp_setting_add_genlist_item
-			(pSetting->pGenList, (void *) pSetting)) {
+	        (pSetting->pGenList, (void *) pSetting)) {
 		VideoLogError("_vp_setting_add_genlist_item fail");
 		_vp_setting_destroy_handle(pSetting);
 		return NULL;
 	}
 	evas_object_smart_callback_add(pSetting->pGenList, "realized",
-				       __vp_setting_genlist_realized, NULL);
+	                               __vp_setting_genlist_realized, NULL);
 	evas_object_smart_callback_add(pSetting->pParent, "rotation,changed",
-				       __vp_setting_popup_rotate_cb,
-				       pSetting);
+	                               __vp_setting_popup_rotate_cb,
+	                               pSetting);
 
 	pSetting->pBox = elm_box_add(pSetting->pPopup);
 	vp_popup_set_popup_min_size(pSetting->pParent, pSetting->pBox,
-				    pSetting->nAppendItemCnt,
-				    VIDEO_POPUP_2_TEXT);
+	                            pSetting->nAppendItemCnt,
+	                            VIDEO_POPUP_2_TEXT);
 
 	elm_box_pack_end(pSetting->pBox, pSetting->pGenList);
 
@@ -552,7 +552,7 @@ bool vp_setting_unrealize(setting_popup_handle pSettingHandle)
 }
 
 bool vp_setting_set_user_data(setting_popup_handle pSettingHandle,
-			      void *pUserData)
+                              void *pUserData)
 {
 	if (pSettingHandle == NULL) {
 		VideoLogError("pSettingHandle is NULL");

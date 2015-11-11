@@ -130,29 +130,29 @@ static void *_vp_thumb_gen_thread_loop(void *pUserData)
 			int nSaveWidth = pThumbGen->nDestWidth;
 			int nSaveHeight = pThumbGen->nDestHeight;
 			int nFileNameSize =
-				strlen(pThumbGen->szSaveDir) +
-				THUMB_GEN_FILE_NAME_PREFIX_LEN;
+			    strlen(pThumbGen->szSaveDir) +
+			    THUMB_GEN_FILE_NAME_PREFIX_LEN;
 			bool bResize = pThumbGen->bResize;
 
 			szURL = calloc(1, sizeof(char) * nFileNameSize);
 
 			if (szURL != NULL) {
 				snprintf(szURL, nFileNameSize,
-					THUMB_GEN_FILE_NAME_PREFIX,
-					pThumbGen->szSaveDir,
-					pThumbGen->nGenIdx + pThumbGen->nStartIdx);
+				         THUMB_GEN_FILE_NAME_PREFIX,
+				         pThumbGen->szSaveDir,
+				         pThumbGen->nGenIdx + pThumbGen->nStartIdx);
 			}
 
 			nPosition =
-				pThumbGen->nStartPosition +
-				(pThumbGen->nGenIdx * pThumbGen->nInterval);
+			    pThumbGen->nStartPosition +
+			    (pThumbGen->nGenIdx * pThumbGen->nInterval);
 
 			nRet =
-				metadata_extractor_get_frame_at_time(pThumbGen->meta_h,
-						nPosition,
-						pThumbGen->bAcuurate,
-						&pFrame,
-						&nFrameSize);
+			    metadata_extractor_get_frame_at_time(pThumbGen->meta_h,
+			            nPosition,
+			            pThumbGen->bAcuurate,
+			            &pFrame,
+			            &nFrameSize);
 			if (nRet != METADATA_EXTRACTOR_ERROR_NONE) {
 				vp_dbgE
 				("metadata_extractor_get_frame_at_time is fail : [0x%x]",
@@ -171,9 +171,9 @@ static void *_vp_thumb_gen_thread_loop(void *pUserData)
 					unsigned int nResizBufSize = 0;
 
 					nRet = image_util_calculate_buffer_size(nSaveWidth,
-										nSaveHeight,
-										IMAGE_UTIL_COLORSPACE_RGB888,
-										&nResizBufSize);
+					                                        nSaveHeight,
+					                                        IMAGE_UTIL_COLORSPACE_RGB888,
+					                                        &nResizBufSize);
 					if (nRet != IMAGE_UTIL_ERROR_NONE) {
 						vp_dbgE
 						("image_util_calculate_buffer_size is fail : [0x%x]",
@@ -183,18 +183,18 @@ static void *_vp_thumb_gen_thread_loop(void *pUserData)
 					vp_dbgW("ResizeBuf Size : %d", nResizBufSize);
 
 					pSaveBuf =
-						calloc(1, sizeof(unsigned char) * nResizBufSize);
+					    calloc(1, sizeof(unsigned char) * nResizBufSize);
 					if (pSaveBuf == NULL) {
 						vp_dbgE("pSaveBuf alloc fail");
 						bSuccess = FALSE;
 					} else {
 						nRet = vp_util_image_resize(pSaveBuf,
-									    &nSaveWidth,
-									    &nSaveHeight,
-									    (unsigned char *)
-									    pFrame, nSrcWidth,
-									    nSrcHeight,
-									    IMAGE_UTIL_COLORSPACE_RGB888);
+						                            &nSaveWidth,
+						                            &nSaveHeight,
+						                            (unsigned char *)
+						                            pFrame, nSrcWidth,
+						                            nSrcHeight,
+						                            IMAGE_UTIL_COLORSPACE_RGB888);
 						if (nRet != IMAGE_UTIL_ERROR_NONE) {
 							vp_dbgE
 							("vp_util_image_resize is fail : [0x%x]",
@@ -222,9 +222,9 @@ static void *_vp_thumb_gen_thread_loop(void *pUserData)
 					int nSrcW = nSaveWidth;
 					int nSrcH = nSaveHeight;
 					nRet = image_util_calculate_buffer_size(nSaveWidth,
-										nSaveHeight,
-										IMAGE_UTIL_COLORSPACE_RGB888,
-										&nResizBufSize);
+					                                        nSaveHeight,
+					                                        IMAGE_UTIL_COLORSPACE_RGB888,
+					                                        &nResizBufSize);
 					if (nRet != IMAGE_UTIL_ERROR_NONE) {
 						vp_dbgE
 						("image_util_calculate_buffer_size is fail : [0x%x]",
@@ -233,18 +233,18 @@ static void *_vp_thumb_gen_thread_loop(void *pUserData)
 					}
 
 					pRotBuf =
-						calloc(1, sizeof(unsigned char) * nResizBufSize);
+					    calloc(1, sizeof(unsigned char) * nResizBufSize);
 					if (pRotBuf == NULL) {
 						vp_dbgE("pRotBuf alloc fail");
 						bSuccess = FALSE;
 					} else {
 						vp_dbgW("ResizeBuf Size : %d", nResizBufSize);
 						nRet = vp_util_image_rotate(pRotBuf,
-									    &nSaveWidth,
-									    &nSaveHeight,
-									    nRot, pSaveBuf,
-									    nSrcW, nSrcH,
-									    IMAGE_UTIL_COLORSPACE_RGB888);
+						                            &nSaveWidth,
+						                            &nSaveHeight,
+						                            nRot, pSaveBuf,
+						                            nSrcW, nSrcH,
+						                            IMAGE_UTIL_COLORSPACE_RGB888);
 						if (nRet != IMAGE_UTIL_ERROR_NONE) {
 							vp_dbgE
 							("vp_util_image_rotate is fail : [0x%x]",
@@ -257,27 +257,27 @@ static void *_vp_thumb_gen_thread_loop(void *pUserData)
 
 			if (bSuccess) {
 				vp_sdbg("w:%d, h:%d, URL : %s", nSaveWidth, nSaveHeight,
-					szURL);
+				        szURL);
 				if (pRotBuf) {
 					nRet = image_util_encode_jpeg(pRotBuf,
-								      nSaveWidth,
-								      nSaveHeight,
-								      IMAGE_UTIL_COLORSPACE_RGB888,
-								      100, szURL);
+					                              nSaveWidth,
+					                              nSaveHeight,
+					                              IMAGE_UTIL_COLORSPACE_RGB888,
+					                              100, szURL);
 					if (nRet != IMAGE_UTIL_ERROR_NONE) {
 						vp_dbgE("image_util_encode_jpeg is fail : [0x%x]",
-							nRet);
+						        nRet);
 						bSuccess = FALSE;
 					}
 				} else {
 					nRet = image_util_encode_jpeg(pSaveBuf,
-								      nSaveWidth,
-								      nSaveHeight,
-								      IMAGE_UTIL_COLORSPACE_RGB888,
-								      100, szURL);
+					                              nSaveWidth,
+					                              nSaveHeight,
+					                              IMAGE_UTIL_COLORSPACE_RGB888,
+					                              100, szURL);
 					if (nRet != IMAGE_UTIL_ERROR_NONE) {
 						vp_dbgE("image_util_encode_jpeg is fail : [0x%x]",
-							nRet);
+						        nRet);
 						bSuccess = FALSE;
 					}
 				}
@@ -293,8 +293,8 @@ static void *_vp_thumb_gen_thread_loop(void *pUserData)
 			if (pThumbGen->progress_cb) {
 				vp_dbgW(" ==> %p, %p", pThumbGen, pThumbGen->progress_cb);
 				pThumbGen->progress_cb(bSuccess, pThumbGen->nGenIdx,
-						       szURL, nPosition,
-						       pThumbGen->pUserData);
+				                       szURL, nPosition,
+				                       pThumbGen->pUserData);
 			}
 
 			pThumbGen->nGenIdx++;
@@ -398,8 +398,8 @@ vp_thumb_gen_h vp_thumb_gen_create(const char *szMediaURL)
 	char *szVal = NULL;
 
 	nRet =
-		metadata_extractor_get_metadata(pThumbGen->meta_h,
-						METADATA_DURATION, &szVal);
+	    metadata_extractor_get_metadata(pThumbGen->meta_h,
+	                                    METADATA_DURATION, &szVal);
 	if (nRet != METADATA_EXTRACTOR_ERROR_NONE) {
 		_vp_thumb_gen_destroy_handle(pThumbGen);
 		vp_dbgE("metadata_extractor_get_metadata is fail : [0x%x]", nRet);
@@ -409,8 +409,8 @@ vp_thumb_gen_h vp_thumb_gen_create(const char *szMediaURL)
 	VP_FREE(szVal);
 
 	nRet =
-		metadata_extractor_get_metadata(pThumbGen->meta_h,
-						METADATA_ROTATE, &szVal);
+	    metadata_extractor_get_metadata(pThumbGen->meta_h,
+	                                    METADATA_ROTATE, &szVal);
 	if (nRet != METADATA_EXTRACTOR_ERROR_NONE) {
 		_vp_thumb_gen_destroy_handle(pThumbGen);
 		vp_dbgE("metadata_extractor_get_metadata is fail : [0x%x]", nRet);
@@ -426,8 +426,8 @@ vp_thumb_gen_h vp_thumb_gen_create(const char *szMediaURL)
 	}
 
 	nRet =
-		metadata_extractor_get_metadata(pThumbGen->meta_h,
-						METADATA_VIDEO_WIDTH, &szVal);
+	    metadata_extractor_get_metadata(pThumbGen->meta_h,
+	                                    METADATA_VIDEO_WIDTH, &szVal);
 	if (nRet != METADATA_EXTRACTOR_ERROR_NONE) {
 		_vp_thumb_gen_destroy_handle(pThumbGen);
 		vp_dbgE("metadata_extractor_get_metadata is fail : [0x%x]", nRet);
@@ -437,8 +437,8 @@ vp_thumb_gen_h vp_thumb_gen_create(const char *szMediaURL)
 	VP_FREE(szVal);
 
 	nRet =
-		metadata_extractor_get_metadata(pThumbGen->meta_h,
-						METADATA_VIDEO_HEIGHT, &szVal);
+	    metadata_extractor_get_metadata(pThumbGen->meta_h,
+	                                    METADATA_VIDEO_HEIGHT, &szVal);
 	if (nRet != METADATA_EXTRACTOR_ERROR_NONE) {
 		_vp_thumb_gen_destroy_handle(pThumbGen);
 		vp_dbgE("metadata_extractor_get_metadata is fail : [0x%x]", nRet);
@@ -484,11 +484,11 @@ bool vp_thumb_gen_realize(vp_thumb_gen_h hThumbGen)
 		int nResultW = 0;
 		int nResultH = 0;
 		if (!vp_feature_util_calc_aspect_size(pThumbGen->nSrcWidth,
-						      pThumbGen->nSrcHeight,
-						      pThumbGen->nDestWidth,
-						      pThumbGen->nDestHeight,
-						      0, 0,
-						      &nResultW, &nResultH)) {
+		                                      pThumbGen->nSrcHeight,
+		                                      pThumbGen->nDestWidth,
+		                                      pThumbGen->nDestHeight,
+		                                      0, 0,
+		                                      &nResultW, &nResultH)) {
 			vp_dbgE("vp_feature_util_calc_aspect_size is fail");
 
 		} else {
@@ -505,8 +505,8 @@ bool vp_thumb_gen_realize(vp_thumb_gen_h hThumbGen)
 	}
 #if 1
 	if (pthread_create
-			(&g_thread_id, NULL, _vp_thumb_gen_thread_loop,
-			 (void *) pThumbGen) != 0) {
+	        (&g_thread_id, NULL, _vp_thumb_gen_thread_loop,
+	         (void *) pThumbGen) != 0) {
 		vp_dbgE("pthread_create fail");
 		pThumbGen->bIsRealize = FALSE;
 		return FALSE;
@@ -518,11 +518,11 @@ bool vp_thumb_gen_realize(vp_thumb_gen_h hThumbGen)
 	status = pthread_attr_init(&thread_attr);
 	if (0 == status) {
 		status = pthread_attr_setdetachstate(&thread_attr,
-						     PTHREAD_CREATE_DETACHED);
+		                                     PTHREAD_CREATE_DETACHED);
 		if (0 == status) {
 			if (pthread_create
-					(&g_thread_id, &thread_attr, _vp_thumb_gen_thread_loop,
-					 (void *) pThumbGen) != 0) {
+			        (&g_thread_id, &thread_attr, _vp_thumb_gen_thread_loop,
+			         (void *) pThumbGen) != 0) {
 				vp_dbgE("pthread_create fail");
 				pThumbGen->bIsRealize = FALSE;
 				return FALSE;
@@ -589,7 +589,7 @@ bool vp_thumb_gen_is_realize(vp_thumb_gen_h hThumbGen, bool *bIsRealize)
 }
 
 bool vp_thumb_gen_set_dest_size(vp_thumb_gen_h hThumbGen, int nWidth,
-				int nHeight)
+                                int nHeight)
 {
 	if (hThumbGen == NULL) {
 		vp_dbgE("hThumbGen is NULL");
@@ -604,7 +604,7 @@ bool vp_thumb_gen_set_dest_size(vp_thumb_gen_h hThumbGen, int nWidth,
 	pThumbGen->nDestHeight = nHeight;
 
 	if (nWidth != pThumbGen->nSrcWidth
-			|| nHeight != pThumbGen->nSrcHeight) {
+	        || nHeight != pThumbGen->nSrcHeight) {
 		pThumbGen->bResize = TRUE;
 	}
 
@@ -614,7 +614,7 @@ bool vp_thumb_gen_set_dest_size(vp_thumb_gen_h hThumbGen, int nWidth,
 }
 
 bool vp_thumb_gen_set_save_directory(vp_thumb_gen_h hThumbGen,
-				     char *szSaveDir)
+                                     char *szSaveDir)
 {
 	if (hThumbGen == NULL) {
 		vp_dbgE("hThumbGen is NULL");
@@ -639,7 +639,7 @@ bool vp_thumb_gen_set_save_directory(vp_thumb_gen_h hThumbGen,
 }
 
 bool vp_thumb_gen_set_start_position(vp_thumb_gen_h hThumbGen,
-				     int nPosition)
+                                     int nPosition)
 {
 	if (hThumbGen == NULL) {
 		vp_dbgE("hThumbGen is NULL");
@@ -658,7 +658,7 @@ bool vp_thumb_gen_set_start_position(vp_thumb_gen_h hThumbGen,
 }
 
 bool vp_thumb_gen_set_end_position(vp_thumb_gen_h hThumbGen,
-				   int nPosition)
+                                   int nPosition)
 {
 	if (hThumbGen == NULL) {
 		vp_dbgE("hThumbGen is NULL");
@@ -716,7 +716,7 @@ bool vp_thumb_gen_set_count(vp_thumb_gen_h hThumbGen, int nCount)
 		pThumbGen->nEndPosition = pThumbGen->nDuration;
 	}
 	pThumbGen->nInterval =
-		(pThumbGen->nEndPosition - pThumbGen->nStartPosition) / nCount;
+	    (pThumbGen->nEndPosition - pThumbGen->nStartPosition) / nCount;
 
 	_vp_thumb_gen_unlock();
 
@@ -835,7 +835,7 @@ bool vp_thumb_gen_set_user_data(vp_thumb_gen_h hThumbGen, void *pUserData)
 }
 
 bool vp_thumb_gen_set_progress_cb(vp_thumb_gen_h hThumbGen,
-				  vp_thumb_gen_progress_cb progress_cb)
+                                  vp_thumb_gen_progress_cb progress_cb)
 {
 	if (hThumbGen == NULL) {
 		vp_dbgE("hThumbGen is NULL");
@@ -854,7 +854,7 @@ bool vp_thumb_gen_set_progress_cb(vp_thumb_gen_h hThumbGen,
 }
 
 bool vp_thumb_gen_set_complete_cb(vp_thumb_gen_h hThumbGen,
-				  vp_thumb_gen_complete_cb complete_cb)
+                                  vp_thumb_gen_complete_cb complete_cb)
 {
 	if (hThumbGen == NULL) {
 		vp_dbgE("hThumbGen is NULL");
@@ -873,7 +873,7 @@ bool vp_thumb_gen_set_complete_cb(vp_thumb_gen_h hThumbGen,
 }
 
 bool vp_thumb_gen_set_cancle_cb(vp_thumb_gen_h hThumbGen,
-				vp_thumb_gen_cancle_cb cancle_cb)
+                                vp_thumb_gen_cancle_cb cancle_cb)
 {
 	if (hThumbGen == NULL) {
 		vp_dbgE("hThumbGen is NULL");

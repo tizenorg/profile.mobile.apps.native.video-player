@@ -54,16 +54,16 @@ typedef struct _SubtitleSyncPopup {
 
 
 static void _vp_subtitle_sync_popup_destroy_handle(SubtitleSyncPopup *
-		pSubtitleSyncPopup);
+        pSubtitleSyncPopup);
 static void _vp_subtitle_sync_update_text(SubtitleSyncPopup *
-		pSubtitleSyncPopup);
+        pSubtitleSyncPopup);
 
 
 /* callback functions */
 
 static void __vp_subtitle_sync_popup_ok_btn_cb(void *pUserData,
-		Evas_Object *pObj,
-		void *pEventInfo)
+        Evas_Object *pObj,
+        void *pEventInfo)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -71,18 +71,18 @@ static void __vp_subtitle_sync_popup_ok_btn_cb(void *pUserData,
 	}
 
 	SubtitleSyncPopup *pSubtitleSyncPopup =
-		(SubtitleSyncPopup *) pUserData;
+	    (SubtitleSyncPopup *) pUserData;
 
 	if (pSubtitleSyncPopup->pDoneCb) {
 		pSubtitleSyncPopup->pDoneCb(pSubtitleSyncPopup->fSyncVal, TRUE,
-					    (void *) pSubtitleSyncPopup->
-					    pUserData);
+		                            (void *) pSubtitleSyncPopup->
+		                            pUserData);
 	}
 }
 
 static void __vp_subtitle_sync_popup_cancel_btn_cb(void *pUserData,
-		Evas_Object *pObj,
-		void *pEventInfo)
+        Evas_Object *pObj,
+        void *pEventInfo)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -90,19 +90,19 @@ static void __vp_subtitle_sync_popup_cancel_btn_cb(void *pUserData,
 	}
 
 	SubtitleSyncPopup *pSubtitleSyncPopup =
-		(SubtitleSyncPopup *) pUserData;
+	    (SubtitleSyncPopup *) pUserData;
 
 	if (pSubtitleSyncPopup->pDoneCb) {
 		pSubtitleSyncPopup->pDoneCb(pSubtitleSyncPopup->fSyncVal, FALSE,
-					    (void *) pSubtitleSyncPopup->
-					    pUserData);
+		                            (void *) pSubtitleSyncPopup->
+		                            pUserData);
 	}
 }
 
 
 static void __vp_subtitle_sync_popup_key_event_cb(void *pUserData,
-		Evas_Object *pObj,
-		void *pEventInfo)
+        Evas_Object *pObj,
+        void *pEventInfo)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -110,20 +110,20 @@ static void __vp_subtitle_sync_popup_key_event_cb(void *pUserData,
 	}
 
 	SubtitleSyncPopup *pSubtitleSyncPopup =
-		(SubtitleSyncPopup *) pUserData;
+	    (SubtitleSyncPopup *) pUserData;
 
 	if (pSubtitleSyncPopup->pDoneCb) {
 		pSubtitleSyncPopup->pDoneCb(pSubtitleSyncPopup->fSyncVal, FALSE,
-					    (void *) pSubtitleSyncPopup->
-					    pUserData);
+		                            (void *) pSubtitleSyncPopup->
+		                            pUserData);
 	}
 
 }
 
 static void __vp_subtitle_sync_popup_mouse_event_cb(void *pUserData,
-		Evas *pEvas,
-		Evas_Object *pObj,
-		void *pEventInfo)
+        Evas *pEvas,
+        Evas_Object *pObj,
+        void *pEventInfo)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -139,20 +139,20 @@ static void __vp_subtitle_sync_popup_mouse_event_cb(void *pUserData,
 
 	if (ev->button == 3) {
 		SubtitleSyncPopup *pSubtitleSyncPopup =
-			(SubtitleSyncPopup *) pUserData;
+		    (SubtitleSyncPopup *) pUserData;
 		if (pSubtitleSyncPopup->pDoneCb) {
 			pSubtitleSyncPopup->pDoneCb(pSubtitleSyncPopup->fSyncVal,
-						    FALSE,
-						    (void *) pSubtitleSyncPopup->
-						    pUserData);
+			                            FALSE,
+			                            (void *) pSubtitleSyncPopup->
+			                            pUserData);
 		}
 
 	}
 }
 
 static void __vp_subtitle_sync_popup_slider_change_cb(void *pUserData,
-		Evas_Object *pObj,
-		void *pEventInfo)
+        Evas_Object *pObj,
+        void *pEventInfo)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -160,16 +160,16 @@ static void __vp_subtitle_sync_popup_slider_change_cb(void *pUserData,
 	}
 
 	SubtitleSyncPopup *pSubtitleSyncPopup =
-		(SubtitleSyncPopup *) pUserData;
+	    (SubtitleSyncPopup *) pUserData;
 
 	float fValue =
-		(float) elm_slider_value_get(pSubtitleSyncPopup->pSlider);
+	    (float) elm_slider_value_get(pSubtitleSyncPopup->pSlider);
 
 	if (fValue != pSubtitleSyncPopup->fSyncVal) {
 		if (pSubtitleSyncPopup->pUpdateCb) {
 			pSubtitleSyncPopup->pUpdateCb(pSubtitleSyncPopup->fSyncVal,
-						      (void *) pSubtitleSyncPopup->
-						      pUserData);
+			                              (void *) pSubtitleSyncPopup->
+			                              pUserData);
 			pSubtitleSyncPopup->fSyncVal = fValue;
 			_vp_subtitle_sync_update_text(pSubtitleSyncPopup);
 		}
@@ -177,8 +177,8 @@ static void __vp_subtitle_sync_popup_slider_change_cb(void *pUserData,
 }
 
 static void __vp_subtitle_sync_btn_clicked_cb(void *pUserData,
-		Evas_Object *pObj,
-		void *pEvent)
+        Evas_Object *pObj,
+        void *pEvent)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -186,10 +186,10 @@ static void __vp_subtitle_sync_btn_clicked_cb(void *pUserData,
 	}
 
 	SubtitleSyncPopup *pSubtitleSyncPopup =
-		(SubtitleSyncPopup *) pUserData;
+	    (SubtitleSyncPopup *) pUserData;
 
 	float fValue =
-		(float) elm_slider_value_get(pSubtitleSyncPopup->pSlider);
+	    (float) elm_slider_value_get(pSubtitleSyncPopup->pSlider);
 	VideoLogWarning("== %f ==", fValue);
 
 	if (pObj == pSubtitleSyncPopup->pAddButton) {
@@ -197,13 +197,13 @@ static void __vp_subtitle_sync_btn_clicked_cb(void *pUserData,
 		if (fValue <= VP_SUBTITLE_SYNC_MAX_VALUE) {
 			VideoLogWarning("== %f ==", fValue);
 			elm_slider_value_set(pSubtitleSyncPopup->pSlider,
-					     (double) fValue);
+			                     (double) fValue);
 			if (pSubtitleSyncPopup->pUpdateCb) {
 				pSubtitleSyncPopup->pUpdateCb(pSubtitleSyncPopup->
-							      fSyncVal,
-							      (void *)
-							      pSubtitleSyncPopup->
-							      pUserData);
+				                              fSyncVal,
+				                              (void *)
+				                              pSubtitleSyncPopup->
+				                              pUserData);
 				pSubtitleSyncPopup->fSyncVal = fValue;
 				_vp_subtitle_sync_update_text(pSubtitleSyncPopup);
 			}
@@ -213,13 +213,13 @@ static void __vp_subtitle_sync_btn_clicked_cb(void *pUserData,
 		if (fValue >= VP_SUBTITLE_SYNC_MIN_VALUE) {
 			VideoLogWarning("== %f ==", fValue);
 			elm_slider_value_set(pSubtitleSyncPopup->pSlider,
-					     (double) fValue);
+			                     (double) fValue);
 			if (pSubtitleSyncPopup->pUpdateCb) {
 				pSubtitleSyncPopup->pUpdateCb(pSubtitleSyncPopup->
-							      fSyncVal,
-							      (void *)
-							      pSubtitleSyncPopup->
-							      pUserData);
+				                              fSyncVal,
+				                              (void *)
+				                              pSubtitleSyncPopup->
+				                              pUserData);
 				pSubtitleSyncPopup->fSyncVal = fValue;
 				_vp_subtitle_sync_update_text(pSubtitleSyncPopup);
 			}
@@ -231,7 +231,7 @@ static void __vp_subtitle_sync_btn_clicked_cb(void *pUserData,
 
 /* internal functions */
 static void _vp_subtitle_sync_popup_destroy_handle(SubtitleSyncPopup *
-		pSubtitleSyncPopup)
+        pSubtitleSyncPopup)
 {
 	if (pSubtitleSyncPopup == NULL) {
 		VideoLogError("pSubtitleSyncPopup is NULL");
@@ -252,7 +252,7 @@ static void _vp_subtitle_sync_popup_destroy_handle(SubtitleSyncPopup *
 }
 
 static void _vp_subtitle_sync_update_text(SubtitleSyncPopup *
-		pSubtitleSyncPopup)
+        pSubtitleSyncPopup)
 {
 	if (pSubtitleSyncPopup == NULL) {
 		VideoLogError("pSubtitleSyncPopup is NULL");
@@ -263,15 +263,15 @@ static void _vp_subtitle_sync_update_text(SubtitleSyncPopup *
 
 	snprintf(szValue, 6, "%0.1f", (double) pSubtitleSyncPopup->fSyncVal);
 	elm_object_part_text_set(pSubtitleSyncPopup->pLayout,
-				 "elm.text.title", szValue);
+	                         "elm.text.title", szValue);
 
 }
 
 
 static Evas_Object *_vp_subtitle_sync_popup_create_ok_button(Evas_Object *
-		pParent,
-		void
-		*pUserData)
+        pParent,
+        void
+        *pUserData)
 {
 	if (pParent == NULL) {
 		VideoLogError("pParent is NULL");
@@ -282,11 +282,11 @@ static Evas_Object *_vp_subtitle_sync_popup_create_ok_button(Evas_Object *
 	pObj = elm_button_add(pParent);
 	elm_object_style_set(pObj, "popup_button/default");
 	elm_object_domain_translatable_text_set(pObj, VP_SYS_STR_PREFIX,
-						VP_PLAY_STRING_COM_OK_IDS);
+	                                        VP_PLAY_STRING_COM_OK_IDS);
 	elm_object_part_content_set(pParent, "button2", pObj);
 	evas_object_smart_callback_add(pObj, "clicked",
-				       __vp_subtitle_sync_popup_ok_btn_cb,
-				       pUserData);
+	                               __vp_subtitle_sync_popup_ok_btn_cb,
+	                               pUserData);
 	evas_object_show(pObj);
 
 	return pObj;
@@ -295,7 +295,7 @@ static Evas_Object *_vp_subtitle_sync_popup_create_ok_button(Evas_Object *
 
 static Evas_Object
 *_vp_subtitle_sync_popup_create_cancel_button(Evas_Object *pParent,
-		void *pUserData)
+        void *pUserData)
 {
 	if (pParent == NULL) {
 		VideoLogError("pParent is NULL");
@@ -306,19 +306,19 @@ static Evas_Object
 	pObj = elm_button_add(pParent);
 	elm_object_style_set(pObj, "popup_button/default");
 	elm_object_domain_translatable_text_set(pObj, VP_SYS_STR_PREFIX,
-						VP_PLAY_STRING_COM_CANCEL_IDS);
+	                                        VP_PLAY_STRING_COM_CANCEL_IDS);
 	elm_object_part_content_set(pParent, "button1", pObj);
 	evas_object_smart_callback_add(pObj, "clicked",
-				       __vp_subtitle_sync_popup_cancel_btn_cb,
-				       pUserData);
+	                               __vp_subtitle_sync_popup_cancel_btn_cb,
+	                               pUserData);
 	evas_object_show(pObj);
 
 	return pObj;
 }
 
 static Evas_Object *_vp_subtitle_sync_popup_create_slider(Evas_Object *
-		pParent,
-		void *pUserData)
+        pParent,
+        void *pUserData)
 {
 	if (pParent == NULL) {
 		VideoLogError("pParent is NULL");
@@ -329,20 +329,20 @@ static Evas_Object *_vp_subtitle_sync_popup_create_slider(Evas_Object *
 	pObj = elm_slider_add(pParent);
 	elm_slider_indicator_show_set(pObj, EINA_FALSE);
 	evas_object_size_hint_weight_set(pObj, EVAS_HINT_EXPAND,
-					 EVAS_HINT_EXPAND);
+	                                 EVAS_HINT_EXPAND);
 	evas_object_size_hint_align_set(pObj, EVAS_HINT_FILL, EVAS_HINT_FILL);
 
 	elm_slider_min_max_set(pObj, VP_SUBTITLE_SYNC_MIN_VALUE,
-			       VP_SUBTITLE_SYNC_MAX_VALUE);
+	                       VP_SUBTITLE_SYNC_MAX_VALUE);
 	evas_object_smart_callback_add(pObj, "changed",
-				       __vp_subtitle_sync_popup_slider_change_cb,
-				       pUserData);
+	                               __vp_subtitle_sync_popup_slider_change_cb,
+	                               pUserData);
 
 	return pObj;
 }
 
 static bool _vp_subtitle_sync_popup_create_button(Evas_Object *pParent,
-		void *pUserData)
+        void *pUserData)
 {
 	if (pParent == NULL) {
 		VideoLogError("pParent is NULL");
@@ -350,80 +350,80 @@ static bool _vp_subtitle_sync_popup_create_button(Evas_Object *pParent,
 	}
 
 	SubtitleSyncPopup *pSubtitleSyncPopup =
-		(SubtitleSyncPopup *) pUserData;
+	    (SubtitleSyncPopup *) pUserData;
 
 	pSubtitleSyncPopup->pDelButton =
-		vp_button_create(pParent, "playview/custom/flat_63_78/default",
-				 NULL,
-				 (Evas_Smart_Cb)
-				 __vp_subtitle_sync_btn_clicked_cb,
-				 (Evas_Smart_Cb) NULL, (Evas_Smart_Cb) NULL,
-				 (void *) pSubtitleSyncPopup);
+	    vp_button_create(pParent, "playview/custom/flat_63_78/default",
+	                     NULL,
+	                     (Evas_Smart_Cb)
+	                     __vp_subtitle_sync_btn_clicked_cb,
+	                     (Evas_Smart_Cb) NULL, (Evas_Smart_Cb) NULL,
+	                     (void *) pSubtitleSyncPopup);
 
 
 
 	pSubtitleSyncPopup->pAddButton =
-		vp_button_create(pParent, "playview/custom/flat_63_78/default",
-				 NULL,
-				 (Evas_Smart_Cb)
-				 __vp_subtitle_sync_btn_clicked_cb,
-				 (Evas_Smart_Cb) NULL, (Evas_Smart_Cb) NULL,
-				 (void *) pSubtitleSyncPopup);
+	    vp_button_create(pParent, "playview/custom/flat_63_78/default",
+	                     NULL,
+	                     (Evas_Smart_Cb)
+	                     __vp_subtitle_sync_btn_clicked_cb,
+	                     (Evas_Smart_Cb) NULL, (Evas_Smart_Cb) NULL,
+	                     (void *) pSubtitleSyncPopup);
 
 	Evas_Object *pIcon = NULL;
 
 	pIcon =
-		vp_button_create_icon(pSubtitleSyncPopup->pDelButton,
-				      VP_PLAY_RESROUCE_EDJ_PATH,
-				      VP_PLAY_RES_BUTTON_DEL);
+	    vp_button_create_icon(pSubtitleSyncPopup->pDelButton,
+	                          VP_PLAY_RESROUCE_EDJ_PATH,
+	                          VP_PLAY_RES_BUTTON_DEL);
 	elm_object_part_content_set(pSubtitleSyncPopup->pDelButton,
-				    VP_PLAY_SWALLOW_BUTTON_ICON, pIcon);
+	                            VP_PLAY_SWALLOW_BUTTON_ICON, pIcon);
 
 	pIcon =
-		vp_button_create_icon(pSubtitleSyncPopup->pDelButton,
-				      VP_PLAY_RESROUCE_EDJ_PATH,
-				      VP_PLAY_RES_BUTTON_DEL_PRESS);
+	    vp_button_create_icon(pSubtitleSyncPopup->pDelButton,
+	                          VP_PLAY_RESROUCE_EDJ_PATH,
+	                          VP_PLAY_RES_BUTTON_DEL_PRESS);
 	elm_object_part_content_set(pSubtitleSyncPopup->pDelButton,
-				    VP_PLAY_SWALLOW_BUTTON_PRESS_ICON, pIcon);
+	                            VP_PLAY_SWALLOW_BUTTON_PRESS_ICON, pIcon);
 
 	pIcon =
-		vp_button_create_icon(pSubtitleSyncPopup->pDelButton,
-				      VP_PLAY_RESROUCE_EDJ_PATH,
-				      VP_PLAY_RES_BUTTON_DEL);
+	    vp_button_create_icon(pSubtitleSyncPopup->pDelButton,
+	                          VP_PLAY_RESROUCE_EDJ_PATH,
+	                          VP_PLAY_RES_BUTTON_DEL);
 	elm_object_part_content_set(pSubtitleSyncPopup->pDelButton,
-				    VP_PLAY_SWALLOW_BUTTON_DIM_ICON, pIcon);
+	                            VP_PLAY_SWALLOW_BUTTON_DIM_ICON, pIcon);
 
 	pIcon =
-		vp_button_create_icon(pSubtitleSyncPopup->pAddButton,
-				      VP_PLAY_RESROUCE_EDJ_PATH,
-				      VP_PLAY_RES_BUTTON_ADD);
+	    vp_button_create_icon(pSubtitleSyncPopup->pAddButton,
+	                          VP_PLAY_RESROUCE_EDJ_PATH,
+	                          VP_PLAY_RES_BUTTON_ADD);
 	elm_object_part_content_set(pSubtitleSyncPopup->pAddButton,
-				    VP_PLAY_SWALLOW_BUTTON_ICON, pIcon);
+	                            VP_PLAY_SWALLOW_BUTTON_ICON, pIcon);
 
 	pIcon =
-		vp_button_create_icon(pSubtitleSyncPopup->pAddButton,
-				      VP_PLAY_RESROUCE_EDJ_PATH,
-				      VP_PLAY_RES_BUTTON_ADD_PRESS);
+	    vp_button_create_icon(pSubtitleSyncPopup->pAddButton,
+	                          VP_PLAY_RESROUCE_EDJ_PATH,
+	                          VP_PLAY_RES_BUTTON_ADD_PRESS);
 	elm_object_part_content_set(pSubtitleSyncPopup->pAddButton,
-				    VP_PLAY_SWALLOW_BUTTON_PRESS_ICON, pIcon);
+	                            VP_PLAY_SWALLOW_BUTTON_PRESS_ICON, pIcon);
 
 	pIcon =
-		vp_button_create_icon(pSubtitleSyncPopup->pAddButton,
-				      VP_PLAY_RESROUCE_EDJ_PATH,
-				      VP_PLAY_RES_BUTTON_ADD);
+	    vp_button_create_icon(pSubtitleSyncPopup->pAddButton,
+	                          VP_PLAY_RESROUCE_EDJ_PATH,
+	                          VP_PLAY_RES_BUTTON_ADD);
 	elm_object_part_content_set(pSubtitleSyncPopup->pAddButton,
-				    VP_PLAY_SWALLOW_BUTTON_DIM_ICON, pIcon);
+	                            VP_PLAY_SWALLOW_BUTTON_DIM_ICON, pIcon);
 
 	elm_object_part_content_set(pParent, "elm.swallow.icon.1",
-				    pSubtitleSyncPopup->pDelButton);
+	                            pSubtitleSyncPopup->pDelButton);
 	elm_object_part_content_set(pParent, "elm.swallow.icon.2",
-				    pSubtitleSyncPopup->pAddButton);
+	                            pSubtitleSyncPopup->pAddButton);
 
 	return TRUE;
 }
 
 static Evas_Object *_vp_subtitle_sync_popup_create_layout(Evas_Object *
-		pParent)
+        pParent)
 {
 	if (pParent == NULL) {
 		VideoLogError("pParent is NULL");
@@ -437,12 +437,12 @@ static Evas_Object *_vp_subtitle_sync_popup_create_layout(Evas_Object *
 	}
 
 	elm_layout_file_set(pLayout, VP_PLAY_SPEED_POPUP_EDJ,
-			    VP_PLAY_EDJ_GROUP_PLAY_SPEED_POPUP);
+	                    VP_PLAY_EDJ_GROUP_PLAY_SPEED_POPUP);
 
 	evas_object_size_hint_weight_set(pLayout, EVAS_HINT_EXPAND,
-					 EVAS_HINT_EXPAND);
+	                                 EVAS_HINT_EXPAND);
 	evas_object_size_hint_align_set(pLayout, EVAS_HINT_FILL,
-					EVAS_HINT_FILL);
+	                                EVAS_HINT_FILL);
 
 	evas_object_show(pLayout);
 
@@ -454,11 +454,11 @@ static Evas_Object *_vp_subtitle_sync_popup_create_layout(Evas_Object *
 
 /* external functions */
 subtitle_sync_popup vp_subtitle_sync_popup_create(Evas_Object *pParent,
-		float fSyncVal,
-		SubtitleSyncUpdateCbFunc
-		pUpdateCb,
-		SubtitleSyncDoneCbFunc
-		pDoneCb)
+        float fSyncVal,
+        SubtitleSyncUpdateCbFunc
+        pUpdateCb,
+        SubtitleSyncDoneCbFunc
+        pDoneCb)
 {
 	if (pParent == NULL) {
 		VideoLogError("pParent is NULL");
@@ -480,11 +480,11 @@ subtitle_sync_popup vp_subtitle_sync_popup_create(Evas_Object *pParent,
 	pSubtitleSyncPopup->fSyncVal = fSyncVal;
 
 	pSubtitleSyncPopup->pPopup =
-		vp_popup_create(pParent, POPUP_STYLE_EXPAND_WITH_CANCEL_BTN,
-				VP_PLAY_STRING_SUBTITLE_SYNC, NULL, 0.0, NULL,
-				__vp_subtitle_sync_popup_key_event_cb,
-				__vp_subtitle_sync_popup_mouse_event_cb,
-				(void *) pSubtitleSyncPopup);
+	    vp_popup_create(pParent, POPUP_STYLE_EXPAND_WITH_CANCEL_BTN,
+	                    VP_PLAY_STRING_SUBTITLE_SYNC, NULL, 0.0, NULL,
+	                    __vp_subtitle_sync_popup_key_event_cb,
+	                    __vp_subtitle_sync_popup_mouse_event_cb,
+	                    (void *) pSubtitleSyncPopup);
 
 	if (pSubtitleSyncPopup->pPopup == NULL) {
 		VideoLogError("vp_popup_create fail");
@@ -493,10 +493,10 @@ subtitle_sync_popup vp_subtitle_sync_popup_create(Evas_Object *pParent,
 	}
 
 	pSubtitleSyncPopup->pCancelButton =
-		_vp_subtitle_sync_popup_create_cancel_button(pSubtitleSyncPopup->
-				pPopup,
-				(void *)
-				pSubtitleSyncPopup);
+	    _vp_subtitle_sync_popup_create_cancel_button(pSubtitleSyncPopup->
+	            pPopup,
+	            (void *)
+	            pSubtitleSyncPopup);
 	if (pSubtitleSyncPopup->pCancelButton == NULL) {
 		VideoLogError
 		("_vp_subtitle_sync_popup_create_cancel_button fail");
@@ -505,10 +505,10 @@ subtitle_sync_popup vp_subtitle_sync_popup_create(Evas_Object *pParent,
 	}
 
 	pSubtitleSyncPopup->pOkButton =
-		_vp_subtitle_sync_popup_create_ok_button(pSubtitleSyncPopup->
-				pPopup,
-				(void *)
-				pSubtitleSyncPopup);
+	    _vp_subtitle_sync_popup_create_ok_button(pSubtitleSyncPopup->
+	            pPopup,
+	            (void *)
+	            pSubtitleSyncPopup);
 	if (pSubtitleSyncPopup->pOkButton == NULL) {
 		VideoLogError("_vp_subtitle_sync_popup_create_ok_button fail");
 		_vp_subtitle_sync_popup_destroy_handle(pSubtitleSyncPopup);
@@ -516,7 +516,7 @@ subtitle_sync_popup vp_subtitle_sync_popup_create(Evas_Object *pParent,
 	}
 
 	pSubtitleSyncPopup->pLayout =
-		_vp_subtitle_sync_popup_create_layout(pSubtitleSyncPopup->pPopup);
+	    _vp_subtitle_sync_popup_create_layout(pSubtitleSyncPopup->pPopup);
 	if (pSubtitleSyncPopup->pLayout == NULL) {
 		VideoLogError("_vp_subtitle_sync_popup_create_layout fail");
 		_vp_subtitle_sync_popup_destroy_handle(pSubtitleSyncPopup);
@@ -524,8 +524,8 @@ subtitle_sync_popup vp_subtitle_sync_popup_create(Evas_Object *pParent,
 	}
 
 	pSubtitleSyncPopup->pSlider =
-		_vp_subtitle_sync_popup_create_slider(pSubtitleSyncPopup->pLayout,
-				pSubtitleSyncPopup);
+	    _vp_subtitle_sync_popup_create_slider(pSubtitleSyncPopup->pLayout,
+	            pSubtitleSyncPopup);
 	if (pSubtitleSyncPopup->pSlider == NULL) {
 		VideoLogError("_vp_subtitle_sync_popup_create_slider fail");
 		_vp_subtitle_sync_popup_destroy_handle(pSubtitleSyncPopup);
@@ -533,21 +533,21 @@ subtitle_sync_popup vp_subtitle_sync_popup_create(Evas_Object *pParent,
 	}
 
 	_vp_subtitle_sync_popup_create_button(pSubtitleSyncPopup->pLayout,
-					      pSubtitleSyncPopup);
+	                                      pSubtitleSyncPopup);
 
 	elm_slider_value_set(pSubtitleSyncPopup->pSlider,
-			     (double) pSubtitleSyncPopup->fSyncVal);
+	                     (double) pSubtitleSyncPopup->fSyncVal);
 	_vp_subtitle_sync_update_text(pSubtitleSyncPopup);
 
 	elm_object_part_content_set(pSubtitleSyncPopup->pLayout,
-				    "elm.swallow.content",
-				    pSubtitleSyncPopup->pSlider);
+	                            "elm.swallow.content",
+	                            pSubtitleSyncPopup->pSlider);
 	elm_object_content_set(pSubtitleSyncPopup->pPopup,
-			       pSubtitleSyncPopup->pLayout);
+	                       pSubtitleSyncPopup->pLayout);
 	evas_object_show(pSubtitleSyncPopup->pLayout);
 
 	elm_popup_orient_set(pSubtitleSyncPopup->pPopup,
-			     ELM_POPUP_ORIENT_CENTER);
+	                     ELM_POPUP_ORIENT_CENTER);
 
 	return pSubtitleSyncPopup;
 }
@@ -560,7 +560,7 @@ void vp_subtitle_sync_popup_destroy(subtitle_sync_popup pSubtitleSync)
 	}
 
 	SubtitleSyncPopup *pSubtitleSyncPopup =
-		(SubtitleSyncPopup *) pSubtitleSync;
+	    (SubtitleSyncPopup *) pSubtitleSync;
 
 	_vp_subtitle_sync_popup_destroy_handle(pSubtitleSyncPopup);
 
@@ -574,7 +574,7 @@ bool vp_subtitle_sync_popup_realize(subtitle_sync_popup pSubtitleSync)
 	}
 
 	SubtitleSyncPopup *pSubtitleSyncPopup =
-		(SubtitleSyncPopup *) pSubtitleSync;
+	    (SubtitleSyncPopup *) pSubtitleSync;
 
 	evas_object_show(pSubtitleSyncPopup->pPopup);
 
@@ -590,7 +590,7 @@ bool vp_subtitle_sync_popup_unrealize(subtitle_sync_popup pSubtitleSync)
 	}
 
 	SubtitleSyncPopup *pSubtitleSyncPopup =
-		(SubtitleSyncPopup *) pSubtitleSync;
+	    (SubtitleSyncPopup *) pSubtitleSync;
 
 	evas_object_hide(pSubtitleSyncPopup->pPopup);
 
@@ -600,7 +600,7 @@ bool vp_subtitle_sync_popup_unrealize(subtitle_sync_popup pSubtitleSync)
 
 
 bool vp_subtitle_sync_popup_set_user_data(subtitle_sync_popup
-		pSubtitleSync, void *pUserData)
+        pSubtitleSync, void *pUserData)
 {
 	if (pSubtitleSync == NULL) {
 		VideoLogError("pSubtitleSync is NULL");
@@ -608,7 +608,7 @@ bool vp_subtitle_sync_popup_set_user_data(subtitle_sync_popup
 	}
 
 	SubtitleSyncPopup *pSubtitleSyncPopup =
-		(SubtitleSyncPopup *) pSubtitleSync;
+	    (SubtitleSyncPopup *) pSubtitleSync;
 
 	pSubtitleSyncPopup->pUserData = pUserData;
 

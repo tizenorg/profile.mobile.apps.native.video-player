@@ -45,20 +45,20 @@ typedef struct _SoundAlivePopup {
 } SoundAlivePopup;
 
 static void __vp_sound_alive_genlist_item_selected_cb(void *pUserData,
-		Evas_Object *
-		pObject,
-		void *pEventInfo);
+        Evas_Object *
+        pObject,
+        void *pEventInfo);
 
 static void __vp_sound_alive_genlist_realized(void *data,
-		Evas_Object *obj,
-		void *event_info)
+        Evas_Object *obj,
+        void *event_info)
 {
 	VP_GENLIST_HIDE_BOTTOMLINE(data, obj, event_info);
 }
 
 static void __vp_sound_alive_popup_rotate_cb(void *data,
-		Evas_Object *obj,
-		void *event_info)
+        Evas_Object *obj,
+        void *event_info)
 {
 	SoundAlivePopup *pSoundAlive = (SoundAlivePopup *) data;
 	if (!pSoundAlive) {
@@ -69,8 +69,8 @@ static void __vp_sound_alive_popup_rotate_cb(void *data,
 		return;
 	}
 	vp_popup_set_popup_min_size(pSoundAlive->pParent, pSoundAlive->pBox,
-				    pSoundAlive->nListCount,
-				    VIDEO_POPUP_DEFAULT);
+	                            pSoundAlive->nListCount,
+	                            VIDEO_POPUP_DEFAULT);
 
 }
 
@@ -82,10 +82,10 @@ static void _vp_sound_alive_destroy_handle(SoundAlivePopup *pSoundAlive)
 	}
 
 	evas_object_smart_callback_del(pSoundAlive->pParent,
-				       "rotation,changed",
-				       __vp_sound_alive_popup_rotate_cb);
+	                               "rotation,changed",
+	                               __vp_sound_alive_popup_rotate_cb);
 	evas_object_smart_callback_del(pSoundAlive->pGenList, "realized",
-				       __vp_sound_alive_genlist_realized);
+	                               __vp_sound_alive_genlist_realized);
 
 	VP_EVAS_DEL(pSoundAlive->pRadio);
 	VP_EVAS_DEL(pSoundAlive->pGenList);
@@ -107,8 +107,8 @@ static void _vp_sound_alive_destroy_handle(SoundAlivePopup *pSoundAlive)
 
 /* callback functions */
 static char *__vp_sound_alive_genlist_text_get_cb(const void *pUserData,
-		Evas_Object *pObj,
-		const char *pPart)
+        Evas_Object *pObj,
+        const char *pPart)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -125,11 +125,11 @@ static char *__vp_sound_alive_genlist_text_get_cb(const void *pUserData,
 }
 
 static Evas_Object *__vp_sound_alive_genlist_content_get_cb(const void
-		*pUserData,
-		Evas_Object *
-		pObj,
-		const char
-		*pPart)
+        *pUserData,
+        Evas_Object *
+        pObj,
+        const char
+        *pPart)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -142,8 +142,8 @@ static Evas_Object *__vp_sound_alive_genlist_content_get_cb(const void
 		Evas_Object *pRadioObj = NULL;
 
 		SoundAlivePopup *pSoundAlive =
-			(SoundAlivePopup *) evas_object_data_get(pObj,
-					VP_SOUND_ALIVE_GENLIST_DATA_KEY);
+		    (SoundAlivePopup *) evas_object_data_get(pObj,
+		            VP_SOUND_ALIVE_GENLIST_DATA_KEY);
 		if (pSoundAlive == NULL) {
 			VideoLogWarning("evas_object_data_get is fail");
 			return NULL;
@@ -165,10 +165,10 @@ static Evas_Object *__vp_sound_alive_genlist_content_get_cb(const void
 		elm_radio_state_value_set(pRadioObj, nType);
 		elm_radio_group_add(pRadioObj, pSoundAlive->pRadio);
 		elm_radio_value_set(pSoundAlive->pRadio,
-				    pSoundAlive->soundAliveType);
+		                    pSoundAlive->soundAliveType);
 		evas_object_smart_callback_add(pRadioObj, "changed",
-					       __vp_sound_alive_genlist_item_selected_cb,
-					       pSoundAlive);
+		                               __vp_sound_alive_genlist_item_selected_cb,
+		                               pSoundAlive);
 		evas_object_show(pRadioObj);
 
 		return pRadioObj;
@@ -178,9 +178,9 @@ static Evas_Object *__vp_sound_alive_genlist_content_get_cb(const void
 }
 
 static void __vp_sound_alive_genlist_item_selected_cb(void *pUserData,
-		Evas_Object *
-		pObject,
-		void *pEventInfo)
+        Evas_Object *
+        pObject,
+        void *pEventInfo)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -193,7 +193,7 @@ static void __vp_sound_alive_genlist_item_selected_cb(void *pUserData,
 
 	Elm_Object_Item *pItem = (Elm_Object_Item *) pEventInfo;
 	Elm_Object_Item *pSelectedItem =
-		elm_genlist_selected_item_get(pObject);
+	    elm_genlist_selected_item_get(pObject);
 	if (pSelectedItem) {
 		elm_genlist_item_selected_set(pSelectedItem, EINA_FALSE);
 	}
@@ -228,13 +228,13 @@ static void __vp_sound_alive_genlist_item_selected_cb(void *pUserData,
 	pSoundAlive->soundAliveType = nType;
 	if (pSoundAlive->pCloseCb) {
 		pSoundAlive->pCloseCb((int) nType, FALSE,
-				      (void *) pSoundAlive->pUserData);
+		                      (void *) pSoundAlive->pUserData);
 	}
 }
 
 static void __vp_sound_alive_popup_key_event_cb(void *pUserData,
-		Evas_Object *pObj,
-		void *pEventInfo)
+        Evas_Object *pObj,
+        void *pEventInfo)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -245,14 +245,14 @@ static void __vp_sound_alive_popup_key_event_cb(void *pUserData,
 
 	if (pSoundAlive->pCloseCb) {
 		pSoundAlive->pCloseCb(VIDEO_SA_NONE, FALSE,
-				      (void *) pSoundAlive->pUserData);
+		                      (void *) pSoundAlive->pUserData);
 	}
 }
 
 static void __vp_sound_alive_popup_mouse_event_cb(void *pUserData,
-		Evas *pEvas,
-		Evas_Object *pObj,
-		void *pEventInfo)
+        Evas *pEvas,
+        Evas_Object *pObj,
+        void *pEventInfo)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -271,7 +271,7 @@ static void __vp_sound_alive_popup_mouse_event_cb(void *pUserData,
 
 		if (pSoundAlive->pCloseCb) {
 			pSoundAlive->pCloseCb(VIDEO_SA_NONE, FALSE,
-					      (void *) pSoundAlive->pUserData);
+			                      (void *) pSoundAlive->pUserData);
 		}
 	}
 }
@@ -287,7 +287,7 @@ static Evas_Object *_vp_sound_alive_create_genlist(Evas_Object *pParent)
 
 	pObj = elm_genlist_add(pParent);
 	evas_object_size_hint_weight_set(pObj, EVAS_HINT_EXPAND,
-					 EVAS_HINT_EXPAND);
+	                                 EVAS_HINT_EXPAND);
 	evas_object_size_hint_align_set(pObj, EVAS_HINT_FILL, EVAS_HINT_FILL);
 	evas_object_show(pObj);
 	return pObj;
@@ -295,7 +295,7 @@ static Evas_Object *_vp_sound_alive_create_genlist(Evas_Object *pParent)
 
 
 static bool _vp_sound_alive_add_genlist_item(Evas_Object *pObj,
-		void *pUserData)
+        void *pUserData)
 {
 	if (pObj == NULL) {
 		VideoLogError("pObj is NULL");
@@ -314,14 +314,14 @@ static bool _vp_sound_alive_add_genlist_item(Evas_Object *pObj,
 	}
 
 	pSoundAlive->st_Sa_Itc = elm_genlist_item_class_new();
-	
+
 	if (pSoundAlive->st_Sa_Itc != NULL) {
 		pSoundAlive->st_Sa_Itc->version = ELM_GENLIST_ITEM_CLASS_VERSION;
 		pSoundAlive->st_Sa_Itc->item_style = "1line";
 		pSoundAlive->st_Sa_Itc->func.text_get =
-			(void *) __vp_sound_alive_genlist_text_get_cb;
+		    (void *) __vp_sound_alive_genlist_text_get_cb;
 		pSoundAlive->st_Sa_Itc->func.content_get =
-			(void *) __vp_sound_alive_genlist_content_get_cb;
+		    (void *) __vp_sound_alive_genlist_content_get_cb;
 		pSoundAlive->st_Sa_Itc->func.state_get = NULL;
 		pSoundAlive->st_Sa_Itc->func.del = NULL;
 	}
@@ -329,41 +329,41 @@ static bool _vp_sound_alive_add_genlist_item(Evas_Object *pObj,
 	pSoundAlive->nListCount = 0;
 
 	elm_genlist_item_append(pObj, pSoundAlive->st_Sa_Itc,
-				(void *) VP_PLAY_STRING_SOUND_ALIVE_NORMAL,
-				NULL, ELM_GENLIST_ITEM_NONE,
-				__vp_sound_alive_genlist_item_selected_cb,
-				pUserData);
+	                        (void *) VP_PLAY_STRING_SOUND_ALIVE_NORMAL,
+	                        NULL, ELM_GENLIST_ITEM_NONE,
+	                        __vp_sound_alive_genlist_item_selected_cb,
+	                        pUserData);
 	pSoundAlive->nListCount++;
 
 	video_sound_device_type_t nSoundDevType = VP_SOUND_DEVICE_NONE;
 	vp_sound_get_active_device(&nSoundDevType);
 	if (nSoundDevType == VP_SOUND_DEVICE_SPEAKER) {
 		elm_genlist_item_append(pObj, pSoundAlive->st_Sa_Itc,
-					(void *) VP_PLAY_STRING_SOUND_ALIVE_VOICE,
-					NULL, ELM_GENLIST_ITEM_NONE,
-					__vp_sound_alive_genlist_item_selected_cb,
-					pUserData);
+		                        (void *) VP_PLAY_STRING_SOUND_ALIVE_VOICE,
+		                        NULL, ELM_GENLIST_ITEM_NONE,
+		                        __vp_sound_alive_genlist_item_selected_cb,
+		                        pUserData);
 		pSoundAlive->nListCount++;
 	} else if (nSoundDevType == VP_SOUND_DEVICE_HDMI
-			|| nSoundDevType == VP_SOUND_DEVICE_BLUETOOTH) {
+	           || nSoundDevType == VP_SOUND_DEVICE_BLUETOOTH) {
 	} else {
 		elm_genlist_item_append(pObj, pSoundAlive->st_Sa_Itc,
-					(void *) VP_PLAY_STRING_SOUND_ALIVE_VOICE,
-					NULL, ELM_GENLIST_ITEM_NONE,
-					__vp_sound_alive_genlist_item_selected_cb,
-					pUserData);
+		                        (void *) VP_PLAY_STRING_SOUND_ALIVE_VOICE,
+		                        NULL, ELM_GENLIST_ITEM_NONE,
+		                        __vp_sound_alive_genlist_item_selected_cb,
+		                        pUserData);
 		pSoundAlive->nListCount++;
 		elm_genlist_item_append(pObj, pSoundAlive->st_Sa_Itc,
-					(void *) VP_PLAY_STRING_SOUND_ALIVE_MOVIE,
-					NULL, ELM_GENLIST_ITEM_NONE,
-					__vp_sound_alive_genlist_item_selected_cb,
-					pUserData);
+		                        (void *) VP_PLAY_STRING_SOUND_ALIVE_MOVIE,
+		                        NULL, ELM_GENLIST_ITEM_NONE,
+		                        __vp_sound_alive_genlist_item_selected_cb,
+		                        pUserData);
 		pSoundAlive->nListCount++;
 		elm_genlist_item_append(pObj, pSoundAlive->st_Sa_Itc,
-					(void *) VP_PLAY_STRING_SOUND_ALIVE_71CH,
-					NULL, ELM_GENLIST_ITEM_NONE,
-					__vp_sound_alive_genlist_item_selected_cb,
-					pUserData);
+		                        (void *) VP_PLAY_STRING_SOUND_ALIVE_71CH,
+		                        NULL, ELM_GENLIST_ITEM_NONE,
+		                        __vp_sound_alive_genlist_item_selected_cb,
+		                        pUserData);
 		pSoundAlive->nListCount++;
 	}
 
@@ -372,9 +372,9 @@ static bool _vp_sound_alive_add_genlist_item(Evas_Object *pObj,
 
 /* external functions */
 sound_alive_handle vp_sound_alive_create(Evas_Object *pParent,
-		char *pMediaUrl,
-		PopupCloseCbFunc pCloseCb,
-		video_sound_alive_t nType)
+        char *pMediaUrl,
+        PopupCloseCbFunc pCloseCb,
+        video_sound_alive_t nType)
 {
 	if (pParent == NULL) {
 		VideoLogError("pParent is NULL");
@@ -401,11 +401,11 @@ sound_alive_handle vp_sound_alive_create(Evas_Object *pParent,
 	VP_STRDUP(pSoundAlive->pMediUrl, pMediaUrl);
 
 	pSoundAlive->pPopup =
-		vp_popup_create(pParent, POPUP_STYLE_MENU_LIST_NO_CANCEL_BTN,
-				VP_PLAY_STRING_POPUP_SOUND_ALIVE, NULL, 0.0, NULL,
-				__vp_sound_alive_popup_key_event_cb,
-				__vp_sound_alive_popup_mouse_event_cb,
-				(void *) pSoundAlive);
+	    vp_popup_create(pParent, POPUP_STYLE_MENU_LIST_NO_CANCEL_BTN,
+	                    VP_PLAY_STRING_POPUP_SOUND_ALIVE, NULL, 0.0, NULL,
+	                    __vp_sound_alive_popup_key_event_cb,
+	                    __vp_sound_alive_popup_mouse_event_cb,
+	                    (void *) pSoundAlive);
 	if (pSoundAlive->pPopup == NULL) {
 		VideoLogError("vp_popup_create fail");
 		_vp_sound_alive_destroy_handle(pSoundAlive);
@@ -413,23 +413,23 @@ sound_alive_handle vp_sound_alive_create(Evas_Object *pParent,
 	}
 
 	pSoundAlive->pGenList =
-		_vp_sound_alive_create_genlist(pSoundAlive->pPopup);
+	    _vp_sound_alive_create_genlist(pSoundAlive->pPopup);
 	if (pSoundAlive->pGenList == NULL) {
 		VideoLogError("_vp_sound_alive_create_genlist fail");
 		_vp_sound_alive_destroy_handle(pSoundAlive);
 		return NULL;
 	}
 	evas_object_data_set(pSoundAlive->pGenList,
-			     VP_SOUND_ALIVE_GENLIST_DATA_KEY,
-			     (void *) pSoundAlive);
+	                     VP_SOUND_ALIVE_GENLIST_DATA_KEY,
+	                     (void *) pSoundAlive);
 	evas_object_smart_callback_add(pSoundAlive->pGenList, "realized",
-				       __vp_sound_alive_genlist_realized,
-				       NULL);
+	                               __vp_sound_alive_genlist_realized,
+	                               NULL);
 
 	pSoundAlive->pRadio = elm_radio_add(pSoundAlive->pGenList);
 
 	if (!_vp_sound_alive_add_genlist_item
-			(pSoundAlive->pGenList, (void *) pSoundAlive)) {
+	        (pSoundAlive->pGenList, (void *) pSoundAlive)) {
 		VideoLogError("_vp_sound_alive_add_genlist_item fail");
 		_vp_sound_alive_destroy_handle(pSoundAlive);
 		return NULL;
@@ -438,15 +438,15 @@ sound_alive_handle vp_sound_alive_create(Evas_Object *pParent,
 	VideoLogInfo("nType: %d", nType);
 	pSoundAlive->soundAliveType = nType;
 	evas_object_smart_callback_add(pSoundAlive->pParent,
-				       "rotation,changed",
-				       __vp_sound_alive_popup_rotate_cb,
-				       pSoundAlive);
+	                               "rotation,changed",
+	                               __vp_sound_alive_popup_rotate_cb,
+	                               pSoundAlive);
 
 	pSoundAlive->pBox = elm_box_add(pSoundAlive->pPopup);
 
 	vp_popup_set_popup_min_size(pSoundAlive->pParent, pSoundAlive->pBox,
-				    pSoundAlive->nListCount,
-				    VIDEO_POPUP_DEFAULT);
+	                            pSoundAlive->nListCount,
+	                            VIDEO_POPUP_DEFAULT);
 
 	elm_box_pack_end(pSoundAlive->pBox, pSoundAlive->pGenList);
 
@@ -497,7 +497,7 @@ bool vp_sound_alive_unrealize(sound_alive_handle pSAHandle)
 }
 
 bool vp_sound_alive_set_user_data(sound_alive_handle pSAHandle,
-				  void *pUserData)
+                                  void *pUserData)
 {
 	if (pSAHandle == NULL) {
 		VideoLogError("pSAHandle is NULL");

@@ -37,7 +37,7 @@ static MediaUpdateCb g_media_update_cb = NULL;
 
 /* callback functions */
 static bool __vp_media_contents_info_cb(media_info_h pMediaHandle,
-					void *pUserData)
+                                        void *pUserData)
 {
 	media_info_h *pAssignItem = (media_info_h *) pUserData;
 
@@ -54,7 +54,7 @@ static bool __vp_media_contents_info_cb(media_info_h pMediaHandle,
 		nRet = media_info_get_display_name(*pAssignItem, &szTmpStr);
 		if (nRet != MEDIA_CONTENT_ERROR_NONE) {
 			VideoLogError("media_info_get_display_name is fail : 0x%x",
-				      nRet);
+			              nRet);
 			return FALSE;
 		}
 
@@ -69,8 +69,8 @@ static bool __vp_media_contents_info_cb(media_info_h pMediaHandle,
 }
 
 static bool __vp_media_contents_bookmark_iter_cb(media_bookmark_h
-		pBookmark,
-		void *pUserData)
+        pBookmark,
+        void *pUserData)
 {
 	if (pBookmark == NULL) {
 		VideoLogError("pBookmark is NULL");
@@ -100,7 +100,7 @@ static bool __vp_media_contents_bookmark_iter_cb(media_bookmark_h
 
 
 static bool __vp_media_contents_video_iter_cb(media_info_h pMediaInfo,
-		void *pUserData)
+        void *pUserData)
 {
 	if (pMediaInfo == NULL) {
 		VideoLogError("pMediaInfo is NULL");
@@ -141,16 +141,16 @@ static int __vp_media_contents_get_pid(void)
 }
 
 static void __vp_media_contents_db_update_cb(media_content_error_e nError,
-		int nPid,
-		media_content_db_update_item_type_e
-		nUpdateItem,
-		media_content_db_update_type_e
-		nUpdateType,
-		media_content_type_e
-		nMediaType, char *szUuid,
-		char *szPath,
-		char *szMimeType,
-		void *pUserData)
+        int nPid,
+        media_content_db_update_item_type_e
+        nUpdateItem,
+        media_content_db_update_type_e
+        nUpdateType,
+        media_content_type_e
+        nMediaType, char *szUuid,
+        char *szPath,
+        char *szMimeType,
+        void *pUserData)
 {
 	if (g_media_update_cb == NULL) {
 		VideoLogError("g_media_update_cb is NULL.");
@@ -171,7 +171,7 @@ static void __vp_media_contents_db_update_cb(media_content_error_e nError,
 }
 
 static bool __vp_media_contents_folder_iter_cb(media_folder_h pFolderItem,
-		void *pUserData)
+        void *pUserData)
 {
 	if (pFolderItem == NULL) {
 		VideoLogError("pFolderItem is NULL");
@@ -198,7 +198,7 @@ static bool __vp_media_contents_folder_iter_cb(media_folder_h pFolderItem,
 }
 
 static bool __vp_media_contents_subtitles_iter_cb(media_info_h pMediaInfo,
-		void *pUserData)
+        void *pUserData)
 {
 	if (pMediaInfo == NULL) {
 		VideoLogError("pMediaInfo is NULL");
@@ -271,7 +271,7 @@ bool vp_media_contents_disconnect()
 
 
 bool vp_media_contents_get_video_id(const char *szFilePath,
-				    char **szVideoID)
+                                    char **szVideoID)
 {
 	if (szVideoID == NULL) {
 		VideoLogError("szVideoID is NULL");
@@ -296,8 +296,8 @@ bool vp_media_contents_get_video_id(const char *szFilePath,
 
 	char szTmpStr[4096] = {0,};
 	snprintf(szTmpStr, 4096,
-		 "MEDIA_TYPE = 1 AND (MEDIA_STORAGE_TYPE=0 OR MEDIA_STORAGE_TYPE=1 OR MEDIA_STORAGE_TYPE=101) AND MEDIA_PATH = \"%s\"",
-		 szFilePath);
+	         "MEDIA_TYPE = 1 AND (MEDIA_STORAGE_TYPE=0 OR MEDIA_STORAGE_TYPE=1 OR MEDIA_STORAGE_TYPE=101) AND MEDIA_PATH = \"%s\"",
+	         szFilePath);
 
 	nRet = media_filter_create(&pFilterHandle);
 	if (nRet != MEDIA_CONTENT_ERROR_NONE) {
@@ -311,17 +311,17 @@ bool vp_media_contents_get_video_id(const char *szFilePath,
 	}
 
 	nRet =
-		media_filter_set_condition(pFilterHandle, szTmpStr,
-					   MEDIA_CONTENT_COLLATE_DEFAULT);
+	    media_filter_set_condition(pFilterHandle, szTmpStr,
+	                               MEDIA_CONTENT_COLLATE_DEFAULT);
 	if (nRet != MEDIA_CONTENT_ERROR_NONE) {
 		VideoLogError("media_filter_set_condition is fail : 0x%x", nRet);
 		goto Exception;
 	}
 
 	nRet =
-		media_info_foreach_media_from_db(pFilterHandle,
-				__vp_media_contents_info_cb,
-				&pMediaHandle);
+	    media_info_foreach_media_from_db(pFilterHandle,
+	                                     __vp_media_contents_info_cb,
+	                                     &pMediaHandle);
 	if (nRet != MEDIA_CONTENT_ERROR_NONE) {
 		VideoLogError("media_info_foreach_media_from_db is fail : 0x%x", nRet);
 		goto Exception;
@@ -373,7 +373,7 @@ Exception:
 }
 
 bool vp_media_contents_get_video_thumbnail_path(const char *szFilePath,
-		char **szThumbnailPath)
+        char **szThumbnailPath)
 {
 	if (szFilePath == NULL) {
 		VideoLogError("szFilePath is NULL");
@@ -390,8 +390,8 @@ bool vp_media_contents_get_video_thumbnail_path(const char *szFilePath,
 
 	char szTmpStr[4096] = {0,};
 	snprintf(szTmpStr, 4096,
-		 "MEDIA_TYPE = 1 AND (MEDIA_STORAGE_TYPE=0 OR MEDIA_STORAGE_TYPE=1 OR MEDIA_STORAGE_TYPE=101) AND MEDIA_PATH = \"%s\"",
-		 szFilePath);
+	         "MEDIA_TYPE = 1 AND (MEDIA_STORAGE_TYPE=0 OR MEDIA_STORAGE_TYPE=1 OR MEDIA_STORAGE_TYPE=101) AND MEDIA_PATH = \"%s\"",
+	         szFilePath);
 
 	nRet = media_filter_create(&pFilterHandle);
 	if (nRet != MEDIA_CONTENT_ERROR_NONE) {
@@ -405,17 +405,17 @@ bool vp_media_contents_get_video_thumbnail_path(const char *szFilePath,
 	}
 
 	nRet =
-		media_filter_set_condition(pFilterHandle, szTmpStr,
-					   MEDIA_CONTENT_COLLATE_DEFAULT);
+	    media_filter_set_condition(pFilterHandle, szTmpStr,
+	                               MEDIA_CONTENT_COLLATE_DEFAULT);
 	if (nRet != MEDIA_CONTENT_ERROR_NONE) {
 		VideoLogError("media_filter_set_condition is fail : 0x%x", nRet);
 		goto Exception;
 	}
 
 	nRet =
-		media_info_foreach_media_from_db(pFilterHandle,
-				__vp_media_contents_info_cb,
-				&pMediaHandle);
+	    media_info_foreach_media_from_db(pFilterHandle,
+	                                     __vp_media_contents_info_cb,
+	                                     &pMediaHandle);
 	if (nRet != MEDIA_CONTENT_ERROR_NONE) {
 		VideoLogError("media_info_foreach_media_from_db is fail : 0x%x", nRet);
 		goto Exception;
@@ -429,7 +429,7 @@ bool vp_media_contents_get_video_thumbnail_path(const char *szFilePath,
 	nRet = media_info_get_thumbnail_path(pMediaHandle, &szThumbnail);
 	if (nRet != MEDIA_CONTENT_ERROR_NONE) {
 		VideoLogError("media_info_get_thumbnail_path is fail : 0x%x",
-			      nRet);
+		              nRet);
 		goto Exception;
 	}
 
@@ -514,7 +514,7 @@ bool vp_media_contents_refresh_db(const char *szMediaID)
 	nRet = media_info_refresh_metadata_to_db(szMediaID);
 	if (nRet != MEDIA_CONTENT_ERROR_NONE) {
 		VideoLogError("media_info_refresh_metadata_to_db fail : %d",
-			      nRet);
+		              nRet);
 		return FALSE;
 	}
 	return TRUE;
@@ -537,8 +537,8 @@ bool vp_media_contents_set_played_time(const char *szFilePath)
 
 	char szTmpStr[4096] = { 0, };
 	snprintf(szTmpStr, 4096,
-		 "MEDIA_TYPE = 1 AND (MEDIA_STORAGE_TYPE=0 OR MEDIA_STORAGE_TYPE=1 OR MEDIA_STORAGE_TYPE=101) AND MEDIA_PATH = \"%s\"",
-		 szFilePath);
+	         "MEDIA_TYPE = 1 AND (MEDIA_STORAGE_TYPE=0 OR MEDIA_STORAGE_TYPE=1 OR MEDIA_STORAGE_TYPE=101) AND MEDIA_PATH = \"%s\"",
+	         szFilePath);
 
 	nRet = media_filter_create(&pFilterHandle);
 	if (nRet != MEDIA_CONTENT_ERROR_NONE) {
@@ -552,17 +552,17 @@ bool vp_media_contents_set_played_time(const char *szFilePath)
 	}
 
 	nRet =
-		media_filter_set_condition(pFilterHandle, szTmpStr,
-					   MEDIA_CONTENT_COLLATE_DEFAULT);
+	    media_filter_set_condition(pFilterHandle, szTmpStr,
+	                               MEDIA_CONTENT_COLLATE_DEFAULT);
 	if (nRet != MEDIA_CONTENT_ERROR_NONE) {
 		VideoLogError("media_filter_set_condition is fail : 0x%x", nRet);
 		goto Exception;
 	}
 
 	nRet =
-		media_info_foreach_media_from_db(pFilterHandle,
-				__vp_media_contents_info_cb,
-				&pMediaHandle);
+	    media_info_foreach_media_from_db(pFilterHandle,
+	                                     __vp_media_contents_info_cb,
+	                                     &pMediaHandle);
 	if (nRet != MEDIA_CONTENT_ERROR_NONE) {
 		VideoLogError("media_info_foreach_media_from_db is fail : 0x%x", nRet);
 		goto Exception;
@@ -639,7 +639,7 @@ Exception:
 }
 
 bool vp_media_contents_set_played_position(const char *szFilePath,
-		int nPosition)
+        int nPosition)
 {
 	if (szFilePath == NULL) {
 		VideoLogError("szFilePath is NULL");
@@ -656,8 +656,8 @@ bool vp_media_contents_set_played_position(const char *szFilePath,
 
 	char szTmpStr[4096] = { 0, };
 	snprintf(szTmpStr, 4096,
-		 "MEDIA_TYPE = 1 AND (MEDIA_STORAGE_TYPE=0 OR MEDIA_STORAGE_TYPE=1 OR MEDIA_STORAGE_TYPE=101) AND MEDIA_PATH = \"%s\"",
-		 szFilePath);
+	         "MEDIA_TYPE = 1 AND (MEDIA_STORAGE_TYPE=0 OR MEDIA_STORAGE_TYPE=1 OR MEDIA_STORAGE_TYPE=101) AND MEDIA_PATH = \"%s\"",
+	         szFilePath);
 
 	nRet = media_filter_create(&pFilterHandle);
 	if (nRet != MEDIA_CONTENT_ERROR_NONE) {
@@ -671,17 +671,17 @@ bool vp_media_contents_set_played_position(const char *szFilePath,
 	}
 
 	nRet =
-		media_filter_set_condition(pFilterHandle, szTmpStr,
-					   MEDIA_CONTENT_COLLATE_DEFAULT);
+	    media_filter_set_condition(pFilterHandle, szTmpStr,
+	                               MEDIA_CONTENT_COLLATE_DEFAULT);
 	if (nRet != MEDIA_CONTENT_ERROR_NONE) {
 		VideoLogError("media_filter_set_condition is fail : 0x%x", nRet);
 		goto Exception;
 	}
 
 	nRet =
-		media_info_foreach_media_from_db(pFilterHandle,
-				__vp_media_contents_info_cb,
-				&pMediaHandle);
+	    media_info_foreach_media_from_db(pFilterHandle,
+	                                     __vp_media_contents_info_cb,
+	                                     &pMediaHandle);
 	if (nRet != MEDIA_CONTENT_ERROR_NONE) {
 		VideoLogError("media_info_foreach_media_from_db is fail : 0x%x", nRet);
 		goto Exception;
@@ -706,7 +706,7 @@ bool vp_media_contents_set_played_position(const char *szFilePath,
 	nRet = video_meta_set_played_position(pVideoHandle, nPosition);
 	if (nRet != MEDIA_CONTENT_ERROR_NONE) {
 		VideoLogError(" video_meta_set_played_position is fail : 0x%x",
-			      nRet);
+		              nRet);
 		goto Exception;
 	}
 
@@ -756,7 +756,7 @@ Exception:
 }
 
 bool vp_media_contents_get_played_position(const char *szFilePath,
-		int *nPosition)
+        int *nPosition)
 {
 	if (szFilePath == NULL) {
 		VideoLogError("szFilePath is NULL");
@@ -773,8 +773,8 @@ bool vp_media_contents_get_played_position(const char *szFilePath,
 
 	char szTmpStr[4096] = { 0, };
 	snprintf(szTmpStr, 4096,
-		 "MEDIA_TYPE = 1 AND (MEDIA_STORAGE_TYPE=0 OR MEDIA_STORAGE_TYPE=1 OR MEDIA_STORAGE_TYPE=101) AND MEDIA_PATH = \"%s\"",
-		 szFilePath);
+	         "MEDIA_TYPE = 1 AND (MEDIA_STORAGE_TYPE=0 OR MEDIA_STORAGE_TYPE=1 OR MEDIA_STORAGE_TYPE=101) AND MEDIA_PATH = \"%s\"",
+	         szFilePath);
 
 	nRet = media_filter_create(&pFilterHandle);
 	if (nRet != MEDIA_CONTENT_ERROR_NONE) {
@@ -788,17 +788,17 @@ bool vp_media_contents_get_played_position(const char *szFilePath,
 	}
 
 	nRet =
-		media_filter_set_condition(pFilterHandle, szTmpStr,
-					   MEDIA_CONTENT_COLLATE_DEFAULT);
+	    media_filter_set_condition(pFilterHandle, szTmpStr,
+	                               MEDIA_CONTENT_COLLATE_DEFAULT);
 	if (nRet != MEDIA_CONTENT_ERROR_NONE) {
 		VideoLogError("media_filter_set_condition is fail : 0x%x", nRet);
 		goto Exception;
 	}
 
 	nRet =
-		media_info_foreach_media_from_db(pFilterHandle,
-				__vp_media_contents_info_cb,
-				&pMediaHandle);
+	    media_info_foreach_media_from_db(pFilterHandle,
+	                                     __vp_media_contents_info_cb,
+	                                     &pMediaHandle);
 	if (nRet != MEDIA_CONTENT_ERROR_NONE) {
 		VideoLogError("media_info_foreach_media_from_db is fail : 0x%x", nRet);
 		goto Exception;
@@ -823,7 +823,7 @@ bool vp_media_contents_get_played_position(const char *szFilePath,
 	nRet = video_meta_get_played_position(pVideoHandle, nPosition);
 	if (nRet != MEDIA_CONTENT_ERROR_NONE) {
 		VideoLogError("video_meta_get_played_position is fail : 0x%x",
-			      nRet);
+		              nRet);
 		goto Exception;
 	}
 
@@ -869,7 +869,7 @@ Exception:
 }
 
 int vp_media_contents_get_modified_time(media_info_h pMediaHandle,
-					char **szLastModified)
+                                        char **szLastModified)
 {
 	if (!pMediaHandle) {
 		VideoLogInfo("pMediaHandle is NULL.");
@@ -888,24 +888,24 @@ int vp_media_contents_get_modified_time(media_info_h pMediaHandle,
 	nRet = media_info_get_modified_time(pVideoItem, &pModifiedTime);
 	if (nRet != MEDIA_CONTENT_ERROR_NONE) {
 		VideoLogError("media_info_get_modified_time failed : [%d]!!!",
-			      nRet);
+		              nRet);
 		return nRet;
 	}
 
 	gmtime_r(&pModifiedTime, &sModifiedTime);
 	strftime(szModifiedTime, BYTE_SIZE - 1, "%d %b. %Y. %H:%M",
-			 &sModifiedTime);
+	         &sModifiedTime);
 	*szLastModified = g_strdup(szModifiedTime);
 
 	return nRet;
 }
 
 bool vp_media_contents_get_content_info(const char *szFilePath,
-					char **szTitle, int *nWidth,
-					int *nHeight, int *nDuration,
-					double *dLatitude,
-					double *dLongitude,
-					char **szTmpLastModified)
+                                        char **szTitle, int *nWidth,
+                                        int *nHeight, int *nDuration,
+                                        double *dLatitude,
+                                        double *dLongitude,
+                                        char **szTmpLastModified)
 {
 	if (szFilePath == NULL) {
 		VideoLogError("szFilePath is NULL");
@@ -922,8 +922,8 @@ bool vp_media_contents_get_content_info(const char *szFilePath,
 
 	char szTmpStr[4096] = {0,};
 	snprintf(szTmpStr, 4096,
-		 "MEDIA_TYPE = 1 AND (MEDIA_STORAGE_TYPE=0 OR MEDIA_STORAGE_TYPE=1 OR MEDIA_STORAGE_TYPE=101) AND MEDIA_PATH = \"%s\"",
-		 szFilePath);
+	         "MEDIA_TYPE = 1 AND (MEDIA_STORAGE_TYPE=0 OR MEDIA_STORAGE_TYPE=1 OR MEDIA_STORAGE_TYPE=101) AND MEDIA_PATH = \"%s\"",
+	         szFilePath);
 
 	nRet = media_filter_create(&pFilterHandle);
 	if (nRet != MEDIA_CONTENT_ERROR_NONE) {
@@ -937,17 +937,17 @@ bool vp_media_contents_get_content_info(const char *szFilePath,
 	}
 
 	nRet =
-		media_filter_set_condition(pFilterHandle, szTmpStr,
-					   MEDIA_CONTENT_COLLATE_DEFAULT);
+	    media_filter_set_condition(pFilterHandle, szTmpStr,
+	                               MEDIA_CONTENT_COLLATE_DEFAULT);
 	if (nRet != MEDIA_CONTENT_ERROR_NONE) {
 		VideoLogError("media_filter_set_condition is fail : 0x%x", nRet);
 		goto Exception;
 	}
 
 	nRet =
-		media_info_foreach_media_from_db(pFilterHandle,
-				__vp_media_contents_info_cb,
-				&pMediaHandle);
+	    media_info_foreach_media_from_db(pFilterHandle,
+	                                     __vp_media_contents_info_cb,
+	                                     &pMediaHandle);
 	if (nRet != MEDIA_CONTENT_ERROR_NONE) {
 		VideoLogError("media_info_foreach_media_from_db is fail : 0x%x", nRet);
 		goto Exception;
@@ -970,11 +970,11 @@ bool vp_media_contents_get_content_info(const char *szFilePath,
 	}
 
 	nRet =
-		vp_media_contents_get_modified_time(pMediaHandle,
-				szTmpLastModified);
+	    vp_media_contents_get_modified_time(pMediaHandle,
+	                                        szTmpLastModified);
 	if (nRet != MEDIA_CONTENT_ERROR_NONE) {
 		VideoLogError("media_info_get_modified_time is fail : 0x%x",
-			      nRet);
+		              nRet);
 		goto Exception;
 	}
 
@@ -1053,7 +1053,7 @@ Exception:
 }
 
 bool vp_media_metadata_get_gps_info(const char *szFilePath,
-				    double *dLatitude, double *dLongitude)
+                                    double *dLatitude, double *dLongitude)
 {
 	if (szFilePath == NULL) {
 		VideoLogError("szFilePath is NULL");
@@ -1078,11 +1078,11 @@ bool vp_media_metadata_get_gps_info(const char *szFilePath,
 	}
 
 	nRet =
-		metadata_extractor_get_metadata(pMetadata, METADATA_LATITUDE,
-						&szVal);
+	    metadata_extractor_get_metadata(pMetadata, METADATA_LATITUDE,
+	                                    &szVal);
 	if (nRet != METADATA_EXTRACTOR_ERROR_NONE) {
 		VideoLogError("metadata_extractor_get_metadata is fail : 0x%x",
-			      nRet);
+		              nRet);
 		goto Exception;
 	}
 
@@ -1094,11 +1094,11 @@ bool vp_media_metadata_get_gps_info(const char *szFilePath,
 	VP_FREE(szVal);
 
 	nRet =
-		metadata_extractor_get_metadata(pMetadata, METADATA_LONGITUDE,
-						&szVal);
+	    metadata_extractor_get_metadata(pMetadata, METADATA_LONGITUDE,
+	                                    &szVal);
 	if (nRet != METADATA_EXTRACTOR_ERROR_NONE) {
 		VideoLogError("metadata_extractor_get_metadata is fail : 0x%x",
-			      nRet);
+		              nRet);
 		goto Exception;
 	}
 
@@ -1129,7 +1129,7 @@ Exception:
 }
 
 bool vp_media_metadata_get_duration(const char *szFilePath,
-				    int *nDuration)
+                                    int *nDuration)
 {
 	if (szFilePath == NULL) {
 		VideoLogError("szFilePath is NULL");
@@ -1154,11 +1154,11 @@ bool vp_media_metadata_get_duration(const char *szFilePath,
 	}
 
 	nRet =
-		metadata_extractor_get_metadata(pMetadata, METADATA_DURATION,
-						&szVal);
+	    metadata_extractor_get_metadata(pMetadata, METADATA_DURATION,
+	                                    &szVal);
 	if (nRet != METADATA_EXTRACTOR_ERROR_NONE) {
 		VideoLogError("metadata_extractor_get_metadata is fail : 0x%x",
-			      nRet);
+		              nRet);
 		goto Exception;
 	}
 
@@ -1214,11 +1214,11 @@ bool vp_media_metadata_get_width(const char *szFilePath, int *nWidth)
 	}
 
 	nRet =
-		metadata_extractor_get_metadata(pMetadata, METADATA_VIDEO_WIDTH,
-						&szVal);
+	    metadata_extractor_get_metadata(pMetadata, METADATA_VIDEO_WIDTH,
+	                                    &szVal);
 	if (nRet != METADATA_EXTRACTOR_ERROR_NONE) {
 		VideoLogError("metadata_extractor_get_metadata is fail : 0x%x",
-			      nRet);
+		              nRet);
 		goto Exception;
 	}
 
@@ -1274,11 +1274,11 @@ bool vp_media_metadata_get_height(const char *szFilePath, int *nHeight)
 	}
 
 	nRet =
-		metadata_extractor_get_metadata(pMetadata, METADATA_VIDEO_HEIGHT,
-						&szVal);
+	    metadata_extractor_get_metadata(pMetadata, METADATA_VIDEO_HEIGHT,
+	                                    &szVal);
 	if (nRet != METADATA_EXTRACTOR_ERROR_NONE) {
 		VideoLogError("metadata_extractor_get_metadata is fail : 0x%x",
-			      nRet);
+		              nRet);
 		goto Exception;
 	}
 
@@ -1311,7 +1311,7 @@ Exception:
 
 
 bool vp_media_contents_bookmark_list_get(const char *szMediaID,
-		GList **list)
+        GList **list)
 {
 	if (!szMediaID) {
 		VideoLogError("No exist szMediaID.");
@@ -1340,18 +1340,18 @@ bool vp_media_contents_bookmark_list_get(const char *szMediaID,
 	}
 
 	nRet =
-		media_filter_set_order(pFilterHandle, MEDIA_CONTENT_ORDER_ASC,
-				       BOOKMARK_MARKED_TIME,
-				       MEDIA_CONTENT_COLLATE_DEFAULT);
+	    media_filter_set_order(pFilterHandle, MEDIA_CONTENT_ORDER_ASC,
+	                           BOOKMARK_MARKED_TIME,
+	                           MEDIA_CONTENT_COLLATE_DEFAULT);
 	if (nRet != MEDIA_CONTENT_ERROR_NONE) {
 		VideoLogError("media_filter_set_order is fail : 0x%x", nRet);
 		goto Exception;
 	}
 
 	nRet =
-		media_info_foreach_bookmark_from_db(szMediaID, pFilterHandle,
-				__vp_media_contents_bookmark_iter_cb,
-				list);
+	    media_info_foreach_bookmark_from_db(szMediaID, pFilterHandle,
+	                                        __vp_media_contents_bookmark_iter_cb,
+	                                        list);
 	if (nRet != MEDIA_CONTENT_ERROR_NONE) {
 		VideoLogError
 		("media_info_foreach_bookmark_from_db is fail : 0x%x", nRet);
@@ -1407,8 +1407,8 @@ bool vp_media_contents_bookmark_list_clear(GList *pList)
 }
 
 bool vp_media_contents_bookmark_insert(const char *szMediaID,
-				       int nPosition,
-				       const char *szFilePath)
+                                       int nPosition,
+                                       const char *szFilePath)
 {
 
 	if (szMediaID == NULL) {
@@ -1446,7 +1446,7 @@ bool vp_media_contents_bookmark_insert(const char *szMediaID,
 
 
 bool vp_media_contents_bookmark_delete(const char *szMediaID,
-				       int nPosition)
+                                       int nPosition)
 {
 	if (szMediaID == NULL) {
 		VideoLogError("szMediaID is NULL");
@@ -1477,8 +1477,8 @@ bool vp_media_contents_bookmark_delete(const char *szMediaID,
 		if (pBookmarkItem) {
 			time_t nMarkedTime;
 			nRet =
-				media_bookmark_get_marked_time(pBookmarkItem,
-							       &nMarkedTime);
+			    media_bookmark_get_marked_time(pBookmarkItem,
+			                                   &nMarkedTime);
 			if (nRet != MEDIA_CONTENT_ERROR_NONE) {
 				VideoLogWarning
 				("media_bookmark_get_marked_time is fail : 0x%x",
@@ -1488,8 +1488,8 @@ bool vp_media_contents_bookmark_delete(const char *szMediaID,
 
 			if (nPosition == nMarkedTime) {
 				nRet =
-					media_bookmark_get_bookmark_id(pBookmarkItem,
-								       &nDeleteBookmarkID);
+				    media_bookmark_get_bookmark_id(pBookmarkItem,
+				                                   &nDeleteBookmarkID);
 				if (nRet != MEDIA_CONTENT_ERROR_NONE) {
 					VideoLogWarning
 					("media_bookmark_get_bookmark_id is fail : 0x%x",
@@ -1498,8 +1498,8 @@ bool vp_media_contents_bookmark_delete(const char *szMediaID,
 				}
 
 				nRet =
-					media_bookmark_get_thumbnail_path(pBookmarkItem,
-							&szDeletePath);
+				    media_bookmark_get_thumbnail_path(pBookmarkItem,
+				                                      &szDeletePath);
 				if (nRet != MEDIA_CONTENT_ERROR_NONE) {
 					VideoLogWarning
 					("media_bookmark_get_thumbnail_path is fail : 0x%x",
@@ -1516,7 +1516,7 @@ bool vp_media_contents_bookmark_delete(const char *szMediaID,
 
 	if (nDeleteBookmarkID == -1 || szDeletePath == NULL) {
 		VideoLogError("Not match item : %d , %s", nDeleteBookmarkID,
-			      szDeletePath);
+		              szDeletePath);
 		VP_FREE(szDeletePath);
 		return FALSE;
 	}
@@ -1524,7 +1524,7 @@ bool vp_media_contents_bookmark_delete(const char *szMediaID,
 	nRet = media_bookmark_delete_from_db(nDeleteBookmarkID);
 	if (nRet != MEDIA_CONTENT_ERROR_NONE) {
 		VideoLogError("media_bookmark_delete_from_db is fail : 0x%x",
-			      nRet);
+		              nRet);
 		VP_FREE(szDeletePath);
 		return FALSE;
 	}
@@ -1571,8 +1571,8 @@ bool vp_media_contents_bookmark_delete_all(const char *szMediaID)
 		pBookmarkItem = (media_bookmark_h) g_list_nth_data(list, idx);
 		if (pBookmarkItem) {
 			nRet =
-				media_bookmark_get_bookmark_id(pBookmarkItem,
-							       &nDeleteBookmarkID);
+			    media_bookmark_get_bookmark_id(pBookmarkItem,
+			                                   &nDeleteBookmarkID);
 			if (nRet != MEDIA_CONTENT_ERROR_NONE) {
 				VideoLogWarning
 				("media_bookmark_get_bookmark_id is fail : 0x%x",
@@ -1580,8 +1580,8 @@ bool vp_media_contents_bookmark_delete_all(const char *szMediaID)
 			}
 
 			nRet =
-				media_bookmark_get_thumbnail_path(pBookmarkItem,
-						&szDeletePath);
+			    media_bookmark_get_thumbnail_path(pBookmarkItem,
+			                                      &szDeletePath);
 			if (nRet != MEDIA_CONTENT_ERROR_NONE) {
 				VideoLogWarning
 				("media_bookmark_get_thumbnail_path is fail : 0x%x",
@@ -1616,8 +1616,8 @@ bool vp_media_contents_bookmark_delete_all(const char *szMediaID)
 
 
 bool vp_media_contents_bookmark_get_item_info(void *pItem,
-		char **szFilePath,
-		int *nPosition)
+        char **szFilePath,
+        int *nPosition)
 {
 	if (pItem == NULL) {
 		VideoLogError("szMediaID is NULL");
@@ -1628,17 +1628,17 @@ bool vp_media_contents_bookmark_get_item_info(void *pItem,
 	int nRet = MEDIA_CONTENT_ERROR_NONE;
 
 	nRet =
-		media_bookmark_get_marked_time(bookmark_h, (time_t *) nPosition);
+	    media_bookmark_get_marked_time(bookmark_h, (time_t *) nPosition);
 	if (nRet != MEDIA_CONTENT_ERROR_NONE) {
 		VideoLogError("media_bookmark_get_marked_time is fail : 0x%x",
-			      nRet);
+		              nRet);
 		return FALSE;
 	}
 
 	nRet = media_bookmark_get_thumbnail_path(bookmark_h, szFilePath);
 	if (nRet != MEDIA_CONTENT_ERROR_NONE) {
 		VideoLogError("media_bookmark_get_thumbnail_path is fail : 0x%x",
-			      nRet);
+		              nRet);
 		return FALSE;
 	}
 
@@ -1646,8 +1646,8 @@ bool vp_media_contents_bookmark_get_item_info(void *pItem,
 }
 
 bool vp_media_contents_get_video_items_to_folder(int nSortType,
-		char *szFolder,
-		GList **pList)
+        char *szFolder,
+        GList **pList)
 {
 	if (szFolder == NULL) {
 		VideoLogError("szFolder is NULL");
@@ -1707,21 +1707,21 @@ bool vp_media_contents_get_video_items_to_folder(int nSortType,
 	}
 
 	szCondition =
-		g_strdup_printf
-		("MEDIA_TYPE = 1 AND (MEDIA_STORAGE_TYPE IS NOT 101) and FOLDER_PATH = \"%s\"",
-		 szFolder);
+	    g_strdup_printf
+	    ("MEDIA_TYPE = 1 AND (MEDIA_STORAGE_TYPE IS NOT 101) and FOLDER_PATH = \"%s\"",
+	     szFolder);
 	nRet =
-		media_filter_set_condition(pFilterHandle, szCondition,
-					   MEDIA_CONTENT_COLLATE_DEFAULT);
+	    media_filter_set_condition(pFilterHandle, szCondition,
+	                               MEDIA_CONTENT_COLLATE_DEFAULT);
 	if (nRet != MEDIA_CONTENT_ERROR_NONE) {
 		VideoLogError("media_filter_set_condition is fail : 0x%x", nRet);
 		goto Exception;
 	}
 
 	nRet =
-		media_folder_foreach_folder_from_db(pFilterHandle,
-				__vp_media_contents_folder_iter_cb,
-				&pFolderHandle);
+	    media_folder_foreach_folder_from_db(pFilterHandle,
+	                                        __vp_media_contents_folder_iter_cb,
+	                                        &pFolderHandle);
 	if (nRet != MEDIA_CONTENT_ERROR_NONE) {
 		VideoLogError
 		("media_folder_foreach_folder_from_db is fail : 0x%x", nRet);
@@ -1743,28 +1743,28 @@ bool vp_media_contents_get_video_items_to_folder(int nSortType,
 
 	szCondition = g_strdup_printf("MEDIA_TYPE = 1");
 	nRet =
-		media_filter_set_condition(pFilterHandle, szCondition,
-					   MEDIA_CONTENT_COLLATE_DEFAULT);
+	    media_filter_set_condition(pFilterHandle, szCondition,
+	                               MEDIA_CONTENT_COLLATE_DEFAULT);
 	if (nRet != MEDIA_CONTENT_ERROR_NONE) {
 		VideoLogError("media_filter_set_condition is fail : 0x%x", nRet);
 		goto Exception;
 	}
 
 	nRet =
-		media_filter_set_order(pFilterHandle, nOrderType, szOrder,
-				       MEDIA_CONTENT_COLLATE_NOCASE);
+	    media_filter_set_order(pFilterHandle, nOrderType, szOrder,
+	                           MEDIA_CONTENT_COLLATE_NOCASE);
 	if (nRet != MEDIA_CONTENT_ERROR_NONE) {
 		VideoLogError("media_filter_set_order is fail : 0x%x", nRet);
 		goto Exception;
 	}
 
 	nRet =
-		media_folder_foreach_media_from_db(szFolderID, pFilterHandle,
-				__vp_media_contents_video_iter_cb,
-				pList);
+	    media_folder_foreach_media_from_db(szFolderID, pFilterHandle,
+	                                       __vp_media_contents_video_iter_cb,
+	                                       pList);
 	if (nRet != MEDIA_CONTENT_ERROR_NONE) {
 		VideoLogError("media_info_foreach_media_from_db is fail : 0x%x",
-			      nRet);
+		              nRet);
 		goto Exception;
 	}
 
@@ -1844,32 +1844,32 @@ bool vp_media_contents_get_video_items(int nSortType, GList **pList)
 	}
 
 	szCondition =
-		g_strdup_printf
-		("MEDIA_TYPE = 1 AND (MEDIA_STORAGE_TYPE IS NOT 101)");
+	    g_strdup_printf
+	    ("MEDIA_TYPE = 1 AND (MEDIA_STORAGE_TYPE IS NOT 101)");
 
 	nRet =
-		media_filter_set_condition(pFilterHandle, szCondition,
-					   MEDIA_CONTENT_COLLATE_DEFAULT);
+	    media_filter_set_condition(pFilterHandle, szCondition,
+	                               MEDIA_CONTENT_COLLATE_DEFAULT);
 	if (nRet != MEDIA_CONTENT_ERROR_NONE) {
 		VideoLogError("media_filter_set_condition is fail : 0x%x", nRet);
 		goto Exception;
 	}
 
 	nRet =
-		media_filter_set_order(pFilterHandle, nOrderType, szOrder,
-				       MEDIA_CONTENT_COLLATE_NOCASE);
+	    media_filter_set_order(pFilterHandle, nOrderType, szOrder,
+	                           MEDIA_CONTENT_COLLATE_NOCASE);
 	if (nRet != MEDIA_CONTENT_ERROR_NONE) {
 		VideoLogError("media_filter_set_order is fail : 0x%x", nRet);
 		goto Exception;
 	}
 
 	nRet =
-		media_info_foreach_media_from_db(pFilterHandle,
-				__vp_media_contents_video_iter_cb,
-				pList);
+	    media_info_foreach_media_from_db(pFilterHandle,
+	                                     __vp_media_contents_video_iter_cb,
+	                                     pList);
 	if (nRet != MEDIA_CONTENT_ERROR_NONE) {
 		VideoLogError("media_info_foreach_media_from_db is fail : 0x%x",
-			      nRet);
+		              nRet);
 		goto Exception;
 	}
 
@@ -1925,8 +1925,8 @@ bool vp_media_contents_free_video_items(GList *pList)
 }
 
 bool vp_media_contents_get_next_file_path(const char *szMediaURL,
-		char **szNextURL, bool bLoop,
-		GList *pList)
+        char **szNextURL, bool bLoop,
+        GList *pList)
 {
 	if (!szMediaURL) {
 		VideoLogError("No exist szMediaID.");
@@ -1961,7 +1961,7 @@ bool vp_media_contents_get_next_file_path(const char *szMediaURL,
 		nRet = media_info_get_file_path(pMediaItem, &szPath);
 		if (nRet != MEDIA_CONTENT_ERROR_NONE) {
 			VideoLogWarning("media_info_get_file_path is fail : 0x%x",
-					nRet);
+			                nRet);
 			continue;
 		}
 
@@ -1996,8 +1996,8 @@ bool vp_media_contents_get_next_file_path(const char *szMediaURL,
 }
 
 bool vp_media_contents_get_prev_file_path(const char *szMediaURL,
-		char **szPrevURL, bool bLoop,
-		GList *pList)
+        char **szPrevURL, bool bLoop,
+        GList *pList)
 {
 	if (!szMediaURL) {
 		VideoLogError("No exist szMediaID.");
@@ -2033,7 +2033,7 @@ bool vp_media_contents_get_prev_file_path(const char *szMediaURL,
 		nRet = media_info_get_file_path(pMediaItem, &szPath);
 		if (nRet != MEDIA_CONTENT_ERROR_NONE) {
 			VideoLogWarning("media_info_get_file_path is fail : 0x%x",
-					nRet);
+			                nRet);
 			continue;
 		}
 		if (szPath) {
@@ -2078,9 +2078,9 @@ bool vp_media_contents_set_update_cb(MediaUpdateCb pFunc, void *pUserData)
 	g_media_update_cb = pFunc;
 
 	nRet =
-		media_content_set_db_updated_cb((void *)
-						__vp_media_contents_db_update_cb,
-						pUserData);
+	    media_content_set_db_updated_cb((void *)
+	                                    __vp_media_contents_db_update_cb,
+	                                    pUserData);
 	if (nRet != MEDIA_CONTENT_ERROR_NONE) {
 		VideoLogWarning("media_content_set_db_updated_cb is fail : 0x%x", nRet);
 		return FALSE;
@@ -2098,7 +2098,7 @@ void vp_media_contents_unset_update_cb()
 }
 
 bool vp_media_contents_get_cloud_attribute(const char *szFilePath,
-		bool *bCloud)
+        bool *bCloud)
 {
 
 	if (szFilePath == NULL) {
@@ -2115,8 +2115,8 @@ bool vp_media_contents_get_cloud_attribute(const char *szFilePath,
 
 	char szTmpStr[4096] = { 0, };
 	snprintf(szTmpStr, 4096,
-		 "MEDIA_TYPE = 1 AND (MEDIA_STORAGE_TYPE=0 OR MEDIA_STORAGE_TYPE=1 OR MEDIA_STORAGE_TYPE=101) AND MEDIA_PATH = \"%s\"",
-		 szFilePath);
+	         "MEDIA_TYPE = 1 AND (MEDIA_STORAGE_TYPE=0 OR MEDIA_STORAGE_TYPE=1 OR MEDIA_STORAGE_TYPE=101) AND MEDIA_PATH = \"%s\"",
+	         szFilePath);
 
 	nRet = media_filter_create(&pFilterHandle);
 	if (nRet != MEDIA_CONTENT_ERROR_NONE) {
@@ -2130,17 +2130,17 @@ bool vp_media_contents_get_cloud_attribute(const char *szFilePath,
 	}
 
 	nRet =
-		media_filter_set_condition(pFilterHandle, szTmpStr,
-					   MEDIA_CONTENT_COLLATE_DEFAULT);
+	    media_filter_set_condition(pFilterHandle, szTmpStr,
+	                               MEDIA_CONTENT_COLLATE_DEFAULT);
 	if (nRet != MEDIA_CONTENT_ERROR_NONE) {
 		VideoLogError("media_filter_set_condition is fail : 0x%x", nRet);
 		goto Exception;
 	}
 
 	nRet =
-		media_info_foreach_media_from_db(pFilterHandle,
-				__vp_media_contents_info_cb,
-				&pMediaHandle);
+	    media_info_foreach_media_from_db(pFilterHandle,
+	                                     __vp_media_contents_info_cb,
+	                                     &pMediaHandle);
 	if (nRet != MEDIA_CONTENT_ERROR_NONE) {
 		VideoLogError("media_info_foreach_media_from_db is fail : 0x%x", nRet);
 		goto Exception;
@@ -2189,7 +2189,7 @@ Exception:
 }
 
 bool vp_media_contents_set_location_tag(const char *szFilePath,
-					const char *pLocation)
+                                        const char *pLocation)
 {
 	if (szFilePath == NULL || pLocation == NULL) {
 		VideoLogError("szFilePath or city is NULL");
@@ -2205,8 +2205,8 @@ bool vp_media_contents_set_location_tag(const char *szFilePath,
 
 	char szTmpStr[4096] = { 0, };
 	snprintf(szTmpStr, 4096,
-		 "MEDIA_TYPE = 1 AND (MEDIA_STORAGE_TYPE=0 OR MEDIA_STORAGE_TYPE=1 OR MEDIA_STORAGE_TYPE=101) AND MEDIA_PATH = \"%s\"",
-		 szFilePath);
+	         "MEDIA_TYPE = 1 AND (MEDIA_STORAGE_TYPE=0 OR MEDIA_STORAGE_TYPE=1 OR MEDIA_STORAGE_TYPE=101) AND MEDIA_PATH = \"%s\"",
+	         szFilePath);
 
 	nRet = media_filter_create(&pFilterHandle);
 	if (nRet != MEDIA_CONTENT_ERROR_NONE) {
@@ -2220,17 +2220,17 @@ bool vp_media_contents_set_location_tag(const char *szFilePath,
 	}
 
 	nRet =
-		media_filter_set_condition(pFilterHandle, szTmpStr,
-					   MEDIA_CONTENT_COLLATE_DEFAULT);
+	    media_filter_set_condition(pFilterHandle, szTmpStr,
+	                               MEDIA_CONTENT_COLLATE_DEFAULT);
 	if (nRet != MEDIA_CONTENT_ERROR_NONE) {
 		VideoLogError("media_filter_set_condition is fail : 0x%x", nRet);
 		goto Exception;
 	}
 
 	nRet =
-		media_info_foreach_media_from_db(pFilterHandle,
-				__vp_media_contents_info_cb,
-				&pMediaHandle);
+	    media_info_foreach_media_from_db(pFilterHandle,
+	                                     __vp_media_contents_info_cb,
+	                                     &pMediaHandle);
 	if (nRet != MEDIA_CONTENT_ERROR_NONE) {
 		VideoLogError("media_info_foreach_media_from_db is fail : 0x%x", nRet);
 		goto Exception;
@@ -2244,7 +2244,7 @@ bool vp_media_contents_set_location_tag(const char *szFilePath,
 	nRet = media_info_set_location_tag(pMediaHandle, pLocation);
 	if (nRet != MEDIA_CONTENT_ERROR_NONE) {
 		VideoLogError("media_info_set_location_tag is fail : 0x%x",
-			      nRet);
+		              nRet);
 		goto Exception;
 	}
 
@@ -2283,7 +2283,7 @@ Exception:
 }
 
 bool vp_media_contents_get_location_tag(const char *szFilePath,
-					char **szLocationTag)
+                                        char **szLocationTag)
 {
 	if (szFilePath == NULL) {
 		VideoLogError("szFilePath is NULL");
@@ -2300,8 +2300,8 @@ bool vp_media_contents_get_location_tag(const char *szFilePath,
 
 	char szTmpStr[4096] = { 0, };
 	snprintf(szTmpStr, 4096,
-		 "MEDIA_TYPE = 1 AND (MEDIA_STORAGE_TYPE=0 OR MEDIA_STORAGE_TYPE=1 OR MEDIA_STORAGE_TYPE=101) AND MEDIA_PATH = \"%s\"",
-		 szFilePath);
+	         "MEDIA_TYPE = 1 AND (MEDIA_STORAGE_TYPE=0 OR MEDIA_STORAGE_TYPE=1 OR MEDIA_STORAGE_TYPE=101) AND MEDIA_PATH = \"%s\"",
+	         szFilePath);
 
 	nRet = media_filter_create(&pFilterHandle);
 	if (nRet != MEDIA_CONTENT_ERROR_NONE) {
@@ -2315,17 +2315,17 @@ bool vp_media_contents_get_location_tag(const char *szFilePath,
 	}
 
 	nRet =
-		media_filter_set_condition(pFilterHandle, szTmpStr,
-					   MEDIA_CONTENT_COLLATE_DEFAULT);
+	    media_filter_set_condition(pFilterHandle, szTmpStr,
+	                               MEDIA_CONTENT_COLLATE_DEFAULT);
 	if (nRet != MEDIA_CONTENT_ERROR_NONE) {
 		VideoLogError("media_filter_set_condition is fail : 0x%x", nRet);
 		goto Exception;
 	}
 
 	nRet =
-		media_info_foreach_media_from_db(pFilterHandle,
-				__vp_media_contents_info_cb,
-				&pMediaHandle);
+	    media_info_foreach_media_from_db(pFilterHandle,
+	                                     __vp_media_contents_info_cb,
+	                                     &pMediaHandle);
 	if (nRet != MEDIA_CONTENT_ERROR_NONE) {
 		VideoLogError("media_info_foreach_media_from_dbmedia_filter_set_condition is fail : 0x%x", nRet);
 		goto Exception;
@@ -2339,7 +2339,7 @@ bool vp_media_contents_get_location_tag(const char *szFilePath,
 	nRet = media_info_get_location_tag(pMediaHandle, &szLocation);
 	if (nRet != MEDIA_CONTENT_ERROR_NONE) {
 		VideoLogError("media_info_get_location_tag is fail : 0x%x",
-			      nRet);
+		              nRet);
 		goto Exception;
 	}
 
@@ -2377,7 +2377,7 @@ Exception:
 }
 
 bool vp_media_contents_set_weahter_tag(const char *szFilePath,
-				       const char *pWeather)
+                                       const char *pWeather)
 {
 	if (szFilePath == NULL || pWeather == NULL) {
 		VideoLogError("szFilePath or pWeather is NULL");
@@ -2394,8 +2394,8 @@ bool vp_media_contents_set_weahter_tag(const char *szFilePath,
 
 	char szTmpStr[4096] = { 0, };
 	snprintf(szTmpStr, 4096,
-		 "MEDIA_TYPE = 1 AND (MEDIA_STORAGE_TYPE=0 OR MEDIA_STORAGE_TYPE=1 OR MEDIA_STORAGE_TYPE=101) AND MEDIA_PATH = \"%s\"",
-		 szFilePath);
+	         "MEDIA_TYPE = 1 AND (MEDIA_STORAGE_TYPE=0 OR MEDIA_STORAGE_TYPE=1 OR MEDIA_STORAGE_TYPE=101) AND MEDIA_PATH = \"%s\"",
+	         szFilePath);
 
 	nRet = media_filter_create(&pFilterHandle);
 	if (nRet != MEDIA_CONTENT_ERROR_NONE) {
@@ -2409,17 +2409,17 @@ bool vp_media_contents_set_weahter_tag(const char *szFilePath,
 	}
 
 	nRet =
-		media_filter_set_condition(pFilterHandle, szTmpStr,
-					   MEDIA_CONTENT_COLLATE_DEFAULT);
+	    media_filter_set_condition(pFilterHandle, szTmpStr,
+	                               MEDIA_CONTENT_COLLATE_DEFAULT);
 	if (nRet != MEDIA_CONTENT_ERROR_NONE) {
 		VideoLogError("media_filter_set_condition is fail : 0x%x", nRet);
 		goto Exception;
 	}
 
 	nRet =
-		media_info_foreach_media_from_db(pFilterHandle,
-				__vp_media_contents_info_cb,
-				&pMediaHandle);
+	    media_info_foreach_media_from_db(pFilterHandle,
+	                                     __vp_media_contents_info_cb,
+	                                     &pMediaHandle);
 	if (nRet != MEDIA_CONTENT_ERROR_NONE) {
 		VideoLogError("media_info_foreach_media_from_db is fail : 0x%x", nRet);
 		goto Exception;
@@ -2471,7 +2471,7 @@ Exception:
 }
 
 bool vp_media_contents_get_weahter_tag(const char *szFilePath,
-				       char **szWeatherTag)
+                                       char **szWeatherTag)
 {
 	if (szFilePath == NULL) {
 		VideoLogError("szFilePath is NULL");
@@ -2488,8 +2488,8 @@ bool vp_media_contents_get_weahter_tag(const char *szFilePath,
 
 	char szTmpStr[4096] = { 0, };
 	snprintf(szTmpStr, 4096,
-		 "MEDIA_TYPE = 1 AND (MEDIA_STORAGE_TYPE=0 OR MEDIA_STORAGE_TYPE=1 OR MEDIA_STORAGE_TYPE=101) AND MEDIA_PATH = \"%s\"",
-		 szFilePath);
+	         "MEDIA_TYPE = 1 AND (MEDIA_STORAGE_TYPE=0 OR MEDIA_STORAGE_TYPE=1 OR MEDIA_STORAGE_TYPE=101) AND MEDIA_PATH = \"%s\"",
+	         szFilePath);
 
 	nRet = media_filter_create(&pFilterHandle);
 	if (nRet != MEDIA_CONTENT_ERROR_NONE) {
@@ -2503,17 +2503,17 @@ bool vp_media_contents_get_weahter_tag(const char *szFilePath,
 	}
 
 	nRet =
-		media_filter_set_condition(pFilterHandle, szTmpStr,
-					   MEDIA_CONTENT_COLLATE_DEFAULT);
+	    media_filter_set_condition(pFilterHandle, szTmpStr,
+	                               MEDIA_CONTENT_COLLATE_DEFAULT);
 	if (nRet != MEDIA_CONTENT_ERROR_NONE) {
 		VideoLogError("media_filter_set_condition is fail : 0x%x", nRet);
 		goto Exception;
 	}
 
 	nRet =
-		media_info_foreach_media_from_db(pFilterHandle,
-				__vp_media_contents_info_cb,
-				&pMediaHandle);
+	    media_info_foreach_media_from_db(pFilterHandle,
+	                                     __vp_media_contents_info_cb,
+	                                     &pMediaHandle);
 	if (nRet != MEDIA_CONTENT_ERROR_NONE) {
 		VideoLogError("media_info_foreach_media_from_db is fail : 0x%x", nRet);
 		goto Exception;
@@ -2589,10 +2589,10 @@ bool vp_media_contents_subtitle_list_get(GList **pList)
 	}
 	// media_type 4 : other file
 	szCondition =
-		(char *)
-		g_strdup_printf
-		("MEDIA_TYPE = 4 AND (MEDIA_DISPLAY_NAME like \"%%%s\" OR MEDIA_DISPLAY_NAME like \"%%%s\" OR MEDIA_DISPLAY_NAME like \"%%%s\")",
-		 ".smi", ".sub", ".srt");
+	    (char *)
+	    g_strdup_printf
+	    ("MEDIA_TYPE = 4 AND (MEDIA_DISPLAY_NAME like \"%%%s\" OR MEDIA_DISPLAY_NAME like \"%%%s\" OR MEDIA_DISPLAY_NAME like \"%%%s\")",
+	     ".smi", ".sub", ".srt");
 	if (szCondition == NULL) {
 		VideoLogError("szCondition NULL");
 		goto Exception;
@@ -2601,28 +2601,28 @@ bool vp_media_contents_subtitle_list_get(GList **pList)
 	VideoSecureLogInfo("szCondition is szCondition: %s", szCondition);
 
 	nRet =
-		media_filter_set_condition(pFilterHandle, szCondition,
-					   MEDIA_CONTENT_COLLATE_DEFAULT);
+	    media_filter_set_condition(pFilterHandle, szCondition,
+	                               MEDIA_CONTENT_COLLATE_DEFAULT);
 	if (nRet != MEDIA_CONTENT_ERROR_NONE) {
 		VideoLogError("media_filter_set_condition is fail : 0x%x", nRet);
 		goto Exception;
 	}
 
 	nRet =
-		media_filter_set_order(pFilterHandle, MEDIA_CONTENT_ORDER_ASC,
-				       MEDIA_TITLE, MEDIA_CONTENT_COLLATE_NOCASE);
+	    media_filter_set_order(pFilterHandle, MEDIA_CONTENT_ORDER_ASC,
+	                           MEDIA_TITLE, MEDIA_CONTENT_COLLATE_NOCASE);
 	if (nRet != MEDIA_CONTENT_ERROR_NONE) {
 		VideoLogError("media_filter_set_order is fail : 0x%x", nRet);
 		goto Exception;
 	}
 
 	nRet =
-		media_info_foreach_media_from_db(pFilterHandle,
-				__vp_media_contents_subtitles_iter_cb,
-				pList);
+	    media_info_foreach_media_from_db(pFilterHandle,
+	                                     __vp_media_contents_subtitles_iter_cb,
+	                                     pList);
 	if (nRet != MEDIA_CONTENT_ERROR_NONE) {
 		VideoLogError("media_info_foreach_media_from_db is fail : 0x%x",
-			      nRet);
+		              nRet);
 		goto Exception;
 	}
 
@@ -2649,8 +2649,8 @@ Exception:
 
 /* callback functions */
 static bool __vp_media_contents_file_is_exist_cb(media_info_h
-		pMediaHandle,
-		void *pUserData)
+        pMediaHandle,
+        void *pUserData)
 {
 	bool *bExist = (bool *) pUserData;
 
@@ -2681,8 +2681,8 @@ bool vp_media_contents_file_is_exist(const char *szFilePath)
 
 	char szTmpStr[4096] = { 0, };
 	snprintf(szTmpStr, 4096,
-		 "MEDIA_TYPE = 1 AND (MEDIA_STORAGE_TYPE=0 OR MEDIA_STORAGE_TYPE=1 OR MEDIA_STORAGE_TYPE=101) AND MEDIA_PATH = \"%s\"",
-		 szFilePath);
+	         "MEDIA_TYPE = 1 AND (MEDIA_STORAGE_TYPE=0 OR MEDIA_STORAGE_TYPE=1 OR MEDIA_STORAGE_TYPE=101) AND MEDIA_PATH = \"%s\"",
+	         szFilePath);
 
 	nRet = media_filter_create(&pFilterHandle);
 	if (nRet != MEDIA_CONTENT_ERROR_NONE) {
@@ -2696,17 +2696,17 @@ bool vp_media_contents_file_is_exist(const char *szFilePath)
 	}
 
 	nRet =
-		media_filter_set_condition(pFilterHandle, szTmpStr,
-					   MEDIA_CONTENT_COLLATE_DEFAULT);
+	    media_filter_set_condition(pFilterHandle, szTmpStr,
+	                               MEDIA_CONTENT_COLLATE_DEFAULT);
 	if (nRet != MEDIA_CONTENT_ERROR_NONE) {
 		VideoLogError("media_filter_set_condition is fail : 0x%x", nRet);
 		goto End;
 	}
 
 	nRet =
-		media_info_foreach_media_from_db(pFilterHandle,
-				__vp_media_contents_file_is_exist_cb,
-				&bExist);
+	    media_info_foreach_media_from_db(pFilterHandle,
+	                                     __vp_media_contents_file_is_exist_cb,
+	                                     &bExist);
 	if (nRet != MEDIA_CONTENT_ERROR_NONE) {
 		VideoLogError("media_info_foreach_media_from_db is fail : 0x%x", nRet);
 		goto End;

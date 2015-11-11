@@ -306,7 +306,7 @@ static Eina_Bool __vp_play_client_message_cb(void *pUserData, int nType, void *p
 	return ECORE_CALLBACK_PASS_ON;
 }
 
-static Eina_Bool __vp_play_view_window_property_change (void *pUserData, int type, void *event)
+static Eina_Bool __vp_play_view_window_property_change(void *pUserData, int type, void *event)
 {
 	if (!pUserData) {
 		VideoLogError("[ERR] No exist pUserData.");
@@ -337,7 +337,7 @@ static Eina_Bool __vp_play_view_window_property_change (void *pUserData, int typ
 			switch (state) {
 			case ECORE_X_WINDOW_STATE_HINT_ICONIC:
 				VideoLogInfo("MINI : Iconified");
-			break;
+				break;
 			case ECORE_X_WINDOW_STATE_HINT_WITHDRAWN:
 				VideoLogInfo("MINI : Hide");
 				/* pause */
@@ -349,13 +349,13 @@ static Eina_Bool __vp_play_view_window_property_change (void *pUserData, int typ
 				if (!vp_play_multi_view_set_manual_pause(pPlayView->pMultiView, TRUE)) {
 					VideoLogError("vp_play_normal_view_set_manual_pause fail");
 				}
-			break;
+				break;
 			case ECORE_X_WINDOW_STATE_HINT_NORMAL:
 				VideoLogInfo("MINI : Show");
-			break;
+				break;
 			default:
-			// do something for handling error
-			break;
+				// do something for handling error
+				break;
 			}
 		}
 	}
@@ -414,7 +414,7 @@ static Eina_Bool __vp_play_view_volume_timer_cb(void *pUserData)
 	VP_EVAS_TIMER_DEL(pPlayView->pVolumeTimer);
 
 	pPlayView->pVolumeTimer = ecore_timer_add(VP_PLAY_VIEW_VOLUME_SPEED_TIMER,
-			__vp_play_view_volume_timer_cb, (void *)pPlayView);
+	                          __vp_play_view_volume_timer_cb, (void *)pPlayView);
 
 	return EINA_FALSE;
 }
@@ -500,8 +500,9 @@ static void __vp_play_sound_route_change_cb(int nRoute, bool bAvailable, void *p
 
 	PlayView *pPlayView = (PlayView *)pUserData;
 
-	if (pPlayView->pNotiPipe)
+	if (pPlayView->pNotiPipe) {
 		ecore_pipe_write(pPlayView->pNotiPipe, pUserData, sizeof(PlayView));
+	}
 }
 
 static void __vp_play_sound_volume_change_cb(int nType, int nVolume, void *pUserData)
@@ -530,10 +531,18 @@ static void __vp_play_rotate_changed_cb(void *pUserData, Evas_Object *pObj, void
 	video_play_rotate_t nRotate = VIDEO_PLAY_ROTATE_NONE;
 
 	switch (nAngle) {
-	case 0:		nRotate = VIDEO_PLAY_ROTATE_NONE; break;
-	case 90:	nRotate = VIDEO_PLAY_ROTATE_90; break;
-	case 180:	nRotate = VIDEO_PLAY_ROTATE_180; break;
-	case 270:	nRotate = VIDEO_PLAY_ROTATE_270; break;
+	case 0:
+		nRotate = VIDEO_PLAY_ROTATE_NONE;
+		break;
+	case 90:
+		nRotate = VIDEO_PLAY_ROTATE_90;
+		break;
+	case 180:
+		nRotate = VIDEO_PLAY_ROTATE_180;
+		break;
+	case 270:
+		nRotate = VIDEO_PLAY_ROTATE_270;
+		break;
 	}
 
 	VideoLogWarning("CHANGE ROTATE : %d", nRotate);
@@ -543,7 +552,7 @@ static void __vp_play_rotate_changed_cb(void *pUserData, Evas_Object *pObj, void
 	}
 }
 
-static void __vp_play_view_realize_cb (void *pUserData)
+static void __vp_play_view_realize_cb(void *pUserData)
 {
 	if (!pUserData) {
 		VideoLogError("PlayView handle is NULL");
@@ -569,7 +578,7 @@ static void __vp_play_view_realize_cb (void *pUserData)
 	pPlayView->pCallback->pRealizeCb(pPlayView->pUserData);
 }
 
-static void __vp_play_view_destroy_cb (void *pUserData)
+static void __vp_play_view_destroy_cb(void *pUserData)
 {
 	if (!pUserData) {
 		VideoLogError("PlayView handle is NULL");
@@ -606,7 +615,7 @@ static void __vp_play_view_destroy_cb (void *pUserData)
 	elm_exit();
 }
 
-static Eina_Bool __vp_play_view_event_key_down_cb (void *pUserData, int nType, void *pEvent)
+static Eina_Bool __vp_play_view_event_key_down_cb(void *pUserData, int nType, void *pEvent)
 {
 	if (!pUserData) {
 		VideoLogError("PlayView handle is NULL");
@@ -725,8 +734,7 @@ static Eina_Bool __vp_play_view_event_key_down_cb (void *pUserData, int nType, v
 		if (pPlayView->nPlayMode == VIDEO_PLAY_MODE_NORMAL_VIEW) {
 			vp_play_normal_view_resume_or_pause(pPlayView->pNormalView);
 		}
-	}
-	else if (!strcmp(pKeyEvent->keyname, VP_PLAY_NEXT_SONG_KEY)) {
+	} else if (!strcmp(pKeyEvent->keyname, VP_PLAY_NEXT_SONG_KEY)) {
 		if (pPlayView->nPlayMode == VIDEO_PLAY_MODE_NORMAL_VIEW) {
 			vp_play_normal_view_next_play(pPlayView->pNormalView);
 		}
@@ -796,7 +804,7 @@ static Eina_Bool __vp_play_view_event_key_down_cb (void *pUserData, int nType, v
 
 	//For normal view hide control layout
 	if (!strcmp(pKeyEvent->keyname, "Tab") || !strcmp(pKeyEvent->keyname, "Right") || !strcmp(pKeyEvent->keyname, "Left")
-		|| !strcmp(pKeyEvent->keyname, "Up") || !strcmp(pKeyEvent->keyname, "Down")) {
+	        || !strcmp(pKeyEvent->keyname, "Up") || !strcmp(pKeyEvent->keyname, "Down")) {
 		if (pPlayView->nPlayMode == VIDEO_PLAY_MODE_NORMAL_VIEW) {
 			vp_play_normal_view_create_main_layout_hide_timer(pPlayView->pNormalView);
 		}
@@ -817,7 +825,7 @@ static Eina_Bool __vp_play_view_event_key_down_cb (void *pUserData, int nType, v
 	return EINA_FALSE;
 }
 
-static Eina_Bool __vp_play_view_event_key_up_cb (void *pUserData, int nType, void *pEvent)
+static Eina_Bool __vp_play_view_event_key_up_cb(void *pUserData, int nType, void *pEvent)
 {
 	if (!pUserData) {
 		VideoLogError("PlayView handle is NULL");
@@ -1136,7 +1144,7 @@ static void __vp_play_view_func_exit(void *pViewHandle)
 		Scenario 1 : Videos - Play - MultiWin - Idle - Change to PlayView(Maximize) - back => Launch Videos.
 	*/
 	if (pPlayView->bRelaunchCaller &&
-		pPlayView->bActivate == TRUE) {
+	        pPlayView->bActivate == TRUE) {
 
 		vp_play_app_launch_videos(pPlayView->pWin, TRUE, (void *)pPlayView);
 	}
@@ -1188,7 +1196,7 @@ static void _vp_play_view_create_volume_timer(PlayView *pPlayView)
 	VP_EVAS_TIMER_DEL(pPlayView->pVolumeTimer);
 
 	pPlayView->pVolumeTimer = ecore_timer_add(VP_PLAY_VIEW_VOLUME_TIMER,
-			__vp_play_view_volume_timer_cb, (void *)pPlayView);
+	                          __vp_play_view_volume_timer_cb, (void *)pPlayView);
 
 }
 
@@ -1204,7 +1212,7 @@ static Evas_Object *_vp_play_view_create_window(Evas_Object *pParent, const char
 
 	elm_win_title_set(pObj, pName);
 	evas_object_smart_callback_add(pObj, "delete,request",
-				       __vp_play_view_delete_request_cb, NULL);
+	                               __vp_play_view_delete_request_cb, NULL);
 
 	elm_win_indicator_mode_set(pObj, ELM_WIN_INDICATOR_SHOW);
 	elm_win_indicator_opacity_set(pObj, ELM_WIN_INDICATOR_TRANSPARENT);
@@ -1286,8 +1294,8 @@ static Evas_Object *_vp_play_view_create_layout(Evas_Object *pParent)
 	}
 
 	bRet = elm_layout_theme_set(pObj, VP_PLAY_CUSTOM_LAYOUT_KLASS,
-					VP_PLAY_CUSTOM_LAYOUT_GROUP,
-					VP_PLAY_CUSTOM_LAYOUT_STYLE);
+	                            VP_PLAY_CUSTOM_LAYOUT_GROUP,
+	                            VP_PLAY_CUSTOM_LAYOUT_STYLE);
 	if (bRet != EINA_TRUE) {
 		VideoLogError("elm_layout_theme_set fail");
 	}
@@ -1579,13 +1587,14 @@ static void _vp_play_view_net_status_changed_cb(connection_type_e type, void *pU
 	if (vp_play_util_rtsp_url_check((const char*)pPlayView->szMediaURL) == FALSE) {
 		VideoLogWarning("Not a RTSP/RTP url. skip wifi key changed signal");
 		return;
-	} else
+	} else {
 		VideoLogWarning("RTSP/RTP url");
-/*
-   Network change info
-   WIFI(2) -> OFF(0) -> CELLULAR(1)
-   CELLULAR(1) -> WIFI(2)
-*/
+	}
+	/*
+	   Network change info
+	   WIFI(2) -> OFF(0) -> CELLULAR(1)
+	   CELLULAR(1) -> WIFI(2)
+	*/
 	if (net_status == CONNECTION_TYPE_DISCONNECTED) {
 		VideoSecureLogInfo("network off");
 		if (pPlayView->nPlayMode == VIDEO_PLAY_MODE_NORMAL_VIEW) {
@@ -1614,8 +1623,9 @@ static void __vp_play_view_holl_ic_changed_cb(bool bCover_state, void *pUserData
 	}
 
 	PlayView *pPlayView = (PlayView *)pUserData;
-	if (pPlayView->bActivate == FALSE)
+	if (pPlayView->bActivate == FALSE) {
 		return;
+	}
 	VideoLogWarning("bCover_state : %d", bCover_state);
 
 	if (bCover_state == FALSE) {
@@ -1767,9 +1777,9 @@ play_view_handle vp_play_view_create(Evas_Object *pParent, Ecore_X_Window nParen
 	pPlayView->pVisiblility = ecore_event_handler_add(ECORE_X_EVENT_WINDOW_VISIBILITY_CHANGE, __vp_play_visibility_cb, (void *)pPlayView);
 	pPlayView->pClientMessage = ecore_event_handler_add(ECORE_X_EVENT_CLIENT_MESSAGE, __vp_play_client_message_cb, (void *)pPlayView);
 	pPlayView->pDeleteRequest = ecore_event_handler_add(ECORE_X_EVENT_WINDOW_DELETE_REQUEST, __vp_play_delete_request_cb, (void *)pPlayView);
-	pPlayView->pPropertyHandler = ecore_event_handler_add (ECORE_X_EVENT_WINDOW_PROPERTY, __vp_play_view_window_property_change, (void *)pPlayView);
-	pPlayView->pMouseInHandler = ecore_event_handler_add (ECORE_X_EVENT_MOUSE_IN, __vp_play_view_mouse_in_cb, (void *)pPlayView);
-	pPlayView->pMouseOutHandler = ecore_event_handler_add (ECORE_X_EVENT_MOUSE_OUT, __vp_play_view_mouse_out_cb, (void *)pPlayView);
+	pPlayView->pPropertyHandler = ecore_event_handler_add(ECORE_X_EVENT_WINDOW_PROPERTY, __vp_play_view_window_property_change, (void *)pPlayView);
+	pPlayView->pMouseInHandler = ecore_event_handler_add(ECORE_X_EVENT_MOUSE_IN, __vp_play_view_mouse_in_cb, (void *)pPlayView);
+	pPlayView->pMouseOutHandler = ecore_event_handler_add(ECORE_X_EVENT_MOUSE_OUT, __vp_play_view_mouse_out_cb, (void *)pPlayView);
 #endif
 
 	pPlayView->pNotiPipe = ecore_pipe_add((Ecore_Pipe_Cb)__vp_play_view_noti_pipe_cb, (void *)pPlayView);
@@ -1877,7 +1887,7 @@ bool vp_play_view_realize(play_view_handle pViewHandle)
 
 	pPlayView->bActivate = TRUE;
 	pPlayView->bVisible = TRUE;
-	vp_play_normal_view_key_create(pPlayView,pPlayView->pNormalView);
+	vp_play_normal_view_key_create(pPlayView, pPlayView->pNormalView);
 	vp_play_normal_view_set_share_panel_state(pPlayView->pNormalView);
 	if (pPlayView->bRealized == TRUE) {
 		VideoLogWarning("Already Realize state");
@@ -1907,8 +1917,8 @@ bool vp_play_view_realize(play_view_handle pViewHandle)
 
 		if (pPlayView->connection) {
 			ret = connection_set_type_changed_cb(pPlayView->connection,
-					_vp_play_view_net_status_changed_cb,
-					(void *)pPlayView);
+			                                     _vp_play_view_net_status_changed_cb,
+			                                     (void *)pPlayView);
 			if (ret != CONNECTION_ERROR_NONE) {
 				VideoLogWarning("Fail to register network status callback [%d]\n", ret);
 			}
@@ -2205,12 +2215,12 @@ bool vp_play_view_get_visible_status(play_view_handle pViewHandle, bool *bVisibl
 }
 
 bool vp_play_view_add_multi_path(play_view_handle pViewHandle,
-								const char *szURL,
-								char *szTitle,
-								char *szSubTitle,
-								int nPosition,
-								int nDuration,
-								bool bIsSameAP)
+                                 const char *szURL,
+                                 char *szTitle,
+                                 char *szSubTitle,
+                                 int nPosition,
+                                 int nDuration,
+                                 bool bIsSameAP)
 {
 	if (!pViewHandle) {
 		VideoLogError("PlayView handle is NULL");

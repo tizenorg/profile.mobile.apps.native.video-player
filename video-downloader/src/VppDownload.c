@@ -28,16 +28,14 @@
 #include "vp-file-util.h"
 
 /* download cb type. for download pipe data */
-typedef enum
-{
+typedef enum {
 	VPP_DOWNLOAD_CB_TYPE_STATE_CHANGED,
 	VPP_DOWNLOAD_CB_TYPE_PROGRESS,
-}VppDownloadCbType;
+} VppDownloadCbType;
 
 
 // download item
-typedef struct
-{
+typedef struct {
 	int					   	id;			   	/* downloader id */
 
 	char					*pDownloadUrl;  /* download url */
@@ -59,28 +57,26 @@ typedef struct
 	Ecore_Pipe				*pDownloadPipe;	/* internal pipe */
 
 	void				   	*pUserdata;	   	/* user data */
-}__VppDownloadItem;
+} __VppDownloadItem;
 
 
 // download list
-typedef struct
-{
+typedef struct {
 	Ecore_Timer	*downloadTimer;				/* internal timer */
 
 	int			currentDownloadingCount;	/* downloading item count */
 
 	Eina_List	*downloadList;				/* download item list */
-}__VppDownloadListData;
+} __VppDownloadListData;
 
 
 /* download pipe data */
-typedef struct
-{
+typedef struct {
 	__VppDownloadItem	*pItem;			/* download item */
 	unsigned long long 	received;		/* received file size from progress callback*/
 	VppDownloadCbType 	eCbType;		/* pipe callback type */
 	VppDownloadState	eState;			/* downloader state */
-}VppDownloadPipeData;
+} VppDownloadPipeData;
 
 
 __VppDownloadListData *g_download_list = NULL;
@@ -121,28 +117,24 @@ VppDownloadCreateItem(const char *pUrl, const char *pDstFolder, const char *pDst
 {
 	__VppDownloadItem*	pItem	= NULL;
 
-	if (pUrl == NULL)
-	{
+	if (pUrl == NULL) {
 		VideoLogError("pUrl == NULL!!!");
 		return NULL;
 	}
 
 
-	if (pDstFolder == NULL)
-	{
+	if (pDstFolder == NULL) {
 		VideoLogError("pDstFolder == NULL!!!");
 		return NULL;
 	}
 
-	if (cb.stateChangedCb == NULL)
-	{
+	if (cb.stateChangedCb == NULL) {
 		VideoLogError("cb.stateChangedCb == NULL!!!");
 		return NULL;
 	}
 
 	pItem						= calloc(1, sizeof(__VppDownloadItem));
-	if (pItem == NULL)
-	{
+	if (pItem == NULL) {
 		VideoLogError("pItem calloc fail!!!");
 		return NULL;
 	}
@@ -155,21 +147,15 @@ VppDownloadCreateItem(const char *pUrl, const char *pDstFolder, const char *pDst
 	pItem->pUserdata		= userData;
 	pItem->bSetNoti			= TRUE;
 
-	if (pDstName != NULL)
-	{
+	if (pDstName != NULL) {
 		pItem->pDstName = strdup(pDstName);
 	}
 
-	if (eType == VPP_DOWNLOAD_ITEM_TYPE_VIDEO_FILE || eType == VPP_DOWNLOAD_ITEM_TYPE_STORE_VIDEO_FILE)
-	{
+	if (eType == VPP_DOWNLOAD_ITEM_TYPE_VIDEO_FILE || eType == VPP_DOWNLOAD_ITEM_TYPE_STORE_VIDEO_FILE) {
 		pItem->bSetNoti			= TRUE;
-	}
-	else if (eType >= VPP_DOWNLOAD_ITEM_TYPE_VIDEO_INDEX_FILE && eType <= VPP_DOWNLOAD_ITEM_TYPE_RATING_IMAGE)
-	{
+	} else if (eType >= VPP_DOWNLOAD_ITEM_TYPE_VIDEO_INDEX_FILE && eType <= VPP_DOWNLOAD_ITEM_TYPE_RATING_IMAGE) {
 		pItem->bSetNoti			= FALSE;
-	}
-	else
-	{
+	} else {
 		VideoLogError("eType error : [%d]", eType);
 	}
 
@@ -184,24 +170,21 @@ VppDownloadCreateItemById(int nId, const char *pUrl, const char *pDstFolder, con
 {
 	__VppDownloadItem*	pItem	= NULL;
 
-	if (nId <= 0)
-	{
+	if (nId <= 0) {
 		VideoLogError("nId error : [%d]!!!", nId);
 		return NULL;
 	}
 
 
 	pItem						= VppDownloadCreateItem(pUrl, pDstFolder, pDstName, eType, cb, userData);
-	if (pItem == NULL)
-	{
+	if (pItem == NULL) {
 		VideoLogError("VppDownloadCreateItem fail!!!");
 		return NULL;
 	}
 
 	pItem->id					= nId;
 
-	if (VppDownloadSetCb((VppDownloadHandle)pItem, cb, pItem->pUserdata) == FALSE)
-	{
+	if (VppDownloadSetCb((VppDownloadHandle)pItem, cb, pItem->pUserdata) == FALSE) {
 		VideoLogError("VppDownloadSetCb error");
 		VppDownloadDestroyItem((VppDownloadHandle)pItem);
 
@@ -219,52 +202,44 @@ VppDownloadDestroyItem(VppDownloadHandle pHandle)
 	download_error_e	error	= DOWNLOAD_ERROR_NONE;
 	char				*pPath	= NULL;
 
-	if (pHandle == NULL)
-	{
+	if (pHandle == NULL) {
 		VideoLogError("pHandle == NULL");
 		return;
 	}
 
-	if (pItem->pDownloadPipe != NULL)
-	{
+	if (pItem->pDownloadPipe != NULL) {
 		ecore_pipe_del(pItem->pDownloadPipe);
 		pItem->pDownloadPipe	= NULL;
 	}
 
 	pPath	= VppDownloadGetDownloadedFilePath(pHandle);
 
-	if (pItem->pDownloadUrl != NULL)
-	{
+	if (pItem->pDownloadUrl != NULL) {
 		free(pItem->pDownloadUrl);
 		pItem->pDownloadUrl	= NULL;
 	}
 
-	if (pItem->pDstFolder != NULL)
-	{
+	if (pItem->pDstFolder != NULL) {
 		free(pItem->pDstFolder);
 		pItem->pDstFolder	= NULL;
 	}
 
-	if (pItem->pDstName != NULL)
-	{
+	if (pItem->pDstName != NULL) {
 		free(pItem->pDstName);
 		pItem->pDstName	= NULL;
 	}
 
-	if (pItem->pTempPath != NULL)
-	{
+	if (pItem->pTempPath != NULL) {
 		free(pItem->pTempPath);
 		pItem->pTempPath	= NULL;
 	}
 
-	if (pItem->pEtag != NULL)
-	{
+	if (pItem->pEtag != NULL) {
 		free(pItem->pEtag);
 		pItem->pEtag	= NULL;
 	}
 
-	if (pItem->id > 0)
-	{
+	if (pItem->id > 0) {
 		VppDownloadUnsetCb(pItem);
 
 		VppDownloadState	state	= VppDownloadGetState(pItem);
@@ -279,34 +254,28 @@ VppDownloadDestroyItem(VppDownloadHandle pHandle)
 		}
 		*/
 
-		if (state != VPP_DOWNLOAD_STATE_COMPLETED)
-		{
-			if (pPath != NULL && vp_file_exists((const char*)pPath) == EINA_TRUE)
-			{
+		if (state != VPP_DOWNLOAD_STATE_COMPLETED) {
+			if (pPath != NULL && vp_file_exists((const char*)pPath) == EINA_TRUE) {
 				vp_file_unlink((const char*)pPath);
 			}
 		}
 
 		error	= download_set_notification_type(pItem->id, DOWNLOAD_NOTIFICATION_TYPE_NONE);
-		if (error != DOWNLOAD_ERROR_NONE)
-		{
+		if (error != DOWNLOAD_ERROR_NONE) {
 			__VppDownloadPrintErr(error);
 		}
 
 		error	= download_destroy(pItem->id);
-		if (error != DOWNLOAD_ERROR_NONE)
-		{
+		if (error != DOWNLOAD_ERROR_NONE) {
 			__VppDownloadPrintErr(error);
 		}
 	}
 
-	if (pItem->eType < VPP_DOWNLOAD_ITEM_TYPE_STORE_VIDEO_FILE || pItem->eType > VPP_DOWNLOAD_ITEM_TYPE_VIDEO_CAPTION_FILE)
-	{
+	if (pItem->eType < VPP_DOWNLOAD_ITEM_TYPE_STORE_VIDEO_FILE || pItem->eType > VPP_DOWNLOAD_ITEM_TYPE_VIDEO_CAPTION_FILE) {
 		__VppDownloadListRemove(pHandle);
 	}
 
-	if (pPath != NULL)
-	{
+	if (pPath != NULL) {
 		free(pPath);
 		pPath	= NULL;
 	}
@@ -322,8 +291,7 @@ VppDownloadDestroyItemById(int nId)
 	download_error_e	error	= DOWNLOAD_ERROR_NONE;
 
 	error	= download_destroy(nId);
-	if (error != DOWNLOAD_ERROR_NONE)
-	{
+	if (error != DOWNLOAD_ERROR_NONE) {
 		__VppDownloadPrintErr(error);
 	}
 }
@@ -336,38 +304,32 @@ VppDownloadClearItem(VppDownloadHandle pHandle)
 	__VppDownloadItem*	pItem	= (__VppDownloadItem*)pHandle;
 //	download_error_e	error	= DOWNLOAD_ERROR_NONE;
 
-	if (pHandle == NULL)
-	{
+	if (pHandle == NULL) {
 		VideoLogError("pHandle == NULL");
 		return;
 	}
 
-	if (pItem->pDownloadPipe != NULL)
-	{
+	if (pItem->pDownloadPipe != NULL) {
 		ecore_pipe_del(pItem->pDownloadPipe);
 		pItem->pDownloadPipe	= NULL;
 	}
 
-	if (pItem->pDownloadUrl != NULL)
-	{
+	if (pItem->pDownloadUrl != NULL) {
 		free(pItem->pDownloadUrl);
 		pItem->pDownloadUrl	= NULL;
 	}
 
-	if (pItem->pDstFolder != NULL)
-	{
+	if (pItem->pDstFolder != NULL) {
 		free(pItem->pDstFolder);
 		pItem->pDstFolder	= NULL;
 	}
 
-	if (pItem->pDstName != NULL)
-	{
+	if (pItem->pDstName != NULL) {
 		free(pItem->pDstName);
 		pItem->pDstName	= NULL;
 	}
 
-	if (pItem->id > 0)
-	{
+	if (pItem->id > 0) {
 		VppDownloadUnsetCb(pItem);
 	}
 
@@ -381,28 +343,23 @@ VppDownloadStartVideoStoreVideoItem(VppDownloadHandle pHandle, void *pOnGoingSer
 {
 	__VppDownloadItem*	pItem	= (__VppDownloadItem*)pHandle;
 
-	if (pHandle == NULL)
-	{
+	if (pHandle == NULL) {
 		VideoLogError("pHandle == NULL");
 		return FALSE;
 	}
 
-	if (pItem->id <= 0)
-	{
-		if (__VppDownloadCreate(pItem) == FALSE)
-		{
+	if (pItem->id <= 0) {
+		if (__VppDownloadCreate(pItem) == FALSE) {
 			VideoLogError("__VppDownloadCreate faile !!!");
 			return FALSE;
 		}
 	}
 
-	if (pOnGoingServiceData != NULL)
-	{
+	if (pOnGoingServiceData != NULL) {
 		int		error	= 0;
 
 		error	= download_set_notification_app_control(pItem->id, DOWNLOAD_NOTIFICATION_APP_CONTROL_TYPE_ONGOING, (app_control_h)pOnGoingServiceData);
-		if (error != DOWNLOAD_ERROR_NONE)
-		{
+		if (error != DOWNLOAD_ERROR_NONE) {
 			VideoLogError("download_get_downloaded_file_path error");
 			__VppDownloadPrintErr(error);
 
@@ -410,13 +367,11 @@ VppDownloadStartVideoStoreVideoItem(VppDownloadHandle pHandle, void *pOnGoingSer
 		}
 	}
 
-	if (pCompleteServiceData != NULL)
-	{
+	if (pCompleteServiceData != NULL) {
 		int		error	= 0;
 
 		error	= download_set_notification_app_control(pItem->id, DOWNLOAD_NOTIFICATION_APP_CONTROL_TYPE_COMPLETE, (app_control_h)pCompleteServiceData);
-		if (error != DOWNLOAD_ERROR_NONE)
-		{
+		if (error != DOWNLOAD_ERROR_NONE) {
 			VideoLogError("download_get_downloaded_file_path error");
 			__VppDownloadPrintErr(error);
 
@@ -424,8 +379,7 @@ VppDownloadStartVideoStoreVideoItem(VppDownloadHandle pHandle, void *pOnGoingSer
 		}
 	}
 
-	if (__VppDownloadStart((__VppDownloadItem*)pHandle, FALSE) == FALSE)
-	{
+	if (__VppDownloadStart((__VppDownloadItem*)pHandle, FALSE) == FALSE) {
 		VideoLogError("fail __VppDownloadStart!!!");
 		return FALSE;
 	}
@@ -441,8 +395,7 @@ VppDownloadSetCb(VppDownloadHandle pHandle, VppDownloadCallback cb, void *userDa
 
 	download_error_e	error	= DOWNLOAD_ERROR_NONE;
 
-	if (pHandle == NULL)
-	{
+	if (pHandle == NULL) {
 		VideoLogError("pHandle == NULL");
 		return FALSE;
 	}
@@ -451,34 +404,27 @@ VppDownloadSetCb(VppDownloadHandle pHandle, VppDownloadCallback cb, void *userDa
 
 	pItem->pUserdata	= userData;
 
-	if (cb.progressCb != NULL)
-	{
+	if (cb.progressCb != NULL) {
 		pItem->progressCb		= cb.progressCb;
-		if (pItem->id > 0)
-		{
+		if (pItem->id > 0) {
 			error	= download_set_progress_cb(pItem->id, __VppDownloadProgressCb, pItem);
-			if (error != DOWNLOAD_ERROR_NONE)
-			{
+			if (error != DOWNLOAD_ERROR_NONE) {
 				__VppDownloadPrintErr(error);
 			}
 		}
 	}
 
-	if (cb.stateChangedCb != NULL)
-	{
+	if (cb.stateChangedCb != NULL) {
 		pItem->stateChangedCb	= cb.stateChangedCb;
-		if (pItem->id > 0)
-		{
-			error	= download_set_state_changed_cb(pItem->id,__VppDownloadStateChangedCb, pItem);
-			if (error != DOWNLOAD_ERROR_NONE)
-			{
+		if (pItem->id > 0) {
+			error	= download_set_state_changed_cb(pItem->id, __VppDownloadStateChangedCb, pItem);
+			if (error != DOWNLOAD_ERROR_NONE) {
 				__VppDownloadPrintErr(error);
 			}
 		}
 	}
 
-	if (error != DOWNLOAD_ERROR_NONE)
-	{
+	if (error != DOWNLOAD_ERROR_NONE) {
 		return FALSE;
 	}
 
@@ -493,28 +439,22 @@ VppDownloadUnsetCb(VppDownloadHandle pHandle)
 
 	download_error_e	error	= DOWNLOAD_ERROR_NONE;
 
-	if (pHandle == NULL)
-	{
+	if (pHandle == NULL) {
 		VideoLogError("pHandle == NULL");
 		return FALSE;
 	}
 
-	if (pItem->id > 0)
-	{
-		if (pItem->progressCb	!= NULL)
-		{
+	if (pItem->id > 0) {
+		if (pItem->progressCb	!= NULL) {
 			error	= download_unset_progress_cb(pItem->id);
-			if (error != DOWNLOAD_ERROR_NONE)
-			{
+			if (error != DOWNLOAD_ERROR_NONE) {
 				__VppDownloadPrintErr(error);
 			}
 		}
 
-		if (pItem->stateChangedCb	!= NULL)
-		{
+		if (pItem->stateChangedCb	!= NULL) {
 			error	= download_unset_state_changed_cb(pItem->id);
-			if (error != DOWNLOAD_ERROR_NONE)
-			{
+			if (error != DOWNLOAD_ERROR_NONE) {
 				__VppDownloadPrintErr(error);
 			}
 		}
@@ -524,8 +464,7 @@ VppDownloadUnsetCb(VppDownloadHandle pHandle)
 	pItem->stateChangedCb 	= NULL;
 	pItem->pUserdata		= NULL;
 
-	if (error != DOWNLOAD_ERROR_NONE)
-	{
+	if (error != DOWNLOAD_ERROR_NONE) {
 		return FALSE;
 	}
 
@@ -552,14 +491,12 @@ VppDownloadPause(VppDownloadHandle pHandle)
 {
 	__VppDownloadItem*	pItem	= (__VppDownloadItem*)pHandle;
 
-	if (pHandle == NULL)
-	{
+	if (pHandle == NULL) {
 		VideoLogError("pHandle == NULL");
 		return FALSE;
 	}
 
-	if (pItem->id <= 0)
-	{
+	if (pItem->id <= 0) {
 		VideoLogError("pItem->id : [%d]!!!", pItem->id);
 		return FALSE;
 	}
@@ -567,8 +504,7 @@ VppDownloadPause(VppDownloadHandle pHandle)
 	download_error_e	error	= DOWNLOAD_ERROR_NONE;
 
 	error	= download_pause(pItem->id);
-	if (error != DOWNLOAD_ERROR_NONE)
-	{
+	if (error != DOWNLOAD_ERROR_NONE) {
 		__VppDownloadPrintErr(error);
 
 		return FALSE;
@@ -590,14 +526,12 @@ VppDownloadCancel(VppDownloadHandle pHandle)
 {
 	__VppDownloadItem*	pItem	= (__VppDownloadItem*)pHandle;
 
-	if (pHandle == NULL)
-	{
+	if (pHandle == NULL) {
 		VideoLogError("pHandle == NULL");
 		return FALSE;
 	}
 
-	if (pItem->id <= 0)
-	{
+	if (pItem->id <= 0) {
 		VideoLogError("pItem->id : [%d]!!!", pItem->id);
 		return FALSE;
 	}
@@ -605,8 +539,7 @@ VppDownloadCancel(VppDownloadHandle pHandle)
 	download_error_e	error	= DOWNLOAD_ERROR_NONE;
 
 	error	= download_cancel(pItem->id);
-	if (error != DOWNLOAD_ERROR_NONE)
-	{
+	if (error != DOWNLOAD_ERROR_NONE) {
 		__VppDownloadPrintErr(error);
 
 		return FALSE;
@@ -626,35 +559,30 @@ VppDownloadStoreVideoRestore(VppDownloadHandle pHandle)
 	int					nRet		= 0;
 	char 				szTemp[32] 	= {0,};
 
-	if (pHandle == NULL)
-	{
+	if (pHandle == NULL) {
 		VideoLogError("pHandle == NULL");
 		return FALSE;
 	}
 
-	if (pItem->pTempPath == NULL)
-	{
+	if (pItem->pTempPath == NULL) {
 		VideoLogError("pItem->pTempPath!!!");
 		return FALSE;
 	}
 
-	if (pItem->pEtag == NULL)
-	{
+	if (pItem->pEtag == NULL) {
 		VideoLogError("pItem->pEtag!!!");
 		return FALSE;
 	}
 
 	nRet	= download_set_temp_file_path(pItem->id, pItem->pTempPath);
-	if (nRet != DOWNLOAD_ERROR_NONE)
-	{
+	if (nRet != DOWNLOAD_ERROR_NONE) {
 		VideoLogError("download_set_temp_file_path failed!!!");
 		__VppDownloadPrintErr(nRet);
 		return FALSE;
 	}
 
 	nRet	= download_add_http_header_field(pItem->id, "If-Range", pItem->pEtag);
-	if (nRet != DOWNLOAD_ERROR_NONE)
-	{
+	if (nRet != DOWNLOAD_ERROR_NONE) {
 		VideoLogError("download_add_http_header_field failed!!!");
 		__VppDownloadPrintErr(nRet);
 		return FALSE;
@@ -665,16 +593,14 @@ VppDownloadStoreVideoRestore(VppDownloadHandle pHandle)
 	snprintf(szTemp, sizeof(szTemp), "bytes=%llu-", lFileSize);
 
 	nRet	= download_add_http_header_field(pItem->id, "Range", szTemp);
-	if (nRet != DOWNLOAD_ERROR_NONE)
-	{
+	if (nRet != DOWNLOAD_ERROR_NONE) {
 		VideoLogError("download_add_http_header_field failed!!!");
 		__VppDownloadPrintErr(nRet);
 		return FALSE;
 	}
 
 	nRet	= download_start(pItem->id);
-	if (nRet != DOWNLOAD_ERROR_NONE)
-	{
+	if (nRet != DOWNLOAD_ERROR_NONE) {
 		VideoLogError("download_start failed!!!");
 		__VppDownloadPrintErr(nRet);
 		return FALSE;
@@ -689,14 +615,12 @@ VppDownloadGetState(VppDownloadHandle pHandle)
 {
 	__VppDownloadItem*	pItem	= (__VppDownloadItem*)pHandle;
 
-	if (pHandle == NULL)
-	{
+	if (pHandle == NULL) {
 		VideoLogError("pHandle == NULL");
 		return VPP_DOWNLOAD_STATE_APP_ERROR;
 	}
 
-	if (pItem->id <= 0)
-	{
+	if (pItem->id <= 0) {
 		VideoLogError("id error: [%d]", pItem->id);
 		return VPP_DOWNLOAD_STATE_APP_ERROR;
 	}
@@ -705,8 +629,7 @@ VppDownloadGetState(VppDownloadHandle pHandle)
 	download_state_e  	state	= DOWNLOAD_STATE_NONE;
 
 	error	= download_get_state(pItem->id, &state);
-	if (error != DOWNLOAD_ERROR_NONE)
-	{
+	if (error != DOWNLOAD_ERROR_NONE) {
 		__VppDownloadPrintErr(error);
 		return VPP_DOWNLOAD_STATE_AGENT_ERROR;
 	}
@@ -718,8 +641,7 @@ VppDownloadGetState(VppDownloadHandle pHandle)
 VppDownloadState
 VppDownloadGetStateById(int nDownloadId)
 {
-	if (nDownloadId <= 0)
-	{
+	if (nDownloadId <= 0) {
 		VideoLogError("id error: [%d]", nDownloadId);
 		return VPP_DOWNLOAD_STATE_APP_ERROR;
 	}
@@ -728,8 +650,7 @@ VppDownloadGetStateById(int nDownloadId)
 	download_state_e  	state	= DOWNLOAD_STATE_NONE;
 
 	error	= download_get_state(nDownloadId, &state);
-	if (error != DOWNLOAD_ERROR_NONE)
-	{
+	if (error != DOWNLOAD_ERROR_NONE) {
 		__VppDownloadPrintErr(error);
 		return VPP_DOWNLOAD_STATE_AGENT_ERROR;
 	}
@@ -741,8 +662,7 @@ VppDownloadGetStateById(int nDownloadId)
 char*
 VppDownloadGetDownloadedFilePath(VppDownloadHandle pHandle)
 {
-	if (pHandle == NULL)
-	{
+	if (pHandle == NULL) {
 		VideoLogError("pHandle == NULL");
 		return NULL;
 	}
@@ -754,49 +674,37 @@ VppDownloadGetDownloadedFilePath(VppDownloadHandle pHandle)
 	char				*pPath	= NULL;
 	char	sDestPath[PATH_MAX] = {0,};
 
-	if (pItem->id <= 0)
-	{
+	if (pItem->id <= 0) {
 		VideoLogWarning("id error: [%d]", pItem->id);
 		return NULL;
 	}
 
-	if (pItem->pDstFolder != NULL && pItem->pDstName != NULL)
-	{
-		if (pItem->pDstFolder[strlen(pItem->pDstFolder)-1] == '/')
-		{
+	if (pItem->pDstFolder != NULL && pItem->pDstName != NULL) {
+		if (pItem->pDstFolder[strlen(pItem->pDstFolder) - 1] == '/') {
 			snprintf(sDestPath, PATH_MAX, "%s%s", pItem->pDstFolder, pItem->pDstName);
-		}
-		else
-		{
+		} else {
 			snprintf(sDestPath, PATH_MAX, "%s/%s", pItem->pDstFolder, pItem->pDstName);
 		}
 
 		VideoSecureLogDebug("Path : [%s]:%s,%s,%d", sDestPath,  pItem->pDstFolder[strlen(pItem->pDstFolder)], pItem->pDstFolder, strlen(pItem->pDstFolder));
 
 		return strdup(sDestPath);
-	}
-	else
-	{
+	} else {
 		error	= download_get_downloaded_file_path(pItem->id, &pPath);
-		if (error != DOWNLOAD_ERROR_NONE)
-		{
+		if (error != DOWNLOAD_ERROR_NONE) {
 			VideoLogError("download_get_downloaded_file_path error");
 			__VppDownloadPrintErr(error);
 
-			if (pPath != NULL)
-			{
+			if (pPath != NULL) {
 				free(pPath);
 				pPath	= NULL;
 			}
 		}
 
-		if (pPath != NULL)
-		{
+		if (pPath != NULL) {
 			VideoSecureLogDebug("Path : [%s]", pPath);
 			return pPath;
-		}
-		else
-		{
+		} else {
 			VideoLogDebug("pPath == NULL");
 			return NULL;
 		}
@@ -807,8 +715,7 @@ VppDownloadGetDownloadedFilePath(VppDownloadHandle pHandle)
 int
 VppDownloadGetDownloadId(VppDownloadHandle pHandle)
 {
-	if (pHandle == NULL)
-	{
+	if (pHandle == NULL) {
 		VideoLogError("pHandle == NULL ");
 		return 0;
 	}
@@ -824,14 +731,12 @@ VppDownloadSetNotificationAppControl(VppDownloadHandle pHandle, void *pData)
 {
 	download_error_e	error	= DOWNLOAD_ERROR_NONE;
 
-	if (pHandle == NULL)
-	{
+	if (pHandle == NULL) {
 		VideoLogError("pHandle == NULL ");
 		return FALSE;
 	}
 
-	if (pData == NULL)
-	{
+	if (pData == NULL) {
 		VideoLogError("pData == NULL ");
 		return FALSE;
 	}
@@ -839,8 +744,7 @@ VppDownloadSetNotificationAppControl(VppDownloadHandle pHandle, void *pData)
 	__VppDownloadItem*	pItem	= (__VppDownloadItem*)pHandle;
 
 	error	= download_set_notification_app_control(pItem->id, DOWNLOAD_NOTIFICATION_APP_CONTROL_TYPE_ONGOING, (app_control_h)pData);
-	if (error != DOWNLOAD_ERROR_NONE)
-	{
+	if (error != DOWNLOAD_ERROR_NONE) {
 		VideoLogError("download_get_downloaded_file_path error");
 		__VppDownloadPrintErr(error);
 
@@ -857,8 +761,7 @@ VppDownloadGetNotificationAppControl(VppDownloadHandle pHandle)
 	download_error_e	error	= DOWNLOAD_ERROR_NONE;
 	app_control_h				*b		= NULL;
 
-	if (pHandle == NULL)
-	{
+	if (pHandle == NULL) {
 		VideoLogError("pHandle == NULL ");
 		return NULL;
 	}
@@ -866,8 +769,7 @@ VppDownloadGetNotificationAppControl(VppDownloadHandle pHandle)
 	__VppDownloadItem*	pItem	= (__VppDownloadItem*)pHandle;
 
 	error	= download_get_notification_app_control(pItem->id, DOWNLOAD_NOTIFICATION_APP_CONTROL_TYPE_ONGOING, b);
-	if (error != DOWNLOAD_ERROR_NONE)
-	{
+	if (error != DOWNLOAD_ERROR_NONE) {
 		VideoLogError("download_get_downloaded_file_path error");
 		__VppDownloadPrintErr(error);
 
@@ -884,108 +786,87 @@ VppDownloadGetNotificationAppControl(VppDownloadHandle pHandle)
 void
 __VppDownloadPrintErr(download_error_e err)
 {
-	switch (err)
-	{
-	case DOWNLOAD_ERROR_NONE:
-		{
-			VideoLogError("err == DOWNLOAD_ERROR_NONE");
-		}
-		break;
-	case DOWNLOAD_ERROR_INVALID_PARAMETER:
-		{
-			VideoLogError("err == DOWNLOAD_ERROR_INVALID_PARAMETER");
-		}
-		break;
-	case DOWNLOAD_ERROR_OUT_OF_MEMORY:
-		{
-			VideoLogError("err == DOWNLOAD_ERROR_OUT_OF_MEMORY");
-		}
-		break;
-	case DOWNLOAD_ERROR_NETWORK_UNREACHABLE:
-		{
-			VideoLogError("err == DOWNLOAD_ERROR_NETWORK_UNREACHABLE");
-		}
-		break;
-	case DOWNLOAD_ERROR_CONNECTION_TIMED_OUT:
-		{
-			VideoLogError("err == DOWNLOAD_ERROR_CONNECTION_TIMED_OUT");
-		}
-		break;
-	case DOWNLOAD_ERROR_NO_SPACE:
-		{
-			VideoLogError("err == DOWNLOAD_ERROR_NO_SPACE");
-		}
-		break;
-	case DOWNLOAD_ERROR_FIELD_NOT_FOUND:
-		{
-			VideoLogError("err == DOWNLOAD_ERROR_FIELD_NOT_FOUND");
-		}
-		break;
-	case DOWNLOAD_ERROR_INVALID_STATE:
-		{
-			VideoLogError("err == DOWNLOAD_ERROR_INVALID_STATE");
-		}
-		break;
-	case DOWNLOAD_ERROR_CONNECTION_FAILED:
-		{
-			VideoLogError("err == DOWNLOAD_ERROR_CONNECTION_FAILED");
-		}
-		break;
-	case DOWNLOAD_ERROR_INVALID_URL:
-		{
-			VideoLogError("err == DOWNLOAD_ERROR_INVALID_URL");
-		}
-		break;
-	case DOWNLOAD_ERROR_INVALID_DESTINATION:
-		{
-			VideoLogError("err == DOWNLOAD_ERROR_INVALID_DESTINATION");
-		}
-		break;
-	case DOWNLOAD_ERROR_TOO_MANY_DOWNLOADS:
-		{
-			VideoLogError("err == DOWNLOAD_ERROR_TOO_MANY_DOWNLOADS");
-		}
-		break;
-	case DOWNLOAD_ERROR_QUEUE_FULL:
-		{
-			VideoLogError("err == DOWNLOAD_ERROR_QUEUE_FULL");
-		}
-		break;
-	case DOWNLOAD_ERROR_ALREADY_COMPLETED:
-		{
-			VideoLogError("err == DOWNLOAD_ERROR_ALREADY_COMPLETED");
-		}
-		break;
-	case DOWNLOAD_ERROR_FILE_ALREADY_EXISTS:
-		{
-			VideoLogError("err == DOWNLOAD_ERROR_FILE_ALREADY_EXISTS");
-		}
-		break;
-	case DOWNLOAD_ERROR_TOO_MANY_REDIRECTS:
-		{
-			VideoLogError("err == DOWNLOAD_ERROR_TOO_MANY_REDIRECTS");
-		}
-		break;
-	case DOWNLOAD_ERROR_UNHANDLED_HTTP_CODE:
-		{
-			VideoLogError("err == DOWNLOAD_ERROR_UNHANDLED_HTTP_CODE");
-		}
-		break;
-	case DOWNLOAD_ERROR_NO_DATA:
-		{
-			VideoLogError("err == DOWNLOAD_ERROR_NO_DATA");
-		}
-		break;
-	case DOWNLOAD_ERROR_IO_ERROR:
-		{
-			VideoLogError("err == DOWNLOAD_ERROR_IO_ERROR");
-		}
-		break;
-	default:
-		{
-			VideoLogError("UNKNOW err == [%d]", err);
-		}
-		break;
+	switch (err) {
+	case DOWNLOAD_ERROR_NONE: {
+		VideoLogError("err == DOWNLOAD_ERROR_NONE");
+	}
+	break;
+	case DOWNLOAD_ERROR_INVALID_PARAMETER: {
+		VideoLogError("err == DOWNLOAD_ERROR_INVALID_PARAMETER");
+	}
+	break;
+	case DOWNLOAD_ERROR_OUT_OF_MEMORY: {
+		VideoLogError("err == DOWNLOAD_ERROR_OUT_OF_MEMORY");
+	}
+	break;
+	case DOWNLOAD_ERROR_NETWORK_UNREACHABLE: {
+		VideoLogError("err == DOWNLOAD_ERROR_NETWORK_UNREACHABLE");
+	}
+	break;
+	case DOWNLOAD_ERROR_CONNECTION_TIMED_OUT: {
+		VideoLogError("err == DOWNLOAD_ERROR_CONNECTION_TIMED_OUT");
+	}
+	break;
+	case DOWNLOAD_ERROR_NO_SPACE: {
+		VideoLogError("err == DOWNLOAD_ERROR_NO_SPACE");
+	}
+	break;
+	case DOWNLOAD_ERROR_FIELD_NOT_FOUND: {
+		VideoLogError("err == DOWNLOAD_ERROR_FIELD_NOT_FOUND");
+	}
+	break;
+	case DOWNLOAD_ERROR_INVALID_STATE: {
+		VideoLogError("err == DOWNLOAD_ERROR_INVALID_STATE");
+	}
+	break;
+	case DOWNLOAD_ERROR_CONNECTION_FAILED: {
+		VideoLogError("err == DOWNLOAD_ERROR_CONNECTION_FAILED");
+	}
+	break;
+	case DOWNLOAD_ERROR_INVALID_URL: {
+		VideoLogError("err == DOWNLOAD_ERROR_INVALID_URL");
+	}
+	break;
+	case DOWNLOAD_ERROR_INVALID_DESTINATION: {
+		VideoLogError("err == DOWNLOAD_ERROR_INVALID_DESTINATION");
+	}
+	break;
+	case DOWNLOAD_ERROR_TOO_MANY_DOWNLOADS: {
+		VideoLogError("err == DOWNLOAD_ERROR_TOO_MANY_DOWNLOADS");
+	}
+	break;
+	case DOWNLOAD_ERROR_QUEUE_FULL: {
+		VideoLogError("err == DOWNLOAD_ERROR_QUEUE_FULL");
+	}
+	break;
+	case DOWNLOAD_ERROR_ALREADY_COMPLETED: {
+		VideoLogError("err == DOWNLOAD_ERROR_ALREADY_COMPLETED");
+	}
+	break;
+	case DOWNLOAD_ERROR_FILE_ALREADY_EXISTS: {
+		VideoLogError("err == DOWNLOAD_ERROR_FILE_ALREADY_EXISTS");
+	}
+	break;
+	case DOWNLOAD_ERROR_TOO_MANY_REDIRECTS: {
+		VideoLogError("err == DOWNLOAD_ERROR_TOO_MANY_REDIRECTS");
+	}
+	break;
+	case DOWNLOAD_ERROR_UNHANDLED_HTTP_CODE: {
+		VideoLogError("err == DOWNLOAD_ERROR_UNHANDLED_HTTP_CODE");
+	}
+	break;
+	case DOWNLOAD_ERROR_NO_DATA: {
+		VideoLogError("err == DOWNLOAD_ERROR_NO_DATA");
+	}
+	break;
+	case DOWNLOAD_ERROR_IO_ERROR: {
+		VideoLogError("err == DOWNLOAD_ERROR_IO_ERROR");
+	}
+	break;
+	default: {
+		VideoLogError("UNKNOW err == [%d]", err);
+	}
+	break;
 	}
 }
 
@@ -993,8 +874,7 @@ __VppDownloadPrintErr(download_error_e err)
 void
 __VppDownloadListInitialize()
 {
-	if (g_download_list != NULL)
-	{
+	if (g_download_list != NULL) {
 		__VppDestoryDownloadListDestory();
 	}
 
@@ -1005,32 +885,26 @@ __VppDownloadListInitialize()
 void
 __VppDestoryDownloadListDestory()
 {
-	if (g_download_list == NULL)
-	{
+	if (g_download_list == NULL) {
 		VideoLogError("g_download_list == NULL!!!");
 		return;
 	}
 
-	if (g_download_list->downloadTimer != NULL)
-	{
+	if (g_download_list->downloadTimer != NULL) {
 		ecore_timer_del(g_download_list->downloadTimer);
 		g_download_list->downloadTimer	= NULL;
 	}
 
-	if (g_download_list->downloadList != NULL)
-	{
-		if (__VppDownloadListCount() > 0)
-		{
+	if (g_download_list->downloadList != NULL) {
+		if (__VppDownloadListCount() > 0) {
 			VideoLogError("list count error[%d]!!!. some data are not destoryed!!!", __VppDownloadListCount());
 		}
 
 		Eina_List			*l;
 		__VppDownloadItem	*pItem;
 
-		EINA_LIST_FOREACH(g_download_list->downloadList, l, pItem)
-		{
-			if (pItem != NULL)
-			{
+		EINA_LIST_FOREACH(g_download_list->downloadList, l, pItem) {
+			if (pItem != NULL) {
 				VideoLogError("list item is not freed!!!");
 				VideoSecureLogError("list item type[%d], url[%s], pDstFolder[%s], pDstName[%s]!!!", pItem->eType, pItem->pDownloadUrl, pItem->pDstFolder, pItem->pDstName);
 
@@ -1053,36 +927,29 @@ __VppDownloadCreate(__VppDownloadItem* pItem)
 	download_error_e	error	= DOWNLOAD_ERROR_NONE;
 
 	error	= download_create(&(pItem->id));
-	if (error != DOWNLOAD_ERROR_NONE)
-	{
+	if (error != DOWNLOAD_ERROR_NONE) {
 		VideoLogError("download_create error");
 		goto ERROR_HANDLE;
 	}
 
 	error	= download_set_url(pItem->id, (const char*)pItem->pDownloadUrl);
-	if (error != DOWNLOAD_ERROR_NONE)
-	{
+	if (error != DOWNLOAD_ERROR_NONE) {
 		VideoLogError("download_set_url error");
 		goto ERROR_HANDLE;
 	}
 
 	error	= download_set_destination(pItem->id, (const char*)(pItem->pDstFolder));
-	if (error != DOWNLOAD_ERROR_NONE)
-	{
+	if (error != DOWNLOAD_ERROR_NONE) {
 		VideoLogError("download_set_destination error");
 		goto ERROR_HANDLE;
 	}
 
-	if (pItem->pDstName != NULL)
-	{
+	if (pItem->pDstName != NULL) {
 		char	szDestName[PATH_MAX]	= {0,};
 
-		if (pItem->eType != VPP_DOWNLOAD_ITEM_TYPE_VIDEO_FILE && pItem->eType != VPP_DOWNLOAD_ITEM_TYPE_STORE_VIDEO_FILE)
-		{
+		if (pItem->eType != VPP_DOWNLOAD_ITEM_TYPE_VIDEO_FILE && pItem->eType != VPP_DOWNLOAD_ITEM_TYPE_STORE_VIDEO_FILE) {
 			snprintf(szDestName, PATH_MAX, "%s%s", pItem->pDstName, ".temp");
-		}
-		else
-		{
+		} else {
 			int dstlength = strlen(pItem->pDstName);
 			if (dstlength + 1 <= PATH_MAX) {
 				strncpy(szDestName, pItem->pDstName, dstlength);
@@ -1090,24 +957,19 @@ __VppDownloadCreate(__VppDownloadItem* pItem)
 		}
 
 		error	= download_set_file_name(pItem->id, (const char*)szDestName);
-		if (error != DOWNLOAD_ERROR_NONE)
-		{
+		if (error != DOWNLOAD_ERROR_NONE) {
 			VideoLogError("download_set_file_name error");
 			goto ERROR_HANDLE;
 		}
 	}
 
-	if (pItem->bSetNoti == TRUE)
-	{
+	if (pItem->bSetNoti == TRUE) {
 		error	= download_set_notification_type(pItem->id, DOWNLOAD_NOTIFICATION_TYPE_ALL);
-	}
-	else
-	{
+	} else {
 		error	= download_set_notification_type(pItem->id, DOWNLOAD_NOTIFICATION_TYPE_NONE);
 	}
 
-	if (error != DOWNLOAD_ERROR_NONE)
-	{
+	if (error != DOWNLOAD_ERROR_NONE) {
 		VideoLogError("download_set_notification error");
 		goto ERROR_HANDLE;
 	}
@@ -1116,8 +978,7 @@ __VppDownloadCreate(__VppDownloadItem* pItem)
 	cb.progressCb			= pItem->progressCb;
 	cb.stateChangedCb		= pItem->stateChangedCb;
 
-	if (VppDownloadSetCb((VppDownloadHandle)pItem, cb, pItem->pUserdata) == FALSE)
-	{
+	if (VppDownloadSetCb((VppDownloadHandle)pItem, cb, pItem->pUserdata) == FALSE) {
 		VideoLogError("VppDownloadSetCb error");
 		VppDownloadDestroyItem((VppDownloadHandle)pItem);
 
@@ -1129,11 +990,9 @@ __VppDownloadCreate(__VppDownloadItem* pItem)
 ERROR_HANDLE:
 	__VppDownloadPrintErr(error);
 
-	if (pItem->id > 0)
-	{
+	if (pItem->id > 0) {
 		error	= download_destroy(pItem->id);
-		if (error != DOWNLOAD_ERROR_NONE)
-		{
+		if (error != DOWNLOAD_ERROR_NONE) {
 			VideoLogError("download_destroy error");
 			__VppDownloadPrintErr(error);
 		}
@@ -1149,42 +1008,34 @@ ERROR_HANDLE:
 bool
 __VppDownloadStart(__VppDownloadItem* pItem, bool bResume)
 {
-	if (pItem == NULL)
-	{
+	if (pItem == NULL) {
 		VideoLogError("pItem == NULL!!!");
 		return FALSE;
 	}
 
-	if (pItem->id <= 0)
-	{
+	if (pItem->id <= 0) {
 		VideoLogError("pItem->id : [%d]!!!", pItem->id);
 		return FALSE;
 	}
 
-	if (bResume == FALSE)
-	{
+	if (bResume == FALSE) {
 		VideoLogDebug("download start!!!");
-	}
-	else
-	{
+	} else {
 		VideoLogDebug("download resume!!!");
 	}
 
 	download_error_e	error	= DOWNLOAD_ERROR_NONE;
 
-	if (pItem->eType == VPP_DOWNLOAD_ITEM_TYPE_STORE_VIDEO_FILE)
-	{
+	if (pItem->eType == VPP_DOWNLOAD_ITEM_TYPE_STORE_VIDEO_FILE) {
 		error	= download_set_auto_download(pItem->id, TRUE);
-		if (error != DOWNLOAD_ERROR_NONE)
-		{
+		if (error != DOWNLOAD_ERROR_NONE) {
 			VideoLogError("download_set_auto_download error!!!");
 			__VppDownloadPrintErr(error);
 		}
 	}
 
 	error = download_start(pItem->id);
-	if (error != DOWNLOAD_ERROR_NONE)
-	{
+	if (error != DOWNLOAD_ERROR_NONE) {
 		VideoLogError("download_start error!!!");
 		__VppDownloadPrintErr(error);
 		return FALSE;
@@ -1201,49 +1052,40 @@ __VppDownloadStateChangedCb(int download_id, download_state_e state, void *user_
 
 	VideoLogDebug("state : [%d]", state);
 
-	if (user_data == NULL)
-	{
+	if (user_data == NULL) {
 		VideoLogError("user_data == NULL!!!");
 		return;
 	}
 
-	if (pItem->eType == VPP_DOWNLOAD_ITEM_TYPE_STORE_VIDEO_FILE && state == DOWNLOAD_STATE_DOWNLOADING)
-	{
+	if (pItem->eType == VPP_DOWNLOAD_ITEM_TYPE_STORE_VIDEO_FILE && state == DOWNLOAD_STATE_DOWNLOADING) {
 		int	nRet	= 0;
-		if (pItem->pTempPath != NULL)
-		{
+		if (pItem->pTempPath != NULL) {
 			free(pItem->pTempPath);
 			pItem->pTempPath	= NULL;
 		}
 		nRet	= download_get_temp_path(pItem->id, &pItem->pTempPath);
-		if (nRet != DOWNLOAD_ERROR_NONE)
-		{
+		if (nRet != DOWNLOAD_ERROR_NONE) {
 			VideoLogError("download_get_temp_path failed!!!");
 			__VppDownloadPrintErr((download_error_e)nRet);
 		}
 
 
-		if (pItem->pEtag != NULL)
-		{
+		if (pItem->pEtag != NULL) {
 			free(pItem->pEtag);
 			pItem->pEtag	= NULL;
 		}
 		nRet	= download_get_etag(pItem->id, &pItem->pEtag);
-		if (nRet != DOWNLOAD_ERROR_NONE)
-		{
+		if (nRet != DOWNLOAD_ERROR_NONE) {
 			VideoLogError("download_get_temp_path failed!!!");
 			__VppDownloadPrintErr((download_error_e)nRet);
 		}
 	}
 
-	if (state >= DOWNLOAD_STATE_COMPLETED && state <= DOWNLOAD_STATE_CANCELED)
-	{
-		if (pItem->bDownloading == TRUE)
-		{
+	if (state >= DOWNLOAD_STATE_COMPLETED && state <= DOWNLOAD_STATE_CANCELED) {
+		if (pItem->bDownloading == TRUE) {
 			pItem->bDownloading	= FALSE;
 
-			if (pItem->eType < VPP_DOWNLOAD_ITEM_TYPE_STORE_VIDEO_FILE || pItem->eType > VPP_DOWNLOAD_ITEM_TYPE_VIDEO_CAPTION_FILE)
-			{
+			if (pItem->eType < VPP_DOWNLOAD_ITEM_TYPE_STORE_VIDEO_FILE || pItem->eType > VPP_DOWNLOAD_ITEM_TYPE_VIDEO_CAPTION_FILE) {
 				--(g_download_list->currentDownloadingCount);
 			}
 		}
@@ -1266,8 +1108,7 @@ __VppDownloadProgressCb(int download_id, unsigned long long received, void *user
 
 	VppDownloadPipeData	pipeData	= {0,};
 
-	if (user_data == NULL)
-	{
+	if (user_data == NULL) {
 		VideoLogError("user_data == NULL!!!");
 		return;
 	}
@@ -1284,11 +1125,9 @@ __VppDownloadProgressCb(int download_id, unsigned long long received, void *user
 unsigned int
 __VppDownloadListCount()
 {
-	if (g_download_list != NULL && g_download_list->downloadList != NULL)
-	{
-		if (g_download_list->downloadList->accounting != NULL)
-		{
-			return eina_list_count( g_download_list->downloadList);
+	if (g_download_list != NULL && g_download_list->downloadList != NULL) {
+		if (g_download_list->downloadList->accounting != NULL) {
+			return eina_list_count(g_download_list->downloadList);
 		}
 	}
 
@@ -1299,33 +1138,26 @@ __VppDownloadListCount()
 bool
 __VppDownloadListAdd(__VppDownloadItem *pItem, bool bAppend)
 {
-	if (pItem == NULL)
-	{
+	if (pItem == NULL) {
 		VideoLogError("pItem == NULL!!!");
 		return FALSE;
 	}
 
-	if (g_download_list == NULL)
-	{
+	if (g_download_list == NULL) {
 		__VppDownloadListInitialize();
 	}
 
-	if (bAppend == TRUE)
-	{
+	if (bAppend == TRUE) {
 		g_download_list->downloadList	= eina_list_append(g_download_list->downloadList, (void*)pItem);
 
-		if (g_download_list->downloadList == NULL)
-		{
+		if (g_download_list->downloadList == NULL) {
 			VideoLogError("eina_list_append faile !!!");
 			return FALSE;
 		}
-	}
-	else
-	{
+	} else {
 		g_download_list->downloadList	= eina_list_prepend(g_download_list->downloadList, (void*)pItem);
 
-		if (g_download_list->downloadList == NULL)
-		{
+		if (g_download_list->downloadList == NULL) {
 			VideoLogError("eina_list_prepend faile !!!");
 			return FALSE;
 		}
@@ -1340,27 +1172,23 @@ __VppDownloadListAdd(__VppDownloadItem *pItem, bool bAppend)
 void
 __VppDownloadListRemove(__VppDownloadItem *pItem)
 {
-	if (pItem == NULL)
-	{
+	if (pItem == NULL) {
 		VideoLogError("pItem == NULL!!!");
 		return;
 	}
 
-	if (g_download_list == NULL)
-	{
+	if (g_download_list == NULL) {
 		VideoLogError("g_download_list == NULL!!!");
 		return;
 	}
 
-	if (g_download_list->downloadList == NULL)
-	{
+	if (g_download_list->downloadList == NULL) {
 		VideoLogError("g_download_list->downloadList == NULL!!!");
 		return;
 	}
 
 	g_download_list->downloadList	= eina_list_remove(g_download_list->downloadList, (void*)pItem);
-	if (__VppDownloadListCount() <= 0)
-	{
+	if (__VppDownloadListCount() <= 0) {
 		__VppDestoryDownloadListDestory();
 	}
 }
@@ -1370,20 +1198,17 @@ __VppDownloadListRemove(__VppDownloadItem *pItem)
 void
 __VppDownloadListNextTrigger()
 {
-	if (g_download_list == NULL)
-	{
+	if (g_download_list == NULL) {
 		VideoLogError("g_download_list == NULL!!!");
 		return;
 	}
 
-	if (g_download_list->downloadList == NULL)
-	{
+	if (g_download_list->downloadList == NULL) {
 		VideoLogError("g_download_list->downloadList == NULL!!!");
 		return;
 	}
 
-	if (g_download_list->currentDownloadingCount > 5)
-	{
+	if (g_download_list->currentDownloadingCount > 5) {
 		__VppDownloadStartTimer();
 		return;
 	}
@@ -1391,22 +1216,17 @@ __VppDownloadListNextTrigger()
 	Eina_List			*l;
 	__VppDownloadItem	*pItem;
 
-	EINA_LIST_FOREACH(g_download_list->downloadList, l, pItem)
-	{
-		if (pItem == NULL)
-		{
+	EINA_LIST_FOREACH(g_download_list->downloadList, l, pItem) {
+		if (pItem == NULL) {
 			continue;
 		}
 
-		if (pItem->bDownloading == TRUE)
-		{
+		if (pItem->bDownloading == TRUE) {
 			continue;
 		}
 
-		if (pItem->id <= 0)
-		{
-			if (__VppDownloadCreate(pItem) == FALSE)
-			{
+		if (pItem->id <= 0) {
+			if (__VppDownloadCreate(pItem) == FALSE) {
 				VideoLogError("__VppDownloadCreate faile !!!");
 				__VppDownloadStartTimer();
 				return;
@@ -1416,20 +1236,14 @@ __VppDownloadListNextTrigger()
 		VppDownloadState	eState	= VppDownloadGetState((VppDownloadHandle)pItem);
 		VideoLogDebug("eState : [%d]", eState);
 
-		if (eState == VPP_DOWNLOAD_STATE_PAUSED)
-		{
+		if (eState == VPP_DOWNLOAD_STATE_PAUSED) {
 			pItem->bDownloading = TRUE;
 			++(g_download_list->currentDownloadingCount);
-		}
-		else
-		{
-			if (__VppDownloadStart(pItem, FALSE) == TRUE)
-			{
+		} else {
+			if (__VppDownloadStart(pItem, FALSE) == TRUE) {
 				pItem->bDownloading = TRUE;
 				++(g_download_list->currentDownloadingCount);
-			}
-			else
-			{
+			} else {
 				VideoSecureLogError("__VppDownloadStart faile : [%s : %s]!!!", pItem->pDstFolder, pItem->pDstName);
 				__VppDownloadStartTimer();
 				return;
@@ -1442,14 +1256,12 @@ __VppDownloadListNextTrigger()
 void
 __VppDownloadStartTimer()
 {
-	if (g_download_list == NULL)
-	{
+	if (g_download_list == NULL) {
 		VideoLogError("g_download_list == NULL!!!");
 		return;
 	}
 
-	if (g_download_list->downloadTimer != NULL)
-	{
+	if (g_download_list->downloadTimer != NULL) {
 		ecore_timer_del(g_download_list->downloadTimer);
 		g_download_list->downloadTimer	= NULL;
 	}
@@ -1464,8 +1276,7 @@ __VppDownloadPipeCb(void *data, void *pdata, unsigned int nbyte)
 	VppDownloadPipeData	*pPipeData	= NULL;
 	__VppDownloadItem	*pItem		= NULL;
 
-	if (pdata == NULL)
-	{
+	if (pdata == NULL) {
 		VideoLogError("pdata == NULL!!!");
 		return;
 	}
@@ -1473,72 +1284,55 @@ __VppDownloadPipeCb(void *data, void *pdata, unsigned int nbyte)
 	pPipeData	= (VppDownloadPipeData*)pdata;;
 	pItem		= pPipeData->pItem;
 
-	if (pItem == NULL)
-	{
+	if (pItem == NULL) {
 		VideoLogError("pItem == NULL!!!");
 		return;
 	}
 
-	if (pPipeData->eCbType == VPP_DOWNLOAD_CB_TYPE_STATE_CHANGED)
-	{
+	if (pPipeData->eCbType == VPP_DOWNLOAD_CB_TYPE_STATE_CHANGED) {
 		char*	pDstPath				= VppDownloadGetDownloadedFilePath((VppDownloadHandle)pItem);
 
-		if (pPipeData->eState == VPP_DOWNLOAD_STATE_COMPLETED)
-		{
+		if (pPipeData->eState == VPP_DOWNLOAD_STATE_COMPLETED) {
 			char*	pTempDstPath	= NULL;
 			int		error			= 0;
 
 			error	= download_get_downloaded_file_path(pItem->id, &pTempDstPath);
-			if (error != DOWNLOAD_ERROR_NONE)
-			{
+			if (error != DOWNLOAD_ERROR_NONE) {
 				VideoLogError("download_get_downloaded_file_path error");
 				__VppDownloadPrintErr((download_error_e)error);
-			}
-			else
-			{
-				if (pTempDstPath != NULL && pDstPath != NULL)
-				{
-					if (strcmp(pTempDstPath, pDstPath) != 0)
-					{
-						if (vp_file_exists((const char*)pDstPath) == EINA_TRUE)
-						{
+			} else {
+				if (pTempDstPath != NULL && pDstPath != NULL) {
+					if (strcmp(pTempDstPath, pDstPath) != 0) {
+						if (vp_file_exists((const char*)pDstPath) == EINA_TRUE) {
 							vp_file_unlink((const char*)pDstPath);
 						}
 
-						if (vp_file_mv(pTempDstPath, pDstPath) != EINA_TRUE)
-						{
+						if (vp_file_mv(pTempDstPath, pDstPath) != EINA_TRUE) {
 							VideoSecureLogError("vp_file_mv failed!!! src : [%s], dst : [%s]", pTempDstPath, pDstPath);
 						}
 					}
 				}
 			}
 
-			if (pTempDstPath != NULL)
-			{
+			if (pTempDstPath != NULL) {
 				free(pTempDstPath);
 				pTempDstPath	= NULL;
 			}
 		}
 
-		if (pItem->stateChangedCb != NULL)
-		{
+		if (pItem->stateChangedCb != NULL) {
 			pItem->stateChangedCb((VppDownloadHandle)pItem, pPipeData->eState, (const char*)pDstPath, pItem->pUserdata);
 		}
 
-		if (pDstPath != NULL)
-		{
+		if (pDstPath != NULL) {
 			free(pDstPath);
 			pDstPath	= NULL;
 		}
-	}
-	else
-	{
-		if (pItem->progressCb != NULL)
-		{
+	} else {
+		if (pItem->progressCb != NULL) {
 			unsigned long long	contentTotalSize	= 0;
 			download_error_e	error				= download_get_content_size(pItem->id, &contentTotalSize);
-			if (error != DOWNLOAD_ERROR_NONE)
-			{
+			if (error != DOWNLOAD_ERROR_NONE) {
 				VideoLogError("download_get_content_size error");
 				__VppDownloadPrintErr(error);
 				return;
@@ -1553,28 +1347,24 @@ __VppDownloadPipeCb(void *data, void *pdata, unsigned int nbyte)
 static Eina_Bool
 __VppDownloadTimerCb(void *data)
 {
-	if (g_download_list == NULL)
-	{
+	if (g_download_list == NULL) {
 		goto TIMER_CB_RETURN;
 	}
 
-	if (g_download_list->downloadList == NULL)
-	{
+	if (g_download_list->downloadList == NULL) {
 		goto TIMER_CB_RETURN;
 	}
 
 	int cnt = __VppDownloadListCount();
 
-	if (cnt <= 0)
-	{
+	if (cnt <= 0) {
 		goto TIMER_CB_RETURN;
 	}
 
 	__VppDownloadListNextTrigger();
 
 TIMER_CB_RETURN:
-	if (g_download_list != NULL)
-	{
+	if (g_download_list != NULL) {
 		g_download_list->downloadTimer	= NULL;
 	}
 

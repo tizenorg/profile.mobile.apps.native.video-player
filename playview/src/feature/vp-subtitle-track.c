@@ -68,31 +68,31 @@ typedef struct _SubtitleTrackPopup {
 
 
 static void _vp_subtitle_track_destroy_handle(SubtitleTrackPopup *
-		pSubtitleTrack);
+        pSubtitleTrack);
 #ifdef _SUBTITLE_MULTI_LANGUAGE
 static void __vp_subtitle_track_popup_check_state_change_cb(void
-		*pUserData,
-		Evas_Object *
-		pObject,
-		void
-		*pEventInfo);
+        *pUserData,
+        Evas_Object *
+        pObject,
+        void
+        *pEventInfo);
 #else
 static void __vp_subtitle_track_genlist_item_selected_cb(void *pUserData,
-		Evas_Object *
-		pObject,
-		void
-		*pEventInfo);
+        Evas_Object *
+        pObject,
+        void
+        *pEventInfo);
 #endif
 static void __vp_subtitle_track_genlist_realized(void *data,
-		Evas_Object *obj,
-		void *event_info)
+        Evas_Object *obj,
+        void *event_info)
 {
 	VP_GENLIST_HIDE_BOTTOMLINE(data, obj, event_info);
 }
 
 static void __vp_subtitle_track_popup_rotate_cb(void *data,
-		Evas_Object *obj,
-		void *event_info)
+        Evas_Object *obj,
+        void *event_info)
 {
 	SubtitleTrackPopup *pSubtitleTrack = (SubtitleTrackPopup *) data;
 	if (!pSubtitleTrack) {
@@ -103,17 +103,17 @@ static void __vp_subtitle_track_popup_rotate_cb(void *data,
 		return;
 	}
 	vp_popup_set_popup_min_size(pSubtitleTrack->pParent,
-				    pSubtitleTrack->pBox,
-				    pSubtitleTrack->nListCount,
-				    VIDEO_POPUP_DEFAULT);
+	                            pSubtitleTrack->pBox,
+	                            pSubtitleTrack->nListCount,
+	                            VIDEO_POPUP_DEFAULT);
 
 }
 
 /* callback functions */
 static char *__vp_subtitle_track_genlist_text_get_cb(const void
-		*pUserData,
-		Evas_Object *pObj,
-		const char *pPart)
+        *pUserData,
+        Evas_Object *pObj,
+        const char *pPart)
 {
 	if (pUserData == NULL) {
 		VideoLogError("Invalid user data");
@@ -129,11 +129,11 @@ static char *__vp_subtitle_track_genlist_text_get_cb(const void
 }
 
 static Evas_Object *__vp_subtitle_track_genlist_content_get_cb(const void
-		*pUserData,
-		Evas_Object
-		* pObj,
-		const char
-		*pPart)
+        *pUserData,
+        Evas_Object
+        * pObj,
+        const char
+        *pPart)
 {
 	if (pUserData == NULL) {
 		VideoLogError("Invalid user data");
@@ -144,7 +144,7 @@ static Evas_Object *__vp_subtitle_track_genlist_content_get_cb(const void
 
 	if (!strcmp(pPart, "elm.icon")) {
 		SubtitleTrackPopup *pSubtitleTrack =
-			(SubtitleTrackPopup *) pTrackItem->pSubtitleTrackPopup;
+		    (SubtitleTrackPopup *) pTrackItem->pSubtitleTrackPopup;
 		if (pSubtitleTrack == NULL) {
 			VideoLogWarning("evas_object_data_get is fail");
 			return NULL;
@@ -153,8 +153,8 @@ static Evas_Object *__vp_subtitle_track_genlist_content_get_cb(const void
 		Evas_Object *pCheckBox = elm_check_add(pObj);
 		evas_object_propagate_events_set(pCheckBox, EINA_FALSE);
 		evas_object_smart_callback_add(pCheckBox, "changed",
-					       __vp_subtitle_track_popup_check_state_change_cb,
-					       pUserData);
+		                               __vp_subtitle_track_popup_check_state_change_cb,
+		                               pUserData);
 		elm_check_state_set(pCheckBox, pTrackItem->bCheck);
 		evas_object_show(pCheckBox);
 
@@ -165,10 +165,10 @@ static Evas_Object *__vp_subtitle_track_genlist_content_get_cb(const void
 		elm_radio_state_value_set(pRadioObj, pTrackItem->nIndex);
 		elm_radio_group_add(pRadioObj, pSubtitleTrack->pRadio);
 		elm_radio_value_set(pSubtitleTrack->pRadio,
-				    pSubtitleTrack->nCurrentIndex);
+		                    pSubtitleTrack->nCurrentIndex);
 		evas_object_smart_callback_add(pRadioObj, "changed",
-					       __vp_subtitle_track_genlist_item_selected_cb,
-					       pTrackItem);
+		                               __vp_subtitle_track_genlist_item_selected_cb,
+		                               pTrackItem);
 		evas_object_show(pRadioObj);
 
 		return pRadioObj;
@@ -180,7 +180,7 @@ static Evas_Object *__vp_subtitle_track_genlist_content_get_cb(const void
 
 #ifdef _SUBTITLE_MULTI_LANGUAGE
 static bool __vp_subtitle_track_select_no_item(SubtitleTrackPopup *
-		pSubtitleTrackPopup)
+        pSubtitleTrackPopup)
 {
 	if (pSubtitleTrackPopup == NULL) {
 		VideoLogError("pSubtitleTrackPopup is NULL");
@@ -197,8 +197,8 @@ static bool __vp_subtitle_track_select_no_item(SubtitleTrackPopup *
 	for (; index < g_list_length(pSubtitleTrackPopup->pItemList); ++index) {
 		SubtitleTrackItem *pItem = NULL;
 		pItem =
-			(SubtitleTrackItem *) g_list_nth_data(pSubtitleTrackPopup->
-					pItemList, index);
+		    (SubtitleTrackItem *) g_list_nth_data(pSubtitleTrackPopup->
+		            pItemList, index);
 		if (pItem && pItem->bCheck) {
 			ret = false;
 			break;
@@ -209,8 +209,8 @@ static bool __vp_subtitle_track_select_no_item(SubtitleTrackPopup *
 }
 
 static void __vp_subtitle_track_popup_disable_button(SubtitleTrackPopup *
-		pSubtitleTrackPopup,
-		bool bDisabled)
+        pSubtitleTrackPopup,
+        bool bDisabled)
 {
 	if (pSubtitleTrackPopup == NULL) {
 		VideoLogError("pSubtitleTrackPopup is NULL");
@@ -223,17 +223,18 @@ static void __vp_subtitle_track_popup_disable_button(SubtitleTrackPopup *
 	}
 
 	Evas_Object *pRightButton =
-		elm_object_part_content_get(pSubtitleTrackPopup->pPopup,
-					    "button2");
+	    elm_object_part_content_get(pSubtitleTrackPopup->pPopup,
+	                                "button2");
 	if (pRightButton
-			&& bDisabled != elm_object_disabled_get(pRightButton))
+	        && bDisabled != elm_object_disabled_get(pRightButton)) {
 		elm_object_disabled_set(pRightButton, bDisabled);
+	}
 }
 #endif
 static void __vp_subtitle_track_genlist_item_selected_cb(void *pUserData,
-		Evas_Object *
-		pObject,
-		void *pEventInfo)
+        Evas_Object *
+        pObject,
+        void *pEventInfo)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -242,58 +243,58 @@ static void __vp_subtitle_track_genlist_item_selected_cb(void *pUserData,
 
 	SubtitleTrackItem *pTrackItem = (SubtitleTrackItem *) pUserData;
 	Elm_Object_Item *pSelectedItem =
-		elm_genlist_selected_item_get(pObject);
+	    elm_genlist_selected_item_get(pObject);
 	if (pSelectedItem) {
 		elm_genlist_item_selected_set(pSelectedItem, EINA_FALSE);
 	}
 	SubtitleTrackPopup *pSubtitleTrackPopup =
-		(SubtitleTrackPopup *) pTrackItem->pSubtitleTrackPopup;
+	    (SubtitleTrackPopup *) pTrackItem->pSubtitleTrackPopup;
 	if (pSubtitleTrackPopup == NULL) {
 		VideoLogError("SubtitleTrackPopup is NULL");
 		return;
 	}
 #ifdef _SUBTITLE_MULTI_LANGUAGE
 	Evas_Object *pCheckBox =
-		elm_object_item_part_content_get(pSelectedItem, "elm.icon");
+	    elm_object_item_part_content_get(pSelectedItem, "elm.icon");
 	if (pCheckBox) {
 		pTrackItem->bCheck = !pTrackItem->bCheck;
 		elm_check_state_set(pCheckBox, pTrackItem->bCheck);
 		VideoLogInfo("bCheck: %d, nIndex: %d", pTrackItem->bCheck,
-			     pTrackItem->nIndex);
+		             pTrackItem->nIndex);
 		if (__vp_subtitle_track_select_no_item(pSubtitleTrackPopup)) {
 			vp_play_util_status_noti_show
 			(VP_PLAY_STRING_SELECTED_LANGUAGE);
 			__vp_subtitle_track_popup_disable_button(pSubtitleTrackPopup,
-					true);
+			        true);
 		} else {
 			__vp_subtitle_track_popup_disable_button(pSubtitleTrackPopup,
-					false);
+			        false);
 		}
 	}
 #else
 	if (pTrackItem->nIndex == pSubtitleTrackPopup->nCurrentIndex) {
 		if (pSubtitleTrackPopup->pCloseCb) {
 			VideoLogInfo("Selected lang track indexp[%d]",
-				     pTrackItem->nIndex);
+			             pTrackItem->nIndex);
 			pSubtitleTrackPopup->pCloseCb(pTrackItem->nIndex, FALSE,
-						      (void *) pSubtitleTrackPopup->
-						      pUserData);
+			                              (void *) pSubtitleTrackPopup->
+			                              pUserData);
 		}
 	} else {
 		pSubtitleTrackPopup->nCurrentIndex = pTrackItem->nIndex;
 		elm_radio_value_set(pSubtitleTrackPopup->pRadio,
-				    pSubtitleTrackPopup->nCurrentIndex);
+		                    pSubtitleTrackPopup->nCurrentIndex);
 	}
 #endif
 }
 
 #ifdef _SUBTITLE_MULTI_LANGUAGE
 static void __vp_subtitle_track_popup_check_state_change_cb(void
-		*pUserData,
-		Evas_Object *
-		pObject,
-		void
-		*pEventInfo)
+        *pUserData,
+        Evas_Object *
+        pObject,
+        void
+        *pEventInfo)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -302,28 +303,28 @@ static void __vp_subtitle_track_popup_check_state_change_cb(void
 
 	SubtitleTrackItem *pTrackItem = (SubtitleTrackItem *) pUserData;
 	SubtitleTrackPopup *pSubtitleTrackPopup =
-		(SubtitleTrackPopup *) pTrackItem->pSubtitleTrackPopup;
+	    (SubtitleTrackPopup *) pTrackItem->pSubtitleTrackPopup;
 	if (pSubtitleTrackPopup == NULL) {
 		VideoLogError("SubtitleTrackPopup is NULL");
 		return;
 	}
 	pTrackItem->bCheck = elm_check_state_get(pObject);
 	VideoLogInfo("bCheck: %d, nIndex: %d", pTrackItem->bCheck,
-		     pTrackItem->nIndex);
+	             pTrackItem->nIndex);
 
 	if (__vp_subtitle_track_select_no_item(pSubtitleTrackPopup)) {
 		vp_play_util_status_noti_show(VP_PLAY_STRING_SELECTED_LANGUAGE);
 		__vp_subtitle_track_popup_disable_button(pSubtitleTrackPopup,
-				true);
+		        true);
 	} else {
 		__vp_subtitle_track_popup_disable_button(pSubtitleTrackPopup,
-				false);
+		        false);
 	}
 }
 #endif
 static void __vp_subtitle_track_popup_key_event_cb(void *pUserData,
-		Evas_Object *pObj,
-		void *pEventInfo)
+        Evas_Object *pObj,
+        void *pEventInfo)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -334,15 +335,15 @@ static void __vp_subtitle_track_popup_key_event_cb(void *pUserData,
 
 	if (pSubtitleTrack->pCloseCb) {
 		pSubtitleTrack->pCloseCb(-1, FALSE,
-					 (void *) pSubtitleTrack->pUserData);
+		                         (void *) pSubtitleTrack->pUserData);
 	}
 }
 
 #ifndef _SUBTITLE_MULTI_LANGUAGE
 static void __vp_subtitle_track_popup_mouse_event_cb(void *pUserData,
-		Evas *pEvas,
-		Evas_Object *pObj,
-		void *pEventInfo)
+        Evas *pEvas,
+        Evas_Object *pObj,
+        void *pEventInfo)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -358,18 +359,18 @@ static void __vp_subtitle_track_popup_mouse_event_cb(void *pUserData,
 
 	if (ev->button == 3) {
 		SubtitleTrackPopup *pSubtitleTrack =
-			(SubtitleTrackPopup *) pUserData;
+		    (SubtitleTrackPopup *) pUserData;
 
 		if (pSubtitleTrack->pCloseCb) {
 			pSubtitleTrack->pCloseCb(-1, FALSE,
-						 (void *) pSubtitleTrack->pUserData);
+			                         (void *) pSubtitleTrack->pUserData);
 		}
 	}
 }
 #endif
 /* internal functions */
 static void _vp_subtitle_track_clear_item_list(SubtitleTrackPopup *
-		pSubtitleTrack)
+        pSubtitleTrack)
 {
 	if (pSubtitleTrack == NULL) {
 		VideoLogError("pSubtitleTrack is NULL");
@@ -388,8 +389,8 @@ static void _vp_subtitle_track_clear_item_list(SubtitleTrackPopup *
 		SubtitleTrackItem *pItem = NULL;
 
 		pItem =
-			(SubtitleTrackItem *) g_list_nth_data(pSubtitleTrack->
-					pItemList, idx);
+		    (SubtitleTrackItem *) g_list_nth_data(pSubtitleTrack->
+		            pItemList, idx);
 		if (pItem) {
 			VP_EVAS_ITEM_DEL(pItem->pItem);
 			VP_FREE(pItem->szName);
@@ -404,7 +405,7 @@ static void _vp_subtitle_track_clear_item_list(SubtitleTrackPopup *
 }
 
 static void _vp_subtitle_track_destroy_handle(SubtitleTrackPopup *
-		pSubtitleTrack)
+        pSubtitleTrack)
 {
 	if (pSubtitleTrack == NULL) {
 		VideoLogError("pSubtitleTrack is NULL");
@@ -412,10 +413,10 @@ static void _vp_subtitle_track_destroy_handle(SubtitleTrackPopup *
 	}
 
 	evas_object_smart_callback_del(pSubtitleTrack->pGenList, "realized",
-				       __vp_subtitle_track_genlist_realized);
+	                               __vp_subtitle_track_genlist_realized);
 	evas_object_smart_callback_del(pSubtitleTrack->pParent,
-				       "rotation,changed",
-				       __vp_subtitle_track_popup_rotate_cb);
+	                               "rotation,changed",
+	                               __vp_subtitle_track_popup_rotate_cb);
 
 	_vp_subtitle_track_clear_item_list(pSubtitleTrack);
 #ifndef _SUBTITLE_MULTI_LANGUAGE
@@ -436,7 +437,7 @@ static void _vp_subtitle_track_destroy_handle(SubtitleTrackPopup *
 }
 
 static Evas_Object *_vp_subtitle_track_create_genlist(Evas_Object *
-		pParent)
+        pParent)
 {
 	if (pParent == NULL) {
 		VideoLogError("pParent is NULL");
@@ -447,7 +448,7 @@ static Evas_Object *_vp_subtitle_track_create_genlist(Evas_Object *
 
 	pObj = elm_genlist_add(pParent);
 	evas_object_size_hint_weight_set(pObj, EVAS_HINT_EXPAND,
-					 EVAS_HINT_EXPAND);
+	                                 EVAS_HINT_EXPAND);
 	evas_object_size_hint_align_set(pObj, EVAS_HINT_FILL, EVAS_HINT_FILL);
 	evas_object_show(pObj);
 	return pObj;
@@ -455,7 +456,7 @@ static Evas_Object *_vp_subtitle_track_create_genlist(Evas_Object *
 
 
 static bool _vp_subtitle_track_add_genlist_item(Evas_Object *pObj,
-		void *pUserData)
+        void *pUserData)
 {
 	if (pObj == NULL) {
 		VideoLogError("pObj is NULL");
@@ -473,13 +474,13 @@ static bool _vp_subtitle_track_add_genlist_item(Evas_Object *pObj,
 
 	if (pSubtitleTrack->st_SubtitleTrack_Itc) {
 		pSubtitleTrack->st_SubtitleTrack_Itc->version =
-			ELM_GENLIST_ITEM_CLASS_VERSION;
+		    ELM_GENLIST_ITEM_CLASS_VERSION;
 		pSubtitleTrack->st_SubtitleTrack_Itc->item_style =
-			"1text.1icon.3/popup";
+		    "1text.1icon.3/popup";
 		pSubtitleTrack->st_SubtitleTrack_Itc->func.text_get =
-			(void *) __vp_subtitle_track_genlist_text_get_cb;
+		    (void *) __vp_subtitle_track_genlist_text_get_cb;
 		pSubtitleTrack->st_SubtitleTrack_Itc->func.content_get =
-			(void *) __vp_subtitle_track_genlist_content_get_cb;
+		    (void *) __vp_subtitle_track_genlist_content_get_cb;
 		pSubtitleTrack->st_SubtitleTrack_Itc->func.state_get = NULL;
 		pSubtitleTrack->st_SubtitleTrack_Itc->func.del = NULL;
 	}
@@ -492,16 +493,16 @@ static bool _vp_subtitle_track_add_genlist_item(Evas_Object *pObj,
 		SubtitleTrackItem *pItem = NULL;
 
 		pItem =
-			(SubtitleTrackItem *) g_list_nth_data(pSubtitleTrack->
-					pItemList, idx);
+		    (SubtitleTrackItem *) g_list_nth_data(pSubtitleTrack->
+		            pItemList, idx);
 		if (pItem) {
 			pItem->pItem = elm_genlist_item_append(pObj,
-							       pSubtitleTrack->
-							       st_SubtitleTrack_Itc,
-							       (void *) pItem, NULL,
-							       ELM_GENLIST_ITEM_NONE,
-							       __vp_subtitle_track_genlist_item_selected_cb,
-							       pItem);
+			                                       pSubtitleTrack->
+			                                       st_SubtitleTrack_Itc,
+			                                       (void *) pItem, NULL,
+			                                       ELM_GENLIST_ITEM_NONE,
+			                                       __vp_subtitle_track_genlist_item_selected_cb,
+			                                       pItem);
 			pSubtitleTrack->nListCount++;
 		}
 	}
@@ -511,8 +512,8 @@ static bool _vp_subtitle_track_add_genlist_item(Evas_Object *pObj,
 
 #ifdef _SUBTITLE_MULTI_LANGUAGE
 static void __vp_subtitle_track_popup_left_button_cb(void *pUserData,
-		Evas_Object *pObj,
-		void *pEventInfo)
+        Evas_Object *pObj,
+        void *pEventInfo)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -523,13 +524,13 @@ static void __vp_subtitle_track_popup_left_button_cb(void *pUserData,
 
 	if (pSubtitleTrack->pCloseCb) {
 		pSubtitleTrack->pCloseCb(-1, FALSE,
-					 (void *) pSubtitleTrack->pUserData);
+		                         (void *) pSubtitleTrack->pUserData);
 	}
 }
 
 static void __vp_subtitle_track_popup_right_button_cb(void *pUserData,
-		Evas_Object *pObj,
-		void *pEventInfo)
+        Evas_Object *pObj,
+        void *pEventInfo)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -550,40 +551,40 @@ static void __vp_subtitle_track_popup_right_button_cb(void *pUserData,
 		SubtitleTrackItem *pItem = NULL;
 
 		pItem =
-			(SubtitleTrackItem *) g_list_nth_data(pSubtitleTrack->
-					pItemList, idx);
+		    (SubtitleTrackItem *) g_list_nth_data(pSubtitleTrack->
+		            pItemList, idx);
 		/*set subtitle's language */
 		if (pItem) {
 			VideoLogInfo("nIndex=%d,bCheck=%d", pItem->nIndex,
-				     pItem->bCheck);
+			             pItem->bCheck);
 			if (pItem->bCheck && pSubtitleTrack->pAddLanguageCb) {
 				pSubtitleTrack->pAddLanguageCb(pItem->nIndex,
-							       (void *) pSubtitleTrack->
-							       pUserData);
+				                               (void *) pSubtitleTrack->
+				                               pUserData);
 			} else if (!pItem->bCheck
-					&& pSubtitleTrack->pRemoveLanguageCb) {
+			           && pSubtitleTrack->pRemoveLanguageCb) {
 				pSubtitleTrack->pRemoveLanguageCb(pItem->nIndex,
-								  (void *)
-								  pSubtitleTrack->
-								  pUserData);
+				                                  (void *)
+				                                  pSubtitleTrack->
+				                                  pUserData);
 			}
 		}
 	}
 
 	if (pSubtitleTrack->pCloseCb) {
 		pSubtitleTrack->pCloseCb(-1, FALSE,
-					 (void *) pSubtitleTrack->pUserData);
+		                         (void *) pSubtitleTrack->pUserData);
 	}
 }
 #endif
 /* external functions */
 #ifdef _SUBTITLE_MULTI_LANGUAGE
 subtitle_track_handle vp_subtitle_track_create(Evas_Object *pParent,
-		PopupCloseCbFunc pCloseCb)
+        PopupCloseCbFunc pCloseCb)
 #else
 subtitle_track_handle vp_subtitle_track_create(Evas_Object *pParent,
-		PopupCloseCbFunc pCloseCb,
-		int nDefaultIndex)
+        PopupCloseCbFunc pCloseCb,
+        int nDefaultIndex)
 #endif
 {
 	if (pParent == NULL) {
@@ -604,21 +605,21 @@ subtitle_track_handle vp_subtitle_track_create(Evas_Object *pParent,
 	pSubtitleTrack->pCloseCb = pCloseCb;
 #ifdef _SUBTITLE_MULTI_LANGUAGE
 	pSubtitleTrack->pPopup = vp_title_two_button_popup_create(pParent,
-				 VP_PLAY_STRING_SUBTITLE_LANGUAGE,
-				 NULL,
-				 VP_PLAY_STRING_COM_CANCEL,
-				 __vp_subtitle_track_popup_left_button_cb,
-				 VP_PLAY_STRING_COM_OK,
-				 __vp_subtitle_track_popup_right_button_cb,
-				 (void *)
-				 pSubtitleTrack);
+	                         VP_PLAY_STRING_SUBTITLE_LANGUAGE,
+	                         NULL,
+	                         VP_PLAY_STRING_COM_CANCEL,
+	                         __vp_subtitle_track_popup_left_button_cb,
+	                         VP_PLAY_STRING_COM_OK,
+	                         __vp_subtitle_track_popup_right_button_cb,
+	                         (void *)
+	                         pSubtitleTrack);
 #else
 	pSubtitleTrack->pPopup =
-		vp_popup_create(pParent, POPUP_STYLE_MENU_LIST_NO_CANCEL_BTN,
-				VP_PLAY_STRING_SUBTITLE_LANGUAGE, NULL, 0.0, NULL,
-				__vp_subtitle_track_popup_key_event_cb,
-				__vp_subtitle_track_popup_mouse_event_cb,
-				(void *) pSubtitleTrack);
+	    vp_popup_create(pParent, POPUP_STYLE_MENU_LIST_NO_CANCEL_BTN,
+	                    VP_PLAY_STRING_SUBTITLE_LANGUAGE, NULL, 0.0, NULL,
+	                    __vp_subtitle_track_popup_key_event_cb,
+	                    __vp_subtitle_track_popup_mouse_event_cb,
+	                    (void *) pSubtitleTrack);
 #endif
 	if (pSubtitleTrack->pPopup == NULL) {
 		VideoLogError("vp_popup_create fail");
@@ -627,13 +628,13 @@ subtitle_track_handle vp_subtitle_track_create(Evas_Object *pParent,
 	}
 #ifdef _SUBTITLE_MULTI_LANGUAGE
 	eext_object_event_callback_add(pSubtitleTrack->pPopup,
-				       EEXT_CALLBACK_BACK,
-				       __vp_subtitle_track_popup_key_event_cb,
-				       (void *) pSubtitleTrack);
+	                               EEXT_CALLBACK_BACK,
+	                               __vp_subtitle_track_popup_key_event_cb,
+	                               (void *) pSubtitleTrack);
 #endif
 
 	pSubtitleTrack->pGenList =
-		_vp_subtitle_track_create_genlist(pSubtitleTrack->pPopup);
+	    _vp_subtitle_track_create_genlist(pSubtitleTrack->pPopup);
 	if (pSubtitleTrack->pGenList == NULL) {
 		VideoLogError("_vp_subtitle_track_create_genlist fail");
 		_vp_subtitle_track_destroy_handle(pSubtitleTrack);
@@ -641,16 +642,16 @@ subtitle_track_handle vp_subtitle_track_create(Evas_Object *pParent,
 	}
 
 	evas_object_smart_callback_add(pSubtitleTrack->pGenList, "realized",
-				       __vp_subtitle_track_genlist_realized,
-				       NULL);
+	                               __vp_subtitle_track_genlist_realized,
+	                               NULL);
 	evas_object_smart_callback_add(pSubtitleTrack->pParent,
-				       "rotation,changed",
-				       __vp_subtitle_track_popup_rotate_cb,
-				       pSubtitleTrack);
+	                               "rotation,changed",
+	                               __vp_subtitle_track_popup_rotate_cb,
+	                               pSubtitleTrack);
 
 	evas_object_data_set(pSubtitleTrack->pGenList,
-			     VP_SUBTITLE_TRACK_GENLIST_DATA_KEY,
-			     (void *) pSubtitleTrack);
+	                     VP_SUBTITLE_TRACK_GENLIST_DATA_KEY,
+	                     (void *) pSubtitleTrack);
 #ifndef _SUBTITLE_MULTI_LANGUAGE
 	pSubtitleTrack->nCurrentIndex = nDefaultIndex;
 	pSubtitleTrack->pRadio = elm_radio_add(pSubtitleTrack->pGenList);
@@ -669,7 +670,7 @@ void vp_subtitle_track_destroy(subtitle_track_handle pSubtitleTrackHandle)
 	}
 
 	SubtitleTrackPopup *pSubtitleTrack =
-		(SubtitleTrackPopup *) pSubtitleTrackHandle;
+	    (SubtitleTrackPopup *) pSubtitleTrackHandle;
 
 	_vp_subtitle_track_destroy_handle(pSubtitleTrack);
 
@@ -683,26 +684,26 @@ bool vp_subtitle_track_realize(subtitle_track_handle pSubtitleTrackHandle)
 	}
 
 	SubtitleTrackPopup *pSubtitleTrack =
-		(SubtitleTrackPopup *) pSubtitleTrackHandle;
+	    (SubtitleTrackPopup *) pSubtitleTrackHandle;
 
 	if (!_vp_subtitle_track_add_genlist_item
-			(pSubtitleTrack->pGenList, (void *) pSubtitleTrack)) {
+	        (pSubtitleTrack->pGenList, (void *) pSubtitleTrack)) {
 		VideoLogError("_vp_subtitle_track_add_genlist_item fail");
 		return FALSE;
 	}
 	if (pSubtitleTrack->nListCount == 1) {
 		vp_popup_set_popup_min_size(pSubtitleTrack->pParent,
-					    pSubtitleTrack->pBox,
-					    pSubtitleTrack->nListCount,
-					    VIDEO_POPUP_DEFAULT);
+		                            pSubtitleTrack->pBox,
+		                            pSubtitleTrack->nListCount,
+		                            VIDEO_POPUP_DEFAULT);
 		elm_scroller_policy_set(pSubtitleTrack->pGenList,
-					ELM_SCROLLER_POLICY_OFF,
-					ELM_SCROLLER_POLICY_OFF);
+		                        ELM_SCROLLER_POLICY_OFF,
+		                        ELM_SCROLLER_POLICY_OFF);
 	} else {
 		vp_popup_set_popup_min_size(pSubtitleTrack->pParent,
-					    pSubtitleTrack->pBox,
-					    pSubtitleTrack->nListCount,
-					    VIDEO_POPUP_DEFAULT);
+		                            pSubtitleTrack->pBox,
+		                            pSubtitleTrack->nListCount,
+		                            VIDEO_POPUP_DEFAULT);
 	}
 
 	//elm_radio_value_set(pSubtitleTrack->pRadio, pSubtitleTrack->nCurrentIndex);
@@ -715,7 +716,7 @@ bool vp_subtitle_track_realize(subtitle_track_handle pSubtitleTrackHandle)
 }
 
 bool vp_subtitle_track_unrealize(subtitle_track_handle
-				 pSubtitleTrackHandle)
+                                 pSubtitleTrackHandle)
 {
 	if (pSubtitleTrackHandle == NULL) {
 		VideoLogError("pSubtitleTrackHandle is NULL");
@@ -723,7 +724,7 @@ bool vp_subtitle_track_unrealize(subtitle_track_handle
 	}
 
 	SubtitleTrackPopup *pSubtitleTrack =
-		(SubtitleTrackPopup *) pSubtitleTrackHandle;
+	    (SubtitleTrackPopup *) pSubtitleTrackHandle;
 
 	_vp_subtitle_track_clear_item_list(pSubtitleTrack);
 
@@ -734,12 +735,12 @@ bool vp_subtitle_track_unrealize(subtitle_track_handle
 
 #ifdef _SUBTITLE_MULTI_LANGUAGE
 bool vp_subtitle_track_add_Item(subtitle_track_handle
-				pSubtitleTrackHandle, char *szCode,
-				int nIndex, bool bCheck)
+                                pSubtitleTrackHandle, char *szCode,
+                                int nIndex, bool bCheck)
 #else
 bool vp_subtitle_track_add_Item(subtitle_track_handle
-				pSubtitleTrackHandle, char *szCode,
-				int nIndex)
+                                pSubtitleTrackHandle, char *szCode,
+                                int nIndex)
 #endif
 {
 	if (pSubtitleTrackHandle == NULL) {
@@ -748,7 +749,7 @@ bool vp_subtitle_track_add_Item(subtitle_track_handle
 	}
 
 	SubtitleTrackPopup *pSubtitleTrack =
-		(SubtitleTrackPopup *) pSubtitleTrackHandle;
+	    (SubtitleTrackPopup *) pSubtitleTrackHandle;
 
 	SubtitleTrackItem *pItem = calloc(1, sizeof(SubtitleTrackItem));
 	if (pItem == NULL) {
@@ -773,14 +774,14 @@ bool vp_subtitle_track_add_Item(subtitle_track_handle
 	}
 
 	pSubtitleTrack->pItemList =
-		g_list_append(pSubtitleTrack->pItemList, pItem);
+	    g_list_append(pSubtitleTrack->pItemList, pItem);
 
 	return TRUE;
 }
 
 bool vp_subtitle_track_set_user_data(subtitle_track_handle
-				     pSubtitleTrackHandle,
-				     void *pUserData)
+                                     pSubtitleTrackHandle,
+                                     void *pUserData)
 {
 	if (pSubtitleTrackHandle == NULL) {
 		VideoLogError("pSubtitleTrackHandle is NULL");
@@ -788,7 +789,7 @@ bool vp_subtitle_track_set_user_data(subtitle_track_handle
 	}
 
 	SubtitleTrackPopup *pSubtitleTrack =
-		(SubtitleTrackPopup *) pSubtitleTrackHandle;
+	    (SubtitleTrackPopup *) pSubtitleTrackHandle;
 
 	pSubtitleTrack->pUserData = pUserData;
 
@@ -797,9 +798,9 @@ bool vp_subtitle_track_set_user_data(subtitle_track_handle
 
 #ifdef _SUBTITLE_MULTI_LANGUAGE
 bool vp_subtitle_track_set_add_language_cb(subtitle_track_handle
-		pSubtitleTrackHandle,
-		SubtitleLanguageChangeCbFunc
-		pCallback)
+        pSubtitleTrackHandle,
+        SubtitleLanguageChangeCbFunc
+        pCallback)
 {
 	if (pSubtitleTrackHandle == NULL) {
 		VideoLogError("pSubtitleTrackHandle is NULL");
@@ -807,7 +808,7 @@ bool vp_subtitle_track_set_add_language_cb(subtitle_track_handle
 	}
 
 	SubtitleTrackPopup *pSubtitleTrack =
-		(SubtitleTrackPopup *) pSubtitleTrackHandle;
+	    (SubtitleTrackPopup *) pSubtitleTrackHandle;
 
 	pSubtitleTrack->pAddLanguageCb = pCallback;
 
@@ -815,9 +816,9 @@ bool vp_subtitle_track_set_add_language_cb(subtitle_track_handle
 }
 
 bool vp_subtitle_track_set_remove_language_cb(subtitle_track_handle
-		pSubtitleTrackHandle,
-		SubtitleLanguageChangeCbFunc
-		pCallback)
+        pSubtitleTrackHandle,
+        SubtitleLanguageChangeCbFunc
+        pCallback)
 {
 	if (pSubtitleTrackHandle == NULL) {
 		VideoLogError("pSubtitleTrackHandle is NULL");
@@ -825,7 +826,7 @@ bool vp_subtitle_track_set_remove_language_cb(subtitle_track_handle
 	}
 
 	SubtitleTrackPopup *pSubtitleTrack =
-		(SubtitleTrackPopup *) pSubtitleTrackHandle;
+	    (SubtitleTrackPopup *) pSubtitleTrackHandle;
 
 	pSubtitleTrack->pRemoveLanguageCb = pCallback;
 

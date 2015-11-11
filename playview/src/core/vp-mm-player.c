@@ -251,7 +251,7 @@ static int _vp_mm_player_priv_convert_interrupt(int nCode, bool bAppToFW)
 			return VP_MM_PLAYER_INTERRUPTED_BY_ALARM;
 		case PLAYER_INTERRUPTED_BY_EMERGENCY:
 			return VP_MM_PLAYER_INTERRUPTED_BY_EMERGENCY;
-		//case PLAYER_INTERRUPTED_BY_RESUMABLE_MEDIA:   return VP_MM_PLAYER_INTERRUPTED_RESUMABLE_MEDIA;
+			//case PLAYER_INTERRUPTED_BY_RESUMABLE_MEDIA:   return VP_MM_PLAYER_INTERRUPTED_RESUMABLE_MEDIA;
 		case PLAYER_INTERRUPTED_BY_NOTIFICATION:
 			return VP_MM_PLAYER_INTERRUPTED_NOTIFICATION;
 		}
@@ -271,7 +271,7 @@ static int _vp_mm_player_priv_convert_interrupt(int nCode, bool bAppToFW)
 			return PLAYER_INTERRUPTED_BY_ALARM;
 		case VP_MM_PLAYER_INTERRUPTED_BY_EMERGENCY:
 			return PLAYER_INTERRUPTED_BY_EMERGENCY;
-		//case VP_MM_PLAYER_INTERRUPTED_RESUMABLE_MEDIA:                return PLAYER_INTERRUPTED_BY_RESUMABLE_MEDIA;
+			//case VP_MM_PLAYER_INTERRUPTED_RESUMABLE_MEDIA:                return PLAYER_INTERRUPTED_BY_RESUMABLE_MEDIA;
 		case VP_MM_PLAYER_INTERRUPTED_NOTIFICATION:
 			return PLAYER_INTERRUPTED_BY_NOTIFICATION;
 		}
@@ -280,7 +280,7 @@ static int _vp_mm_player_priv_convert_interrupt(int nCode, bool bAppToFW)
 }
 
 static int _vp_mm_player_priv_convert_player_state(int nCode,
-		bool bAppToFW)
+        bool bAppToFW)
 {
 
 	if (bAppToFW) {
@@ -315,7 +315,7 @@ static int _vp_mm_player_priv_convert_player_state(int nCode,
 
 
 static int _vp_mm_player_priv_convert_display_mode(int nCode,
-		bool bAppToFW)
+        bool bAppToFW)
 {
 	if (bAppToFW) {
 		switch (nCode) {
@@ -373,7 +373,7 @@ static int _vp_mm_player_priv_convert_display_mode(int nCode,
 
 /* callback functions */
 static void __vp_mm_player_pipe_prepare_cb(void *pUserData, void *pBuff,
-		unsigned int nByte)
+        unsigned int nByte)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pPlayerHandle is NULL");
@@ -392,8 +392,8 @@ static void __vp_mm_player_pipe_prepare_cb(void *pUserData, void *pBuff,
 }
 
 static void __vp_mm_player_pipe_end_of_stream_cb(void *pUserData,
-		void *pBuff,
-		unsigned int nByte)
+        void *pBuff,
+        unsigned int nByte)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pPlayerHandle is NULL");
@@ -411,8 +411,8 @@ static void __vp_mm_player_pipe_end_of_stream_cb(void *pUserData,
 }
 
 static void __vp_mm_player_pipe_seek_complete_cb(void *pUserData,
-		void *pBuff,
-		unsigned int nByte)
+        void *pBuff,
+        unsigned int nByte)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pPlayerHandle is NULL");
@@ -429,8 +429,8 @@ static void __vp_mm_player_pipe_seek_complete_cb(void *pUserData,
 }
 
 static void __vp_mm_player_pipe_interrupted_cb(void *pUserData,
-		void *pBuff,
-		unsigned int nByte)
+        void *pBuff,
+        unsigned int nByte)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pPlayerHandle is NULL");
@@ -443,20 +443,20 @@ static void __vp_mm_player_pipe_interrupted_cb(void *pUserData,
 		int nInterruptCode = 0;
 		if (pMMPlayer->pInterruptParam) {
 			nInterruptCode =
-				_vp_mm_player_priv_convert_interrupt(pMMPlayer->
-						pInterruptParam->
-						nInterrupt, TRUE);
+			    _vp_mm_player_priv_convert_interrupt(pMMPlayer->
+			            pInterruptParam->
+			            nInterrupt, TRUE);
 		}
 
 		pMMPlayer->pCbFunc->pInterruptedCb(nInterruptCode,
-						   pMMPlayer->pParam);
+		                                   pMMPlayer->pParam);
 	}
 
 	return;
 }
 
 static void __vp_mm_player_pipe_error_cb(void *pUserData, void *pBuff,
-		unsigned int nByte)
+        unsigned int nByte)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pPlayerHandle is NULL");
@@ -468,8 +468,8 @@ static void __vp_mm_player_pipe_error_cb(void *pUserData, void *pBuff,
 		int nErr = 0;
 		if (pMMPlayer->pErrorParam) {
 			nErr =
-				_vp_mm_player_priv_convert_error(pMMPlayer->pErrorParam->
-						nError, TRUE);
+			    _vp_mm_player_priv_convert_error(pMMPlayer->pErrorParam->
+			                                     nError, TRUE);
 		}
 
 		pMMPlayer->pCbFunc->pErrorCb(nErr, pMMPlayer->pParam);
@@ -478,7 +478,7 @@ static void __vp_mm_player_pipe_error_cb(void *pUserData, void *pBuff,
 }
 
 static void __vp_mm_player_pipe_buffering_cb(void *pUserData, void *pBuff,
-		unsigned int nByte)
+        unsigned int nByte)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pPlayerHandle is NULL");
@@ -498,8 +498,8 @@ static void __vp_mm_player_pipe_buffering_cb(void *pUserData, void *pBuff,
 }
 
 static void __vp_mm_player_pipe_subtitle_update_cb(void *pUserData,
-		void *pBuff,
-		unsigned int nByte)
+        void *pBuff,
+        unsigned int nByte)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pPlayerHandle is NULL");
@@ -522,8 +522,8 @@ static void __vp_mm_player_pipe_subtitle_update_cb(void *pUserData,
 
 		if (szSubtitleText && strlen(szSubtitleText) > 0)
 			pMMPlayer->pCbFunc->pSubtitleUpdateCb(nDuration,
-							      szSubtitleText,
-							      pMMPlayer->pParam);
+			                                      szSubtitleText,
+			                                      pMMPlayer->pParam);
 		VP_FREE(szSubtitleText);
 	}
 
@@ -532,8 +532,8 @@ static void __vp_mm_player_pipe_subtitle_update_cb(void *pUserData,
 }
 
 static void __vp_mm_player_pipe_pd_message_cb(void *pUserData,
-		void *pBuff,
-		unsigned int nByte)
+        void *pBuff,
+        unsigned int nByte)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pPlayerHandle is NULL");
@@ -555,7 +555,7 @@ static void __vp_mm_player_pipe_pd_message_cb(void *pUserData,
 }
 
 static void __vp_mm_player_pipe_captured_cb(void *pUserData, void *pBuff,
-		unsigned int nByte)
+        unsigned int nByte)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pPlayerHandle is NULL");
@@ -578,15 +578,15 @@ static void __vp_mm_player_pipe_captured_cb(void *pUserData, void *pBuff,
 		}
 
 		pMMPlayer->pCbFunc->pCapturedCb(pFrame, nWidth, nHeight, nSize,
-						pMMPlayer->pParam);
+		                                pMMPlayer->pParam);
 	}
 
 	return;
 }
 
 static void __vp_mm_player_pipe_missed_plugin_cb(void *pUserData,
-		void *pBuff,
-		unsigned int nByte)
+        void *pBuff,
+        unsigned int nByte)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pPlayerHandle is NULL");
@@ -598,14 +598,14 @@ static void __vp_mm_player_pipe_missed_plugin_cb(void *pUserData,
 	if (pMMPlayer->pCbFunc->pMissedPluginCb) {
 
 		vp_mm_player_missed_plugin_t nMissedType =
-			VP_MM_PLAYER_MISSED_PLUGIN_UNKNOWN;
+		    VP_MM_PLAYER_MISSED_PLUGIN_UNKNOWN;
 
 		if (pMMPlayer->pMissedParam) {
 			nMissedType = pMMPlayer->pMissedParam->nMissedType;
 		}
 
 		pMMPlayer->pCbFunc->pMissedPluginCb(nMissedType,
-						    pMMPlayer->pParam);
+		                                    pMMPlayer->pParam);
 	}
 
 	return;
@@ -614,8 +614,8 @@ static void __vp_mm_player_pipe_missed_plugin_cb(void *pUserData,
 
 
 static void __vp_mm_player_pipe_image_buffer_cb(void *pUserData,
-		void *pBuff,
-		unsigned int nByte)
+        void *pBuff,
+        unsigned int nByte)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pPlayerHandle is NULL");
@@ -634,7 +634,7 @@ static void __vp_mm_player_pipe_image_buffer_cb(void *pUserData,
 		}
 
 		pMMPlayer->pCbFunc->pImageBufferCb(pBuffer, nSize,
-						   pMMPlayer->pParam);
+		                                   pMMPlayer->pParam);
 	}
 
 	return;
@@ -656,8 +656,8 @@ static void __vp_mm_player_prepare_cb(void *pUserData)
 	if (pMMPlayer->pCbPipe->pPreparePipe) {
 		Eina_Bool bRet = EINA_FALSE;
 		bRet =
-			ecore_pipe_write(pMMPlayer->pCbPipe->pPreparePipe,
-					 (void *) pMMPlayer, sizeof(MMPlayer));
+		    ecore_pipe_write(pMMPlayer->pCbPipe->pPreparePipe,
+		                     (void *) pMMPlayer, sizeof(MMPlayer));
 		if (bRet != EINA_TRUE) {
 			VideoLogError(" : ecore pipe write fail");
 		}
@@ -678,8 +678,8 @@ static void __vp_mm_player_completed_cb(void *pUserData)
 	if (pMMPlayer->pCbPipe->pEndOfStreamPipe) {
 		Eina_Bool bRet = EINA_FALSE;
 		bRet =
-			ecore_pipe_write(pMMPlayer->pCbPipe->pEndOfStreamPipe,
-					 (void *) pMMPlayer, sizeof(MMPlayer));
+		    ecore_pipe_write(pMMPlayer->pCbPipe->pEndOfStreamPipe,
+		                     (void *) pMMPlayer, sizeof(MMPlayer));
 		if (bRet != EINA_TRUE) {
 			VideoLogError(" : ecore pipe write fail");
 		}
@@ -700,8 +700,8 @@ static void __vp_mm_player_seek_completed_cb(void *pUserData)
 	if (pMMPlayer->pCbPipe->pSeekCompletePipe) {
 		Eina_Bool bRet = EINA_FALSE;
 		bRet =
-			ecore_pipe_write(pMMPlayer->pCbPipe->pSeekCompletePipe,
-					 (void *) pMMPlayer, sizeof(MMPlayer));
+		    ecore_pipe_write(pMMPlayer->pCbPipe->pSeekCompletePipe,
+		                     (void *) pMMPlayer, sizeof(MMPlayer));
 		if (bRet != EINA_TRUE) {
 			VideoLogError(" : ecore pipe write fail");
 		}
@@ -712,7 +712,7 @@ static void __vp_mm_player_seek_completed_cb(void *pUserData)
 }
 
 static void __vp_mm_player_interrupted_cb(player_interrupted_code_e nCode,
-		void *pUserData)
+        void *pUserData)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -729,8 +729,8 @@ static void __vp_mm_player_interrupted_cb(player_interrupted_code_e nCode,
 		}
 
 		bRet =
-			ecore_pipe_write(pMMPlayer->pCbPipe->pInterruptedPipe,
-					 (void *) pMMPlayer, sizeof(MMPlayer));
+		    ecore_pipe_write(pMMPlayer->pCbPipe->pInterruptedPipe,
+		                     (void *) pMMPlayer, sizeof(MMPlayer));
 		if (bRet != EINA_TRUE) {
 			VideoLogError(" : ecore pipe write fail");
 		}
@@ -757,8 +757,8 @@ static void __vp_mm_player_error_cb(int nError, void *pUserData)
 		}
 
 		bRet =
-			ecore_pipe_write(pMMPlayer->pCbPipe->pErrorPipe,
-					 (void *) pMMPlayer, sizeof(MMPlayer));
+		    ecore_pipe_write(pMMPlayer->pCbPipe->pErrorPipe,
+		                     (void *) pMMPlayer, sizeof(MMPlayer));
 		if (bRet != EINA_TRUE) {
 			VideoLogError(" : ecore pipe write fail");
 		}
@@ -785,8 +785,8 @@ static void __vp_mm_player_buffering_cb(int nPercent, void *pUserData)
 		}
 
 		bRet =
-			ecore_pipe_write(pMMPlayer->pCbPipe->pBufferingPipe,
-					 (void *) pMMPlayer, sizeof(MMPlayer));
+		    ecore_pipe_write(pMMPlayer->pCbPipe->pBufferingPipe,
+		                     (void *) pMMPlayer, sizeof(MMPlayer));
 		if (bRet != EINA_TRUE) {
 			VideoLogError(" : ecore pipe write fail");
 		}
@@ -797,8 +797,8 @@ static void __vp_mm_player_buffering_cb(int nPercent, void *pUserData)
 }
 
 static void __vp_mm_player_subtitle_updated_cb(unsigned long nDuration,
-		char *text,
-		void *pUserData)
+        char *text,
+        void *pUserData)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -807,8 +807,9 @@ static void __vp_mm_player_subtitle_updated_cb(unsigned long nDuration,
 
 	MMPlayer *pMMPlayer = (MMPlayer *) pUserData;
 
-	if (pMMPlayer->bDeactivateSubtitle)
+	if (pMMPlayer->bDeactivateSubtitle) {
 		return;
+	}
 
 	if (pMMPlayer->pCbPipe->pSubtitleUpdatePipe) {
 		if (pMMPlayer->pSubtitleParam) {
@@ -826,11 +827,11 @@ static void __vp_mm_player_subtitle_updated_cb(unsigned long nDuration,
 		}
 
 		if (pMMPlayer->pSubtitleParam && pMMPlayer->pSubtitleParam->txt
-				&& strlen(pMMPlayer->pSubtitleParam->txt) > 0) {
+		        && strlen(pMMPlayer->pSubtitleParam->txt) > 0) {
 			Eina_Bool bRet = EINA_FALSE;
 			bRet =
-				ecore_pipe_write(pMMPlayer->pCbPipe->pSubtitleUpdatePipe,
-						 (void *) pMMPlayer, sizeof(MMPlayer));
+			    ecore_pipe_write(pMMPlayer->pCbPipe->pSubtitleUpdatePipe,
+			                     (void *) pMMPlayer, sizeof(MMPlayer));
 			if (bRet != EINA_TRUE) {
 				VideoLogError(" : ecore pipe write fail");
 			}
@@ -841,9 +842,9 @@ static void __vp_mm_player_subtitle_updated_cb(unsigned long nDuration,
 }
 
 static void __vp_mm_player_video_captured_cb(unsigned char *pFrame,
-		int nWidth, int nHeight,
-		unsigned int nSize,
-		void *pUserData)
+        int nWidth, int nHeight,
+        unsigned int nSize,
+        void *pUserData)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -874,8 +875,8 @@ static void __vp_mm_player_video_captured_cb(unsigned char *pFrame,
 			pMMPlayer->pCaptureParam->pParam = pMMPlayer->pParam;
 		}
 		bRet =
-			ecore_pipe_write(pMMPlayer->pCbPipe->pCapturedPipe,
-					 (void *) pMMPlayer, sizeof(MMPlayer));
+		    ecore_pipe_write(pMMPlayer->pCbPipe->pCapturedPipe,
+		                     (void *) pMMPlayer, sizeof(MMPlayer));
 		if (bRet != EINA_TRUE) {
 			VideoLogError(" : ecore pipe write fail");
 		}
@@ -961,7 +962,7 @@ static void __vp_mm_player_video_captured_cb(unsigned char *pFrame,
 
 
 static void _vp_mm_callback_param_free(vp_mm_player_callback_t nType,
-				       void *pParam)
+                                       void *pParam)
 {
 	if (pParam == NULL) {
 		VideoLogError("Param data is NULL");
@@ -970,7 +971,7 @@ static void _vp_mm_callback_param_free(vp_mm_player_callback_t nType,
 
 	if (nType == VP_MM_PLAYER_CAPTURE_VIDEO_CB) {
 		MMPlayerCaptureParam *pCaptureParam =
-			(MMPlayerCaptureParam *) pParam;
+		    (MMPlayerCaptureParam *) pParam;
 		if (pCaptureParam->pFrame) {
 			free(pCaptureParam->pFrame);
 			pCaptureParam->pFrame = NULL;
@@ -980,7 +981,7 @@ static void _vp_mm_callback_param_free(vp_mm_player_callback_t nType,
 		pCaptureParam = NULL;
 	} else if (nType == VP_MM_PLAYER_SUBTITLE_UPDATE_CB) {
 		MMPlayerSubtitleParam *pSubtitleParam =
-			(MMPlayerSubtitleParam *) pParam;
+		    (MMPlayerSubtitleParam *) pParam;
 		if (pSubtitleParam->txt) {
 			free(pSubtitleParam->txt);
 			pSubtitleParam->txt = NULL;
@@ -989,7 +990,7 @@ static void _vp_mm_callback_param_free(vp_mm_player_callback_t nType,
 		pSubtitleParam = NULL;
 	} else if (nType == VP_MM_PLAYER_IMAGE_BUFFER_CB) {
 		MMPlayerImageBufferParam *pImageBufferParam =
-			(MMPlayerImageBufferParam *) pParam;
+		    (MMPlayerImageBufferParam *) pParam;
 		if (pImageBufferParam->pBuffer) {
 			free(pImageBufferParam->pBuffer);
 			pImageBufferParam->pBuffer = NULL;
@@ -1015,83 +1016,83 @@ static void _vp_mm_ecore_pipe_create(MMPlayer *pMMPlayer)
 	}
 
 	pCbPipe->pPreparePipe =
-		ecore_pipe_add((Ecore_Pipe_Cb) __vp_mm_player_pipe_prepare_cb,
-			       (void *) pMMPlayer);
+	    ecore_pipe_add((Ecore_Pipe_Cb) __vp_mm_player_pipe_prepare_cb,
+	                   (void *) pMMPlayer);
 	if (pCbPipe->pPreparePipe == NULL) {
 		VideoLogWarning("pPreparePipe create fail");
 	}
 
 	pCbPipe->pEndOfStreamPipe =
-		ecore_pipe_add((Ecore_Pipe_Cb)
-			       __vp_mm_player_pipe_end_of_stream_cb,
-			       (void *) pMMPlayer);
+	    ecore_pipe_add((Ecore_Pipe_Cb)
+	                   __vp_mm_player_pipe_end_of_stream_cb,
+	                   (void *) pMMPlayer);
 	if (pCbPipe->pEndOfStreamPipe == NULL) {
 		VideoLogWarning("pEndOfStreamPipe create fail");
 	}
 
 	pCbPipe->pSeekCompletePipe =
-		ecore_pipe_add((Ecore_Pipe_Cb)
-			       __vp_mm_player_pipe_seek_complete_cb,
-			       (void *) pMMPlayer);
+	    ecore_pipe_add((Ecore_Pipe_Cb)
+	                   __vp_mm_player_pipe_seek_complete_cb,
+	                   (void *) pMMPlayer);
 	if (pCbPipe->pSeekCompletePipe == NULL) {
 		VideoLogWarning("pSeekCompletePipe create fail");
 	}
 
 	pCbPipe->pInterruptedPipe =
-		ecore_pipe_add((Ecore_Pipe_Cb) __vp_mm_player_pipe_interrupted_cb,
-			       (void *) pMMPlayer);
+	    ecore_pipe_add((Ecore_Pipe_Cb) __vp_mm_player_pipe_interrupted_cb,
+	                   (void *) pMMPlayer);
 	if (pCbPipe->pInterruptedPipe == NULL) {
 		VideoLogWarning("pInterruptedPipe create fail");
 	}
 
 	pCbPipe->pErrorPipe =
-		ecore_pipe_add((Ecore_Pipe_Cb) __vp_mm_player_pipe_error_cb,
-			       (void *) pMMPlayer);
+	    ecore_pipe_add((Ecore_Pipe_Cb) __vp_mm_player_pipe_error_cb,
+	                   (void *) pMMPlayer);
 	if (pCbPipe->pErrorPipe == NULL) {
 		VideoLogWarning("pErrorPipe create fail");
 	}
 
 	pCbPipe->pBufferingPipe =
-		ecore_pipe_add((Ecore_Pipe_Cb) __vp_mm_player_pipe_buffering_cb,
-			       (void *) pMMPlayer);
+	    ecore_pipe_add((Ecore_Pipe_Cb) __vp_mm_player_pipe_buffering_cb,
+	                   (void *) pMMPlayer);
 	if (pCbPipe->pBufferingPipe == NULL) {
 		VideoLogWarning("pBufferingPipe create fail");
 	}
 
 	pCbPipe->pSubtitleUpdatePipe =
-		ecore_pipe_add((Ecore_Pipe_Cb)
-			       __vp_mm_player_pipe_subtitle_update_cb,
-			       (void *) pMMPlayer);
+	    ecore_pipe_add((Ecore_Pipe_Cb)
+	                   __vp_mm_player_pipe_subtitle_update_cb,
+	                   (void *) pMMPlayer);
 	if (pCbPipe->pSubtitleUpdatePipe == NULL) {
 		VideoLogWarning("pSubtitleUpdatePipe create fail");
 	}
 
 	pCbPipe->pPDMessagePipe =
-		ecore_pipe_add((Ecore_Pipe_Cb) __vp_mm_player_pipe_pd_message_cb,
-			       (void *) pMMPlayer);
+	    ecore_pipe_add((Ecore_Pipe_Cb) __vp_mm_player_pipe_pd_message_cb,
+	                   (void *) pMMPlayer);
 	if (pCbPipe->pPDMessagePipe == NULL) {
 		VideoLogWarning("pPDMessagePipe create fail");
 	}
 
 	pCbPipe->pCapturedPipe =
-		ecore_pipe_add((Ecore_Pipe_Cb) __vp_mm_player_pipe_captured_cb,
-			       (void *) pMMPlayer);
+	    ecore_pipe_add((Ecore_Pipe_Cb) __vp_mm_player_pipe_captured_cb,
+	                   (void *) pMMPlayer);
 	if (pCbPipe->pCapturedPipe == NULL) {
 		VideoLogWarning("pCapturedPipe create fail");
 	}
 
 	pCbPipe->pMissedPluginPipe =
-		ecore_pipe_add((Ecore_Pipe_Cb)
-			       __vp_mm_player_pipe_missed_plugin_cb,
-			       (void *) pMMPlayer);
+	    ecore_pipe_add((Ecore_Pipe_Cb)
+	                   __vp_mm_player_pipe_missed_plugin_cb,
+	                   (void *) pMMPlayer);
 	if (pCbPipe->pMissedPluginPipe == NULL) {
 		VideoLogWarning("pMissedPluginPipe create fail");
 	}
 
 	pCbPipe->pImageBufferPipe =
-		ecore_pipe_add((Ecore_Pipe_Cb)
-			       __vp_mm_player_pipe_image_buffer_cb,
-			       (void *) pMMPlayer);
+	    ecore_pipe_add((Ecore_Pipe_Cb)
+	                   __vp_mm_player_pipe_image_buffer_cb,
+	                   (void *) pMMPlayer);
 	if (pCbPipe->pImageBufferPipe == NULL) {
 		VideoLogWarning("pImageBufferPipe create fail");
 	}
@@ -1125,44 +1126,44 @@ static void _vp_mm_register_default_callback(MMPlayer *pMMPlayer)
 	}
 	int nRet = PLAYER_ERROR_NONE;
 	nRet =
-		player_set_completed_cb(pMMPlayer->pPlayer,
-					__vp_mm_player_completed_cb,
-					(void *) pMMPlayer);
+	    player_set_completed_cb(pMMPlayer->pPlayer,
+	                            __vp_mm_player_completed_cb,
+	                            (void *) pMMPlayer);
 	if (nRet != PLAYER_ERROR_NONE) {
 		_vp_mm_player_print_err(nRet);
 		VideoLogError("player_set_completed_cb fail : %d", nRet);
 	}
 
 	nRet =
-		player_set_interrupted_cb(pMMPlayer->pPlayer,
-					  __vp_mm_player_interrupted_cb,
-					  (void *) pMMPlayer);
+	    player_set_interrupted_cb(pMMPlayer->pPlayer,
+	                              __vp_mm_player_interrupted_cb,
+	                              (void *) pMMPlayer);
 	if (nRet != PLAYER_ERROR_NONE) {
 		_vp_mm_player_print_err(nRet);
 		VideoLogError("player_set_interrupted_cb fail : %d", nRet);
 	}
 
 	nRet =
-		player_set_error_cb(pMMPlayer->pPlayer, __vp_mm_player_error_cb,
-				    (void *) pMMPlayer);
+	    player_set_error_cb(pMMPlayer->pPlayer, __vp_mm_player_error_cb,
+	                        (void *) pMMPlayer);
 	if (nRet != PLAYER_ERROR_NONE) {
 		_vp_mm_player_print_err(nRet);
 		VideoLogError("player_set_error_cb fail : %d", nRet);
 	}
 
 	nRet =
-		player_set_buffering_cb(pMMPlayer->pPlayer,
-					__vp_mm_player_buffering_cb,
-					(void *) pMMPlayer);
+	    player_set_buffering_cb(pMMPlayer->pPlayer,
+	                            __vp_mm_player_buffering_cb,
+	                            (void *) pMMPlayer);
 	if (nRet != PLAYER_ERROR_NONE) {
 		_vp_mm_player_print_err(nRet);
 		VideoLogError("player_set_buffering_cb fail : %d", nRet);
 	}
 
 	nRet =
-		player_set_subtitle_updated_cb(pMMPlayer->pPlayer,
-					       __vp_mm_player_subtitle_updated_cb,
-					       (void *) pMMPlayer);
+	    player_set_subtitle_updated_cb(pMMPlayer->pPlayer,
+	                                   __vp_mm_player_subtitle_updated_cb,
+	                                   (void *) pMMPlayer);
 	if (nRet != PLAYER_ERROR_NONE) {
 		_vp_mm_player_print_err(nRet);
 		VideoLogError("player_set_subtitle_updated_cb fail : %d", nRet);
@@ -1293,7 +1294,7 @@ mm_player_handle vp_mm_player_create()
 	}
 
 	pMMPlayer->pInterruptParam =
-		calloc(1, sizeof(MMPlayerInterruptParam));
+	    calloc(1, sizeof(MMPlayerInterruptParam));
 	if (pMMPlayer->pInterruptParam == NULL) {
 		VideoLogError("MMPlayer pInterruptParam alloc fail");
 	}
@@ -1303,7 +1304,7 @@ mm_player_handle vp_mm_player_create()
 		VideoLogError("MMPlayer pErrorParam alloc fail");
 	}
 	pMMPlayer->pBufferingParam =
-		calloc(1, sizeof(MMPlayerBufferingParam));
+	    calloc(1, sizeof(MMPlayerBufferingParam));
 	if (pMMPlayer->pBufferingParam == NULL) {
 		VideoLogError("MMPlayer pBufferingParam alloc fail");
 	}
@@ -1314,13 +1315,13 @@ mm_player_handle vp_mm_player_create()
 	}
 
 	pMMPlayer->pMissedParam =
-		calloc(1, sizeof(MMPlayerMissedPluginParam));
+	    calloc(1, sizeof(MMPlayerMissedPluginParam));
 	if (pMMPlayer->pMissedParam == NULL) {
 		VideoLogError("MMPlayer pMissedParam alloc fail");
 	}
 
 	pMMPlayer->pImageBufferParam =
-		calloc(1, sizeof(MMPlayerImageBufferParam));
+	    calloc(1, sizeof(MMPlayerImageBufferParam));
 	if (pMMPlayer->pImageBufferParam == NULL) {
 		VideoLogError("MMPlayer pImageBufferParam alloc fail");
 	}
@@ -1360,11 +1361,11 @@ void vp_mm_player_destroy(mm_player_handle pPlayerHandle)
 	pMMPlayer->bIsScaling = FALSE;
 
 	_vp_mm_callback_param_free(VP_MM_PLAYER_CAPTURE_VIDEO_CB,
-				   (void *) pMMPlayer->pCaptureParam);
+	                           (void *) pMMPlayer->pCaptureParam);
 	_vp_mm_callback_param_free(VP_MM_PLAYER_SUBTITLE_UPDATE_CB,
-				   (void *) pMMPlayer->pSubtitleParam);
+	                           (void *) pMMPlayer->pSubtitleParam);
 	_vp_mm_callback_param_free(VP_MM_PLAYER_IMAGE_BUFFER_CB,
-				   (void *) pMMPlayer->pImageBufferParam);
+	                           (void *) pMMPlayer->pImageBufferParam);
 
 	if (pMMPlayer->pInterruptParam) {
 		free(pMMPlayer->pInterruptParam);
@@ -1487,7 +1488,7 @@ bool vp_mm_player_realize(mm_player_handle pPlayerHandle, char *szPath)
 }
 
 bool vp_mm_player_realize_async(mm_player_handle pPlayerHandle,
-				char *szPath)
+                                char *szPath)
 {
 	if (pPlayerHandle == NULL) {
 		VideoLogError("pPlayerHandle is NULL");
@@ -1523,9 +1524,9 @@ bool vp_mm_player_realize_async(mm_player_handle pPlayerHandle,
 //      }
 
 	nRet =
-		player_prepare_async(pMMPlayer->pPlayer,
-				     __vp_mm_player_prepare_cb,
-				     (void *) pMMPlayer);
+	    player_prepare_async(pMMPlayer->pPlayer,
+	                         __vp_mm_player_prepare_cb,
+	                         (void *) pMMPlayer);
 	if (nRet != PLAYER_ERROR_NONE) {
 		_vp_mm_player_print_err(nRet);
 		VideoLogError("player_prepare is fail : %d", nRet);
@@ -1611,8 +1612,8 @@ bool vp_mm_player_is_realize(mm_player_handle pPlayerHandle)
 }
 
 bool vp_mm_player_set_callback(mm_player_handle pPlayerHandle,
-			       vp_mm_player_callback_t nCallbackType,
-			       void *pCallback)
+                               vp_mm_player_callback_t nCallbackType,
+                               void *pCallback)
 {
 	if (pPlayerHandle == NULL) {
 		VideoLogError("pPlayerHandle is NULL");
@@ -1629,46 +1630,46 @@ bool vp_mm_player_set_callback(mm_player_handle pPlayerHandle,
 	switch (nCallbackType) {
 	case VP_MM_PLAYER_REALIZE_ASYNC_CB:
 		pMMPlayer->pCbFunc->pPrepareCb =
-			(vp_mm_player_prepare_cb) pCallback;
+		    (vp_mm_player_prepare_cb) pCallback;
 		break;
 	case VP_MM_PLAYER_SEEK_COMPLETE_CB:
 		pMMPlayer->pCbFunc->pSeekCompleteCb =
-			(vp_mm_player_seek_completed_cb) pCallback;
+		    (vp_mm_player_seek_completed_cb) pCallback;
 		break;
 	case VP_MM_PLAYER_END_OF_STREAM_CB:
 		pMMPlayer->pCbFunc->pEndOfStreamCb =
-			(vp_mm_player_completed_cb) pCallback;
+		    (vp_mm_player_completed_cb) pCallback;
 		break;
 	case VP_MM_PLAYER_INTERRUPT_CB:
 		pMMPlayer->pCbFunc->pInterruptedCb =
-			(vp_mm_player_interrupted_cb) pCallback;
+		    (vp_mm_player_interrupted_cb) pCallback;
 		break;
 	case VP_MM_PLAYER_ERROR_CB:
 		pMMPlayer->pCbFunc->pErrorCb = (vp_mm_player_error_cb) pCallback;
 		break;
 	case VP_MM_PLAYER_BUFFERING_CB:
 		pMMPlayer->pCbFunc->pBufferingCb =
-			(vp_mm_player_buffering_cb) pCallback;
+		    (vp_mm_player_buffering_cb) pCallback;
 		break;
 	case VP_MM_PLAYER_SUBTITLE_UPDATE_CB:
 		pMMPlayer->pCbFunc->pSubtitleUpdateCb =
-			(vp_mm_player_subtitle_updated_cb) pCallback;
+		    (vp_mm_player_subtitle_updated_cb) pCallback;
 		break;
 	case VP_MM_PLAYER_PD_MESSAGE_CB:
 		pMMPlayer->pCbFunc->pPDMessageCb =
-			(vp_mm_player_pd_message_cb) pCallback;
+		    (vp_mm_player_pd_message_cb) pCallback;
 		break;
 	case VP_MM_PLAYER_CAPTURE_VIDEO_CB:
 		pMMPlayer->pCbFunc->pCapturedCb =
-			(vp_mm_player_video_captured_cb) pCallback;
+		    (vp_mm_player_video_captured_cb) pCallback;
 		break;
 	case VP_MM_PLAYER_MISSED_PLUGIN_CB:
 		pMMPlayer->pCbFunc->pMissedPluginCb =
-			(vp_mm_player_missed_plugin_cb) pCallback;
+		    (vp_mm_player_missed_plugin_cb) pCallback;
 		break;
 	case VP_MM_PLAYER_IMAGE_BUFFER_CB:
 		pMMPlayer->pCbFunc->pImageBufferCb =
-			(vp_mm_player_image_buffer_updated_cb) pCallback;
+		    (vp_mm_player_image_buffer_updated_cb) pCallback;
 		break;
 	default:
 		VideoLogError("Unknown Callback type : %d", nCallbackType);
@@ -1679,7 +1680,7 @@ bool vp_mm_player_set_callback(mm_player_handle pPlayerHandle,
 }
 
 bool vp_mm_player_set_user_param(mm_player_handle pPlayerHandle,
-				 void *pParam)
+                                 void *pParam)
 {
 	if (pPlayerHandle == NULL) {
 		VideoLogError("pPlayerHandle is NULL");
@@ -1797,7 +1798,7 @@ bool vp_mm_player_pause(mm_player_handle pPlayerHandle)
 }
 
 bool vp_mm_player_get_state(mm_player_handle pPlayerHandle,
-			    vp_mm_player_state_t *nState)
+                            vp_mm_player_state_t *nState)
 {
 	if (pPlayerHandle == NULL) {
 		VideoLogError("pPlayerHandle is NULL");
@@ -1820,7 +1821,7 @@ bool vp_mm_player_get_state(mm_player_handle pPlayerHandle,
 }
 
 bool vp_mm_player_get_position(mm_player_handle pPlayerHandle,
-			       int *nPosition)
+                               int *nPosition)
 {
 	if (pPlayerHandle == NULL) {
 		VideoLogError("pPlayerHandle is NULL");
@@ -1854,7 +1855,7 @@ bool vp_mm_player_get_position(mm_player_handle pPlayerHandle,
 }
 
 bool vp_mm_player_set_position(mm_player_handle pPlayerHandle,
-			       int nPosition)
+                               int nPosition)
 {
 	if (pPlayerHandle == NULL) {
 		VideoLogError("pPlayerHandle is NULL");
@@ -1879,9 +1880,9 @@ bool vp_mm_player_set_position(mm_player_handle pPlayerHandle,
 	}
 #if 1				//#ifdef USE_I_FRAMESEKK        //fix. because of changing API
 	int nRet =
-		player_set_play_position(pMMPlayer->pPlayer, nPosition, TRUE,
-					 __vp_mm_player_seek_completed_cb,
-					 (void *) pMMPlayer);
+	    player_set_play_position(pMMPlayer->pPlayer, nPosition, TRUE,
+	                             __vp_mm_player_seek_completed_cb,
+	                             (void *) pMMPlayer);
 	if (nRet != PLAYER_ERROR_NONE) {
 		_vp_mm_player_print_err(nRet);
 		VideoLogError("player_set_position fail : %d", nRet);
@@ -1889,9 +1890,9 @@ bool vp_mm_player_set_position(mm_player_handle pPlayerHandle,
 	}
 #else
 	int nRet =
-		player_set_position(pMMPlayer->pPlayer, nPosition,
-				    __vp_mm_player_seek_completed_cb,
-				    (void *) pMMPlayer);
+	    player_set_position(pMMPlayer->pPlayer, nPosition,
+	                        __vp_mm_player_seek_completed_cb,
+	                        (void *) pMMPlayer);
 	if (nRet != PLAYER_ERROR_NONE) {
 		_vp_mm_player_print_err(nRet);
 		VideoLogError("player_set_position fail : %d", nRet);
@@ -1903,7 +1904,7 @@ bool vp_mm_player_set_position(mm_player_handle pPlayerHandle,
 }
 
 bool vp_mm_player_set_position_by_key_frame(mm_player_handle
-		pPlayerHandle, int nPosition)
+        pPlayerHandle, int nPosition)
 {
 	if (pPlayerHandle == NULL) {
 		VideoLogError("pPlayerHandle is NULL");
@@ -1928,9 +1929,9 @@ bool vp_mm_player_set_position_by_key_frame(mm_player_handle
 	}
 #if 1				//#ifdef USE_I_FRAMESEKK        //fix. because of changing API
 	int nRet =
-		player_set_play_position(pMMPlayer->pPlayer, nPosition, FALSE,
-					 __vp_mm_player_seek_completed_cb,
-					 (void *) pMMPlayer);
+	    player_set_play_position(pMMPlayer->pPlayer, nPosition, FALSE,
+	                             __vp_mm_player_seek_completed_cb,
+	                             (void *) pMMPlayer);
 	if (nRet != PLAYER_ERROR_NONE) {
 		_vp_mm_player_print_err(nRet);
 		VideoLogError("player_set_position fail : %d", nRet);
@@ -1938,9 +1939,9 @@ bool vp_mm_player_set_position_by_key_frame(mm_player_handle
 	}
 #else
 	int nRet =
-		player_set_position(pMMPlayer->pPlayer, nPosition,
-				    __vp_mm_player_seek_completed_cb,
-				    (void *) pMMPlayer);
+	    player_set_position(pMMPlayer->pPlayer, nPosition,
+	                        __vp_mm_player_seek_completed_cb,
+	                        (void *) pMMPlayer);
 	if (nRet != PLAYER_ERROR_NONE) {
 		_vp_mm_player_print_err(nRet);
 		VideoLogError("player_set_position fail : %d", nRet);
@@ -1952,7 +1953,7 @@ bool vp_mm_player_set_position_by_key_frame(mm_player_handle
 
 
 bool vp_mm_player_get_buffering_position(mm_player_handle pPlayerHandle,
-		int *nPosition)
+        int *nPosition)
 {
 	if (pPlayerHandle == NULL) {
 		VideoLogError("pPlayerHandle is NULL");
@@ -1973,12 +1974,12 @@ bool vp_mm_player_get_buffering_position(mm_player_handle pPlayerHandle,
 	int nStart = 0;
 	int nCurrent = 0;
 	int nRet =
-		player_get_streaming_download_progress(pMMPlayer->pPlayer,
-				&nStart, &nCurrent);
+	    player_get_streaming_download_progress(pMMPlayer->pPlayer,
+	            &nStart, &nCurrent);
 	if (nRet != PLAYER_ERROR_NONE) {
 		_vp_mm_player_print_err(nRet);
 		VideoLogError("player_get_streaming_download_progress fail : %d",
-			      nRet);
+		              nRet);
 		return FALSE;
 	}
 
@@ -2102,7 +2103,7 @@ bool vp_mm_player_get_mute(mm_player_handle pPlayerHandle, bool *bMute)
 }
 
 bool vp_mm_player_get_duration(mm_player_handle pPlayerHandle,
-			       int *nDuration)
+                               int *nDuration)
 {
 	if (pPlayerHandle == NULL) {
 		VideoLogError("pPlayerHandle is NULL");
@@ -2136,7 +2137,7 @@ bool vp_mm_player_get_duration(mm_player_handle pPlayerHandle,
 }
 
 bool vp_mm_player_get_codecinfo(mm_player_handle pPlayerHandle,
-				char **audio_codec, char **video_codec)
+                                char **audio_codec, char **video_codec)
 {
 	if (pPlayerHandle == NULL) {
 		VideoLogError("pPlayerHandle is NULL");
@@ -2156,8 +2157,8 @@ bool vp_mm_player_get_codecinfo(mm_player_handle pPlayerHandle,
 	}
 
 	int nRet =
-		player_get_codec_info(pMMPlayer->pPlayer, audio_codec,
-				      video_codec);
+	    player_get_codec_info(pMMPlayer->pPlayer, audio_codec,
+	                          video_codec);
 	if (nRet != PLAYER_ERROR_NONE) {
 		_vp_mm_player_print_err(nRet);
 		VideoLogError("player_get_codec_info fail : %d", nRet);
@@ -2169,7 +2170,7 @@ bool vp_mm_player_get_codecinfo(mm_player_handle pPlayerHandle,
 
 
 bool vp_mm_player_set_video_sink(mm_player_handle pPlayerHandle,
-				 int nType, void *pSink)
+                                 int nType, void *pSink)
 {
 	if (pPlayerHandle == NULL) {
 		VideoLogError("pPlayerHandle is NULL");
@@ -2198,7 +2199,7 @@ bool vp_mm_player_set_video_sink(mm_player_handle pPlayerHandle,
 }
 
 bool vp_mm_player_set_video_rotate(mm_player_handle pPlayerHandle,
-				   int nRotate)
+                                   int nRotate)
 {
 	if (pPlayerHandle == NULL) {
 		VideoLogError("pPlayerHandle is NULL");
@@ -2230,8 +2231,8 @@ bool vp_mm_player_set_video_rotate(mm_player_handle pPlayerHandle,
 }
 
 bool vp_mm_player_set_display_mode(mm_player_handle pPlayerHandle,
-				   vp_mm_player_display_mode_t
-				   nDisplayMode)
+                                   vp_mm_player_display_mode_t
+                                   nDisplayMode)
 {
 	if (pPlayerHandle == NULL) {
 		VideoLogError("pPlayerHandle is NULL");
@@ -2245,7 +2246,7 @@ bool vp_mm_player_set_display_mode(mm_player_handle pPlayerHandle,
 		return FALSE;
 	}
 	int nMode =
-		_vp_mm_player_priv_convert_display_mode(nDisplayMode, FALSE);
+	    _vp_mm_player_priv_convert_display_mode(nDisplayMode, FALSE);
 	int nRet = player_set_display_mode(pMMPlayer->pPlayer, nMode);
 	if (nRet != PLAYER_ERROR_NONE) {
 		_vp_mm_player_print_err(nRet);
@@ -2259,7 +2260,7 @@ bool vp_mm_player_set_display_mode(mm_player_handle pPlayerHandle,
 }
 
 bool vp_mm_player_get_resolution(mm_player_handle pPlayerHandle,
-				 int *nWidth, int *nHeight)
+                                 int *nWidth, int *nHeight)
 {
 	if (pPlayerHandle == NULL) {
 		VideoLogError("pPlayerHandle is NULL");
@@ -2289,7 +2290,7 @@ bool vp_mm_player_get_resolution(mm_player_handle pPlayerHandle,
 }
 
 bool vp_mm_player_set_subtitle_url(mm_player_handle pPlayerHandle,
-				   char *szSubtitlePath)
+                                   char *szSubtitlePath)
 {
 	if (pPlayerHandle == NULL) {
 		VideoLogError("pPlayerHandle is NULL");
@@ -2314,7 +2315,7 @@ bool vp_mm_player_set_subtitle_url(mm_player_handle pPlayerHandle,
 	}
 
 	int nRet =
-		player_set_subtitle_path(pMMPlayer->pPlayer, szSubtitlePath);
+	    player_set_subtitle_path(pMMPlayer->pPlayer, szSubtitlePath);
 	if (nRet != PLAYER_ERROR_NONE) {
 		_vp_mm_player_print_err(nRet);
 		VideoLogError("player_set_subtitle_path fail : %d", nRet);
@@ -2327,7 +2328,7 @@ bool vp_mm_player_set_subtitle_url(mm_player_handle pPlayerHandle,
 }
 
 bool vp_mm_player_get_subtitle_url(mm_player_handle pPlayerHandle,
-				   char **szSubtitlePath)
+                                   char **szSubtitlePath)
 {
 	if (pPlayerHandle == NULL) {
 		VideoLogError("pPlayerHandle is NULL");
@@ -2347,8 +2348,8 @@ bool vp_mm_player_get_subtitle_url(mm_player_handle pPlayerHandle,
 }
 
 bool vp_mm_player_set_subtitle_font(mm_player_handle pPlayerHandle,
-				    char *szFamilyName, char *szStyle,
-				    int nSize)
+                                    char *szFamilyName, char *szStyle,
+                                    int nSize)
 {
 	if (pPlayerHandle == NULL) {
 		VideoLogError("pPlayerHandle is NULL");
@@ -2397,8 +2398,8 @@ bool vp_mm_player_set_subtitle_font(mm_player_handle pPlayerHandle,
 }
 
 bool vp_mm_player_set_subtitle_font_color(mm_player_handle pPlayerHandle,
-		unsigned int nForegroundColor,
-		unsigned int nBGColor)
+        unsigned int nForegroundColor,
+        unsigned int nBGColor)
 {
 	if (pPlayerHandle == NULL) {
 		VideoLogError("pPlayerHandle is NULL");
@@ -2426,8 +2427,8 @@ bool vp_mm_player_set_subtitle_font_color(mm_player_handle pPlayerHandle,
 }
 
 bool vp_mm_player_subtitle_ignore_markup_tags(mm_player_handle
-		pPlayerHandle,
-		bool bIgnoreMarkup)
+        pPlayerHandle,
+        bool bIgnoreMarkup)
 {
 	if (pPlayerHandle == NULL) {
 		VideoLogError("pPlayerHandle is NULL");
@@ -2445,9 +2446,9 @@ bool vp_mm_player_subtitle_ignore_markup_tags(mm_player_handle
 }
 
 bool vp_mm_player_subtitle_set_alignment_in_line(mm_player_handle
-		pPlayerHandle,
-		vp_mm_player_subtitle_halign_t
-		type)
+        pPlayerHandle,
+        vp_mm_player_subtitle_halign_t
+        type)
 {
 	if (pPlayerHandle == NULL) {
 		VideoLogError("pPlayerHandle is NULL");
@@ -2465,9 +2466,9 @@ bool vp_mm_player_subtitle_set_alignment_in_line(mm_player_handle
 }
 
 bool vp_mm_player_subtitle_set_alignment_horizontal(mm_player_handle
-		pPlayerHandle,
-		vp_mm_player_subtitle_halign_t
-		type)
+        pPlayerHandle,
+        vp_mm_player_subtitle_halign_t
+        type)
 {
 	if (pPlayerHandle == NULL) {
 		VideoLogError("pPlayerHandle is NULL");
@@ -2485,7 +2486,7 @@ bool vp_mm_player_subtitle_set_alignment_horizontal(mm_player_handle
 }
 
 bool vp_mm_player_subtitle_apply_alignment_right_away(mm_player_handle
-		pPlayerHandle)
+        pPlayerHandle)
 {
 	if (pPlayerHandle == NULL) {
 		VideoLogError("pPlayerHandle is NULL");
@@ -2503,7 +2504,7 @@ bool vp_mm_player_subtitle_apply_alignment_right_away(mm_player_handle
 }
 
 bool vp_mm_player_set_subtitle_position(mm_player_handle pPlayerHandle,
-					int nPosition)
+                                        int nPosition)
 {
 	if (pPlayerHandle == NULL) {
 		VideoLogError("pPlayerHandle is NULL");
@@ -2523,8 +2524,8 @@ bool vp_mm_player_set_subtitle_position(mm_player_handle pPlayerHandle,
 	}
 
 	int nRet =
-		player_set_subtitle_position_offset(pMMPlayer->pPlayer,
-				nPosition);
+	    player_set_subtitle_position_offset(pMMPlayer->pPlayer,
+	                                        nPosition);
 	if (nRet != PLAYER_ERROR_NONE) {
 		_vp_mm_player_print_err(nRet);
 		VideoLogError("player_set_subtitle_position fail : %d", nRet);
@@ -2536,7 +2537,7 @@ bool vp_mm_player_set_subtitle_position(mm_player_handle pPlayerHandle,
 }
 
 bool vp_mm_player_set_deactivate_subtitle(mm_player_handle pPlayerHandle,
-		bool bDeactivate)
+        bool bDeactivate)
 {
 	if (pPlayerHandle == NULL) {
 		VideoLogError("pPlayerHandle is NULL");
@@ -2553,7 +2554,7 @@ bool vp_mm_player_set_deactivate_subtitle(mm_player_handle pPlayerHandle,
 
 
 bool vp_mm_player_set_volume(mm_player_handle pPlayerHandle, float fLeft,
-			     float fRight)
+                             float fRight)
 {
 	if (pPlayerHandle == NULL) {
 		VideoLogError("pPlayerHandle is NULL");
@@ -2583,7 +2584,7 @@ bool vp_mm_player_set_volume(mm_player_handle pPlayerHandle, float fLeft,
 }
 
 bool vp_mm_player_get_volume(mm_player_handle pPlayerHandle, float *fLeft,
-			     float *fRight)
+                             float *fRight)
 {
 	if (pPlayerHandle == NULL) {
 		VideoLogError("pPlayerHandle is NULL");
@@ -2606,7 +2607,7 @@ bool vp_mm_player_get_volume(mm_player_handle pPlayerHandle, float *fLeft,
 	float fRightVal = 0.0;
 
 	int nRet =
-		player_get_volume(pMMPlayer->pPlayer, &fLeftVal, &fRightVal);
+	    player_get_volume(pMMPlayer->pPlayer, &fLeftVal, &fRightVal);
 	if (nRet != PLAYER_ERROR_NONE) {
 		_vp_mm_player_print_err(nRet);
 		VideoLogError("player_get_volume fail : %d", nRet);
@@ -2620,7 +2621,7 @@ bool vp_mm_player_get_volume(mm_player_handle pPlayerHandle, float *fLeft,
 }
 
 bool vp_mm_player_set_sound_filter(mm_player_handle pPlayerHandle,
-				   vp_mm_player_sound_filter_t nFilter)
+                                   vp_mm_player_sound_filter_t nFilter)
 {
 	if (pPlayerHandle == NULL) {
 		VideoLogError("pPlayerHandle is NULL");
@@ -2657,7 +2658,7 @@ bool vp_mm_player_set_sound_filter(mm_player_handle pPlayerHandle,
 }
 
 bool vp_mm_player_get_sound_filter(mm_player_handle pPlayerHandle,
-				   vp_mm_player_sound_filter_t *nFilter)
+                                   vp_mm_player_sound_filter_t *nFilter)
 {
 	if (pPlayerHandle == NULL) {
 		VideoLogError("pPlayerHandle is NULL");
@@ -2693,9 +2694,9 @@ bool vp_mm_player_capture_start(mm_player_handle pPlayerHandle)
 
 
 	int nRet =
-		player_capture_video(pMMPlayer->pPlayer,
-				     __vp_mm_player_video_captured_cb,
-				     (void *) pMMPlayer);
+	    player_capture_video(pMMPlayer->pPlayer,
+	                         __vp_mm_player_video_captured_cb,
+	                         (void *) pMMPlayer);
 	if (nRet != PLAYER_ERROR_NONE) {
 		_vp_mm_player_print_err(nRet);
 		VideoLogError("player_capture_video fail : %d", nRet);
@@ -2735,7 +2736,7 @@ bool vp_mm_player_is_closed_caption_exist(mm_player_handle pPlayerHandle)
 }
 
 bool vp_mm_player_get_audio_track_count(mm_player_handle pPlayerHandle,
-					int *nCount)
+                                        int *nCount)
 {
 	if (pPlayerHandle == NULL) {
 		VideoLogError("pPlayerHandle is NULL");
@@ -2759,8 +2760,8 @@ bool vp_mm_player_get_audio_track_count(mm_player_handle pPlayerHandle,
 
 
 bool vp_mm_player_get_audio_track_language_code(mm_player_handle
-		pPlayerHandle, int nIndex,
-		char **szCode)
+        pPlayerHandle, int nIndex,
+        char **szCode)
 {
 	if (pPlayerHandle == NULL) {
 		VideoLogError("pPlayerHandle is NULL");
@@ -2785,7 +2786,7 @@ bool vp_mm_player_get_audio_track_language_code(mm_player_handle
 
 
 bool vp_mm_player_set_audio_track(mm_player_handle pPlayerHandle,
-				  int nIndex)
+                                  int nIndex)
 {
 	if (pPlayerHandle == NULL) {
 		VideoLogError("pPlayerHandle is NULL");
@@ -2805,7 +2806,7 @@ bool vp_mm_player_set_audio_track(mm_player_handle pPlayerHandle,
 }
 
 bool vp_mm_player_get_subtitle_track_count(mm_player_handle pPlayerHandle,
-		int *nCount)
+        int *nCount)
 {
 	if (pPlayerHandle == NULL) {
 		VideoLogError("pPlayerHandle is NULL");
@@ -2830,9 +2831,9 @@ bool vp_mm_player_get_subtitle_track_count(mm_player_handle pPlayerHandle,
 
 
 bool vp_mm_player_get_subtitle_track_language_code(mm_player_handle
-		pPlayerHandle,
-		int nIndex,
-		char **szCode)
+        pPlayerHandle,
+        int nIndex,
+        char **szCode)
 {
 	if (pPlayerHandle == NULL) {
 		VideoLogError("pPlayerHandle is NULL");
@@ -2858,7 +2859,7 @@ bool vp_mm_player_get_subtitle_track_language_code(mm_player_handle
 
 
 bool vp_mm_player_set_subtitle_track(mm_player_handle pPlayerHandle,
-				     int nIndex)
+                                     int nIndex)
 {
 	if (pPlayerHandle == NULL) {
 		VideoLogError("pPlayerHandle is NULL");
@@ -2879,7 +2880,7 @@ bool vp_mm_player_set_subtitle_track(mm_player_handle pPlayerHandle,
 
 #ifdef _SUBTITLE_MULTI_LANGUAGE
 bool vp_mm_player_add_subtitle_language(mm_player_handle pPlayerHandle,
-					int nIndex)
+                                        int nIndex)
 {
 	if (pPlayerHandle == NULL) {
 		VideoLogError("pPlayerHandle is NULL");
@@ -2898,7 +2899,7 @@ bool vp_mm_player_add_subtitle_language(mm_player_handle pPlayerHandle,
 }
 
 bool vp_mm_player_remove_subtitle_language(mm_player_handle pPlayerHandle,
-		int nIndex)
+        int nIndex)
 {
 	if (pPlayerHandle == NULL) {
 		VideoLogError("pPlayerHandle is NULL");
@@ -2918,9 +2919,9 @@ bool vp_mm_player_remove_subtitle_language(mm_player_handle pPlayerHandle,
 
 bool
 vp_mm_player_track_foreach_selected_subtitle_language(mm_player_handle
-		pPlayerHandle,
-		void *pCallback,
-		void *pUserData)
+        pPlayerHandle,
+        void *pCallback,
+        void *pUserData)
 {
 	if (pPlayerHandle == NULL) {
 		VideoLogError("pPlayerHandle is NULL");
@@ -2939,7 +2940,7 @@ vp_mm_player_track_foreach_selected_subtitle_language(mm_player_handle
 }
 #endif
 bool vp_mm_player_set_cookie(mm_player_handle pPlayerHandle,
-			     const char *szCookie)
+                             const char *szCookie)
 {
 	if (pPlayerHandle == NULL) {
 		VideoLogError("pPlayerHandle is NULL");
@@ -2955,8 +2956,8 @@ bool vp_mm_player_set_cookie(mm_player_handle pPlayerHandle,
 	MMPlayer *pMMPlayer = (MMPlayer *) pPlayerHandle;
 
 	int nRet =
-		player_set_streaming_cookie(pMMPlayer->pPlayer, szCookie,
-					    strlen(szCookie));
+	    player_set_streaming_cookie(pMMPlayer->pPlayer, szCookie,
+	                                strlen(szCookie));
 	if (nRet != PLAYER_ERROR_NONE) {
 		_vp_mm_player_print_err(nRet);
 		VideoLogError("player_select_track fail : %d", nRet);
@@ -2968,7 +2969,7 @@ bool vp_mm_player_set_cookie(mm_player_handle pPlayerHandle,
 
 
 bool vp_mm_player_set_proxy(mm_player_handle pPlayerHandle,
-			    const char *szProxy)
+                            const char *szProxy)
 {
 	if (pPlayerHandle == NULL) {
 		VideoLogError("pPlayerHandle is NULL");
@@ -3025,7 +3026,7 @@ bool vp_mm_player_set_rate(mm_player_handle pPlayerHandle, float fRate)
 }
 
 bool vp_mm_player_set_zoom(mm_player_handle pPlayerHandle, float fZoom,
-			   int nPosX, int nPosY)
+                           int nPosX, int nPosY)
 {
 	if (pPlayerHandle == NULL) {
 		VideoLogError("pPlayerHandle is NULL");
@@ -3043,7 +3044,7 @@ bool vp_mm_player_set_zoom(mm_player_handle pPlayerHandle, float fZoom,
 }
 
 bool vp_mm_player_get_zoom_start_position(mm_player_handle pPlayerHandle,
-		int *nPosX, int *nPosY)
+        int *nPosX, int *nPosY)
 {
 	if (pPlayerHandle == NULL) {
 		VideoLogError("pPlayerHandle is NULL");
@@ -3059,7 +3060,7 @@ bool vp_mm_player_get_zoom_start_position(mm_player_handle pPlayerHandle,
 
 
 bool vp_mm_player_set_visible(mm_player_handle pPlayerHandle,
-			      bool bVisible)
+                              bool bVisible)
 {
 
 	if (pPlayerHandle == NULL) {
@@ -3082,7 +3083,7 @@ bool vp_mm_player_set_visible(mm_player_handle pPlayerHandle,
 
 
 bool vp_mm_player_set_hub_download_mode(mm_player_handle pPlayerHandle,
-					bool bDownload)
+                                        bool bDownload)
 {
 
 	if (pPlayerHandle == NULL) {

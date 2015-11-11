@@ -54,7 +54,7 @@ bool vp_play_config_get_multi_play_status(bool *bMultiPlay)
 		return FALSE;
 	}
 
-	*bMultiPlay = (nVal == 0)? FALSE:TRUE;
+	*bMultiPlay = (nVal == 0) ? FALSE : TRUE;
 
 	return TRUE;
 }
@@ -93,8 +93,7 @@ bool vp_play_config_get_sort_type_key(int *nType)
 
 bool vp_play_config_set_preview_url_videos(const char *szMediaURL)
 {
-	if (!szMediaURL)
-	{
+	if (!szMediaURL) {
 		VideoLogError("szMediaURL is null");
 		return FALSE;
 	}
@@ -102,8 +101,7 @@ bool vp_play_config_set_preview_url_videos(const char *szMediaURL)
 	int 		nErr 		= 0;
 	const char	*pStorePath = ".video-store";
 
-	if (strstr(szMediaURL, pStorePath) == NULL)
-	{
+	if (strstr(szMediaURL, pStorePath) == NULL) {
 		nErr = preference_set_string(PREF_VP_VIDEO_PREVIEW_URL_VIDEOS, szMediaURL);
 		if (nErr != 0) {
 			VideoLogError("failed to set preview url [0x%x]", nErr);
@@ -191,7 +189,7 @@ bool vp_play_config_get_call_state(bool *bCallOn)
 
 	int tel_valid = telephony_init(&tel_list);
 	if (tel_valid != 0) {
-		VideoLogError("telephony is not initialized. ERROR Code is %d",tel_valid);
+		VideoLogError("telephony is not initialized. ERROR Code is %d", tel_valid);
 		return false;
 	}
 
@@ -230,7 +228,7 @@ bool vp_play_config_get_battery_charge_state(bool *bChargeState)
 		return FALSE;
 	}
 
-	*bChargeState = (nVal == RUNTIME_INFO_KEY_CHARGER_CONNECTED)? TRUE:FALSE;
+	*bChargeState = (nVal == RUNTIME_INFO_KEY_CHARGER_CONNECTED) ? TRUE : FALSE;
 	VideoLogInfo("bChargeState: %d", *bChargeState);
 	return TRUE;
 }
@@ -248,10 +246,9 @@ bool vp_play_config_get_lcd_off_state(bool *bLCDOff)
 	}
 
 	if (nVal >= VCONFKEY_PM_STATE_LCDOFF) {
-		 *bLCDOff = TRUE;
-	}
-	else {
-		 *bLCDOff = FALSE;
+		*bLCDOff = TRUE;
+	} else {
+		*bLCDOff = FALSE;
 	}
 
 	return TRUE;
@@ -298,7 +295,7 @@ bool vp_play_wifi_initialize()
 	int nErr = -1;
 	nErr = wifi_initialize();
 	if (nErr != WIFI_ERROR_NONE) {
-   		VideoLogError("wifi_initialize is fail [0x%x]", nErr);
+		VideoLogError("wifi_initialize is fail [0x%x]", nErr);
 		return FALSE;
 	}
 

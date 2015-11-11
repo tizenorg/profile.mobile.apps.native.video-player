@@ -75,54 +75,53 @@ static Eina_Bool __appControl_idler_cb(void *data)
 	bool bRelaunchCaller = FALSE;
 	VideoLogError("LaunchType = %d", pAppData->pServiceData->eLaunchType);
 
-	switch (pAppData->pServiceData->eLaunchType)
-	{
-		case VP_LAUNCH_TYPE_STORE:
-			nLaunchingType = VIDEO_PLAY_TYPE_STORE;
-			bRelaunchCaller = TRUE;
-			VideoLogWarning("== VIDEO_PLAY_TYPE_STORE ==");
-			break;
-		case VP_LAUNCH_TYPE_LIST:
-			nLaunchingType = VIDEO_PLAY_TYPE_LIST;
-			bRelaunchCaller = TRUE;
-			VideoLogWarning("== VIDEO_PLAY_TYPE_LIST ==");
-			break;
-		case VP_LAUNCH_TYPE_NONE:
-		case VP_LAUNCH_TYPE_MAX:
-			nLaunchingType = VIDEO_PLAY_TYPE_OTHER;
-			VideoLogWarning("== VIDEO_PLAY_TYPE_OTHER ==");
-			break;
-		case VP_LAUNCH_TYPE_EMAIL:
-			nLaunchingType = VIDEO_PLAY_TYPE_EMAIL;
-			VideoLogWarning("== VIDEO_PLAY_TYPE_EMAIL ==");
-			break;
-		case VP_LAUNCH_TYPE_MMS:
-			nLaunchingType = VIDEO_PLAY_TYPE_MESSAGE;
-			VideoLogWarning("== VIDEO_PLAY_TYPE_MESSAGE ==");
-			break;
-		case VP_LAUNCH_TYPE_MYFILE:
-			nLaunchingType = VIDEO_PLAY_TYPE_MYFILE;
-			VideoLogWarning("== VP_LAUNCH_TYPE_MYFILE ==");
-			break;
-		case VP_LAUNCH_TYPE_GALLERY:
-			nLaunchingType = VIDEO_PLAY_TYPE_GALLERY;
-			VideoLogWarning("== VIDEO_PLAY_TYPE_GALLERY ==");
-			break;
-		case VP_LAUNCH_TYPE_IMAGE_VIEWER:
-			nLaunchingType = VIDEO_PLAY_TYPE_GALLERY;
-			VideoLogWarning("== VIDEO_PLAY_TYPE_GALLERY ==");
-			break;
-		case VP_LAUNCH_TYPE_IMAGE_VIEWER_TRIM:
-			nLaunchingType = VIDEO_PLAY_TYPE_GALLERY;
-			VideoLogWarning("== VP_LAUNCH_TYPE_IMAGE_VIEWER_TRIM ==");
-			break;
-		case VP_LAUNCH_TYPE_MULTI_PATH:
-			nLaunchingType = VIDEO_PLAY_TYPE_MULTI_PATH;
-			break;
-		case VP_LAUNCH_TYPE_SIMPLE:
-			nLaunchingType = VIDEO_PLAY_TYPE_PREVIEW;
-			VideoLogWarning("== VIDEO_PLAY_TYPE_PREVIEW ==");
-			break;
+	switch (pAppData->pServiceData->eLaunchType) {
+	case VP_LAUNCH_TYPE_STORE:
+		nLaunchingType = VIDEO_PLAY_TYPE_STORE;
+		bRelaunchCaller = TRUE;
+		VideoLogWarning("== VIDEO_PLAY_TYPE_STORE ==");
+		break;
+	case VP_LAUNCH_TYPE_LIST:
+		nLaunchingType = VIDEO_PLAY_TYPE_LIST;
+		bRelaunchCaller = TRUE;
+		VideoLogWarning("== VIDEO_PLAY_TYPE_LIST ==");
+		break;
+	case VP_LAUNCH_TYPE_NONE:
+	case VP_LAUNCH_TYPE_MAX:
+		nLaunchingType = VIDEO_PLAY_TYPE_OTHER;
+		VideoLogWarning("== VIDEO_PLAY_TYPE_OTHER ==");
+		break;
+	case VP_LAUNCH_TYPE_EMAIL:
+		nLaunchingType = VIDEO_PLAY_TYPE_EMAIL;
+		VideoLogWarning("== VIDEO_PLAY_TYPE_EMAIL ==");
+		break;
+	case VP_LAUNCH_TYPE_MMS:
+		nLaunchingType = VIDEO_PLAY_TYPE_MESSAGE;
+		VideoLogWarning("== VIDEO_PLAY_TYPE_MESSAGE ==");
+		break;
+	case VP_LAUNCH_TYPE_MYFILE:
+		nLaunchingType = VIDEO_PLAY_TYPE_MYFILE;
+		VideoLogWarning("== VP_LAUNCH_TYPE_MYFILE ==");
+		break;
+	case VP_LAUNCH_TYPE_GALLERY:
+		nLaunchingType = VIDEO_PLAY_TYPE_GALLERY;
+		VideoLogWarning("== VIDEO_PLAY_TYPE_GALLERY ==");
+		break;
+	case VP_LAUNCH_TYPE_IMAGE_VIEWER:
+		nLaunchingType = VIDEO_PLAY_TYPE_GALLERY;
+		VideoLogWarning("== VIDEO_PLAY_TYPE_GALLERY ==");
+		break;
+	case VP_LAUNCH_TYPE_IMAGE_VIEWER_TRIM:
+		nLaunchingType = VIDEO_PLAY_TYPE_GALLERY;
+		VideoLogWarning("== VP_LAUNCH_TYPE_IMAGE_VIEWER_TRIM ==");
+		break;
+	case VP_LAUNCH_TYPE_MULTI_PATH:
+		nLaunchingType = VIDEO_PLAY_TYPE_MULTI_PATH;
+		break;
+	case VP_LAUNCH_TYPE_SIMPLE:
+		nLaunchingType = VIDEO_PLAY_TYPE_PREVIEW;
+		VideoLogWarning("== VIDEO_PLAY_TYPE_PREVIEW ==");
+		break;
 	}
 
 	if (pAppData->pServiceData->bStreaming) {
@@ -142,7 +141,7 @@ static Eina_Bool __appControl_idler_cb(void *data)
 	}
 
 	if ((bPopupMode == TRUE && pAppData->pServiceData->szDMRID == NULL)
-	   ||	(g_strcmp0(pAppData->pValStartup, "2") == 0 && bIsRealize)) {// pAppData->values[0] == 2 for multi window; change video url only, don't destroy the player window.
+	        ||	(g_strcmp0(pAppData->pValStartup, "2") == 0 && bIsRealize)) {// pAppData->values[0] == 2 for multi window; change video url only, don't destroy the player window.
 		char *szCurURL = NULL;
 		bool bVisible = FALSE;
 
@@ -161,8 +160,9 @@ static Eina_Bool __appControl_idler_cb(void *data)
 				if (pAppData->pServiceData->szMultiPath[0] != NULL) {
 					char *multi_path = strstr(pAppData->pServiceData->szMultiPath[0], "file://");
 
-					if (multi_path != NULL)
+					if (multi_path != NULL) {
 						req_uri = strdup(multi_path);
+					}
 				}
 			}
 			if (req_uri) {
@@ -210,13 +210,12 @@ static Eina_Bool __appControl_idler_cb(void *data)
 			VideoLogError("vp_play_view_set_url is fail");
 		}
 
-		vp_play_view_set_launching_mode	(pAppData->pPlayView, nLaunchingType);
+		vp_play_view_set_launching_mode(pAppData->pPlayView, nLaunchingType);
 		if (szCurURL) {
 			free(szCurURL);
-		szCurURL = NULL;
+			szCurURL = NULL;
 		}
-	}
-	else {
+	} else {
 		if (pAppData->pPlayView) {
 #ifdef _PERF_TEST_
 			vp_play_view_reset(pAppData->pPlayView, nMode);
@@ -284,8 +283,7 @@ static Eina_Bool __appControl_idler_cb(void *data)
 			VideoLogError("vp_play_view_set_stop_after_repeat_mode is fail");
 		}
 
-		for (idx = 0; idx < pAppData->pServiceData->nMultiPath; idx++)
-		{
+		for (idx = 0; idx < pAppData->pServiceData->nMultiPath; idx++) {
 			if (pAppData->pServiceData->szMultiPath[idx] == NULL) {
 				continue;
 			}
@@ -322,16 +320,15 @@ static Eina_Bool __appControl_idler_cb(void *data)
 					}
 				}
 				vp_play_view_add_multi_path(pAppData->pPlayView,
-										pAppData->pServiceData->szMultiPath[idx],
-										szTitle,
-										szSubtitle,
-										nPosition,
-										nDuration,
-										FALSE);
+				                            pAppData->pServiceData->szMultiPath[idx],
+				                            szTitle,
+				                            szSubtitle,
+				                            nPosition,
+				                            nDuration,
+				                            FALSE);
 			}
 		}
-	}
-	else {
+	} else {
 		int nPosition = 0;
 		if (pAppData->pServiceData->bStoreDownload) {
 			nPosition =  pAppData->pServiceData->nStorePlayedTime;
@@ -353,11 +350,11 @@ static Eina_Bool __appControl_idler_cb(void *data)
 		}
 
 		if (pAppData->pServiceData->bStoreDownload == EINA_TRUE && pAppData->pServiceData->pStoreOrderId != NULL) {
-			if (!vp_play_view_set_store_order_info(	pAppData->pPlayView ,
-													pAppData->pServiceData->pStoreOrderId,
-													pAppData->pServiceData->pStoreServerId,
-													pAppData->pServiceData->pStoreAppId,
-													pAppData->pServiceData->pStoreMvId)) {
+			if (!vp_play_view_set_store_order_info(pAppData->pPlayView ,
+			                                       pAppData->pServiceData->pStoreOrderId,
+			                                       pAppData->pServiceData->pStoreServerId,
+			                                       pAppData->pServiceData->pStoreAppId,
+			                                       pAppData->pServiceData->pStoreMvId)) {
 				VideoLogError("vp_play_view_set_store_order_info is fail");
 			}
 		}
@@ -365,8 +362,7 @@ static Eina_Bool __appControl_idler_cb(void *data)
 
 	if (pAppData->pServiceData->eListType == VP_VIDEO_PLAY_LIST_TYPE_FOLDER) {
 		vp_play_view_set_list_mode(pAppData->pPlayView, VIDEO_PLAY_LIST_TYPE_FOLDER);
-	}
-	else {
+	} else {
 		vp_play_view_set_list_mode(pAppData->pPlayView, VIDEO_PLAY_LIST_TYPE_ALL);
 	}
 
@@ -413,8 +409,9 @@ static int __raise_win(Window win)
 
 	Display *d = XOpenDisplay(NULL);
 
-	if (!a_active_win)
+	if (!a_active_win) {
 		a_active_win = XInternAtom(d, "_NET_ACTIVE_WINDOW", False);
+	}
 
 	root = XDefaultRootWindow(d);
 
@@ -429,7 +426,7 @@ static int __raise_win(Window win)
 	xev.xclient.data.l[3] = 0;
 	xev.xclient.data.l[4] = 0;
 	XSendEvent(d, root, False,
-		   SubstructureRedirectMask | SubstructureNotifyMask, &xev);
+	           SubstructureRedirectMask | SubstructureNotifyMask, &xev);
 
 	XCloseDisplay(d);
 
@@ -498,14 +495,12 @@ static void __appControl(app_control_h pAppSvcHandle, void *pUserData)
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 // for sidesync
 //////////////////////////////////////////////////////////////////////////////////////////////////////
-	if (pAppData->pServiceData->pMediaUri != NULL)
-	{
+	if (pAppData->pServiceData->pMediaUri != NULL) {
 		bool	is_pss	= FALSE;
 
 		VideoSecureLogInfo("is_pss : [%d]", is_pss);
 
-		if (is_pss == TRUE)
-		{
+		if (is_pss == TRUE) {
 			VideoSecureLogInfo("ss-play: %s", pAppData->pServiceData->pMediaUri);
 			return;
 		}
@@ -630,28 +625,25 @@ void vp_low_battery(app_event_info_h event_info, void *data)
 	int ret = app_event_get_low_battery_status(event_info, &status);
 	if (ret == APP_ERROR_NONE) {
 		if (status <= APP_EVENT_LOW_BATTERY_POWER_OFF) {
-			 __appExit(ad);
+			__appExit(ad);
 		}
-	}
-	else {
-		 VideoLogInfo("Failed to get battery status. ret %d", ret);
+	} else {
+		VideoLogInfo("Failed to get battery status. ret %d", ret);
 	}
 	return;
 }
 
-static void __appUpdateLanguage(app_event_info_h pEventInfo,void *pUserData)
+static void __appUpdateLanguage(app_event_info_h pEventInfo, void *pUserData)
 {
 	char *locale = NULL;
 	int retcode = system_settings_get_value_string(SYSTEM_SETTINGS_KEY_LOCALE_LANGUAGE, &locale);
 
 	if (retcode != SYSTEM_SETTINGS_ERROR_NONE) {
 		VideoLogInfo("[ERR] failed to get updated language!!! [retcode = retcode]", retcode);
-	}
-	else
-	{
+	} else {
 		if (locale) {
-    			elm_language_set(locale);
-	    		free(locale);
+			elm_language_set(locale);
+			free(locale);
 		}
 	}
 }

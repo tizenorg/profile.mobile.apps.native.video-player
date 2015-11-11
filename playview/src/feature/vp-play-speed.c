@@ -55,15 +55,15 @@ typedef struct _PlaySpeedPopup {
 
 
 static void _vp_play_speed_popup_destroy_handle(PlaySpeedPopup *
-		pPlaySpeedPopup);
+        pPlaySpeedPopup);
 static void _vp_play_speed_update_text(PlaySpeedPopup *pPlaySpeedPopup);
 
 
 /* callback functions */
 
 static void __vp_play_speed_popup_ok_btn_cb(void *pUserData,
-		Evas_Object *pObj,
-		void *pEventInfo)
+        Evas_Object *pObj,
+        void *pEventInfo)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -74,13 +74,13 @@ static void __vp_play_speed_popup_ok_btn_cb(void *pUserData,
 
 	if (pPlaySpeedPopup->pDoneCb) {
 		pPlaySpeedPopup->pDoneCb(pPlaySpeedPopup->fSpeedVal, TRUE,
-					 (void *) pPlaySpeedPopup->pUserData);
+		                         (void *) pPlaySpeedPopup->pUserData);
 	}
 }
 
 static void __vp_play_speed_popup_cancel_btn_cb(void *pUserData,
-		Evas_Object *pObj,
-		void *pEventInfo)
+        Evas_Object *pObj,
+        void *pEventInfo)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -91,14 +91,14 @@ static void __vp_play_speed_popup_cancel_btn_cb(void *pUserData,
 
 	if (pPlaySpeedPopup->pDoneCb) {
 		pPlaySpeedPopup->pDoneCb(pPlaySpeedPopup->fSpeedVal, FALSE,
-					 (void *) pPlaySpeedPopup->pUserData);
+		                         (void *) pPlaySpeedPopup->pUserData);
 	}
 }
 
 
 static void __vp_play_speed_popup_key_event_cb(void *pUserData,
-		Evas_Object *pObj,
-		void *pEventInfo)
+        Evas_Object *pObj,
+        void *pEventInfo)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -107,15 +107,15 @@ static void __vp_play_speed_popup_key_event_cb(void *pUserData,
 	PlaySpeedPopup *pPlaySpeedPopup = (PlaySpeedPopup *) pUserData;
 	if (pPlaySpeedPopup->pDoneCb) {
 		pPlaySpeedPopup->pDoneCb(pPlaySpeedPopup->fSpeedVal, FALSE,
-					 (void *) pPlaySpeedPopup->pUserData);
+		                         (void *) pPlaySpeedPopup->pUserData);
 	}
 
 }
 
 static void __vp_play_speed_popup_mouse_event_cb(void *pUserData,
-		Evas *pEvas,
-		Evas_Object *pObj,
-		void *pEventInfo)
+        Evas *pEvas,
+        Evas_Object *pObj,
+        void *pEventInfo)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -133,14 +133,14 @@ static void __vp_play_speed_popup_mouse_event_cb(void *pUserData,
 		PlaySpeedPopup *pPlaySpeedPopup = (PlaySpeedPopup *) pUserData;
 		if (pPlaySpeedPopup->pDoneCb) {
 			pPlaySpeedPopup->pDoneCb(pPlaySpeedPopup->fSpeedVal, FALSE,
-						 (void *) pPlaySpeedPopup->pUserData);
+			                         (void *) pPlaySpeedPopup->pUserData);
 		}
 	}
 }
 
 static void __vp_play_speed_popup_slider_change_cb(void *pUserData,
-		Evas_Object *pObj,
-		void *pEventInfo)
+        Evas_Object *pObj,
+        void *pEventInfo)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -155,8 +155,8 @@ static void __vp_play_speed_popup_slider_change_cb(void *pUserData,
 		if (pPlaySpeedPopup->pUpdateCb) {
 			pPlaySpeedPopup->fSpeedVal = fValue;
 			pPlaySpeedPopup->pUpdateCb(pPlaySpeedPopup->fSpeedVal,
-						   (void *) pPlaySpeedPopup->
-						   pUserData);
+			                           (void *) pPlaySpeedPopup->
+			                           pUserData);
 			_vp_play_speed_update_text(pPlaySpeedPopup);
 		}
 	}
@@ -167,15 +167,15 @@ static void __vp_play_speed_popup_slider_change_cb(void *pUserData,
 
 	if (pPlaySpeedPopup->fSpeedVal != realValue) {
 		elm_slider_value_set(pPlaySpeedPopup->pSlider,
-				     (double) realValue);
+		                     (double) realValue);
 		pPlaySpeedPopup->fSpeedVal = realValue;
 	}
 
 }
 
 static void __vp_play_speed_btn_clicked_cb(void *pUserData,
-		Evas_Object *pObj,
-		void *pEvent)
+        Evas_Object *pObj,
+        void *pEvent)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -198,8 +198,8 @@ static void __vp_play_speed_btn_clicked_cb(void *pUserData,
 			if (pPlaySpeedPopup->pUpdateCb) {
 				pPlaySpeedPopup->fSpeedVal = fValue;
 				pPlaySpeedPopup->pUpdateCb(pPlaySpeedPopup->fSpeedVal,
-							   (void *) pPlaySpeedPopup->
-							   pUserData);
+				                           (void *) pPlaySpeedPopup->
+				                           pUserData);
 				_vp_play_speed_update_text(pPlaySpeedPopup);
 			}
 		}
@@ -215,8 +215,8 @@ static void __vp_play_speed_btn_clicked_cb(void *pUserData,
 			if (pPlaySpeedPopup->pUpdateCb) {
 				pPlaySpeedPopup->fSpeedVal = fValue;
 				pPlaySpeedPopup->pUpdateCb(pPlaySpeedPopup->fSpeedVal,
-							   (void *) pPlaySpeedPopup->
-							   pUserData);
+				                           (void *) pPlaySpeedPopup->
+				                           pUserData);
 				_vp_play_speed_update_text(pPlaySpeedPopup);
 			}
 		}
@@ -228,7 +228,7 @@ static void __vp_play_speed_btn_clicked_cb(void *pUserData,
 
 /* internal functions */
 static void _vp_play_speed_popup_destroy_handle(PlaySpeedPopup *
-		pPlaySpeedPopup)
+        pPlaySpeedPopup)
 {
 	if (pPlaySpeedPopup == NULL) {
 		VideoLogError("pPlaySpeedPopup is NULL");
@@ -259,13 +259,13 @@ static void _vp_play_speed_update_text(PlaySpeedPopup *pPlaySpeedPopup)
 
 	snprintf(szValue, 6, "%0.1f X", (double) pPlaySpeedPopup->fSpeedVal);
 	elm_object_part_text_set(pPlaySpeedPopup->pLayout, "elm.text.title",
-				 szValue);
+	                         szValue);
 
 }
 
 static Evas_Object *_vp_play_speed_popup_create_ok_button(Evas_Object *
-		pParent,
-		void *pUserData)
+        pParent,
+        void *pUserData)
 {
 	if (pParent == NULL) {
 		VideoLogError("pParent is NULL");
@@ -276,11 +276,11 @@ static Evas_Object *_vp_play_speed_popup_create_ok_button(Evas_Object *
 	pObj = elm_button_add(pParent);
 	elm_object_style_set(pObj, "popup_button/default");
 	elm_object_domain_translatable_text_set(pObj, VP_SYS_STR_PREFIX,
-						VP_PLAY_STRING_COM_DONE);
+	                                        VP_PLAY_STRING_COM_DONE);
 	elm_object_part_content_set(pParent, "button2", pObj);
 	evas_object_smart_callback_add(pObj, "clicked",
-				       __vp_play_speed_popup_ok_btn_cb,
-				       pUserData);
+	                               __vp_play_speed_popup_ok_btn_cb,
+	                               pUserData);
 	evas_object_show(pObj);
 
 	return pObj;
@@ -288,9 +288,9 @@ static Evas_Object *_vp_play_speed_popup_create_ok_button(Evas_Object *
 
 
 static Evas_Object *_vp_play_speed_popup_create_cancel_button(Evas_Object
-		* pParent,
-		void
-		*pUserData)
+        * pParent,
+        void
+        *pUserData)
 {
 	if (pParent == NULL) {
 		VideoLogError("pParent is NULL");
@@ -301,19 +301,19 @@ static Evas_Object *_vp_play_speed_popup_create_cancel_button(Evas_Object
 	pObj = elm_button_add(pParent);
 	elm_object_style_set(pObj, "popup_button/default");
 	elm_object_domain_translatable_text_set(pObj, VP_SYS_STR_PREFIX,
-						VP_PLAY_STRING_COM_CANCEL);
+	                                        VP_PLAY_STRING_COM_CANCEL);
 	elm_object_part_content_set(pParent, "button1", pObj);
 	evas_object_smart_callback_add(pObj, "clicked",
-				       __vp_play_speed_popup_cancel_btn_cb,
-				       pUserData);
+	                               __vp_play_speed_popup_cancel_btn_cb,
+	                               pUserData);
 	evas_object_show(pObj);
 
 	return pObj;
 }
 
 static Evas_Object *_vp_play_speed_popup_create_slider(Evas_Object *
-		pParent,
-		void *pUserData)
+        pParent,
+        void *pUserData)
 {
 	if (pParent == NULL) {
 		VideoLogError("pParent is NULL");
@@ -327,16 +327,16 @@ static Evas_Object *_vp_play_speed_popup_create_slider(Evas_Object *
 	evas_object_size_hint_align_set(pObj, EVAS_HINT_FILL, 0.5);
 
 	elm_slider_min_max_set(pObj, VP_PLAY_SPEED_MIN_VALUE,
-			       VP_PLAY_SPEED_MAX_VALUE);
+	                       VP_PLAY_SPEED_MAX_VALUE);
 	evas_object_smart_callback_add(pObj, "changed",
-				       __vp_play_speed_popup_slider_change_cb,
-				       pUserData);
+	                               __vp_play_speed_popup_slider_change_cb,
+	                               pUserData);
 
 	return pObj;
 }
 
 static bool _vp_play_speed_popup_create_button(Evas_Object *pParent,
-		void *pUserData)
+        void *pUserData)
 {
 	if (pParent == NULL) {
 		VideoLogError("pParent is NULL");
@@ -346,75 +346,75 @@ static bool _vp_play_speed_popup_create_button(Evas_Object *pParent,
 	PlaySpeedPopup *pPlaySpeedPopup = (PlaySpeedPopup *) pUserData;
 
 	pPlaySpeedPopup->pDelButton =
-		vp_button_create(pParent, "playview/custom/flat_63_78/default",
-				 NULL,
-				 (Evas_Smart_Cb) __vp_play_speed_btn_clicked_cb,
-				 (Evas_Smart_Cb) NULL, (Evas_Smart_Cb) NULL,
-				 (void *) pPlaySpeedPopup);
+	    vp_button_create(pParent, "playview/custom/flat_63_78/default",
+	                     NULL,
+	                     (Evas_Smart_Cb) __vp_play_speed_btn_clicked_cb,
+	                     (Evas_Smart_Cb) NULL, (Evas_Smart_Cb) NULL,
+	                     (void *) pPlaySpeedPopup);
 
 
 
 	pPlaySpeedPopup->pAddButton =
-		vp_button_create(pParent, "playview/custom/flat_63_78/default",
-				 NULL,
-				 (Evas_Smart_Cb) __vp_play_speed_btn_clicked_cb,
-				 (Evas_Smart_Cb) NULL, (Evas_Smart_Cb) NULL,
-				 (void *) pPlaySpeedPopup);
+	    vp_button_create(pParent, "playview/custom/flat_63_78/default",
+	                     NULL,
+	                     (Evas_Smart_Cb) __vp_play_speed_btn_clicked_cb,
+	                     (Evas_Smart_Cb) NULL, (Evas_Smart_Cb) NULL,
+	                     (void *) pPlaySpeedPopup);
 
 	Evas_Object *pIcon = NULL;
 
 	pIcon =
-		vp_button_create_icon(pPlaySpeedPopup->pDelButton,
-				      VP_PLAY_RESROUCE_EDJ_PATH,
-				      VP_PLAY_RES_BUTTON_DEL);
+	    vp_button_create_icon(pPlaySpeedPopup->pDelButton,
+	                          VP_PLAY_RESROUCE_EDJ_PATH,
+	                          VP_PLAY_RES_BUTTON_DEL);
 	elm_object_part_content_set(pPlaySpeedPopup->pDelButton,
-				    VP_PLAY_SWALLOW_BUTTON_ICON, pIcon);
+	                            VP_PLAY_SWALLOW_BUTTON_ICON, pIcon);
 
 	pIcon =
-		vp_button_create_icon(pPlaySpeedPopup->pDelButton,
-				      VP_PLAY_RESROUCE_EDJ_PATH,
-				      VP_PLAY_RES_BUTTON_DEL_PRESS);
+	    vp_button_create_icon(pPlaySpeedPopup->pDelButton,
+	                          VP_PLAY_RESROUCE_EDJ_PATH,
+	                          VP_PLAY_RES_BUTTON_DEL_PRESS);
 	elm_object_part_content_set(pPlaySpeedPopup->pDelButton,
-				    VP_PLAY_SWALLOW_BUTTON_PRESS_ICON, pIcon);
+	                            VP_PLAY_SWALLOW_BUTTON_PRESS_ICON, pIcon);
 
 	pIcon =
-		vp_button_create_icon(pPlaySpeedPopup->pDelButton,
-				      VP_PLAY_RESROUCE_EDJ_PATH,
-				      VP_PLAY_RES_BUTTON_DEL);
+	    vp_button_create_icon(pPlaySpeedPopup->pDelButton,
+	                          VP_PLAY_RESROUCE_EDJ_PATH,
+	                          VP_PLAY_RES_BUTTON_DEL);
 	elm_object_part_content_set(pPlaySpeedPopup->pDelButton,
-				    VP_PLAY_SWALLOW_BUTTON_DIM_ICON, pIcon);
+	                            VP_PLAY_SWALLOW_BUTTON_DIM_ICON, pIcon);
 
 	pIcon =
-		vp_button_create_icon(pPlaySpeedPopup->pAddButton,
-				      VP_PLAY_RESROUCE_EDJ_PATH,
-				      VP_PLAY_RES_BUTTON_ADD);
+	    vp_button_create_icon(pPlaySpeedPopup->pAddButton,
+	                          VP_PLAY_RESROUCE_EDJ_PATH,
+	                          VP_PLAY_RES_BUTTON_ADD);
 	elm_object_part_content_set(pPlaySpeedPopup->pAddButton,
-				    VP_PLAY_SWALLOW_BUTTON_ICON, pIcon);
+	                            VP_PLAY_SWALLOW_BUTTON_ICON, pIcon);
 
 	pIcon =
-		vp_button_create_icon(pPlaySpeedPopup->pAddButton,
-				      VP_PLAY_RESROUCE_EDJ_PATH,
-				      VP_PLAY_RES_BUTTON_ADD_PRESS);
+	    vp_button_create_icon(pPlaySpeedPopup->pAddButton,
+	                          VP_PLAY_RESROUCE_EDJ_PATH,
+	                          VP_PLAY_RES_BUTTON_ADD_PRESS);
 	elm_object_part_content_set(pPlaySpeedPopup->pAddButton,
-				    VP_PLAY_SWALLOW_BUTTON_PRESS_ICON, pIcon);
+	                            VP_PLAY_SWALLOW_BUTTON_PRESS_ICON, pIcon);
 
 	pIcon =
-		vp_button_create_icon(pPlaySpeedPopup->pAddButton,
-				      VP_PLAY_RESROUCE_EDJ_PATH,
-				      VP_PLAY_RES_BUTTON_ADD);
+	    vp_button_create_icon(pPlaySpeedPopup->pAddButton,
+	                          VP_PLAY_RESROUCE_EDJ_PATH,
+	                          VP_PLAY_RES_BUTTON_ADD);
 	elm_object_part_content_set(pPlaySpeedPopup->pAddButton,
-				    VP_PLAY_SWALLOW_BUTTON_DIM_ICON, pIcon);
+	                            VP_PLAY_SWALLOW_BUTTON_DIM_ICON, pIcon);
 
 	elm_object_part_content_set(pParent, "elm.swallow.icon.1",
-				    pPlaySpeedPopup->pDelButton);
+	                            pPlaySpeedPopup->pDelButton);
 	elm_object_part_content_set(pParent, "elm.swallow.icon.2",
-				    pPlaySpeedPopup->pAddButton);
+	                            pPlaySpeedPopup->pAddButton);
 
 	return TRUE;
 }
 
 static Evas_Object *_vp_play_speed_popup_create_layout(Evas_Object *
-		pParent)
+        pParent)
 {
 	if (pParent == NULL) {
 		VideoLogError("pParent is NULL");
@@ -428,12 +428,12 @@ static Evas_Object *_vp_play_speed_popup_create_layout(Evas_Object *
 	}
 
 	elm_layout_file_set(pLayout, VP_PLAY_SPEED_POPUP_EDJ,
-			    VP_PLAY_EDJ_GROUP_PLAY_SPEED_POPUP);
+	                    VP_PLAY_EDJ_GROUP_PLAY_SPEED_POPUP);
 
 	evas_object_size_hint_weight_set(pLayout, EVAS_HINT_EXPAND,
-					 EVAS_HINT_EXPAND);
+	                                 EVAS_HINT_EXPAND);
 	evas_object_size_hint_align_set(pLayout, EVAS_HINT_FILL,
-					EVAS_HINT_FILL);
+	                                EVAS_HINT_FILL);
 
 	evas_object_show(pLayout);
 
@@ -445,10 +445,10 @@ static Evas_Object *_vp_play_speed_popup_create_layout(Evas_Object *
 
 /* external functions */
 play_speed_popup vp_play_speed_popup_create(Evas_Object *pParent,
-		double fSpeedVal,
-		PlaySpeedUpdateCbFunc
-		pUpdateCb,
-		PlaySpeedDoneCbFunc pDoneCb)
+        double fSpeedVal,
+        PlaySpeedUpdateCbFunc
+        pUpdateCb,
+        PlaySpeedDoneCbFunc pDoneCb)
 {
 	if (pParent == NULL) {
 		VideoLogError("pParent is NULL");
@@ -470,11 +470,11 @@ play_speed_popup vp_play_speed_popup_create(Evas_Object *pParent,
 	pPlaySpeedPopup->fSpeedVal = fSpeedVal;
 
 	pPlaySpeedPopup->pPopup =
-		vp_popup_create(pParent, POPUP_STYLE_EXPAND_WITH_CANCEL_BTN,
-				VP_PLAY_STRING_POPUP_PLAY_SPEED, NULL, 0.0, NULL,
-				__vp_play_speed_popup_key_event_cb,
-				__vp_play_speed_popup_mouse_event_cb,
-				(void *) pPlaySpeedPopup);
+	    vp_popup_create(pParent, POPUP_STYLE_EXPAND_WITH_CANCEL_BTN,
+	                    VP_PLAY_STRING_POPUP_PLAY_SPEED, NULL, 0.0, NULL,
+	                    __vp_play_speed_popup_key_event_cb,
+	                    __vp_play_speed_popup_mouse_event_cb,
+	                    (void *) pPlaySpeedPopup);
 
 	if (pPlaySpeedPopup->pPopup == NULL) {
 		VideoLogError("vp_popup_create fail");
@@ -483,9 +483,9 @@ play_speed_popup vp_play_speed_popup_create(Evas_Object *pParent,
 	}
 
 	pPlaySpeedPopup->pCancelButton =
-		_vp_play_speed_popup_create_cancel_button(pPlaySpeedPopup->pPopup,
-				(void *)
-				pPlaySpeedPopup);
+	    _vp_play_speed_popup_create_cancel_button(pPlaySpeedPopup->pPopup,
+	            (void *)
+	            pPlaySpeedPopup);
 	if (pPlaySpeedPopup->pCancelButton == NULL) {
 		VideoLogError("_vp_play_speed_popup_create_cancel_button fail");
 		_vp_play_speed_popup_destroy_handle(pPlaySpeedPopup);
@@ -493,8 +493,8 @@ play_speed_popup vp_play_speed_popup_create(Evas_Object *pParent,
 	}
 
 	pPlaySpeedPopup->pOkButton =
-		_vp_play_speed_popup_create_ok_button(pPlaySpeedPopup->pPopup,
-				(void *) pPlaySpeedPopup);
+	    _vp_play_speed_popup_create_ok_button(pPlaySpeedPopup->pPopup,
+	            (void *) pPlaySpeedPopup);
 	if (pPlaySpeedPopup->pOkButton == NULL) {
 		VideoLogError("_vp_play_speed_popup_create_ok_button fail");
 		_vp_play_speed_popup_destroy_handle(pPlaySpeedPopup);
@@ -502,7 +502,7 @@ play_speed_popup vp_play_speed_popup_create(Evas_Object *pParent,
 	}
 
 	pPlaySpeedPopup->pLayout =
-		_vp_play_speed_popup_create_layout(pPlaySpeedPopup->pPopup);
+	    _vp_play_speed_popup_create_layout(pPlaySpeedPopup->pPopup);
 	if (pPlaySpeedPopup->pLayout == NULL) {
 		VideoLogError("_vp_play_speed_popup_create_layout fail");
 		_vp_play_speed_popup_destroy_handle(pPlaySpeedPopup);
@@ -510,8 +510,8 @@ play_speed_popup vp_play_speed_popup_create(Evas_Object *pParent,
 	}
 
 	pPlaySpeedPopup->pSlider =
-		_vp_play_speed_popup_create_slider(pPlaySpeedPopup->pLayout,
-				pPlaySpeedPopup);
+	    _vp_play_speed_popup_create_slider(pPlaySpeedPopup->pLayout,
+	                                       pPlaySpeedPopup);
 	if (pPlaySpeedPopup->pSlider == NULL) {
 		VideoLogError("_vp_play_speed_popup_create_slider fail");
 		_vp_play_speed_popup_destroy_handle(pPlaySpeedPopup);
@@ -519,17 +519,17 @@ play_speed_popup vp_play_speed_popup_create(Evas_Object *pParent,
 	}
 
 	_vp_play_speed_popup_create_button(pPlaySpeedPopup->pLayout,
-					   pPlaySpeedPopup);
+	                                   pPlaySpeedPopup);
 
 	elm_slider_value_set(pPlaySpeedPopup->pSlider,
-			     (double) pPlaySpeedPopup->fSpeedVal);
+	                     (double) pPlaySpeedPopup->fSpeedVal);
 	_vp_play_speed_update_text(pPlaySpeedPopup);
 
 	elm_object_part_content_set(pPlaySpeedPopup->pLayout,
-				    "elm.swallow.content",
-				    pPlaySpeedPopup->pSlider);
+	                            "elm.swallow.content",
+	                            pPlaySpeedPopup->pSlider);
 	elm_object_content_set(pPlaySpeedPopup->pPopup,
-			       pPlaySpeedPopup->pLayout);
+	                       pPlaySpeedPopup->pLayout);
 	evas_object_show(pPlaySpeedPopup->pLayout);
 
 //      elm_popup_orient_set(pPlaySpeedPopup->pPopup, ELM_POPUP_ORIENT_BOTTOM);
@@ -582,7 +582,7 @@ bool vp_play_speed_popup_unrealize(play_speed_popup pPlaySpeedHandle)
 
 
 bool vp_play_speed_popup_set_user_data(play_speed_popup pPlaySpeedHandle,
-				       void *pUserData)
+                                       void *pUserData)
 {
 	if (pPlaySpeedHandle == NULL) {
 		VideoLogError("pPlaySpeedHandle is NULL");

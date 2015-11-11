@@ -52,13 +52,13 @@ static void _vp_detail_destroy_handle(DetailPopup *pDetailPopup);
 /* callback functions */
 
 static void __vp_detail_genlist_realized(void *data, Evas_Object *obj,
-		void *event_info)
+        void *event_info)
 {
 	VP_GENLIST_HIDE_BOTTOMLINE(data, obj, event_info);
 }
 
 static void __vp_detail_popup_rotate_cb(void *data, Evas_Object *obj,
-					void *event_info)
+                                        void *event_info)
 {
 	DetailPopup *pDetailPopup = (DetailPopup *) data;
 	if (!pDetailPopup) {
@@ -69,14 +69,14 @@ static void __vp_detail_popup_rotate_cb(void *data, Evas_Object *obj,
 		return;
 	}
 	vp_popup_set_popup_min_size(pDetailPopup->pParent, pDetailPopup->pBox,
-				    pDetailPopup->nListCount,
-				    VIDEO_POPUP_2_TEXT);
+	                            pDetailPopup->nListCount,
+	                            VIDEO_POPUP_2_TEXT);
 	elm_popup_orient_set(pDetailPopup->pPopup, ELM_POPUP_ORIENT_CENTER);
 }
 
 static char *__vp_detail_genlist_text_get_cb(const void *pUserData,
-		Evas_Object *pObj,
-		const char *pPart)
+        Evas_Object *pObj,
+        const char *pPart)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -92,8 +92,8 @@ static char *__vp_detail_genlist_text_get_cb(const void *pUserData,
 	} else if (!strcmp(pPart, "elm.text.sub.left.bottom")) {
 
 		DetailPopup *pDetailPopup =
-			(DetailPopup *) evas_object_data_get(pObj,
-					VP_DETAIL_GENLIST_DATA_KEY);
+		    (DetailPopup *) evas_object_data_get(pObj,
+		            VP_DETAIL_GENLIST_DATA_KEY);
 		if (pDetailPopup == NULL) {
 			return NULL;
 		}
@@ -104,45 +104,52 @@ static char *__vp_detail_genlist_text_get_cb(const void *pUserData,
 		}
 
 		if (!strcmp(szTxt, VP_PLAY_STRING_DETAIL_TITLE)) {
-			if (pDetailInfo->szTitle)
+			if (pDetailInfo->szTitle) {
 				return elm_entry_utf8_to_markup(pDetailInfo->szTitle);
+			}
 		} else if (!strcmp(szTxt, VP_PLAY_STRING_DETAIL_FORMAT)) {
-			if (pDetailInfo->szFormat)
+			if (pDetailInfo->szFormat) {
 				return elm_entry_utf8_to_markup(pDetailInfo->szFormat);
+			}
 		} else if (!strcmp(szTxt, VP_PLAY_STRING_DETAIL_DATE)) {
-			if (pDetailInfo->szDate)
+			if (pDetailInfo->szDate) {
 				return elm_entry_utf8_to_markup(pDetailInfo->szDate);
+			}
 		} else if (!strcmp(szTxt, VP_PLAY_STRING_DETAIL_SIZE)) {
-			if (pDetailInfo->szSize)
+			if (pDetailInfo->szSize) {
 				return elm_entry_utf8_to_markup(pDetailInfo->szSize);
+			}
 		} else if (!strcmp(szTxt, VP_PLAY_STRING_DETAIL_LAST_MODIFIED)) {
 			if (pDetailInfo->szLastModified)
 				return elm_entry_utf8_to_markup(pDetailInfo->
-								szLastModified);
+				                                szLastModified);
 		} else if (!strcmp(szTxt, VP_PLAY_STRING_DETAIL_RESOLUTION)) {
 			if (pDetailInfo->szResolution)
 				return elm_entry_utf8_to_markup(pDetailInfo->
-								szResolution);
+				                                szResolution);
 		} else if (!strcmp(szTxt, VP_PLAY_STRING_DETAIL_LOCATION)) {
-			if (pDetailInfo->szLocation)
+			if (pDetailInfo->szLocation) {
 				return elm_entry_utf8_to_markup(pDetailInfo->szLocation);
+			}
 		} else if (!strcmp(szTxt, VP_PLAY_STRING_DETAIL_LATITUDE)) {
 			if (pDetailInfo->szLatitude) {
 				if (atof(pDetailInfo->szLatitude) !=
-						VP_DETAIL_VALUE_GPS_DEFAULT)
+				        VP_DETAIL_VALUE_GPS_DEFAULT)
 					return elm_entry_utf8_to_markup(pDetailInfo->
-									szLatitude);
-				else
+					                                szLatitude);
+				else {
 					return g_strdup(VP_PLAY_STRING_DETAIL_VALUE_UNKNOWN);
+				}
 			}
 		} else if (!strcmp(szTxt, VP_PLAY_STRING_DETAIL_LONGITUDE)) {
 			if (pDetailInfo->szLongitude) {
 				if (atof(pDetailInfo->szLongitude) !=
-						VP_DETAIL_VALUE_GPS_DEFAULT)
+				        VP_DETAIL_VALUE_GPS_DEFAULT)
 					return elm_entry_utf8_to_markup(pDetailInfo->
-									szLongitude);
-				else
+					                                szLongitude);
+				else {
 					return g_strdup(VP_PLAY_STRING_DETAIL_VALUE_UNKNOWN);
+				}
 			}
 		}
 	}
@@ -151,8 +158,8 @@ static char *__vp_detail_genlist_text_get_cb(const void *pUserData,
 }
 
 static void __vp_detail_popup_key_event_cb(void *pUserData,
-		Evas_Object *pObj,
-		void *pEventInfo)
+        Evas_Object *pObj,
+        void *pEventInfo)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -163,14 +170,14 @@ static void __vp_detail_popup_key_event_cb(void *pUserData,
 
 	if (pDetailPopup->pCloseCb) {
 		pDetailPopup->pCloseCb(-1, FALSE,
-				       (void *) pDetailPopup->pUserData);
+		                       (void *) pDetailPopup->pUserData);
 	}
 }
 
 static void __vp_detail_popup_mouse_event_cb(void *pUserData,
-		Evas *pEvas,
-		Evas_Object *pObj,
-		void *pEventInfo)
+        Evas *pEvas,
+        Evas_Object *pObj,
+        void *pEventInfo)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -189,7 +196,7 @@ static void __vp_detail_popup_mouse_event_cb(void *pUserData,
 
 		if (pDetailPopup->pCloseCb) {
 			pDetailPopup->pCloseCb(-1, FALSE,
-					       (void *) pDetailPopup->pUserData);
+			                       (void *) pDetailPopup->pUserData);
 		}
 	}
 }
@@ -204,10 +211,10 @@ static void _vp_detail_destroy_handle(DetailPopup *pDetailPopup)
 		return;
 	}
 	evas_object_smart_callback_del(pDetailPopup->pGenList, "realized",
-				       __vp_detail_genlist_realized);
+	                               __vp_detail_genlist_realized);
 	evas_object_smart_callback_del(pDetailPopup->pParent,
-				       "rotation,changed",
-				       __vp_detail_popup_rotate_cb);
+	                               "rotation,changed",
+	                               __vp_detail_popup_rotate_cb);
 
 
 	VP_EVAS_DEL(pDetailPopup->pGenList);
@@ -246,7 +253,7 @@ static Evas_Object *_vp_detail_create_genlist(Evas_Object *pParent)
 
 	pObj = elm_genlist_add(pParent);
 	evas_object_size_hint_weight_set(pObj, EVAS_HINT_EXPAND,
-					 EVAS_HINT_EXPAND);
+	                                 EVAS_HINT_EXPAND);
 	evas_object_size_hint_align_set(pObj, EVAS_HINT_FILL, EVAS_HINT_FILL);
 	evas_object_show(pObj);
 	return pObj;
@@ -254,8 +261,8 @@ static Evas_Object *_vp_detail_create_genlist(Evas_Object *pParent)
 
 
 static bool _vp_detail_add_genlist_item(Evas_Object *pObj,
-					void *pUserData,
-					int *added_item_cnt)
+                                        void *pUserData,
+                                        int *added_item_cnt)
 {
 	if (pObj == NULL) {
 		VideoLogError("pObj is NULL");
@@ -284,7 +291,7 @@ static bool _vp_detail_add_genlist_item(Evas_Object *pObj,
 	pDetailPopup->st_Detail_Itc->version = ELM_GENLIST_ITEM_CLASS_VERSION;
 	pDetailPopup->st_Detail_Itc->item_style = "2line.top";
 	pDetailPopup->st_Detail_Itc->func.text_get =
-		(void *) __vp_detail_genlist_text_get_cb;
+	    (void *) __vp_detail_genlist_text_get_cb;
 	pDetailPopup->st_Detail_Itc->func.content_get = NULL;
 	pDetailPopup->st_Detail_Itc->func.state_get = NULL;
 	pDetailPopup->st_Detail_Itc->func.del = NULL;
@@ -292,31 +299,31 @@ static bool _vp_detail_add_genlist_item(Evas_Object *pObj,
 	Elm_Object_Item *pItem = NULL;
 
 	pItem =
-		elm_genlist_item_append(pObj, pDetailPopup->st_Detail_Itc,
-					(void *) VP_PLAY_STRING_DETAIL_TITLE,
-					NULL, ELM_GENLIST_ITEM_NONE, NULL,
-					(void *) pDetailPopup);
+	    elm_genlist_item_append(pObj, pDetailPopup->st_Detail_Itc,
+	                            (void *) VP_PLAY_STRING_DETAIL_TITLE,
+	                            NULL, ELM_GENLIST_ITEM_NONE, NULL,
+	                            (void *) pDetailPopup);
 	elm_genlist_item_select_mode_set(pItem,
-					 ELM_OBJECT_SELECT_MODE_DISPLAY_ONLY);
+	                                 ELM_OBJECT_SELECT_MODE_DISPLAY_ONLY);
 	item_cnt++;
 
 	pItem =
-		elm_genlist_item_append(pObj, pDetailPopup->st_Detail_Itc,
-					(void *) VP_PLAY_STRING_DETAIL_SIZE, NULL,
-					ELM_GENLIST_ITEM_NONE, NULL,
-					(void *) pDetailPopup);
+	    elm_genlist_item_append(pObj, pDetailPopup->st_Detail_Itc,
+	                            (void *) VP_PLAY_STRING_DETAIL_SIZE, NULL,
+	                            ELM_GENLIST_ITEM_NONE, NULL,
+	                            (void *) pDetailPopup);
 	elm_genlist_item_select_mode_set(pItem,
-					 ELM_OBJECT_SELECT_MODE_DISPLAY_ONLY);
+	                                 ELM_OBJECT_SELECT_MODE_DISPLAY_ONLY);
 	item_cnt++;
 
 	if (pDetailPopup->pDetailInfo->bPlayready == FALSE) {
 		pItem =
-			elm_genlist_item_append(pObj, pDetailPopup->st_Detail_Itc,
-						(void *) VP_PLAY_STRING_DETAIL_FORMAT,
-						NULL, ELM_GENLIST_ITEM_NONE, NULL,
-						(void *) pDetailPopup);
+		    elm_genlist_item_append(pObj, pDetailPopup->st_Detail_Itc,
+		                            (void *) VP_PLAY_STRING_DETAIL_FORMAT,
+		                            NULL, ELM_GENLIST_ITEM_NONE, NULL,
+		                            (void *) pDetailPopup);
 		elm_genlist_item_select_mode_set(pItem,
-						 ELM_OBJECT_SELECT_MODE_DISPLAY_ONLY);
+		                                 ELM_OBJECT_SELECT_MODE_DISPLAY_ONLY);
 		item_cnt++;
 	}
 
@@ -326,35 +333,35 @@ static bool _vp_detail_add_genlist_item(Evas_Object *pObj,
 
 	if (pDetailPopup->pDetailInfo->bPlayready == FALSE) {
 		pItem =
-			elm_genlist_item_append(pObj, pDetailPopup->st_Detail_Itc,
-						(void *)
-						VP_PLAY_STRING_DETAIL_RESOLUTION,
-						NULL, ELM_GENLIST_ITEM_NONE, NULL,
-						(void *) pDetailPopup);
+		    elm_genlist_item_append(pObj, pDetailPopup->st_Detail_Itc,
+		                            (void *)
+		                            VP_PLAY_STRING_DETAIL_RESOLUTION,
+		                            NULL, ELM_GENLIST_ITEM_NONE, NULL,
+		                            (void *) pDetailPopup);
 		elm_genlist_item_select_mode_set(pItem,
-						 ELM_OBJECT_SELECT_MODE_DISPLAY_ONLY);
+		                                 ELM_OBJECT_SELECT_MODE_DISPLAY_ONLY);
 		item_cnt++;
 	}
 
 	pItem =
-		elm_genlist_item_append(pObj, pDetailPopup->st_Detail_Itc,
-					(void *)
-					VP_PLAY_STRING_DETAIL_LAST_MODIFIED, NULL,
-					ELM_GENLIST_ITEM_NONE, NULL,
-					(void *) pDetailPopup);
+	    elm_genlist_item_append(pObj, pDetailPopup->st_Detail_Itc,
+	                            (void *)
+	                            VP_PLAY_STRING_DETAIL_LAST_MODIFIED, NULL,
+	                            ELM_GENLIST_ITEM_NONE, NULL,
+	                            (void *) pDetailPopup);
 	elm_genlist_item_select_mode_set(pItem,
-					 ELM_OBJECT_SELECT_MODE_DISPLAY_ONLY);
+	                                 ELM_OBJECT_SELECT_MODE_DISPLAY_ONLY);
 	item_cnt++;
 
 	if (pDetailPopup->pDetailInfo->bPlayready == FALSE) {
 		pItem =
-			elm_genlist_item_append(pObj, pDetailPopup->st_Detail_Itc,
-						(void *)
-						VP_PLAY_STRING_DETAIL_LOCATION, NULL,
-						ELM_GENLIST_ITEM_NONE, NULL,
-						(void *) pDetailPopup);
+		    elm_genlist_item_append(pObj, pDetailPopup->st_Detail_Itc,
+		                            (void *)
+		                            VP_PLAY_STRING_DETAIL_LOCATION, NULL,
+		                            ELM_GENLIST_ITEM_NONE, NULL,
+		                            (void *) pDetailPopup);
 		elm_genlist_item_select_mode_set(pItem,
-						 ELM_OBJECT_SELECT_MODE_DISPLAY_ONLY);
+		                                 ELM_OBJECT_SELECT_MODE_DISPLAY_ONLY);
 		item_cnt++;
 
 		/*pItem = elm_genlist_item_append(pObj, pDetailPopup->st_Detail_Itc, (void *)VP_PLAY_STRING_DETAIL_LATITUDE, NULL, ELM_GENLIST_ITEM_NONE, NULL, (void *)pDetailPopup);
@@ -374,8 +381,8 @@ static bool _vp_detail_add_genlist_item(Evas_Object *pObj,
 
 /* external functions */
 detail_handle vp_detail_create(Evas_Object *pParent,
-			       PopupCloseCbFunc pCloseCb,
-			       vp_detail_info *pDetailInfo)
+                               PopupCloseCbFunc pCloseCb,
+                               vp_detail_info *pDetailInfo)
 {
 	if (pParent == NULL) {
 		VideoLogError("pParent is NULL");
@@ -407,15 +414,15 @@ detail_handle vp_detail_create(Evas_Object *pParent,
 	VP_STRDUP(pDetailPopup->pDetailInfo->szFormat, pDetailInfo->szFormat);
 	VP_STRDUP(pDetailPopup->pDetailInfo->szSize, pDetailInfo->szSize);
 	VP_STRDUP(pDetailPopup->pDetailInfo->szLastModified,
-		  pDetailInfo->szLastModified);
+	          pDetailInfo->szLastModified);
 	VP_STRDUP(pDetailPopup->pDetailInfo->szResolution,
-		  pDetailInfo->szResolution);
+	          pDetailInfo->szResolution);
 	VP_STRDUP(pDetailPopup->pDetailInfo->szLatitude,
-		  pDetailInfo->szLatitude);
+	          pDetailInfo->szLatitude);
 	VP_STRDUP(pDetailPopup->pDetailInfo->szLongitude,
-		  pDetailInfo->szLongitude);
+	          pDetailInfo->szLongitude);
 	pDetailPopup->pDetailInfo->szLocation =
-		vp_util_convert_file_location(pDetailInfo->szLocation);
+	    vp_util_convert_file_location(pDetailInfo->szLocation);
 
 	pDetailPopup->pDetailInfo->bDrm = pDetailInfo->bDrm;
 	pDetailPopup->pDetailInfo->bForwardLock = pDetailInfo->bForwardLock;
@@ -426,11 +433,11 @@ detail_handle vp_detail_create(Evas_Object *pParent,
 	pDetailPopup->pCloseCb = pCloseCb;
 
 	pDetailPopup->pPopup =
-		vp_popup_create(pParent, POPUP_STYLE_DEFAULT_NO_CANCEL_BTN,
-				VP_PLAY_STRING_COM_DETAILS, NULL, 0.0, NULL,
-				__vp_detail_popup_key_event_cb,
-				__vp_detail_popup_mouse_event_cb,
-				(void *) pDetailPopup);
+	    vp_popup_create(pParent, POPUP_STYLE_DEFAULT_NO_CANCEL_BTN,
+	                    VP_PLAY_STRING_COM_DETAILS, NULL, 0.0, NULL,
+	                    __vp_detail_popup_key_event_cb,
+	                    __vp_detail_popup_mouse_event_cb,
+	                    (void *) pDetailPopup);
 
 	if (pDetailPopup->pPopup == NULL) {
 		VideoLogError("vp_popup_create fail");
@@ -439,7 +446,7 @@ detail_handle vp_detail_create(Evas_Object *pParent,
 	}
 	//elm_popup_content_text_wrap_type_set(pDetailPopup->pPopup, ELM_WRAP_MIXED);
 	pDetailPopup->pGenList =
-		_vp_detail_create_genlist(pDetailPopup->pPopup);
+	    _vp_detail_create_genlist(pDetailPopup->pPopup);
 	if (pDetailPopup->pGenList == NULL) {
 		VideoLogError("_vp_detail_create_genlist fail");
 		_vp_detail_destroy_handle(pDetailPopup);
@@ -447,33 +454,33 @@ detail_handle vp_detail_create(Evas_Object *pParent,
 	}
 
 	evas_object_data_set(pDetailPopup->pGenList,
-			     VP_DETAIL_GENLIST_DATA_KEY,
-			     (void *) pDetailPopup);
+	                     VP_DETAIL_GENLIST_DATA_KEY,
+	                     (void *) pDetailPopup);
 	elm_genlist_mode_set(pDetailPopup->pGenList, ELM_LIST_COMPRESS);
 
 	int added_item_cnt = 0;
 	if (!_vp_detail_add_genlist_item
-			(pDetailPopup->pGenList, (void *) pDetailPopup,
-			 &added_item_cnt)) {
+	        (pDetailPopup->pGenList, (void *) pDetailPopup,
+	         &added_item_cnt)) {
 		VideoLogError("_vp_detail_add_genlist_item fail");
 		_vp_detail_destroy_handle(pDetailPopup);
 		return NULL;
 	}
 	pDetailPopup->nListCount = added_item_cnt;
 	evas_object_smart_callback_add(pDetailPopup->pGenList, "realized",
-				       __vp_detail_genlist_realized, NULL);
+	                               __vp_detail_genlist_realized, NULL);
 	evas_object_smart_callback_add(pDetailPopup->pParent,
-				       "rotation,changed",
-				       __vp_detail_popup_rotate_cb,
-				       pDetailPopup);
+	                               "rotation,changed",
+	                               __vp_detail_popup_rotate_cb,
+	                               pDetailPopup);
 
 	pDetailPopup->pBox = elm_box_add(pDetailPopup->pPopup);
 
 	VideoLogInfo("item cnt = %d", added_item_cnt);
 
 	vp_popup_set_popup_min_size(pDetailPopup->pParent, pDetailPopup->pBox,
-				    pDetailPopup->nListCount,
-				    VIDEO_POPUP_2_TEXT);
+	                            pDetailPopup->nListCount,
+	                            VIDEO_POPUP_2_TEXT);
 	elm_popup_orient_set(pDetailPopup->pPopup, ELM_POPUP_ORIENT_CENTER);
 	elm_box_pack_end(pDetailPopup->pBox, pDetailPopup->pGenList);
 

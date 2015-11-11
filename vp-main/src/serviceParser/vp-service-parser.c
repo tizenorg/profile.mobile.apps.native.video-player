@@ -136,8 +136,7 @@ Eina_Bool VpServiceParserGetServiceData(app_control_h pAppSvcHandle, VpServiceDa
 			__VpServiceParserGetMultiAppControl(pAppSvcHandle, VP_VIDEO_DATA_SUBTITLE, &pReceiveData->szMultiSubTitle, &(pReceiveData->nMultiSubTitle));
 			__VpServiceParserGetMultiAppControl(pAppSvcHandle, VP_VIDEO_DATA_POSITION, &pReceiveData->szMultiPosition, &(pReceiveData->nMultiPosition));
 			__VpServiceParserGetMultiAppControl(pAppSvcHandle, VP_VIDEO_DATA_DURATION, &pReceiveData->szMultiDuration, &(pReceiveData->nMultiDuration));
-		}
-		else {
+		} else {
 			preference_get_string(PREF_VP_PREVIEW_URL_VIDEOS, &(pReceiveData->pMediaUri));
 			if (__VpServiceParserCheckFileIsExist(pReceiveData->pMediaUri) == EINA_FALSE) {
 				preference_set_string(PREF_VP_PREVIEW_URL_VIDEOS, "");
@@ -185,12 +184,9 @@ Eina_Bool VpServiceParserGetServiceData(app_control_h pAppSvcHandle, VpServiceDa
 	if (pReceiveData->eLaunchType >= VP_LAUNCH_TYPE_GALLERY) {
 		pReceiveData->eSortType	= __VpServiceParserGetSortType(pAppSvcHandle);
 		pReceiveData->eListType	= __VpServiceParserGetListType(pAppSvcHandle);
-	}
-	else if (pReceiveData->eLaunchType == VP_LAUNCH_TYPE_LIST)
-	{
+	} else if (pReceiveData->eLaunchType == VP_LAUNCH_TYPE_LIST) {
 		pReceiveData->eListType	= __VpServiceParserGetListType(pAppSvcHandle);
-	}
-	else {
+	} else {
 		pReceiveData->eSortType	= VP_VIDEO_SORT_TYPE_BY_NONE;
 		pReceiveData->eListType	= VP_VIDEO_PLAY_LIST_TYPE_NONE;
 	}
@@ -201,64 +197,54 @@ Eina_Bool VpServiceParserGetServiceData(app_control_h pAppSvcHandle, VpServiceDa
 
 void VpServiceParserDestroyServiceData(VpServiceData *pServiceData)
 {
-	if (pServiceData == NULL)
-	{
+	if (pServiceData == NULL) {
 		VideoLogError("pServiceData == NULL!!!");
 		return;
 	}
 
-	if (pServiceData->pMediaUri != NULL)
-	{
+	if (pServiceData->pMediaUri != NULL) {
 		free(pServiceData->pMediaUri);
 		pServiceData->pMediaUri	= NULL;
 	}
 
-	if (pServiceData->szMediaTitle != NULL)
-	{
+	if (pServiceData->szMediaTitle != NULL) {
 		free(pServiceData->szMediaTitle);
 		pServiceData->szMediaTitle = NULL;
 	}
 
-	if (pServiceData->szDeviceID != NULL)
-	{
+	if (pServiceData->szDeviceID != NULL) {
 		free(pServiceData->szDeviceID);
 		pServiceData->szDeviceID = NULL;
 	}
 
-	if (pServiceData->szDMRID != NULL)
-	{
+	if (pServiceData->szDMRID != NULL) {
 		free(pServiceData->szDMRID);
 		pServiceData->szDMRID = NULL;
 	}
 
-	if (pServiceData->pStoreOrderId != NULL)
-	{
+	if (pServiceData->pStoreOrderId != NULL) {
 		free(pServiceData->pStoreOrderId);
 		pServiceData->pStoreOrderId = NULL;
 	}
 
-	if (pServiceData->pStoreServerId != NULL)
-	{
+	if (pServiceData->pStoreServerId != NULL) {
 		free(pServiceData->pStoreServerId);
 		pServiceData->pStoreServerId = NULL;
 	}
 
-	if (pServiceData->pStoreAppId != NULL)
-	{
+	if (pServiceData->pStoreAppId != NULL) {
 		free(pServiceData->pStoreAppId);
 		pServiceData->pStoreAppId = NULL;
 	}
 
-	if (pServiceData->pStoreMvId != NULL)
-	{
+	if (pServiceData->pStoreMvId != NULL) {
 		free(pServiceData->pStoreMvId);
 		pServiceData->pStoreMvId = NULL;
 	}
 
 	int idx = 0;
 	if (pServiceData->szMultiPath) {
-		for (idx = 0; idx < pServiceData->nMultiPath; idx++)
-		{
+		for (idx = 0; idx < pServiceData->nMultiPath; idx++) {
 			if (pServiceData->szMultiPath[idx]) {
 				free(pServiceData->szMultiPath[idx]);
 				pServiceData->szMultiPath[idx] = NULL;
@@ -269,8 +255,7 @@ void VpServiceParserDestroyServiceData(VpServiceData *pServiceData)
 	}
 
 	if (pServiceData->szIsSameAP) {
-		for (idx = 0; idx < pServiceData->nSameAP; idx++)
-		{
+		for (idx = 0; idx < pServiceData->nSameAP; idx++) {
 			if (pServiceData->szIsSameAP[idx]) {
 				free(pServiceData->szIsSameAP[idx]);
 				pServiceData->szIsSameAP[idx] = NULL;
@@ -281,8 +266,7 @@ void VpServiceParserDestroyServiceData(VpServiceData *pServiceData)
 	}
 
 	if (pServiceData->szMultiSubTitle) {
-		for (idx = 0; idx < pServiceData->nMultiSubTitle; idx++)
-		{
+		for (idx = 0; idx < pServiceData->nMultiSubTitle; idx++) {
 			if (pServiceData->szMultiSubTitle[idx]) {
 				free(pServiceData->szMultiSubTitle[idx]);
 				pServiceData->szMultiSubTitle[idx] = NULL;
@@ -294,8 +278,7 @@ void VpServiceParserDestroyServiceData(VpServiceData *pServiceData)
 
 
 	if (pServiceData->szMultiTitle) {
-		for (idx = 0; idx < pServiceData->nMultiTitle; idx++)
-		{
+		for (idx = 0; idx < pServiceData->nMultiTitle; idx++) {
 			if (pServiceData->szMultiTitle[idx]) {
 				free(pServiceData->szMultiTitle[idx]);
 				pServiceData->szMultiTitle[idx] = NULL;
@@ -306,8 +289,7 @@ void VpServiceParserDestroyServiceData(VpServiceData *pServiceData)
 	}
 
 	if (pServiceData->szMultiPosition) {
-		for (idx = 0; idx < pServiceData->nMultiPosition; idx++)
-		{
+		for (idx = 0; idx < pServiceData->nMultiPosition; idx++) {
 			if (pServiceData->szMultiPosition[idx]) {
 				free(pServiceData->szMultiPosition[idx]);
 				pServiceData->szMultiPosition[idx] = NULL;
@@ -318,8 +300,7 @@ void VpServiceParserDestroyServiceData(VpServiceData *pServiceData)
 	}
 
 	if (pServiceData->szMultiDuration) {
-		for (idx = 0; idx < pServiceData->nMultiDuration; idx++)
-		{
+		for (idx = 0; idx < pServiceData->nMultiDuration; idx++) {
 			if (pServiceData->szMultiDuration[idx]) {
 				free(pServiceData->szMultiDuration[idx]);
 				pServiceData->szMultiDuration[idx] = NULL;
@@ -359,7 +340,7 @@ static char *__VpServiceParserGetMediaUri(app_control_h pAppSvcHandle)
 		return NULL;
 	}
 
-	if (strstr(pUri,VP_VIDEO_FILE_PREFIX)) {
+	if (strstr(pUri, VP_VIDEO_FILE_PREFIX)) {
 		char *szURL = calloc(1, strlen(pUri) - strlen(VP_VIDEO_FILE_PREFIX) + 1);
 		if (szURL == NULL) {
 			VideoLogError("szURL == NULL!!!");
@@ -372,8 +353,7 @@ static char *__VpServiceParserGetMediaUri(app_control_h pAppSvcHandle)
 			pUri = NULL;
 		}
 		return szURL;
-	}
-	else {
+	} else {
 		return pUri;
 	}
 
@@ -411,7 +391,8 @@ static bool __VpServiceParserGetMultiAppControl(app_control_h pAppSvcHandle, con
 }
 
 
-static VpLaunchType __VpServiceParserGetLaunchType(app_control_h pAppSvcHandle) {
+static VpLaunchType __VpServiceParserGetLaunchType(app_control_h pAppSvcHandle)
+{
 	if (pAppSvcHandle == NULL) {
 		VideoLogError("pAppSvcHandle == NULL!!!");
 		return VP_LAUNCH_TYPE_NONE;
@@ -421,11 +402,11 @@ static VpLaunchType __VpServiceParserGetLaunchType(app_control_h pAppSvcHandle) 
 	char* pLaunchMode = NULL;
 	VpLaunchType	eLaunchType = VP_LAUNCH_TYPE_NONE;
 
-	if (app_control_get_extra_data (pAppSvcHandle, "View Mode", &pLaunchMode) == APP_CONTROL_ERROR_NONE) {
+	if (app_control_get_extra_data(pAppSvcHandle, "View Mode", &pLaunchMode) == APP_CONTROL_ERROR_NONE) {
 		if (pLaunchMode != NULL) {
 			if (strncmp(pLaunchMode, "EMAIL", strlen(pLaunchMode)) == 0) {
-				eLaunchType = VP_LAUNCH_TYPE_EMAIL;	
-				goto RESULT_RETURN;		
+				eLaunchType = VP_LAUNCH_TYPE_EMAIL;
+				goto RESULT_RETURN;
 			}
 		}
 	}
@@ -443,17 +424,13 @@ static VpLaunchType __VpServiceParserGetLaunchType(app_control_h pAppSvcHandle) 
 
 	if (strcmp(pLaunchingByOtherApp, "gallery") == 0) {
 		eLaunchType = VP_LAUNCH_TYPE_GALLERY;
-	}
-	else if (strcmp(pLaunchingByOtherApp, "myfile") == 0) {
+	} else if (strcmp(pLaunchingByOtherApp, "myfile") == 0) {
 		eLaunchType = VP_LAUNCH_TYPE_MYFILE;
-	}
-	else if (strcmp(pLaunchingByOtherApp, "store") == 0) {
+	} else if (strcmp(pLaunchingByOtherApp, "store") == 0) {
 		eLaunchType = VP_LAUNCH_TYPE_STORE;
-	}
-	else if (strcmp(pLaunchingByOtherApp, "list") == 0) {
+	} else if (strcmp(pLaunchingByOtherApp, "list") == 0) {
 		eLaunchType = VP_LAUNCH_TYPE_LIST;
-	}
-	else if (strcmp(pLaunchingByOtherApp, "image_viewer") == 0) {
+	} else if (strcmp(pLaunchingByOtherApp, "image_viewer") == 0) {
 		char	*pEditMode	= NULL;
 
 		if (app_control_get_extra_data(pAppSvcHandle, VP_VIDEO_EDIT_MODE_KEY, &pEditMode) != APP_CONTROL_ERROR_NONE) {
@@ -463,34 +440,27 @@ static VpLaunchType __VpServiceParserGetLaunchType(app_control_h pAppSvcHandle) 
 				free(pEditMode);
 				pEditMode = NULL;
 			}
-		}
-		else {
+		} else {
 			if (pEditMode != NULL) {
 				if (strcmp(pEditMode, "trim") == 0) {
 					eLaunchType	= VP_LAUNCH_TYPE_IMAGE_VIEWER_TRIM;
-				}
-				else {
+				} else {
 					eLaunchType	= VP_LAUNCH_TYPE_IMAGE_VIEWER;
 				}
 
 				free(pEditMode);
 				pEditMode	= NULL;
-			}
-			else {
+			} else {
 				eLaunchType	= VP_LAUNCH_TYPE_IMAGE_VIEWER;
 			}
 		}
-	}
-	else if (strcmp(pLaunchingByOtherApp, "email") == 0) {
+	} else if (strcmp(pLaunchingByOtherApp, "email") == 0) {
 		eLaunchType = VP_LAUNCH_TYPE_EMAIL;
-	}
-	else if (strcmp(pLaunchingByOtherApp, "message") == 0) {
+	} else if (strcmp(pLaunchingByOtherApp, "message") == 0) {
 		eLaunchType = VP_LAUNCH_TYPE_MMS;
-	}
-	else if (strcmp(pLaunchingByOtherApp, "light_play_view") == 0) {
+	} else if (strcmp(pLaunchingByOtherApp, "light_play_view") == 0) {
 		eLaunchType = VP_LAUNCH_TYPE_SIMPLE;
-	}
-	else {
+	} else {
 		eLaunchType = VP_LAUNCH_TYPE_NONE;
 	}
 
@@ -673,26 +643,22 @@ static void __VpServiceParserGetStoreOrderInfo(app_control_h pAppSvcHandle, VpSe
 	return;
 
 NOT_EXISTED_INFO:
-	if (pReceiveData->pStoreOrderId != NULL)
-	{
+	if (pReceiveData->pStoreOrderId != NULL) {
 		free(pReceiveData->pStoreOrderId);
 		pReceiveData->pStoreOrderId	= NULL;
 	}
 
-	if (pReceiveData->pStoreAppId != NULL)
-	{
+	if (pReceiveData->pStoreAppId != NULL) {
 		free(pReceiveData->pStoreAppId);
 		pReceiveData->pStoreAppId	= NULL;
 	}
 
-	if (pReceiveData->pStoreMvId != NULL)
-	{
+	if (pReceiveData->pStoreMvId != NULL) {
 		free(pReceiveData->pStoreMvId);
 		pReceiveData->pStoreMvId	= NULL;
 	}
 
-	if (pReceiveData->pStoreServerId != NULL)
-	{
+	if (pReceiveData->pStoreServerId != NULL) {
 		free(pReceiveData->pStoreServerId);
 		pReceiveData->pStoreServerId	= NULL;
 	}
@@ -712,14 +678,11 @@ static Eina_Bool __VpServiceParserGetStreamingLaunch(char *pUri)
 
 	if (strstr(pUri, "rtp") != NULL) {
 		return EINA_TRUE;
-	}
-	else if (strstr(pUri, "rtsp") != NULL) {
+	} else if (strstr(pUri, "rtsp") != NULL) {
 		return EINA_TRUE;
-	}
-	else if (strstr(pUri, "http") != NULL) {
+	} else if (strstr(pUri, "http") != NULL) {
 		return EINA_TRUE;
-	}
-	else if (strstr(pUri, "https") != NULL) {
+	} else if (strstr(pUri, "https") != NULL) {
 		return EINA_TRUE;
 	}
 
@@ -964,20 +927,15 @@ static VpVideoSortType __VpServiceParserGetSortType(app_control_h pAppSvcHandle)
 
 	if (!strcmp(pSortType, "name_asc")) {
 		eSortType = VP_VIDEO_SORT_TYPE_BY_NAME_ASC;
-	}
-	else if (!strcmp(pSortType, "name_desc")) {
+	} else if (!strcmp(pSortType, "name_desc")) {
 		eSortType = VP_VIDEO_SORT_TYPE_BY_NAME_DESC;
-	}
-	else if (!strcmp(pSortType, "date_asc")) {
+	} else if (!strcmp(pSortType, "date_asc")) {
 		eSortType = VP_VIDEO_SORT_TYPE_BY_DATE_ASC;
-	}
-	else if (!strcmp(pSortType, "date_desc")) {
+	} else if (!strcmp(pSortType, "date_desc")) {
 		eSortType = VP_VIDEO_SORT_TYPE_BY_DATE_DESC;
-	}
-	else if (!strcmp(pSortType, "none")) {
+	} else if (!strcmp(pSortType, "none")) {
 		eSortType = VP_VIDEO_SORT_TYPE_BY_NONE;
-	}
-	else {
+	} else {
 		eSortType = VP_VIDEO_SORT_TYPE_BY_NAME_DESC;
 	}
 
@@ -1017,17 +975,13 @@ static VpVideoPlayListType __VpServiceParserGetListType(app_control_h pAppSvcHan
 
 	if (!strcmp(pPlayType, "folder")) {
 		ePlayType = VP_VIDEO_PLAY_LIST_TYPE_FOLDER;
-	}
-	else if (!strcmp(pPlayType, "all_folder_video")) {
+	} else if (!strcmp(pPlayType, "all_folder_video")) {
 		ePlayType = VP_VIDEO_PLAY_LIST_TYPE_ALL_FOLDER_GALLERY;
-	}
-	else if (!strcmp(pPlayType, "tag_video")) {
+	} else if (!strcmp(pPlayType, "tag_video")) {
 		ePlayType = VP_VIDEO_PLAY_LIST_TYPE_TAG_GALLERY;
-	}
-	else if (!strcmp(pPlayType, "favorite"))	{
+	} else if (!strcmp(pPlayType, "favorite"))	{
 		ePlayType = VP_VIDEO_PLAY_LIST_TYPE_FAVORITE;
-	}
-	else {
+	} else {
 		ePlayType = VP_VIDEO_PLAY_LIST_TYPE_NONE;
 	}
 
@@ -1064,7 +1018,7 @@ static Eina_Bool __VpServiceParserCheckFileIsExist(char *szFilePath)
 		return EINA_FALSE;
 	}
 	Eina_Bool bIsExist = EINA_FALSE;
-	
+
 	if (vp_file_exists(szFilePath)) {
 		bIsExist = EINA_TRUE;
 	}

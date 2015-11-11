@@ -43,8 +43,8 @@ static void _vp_sensor_destroy_handle(SensorHandle *pSensorHandle);
 
 /* callback functions */
 static void __vp_sensor_motion_doubletap_event_cb(unsigned long long
-		timestamp,
-		void *pUserData)
+        timestamp,
+        void *pUserData)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -54,14 +54,14 @@ static void __vp_sensor_motion_doubletap_event_cb(unsigned long long
 	SensorHandle *pSensor = (SensorHandle *) pUserData;
 	if (pSensor->pEventCb) {
 		pSensor->pEventCb(VP_SENSOR_TYPE_DOUBLETAP, timestamp,
-				  pSensor->pUserData);
+		                  pSensor->pUserData);
 	}
 
 }
 
 static void __vp_sensor_motion_facedown_event_cb(unsigned long long
-		timestamp,
-		void *pUserData)
+        timestamp,
+        void *pUserData)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -72,7 +72,7 @@ static void __vp_sensor_motion_facedown_event_cb(unsigned long long
 
 	if (pSensor->pEventCb) {
 		pSensor->pEventCb(VP_SENSOR_TYPE_FACEDOWN, timestamp,
-				  pSensor->pUserData);
+		                  pSensor->pUserData);
 	}
 }
 
@@ -171,12 +171,12 @@ bool vp_sensor_realize(sensor_handle pSensorHandle)
 
 	if (bEnableSensor) {
 		nRet =
-			sensor_motion_doubletap_set_cb(pSensor->pSensorH,
-						       __vp_sensor_motion_doubletap_event_cb,
-						       (void *) pSensor);
+		    sensor_motion_doubletap_set_cb(pSensor->pSensorH,
+		                                   __vp_sensor_motion_doubletap_event_cb,
+		                                   (void *) pSensor);
 		if (nRet != SENSOR_ERROR_NONE) {
 			VideoLogInfo("sensor_motion_doubletap_set_cb is fail : 0x%x",
-				     nRet);
+			             nRet);
 			bReturn = FALSE;
 		}
 
@@ -195,12 +195,12 @@ bool vp_sensor_realize(sensor_handle pSensorHandle)
 	}
 	if (bEnableSensor) {
 		nRet =
-			sensor_motion_facedown_set_cb(pSensor->pSensorH,
-						      __vp_sensor_motion_facedown_event_cb,
-						      (void *) pSensor);
+		    sensor_motion_facedown_set_cb(pSensor->pSensorH,
+		                                  __vp_sensor_motion_facedown_event_cb,
+		                                  (void *) pSensor);
 		if (nRet != SENSOR_ERROR_NONE) {
 			VideoLogInfo("sensor_motion_facedown_set_cb is fail : 0x%x",
-				     nRet);
+			             nRet);
 			bReturn = FALSE;
 		}
 
@@ -256,7 +256,7 @@ bool vp_sensor_unrealize(sensor_handle pSensorHandle)
 		nRet = sensor_motion_facedown_unset_cb(pSensor->pSensorH);
 		if (nRet != SENSOR_ERROR_NONE) {
 			VideoLogInfo("sensor_motion_facedown_unset_cb is fail : 0x%x",
-				     nRet);
+			             nRet);
 			bReturn = FALSE;
 		}
 

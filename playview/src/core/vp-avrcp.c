@@ -29,8 +29,8 @@
 
 /* internal functions */
 void _vp_avrcp_connection_state_changed_cb(bool connected,
-		const char *remote_address,
-		void *user_data)
+        const char *remote_address,
+        void *user_data)
 {
 	VideoLogInfo("");
 }
@@ -47,8 +47,8 @@ bool vp_avrcp_initialize()
 	}
 
 	nRet =
-		bt_avrcp_target_initialize(_vp_avrcp_connection_state_changed_cb,
-					   NULL);
+	    bt_avrcp_target_initialize(_vp_avrcp_connection_state_changed_cb,
+	                               NULL);
 	if (nRet != BT_ERROR_NONE) {
 		VideoLogError("bt_avrcp_target_initialize fail. nRet[%d]", nRet);
 		bt_deinitialize();
@@ -69,7 +69,7 @@ bool vp_avrcp_deinitialize()
 	nRet = bt_avrcp_target_deinitialize();
 	if (nRet != BT_ERROR_NONE) {
 		VideoLogError("bt_avrcp_target_deinitialize fail. nRet[%d]",
-			      nRet);
+		              nRet);
 		return FALSE;
 	}
 
@@ -86,8 +86,8 @@ bool vp_avrcp_deinitialize()
 }
 
 bool vp_avrcp_noti_track(const char *title, const char *artist,
-			 const char *album, const char *genre,
-			 unsigned int duration)
+                         const char *album, const char *genre,
+                         unsigned int duration)
 {
 	VideoLogInfo("vp_avrcp_noti_track start");
 
@@ -96,11 +96,11 @@ bool vp_avrcp_noti_track(const char *title, const char *artist,
 	VideoLogWarning("set avrcp noti tack. duration[%d]", duration);
 
 	nRet =
-		bt_avrcp_target_notify_track(title, artist, album, genre, 1, 1,
-					     duration);
+	    bt_avrcp_target_notify_track(title, artist, album, genre, 1, 1,
+	                                 duration);
 	if (nRet != BT_ERROR_NONE) {
 		VideoLogError("bt_avrcp_target_notify_track fail. nRet[%d]",
-			      nRet);
+		              nRet);
 		return FALSE;
 	}
 
@@ -115,11 +115,11 @@ bool vp_avrcp_noti_track_position(unsigned int position)
 
 	int nRet = BT_ERROR_NONE;
 	VideoLogWarning("set avrcp noti track position. duration[%d]",
-			position);
+	                position);
 	nRet = bt_avrcp_target_notify_position(position);
 	if (nRet != BT_ERROR_NONE) {
 		VideoLogError("bt_avrcp_target_notify_position fail. nRet[%d]",
-			      nRet);
+		              nRet);
 		return FALSE;
 	}
 
@@ -132,7 +132,7 @@ bool vp_avrcp_noti_player_state(vp_mm_player_state_t nState)
 {
 	VideoLogInfo("vp_avrcp_noti_player_state start");
 	if (nState == VP_MM_PLAYER_STATE_NONE
-			|| nState == VP_MM_PLAYER_STATE_IDLE) {
+	        || nState == VP_MM_PLAYER_STATE_IDLE) {
 		VideoLogWarning
 		("player state : [%d]. don't need to send player state",
 		 nState);
@@ -155,7 +155,7 @@ bool vp_avrcp_noti_player_state(vp_mm_player_state_t nState)
 		break;
 	}
 	VideoLogWarning("set avrcp noti player state. player_state[%d]",
-			player_state);
+	                player_state);
 
 	int nRet = BT_ERROR_NONE;
 	nRet = bt_avrcp_target_notify_player_state(player_state);
