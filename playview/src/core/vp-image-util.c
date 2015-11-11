@@ -29,9 +29,9 @@
 #include "vp-util.h"
 
 bool vp_image_util_image_resize_save(const char *szFilePath,
-				     const unsigned char *pSrcBuf,
-				     int nSrcW, int nSrcH, int nDestW,
-				     int nDestH, int nQuality)
+                                     const unsigned char *pSrcBuf,
+                                     int nSrcW, int nSrcH, int nDestW,
+                                     int nDestH, int nQuality)
 {
 	if (szFilePath == NULL) {
 		VideoLogError("szFilePath is NULL");
@@ -50,9 +50,9 @@ bool vp_image_util_image_resize_save(const char *szFilePath,
 	int nResizeH = nDestH + (nDestH) % 2;
 
 	nRet =
-		image_util_calculate_buffer_size(nResizeW, nResizeH,
-				IMAGE_UTIL_COLORSPACE_RGB888,
-				&nResizBufSize);
+	    image_util_calculate_buffer_size(nResizeW, nResizeH,
+	                                     IMAGE_UTIL_COLORSPACE_RGB888,
+	                                     &nResizBufSize);
 	if (nRet != IMAGE_UTIL_ERROR_NONE) {
 		VideoLogWarning
 		("image_util_calculate_buffer_size is fail : [0x%x]", nRet);
@@ -65,8 +65,8 @@ bool vp_image_util_image_resize_save(const char *szFilePath,
 	}
 
 	nRet =
-		vp_util_image_resize(pSaveBuf, &nResizeW, &nResizeH, pSrcBuf,
-				     nSrcW, nSrcH, IMAGE_UTIL_COLORSPACE_RGB888);
+	    vp_util_image_resize(pSaveBuf, &nResizeW, &nResizeH, pSrcBuf,
+	                         nSrcW, nSrcH, IMAGE_UTIL_COLORSPACE_RGB888);
 	if (nRet != IMAGE_UTIL_ERROR_NONE) {
 		VideoLogWarning("vp_util_image_resize is fail : [0x%x]", nRet);
 		VP_FREE(pSaveBuf);
@@ -74,9 +74,9 @@ bool vp_image_util_image_resize_save(const char *szFilePath,
 	}
 
 	nRet =
-		image_util_encode_jpeg(pSaveBuf, nResizeW, nResizeH,
-				       IMAGE_UTIL_COLORSPACE_RGB888, nQuality,
-				       szFilePath);
+	    image_util_encode_jpeg(pSaveBuf, nResizeW, nResizeH,
+	                           IMAGE_UTIL_COLORSPACE_RGB888, nQuality,
+	                           szFilePath);
 	if (nRet != IMAGE_UTIL_ERROR_NONE) {
 		VideoLogWarning("image_util_encode_jpeg is fail : [0x%x]", nRet);
 		VP_FREE(pSaveBuf);
@@ -90,8 +90,8 @@ bool vp_image_util_image_resize_save(const char *szFilePath,
 
 
 bool vp_image_util_image_save(const char *szFilePath,
-			      const unsigned char *pSrcBuf, int nSrcW,
-			      int nSrcH, int nQuality)
+                              const unsigned char *pSrcBuf, int nSrcW,
+                              int nSrcH, int nQuality)
 {
 	if (szFilePath == NULL) {
 		VideoLogError("szFilePath is NULL");
@@ -106,9 +106,9 @@ bool vp_image_util_image_save(const char *szFilePath,
 	int nRet = IMAGE_UTIL_ERROR_NONE;
 
 	nRet =
-		image_util_encode_jpeg(pSrcBuf, nSrcW, nSrcH,
-				       IMAGE_UTIL_COLORSPACE_RGB888, nQuality,
-				       szFilePath);
+	    image_util_encode_jpeg(pSrcBuf, nSrcW, nSrcH,
+	                           IMAGE_UTIL_COLORSPACE_RGB888, nQuality,
+	                           szFilePath);
 	if (nRet != IMAGE_UTIL_ERROR_NONE) {
 		VideoLogWarning("image_util_encode_jpeg is fail : [0x%x]", nRet);
 		return FALSE;

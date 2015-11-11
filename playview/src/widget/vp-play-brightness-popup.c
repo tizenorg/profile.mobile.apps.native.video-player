@@ -68,19 +68,19 @@ typedef struct _BrightnessWidget {
 } BrightnessWidget;
 
 static void _vp_play_brightness_destory_handle(BrightnessWidget *
-		pBrightnessWidget);
+        pBrightnessWidget);
 static double _vp_play_brightness_get_mouse_pos_ratio(Evas_Object *pObj,
-		bool bLandscape,
-		int nCurY);
+        bool bLandscape,
+        int nCurY);
 static void _vp_play_brightness_set_value(BrightnessWidget *
-		pBrightnessWidget, int nValue);
+        pBrightnessWidget, int nValue);
 static void _vp_play_brightness_create_timer(BrightnessWidget *
-		pBrightnessWidget);
+        pBrightnessWidget);
 
 /* callback functions */
 static void __vp_brightness_mouse_down_cb(void *pUserData, Evas *e,
-		Evas_Object *pObj,
-		void *pEvent)
+        Evas_Object *pObj,
+        void *pEvent)
 {
 	if (!pUserData) {
 		VideoLogError("pUserData is NULL");
@@ -93,19 +93,19 @@ static void __vp_brightness_mouse_down_cb(void *pUserData, Evas *e,
 	}
 
 	Evas_Event_Mouse_Down *pMouseDownEvent =
-		(Evas_Event_Mouse_Down *) pEvent;
+	    (Evas_Event_Mouse_Down *) pEvent;
 
 	double dRatio =
-		_vp_play_brightness_get_mouse_pos_ratio(pBrightnessWidget->
-				pLayout,
-				pBrightnessWidget->
-				bLandscape,
-				pMouseDownEvent->canvas.
-				y);
+	    _vp_play_brightness_get_mouse_pos_ratio(pBrightnessWidget->
+	            pLayout,
+	            pBrightnessWidget->
+	            bLandscape,
+	            pMouseDownEvent->canvas.
+	            y);
 
 	int nCurVal =
-		pBrightnessWidget->nMaxVal -
-		(dRatio * pBrightnessWidget->nMaxVal);
+	    pBrightnessWidget->nMaxVal -
+	    (dRatio * pBrightnessWidget->nMaxVal);
 
 	_vp_play_brightness_set_value(pBrightnessWidget, nCurVal);
 
@@ -115,7 +115,7 @@ static void __vp_brightness_mouse_down_cb(void *pUserData, Evas *e,
 }
 
 static void __vp_brightness_mouse_up_cb(void *pUserData, Evas *e,
-					Evas_Object *pObj, void *pEvent)
+                                        Evas_Object *pObj, void *pEvent)
 {
 	if (!pUserData) {
 		VideoLogError("pUserData is NULL");
@@ -130,15 +130,15 @@ static void __vp_brightness_mouse_up_cb(void *pUserData, Evas *e,
 	}
 
 	double dRatio =
-		_vp_play_brightness_get_mouse_pos_ratio(pBrightnessWidget->
-				pLayout,
-				pBrightnessWidget->
-				bLandscape,
-				pMouseUpEvent->canvas.y);
+	    _vp_play_brightness_get_mouse_pos_ratio(pBrightnessWidget->
+	            pLayout,
+	            pBrightnessWidget->
+	            bLandscape,
+	            pMouseUpEvent->canvas.y);
 
 	int nCurVal =
-		pBrightnessWidget->nMaxVal -
-		(dRatio * pBrightnessWidget->nMaxVal);
+	    pBrightnessWidget->nMaxVal -
+	    (dRatio * pBrightnessWidget->nMaxVal);
 
 	_vp_play_brightness_set_value(pBrightnessWidget, nCurVal);
 	_vp_play_brightness_create_timer(pBrightnessWidget);
@@ -147,8 +147,8 @@ static void __vp_brightness_mouse_up_cb(void *pUserData, Evas *e,
 }
 
 static void __vp_brightness_mouse_move_cb(void *pUserData, Evas *e,
-		Evas_Object *pObj,
-		void *pEvent)
+        Evas_Object *pObj,
+        void *pEvent)
 {
 	if (!pUserData) {
 		VideoLogError("pUserData is NULL");
@@ -158,24 +158,24 @@ static void __vp_brightness_mouse_move_cb(void *pUserData, Evas *e,
 	BrightnessWidget *pBrightnessWidget = (BrightnessWidget *) pUserData;
 
 	Evas_Event_Mouse_Move *pMouseMoveEvent =
-		(Evas_Event_Mouse_Move *) pEvent;
+	    (Evas_Event_Mouse_Move *) pEvent;
 
 	if (pBrightnessWidget->bIsRealize == FALSE
-			|| pBrightnessWidget->bMouseDown == FALSE) {
+	        || pBrightnessWidget->bMouseDown == FALSE) {
 		return;
 	}
 
 	double dRatio =
-		_vp_play_brightness_get_mouse_pos_ratio(pBrightnessWidget->
-				pLayout,
-				pBrightnessWidget->
-				bLandscape,
-				pMouseMoveEvent->cur.
-				canvas.y);
+	    _vp_play_brightness_get_mouse_pos_ratio(pBrightnessWidget->
+	            pLayout,
+	            pBrightnessWidget->
+	            bLandscape,
+	            pMouseMoveEvent->cur.
+	            canvas.y);
 
 	int nCurVal =
-		pBrightnessWidget->nMaxVal -
-		(dRatio * pBrightnessWidget->nMaxVal);
+	    pBrightnessWidget->nMaxVal -
+	    (dRatio * pBrightnessWidget->nMaxVal);
 
 	if (nCurVal != pBrightnessWidget->nCurVal) {
 		_vp_play_brightness_set_value(pBrightnessWidget, nCurVal);
@@ -195,7 +195,7 @@ static Eina_Bool __vp_brightness_hide_timer_cb(void *pUserData)
 	VP_EVAS_TIMER_DEL(pBrightnessWidget->pHideTimer);
 
 	if (!vp_play_brightness_unrealize
-			((brightness_handle) pBrightnessWidget)) {
+	        ((brightness_handle) pBrightnessWidget)) {
 		VideoLogWarning("vp_play_brightness_unrealize is fail");
 	}
 
@@ -206,7 +206,7 @@ static Eina_Bool __vp_brightness_hide_timer_cb(void *pUserData)
 
 /* internal functions */
 static void _vp_play_brightness_destory_handle(BrightnessWidget *
-		pBrightnessWidget)
+        pBrightnessWidget)
 {
 	if (pBrightnessWidget == NULL) {
 		VideoLogError("pBrightnessWidget is NULL");
@@ -221,8 +221,8 @@ static void _vp_play_brightness_destory_handle(BrightnessWidget *
 }
 
 static double _vp_play_brightness_get_mouse_pos_ratio(Evas_Object *pObj,
-		bool bLandscape,
-		int nCurY)
+        bool bLandscape,
+        int nCurY)
 {
 	if (pObj == NULL) {
 		VideoLogError("pObj is NULL");
@@ -256,7 +256,7 @@ static double _vp_play_brightness_get_mouse_pos_ratio(Evas_Object *pObj,
 
 
 static void _vp_play_brightness_set_widget_position(BrightnessWidget *
-		pBrightnessWidget)
+        pBrightnessWidget)
 {
 	if (pBrightnessWidget == NULL) {
 		VideoLogError("pBrightnessWidget is NULL");
@@ -268,23 +268,23 @@ static void _vp_play_brightness_set_widget_position(BrightnessWidget *
 	int nHeight = 0;
 
 	elm_win_screen_size_get(pBrightnessWidget->pParent, NULL, NULL,
-				&nWidth, &nHeight);
+	                        &nWidth, &nHeight);
 
 	if (bLandscape) {
 		evas_object_move(pBrightnessWidget->pLayout,
-				 nHeight -
-				 VP_BRIGHTNESS_LANDSCAPE_POS_X * VP_SCALE,
-				 VP_BRIGHTNESS_LANDSCAPE_POS_Y * VP_SCALE);
+		                 nHeight -
+		                 VP_BRIGHTNESS_LANDSCAPE_POS_X * VP_SCALE,
+		                 VP_BRIGHTNESS_LANDSCAPE_POS_Y * VP_SCALE);
 	} else {
 		evas_object_move(pBrightnessWidget->pLayout,
-				 nWidth - VP_BRIGHTNESS_PORTRAIT_POS_X * VP_SCALE,
-				 VP_BRIGHTNESS_PORTRAIT_POS_Y * VP_SCALE);
+		                 nWidth - VP_BRIGHTNESS_PORTRAIT_POS_X * VP_SCALE,
+		                 VP_BRIGHTNESS_PORTRAIT_POS_Y * VP_SCALE);
 	}
 }
 
 static void _vp_play_brightness_update_icon(BrightnessWidget *
-		pBrightnessWidget,
-		double nValueRatio)
+        pBrightnessWidget,
+        double nValueRatio)
 {
 	if (pBrightnessWidget == NULL) {
 		VideoLogError("pBrightnessWidget is NULL");
@@ -305,12 +305,12 @@ static void _vp_play_brightness_update_icon(BrightnessWidget *
 	}
 	path = g_strdup_printf(VP_PLAY_BRIGHTNESS_POPUP_ICON_PATH, req);
 	elm_image_file_set(pBrightnessWidget->pIcon,
-			   VP_PLAY_RESROUCE_EDJ_PATH, path);
+	                   VP_PLAY_RESROUCE_EDJ_PATH, path);
 	g_free(path);
 }
 
 static void _vp_play_brightness_update_value(BrightnessWidget *
-		pBrightnessWidget)
+        pBrightnessWidget)
 {
 	if (pBrightnessWidget == NULL) {
 		VideoLogError("pBrightnessWidget is NULL");
@@ -321,28 +321,28 @@ static void _vp_play_brightness_update_value(BrightnessWidget *
 	char szPlayingTime[VP_BRIGHTNESS_TEXT_MAX_LEN] = { 0, };
 
 	snprintf(szPlayingTime, VP_BRIGHTNESS_TEXT_MAX_LEN, "%d",
-		 pBrightnessWidget->nCurVal);
+	         pBrightnessWidget->nCurVal);
 
 	nValueRatio =
-		((double) pBrightnessWidget->nCurVal /
-		 (double)(pBrightnessWidget->nMaxVal -
-			  pBrightnessWidget->nMinVal));
+	    ((double) pBrightnessWidget->nCurVal /
+	     (double)(pBrightnessWidget->nMaxVal -
+	              pBrightnessWidget->nMinVal));
 
 	if (!edje_object_part_drag_value_set
-			(_EDJ(pBrightnessWidget->pLayout),
-			 VP_PLAY_SWALLOW_BRIGHTNESS_POPUP_DRAG_RECT, 0.0, nValueRatio)) {
+	        (_EDJ(pBrightnessWidget->pLayout),
+	         VP_PLAY_SWALLOW_BRIGHTNESS_POPUP_DRAG_RECT, 0.0, nValueRatio)) {
 		VideoLogWarning("Drag value set fail : %lf", nValueRatio);
 	}
 
 	elm_object_part_text_set(pBrightnessWidget->pLayout,
-				 VP_PLAY_SWALLOW_BRIGHTNESS_POPUP_VALUE_LABEL,
-				 szPlayingTime);
+	                         VP_PLAY_SWALLOW_BRIGHTNESS_POPUP_VALUE_LABEL,
+	                         szPlayingTime);
 	/*update brightness icon */
 	_vp_play_brightness_update_icon(pBrightnessWidget, nValueRatio);
 }
 
 static void _vp_play_brightness_create_timer(BrightnessWidget *
-		pBrightnessWidget)
+        pBrightnessWidget)
 {
 	if (pBrightnessWidget == NULL) {
 		VideoLogError("pBrightnessWidgetis NULL");
@@ -352,9 +352,9 @@ static void _vp_play_brightness_create_timer(BrightnessWidget *
 	VP_EVAS_TIMER_DEL(pBrightnessWidget->pHideTimer);
 
 	pBrightnessWidget->pHideTimer =
-		ecore_timer_add(VP_BRIGHTNESS_HIDE_LAYOUT_TIMER_INTERVAL,
-				__vp_brightness_hide_timer_cb,
-				(void *) pBrightnessWidget);
+	    ecore_timer_add(VP_BRIGHTNESS_HIDE_LAYOUT_TIMER_INTERVAL,
+	                    __vp_brightness_hide_timer_cb,
+	                    (void *) pBrightnessWidget);
 }
 
 static Eina_Bool __vp_brightness_popup_device_timer_cb(void *pUserData)
@@ -377,7 +377,7 @@ static Eina_Bool __vp_brightness_popup_device_timer_cb(void *pUserData)
 }
 
 static void _vp_play_brightness_set_value(BrightnessWidget *
-		pBrightnessWidget, int nValue)
+        pBrightnessWidget, int nValue)
 {
 	if (pBrightnessWidget == NULL) {
 		VideoLogError("pBrightnessWidget is NULL");
@@ -392,15 +392,15 @@ static void _vp_play_brightness_set_value(BrightnessWidget *
 
 	if (pBrightnessWidget->pDeviceTimer == NULL) {
 		pBrightnessWidget->pDeviceTimer = ecore_timer_add(0.1,
-						  __vp_brightness_popup_device_timer_cb,
-						  (void *)
-						  pBrightnessWidget);
+		                                  __vp_brightness_popup_device_timer_cb,
+		                                  (void *)
+		                                  pBrightnessWidget);
 	}
 }
 
 
 static Evas_Object *_vp_play_brightness_create_layout(Evas_Object *
-		pParent)
+        pParent)
 {
 	if (!pParent) {
 		VideoLogError("Parent is NULL");
@@ -417,8 +417,8 @@ static Evas_Object *_vp_play_brightness_create_layout(Evas_Object *
 	}
 
 	bRet =
-		elm_layout_file_set(pObj, VP_PLAY_BRIGHTNESS_POPUP_EDJ_PATH,
-				    VP_PLAY_EDJ_GROUP_BRIGHTNESS_POPUP);
+	    elm_layout_file_set(pObj, VP_PLAY_BRIGHTNESS_POPUP_EDJ_PATH,
+	                        VP_PLAY_EDJ_GROUP_BRIGHTNESS_POPUP);
 	if (bRet != EINA_TRUE) {
 		VideoLogError("elm_layout_file_set fail");
 		return NULL;
@@ -438,19 +438,19 @@ static Evas_Object *_vp_play_brightness_create_icon(Evas_Object *pParent)
 
 	Evas_Object *pIcon = elm_image_add(pParent);
 	evas_object_size_hint_weight_set(pIcon, EVAS_HINT_EXPAND,
-					 EVAS_HINT_EXPAND);
+	                                 EVAS_HINT_EXPAND);
 	evas_object_size_hint_align_set(pIcon, EVAS_HINT_FILL,
-					EVAS_HINT_FILL);
+	                                EVAS_HINT_FILL);
 	elm_object_part_content_set(pParent,
-				    VP_PLAY_SWALLOW_BRIGHTNESS_POPUP_ICON,
-				    pIcon);
+	                            VP_PLAY_SWALLOW_BRIGHTNESS_POPUP_ICON,
+	                            pIcon);
 	evas_object_show(pIcon);
 
 	return pIcon;
 }
 
 static bool _vp_play_brightness_init_layout(BrightnessWidget *
-		pBrightnessWidget)
+        pBrightnessWidget)
 {
 	if (pBrightnessWidget == NULL) {
 		VideoLogError("pBrightnessWidget is NULL");
@@ -460,33 +460,33 @@ static bool _vp_play_brightness_init_layout(BrightnessWidget *
 	Evas_Object *pParent = pBrightnessWidget->pParent;
 
 	pBrightnessWidget->pLayout =
-		_vp_play_brightness_create_layout(pParent);
+	    _vp_play_brightness_create_layout(pParent);
 	if (pBrightnessWidget->pLayout == NULL) {
 		VideoLogError("_vp_play_brightness_create_layout is fail");
 		return FALSE;
 	}
 
 	pBrightnessWidget->pIcon =
-		_vp_play_brightness_create_icon(pBrightnessWidget->pLayout);
+	    _vp_play_brightness_create_icon(pBrightnessWidget->pLayout);
 	if (pBrightnessWidget->pIcon == NULL) {
 		VideoLogError("_vp_play_brightness_create_icon is fail");
 		return FALSE;
 	}
 
 	evas_object_event_callback_add(pBrightnessWidget->pLayout,
-				       EVAS_CALLBACK_MOUSE_DOWN,
-				       __vp_brightness_mouse_down_cb,
-				       (void *) pBrightnessWidget);
+	                               EVAS_CALLBACK_MOUSE_DOWN,
+	                               __vp_brightness_mouse_down_cb,
+	                               (void *) pBrightnessWidget);
 
 	evas_object_event_callback_add(pBrightnessWidget->pLayout,
-				       EVAS_CALLBACK_MOUSE_UP,
-				       __vp_brightness_mouse_up_cb,
-				       (void *) pBrightnessWidget);
+	                               EVAS_CALLBACK_MOUSE_UP,
+	                               __vp_brightness_mouse_up_cb,
+	                               (void *) pBrightnessWidget);
 
 	evas_object_event_callback_add(pBrightnessWidget->pLayout,
-				       EVAS_CALLBACK_MOUSE_MOVE,
-				       __vp_brightness_mouse_move_cb,
-				       (void *) pBrightnessWidget);
+	                               EVAS_CALLBACK_MOUSE_MOVE,
+	                               __vp_brightness_mouse_move_cb,
+	                               (void *) pBrightnessWidget);
 
 	return TRUE;
 }
@@ -532,7 +532,7 @@ brightness_handle vp_play_brightness_create(Evas_Object *pParent)
 	}
 
 	pBrightnessWidget->nBrightnessUnit =
-		pBrightnessWidget->nMaxVal / VP_BRIGHTNESS_BRIGHTNESS_UNIT;
+	    pBrightnessWidget->nMaxVal / VP_BRIGHTNESS_BRIGHTNESS_UNIT;
 
 	if (!vp_device_get_brightness(&(pBrightnessWidget->nCurVal))) {
 		VideoLogError("vp_device_get_brightness fail");
@@ -553,7 +553,7 @@ void vp_play_brightness_destroy(brightness_handle pBrightnessHandle)
 	}
 
 	BrightnessWidget *pBrightnessWidget =
-		(BrightnessWidget *) pBrightnessHandle;
+	    (BrightnessWidget *) pBrightnessHandle;
 
 	_vp_play_brightness_destory_handle(pBrightnessWidget);
 }
@@ -566,14 +566,14 @@ bool vp_play_brightness_realize(brightness_handle pBrightnessHandle)
 	}
 
 	BrightnessWidget *pBrightnessWidget =
-		(BrightnessWidget *) pBrightnessHandle;
+	    (BrightnessWidget *) pBrightnessHandle;
 
 	pBrightnessWidget->bIsRealize = TRUE;
 
 	_vp_play_brightness_set_widget_position(pBrightnessWidget);
 
 	_vp_play_brightness_set_value(pBrightnessWidget,
-				      pBrightnessWidget->nCurVal);
+	                              pBrightnessWidget->nCurVal);
 
 	evas_object_show(pBrightnessWidget->pLayout);
 
@@ -590,7 +590,7 @@ bool vp_play_brightness_unrealize(brightness_handle pBrightnessHandle)
 	}
 
 	BrightnessWidget *pBrightnessWidget =
-		(BrightnessWidget *) pBrightnessHandle;
+	    (BrightnessWidget *) pBrightnessHandle;
 
 	pBrightnessWidget->bIsRealize = FALSE;
 
@@ -600,8 +600,8 @@ bool vp_play_brightness_unrealize(brightness_handle pBrightnessHandle)
 }
 
 bool vp_play_brightness_set_landscape_mode(brightness_handle
-		pBrightnessHandle,
-		bool bLandscape)
+        pBrightnessHandle,
+        bool bLandscape)
 {
 	if (pBrightnessHandle == NULL) {
 		VideoLogError("pBrightnessHandle is NULL");
@@ -609,7 +609,7 @@ bool vp_play_brightness_set_landscape_mode(brightness_handle
 	}
 
 	BrightnessWidget *pBrightnessWidget =
-		(BrightnessWidget *) pBrightnessHandle;
+	    (BrightnessWidget *) pBrightnessHandle;
 
 	pBrightnessWidget->bLandscape = bLandscape;
 
@@ -620,7 +620,7 @@ bool vp_play_brightness_set_landscape_mode(brightness_handle
 }
 
 bool vp_play_brightness_is_realize(brightness_handle pBrightnessHandle,
-				   bool *bIsRealize)
+                                   bool *bIsRealize)
 {
 	if (pBrightnessHandle == NULL) {
 		VideoLogError("pBrightnessHandle is NULL");
@@ -628,7 +628,7 @@ bool vp_play_brightness_is_realize(brightness_handle pBrightnessHandle,
 	}
 
 	BrightnessWidget *pBrightnessWidget =
-		(BrightnessWidget *) pBrightnessHandle;
+	    (BrightnessWidget *) pBrightnessHandle;
 
 	*bIsRealize = pBrightnessWidget->bIsRealize;
 
@@ -636,7 +636,7 @@ bool vp_play_brightness_is_realize(brightness_handle pBrightnessHandle,
 }
 
 bool vp_play_brightness_set_value(brightness_handle pBrightnessHandle,
-				  int nCurVal)
+                                  int nCurVal)
 {
 	if (pBrightnessHandle == NULL) {
 		VideoLogError("pBrightnessHandle is NULL");
@@ -644,7 +644,7 @@ bool vp_play_brightness_set_value(brightness_handle pBrightnessHandle,
 	}
 
 	BrightnessWidget *pBrightnessWidget =
-		(BrightnessWidget *) pBrightnessHandle;
+	    (BrightnessWidget *) pBrightnessHandle;
 
 	_vp_play_brightness_create_timer(pBrightnessWidget);
 
@@ -661,7 +661,7 @@ bool vp_play_brightness_set_value(brightness_handle pBrightnessHandle,
 	}
 
 	_vp_play_brightness_set_value(pBrightnessWidget,
-				      pBrightnessWidget->nCurVal);
+	                              pBrightnessWidget->nCurVal);
 
 	return TRUE;
 }

@@ -32,7 +32,7 @@ typedef struct _HollIC_handle {
 } HollIC_handle;
 
 hollic_handle vp_hollic_create_handle(HollICEventCbFunc pEventCb,
-				      void *pUserData)
+                                      void *pUserData)
 {
 	return NULL;
 }

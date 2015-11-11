@@ -48,7 +48,7 @@ typedef struct _SubtitleSelectPopup {
 	SubtitleCloseCbFunc	pButtonCb;
 	GList			*pItemList;
 	int				nSubtitleIdx;
-}SubtitleSelectPopup;
+} SubtitleSelectPopup;
 
 
 
@@ -82,7 +82,7 @@ static char *__vp_subtitle_select_genlist_text_get_cb(const void *pUserData, Eva
 		return NULL;
 	}
 
-	const char *szTxt= (const char *)pUserData;
+	const char *szTxt = (const char *)pUserData;
 
 	if (!strcmp(pPart, "elm.text.main.left")) {
 		const char *szFileName = vp_file_get(szTxt);
@@ -124,16 +124,16 @@ static Evas_Object *__vp_subtitle_select_genlist_content_get_cb(const void *pUse
 
 			nCount = g_list_length(pSubtitleSelect->pItemList);
 			for (i = 0; i < nCount ; i++) {
-			char *szName = NULL;
-			szName = (char *)g_list_nth_data(pSubtitleSelect->pItemList, i);
+				char *szName = NULL;
+				szName = (char *)g_list_nth_data(pSubtitleSelect->pItemList, i);
 
-			if (szName == NULL) {
-				continue;
-			}
-			if (strcmp(szName, szTxt) == 0) {
-				break;
-			}
-			nIndex++;
+				if (szName == NULL) {
+					continue;
+				}
+				if (strcmp(szName, szTxt) == 0) {
+					break;
+				}
+				nIndex++;
 			}
 
 			/* get file name list */
@@ -150,7 +150,7 @@ static Evas_Object *__vp_subtitle_select_genlist_content_get_cb(const void *pUse
 	return NULL;
 }
 
-static void __vp_subtitle_select_genlist_item_selected_cb(void *pUserData,Evas_Object *pObject,void *pEventInfo)
+static void __vp_subtitle_select_genlist_item_selected_cb(void *pUserData, Evas_Object *pObject, void *pEventInfo)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -291,8 +291,7 @@ static void _vp_subtitle_select_destroy_handle(SubtitleSelectPopup *pSubtitleSel
 	}
 
 	nCount = g_list_length(pSubtitleSelect->pItemList);
-	for (i = 0; i < nCount ; i++)
-	{
+	for (i = 0; i < nCount ; i++) {
 		char *szName = NULL;
 		szName = (char *)g_list_nth_data(pSubtitleSelect->pItemList, i);
 		VP_FREE(szName);
@@ -338,7 +337,7 @@ static bool _vp_subtitle_select_add_genlist_item(Evas_Object *pObj, void *pUserD
 	}
 
 	pSubtitleSelect->st_SubtitleSelect_Itc = elm_genlist_item_class_new();
-	
+
 	if (pSubtitleSelect->st_SubtitleSelect_Itc != NULL) {
 		pSubtitleSelect->st_SubtitleSelect_Itc->version = ELM_GENLIST_ITEM_CLASS_VERSION;
 		pSubtitleSelect->st_SubtitleSelect_Itc->item_style = "1line";
@@ -392,20 +391,21 @@ subtitle_select_handle vp_subtitle_select_create(Evas_Object *pParent, SubtitleC
 	pSubtitleSelect->pCloseCb = pCloseCb;
 	pSubtitleSelect->pButtonCb = pButtonCb;
 	int nItemCount = 0;
-	if (pFileList)
+	if (pFileList) {
 		nItemCount = g_list_length(pFileList);
-	if (nItemCount >0)
+	}
+	if (nItemCount > 0)
 		pSubtitleSelect->pPopup = vp_two_button_popup_create(pParent, VP_PLAY_STRING_SUBTITLE_SELECT_SUBTITLES,
-					NULL, VP_PLAY_STRING_COM_CANCEL,
-					__vp_subtitle_select_popup_cancel_cb, VP_PLAY_STRING_SETTINGS,
-					 __vp_subtitle_select_popup_settings_cb,
-					(void *)pSubtitleSelect);
+		                          NULL, VP_PLAY_STRING_COM_CANCEL,
+		                          __vp_subtitle_select_popup_cancel_cb, VP_PLAY_STRING_SETTINGS,
+		                          __vp_subtitle_select_popup_settings_cb,
+		                          (void *)pSubtitleSelect);
 	else {
 		pSubtitleSelect->pPopup = vp_two_button_popup_create(pParent, VP_PLAY_STRING_SUBTITLE_SELECT_SUBTITLES,
-					NULL, VP_PLAY_STRING_COM_CANCEL,
-					__vp_subtitle_select_popup_cancel_cb, VP_PLAY_STRING_SETTINGS,
-					 NULL,
-					(void *)pSubtitleSelect);
+		                          NULL, VP_PLAY_STRING_COM_CANCEL,
+		                          __vp_subtitle_select_popup_cancel_cb, VP_PLAY_STRING_SETTINGS,
+		                          NULL,
+		                          (void *)pSubtitleSelect);
 		Elm_Object_Item *it = NULL;
 		it = (Evas_Object *)elm_object_part_content_get(pSubtitleSelect->pPopup, "button2");
 		if (it) {
@@ -435,7 +435,7 @@ subtitle_select_handle vp_subtitle_select_create(Evas_Object *pParent, SubtitleC
 	int nCount = 0;
 
 	if (pFileList) {
-	for (i = 0; i < nItemCount; i++) {
+		for (i = 0; i < nItemCount; i++) {
 			char *szName = NULL;
 			char *szItem = NULL;
 			szName = (char *)g_list_nth_data(pFileList, i);
@@ -466,7 +466,7 @@ subtitle_select_handle vp_subtitle_select_create(Evas_Object *pParent, SubtitleC
 		return FALSE;
 	}
 	if (isSubtitleOff || !bOn) {
-		pSubtitleSelect->nSubtitleIdx = (nCount-1);
+		pSubtitleSelect->nSubtitleIdx = (nCount - 1);
 		elm_radio_value_set(pSubtitleSelect->pRadio, pSubtitleSelect->nSubtitleIdx);
 	}
 	evas_object_smart_callback_add(pSubtitleSelect->pParent, "rotation,changed", __vp_subtitle_select_popup_rotate_cb, pSubtitleSelect);

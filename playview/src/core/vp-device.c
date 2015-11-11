@@ -65,7 +65,7 @@ bool vp_device_set_brightness(int nVal)
 	nRet = device_display_set_brightness(0, nVal);	// 0 is main display, brightness
 	if (nRet != 0) {
 		VideoLogError("device_display_set_brightness set fail : %d",
-			      nRet);
+		              nRet);
 		return FALSE;
 	}
 
@@ -79,7 +79,7 @@ bool vp_device_get_brightness(int *nCurVal)
 	nRet = device_display_get_brightness(0, &nVal);
 	if (nVal < 0 || nRet != DEVICE_ERROR_NONE) {
 		VideoLogError("device_display_get_brightness set fail : %d",
-			      nVal);
+		              nVal);
 		return FALSE;
 	}
 
@@ -96,7 +96,7 @@ bool vp_device_get_max_brightness(int *nMaxVal)
 	nRet = device_display_get_max_brightness(0, &nVal);
 	if (nVal < 0 || nRet != DEVICE_ERROR_NONE) {
 		VideoLogError("device_display_get_max_brightness get fail : %d",
-			      nVal);
+		              nVal);
 		return FALSE;
 	}
 
@@ -118,13 +118,13 @@ bool vp_device_set_screen_off(bool bLock)
 {
 	if (bLock) {
 		if (device_power_request_lock(POWER_LOCK_CPU, 0) !=
-				DEVICE_ERROR_NONE) {
+		        DEVICE_ERROR_NONE) {
 			VideoLogError("lock failed");
 			return FALSE;
 		}
 	} else {
 		if (device_power_release_lock(POWER_LOCK_CPU) !=
-				DEVICE_ERROR_NONE) {
+		        DEVICE_ERROR_NONE) {
 			VideoLogError("unlock failed");
 			return FALSE;
 		}

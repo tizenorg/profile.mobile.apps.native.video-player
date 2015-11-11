@@ -41,7 +41,7 @@ typedef struct _SharePopup {
 } SharePopup;
 
 static void __vp_share_popup_rotate_cb(void *data, Evas_Object *obj,
-				       void *event_info)
+                                       void *event_info)
 {
 	SharePopup *pShare = (SharePopup *) data;
 	if (!pShare) {
@@ -52,7 +52,7 @@ static void __vp_share_popup_rotate_cb(void *data, Evas_Object *obj,
 		return;
 	}
 	vp_popup_set_popup_min_size(pShare->pParent, pShare->pBox,
-				    pShare->nListCount, VIDEO_POPUP_DEFAULT);
+	                            pShare->nListCount, VIDEO_POPUP_DEFAULT);
 
 }
 
@@ -63,7 +63,7 @@ static void _vp_share_destroy_handle(SharePopup *pShare)
 		return;
 	}
 	evas_object_smart_callback_del(pShare->pParent, "rotation,changed",
-				       __vp_share_popup_rotate_cb);
+	                               __vp_share_popup_rotate_cb);
 
 	VP_EVAS_DEL(pShare->pGenList);
 	VP_EVAS_DEL(pShare->pButton);
@@ -78,8 +78,8 @@ static void _vp_share_destroy_handle(SharePopup *pShare)
 
 /* callback functions */
 static char *__vp_share_genlist_text_get_cb(const void *pUserData,
-		Evas_Object *pObj,
-		const char *pPart)
+                                Evas_Object *pObj,
+                                const char *pPart)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -96,8 +96,8 @@ static char *__vp_share_genlist_text_get_cb(const void *pUserData,
 }
 
 static void __vp_share_genlist_item_selected_cb(void *pUserData,
-		Evas_Object *pObject,
-		void *pEventInfo)
+                                Evas_Object *pObject,
+                                void *pEventInfo)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -161,7 +161,7 @@ static void __vp_share_genlist_item_selected_cb(void *pUserData,
 
 
 static void __vp_share_close_btn_cb(void *pUserData, Evas_Object *pObj,
-				    void *pEventInfo)
+                                    void *pEventInfo)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pShareHandle is NULL");
@@ -172,13 +172,13 @@ static void __vp_share_close_btn_cb(void *pUserData, Evas_Object *pObj,
 
 	if (pShare->pCloseCb) {
 		pShare->pCloseCb(VP_SHARE_NONE, FALSE,
-				 (void *) pShare->pUserData);
+		                 (void *) pShare->pUserData);
 	}
 }
 
 static void __vp_share_popup_key_event_cb(void *pUserData,
-		Evas_Object *pObj,
-		void *pEventInfo)
+        Evas_Object *pObj,
+        void *pEventInfo)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -189,13 +189,13 @@ static void __vp_share_popup_key_event_cb(void *pUserData,
 
 	if (pShare->pCloseCb) {
 		pShare->pCloseCb(VP_SHARE_NONE, FALSE,
-				 (void *) pShare->pUserData);
+		                 (void *) pShare->pUserData);
 	}
 }
 
 static void __vp_share_popup_mouse_event_cb(void *pUserData, Evas *pEvas,
-		Evas_Object *pObj,
-		void *pEventInfo)
+                                Evas_Object *pObj,
+                                void *pEventInfo)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -214,7 +214,7 @@ static void __vp_share_popup_mouse_event_cb(void *pUserData, Evas *pEvas,
 
 		if (pShare->pCloseCb) {
 			pShare->pCloseCb(VP_SHARE_NONE, FALSE,
-					 (void *) pShare->pUserData);
+			                 (void *) pShare->pUserData);
 		}
 	}
 }
@@ -222,7 +222,7 @@ static void __vp_share_popup_mouse_event_cb(void *pUserData, Evas *pEvas,
 
 /* internal functions */
 static Evas_Object *_vp_share_create_button(Evas_Object *pParent,
-		void *pUserData)
+        void *pUserData)
 {
 	if (pParent == NULL) {
 		VideoLogError("pParent is NULL");
@@ -233,10 +233,10 @@ static Evas_Object *_vp_share_create_button(Evas_Object *pParent,
 	pObj = elm_button_add(pParent);
 	elm_object_style_set(pObj, "popup_button/default");
 	elm_object_domain_translatable_text_set(pObj, VP_SYS_STR_PREFIX,
-						VP_PLAY_STRING_COM_CLOSE_IDS);
+	                                        VP_PLAY_STRING_COM_CLOSE_IDS);
 	elm_object_part_content_set(pParent, "button1", pObj);
 	evas_object_smart_callback_add(pObj, "clicked",
-				       __vp_share_close_btn_cb, pUserData);
+	                               __vp_share_close_btn_cb, pUserData);
 	evas_object_show(pObj);
 
 	return pObj;
@@ -253,7 +253,7 @@ static Evas_Object *_vp_share_create_genlist(Evas_Object *pParent)
 
 	pObj = elm_genlist_add(pParent);
 	evas_object_size_hint_weight_set(pObj, EVAS_HINT_EXPAND,
-					 EVAS_HINT_EXPAND);
+	                                 EVAS_HINT_EXPAND);
 	evas_object_size_hint_align_set(pObj, EVAS_HINT_FILL, EVAS_HINT_FILL);
 	evas_object_show(pObj);
 	return pObj;
@@ -261,7 +261,7 @@ static Evas_Object *_vp_share_create_genlist(Evas_Object *pParent)
 
 
 static bool _vp_share_add_genlist_item(Evas_Object *pObj,
-				       void *pUserData)
+                                       void *pUserData)
 {
 	if (!pObj || !pUserData) {
 		VideoLogError("pObj is NULL");
@@ -283,34 +283,34 @@ static bool _vp_share_add_genlist_item(Evas_Object *pObj,
 		pShare->nListCount = 0;
 
 		elm_genlist_item_append(pObj, st_Share_Itc,
-				(void *) VP_PLAY_STRING_SHARE_MESSAGE, NULL,
-				ELM_GENLIST_ITEM_NONE,
-				__vp_share_genlist_item_selected_cb,
-				pUserData);
+		                        (void *) VP_PLAY_STRING_SHARE_MESSAGE, NULL,
+		                        ELM_GENLIST_ITEM_NONE,
+		                        __vp_share_genlist_item_selected_cb,
+		                        pUserData);
 		pShare->nListCount++;
 		elm_genlist_item_append(pObj, st_Share_Itc,
-				(void *) VP_PLAY_STRING_SHARE_EMAIL, NULL,
-				ELM_GENLIST_ITEM_NONE,
-				__vp_share_genlist_item_selected_cb,
-				pUserData);
+		                        (void *) VP_PLAY_STRING_SHARE_EMAIL, NULL,
+		                        ELM_GENLIST_ITEM_NONE,
+		                        __vp_share_genlist_item_selected_cb,
+		                        pUserData);
 		pShare->nListCount++;
 		elm_genlist_item_append(pObj, st_Share_Itc,
-				(void *) VP_PLAY_STRING_SHARE_FTM, NULL,
-				ELM_GENLIST_ITEM_NONE,
-				__vp_share_genlist_item_selected_cb,
-				pUserData);
+		                        (void *) VP_PLAY_STRING_SHARE_FTM, NULL,
+		                        ELM_GENLIST_ITEM_NONE,
+		                        __vp_share_genlist_item_selected_cb,
+		                        pUserData);
 		pShare->nListCount++;
 		elm_genlist_item_append(pObj, st_Share_Itc,
-				(void *) VP_PLAY_STRING_SHARE_BLUETOOTH, NULL,
-				ELM_GENLIST_ITEM_NONE,
-				__vp_share_genlist_item_selected_cb,
-				pUserData);
+		                        (void *) VP_PLAY_STRING_SHARE_BLUETOOTH, NULL,
+		                        ELM_GENLIST_ITEM_NONE,
+		                        __vp_share_genlist_item_selected_cb,
+		                        pUserData);
 		pShare->nListCount++;
 		elm_genlist_item_append(pObj, st_Share_Itc,
-				(void *) VP_PLAY_STRING_SHARE_FACEBOOK, NULL,
-				ELM_GENLIST_ITEM_NONE,
-				__vp_share_genlist_item_selected_cb,
-				pUserData);
+		                        (void *) VP_PLAY_STRING_SHARE_FACEBOOK, NULL,
+		                        ELM_GENLIST_ITEM_NONE,
+		                        __vp_share_genlist_item_selected_cb,
+		                        pUserData);
 		elm_genlist_item_class_free(st_Share_Itc);
 	}
 
@@ -319,7 +319,7 @@ static bool _vp_share_add_genlist_item(Evas_Object *pObj,
 
 /* external functions */
 share_handle vp_share_create(Evas_Object *pParent, char *pMediaUrl,
-			     PopupCloseCbFunc pCloseCb)
+                             PopupCloseCbFunc pCloseCb)
 {
 	if (pParent == NULL) {
 		VideoLogError("pParent is NULL");
@@ -346,10 +346,10 @@ share_handle vp_share_create(Evas_Object *pParent, char *pMediaUrl,
 	VP_STRDUP(pShare->pMediUrl, pMediaUrl);
 
 	pShare->pPopup =
-		vp_popup_create(pParent, POPUP_STYLE_MENU_LIST_WITH_CANCEL_BTN,
-				VP_PLAY_STRING_POPUP_SHARE, NULL, 0.0, NULL,
-				__vp_share_popup_key_event_cb,
-				__vp_share_popup_mouse_event_cb, (void *) pShare);
+	    vp_popup_create(pParent, POPUP_STYLE_MENU_LIST_WITH_CANCEL_BTN,
+	                    VP_PLAY_STRING_POPUP_SHARE, NULL, 0.0, NULL,
+	                    __vp_share_popup_key_event_cb,
+	                    __vp_share_popup_mouse_event_cb, (void *) pShare);
 	if (pShare->pPopup == NULL) {
 		VideoLogError("_vp_share_create_popup fail");
 		_vp_share_destroy_handle(pShare);
@@ -357,7 +357,7 @@ share_handle vp_share_create(Evas_Object *pParent, char *pMediaUrl,
 	}
 
 	pShare->pButton =
-		_vp_share_create_button(pShare->pPopup, (void *) pShare);
+	    _vp_share_create_button(pShare->pPopup, (void *) pShare);
 	if (pShare->pButton == NULL) {
 		VideoLogError("_vp_share_create_button fail");
 		_vp_share_destroy_handle(pShare);
@@ -376,12 +376,12 @@ share_handle vp_share_create(Evas_Object *pParent, char *pMediaUrl,
 		return NULL;
 	}
 	evas_object_smart_callback_add(pShare->pParent, "rotation,changed",
-				       __vp_share_popup_rotate_cb, pShare);
+	                               __vp_share_popup_rotate_cb, pShare);
 
 	pShare->pBox = elm_box_add(pShare->pPopup);
 
 	vp_popup_set_popup_min_size(pShare->pParent, pShare->pBox,
-				    pShare->nListCount, VIDEO_POPUP_DEFAULT);
+	                            pShare->nListCount, VIDEO_POPUP_DEFAULT);
 
 	elm_box_pack_end(pShare->pBox, pShare->pGenList);
 

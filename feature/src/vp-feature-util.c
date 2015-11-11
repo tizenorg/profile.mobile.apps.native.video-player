@@ -19,12 +19,12 @@
 
 
 bool vp_feature_util_calc_aspect_size(int nSrcW, int nSrcH, int nDestW,
-				      int nDestH, int nMinW, int nMinH,
-				      int *nResultW, int *nResultH)
+                                      int nDestH, int nMinW, int nMinH,
+                                      int *nResultW, int *nResultH)
 {
 	if (nSrcH == 0 || nSrcW == 0 || nDestW == 0 || nDestW == 0) {
 		vp_dbgE("invalid param : (src %d x %d) , (dest %d x %d)", nSrcW,
-			nSrcH, nDestW, nDestH);
+		        nSrcH, nDestW, nDestH);
 		return FALSE;
 	}
 

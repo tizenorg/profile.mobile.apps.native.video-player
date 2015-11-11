@@ -60,20 +60,20 @@ typedef struct _VolumePopupWidget {
 } VolumePopupWidget;
 
 static void _vp_play_volume_popup_destory_handle(VolumePopupWidget *
-		pVolumeWidget);
+        pVolumeWidget);
 static double _vp_play_volume_popup_get_mouse_pos_ratio(Evas_Object *
-		pObj,
-		bool bLandscape,
-		int nCurY);
+        pObj,
+        bool bLandscape,
+        int nCurY);
 static void _vp_play_volume_popup_set_value(VolumePopupWidget *
-		pVolumeWidget, int nValue);
+        pVolumeWidget, int nValue);
 static void _vp_play_volume_popup_create_timer(VolumePopupWidget *
-		pVolumeWidget);
+        pVolumeWidget);
 
 /* callback functions */
 static void __vp_volume_popup_mouse_down_cb(void *pUserData, Evas *e,
-		Evas_Object *pObj,
-		void *pEvent)
+        Evas_Object *pObj,
+        void *pEvent)
 {
 	if (!pUserData) {
 		VideoLogError("pUserData is NULL");
@@ -86,17 +86,17 @@ static void __vp_volume_popup_mouse_down_cb(void *pUserData, Evas *e,
 	}
 
 	Evas_Event_Mouse_Down *pMouseDownEvent =
-		(Evas_Event_Mouse_Down *) pEvent;
+	    (Evas_Event_Mouse_Down *) pEvent;
 
 	double dRatio =
-		_vp_play_volume_popup_get_mouse_pos_ratio(pVolumeWidget->pLayout,
-				pVolumeWidget->
-				bLandscape,
-				pMouseDownEvent->canvas.
-				y);
+	    _vp_play_volume_popup_get_mouse_pos_ratio(pVolumeWidget->pLayout,
+	            pVolumeWidget->
+	            bLandscape,
+	            pMouseDownEvent->canvas.
+	            y);
 
 	int nCurVal =
-		pVolumeWidget->nMaxVal - (dRatio * pVolumeWidget->nMaxVal);
+	    pVolumeWidget->nMaxVal - (dRatio * pVolumeWidget->nMaxVal);
 
 	_vp_play_volume_popup_set_value(pVolumeWidget, nCurVal);
 
@@ -106,8 +106,8 @@ static void __vp_volume_popup_mouse_down_cb(void *pUserData, Evas *e,
 }
 
 static void __vp_volume_popup_mouse_up_cb(void *pUserData, Evas *e,
-		Evas_Object *pObj,
-		void *pEvent)
+        Evas_Object *pObj,
+        void *pEvent)
 {
 	if (!pUserData) {
 		VideoLogError("pUserData is NULL");
@@ -122,14 +122,14 @@ static void __vp_volume_popup_mouse_up_cb(void *pUserData, Evas *e,
 	}
 
 	double dRatio =
-		_vp_play_volume_popup_get_mouse_pos_ratio(pVolumeWidget->pLayout,
-				pVolumeWidget->
-				bLandscape,
-				pMouseUpEvent->canvas.
-				y);
+	    _vp_play_volume_popup_get_mouse_pos_ratio(pVolumeWidget->pLayout,
+	            pVolumeWidget->
+	            bLandscape,
+	            pMouseUpEvent->canvas.
+	            y);
 
 	int nCurVal =
-		pVolumeWidget->nMaxVal - (dRatio * pVolumeWidget->nMaxVal);
+	    pVolumeWidget->nMaxVal - (dRatio * pVolumeWidget->nMaxVal);
 
 	_vp_play_volume_popup_set_value(pVolumeWidget, nCurVal);
 	_vp_play_volume_popup_create_timer(pVolumeWidget);
@@ -138,8 +138,8 @@ static void __vp_volume_popup_mouse_up_cb(void *pUserData, Evas *e,
 }
 
 static void __vp_volume_popup_mouse_move_cb(void *pUserData, Evas *e,
-		Evas_Object *pObj,
-		void *pEvent)
+        Evas_Object *pObj,
+        void *pEvent)
 {
 	if (!pUserData) {
 		VideoLogError("pUserData is NULL");
@@ -149,22 +149,22 @@ static void __vp_volume_popup_mouse_move_cb(void *pUserData, Evas *e,
 	VolumePopupWidget *pVolumeWidget = (VolumePopupWidget *) pUserData;
 
 	Evas_Event_Mouse_Move *pMouseMoveEvent =
-		(Evas_Event_Mouse_Move *) pEvent;
+	    (Evas_Event_Mouse_Move *) pEvent;
 
 	if (pVolumeWidget->bIsRealize == FALSE
-			|| pVolumeWidget->bMouseDown == FALSE) {
+	        || pVolumeWidget->bMouseDown == FALSE) {
 		return;
 	}
 
 	double dRatio =
-		_vp_play_volume_popup_get_mouse_pos_ratio(pVolumeWidget->pLayout,
-				pVolumeWidget->
-				bLandscape,
-				pMouseMoveEvent->cur.
-				canvas.y);
+	    _vp_play_volume_popup_get_mouse_pos_ratio(pVolumeWidget->pLayout,
+	            pVolumeWidget->
+	            bLandscape,
+	            pMouseMoveEvent->cur.
+	            canvas.y);
 
 	int nCurVal =
-		pVolumeWidget->nMaxVal - (dRatio * pVolumeWidget->nMaxVal);
+	    pVolumeWidget->nMaxVal - (dRatio * pVolumeWidget->nMaxVal);
 
 	if (nCurVal != pVolumeWidget->nCurVal) {
 		_vp_play_volume_popup_set_value(pVolumeWidget, nCurVal);
@@ -184,7 +184,7 @@ static Eina_Bool __vp_volume_popup_hide_timer_cb(void *pUserData)
 	VP_EVAS_TIMER_DEL(pVolumeWidget->pHideTimer);
 
 	if (!vp_play_volume_popup_unrealize
-			((volume_popup_handle) pVolumeWidget)) {
+	        ((volume_popup_handle) pVolumeWidget)) {
 		VideoLogWarning("vp_play_volume_popup_unrealize is fail");
 	}
 
@@ -195,7 +195,7 @@ static Eina_Bool __vp_volume_popup_hide_timer_cb(void *pUserData)
 
 /* internal functions */
 static void _vp_play_volume_popup_destory_handle(VolumePopupWidget *
-		pVolumeWidget)
+        pVolumeWidget)
 {
 	if (pVolumeWidget == NULL) {
 		VideoLogError("pVolumeWidget is NULL");
@@ -210,9 +210,9 @@ static void _vp_play_volume_popup_destory_handle(VolumePopupWidget *
 }
 
 static double _vp_play_volume_popup_get_mouse_pos_ratio(Evas_Object *
-		pObj,
-		bool bLandscape,
-		int nCurY)
+        pObj,
+        bool bLandscape,
+        int nCurY)
 {
 	if (pObj == NULL) {
 		VideoLogError("pObj is NULL");
@@ -246,7 +246,7 @@ static double _vp_play_volume_popup_get_mouse_pos_ratio(Evas_Object *
 
 
 static void _vp_play_volume_popup_set_widget_position(VolumePopupWidget *
-		pVolumeWidget)
+        pVolumeWidget)
 {
 	if (pVolumeWidget == NULL) {
 		VideoLogError("pVolumeWidget is NULL");
@@ -257,18 +257,18 @@ static void _vp_play_volume_popup_set_widget_position(VolumePopupWidget *
 
 	if (bLandscape) {
 		evas_object_move(pVolumeWidget->pLayout,
-				 VP_VOLUME_POPUP_LANDSCAPE_POS_X * VP_SCALE,
-				 VP_VOLUME_POPUP_LANDSCAPE_POS_Y * VP_SCALE);
+		                 VP_VOLUME_POPUP_LANDSCAPE_POS_X * VP_SCALE,
+		                 VP_VOLUME_POPUP_LANDSCAPE_POS_Y * VP_SCALE);
 	} else {
 		evas_object_move(pVolumeWidget->pLayout,
-				 VP_VOLUME_POPUP_PORTRAIT_POS_X * VP_SCALE,
-				 VP_VOLUME_POPUP_PORTRAIT_POS_Y * VP_SCALE);
+		                 VP_VOLUME_POPUP_PORTRAIT_POS_X * VP_SCALE,
+		                 VP_VOLUME_POPUP_PORTRAIT_POS_Y * VP_SCALE);
 	}
 }
 
 
 static void _vp_play_volume_popup_update_value(VolumePopupWidget *
-		pVolumeWidget)
+        pVolumeWidget)
 {
 	if (pVolumeWidget == NULL) {
 		VideoLogError("pVolumeWidget is NULL");
@@ -279,28 +279,28 @@ static void _vp_play_volume_popup_update_value(VolumePopupWidget *
 	char szPlayingTime[VP_VOLUME_POPUP_TEXT_MAX_LEN] = { 0, };
 
 	snprintf(szPlayingTime, VP_VOLUME_POPUP_TEXT_MAX_LEN, "%d",
-		 pVolumeWidget->nCurVal);
+	         pVolumeWidget->nCurVal);
 
 	nVolumeRatio =
-		((double) pVolumeWidget->nCurVal /
-		 (double) pVolumeWidget->nMaxVal);
+	    ((double) pVolumeWidget->nCurVal /
+	     (double) pVolumeWidget->nMaxVal);
 
 	if (!edje_object_part_drag_value_set
-			(_EDJ(pVolumeWidget->pLayout),
-			 VP_PLAY_SWALLOW_VOLUME_POPUP_DRAG_RECT, 0.0, nVolumeRatio)) {
+	        (_EDJ(pVolumeWidget->pLayout),
+	         VP_PLAY_SWALLOW_VOLUME_POPUP_DRAG_RECT, 0.0, nVolumeRatio)) {
 		VideoLogWarning("Drag value set fail : %lf", nVolumeRatio);
 	}
 
 	elm_object_part_text_set(pVolumeWidget->pLayout,
-				 VP_PLAY_SWALLOW_VOLUME_POPUP_VALUE_LABEL,
-				 szPlayingTime);
+	                         VP_PLAY_SWALLOW_VOLUME_POPUP_VALUE_LABEL,
+	                         szPlayingTime);
 
 	if (pVolumeWidget->nCurVal == 0) {
 		edje_object_signal_emit(_EDJ(pVolumeWidget->pLayout), "set,mute",
-					"volume.popup.icon");
+		                        "volume.popup.icon");
 	} else {
 		edje_object_signal_emit(_EDJ(pVolumeWidget->pLayout),
-					"set,volume", "volume.popup.icon");
+		                        "set,volume", "volume.popup.icon");
 	}
 }
 
@@ -325,7 +325,7 @@ static Eina_Bool __vp_volume_popup_device_timer_cb(void *pUserData)
 }
 
 static void _vp_play_volume_popup_set_value(VolumePopupWidget *
-		pVolumeWidget, int nValue)
+        pVolumeWidget, int nValue)
 {
 	if (pVolumeWidget == NULL) {
 		VideoLogError("pParent is NULL");
@@ -338,14 +338,14 @@ static void _vp_play_volume_popup_set_value(VolumePopupWidget *
 
 	if (pVolumeWidget->pDeviceTimer == NULL) {
 		pVolumeWidget->pDeviceTimer = ecore_timer_add(0.1,
-					      __vp_volume_popup_device_timer_cb,
-					      (void *)
-					      pVolumeWidget);
+		                              __vp_volume_popup_device_timer_cb,
+		                              (void *)
+		                              pVolumeWidget);
 	}
 }
 
 static void _vp_play_volume_popup_create_timer(VolumePopupWidget *
-		pVolumeWidget)
+        pVolumeWidget)
 {
 	if (pVolumeWidget == NULL) {
 		VideoLogError("pParent is NULL");
@@ -355,13 +355,13 @@ static void _vp_play_volume_popup_create_timer(VolumePopupWidget *
 	VP_EVAS_TIMER_DEL(pVolumeWidget->pHideTimer);
 
 	pVolumeWidget->pHideTimer =
-		ecore_timer_add(VP_VOLUME_POPUP_HIDE_LAYOUT_TIMER_INTERVAL,
-				__vp_volume_popup_hide_timer_cb,
-				(void *) pVolumeWidget);
+	    ecore_timer_add(VP_VOLUME_POPUP_HIDE_LAYOUT_TIMER_INTERVAL,
+	                    __vp_volume_popup_hide_timer_cb,
+	                    (void *) pVolumeWidget);
 }
 
 static Evas_Object *_vp_play_volume_popup_create_layout(Evas_Object *
-		pParent)
+        pParent)
 {
 	if (!pParent) {
 		VideoLogError("Parent is NULL");
@@ -378,8 +378,8 @@ static Evas_Object *_vp_play_volume_popup_create_layout(Evas_Object *
 	}
 
 	bRet =
-		elm_layout_file_set(pObj, VP_PLAY_VOLUME_POPUP_EDJ_PATH,
-				    VP_PLAY_EDJ_GROUP_VOLUME_POPUP);
+	    elm_layout_file_set(pObj, VP_PLAY_VOLUME_POPUP_EDJ_PATH,
+	                        VP_PLAY_EDJ_GROUP_VOLUME_POPUP);
 	if (bRet != EINA_TRUE) {
 		VideoLogError("elm_layout_file_set fail");
 		return NULL;
@@ -392,7 +392,7 @@ static Evas_Object *_vp_play_volume_popup_create_layout(Evas_Object *
 
 
 static bool _vp_play_volume_popup_init_layout(VolumePopupWidget *
-		pVolumeWidget)
+        pVolumeWidget)
 {
 	if (pVolumeWidget == NULL) {
 		VideoLogError("pVolumeWidget is NULL");
@@ -407,19 +407,19 @@ static bool _vp_play_volume_popup_init_layout(VolumePopupWidget *
 		return FALSE;
 	}
 	evas_object_event_callback_add(pVolumeWidget->pLayout,
-				       EVAS_CALLBACK_MOUSE_DOWN,
-				       __vp_volume_popup_mouse_down_cb,
-				       (void *) pVolumeWidget);
+	                               EVAS_CALLBACK_MOUSE_DOWN,
+	                               __vp_volume_popup_mouse_down_cb,
+	                               (void *) pVolumeWidget);
 
 	evas_object_event_callback_add(pVolumeWidget->pLayout,
-				       EVAS_CALLBACK_MOUSE_UP,
-				       __vp_volume_popup_mouse_up_cb,
-				       (void *) pVolumeWidget);
+	                               EVAS_CALLBACK_MOUSE_UP,
+	                               __vp_volume_popup_mouse_up_cb,
+	                               (void *) pVolumeWidget);
 
 	evas_object_event_callback_add(pVolumeWidget->pLayout,
-				       EVAS_CALLBACK_MOUSE_MOVE,
-				       __vp_volume_popup_mouse_move_cb,
-				       (void *) pVolumeWidget);
+	                               EVAS_CALLBACK_MOUSE_MOVE,
+	                               __vp_volume_popup_mouse_move_cb,
+	                               (void *) pVolumeWidget);
 
 	return TRUE;
 }
@@ -477,7 +477,7 @@ void vp_play_volume_popup_destroy(volume_popup_handle pVolumeHandle)
 	}
 
 	VolumePopupWidget *pVolumeWidget =
-		(VolumePopupWidget *) pVolumeHandle;
+	    (VolumePopupWidget *) pVolumeHandle;
 
 	_vp_play_volume_popup_destory_handle(pVolumeWidget);
 }
@@ -490,14 +490,14 @@ bool vp_play_volume_popup_realize(volume_popup_handle pVolumeHandle)
 	}
 
 	VolumePopupWidget *pVolumeWidget =
-		(VolumePopupWidget *) pVolumeHandle;
+	    (VolumePopupWidget *) pVolumeHandle;
 
 	pVolumeWidget->bIsRealize = TRUE;
 
 	_vp_play_volume_popup_set_widget_position(pVolumeWidget);
 
 	_vp_play_volume_popup_set_value(pVolumeWidget,
-					pVolumeWidget->nCurVal);
+	                                pVolumeWidget->nCurVal);
 
 	evas_object_show(pVolumeWidget->pLayout);
 	_vp_play_volume_popup_create_timer(pVolumeWidget);
@@ -513,7 +513,7 @@ bool vp_play_volume_popup_unrealize(volume_popup_handle pVolumeHandle)
 	}
 
 	VolumePopupWidget *pVolumeWidget =
-		(VolumePopupWidget *) pVolumeHandle;
+	    (VolumePopupWidget *) pVolumeHandle;
 
 	pVolumeWidget->bIsRealize = FALSE;
 
@@ -523,8 +523,8 @@ bool vp_play_volume_popup_unrealize(volume_popup_handle pVolumeHandle)
 }
 
 bool vp_play_volume_popup_set_landscape_mode(volume_popup_handle
-		pVolumeHandle,
-		bool bLandscape)
+        pVolumeHandle,
+        bool bLandscape)
 {
 	if (pVolumeHandle == NULL) {
 		VideoLogError("pParent is NULL");
@@ -532,7 +532,7 @@ bool vp_play_volume_popup_set_landscape_mode(volume_popup_handle
 	}
 
 	VolumePopupWidget *pVolumeWidget =
-		(VolumePopupWidget *) pVolumeHandle;
+	    (VolumePopupWidget *) pVolumeHandle;
 
 	pVolumeWidget->bLandscape = bLandscape;
 
@@ -543,7 +543,7 @@ bool vp_play_volume_popup_set_landscape_mode(volume_popup_handle
 }
 
 bool vp_play_volume_popup_is_realize(volume_popup_handle pVolumeHandle,
-				     bool *bIsRealize)
+                                     bool *bIsRealize)
 {
 	if (pVolumeHandle == NULL) {
 		VideoLogError("pParent is NULL");
@@ -551,7 +551,7 @@ bool vp_play_volume_popup_is_realize(volume_popup_handle pVolumeHandle,
 	}
 
 	VolumePopupWidget *pVolumeWidget =
-		(VolumePopupWidget *) pVolumeHandle;
+	    (VolumePopupWidget *) pVolumeHandle;
 
 	*bIsRealize = pVolumeWidget->bIsRealize;
 
@@ -560,7 +560,7 @@ bool vp_play_volume_popup_is_realize(volume_popup_handle pVolumeHandle,
 
 
 bool vp_play_volume_popup_set_value(volume_popup_handle pVolumeHandle,
-				    int nCurVal)
+                                    int nCurVal)
 {
 	if (pVolumeHandle == NULL) {
 		VideoLogError("pParent is NULL");
@@ -568,7 +568,7 @@ bool vp_play_volume_popup_set_value(volume_popup_handle pVolumeHandle,
 	}
 
 	VolumePopupWidget *pVolumeWidget =
-		(VolumePopupWidget *) pVolumeHandle;
+	    (VolumePopupWidget *) pVolumeHandle;
 
 	_vp_play_volume_popup_create_timer(pVolumeWidget);
 
@@ -585,7 +585,7 @@ bool vp_play_volume_popup_set_value(volume_popup_handle pVolumeHandle,
 	}
 
 	_vp_play_volume_popup_set_value(pVolumeWidget,
-					pVolumeWidget->nCurVal);
+	                                pVolumeWidget->nCurVal);
 
 	return TRUE;
 }
@@ -621,7 +621,7 @@ bool vp_play_volume_popup_get_max_value(int *nMaxVal)
 
 
 bool vp_play_volume_popup_is_mute(volume_popup_handle pVolumeHandle,
-				  bool *bIsMute)
+                                  bool *bIsMute)
 {
 	if (pVolumeHandle == NULL) {
 		VideoLogError("pParent is NULL");
@@ -629,7 +629,7 @@ bool vp_play_volume_popup_is_mute(volume_popup_handle pVolumeHandle,
 	}
 
 	VolumePopupWidget *pVolumeWidget =
-		(VolumePopupWidget *) pVolumeHandle;
+	    (VolumePopupWidget *) pVolumeHandle;
 
 	if (pVolumeWidget->nCurVal == 0) {
 		*bIsMute = TRUE;

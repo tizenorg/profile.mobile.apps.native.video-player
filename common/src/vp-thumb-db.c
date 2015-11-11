@@ -175,7 +175,7 @@ void vp_thumb_db_destroy(vp_thumb_db_h hThumbDB)
 }
 
 bool vp_thumb_db_set_media_id(vp_thumb_db_h hThumbDB,
-			      const char *szMediaID)
+                              const char *szMediaID)
 {
 	if (hThumbDB == NULL) {
 		vp_dbgE("hThumbDB is NULL");
@@ -197,7 +197,7 @@ bool vp_thumb_db_set_media_id(vp_thumb_db_h hThumbDB,
 }
 
 bool vp_thumb_db_set_media_url(vp_thumb_db_h hThumbDB,
-			       const char *szMediaURL)
+                               const char *szMediaURL)
 {
 	if (hThumbDB == NULL) {
 		vp_dbgE("hThumbDB is NULL");
@@ -217,7 +217,7 @@ bool vp_thumb_db_set_media_url(vp_thumb_db_h hThumbDB,
 	VP_STRDUP(pThumbDB->szMediaURL, szMediaURL);
 
 	if (!vp_media_content_util_get_video_id
-			(szMediaURL, &(pThumbDB->szMediaID))) {
+	        (szMediaURL, &(pThumbDB->szMediaID))) {
 		vp_dbgE("vp_media_content_util_get_video_id is fail");
 		return FALSE;
 	}
@@ -241,7 +241,7 @@ bool vp_thumb_db_get_items(vp_thumb_db_h hThumbDB, GList **pThumbList)
 	}
 
 	char *szSql =
-		sqlite3_mprintf(THUMB_DB_SELECT_QUERY, pThumbDB->szMediaID);
+	    sqlite3_mprintf(THUMB_DB_SELECT_QUERY, pThumbDB->szMediaID);
 	sqlite3_stmt *stmt = NULL;
 
 	if (!vp_db_util_query_prepare(szSql, &stmt)) {
@@ -269,7 +269,7 @@ bool vp_thumb_db_get_items(vp_thumb_db_h hThumbDB, GList **pThumbList)
 
 		pItem->nIdx = (int) sqlite3_column_int(stmt, 1);
 		VP_STRDUP(pItem->szThumbPath,
-			  (char *) sqlite3_column_text(stmt, 2));
+		          (char *) sqlite3_column_text(stmt, 2));
 		pItem->nFileSize = (int) sqlite3_column_int(stmt, 3);
 
 		*pThumbList = g_list_append(*pThumbList, pItem);
@@ -291,7 +291,7 @@ bool vp_thumb_db_get_items(vp_thumb_db_h hThumbDB, GList **pThumbList)
 }
 
 bool vp_thumb_db_get_all_items_media_id(vp_thumb_db_h hThumbDB,
-					GList **pThumbList)
+                                        GList **pThumbList)
 {
 	if (hThumbDB == NULL) {
 		vp_dbgE("hThumbDB is NULL");
@@ -335,7 +335,7 @@ bool vp_thumb_db_get_all_items_media_id(vp_thumb_db_h hThumbDB,
 
 
 bool vp_thumb_db_insert(vp_thumb_db_h hThumbDB, const char *szThumbPath,
-			int nIdx)
+                        int nIdx)
 {
 	if (hThumbDB == NULL) {
 		vp_dbgE("hThumbDB is NULL");
@@ -357,8 +357,8 @@ bool vp_thumb_db_insert(vp_thumb_db_h hThumbDB, const char *szThumbPath,
 	long long nSize = vp_file_size(szThumbPath);
 
 	char *szSql =
-		sqlite3_mprintf(THUMB_DB_INSERT_QUERY, nIdx, szThumbPath,
-				(int) nSize, pThumbDB->szMediaID);
+	    sqlite3_mprintf(THUMB_DB_INSERT_QUERY, nIdx, szThumbPath,
+	                    (int) nSize, pThumbDB->szMediaID);
 	vp_sdbg("%s", szSql);
 
 	sqlite3_stmt *stmt = NULL;
@@ -406,7 +406,7 @@ bool vp_thumb_db_delete(vp_thumb_db_h hThumbDB)
 	_vp_thumb_db_delete_items(pThumbDB->szMediaID);
 
 	char *szSql =
-		sqlite3_mprintf(THUMB_DB_DELETE_QUERY, pThumbDB->szMediaID);
+	    sqlite3_mprintf(THUMB_DB_DELETE_QUERY, pThumbDB->szMediaID);
 	vp_sdbg("%s", szSql);
 
 	sqlite3_stmt *stmt = NULL;

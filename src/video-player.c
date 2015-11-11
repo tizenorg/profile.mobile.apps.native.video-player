@@ -66,12 +66,12 @@ static void appCreateInternal()
 
 #ifdef _MULTI_WINDOW
 	elm_win_wm_desktop_layout_support_set(
-		(Evas_Object *)mp_mgr_get_main_window(), EINA_TRUE);
+	    (Evas_Object *)mp_mgr_get_main_window(), EINA_TRUE);
 
 	evas_object_data_set((Evas_Object *)mp_mgr_get_main_window(),
-		"id_startup_by", (void *)-1);
+	                     "id_startup_by", (void *) - 1);
 	evas_object_data_set((Evas_Object *)mp_mgr_get_main_window(),
-		"id_layout_pos", (void *)-1);
+	                     "id_layout_pos", (void *) - 1);
 #endif
 
 	evas_object_show((Evas_Object *)mp_mgr_get_main_window());
@@ -108,9 +108,9 @@ static void appControl(app_control_h pAppSvcHandle, void *pUserData)
 		return;
 	}
 
-/*
-* for split window
-*/
+	/*
+	* for split window
+	*/
 #ifdef _MULTI_WINDOW
 	if (!pAppSvcHandle) {
 		VideoLogInfo("[ERR] No exist pAppSveHandle.");
@@ -124,44 +124,44 @@ static void appControl(app_control_h pAppSvcHandle, void *pUserData)
 	int id = -1;
 
 	int id_startup_by = (int)evas_object_data_get(
-				(Evas_Object *)mp_mgr_get_main_window(),
-				"id_startup_by");
+	                        (Evas_Object *)mp_mgr_get_main_window(),
+	                        "id_startup_by");
 	int id_layout_pos = (int)evas_object_data_get(
-				(Evas_Object *)mp_mgr_get_main_window(),
-				"id_layout_pos");
+	                        (Evas_Object *)mp_mgr_get_main_window(),
+	                        "id_layout_pos");
 
 	if (app_control_get_extra_data(pAppSvcHandle, "window_startup_type",
-		&val_startup) != APP_CONTROL_ERROR_NONE) {
+	                               &val_startup) != APP_CONTROL_ERROR_NONE) {
 		val_startup = strdup("0");
 	}
 
 	if (app_control_get_extra_data(pAppSvcHandle, "window_layout_id",
-		&val_layout) != APP_CONTROL_ERROR_NONE) {
+	                               &val_layout) != APP_CONTROL_ERROR_NONE) {
 		val_layout = strdup("-1");
 	}
 
 	if (id_startup_by == -1) {
 		id = elm_win_aux_hint_add(
-			(Evas_Object *)mp_mgr_get_main_window(),
-			"wm.policy.win.startup.by", val_startup);
+		         (Evas_Object *)mp_mgr_get_main_window(),
+		         "wm.policy.win.startup.by", val_startup);
 		evas_object_data_set((Evas_Object *)mp_mgr_get_main_window(),
-			"id_startup_by", (void *)id);
+		                     "id_startup_by", (void *)id);
 	} else {
 		elm_win_aux_hint_val_set(
-			(Evas_Object *)mp_mgr_get_main_window(), id_startup_by,
-			val_startup);
+		    (Evas_Object *)mp_mgr_get_main_window(), id_startup_by,
+		    val_startup);
 	}
 
 	if (id_layout_pos == -1) {
 		id = elm_win_aux_hint_add(
-			(Evas_Object *)mp_mgr_get_main_window(),
-			"wm.policy.win.zone.desk.layout.pos", val_layout);
+		         (Evas_Object *)mp_mgr_get_main_window(),
+		         "wm.policy.win.zone.desk.layout.pos", val_layout);
 		evas_object_data_set((Evas_Object *)mp_mgr_get_main_window(),
-			"id_layout_pos", (void *)id);
+		                     "id_layout_pos", (void *)id);
 	} else {
 		elm_win_aux_hint_val_set(
-			(Evas_Object *)mp_mgr_get_main_window(), id_layout_pos,
-			val_layout);
+		    (Evas_Object *)mp_mgr_get_main_window(), id_layout_pos,
+		    val_layout);
 	}
 
 	VideoLogInfo("val_startup : [%s]", val_startup);
@@ -177,11 +177,11 @@ static void appControl(app_control_h pAppSvcHandle, void *pUserData)
 	char *operation = NULL;
 	int nRet = service_get_operation(pAppSvcHandle, &operation);
 	if (nRet == APP_CONTROL_ERROR_NONE &&
-		strcmp(operation,
-			"http://tizen.org/appcontrol/operation/main") == 0) {
+	        strcmp(operation,
+	               "http://tizen.org/appcontrol/operation/main") == 0) {
 		if (is_first_run == 1) {
 			elm_win_activate(
-				(Evas_Object *)mp_mgr_get_main_window());
+			    (Evas_Object *)mp_mgr_get_main_window());
 
 			VideoLogInfo("is_first_run is true");
 			/* mp_library_mgr_resume_wall_render(); */
@@ -244,12 +244,12 @@ static void appUpdateLanguage(app_event_info_h pEventInfo, void *pUserData)
 
 	char *locale = NULL;
 	int retcode = system_settings_get_value_string(
-			SYSTEM_SETTINGS_KEY_LOCALE_LANGUAGE, &locale);
+	                  SYSTEM_SETTINGS_KEY_LOCALE_LANGUAGE, &locale);
 
 	if (retcode != SYSTEM_SETTINGS_ERROR_NONE) {
 		VideoLogInfo(
-			"[ERR] failed to get updated language[retcode = %d]",
-			retcode);
+		    "[ERR] failed to get updated language[retcode = %d]",
+		    retcode);
 	} else {
 		if (locale) {
 			elm_language_set(locale);
@@ -266,17 +266,17 @@ EXPORT_API int main(int argc, char *argv[])
 
 	VideoLogInfo("======================================================");
 	VideoLogInfo(" Measuring exec() launching  time - %ld:%ldus",
-		startTimeVal.tv_sec, startTimeVal.tv_usec);
+	             startTimeVal.tv_sec, startTimeVal.tv_usec);
 	VideoLogInfo("======================================================");
 
 	ui_app_lifecycle_callback_s st_appEventService;
 	app_event_handler_h hLanguageChangedHandle = NULL;
 
 	nRet = ui_app_add_event_handler(&hLanguageChangedHandle,
-			APP_EVENT_LANGUAGE_CHANGED, appUpdateLanguage, NULL);
+	                                APP_EVENT_LANGUAGE_CHANGED, appUpdateLanguage, NULL);
 	if (nRet != APP_ERROR_NONE) {
 		VideoLogError("Fail to add handler for LANGUAGE_CHANGED [%d]",
-			nRet);
+		              nRet);
 		return -1;
 	}
 
@@ -285,13 +285,13 @@ EXPORT_API int main(int argc, char *argv[])
 	st_appEventService.pause = appPause;
 	st_appEventService.resume = appResume;
 	st_appEventService.app_control = appControl;
-/*
-	st_appEventService.low_memory = appBattery;
-	st_appEventService.low_battery = NULL;
-	st_appEventService.device_orientation = NULL; //appRotate;
-	st_appEventService.language_changed = appUpdateLanguage;
-	st_appEventService.region_format_changed = NULL;
-*/
+	/*
+		st_appEventService.low_memory = appBattery;
+		st_appEventService.low_battery = NULL;
+		st_appEventService.device_orientation = NULL; //appRotate;
+		st_appEventService.language_changed = appUpdateLanguage;
+		st_appEventService.region_format_changed = NULL;
+	*/
 	nRet = ui_app_main(argc, argv, &st_appEventService, NULL);
 	if (nRet != APP_ERROR_NONE) {
 		VideoLogInfo("[ERR] app_efl_main().");

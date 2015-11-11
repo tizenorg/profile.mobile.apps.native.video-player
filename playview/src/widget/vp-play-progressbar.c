@@ -52,14 +52,14 @@ typedef struct _ProgressWidget {
 
 
 static void _vp_play_progressbar_destory_handle(ProgressWidget *
-		pProgressWidget);
+        pProgressWidget);
 
 
 
 /* callback functions */
 static void __vp_play_progressbar_key_focus_cb(void *pUserData,
-		Evas_Object *pObj,
-		void *pEventInfo)
+        Evas_Object *pObj,
+        void *pEventInfo)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -74,14 +74,14 @@ static void __vp_play_progressbar_key_focus_cb(void *pUserData,
 
 
 	elm_object_signal_emit(pProgressWidget->pLayout,
-			       VP_NORMAL_SIGNAL_PROGRESS_PRESS, "*");
+	                       VP_NORMAL_SIGNAL_PROGRESS_PRESS, "*");
 
 	VideoLogInfo("progress focus in");
 }
 
 static void __vp_play_progressbar_key_unfocus_cb(void *pUserData,
-		Evas_Object *pObj,
-		void *pEventInfo)
+        Evas_Object *pObj,
+        void *pEventInfo)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pUserData is NULL");
@@ -95,7 +95,7 @@ static void __vp_play_progressbar_key_unfocus_cb(void *pUserData,
 	}
 
 	elm_object_signal_emit(pProgressWidget->pLayout,
-			       VP_NORMAL_SIGNAL_PROGRESS_UNPRESS, "*");
+	                       VP_NORMAL_SIGNAL_PROGRESS_UNPRESS, "*");
 
 	VideoLogInfo("progress focus out");
 }
@@ -103,7 +103,7 @@ static void __vp_play_progressbar_key_unfocus_cb(void *pUserData,
 /* internal functions */
 
 static void _vp_play_progressbar_value_update(ProgressWidget *
-		pProgressWidget)
+        pProgressWidget)
 {
 	if (pProgressWidget == NULL) {
 		VideoLogError("pProgressWidget is NULL");
@@ -120,31 +120,31 @@ static void _vp_play_progressbar_value_update(ProgressWidget *
 	char szPlayingTime[PROGRESSBAR_TIME_LENGTH] = { 0, };
 
 	snprintf(szPlayingTime, PROGRESSBAR_TIME_LENGTH,
-		 "%" PROGRESSBAR_TIME_FORMAT,
-		 PROGRESSBAR_TIME_ARGS(pProgressWidget->nCurrentPos / 1000));
+	         "%" PROGRESSBAR_TIME_FORMAT,
+	         PROGRESSBAR_TIME_ARGS(pProgressWidget->nCurrentPos / 1000));
 
 	dPlayedRatio =
-		((double) pProgressWidget->nCurrentPos /
-		 (double) pProgressWidget->nDuration);
+	    ((double) pProgressWidget->nCurrentPos /
+	     (double) pProgressWidget->nDuration);
 	dBufferingRatio =
-		((double) pProgressWidget->nBufferingPos / (double) 100);
+	    ((double) pProgressWidget->nBufferingPos / (double) 100);
 
 	edje_object_part_drag_value_set(_EDJ(pProgressWidget->pLayout),
-					VP_PLAY_SWALLOW_PROGRESS_DRAG_RECT,
-					dPlayedRatio, 0.0);
+	                                VP_PLAY_SWALLOW_PROGRESS_DRAG_RECT,
+	                                dPlayedRatio, 0.0);
 	edje_object_part_drag_value_set(_EDJ(pProgressWidget->pLayout),
-					"pv.progress.buffering",
-					dBufferingRatio, 0.0);
+	                                "pv.progress.buffering",
+	                                dBufferingRatio, 0.0);
 
 	//elm_object_part_text_set(pProgressWidget->pStartLabel, "elm.text", szPlayingTime);
 	elm_object_part_text_set(pProgressWidget->pLayout,
-				 VP_PLAY_SWALLOW_PROGRESS_PLAYING_LABEL,
-				 szPlayingTime);
+	                         VP_PLAY_SWALLOW_PROGRESS_PLAYING_LABEL,
+	                         szPlayingTime);
 
 }
 
 static void _vp_play_progressbar_destory_handle(ProgressWidget *
-		pProgressWidget)
+        pProgressWidget)
 {
 	if (pProgressWidget == NULL) {
 		VideoLogError("pProgressWidget is NULL");
@@ -154,11 +154,11 @@ static void _vp_play_progressbar_destory_handle(ProgressWidget *
 	vp_play_progressbar_unrealize((progressbar_handle) pProgressWidget);
 	if (pProgressWidget->pFocusPoint) {
 		evas_object_smart_callback_del(pProgressWidget->pFocusPoint,
-					       "focused",
-					       __vp_play_progressbar_key_focus_cb);
+		                               "focused",
+		                               __vp_play_progressbar_key_focus_cb);
 		evas_object_smart_callback_del(pProgressWidget->pFocusPoint,
-					       "unfocused",
-					       __vp_play_progressbar_key_unfocus_cb);
+		                               "unfocused",
+		                               __vp_play_progressbar_key_unfocus_cb);
 		VP_EVAS_DEL(pProgressWidget->pFocusPoint);
 	}
 
@@ -171,9 +171,9 @@ static void _vp_play_progressbar_destory_handle(ProgressWidget *
 }
 
 static Evas_Object *_vp_play_progressbar_create_layout(Evas_Object *
-		pParent,
-		video_progressbar_type_t
-		nType)
+        pParent,
+        video_progressbar_type_t
+        nType)
 {
 	if (!pParent) {
 		VideoLogError("Parent is NULL");
@@ -191,8 +191,8 @@ static Evas_Object *_vp_play_progressbar_create_layout(Evas_Object *
 
 	if (nType == VIDEO_PROGRESSBAR_TYPE_NORMAL) {
 		bRet =
-			elm_layout_file_set(pObj, VP_PLAY_PROGRESSBAR_EDJ_PATH,
-					    VP_PLAY_EDJ_GROUP_PROGRESSBAR);
+		    elm_layout_file_set(pObj, VP_PLAY_PROGRESSBAR_EDJ_PATH,
+		                        VP_PLAY_EDJ_GROUP_PROGRESSBAR);
 		if (bRet != EINA_TRUE) {
 			VideoLogError("elm_layout_file_set fail");
 			return NULL;
@@ -207,8 +207,8 @@ static Evas_Object *_vp_play_progressbar_create_layout(Evas_Object *
 }
 
 static void _vp_play_progressbar_layout_del_cb(void *pUserData, Evas *e,
-		Evas_Object *pObject,
-		void *pEventInfo)
+        Evas_Object *pObject,
+        void *pEventInfo)
 {
 	if (pUserData == NULL) {
 		VideoLogError("pProgressWidget is NULL");
@@ -223,7 +223,7 @@ static void _vp_play_progressbar_layout_del_cb(void *pUserData, Evas *e,
 }
 
 static bool _vp_play_progressbar_init_layout(ProgressWidget *
-		pProgressWidget)
+        pProgressWidget)
 {
 	if (pProgressWidget == NULL) {
 		VideoLogError("pProgressWidget is NULL");
@@ -233,54 +233,54 @@ static bool _vp_play_progressbar_init_layout(ProgressWidget *
 	Evas_Object *pParent = pProgressWidget->pParent;
 
 	pProgressWidget->pLayout =
-		_vp_play_progressbar_create_layout(pParent,
-				pProgressWidget->nType);
+	    _vp_play_progressbar_create_layout(pParent,
+	                                       pProgressWidget->nType);
 	if (pProgressWidget->pLayout == NULL) {
 		VideoLogError("_vp_play_progressbar_create_layout is fail");
 		return FALSE;
 	}
 
 	evas_object_event_callback_add(pProgressWidget->pLayout,
-				       EVAS_CALLBACK_DEL,
-				       _vp_play_progressbar_layout_del_cb,
-				       (void *) pProgressWidget);
+	                               EVAS_CALLBACK_DEL,
+	                               _vp_play_progressbar_layout_del_cb,
+	                               (void *) pProgressWidget);
 
 
 	pProgressWidget->pFocusPoint =
-		vp_button_create(pProgressWidget->pLayout, "focus", NULL, NULL,
-				 NULL, NULL, (void *) pProgressWidget);
+	    vp_button_create(pProgressWidget->pLayout, "focus", NULL, NULL,
+	                     NULL, NULL, (void *) pProgressWidget);
 	if (!pProgressWidget->pFocusPoint) {
 		VideoLogError("elm_button_add is fail");
 		return FALSE;
 	}
 
 	elm_object_focus_next_object_set(pProgressWidget->pFocusPoint,
-					 pProgressWidget->pFocusPoint,
-					 ELM_FOCUS_RIGHT);
+	                                 pProgressWidget->pFocusPoint,
+	                                 ELM_FOCUS_RIGHT);
 	elm_object_focus_next_object_set(pProgressWidget->pFocusPoint,
-					 pProgressWidget->pFocusPoint,
-					 ELM_FOCUS_LEFT);
+	                                 pProgressWidget->pFocusPoint,
+	                                 ELM_FOCUS_LEFT);
 
 	evas_object_smart_callback_add(pProgressWidget->pFocusPoint,
-				       "focused",
-				       __vp_play_progressbar_key_focus_cb,
-				       pProgressWidget);
+	                               "focused",
+	                               __vp_play_progressbar_key_focus_cb,
+	                               pProgressWidget);
 	evas_object_smart_callback_add(pProgressWidget->pFocusPoint,
-				       "unfocused",
-				       __vp_play_progressbar_key_unfocus_cb,
-				       pProgressWidget);
+	                               "unfocused",
+	                               __vp_play_progressbar_key_unfocus_cb,
+	                               pProgressWidget);
 
 	elm_object_part_content_set(pProgressWidget->pLayout,
-				    "pv.progress.point.focus",
-				    pProgressWidget->pFocusPoint);
+	                            "pv.progress.point.focus",
+	                            pProgressWidget->pFocusPoint);
 
 	return TRUE;
 }
 
 
 progressbar_handle vp_play_progressbar_create(Evas_Object *pParent,
-		video_progressbar_type_t
-		nType)
+        video_progressbar_type_t
+        nType)
 {
 	if (pParent == NULL) {
 		VideoLogError("pParent is NULL");
@@ -352,7 +352,7 @@ bool vp_play_progressbar_unrealize(progressbar_handle pWidgetHandle)
 }
 
 Evas_Object *vp_play_progressbar_get_object(progressbar_handle
-		pWidgetHandle)
+        pWidgetHandle)
 {
 	if (pWidgetHandle == NULL) {
 		VideoLogError("pWidgetHandle is NULL");
@@ -364,7 +364,7 @@ Evas_Object *vp_play_progressbar_get_object(progressbar_handle
 }
 
 Evas_Object *vp_play_progressbar_get_focus_object(progressbar_handle
-		pWidgetHandle)
+        pWidgetHandle)
 {
 	if (pWidgetHandle == NULL) {
 		VideoLogError("pWidgetHandle is NULL");
@@ -376,7 +376,7 @@ Evas_Object *vp_play_progressbar_get_focus_object(progressbar_handle
 }
 
 bool vp_play_progressbar_set_duration(progressbar_handle pWidgetHandle,
-				      int nDuration)
+                                      int nDuration)
 {
 	if (pWidgetHandle == NULL) {
 		VideoLogError("pWidgetHandle is NULL");
@@ -394,19 +394,19 @@ bool vp_play_progressbar_set_duration(progressbar_handle pWidgetHandle,
 	pProgressWidget->nDuration = nDuration;
 
 	snprintf(szDurationTime, PROGRESSBAR_TIME_LENGTH,
-		 "%" PROGRESSBAR_TIME_FORMAT,
-		 PROGRESSBAR_TIME_ARGS(pProgressWidget->nDuration / 1000));
+	         "%" PROGRESSBAR_TIME_FORMAT,
+	         PROGRESSBAR_TIME_ARGS(pProgressWidget->nDuration / 1000));
 
 	//elm_object_part_text_set(pProgressWidget->pTotalLabel, "elm.text", szDurationTime);
 	elm_object_part_text_set(pProgressWidget->pLayout,
-				 VP_PLAY_SWALLOW_PROGRESS_DURATION_LABEL,
-				 szDurationTime);
+	                         VP_PLAY_SWALLOW_PROGRESS_DURATION_LABEL,
+	                         szDurationTime);
 
 	return TRUE;
 }
 
 bool vp_play_progressbar_set_position(progressbar_handle pWidgetHandle,
-				      int nPosition)
+                                      int nPosition)
 {
 	if (pWidgetHandle == NULL) {
 		VideoLogError("pWidgetHandle is NULL");
@@ -423,8 +423,8 @@ bool vp_play_progressbar_set_position(progressbar_handle pWidgetHandle,
 }
 
 bool vp_play_progressbar_set_buffering_position(progressbar_handle
-		pWidgetHandle,
-		int nBufferinPosition)
+        pWidgetHandle,
+        int nBufferinPosition)
 {
 	if (pWidgetHandle == NULL) {
 		VideoLogError("pWidgetHandle is NULL");
@@ -441,8 +441,8 @@ bool vp_play_progressbar_set_buffering_position(progressbar_handle
 }
 
 bool vp_play_progressbar_set_landscape_mode(progressbar_handle
-		pWidgetHandle,
-		bool bLandscape)
+        pWidgetHandle,
+        bool bLandscape)
 {
 	if (pWidgetHandle == NULL) {
 		VideoLogError("pWidgetHandle is NULL");
@@ -457,12 +457,12 @@ bool vp_play_progressbar_set_landscape_mode(progressbar_handle
 
 	if (bLandscape) {
 		elm_object_signal_emit(pProgressWidget->pLayout,
-				       VP_NORMAL_SIGNAL_PROGRESS_LANDSCAPE_MODE,
-				       "*");
+		                       VP_NORMAL_SIGNAL_PROGRESS_LANDSCAPE_MODE,
+		                       "*");
 	} else {
 		elm_object_signal_emit(pProgressWidget->pLayout,
-				       VP_NORMAL_SIGNAL_PROGRESS_PORTRAIT_MODE,
-				       "*");
+		                       VP_NORMAL_SIGNAL_PROGRESS_PORTRAIT_MODE,
+		                       "*");
 	}
 
 	return TRUE;
@@ -470,7 +470,7 @@ bool vp_play_progressbar_set_landscape_mode(progressbar_handle
 }
 
 bool vp_play_progressbar_set_opacity(progressbar_handle pWidgetHandle,
-				     bool bOpacity)
+                                     bool bOpacity)
 {
 	if (pWidgetHandle == NULL) {
 		VideoLogError("pWidgetHandle is NULL");
@@ -486,11 +486,11 @@ bool vp_play_progressbar_set_opacity(progressbar_handle pWidgetHandle,
 
 	if (bOpacity) {
 		elm_object_signal_emit(pProgressWidget->pLayout,
-				       VP_NORMAL_SIGNAL_PROGRESS_OPACITY_60, "*");
+		                       VP_NORMAL_SIGNAL_PROGRESS_OPACITY_60, "*");
 	} else {
 		elm_object_signal_emit(pProgressWidget->pLayout,
-				       VP_NORMAL_SIGNAL_PROGRESS_OPACITY_DEFAULT,
-				       "*");
+		                       VP_NORMAL_SIGNAL_PROGRESS_OPACITY_DEFAULT,
+		                       "*");
 	}
 
 	return TRUE;

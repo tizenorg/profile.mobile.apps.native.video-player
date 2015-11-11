@@ -20,15 +20,16 @@
 #define PATH_MAX_SIZE 256
 #define BUF_MAX 16384
 static mode_t default_mode =
-	S_IRUSR | S_IWUSR | S_IXUSR | S_IRGRP | S_IXGRP | S_IROTH | S_IXOTH;
+    S_IRUSR | S_IWUSR | S_IXUSR | S_IRGRP | S_IXGRP | S_IROTH | S_IXOTH;
 
 const char *vp_file_get(const char path[])
 {
 	char *file = NULL;
 	struct stat info = { 0, };
 	if (stat(path, &info) == 0) {
-		if ((file = strrchr(path, '/')))
+		if ((file = strrchr(path, '/'))) {
 			file++;
+		}
 	} else {
 		file = (char *) path;
 	}
@@ -55,10 +56,11 @@ int vp_file_exists(const char *path)
 {
 	struct stat info = { 0, };
 
-	if (stat(path, &info) == 0)
+	if (stat(path, &info) == 0) {
 		return 1;
-	else
+	} else {
 		return 0;
+	}
 }
 
 Eina_Bool vp_is_dir(const char *path)
@@ -82,12 +84,13 @@ int vp_is_dir_empty(const char *path)
 	struct dirent ent_struct;
 
 	dirp = opendir(path);
-	if (!dirp)
+	if (!dirp) {
 		return -1;
+	}
 
 	while ((readdir_r(dirp, &ent_struct, &dp) == 0) && dp) {
 		if (stat(dp->d_name, &info) == 0 && (strcmp(dp->d_name, "."))
-				&& (strcmp(dp->d_name, ".."))) {
+		        && (strcmp(dp->d_name, ".."))) {
 			closedir(dirp);
 			return 0;
 		}
@@ -98,21 +101,23 @@ int vp_is_dir_empty(const char *path)
 
 int vp_mkdir(const char *dir)
 {
-	if (mkdir(dir, default_mode) < 0)
+	if (mkdir(dir, default_mode) < 0) {
 		return 0;
-	else
+	} else {
 		return 1;
+	}
 }
 
 static int vp_mkpath_if_not_exists(const char *path)
 {
 	struct stat st = { 0, };
-	if (stat(path, &st) < 0)
+	if (stat(path, &st) < 0) {
 		return vp_mkdir(path);
-	else if (!S_ISDIR(st.st_mode))
+	} else if (!S_ISDIR(st.st_mode)) {
 		return 0;
-	else
+	} else {
 		return 1;
+	}
 }
 
 int vp_mkpath(const char *path)
@@ -120,17 +125,20 @@ int vp_mkpath(const char *path)
 	char ss[PATH_MAX] = { 0, };
 	unsigned int i = 0;
 
-	if (vp_is_dir(path))
+	if (vp_is_dir(path)) {
 		return 1;
+	}
 
 	for (i = 0; path[i] != '\0'; ss[i] = path[i], i++) {
-		if (i == sizeof(ss) - 1)
+		if (i == sizeof(ss) - 1) {
 			return 0;
+		}
 
 		if ((path[i] == '/') && (i > 0)) {
 			ss[i] = '\0';
-			if (!vp_mkpath_if_not_exists(ss))
+			if (!vp_mkpath_if_not_exists(ss)) {
 				return 0;
+			}
 		}
 	}
 	ss[i] = '\0';
@@ -160,18 +168,20 @@ char *vp_strip_ext(const char *path)
 int vp_file_unlink(const char *filename)
 {
 	int status = unlink(filename);
-	if (status < 0)
+	if (status < 0) {
 		return 0;
-	else
+	} else {
 		return 1;
+	}
 }
 
 int vp_file_size(const char *filename)
 {
 	struct stat info = { 0, };
 	if (stat(filename, &info) == 0) {
-		if (!S_ISDIR(info.st_mode))
+		if (!S_ISDIR(info.st_mode)) {
 			return info.st_size;
+		}
 	}
 
 	return 0;
@@ -180,10 +190,11 @@ int vp_file_size(const char *filename)
 int vp_file_rmdir(const char *filename)
 {
 	int status = rmdir(filename);
-	if (status < 0)
+	if (status < 0) {
 		return 0;
-	else
+	} else {
 		return 1;
+	}
 }
 
 Eina_List *vp_file_ls(const char *dir)
@@ -195,8 +206,9 @@ Eina_List *vp_file_ls(const char *dir)
 	struct dirent ent_struct;
 
 	dirp = opendir(dir);
-	if (!dirp)
+	if (!dirp) {
 		return NULL;
+	}
 
 	while ((readdir_r(dirp, &ent_struct, &dp) == 0) && dp) {
 		if ((strcmp(dp->d_name, ".")) && (strcmp(dp->d_name, ".."))) {
@@ -207,8 +219,8 @@ Eina_List *vp_file_ls(const char *dir)
 	closedir(dirp);
 
 	list =
-		eina_list_sort(list, eina_list_count(list),
-			       EINA_COMPARE_CB(strcoll));
+	    eina_list_sort(list, eina_list_count(list),
+	                   EINA_COMPARE_CB(strcoll));
 
 	return list;
 }
@@ -231,16 +243,18 @@ int vp_file_recursive_rm(const char *dir)
 		if (dirp) {
 			while ((readdir_r(dirp, &ent_struct, &dp) == 0) && dp) {
 				if ((strcmp(dp->d_name, "."))
-						&& (strcmp(dp->d_name, ".."))) {
-					if (!vp_file_recursive_rm(dp->d_name))
+				        && (strcmp(dp->d_name, ".."))) {
+					if (!vp_file_recursive_rm(dp->d_name)) {
 						ret = 0;
+					}
 				}
 			}
 			closedir(dirp);
 		}
 
-		if (!vp_file_rmdir(dir))
+		if (!vp_file_rmdir(dir)) {
 			ret = 0;
+		}
 
 		return ret;
 	} else {
@@ -258,15 +272,18 @@ int vp_file_cp(const char *src, const char *dst)
 	size_t num;
 	int ret = 1;
 
-	if (!realpath(src, realpath1))
+	if (!realpath(src, realpath1)) {
 		return 0;
+	}
 
-	if (realpath(dst, realpath2) && !strcmp(realpath1, realpath2))
+	if (realpath(dst, realpath2) && !strcmp(realpath1, realpath2)) {
 		return 0;
+	}
 
 	f1 = fopen(src, "rb");
-	if (!f1)
+	if (!f1) {
 		return 0;
+	}
 
 	f2 = fopen(dst, "wb");
 	if (!f2) {
@@ -275,8 +292,9 @@ int vp_file_cp(const char *src, const char *dst)
 	}
 
 	while ((num = fread(buf, 1, sizeof(buf), f1)) > 0) {
-		if (fwrite(buf, 1, num, f2) != num)
+		if (fwrite(buf, 1, num, f2) != num) {
 			ret = 0;
+		}
 	}
 
 	fclose(f1);
@@ -288,8 +306,9 @@ int vp_file_cp(const char *src, const char *dst)
 int vp_file_mv(const char *src, const char *dst)
 {
 	struct stat info = { 0, };
-	if (stat(dst, &info) == 0)
+	if (stat(dst, &info) == 0) {
 		return 0;
+	}
 
 	if (rename(src, dst)) {
 		memset(&info, 0x00, sizeof(struct stat));

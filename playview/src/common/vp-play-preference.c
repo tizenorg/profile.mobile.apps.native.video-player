@@ -70,15 +70,15 @@ void vp_play_preference_init()
 	bool exist;
 
 	nErr =
-		preference_is_existing
-		(VP_PREFERENCE_KEY_GENERAL_BACKGROUND_PLAYING, &exist);
+	    preference_is_existing
+	    (VP_PREFERENCE_KEY_GENERAL_BACKGROUND_PLAYING, &exist);
 	if (nErr != 0) {
 		VideoLogError("preference_is_existing is fail [%d]", nErr);
 	} else {
 		if (!exist) {
 			nErr =
-				preference_set_int
-				(VP_PREFERENCE_KEY_GENERAL_BACKGROUND_PLAYING, 0);
+			    preference_set_int
+			    (VP_PREFERENCE_KEY_GENERAL_BACKGROUND_PLAYING, 0);
 			if (nErr != 0) {
 				VideoLogError
 				("VP_PREFERENCE_KEY_GENERAL_BACKGROUND_PLAYING is fail [%d]",
@@ -93,7 +93,7 @@ void vp_play_preference_init()
 	} else {
 		if (!exist) {
 			nErr =
-				preference_set_boolean(VP_PREFERENCE_KEY_SUBTILE_SHOW, 1);
+			    preference_set_boolean(VP_PREFERENCE_KEY_SUBTILE_SHOW, 1);
 			if (nErr != 0) {
 				VideoLogError
 				("SET VP_PREFERENCE_KEY_SUBTILE_SHOW is fail [%d]",
@@ -136,8 +136,8 @@ void vp_play_preference_init()
 	} else {
 		if (!exist) {
 			nErr =
-				preference_set_string(VP_PREFERENCE_KEY_SUBTILE_FONT,
-						      "Tizen");
+			    preference_set_string(VP_PREFERENCE_KEY_SUBTILE_FONT,
+			                          "Tizen");
 			if (nErr != 0) {
 				VideoLogError
 				("SET VP_PREFERENCE_KEY_SUBTILE_FONT is fail [%d]",
@@ -147,15 +147,15 @@ void vp_play_preference_init()
 	}
 
 	nErr =
-		preference_is_existing(VP_PREFERENCE_KEY_SUBTILE_FONT_COLOR,
-				       &exist);
+	    preference_is_existing(VP_PREFERENCE_KEY_SUBTILE_FONT_COLOR,
+	                           &exist);
 	if (nErr != 0) {
 		VideoLogError("preference_is_existing is fail [%d]", nErr);
 	} else {
 		if (!exist) {
 			nErr =
-				preference_set_int(VP_PREFERENCE_KEY_SUBTILE_FONT_COLOR,
-						   0);
+			    preference_set_int(VP_PREFERENCE_KEY_SUBTILE_FONT_COLOR,
+			                       0);
 			if (nErr != 0) {
 				VideoLogError
 				("SET VP_PREFERENCE_KEY_SUBTILE_FONT_COLOR is fail [%d]",
@@ -165,15 +165,15 @@ void vp_play_preference_init()
 	}
 
 	nErr =
-		preference_is_existing(VP_PREFERENCE_KEY_SUBTILE_FONT_COLOR_HEX,
-				       &exist);
+	    preference_is_existing(VP_PREFERENCE_KEY_SUBTILE_FONT_COLOR_HEX,
+	                           &exist);
 	if (nErr != 0) {
 		VideoLogError("preference_is_existing is fail [%d]", nErr);
 	} else {
 		if (!exist) {
 			nErr =
-				preference_set_string
-				(VP_PREFERENCE_KEY_SUBTILE_FONT_COLOR_HEX, "#ffffffff");
+			    preference_set_string
+			    (VP_PREFERENCE_KEY_SUBTILE_FONT_COLOR_HEX, "#ffffffff");
 			if (nErr != 0) {
 				VideoLogError
 				("SET VP_PREFERENCE_KEY_SUBTILE_FONT_COLOR_HEX is fail [%d]",
@@ -183,14 +183,14 @@ void vp_play_preference_init()
 	}
 
 	nErr =
-		preference_is_existing(VP_PREFERENCE_KEY_SUBTILE_BG_COLOR,
-				       &exist);
+	    preference_is_existing(VP_PREFERENCE_KEY_SUBTILE_BG_COLOR,
+	                           &exist);
 	if (nErr != 0) {
 		VideoLogError("preference_is_existing is fail [%d]", nErr);
 	} else {
 		if (!exist) {
 			nErr =
-				preference_set_int(VP_PREFERENCE_KEY_SUBTILE_BG_COLOR, 1);
+			    preference_set_int(VP_PREFERENCE_KEY_SUBTILE_BG_COLOR, 1);
 			if (nErr != 0) {
 				VideoLogError
 				("SET VP_PREFERENCE_KEY_SUBTILE_BG_COLOR is fail [%d]",
@@ -200,15 +200,15 @@ void vp_play_preference_init()
 	}
 
 	nErr =
-		preference_is_existing(VP_PREFERENCE_KEY_SUBTILE_BG_COLOR_HEX,
-				       &exist);
+	    preference_is_existing(VP_PREFERENCE_KEY_SUBTILE_BG_COLOR_HEX,
+	                           &exist);
 	if (nErr != 0) {
 		VideoLogError("preference_is_existing is fail [%d]", nErr);
 	} else {
 		if (!exist) {
 			nErr =
-				preference_set_string
-				(VP_PREFERENCE_KEY_SUBTILE_BG_COLOR_HEX, "#00000000");
+			    preference_set_string
+			    (VP_PREFERENCE_KEY_SUBTILE_BG_COLOR_HEX, "#00000000");
 			if (nErr != 0) {
 				VideoLogError
 				("SET VP_PREFERENCE_KEY_SUBTILE_BG_COLOR_HEX is fail [%d]",
@@ -218,16 +218,16 @@ void vp_play_preference_init()
 	}
 
 	nErr =
-		preference_is_existing
-		(VP_PREFERENCE_KEY_SUBTILE_CAPTION_WIN_COLOR_HEX, &exist);
+	    preference_is_existing
+	    (VP_PREFERENCE_KEY_SUBTILE_CAPTION_WIN_COLOR_HEX, &exist);
 	if (nErr != 0) {
 		VideoLogError("preference_is_existing is fail [%d]", nErr);
 	} else {
 		if (!exist) {
 			nErr =
-				preference_set_string
-				(VP_PREFERENCE_KEY_SUBTILE_CAPTION_WIN_COLOR_HEX,
-				 "#00000000");
+			    preference_set_string
+			    (VP_PREFERENCE_KEY_SUBTILE_CAPTION_WIN_COLOR_HEX,
+			     "#00000000");
 			if (nErr != 0) {
 				VideoLogError
 				("SET VP_PREFERENCE_KEY_SUBTILE_CAPTION_WIN_COLOR_HEX is fail [%d]",
@@ -237,15 +237,15 @@ void vp_play_preference_init()
 	}
 
 	nErr =
-		preference_is_existing(VP_PREFERENCE_KEY_SUBTILE_ALIGNMENT,
-				       &exist);
+	    preference_is_existing(VP_PREFERENCE_KEY_SUBTILE_ALIGNMENT,
+	                           &exist);
 	if (nErr != 0) {
 		VideoLogError("preference_is_existing is fail [%d]", nErr);
 	} else {
 		if (!exist) {
 			nErr =
-				preference_set_int(VP_PREFERENCE_KEY_SUBTILE_ALIGNMENT,
-						   1);
+			    preference_set_int(VP_PREFERENCE_KEY_SUBTILE_ALIGNMENT,
+			                       1);
 			if (nErr != 0) {
 				VideoLogError
 				("SET VP_PREFERENCE_KEY_SUBTILE_ALIGNMENT is fail [%d]",
@@ -283,15 +283,15 @@ void vp_play_preference_init()
 	}
 
 	nErr =
-		preference_is_existing(VP_PREFERENCE_KEY_PREVIEW_URL_VIDEOS,
-				       &exist);
+	    preference_is_existing(VP_PREFERENCE_KEY_PREVIEW_URL_VIDEOS,
+	                           &exist);
 	if (nErr != 0) {
 		VideoLogError("preference_is_existing is fail [%d]", nErr);
 	} else {
 		if (!exist) {
 			nErr =
-				preference_set_string
-				(VP_PREFERENCE_KEY_PREVIEW_URL_VIDEOS, "");
+			    preference_set_string
+			    (VP_PREFERENCE_KEY_PREVIEW_URL_VIDEOS, "");
 			if (nErr != 0) {
 				VideoLogError
 				("SET VP_PREFERENCE_KEY_PREVIEW_URL_VIDEOS is fail [%d]",
@@ -301,15 +301,15 @@ void vp_play_preference_init()
 	}
 
 	nErr =
-		preference_is_existing(VP_PREFERENCE_KEY_PREVIEW_AUDIO_TRACK,
-				       &exist);
+	    preference_is_existing(VP_PREFERENCE_KEY_PREVIEW_AUDIO_TRACK,
+	                           &exist);
 	if (nErr != 0) {
 		VideoLogError("preference_is_existing is fail [%d]", nErr);
 	} else {
 		if (!exist) {
 			nErr =
-				preference_set_int(VP_PREFERENCE_KEY_PREVIEW_AUDIO_TRACK,
-						   0);
+			    preference_set_int(VP_PREFERENCE_KEY_PREVIEW_AUDIO_TRACK,
+			                       0);
 			if (nErr != 0) {
 				VideoLogError
 				("SET VP_PREFERENCE_KEY_PREVIEW_AUDIO_TRACK is fail [%d]",
@@ -324,7 +324,7 @@ void vp_play_preference_init()
 	} else {
 		if (!exist) {
 			nErr =
-				preference_set_boolean(VP_PREFERENCE_KEY_SENSOR_ASKED, 0);
+			    preference_set_boolean(VP_PREFERENCE_KEY_SENSOR_ASKED, 0);
 			if (nErr != 0) {
 				VideoLogError
 				("SET VP_PREFERENCE_KEY_SENSOR_ASKED is fail [%d]",
@@ -334,14 +334,14 @@ void vp_play_preference_init()
 	}
 
 	nErr =
-		preference_is_existing(VP_PREFERENCE_KEY_VIDEOS_SORT_TYPE,
-				       &exist);
+	    preference_is_existing(VP_PREFERENCE_KEY_VIDEOS_SORT_TYPE,
+	                           &exist);
 	if (nErr != 0) {
 		VideoLogError("preference_is_existing is fail [%d]", nErr);
 	} else {
 		if (!exist) {
 			nErr =
-				preference_set_int(VP_PREFERENCE_KEY_VIDEOS_SORT_TYPE, 0);
+			    preference_set_int(VP_PREFERENCE_KEY_VIDEOS_SORT_TYPE, 0);
 			if (nErr != 0) {
 				VideoLogError
 				("SET VP_PREFERENCE_KEY_VIDEOS_SORT_TYPE is fail [%d]",
@@ -351,14 +351,14 @@ void vp_play_preference_init()
 	}
 
 	nErr =
-		preference_is_existing(VP_PREFERENCE_KEY_CAPTURE_MODE_ON, &exist);
+	    preference_is_existing(VP_PREFERENCE_KEY_CAPTURE_MODE_ON, &exist);
 	if (nErr != 0) {
 		VideoLogError("preference_is_existing is fail [%d]", nErr);
 	} else {
 		if (!exist) {
 			nErr =
-				preference_set_boolean(VP_PREFERENCE_KEY_CAPTURE_MODE_ON,
-						       0);
+			    preference_set_boolean(VP_PREFERENCE_KEY_CAPTURE_MODE_ON,
+			                           0);
 			if (nErr != 0) {
 				VideoLogError
 				("SET VP_PREFERENCE_KEY_CAPTURE_MODE_ON is fail [%d]",
@@ -373,7 +373,7 @@ void vp_play_preference_init()
 	} else {
 		if (!exist) {
 			nErr =
-				preference_set_boolean(VP_PREFERENCE_KEY_TAG_ACTIVE, 1);
+			    preference_set_boolean(VP_PREFERENCE_KEY_TAG_ACTIVE, 1);
 			if (nErr != 0) {
 				VideoLogError
 				("SET VP_PREFERENCE_KEY_TAG_ACTIVE is fail [%d]",
@@ -388,7 +388,7 @@ void vp_play_preference_init()
 	} else {
 		if (!exist) {
 			nErr =
-				preference_set_boolean(VP_PREFERENCE_KEY_TAG_WEATHER, 1);
+			    preference_set_boolean(VP_PREFERENCE_KEY_TAG_WEATHER, 1);
 			if (nErr != 0) {
 				VideoLogError
 				("SET VP_PREFERENCE_KEY_TAG_WEATHER is fail [%d]",
@@ -403,7 +403,7 @@ void vp_play_preference_init()
 	} else {
 		if (!exist) {
 			nErr =
-				preference_set_boolean(VP_PREFERENCE_KEY_TAG_LOCATION, 1);
+			    preference_set_boolean(VP_PREFERENCE_KEY_TAG_LOCATION, 1);
 			if (nErr != 0) {
 				VideoLogError
 				("SET VP_PREFERENCE_KEY_TAG_LOCATION is fail [%d]",
@@ -413,14 +413,14 @@ void vp_play_preference_init()
 	}
 
 	nErr =
-		preference_is_existing(VP_PREFERENCE_KEY_TAG_EDIT_WEATHER,
-				       &exist);
+	    preference_is_existing(VP_PREFERENCE_KEY_TAG_EDIT_WEATHER,
+	                           &exist);
 	if (nErr != 0) {
 		VideoLogError("preference_is_existing is fail [%d]", nErr);
 	} else {
 		if (!exist) {
 			nErr =
-				preference_set_int(VP_PREFERENCE_KEY_TAG_EDIT_WEATHER, 0);
+			    preference_set_int(VP_PREFERENCE_KEY_TAG_EDIT_WEATHER, 0);
 			if (nErr != 0) {
 				VideoLogError
 				("SET VP_PREFERENCE_KEY_TAG_EDIT_WEATHER is fail [%d]",
@@ -430,15 +430,15 @@ void vp_play_preference_init()
 	}
 
 	nErr =
-		preference_is_existing(VP_PREFERENCE_KEY_ALLOW_DOCK_CONNECT,
-				       &exist);
+	    preference_is_existing(VP_PREFERENCE_KEY_ALLOW_DOCK_CONNECT,
+	                           &exist);
 	if (nErr != 0) {
 		VideoLogError("preference_is_existing is fail [%d]", nErr);
 	} else {
 		if (!exist) {
 			nErr =
-				preference_set_boolean
-				(VP_PREFERENCE_KEY_ALLOW_DOCK_CONNECT, 1);
+			    preference_set_boolean
+			    (VP_PREFERENCE_KEY_ALLOW_DOCK_CONNECT, 1);
 			if (nErr != 0) {
 				VideoLogError
 				("SET VP_PREFERENCE_KEY_ALLOW_DOCK_CONNECT is fail [%d]",
@@ -453,7 +453,7 @@ void vp_play_preference_init()
 	} else {
 		if (!exist) {
 			nErr =
-				preference_set_boolean(VP_PREFERENCE_KEY_EXTERN_MODE, 0);
+			    preference_set_boolean(VP_PREFERENCE_KEY_EXTERN_MODE, 0);
 			if (nErr != 0) {
 				VideoLogError
 				("SET VP_PREFERENCE_KEY_EXTERN_MODE is fail [%d]",
@@ -463,14 +463,14 @@ void vp_play_preference_init()
 	}
 
 	nErr =
-		preference_is_existing(VP_PREFERENCE_KEY_MULTI_PLAY_FLAG, &exist);
+	    preference_is_existing(VP_PREFERENCE_KEY_MULTI_PLAY_FLAG, &exist);
 	if (nErr != 0) {
 		VideoLogError("preference_is_existing is fail [%d]", nErr);
 	} else {
 		if (!exist) {
 			nErr =
-				preference_set_boolean(VP_PREFERENCE_KEY_MULTI_PLAY_FLAG,
-						       0);
+			    preference_set_boolean(VP_PREFERENCE_KEY_MULTI_PLAY_FLAG,
+			                           0);
 			if (nErr != 0) {
 				VideoLogError
 				("SET VP_PREFERENCE_KEY_MULTI_PLAY_FLAG is fail [%d]",
@@ -480,15 +480,15 @@ void vp_play_preference_init()
 	}
 
 	nErr =
-		preference_is_existing(VP_PREFERENCE_KEY_SCREEN_MIRRORING_WARNING,
-				       &exist);
+	    preference_is_existing(VP_PREFERENCE_KEY_SCREEN_MIRRORING_WARNING,
+	                           &exist);
 	if (nErr != 0) {
 		VideoLogError("preference_is_existing is fail [%d]", nErr);
 	} else {
 		if (!exist) {
 			nErr =
-				preference_set_boolean
-				(VP_PREFERENCE_KEY_SCREEN_MIRRORING_WARNING, 1);
+			    preference_set_boolean
+			    (VP_PREFERENCE_KEY_SCREEN_MIRRORING_WARNING, 1);
 			if (nErr != 0) {
 				VideoLogError
 				("SET VP_PREFERENCE_KEY_SCREEN_MIRRORING_WARNING is fail [%d]",
@@ -517,8 +517,8 @@ bool vp_play_preference_set_multi_play_status(bool bMultiPlay)
 	int nErr = 0;
 
 	nErr =
-		preference_set_boolean(VP_PREFERENCE_KEY_MULTI_PLAY_FLAG,
-				       bMultiPlay);
+	    preference_set_boolean(VP_PREFERENCE_KEY_MULTI_PLAY_FLAG,
+	                           bMultiPlay);
 	if (nErr != 0) {
 		VideoLogError
 		("SET VP_PREFERENCE_KEY_MULTI_PLAY_FLAG is fail [%d]", nErr);
@@ -534,7 +534,7 @@ bool vp_play_preference_get_multi_play_status(bool *bMultiPlay)
 	bool nVal = 0;
 
 	nErr =
-		preference_get_boolean(VP_PREFERENCE_KEY_MULTI_PLAY_FLAG, &nVal);
+	    preference_get_boolean(VP_PREFERENCE_KEY_MULTI_PLAY_FLAG, &nVal);
 	if (nErr != 0) {
 		VideoLogError("GET preference_get_boolean is fail [%d]", nErr);
 		return FALSE;
@@ -550,8 +550,8 @@ bool vp_play_preference_set_mirroring_warning_status(bool bMultiPlay)
 	int nErr = 0;
 
 	nErr =
-		preference_set_boolean(VP_PREFERENCE_KEY_SCREEN_MIRRORING_WARNING,
-				       bMultiPlay);
+	    preference_set_boolean(VP_PREFERENCE_KEY_SCREEN_MIRRORING_WARNING,
+	                           bMultiPlay);
 	if (nErr != 0) {
 		VideoLogError
 		("SET VP_PREFERENCE_KEY_SCREEN_MIRRORING_WARNING is fail [%d]",
@@ -568,8 +568,8 @@ bool vp_play_preference_get_mirroring_warning_status(bool *bWarning)
 	bool nVal = 0;
 
 	nErr =
-		preference_get_boolean(VP_PREFERENCE_KEY_SCREEN_MIRRORING_WARNING,
-				       &nVal);
+	    preference_get_boolean(VP_PREFERENCE_KEY_SCREEN_MIRRORING_WARNING,
+	                           &nVal);
 	if (nErr != 0) {
 		VideoLogError
 		("GET VP_PREFERENCE_KEY_SCREEN_MIRRORING_WARNING is fail [%d]",
@@ -590,7 +590,7 @@ bool vp_play_preference_get_subtitle_show_key(bool *bShow)
 	nErr = preference_get_boolean(VP_PREFERENCE_KEY_SUBTILE_SHOW, &nVal);
 	if (nErr != 0) {
 		VideoLogError("VP_PREFERENCE_KEY_SUBTILE_SHOW is fail [%d]",
-			      nErr);
+		              nErr);
 		return FALSE;
 	}
 
@@ -606,7 +606,7 @@ bool vp_play_preference_set_subtitle_show_key(bool bShow)
 	nErr = preference_set_boolean(VP_PREFERENCE_KEY_SUBTILE_SHOW, bShow);
 	if (nErr != 0) {
 		VideoLogError("VP_PREFERENCE_KEY_SUBTILE_SHOW is fail [%d]",
-			      nErr);
+		              nErr);
 		return FALSE;
 	}
 
@@ -618,10 +618,10 @@ bool vp_play_preference_set_subtitle_font_name_key(const char *szFontName)
 	int nErr = 0;
 
 	nErr =
-		preference_set_string(VP_PREFERENCE_KEY_SUBTILE_FONT, szFontName);
+	    preference_set_string(VP_PREFERENCE_KEY_SUBTILE_FONT, szFontName);
 	if (nErr != 0) {
 		VideoLogError("VP_PREFERENCE_KEY_SUBTILE_FONT is fail [%d]",
-			      nErr);
+		              nErr);
 		return FALSE;
 	}
 
@@ -632,10 +632,10 @@ bool vp_play_preference_get_subtitle_font_name_key(char **szFontName)
 {
 	int nErr = 0;
 	nErr =
-		preference_get_string(VP_PREFERENCE_KEY_SUBTILE_FONT, szFontName);
+	    preference_get_string(VP_PREFERENCE_KEY_SUBTILE_FONT, szFontName);
 	if (nErr != 0) {
 		VideoLogError("VP_PREFERENCE_KEY_SUBTILE_FONT is fail [%d]",
-			      nErr);
+		              nErr);
 		return FALSE;
 	}
 
@@ -650,7 +650,7 @@ bool vp_play_preference_get_subtitle_size_key(int *nSize)
 	nErr = preference_get_int(VP_PREFERENCE_KEY_SUBTILE_SIZE, &nVal);
 	if (nErr != 0) {
 		VideoLogError("VP_PREFERENCE_KEY_SUBTILE_SIZE is fail [%d]",
-			      nErr);
+		              nErr);
 		return FALSE;
 	}
 
@@ -667,7 +667,7 @@ bool vp_play_preference_set_subtitle_size_key(int nSize)
 	nErr = preference_set_int(VP_PREFERENCE_KEY_SUBTILE_SIZE, nSize);
 	if (nErr != 0) {
 		VideoLogError("VP_PREFERENCE_KEY_SUBTILE_SIZE is fail [%d]",
-			      nErr);
+		              nErr);
 		return FALSE;
 	}
 
@@ -683,7 +683,7 @@ bool vp_play_preference_get_subtitle_edge_key(int *nEdge)
 	nErr = preference_get_int(VP_PREFERENCE_KEY_SUBTILE_EDGE, &nVal);
 	if (nErr != 0) {
 		VideoLogError("VP_PREFERENCE_KEY_SUBTILE_EDGE is fail [%d]",
-			      nErr);
+		              nErr);
 		return FALSE;
 	}
 
@@ -700,7 +700,7 @@ bool vp_play_preference_set_subtitle_edge_key(int nEdge)
 	nErr = preference_set_int(VP_PREFERENCE_KEY_SUBTILE_EDGE, nEdge);
 	if (nErr != 0) {
 		VideoLogError("VP_PREFERENCE_KEY_SUBTILE_EDGE is fail [%d]",
-			      nErr);
+		              nErr);
 		return FALSE;
 	}
 
@@ -712,11 +712,11 @@ bool vp_play_preference_set_subtitle_alignment_key(int nAlignment)
 	int nErr = 0;
 
 	nErr =
-		preference_set_int(VP_PREFERENCE_KEY_SUBTILE_ALIGNMENT,
-				   nAlignment);
+	    preference_set_int(VP_PREFERENCE_KEY_SUBTILE_ALIGNMENT,
+	                       nAlignment);
 	if (nErr != 0) {
 		VideoLogError("VP_PREFERENCE_KEY_SUBTILE_SIZE is fail [%d]",
-			      nErr);
+		              nErr);
 		return FALSE;
 	}
 
@@ -731,7 +731,7 @@ bool vp_play_preference_get_subtitle_alignment_key(int *nAlignment)
 	nErr = preference_get_int(VP_PREFERENCE_KEY_SUBTILE_ALIGNMENT, &nVal);
 	if (nErr != 0) {
 		VideoLogError("VP_PREFERENCE_KEY_SUBTILE_SIZE is fail [%d]",
-			      nErr);
+		              nErr);
 		return FALSE;
 	}
 
@@ -746,10 +746,10 @@ bool vp_play_preference_set_subtitle_font_color_key(int nColor)
 	int nErr = 0;
 
 	nErr =
-		preference_set_int(VP_PREFERENCE_KEY_SUBTILE_FONT_COLOR, nColor);
+	    preference_set_int(VP_PREFERENCE_KEY_SUBTILE_FONT_COLOR, nColor);
 	if (nErr != 0) {
 		VideoLogError("VP_PREFERENCE_KEY_SUBTILE_SIZE is fail [%d]",
-			      nErr);
+		              nErr);
 		return FALSE;
 	}
 
@@ -762,10 +762,10 @@ bool vp_play_preference_get_subtitle_font_color_key(int *nColor)
 	int nVal = 0;
 
 	nErr =
-		preference_get_int(VP_PREFERENCE_KEY_SUBTILE_FONT_COLOR, &nVal);
+	    preference_get_int(VP_PREFERENCE_KEY_SUBTILE_FONT_COLOR, &nVal);
 	if (nErr != 0) {
 		VideoLogError("VP_PREFERENCE_KEY_SUBTILE_SIZE is fail [%d]",
-			      nErr);
+		              nErr);
 		return FALSE;
 	}
 
@@ -776,13 +776,13 @@ bool vp_play_preference_get_subtitle_font_color_key(int *nColor)
 }
 
 bool vp_play_preference_set_subtitle_font_color_hex_key(const char
-		*szColorHex)
+        *szColorHex)
 {
 	int nErr = 0;
 
 	nErr =
-		preference_set_string(VP_PREFERENCE_KEY_SUBTILE_FONT_COLOR_HEX,
-				      szColorHex);
+	    preference_set_string(VP_PREFERENCE_KEY_SUBTILE_FONT_COLOR_HEX,
+	                          szColorHex);
 	if (nErr != 0) {
 		VideoLogError
 		("VP_PREFERENCE_KEY_SUBTILE_FONT_COLOR_HEX is fail [%d]",
@@ -797,8 +797,8 @@ bool vp_play_preference_get_subtitle_font_color_hex_key(char **szColorHex)
 {
 	int nErr = 0;
 	nErr =
-		preference_get_string(VP_PREFERENCE_KEY_SUBTILE_FONT_COLOR_HEX,
-				      szColorHex);
+	    preference_get_string(VP_PREFERENCE_KEY_SUBTILE_FONT_COLOR_HEX,
+	                          szColorHex);
 	if (nErr != 0) {
 		VideoLogError
 		("VP_PREFERENCE_KEY_SUBTILE_FONT_COLOR_HEX is fail [%d]",
@@ -810,13 +810,13 @@ bool vp_play_preference_get_subtitle_font_color_hex_key(char **szColorHex)
 }
 
 bool vp_play_preference_set_subtitle_bg_color_hex_key(const char
-		*szColorHex)
+        *szColorHex)
 {
 	int nErr = 0;
 
 	nErr =
-		preference_set_string(VP_PREFERENCE_KEY_SUBTILE_BG_COLOR_HEX,
-				      szColorHex);
+	    preference_set_string(VP_PREFERENCE_KEY_SUBTILE_BG_COLOR_HEX,
+	                          szColorHex);
 	if (nErr != 0) {
 		VideoLogError
 		("VP_PREFERENCE_KEY_SUBTILE_BG_COLOR_HEX is fail [%d]", nErr);
@@ -830,8 +830,8 @@ bool vp_play_preference_get_subtitle_bg_color_hex_key(char **szColorHex)
 {
 	int nErr = 0;
 	nErr =
-		preference_get_string(VP_PREFERENCE_KEY_SUBTILE_BG_COLOR_HEX,
-				      szColorHex);
+	    preference_get_string(VP_PREFERENCE_KEY_SUBTILE_BG_COLOR_HEX,
+	                          szColorHex);
 	if (nErr != 0) {
 		VideoLogError
 		("VP_PREFERENCE_KEY_SUBTILE_BG_COLOR_HEX is fail [%d]", nErr);
@@ -842,13 +842,13 @@ bool vp_play_preference_get_subtitle_bg_color_hex_key(char **szColorHex)
 }
 
 bool vp_play_preference_set_subtitle_caption_win_color_hex_key(const char
-		*szColorHex)
+        *szColorHex)
 {
 	int nErr = 0;
 
 	nErr =
-		preference_set_string
-		(VP_PREFERENCE_KEY_SUBTILE_CAPTION_WIN_COLOR_HEX, szColorHex);
+	    preference_set_string
+	    (VP_PREFERENCE_KEY_SUBTILE_CAPTION_WIN_COLOR_HEX, szColorHex);
 	if (nErr != 0) {
 		VideoLogError
 		("VP_PREFERENCE_KEY_SUBTILE_CAPTION_WIN_COLOR_HEX is fail [%d]",
@@ -860,12 +860,12 @@ bool vp_play_preference_set_subtitle_caption_win_color_hex_key(const char
 }
 
 bool vp_play_preference_get_subtitle_caption_win_color_hex_key(char
-		**szColorHex)
+        **szColorHex)
 {
 	int nErr = 0;
 	nErr =
-		preference_get_string
-		(VP_PREFERENCE_KEY_SUBTILE_CAPTION_WIN_COLOR_HEX, szColorHex);
+	    preference_get_string
+	    (VP_PREFERENCE_KEY_SUBTILE_CAPTION_WIN_COLOR_HEX, szColorHex);
 	if (nErr != 0) {
 		VideoLogError
 		("VP_PREFERENCE_KEY_SUBTILE_CAPTION_WIN_COLOR_HEX is fail [%d]",
@@ -884,7 +884,7 @@ bool vp_play_preference_get_subtitle_bg_color_key(int *nColor)
 	nErr = preference_get_int(VP_PREFERENCE_KEY_SUBTILE_BG_COLOR, &nVal);
 	if (nErr != 0) {
 		VideoLogError("VP_PREFERENCE_KEY_SUBTILE_BG_COLOR is fail [%d]",
-			      nErr);
+		              nErr);
 		return FALSE;
 	}
 
@@ -901,7 +901,7 @@ bool vp_play_preference_set_subtitle_bg_color_key(int nColor)
 	nErr = preference_set_int(VP_PREFERENCE_KEY_SUBTILE_BG_COLOR, nColor);
 	if (nErr != 0) {
 		VideoLogError("VP_PREFERENCE_KEY_SUBTILE_BG_COLOR is fail [%d]",
-			      nErr);
+		              nErr);
 		return FALSE;
 	}
 
@@ -976,10 +976,10 @@ bool vp_play_preference_get_capture_on_key(bool *bEnable)
 	bool nVal = 0;
 
 	nErr =
-		preference_get_boolean(VP_PREFERENCE_KEY_CAPTURE_MODE_ON, &nVal);
+	    preference_get_boolean(VP_PREFERENCE_KEY_CAPTURE_MODE_ON, &nVal);
 	if (nErr != 0) {
 		VideoLogError("VP_PREFERENCE_KEY_CAPTURE_MODE_ON is fail [%d]",
-			      nErr);
+		              nErr);
 		return FALSE;
 	}
 
@@ -993,11 +993,11 @@ bool vp_play_preference_set_capture_on_key(bool bEnable)
 	int nErr = 0;
 
 	nErr =
-		preference_set_boolean(VP_PREFERENCE_KEY_CAPTURE_MODE_ON,
-				       bEnable);
+	    preference_set_boolean(VP_PREFERENCE_KEY_CAPTURE_MODE_ON,
+	                           bEnable);
 	if (nErr != 0) {
 		VideoLogError("VP_PREFERENCE_KEY_CAPTURE_MODE_ON is fail [%d]",
-			      nErr);
+		              nErr);
 		return FALSE;
 	}
 
@@ -1072,7 +1072,7 @@ bool vp_play_preference_get_tag_location_key(bool *bEnable)
 	nErr = preference_get_boolean(VP_PREFERENCE_KEY_TAG_LOCATION, &nVal);
 	if (nErr != 0) {
 		VideoLogError("VP_PREFERENCE_KEY_TAG_LOCATION is fail [%d]",
-			      nErr);
+		              nErr);
 		return FALSE;
 	}
 
@@ -1086,10 +1086,10 @@ bool vp_play_preference_set_tag_location_key(bool bEnable)
 	int nErr = 0;
 
 	nErr =
-		preference_set_boolean(VP_PREFERENCE_KEY_TAG_LOCATION, bEnable);
+	    preference_set_boolean(VP_PREFERENCE_KEY_TAG_LOCATION, bEnable);
 	if (nErr != 0) {
 		VideoLogError("VP_PREFERENCE_KEY_TAG_LOCATION is fail [%d]",
-			      nErr);
+		              nErr);
 		return FALSE;
 	}
 
@@ -1105,7 +1105,7 @@ bool vp_play_preference_get_tag_edit_weather_key(int *nWeather)
 	nErr = preference_get_int(VP_PREFERENCE_KEY_TAG_EDIT_WEATHER, &nVal);
 	if (nErr != 0) {
 		VideoLogError("VP_PREFERENCE_KEY_TAG_EDIT_WEATHER is fail [%d]",
-			      nErr);
+		              nErr);
 		return FALSE;
 	}
 
@@ -1119,10 +1119,10 @@ bool vp_play_preference_set_tag_edit_weather_key(int nWeather)
 	int nErr = 0;
 
 	nErr =
-		preference_set_int(VP_PREFERENCE_KEY_TAG_EDIT_WEATHER, nWeather);
+	    preference_set_int(VP_PREFERENCE_KEY_TAG_EDIT_WEATHER, nWeather);
 	if (nErr != 0) {
 		VideoLogError("VP_PREFERENCE_KEY_TAG_EDIT_WEATHER is fail [%d]",
-			      nErr);
+		              nErr);
 		return FALSE;
 	}
 
@@ -1139,7 +1139,7 @@ bool vp_play_preference_get_sort_type_key(int *nType)
 	nErr = preference_get_int(VP_PREFERENCE_KEY_VIDEOS_SORT_TYPE, &nVal);
 	if (nErr != 0) {
 		VideoLogError("VP_PREFERENCE_KEY_VIDEOS_SORT_TYPE is fail [%d]",
-			      nErr);
+		              nErr);
 		return FALSE;
 	}
 
@@ -1160,8 +1160,8 @@ bool vp_play_preference_set_preview_url_videos(const char *szMediaURL)
 
 	if (strstr(szMediaURL, pStorePath) == NULL) {
 		nErr =
-			preference_set_string(VP_PREFERENCE_KEY_PREVIEW_URL_VIDEOS,
-					      szMediaURL);
+		    preference_set_string(VP_PREFERENCE_KEY_PREVIEW_URL_VIDEOS,
+		                          szMediaURL);
 		if (nErr != 0) {
 			VideoLogError
 			("VP_PREFERENCE_KEY_PREVIEW_URL_VIDEOS is fail [%d]",
@@ -1178,11 +1178,11 @@ bool vp_play_preference_get_preview_url_videos(char **szMediaURL)
 	int nErr = 0;
 
 	nErr =
-		preference_get_string(VP_PREFERENCE_KEY_PREVIEW_URL_VIDEOS,
-				      szMediaURL);
+	    preference_get_string(VP_PREFERENCE_KEY_PREVIEW_URL_VIDEOS,
+	                          szMediaURL);
 	if (nErr != 0) {
 		VideoLogError("VP_PREFERENCE_KEY_PREVIEW_URL_VIDEOS is fail [%d]",
-			      nErr);
+		              nErr);
 		return FALSE;
 	}
 
@@ -1194,8 +1194,8 @@ bool vp_play_preference_set_preview_audio_track(int nAudioTrack)
 	int nErr = 0;
 
 	nErr =
-		preference_set_int(VP_PREFERENCE_KEY_PREVIEW_AUDIO_TRACK,
-				   nAudioTrack);
+	    preference_set_int(VP_PREFERENCE_KEY_PREVIEW_AUDIO_TRACK,
+	                       nAudioTrack);
 	if (nErr != 0) {
 		VideoLogError
 		("VP_PREFERENCE_KEY_PREVIEW_AUDIO_TRACK is fail [%d]", nErr);
@@ -1211,7 +1211,7 @@ bool vp_play_preference_get_preview_audio_track(int *nAudioTrack)
 	int nVal = 0;
 
 	nErr =
-		preference_get_int(VP_PREFERENCE_KEY_PREVIEW_AUDIO_TRACK, &nVal);
+	    preference_get_int(VP_PREFERENCE_KEY_PREVIEW_AUDIO_TRACK, &nVal);
 	if (nErr != 0) {
 		VideoLogError
 		("VP_PREFERENCE_KEY_PREVIEW_AUDIO_TRACK is fail [%d]", nErr);
@@ -1231,7 +1231,7 @@ bool vp_play_preference_get_sensor_asked_state(bool *bAsked)
 	nErr = preference_get_boolean(VP_PREFERENCE_KEY_SENSOR_ASKED, &nVal);
 	if (nErr != 0) {
 		VideoLogError("VP_PREFERENCE_KEY_SENSOR_ASKED is fail [%d]",
-			      nErr);
+		              nErr);
 		return FALSE;
 	}
 
@@ -1247,7 +1247,7 @@ bool vp_play_preference_set_sensor_asked_state(bool bAsked)
 	nErr = preference_set_boolean(VP_PREFERENCE_KEY_SENSOR_ASKED, bAsked);
 	if (nErr != 0) {
 		VideoLogError("VP_PREFERENCE_KEY_SENSOR_ASKED is fail [%d]",
-			      nErr);
+		              nErr);
 		return FALSE;
 	}
 
@@ -1260,11 +1260,11 @@ bool vp_play_preference_get_allow_dock_connect_key(bool *bEnable)
 	bool nVal = 0;
 
 	nErr =
-		preference_get_boolean(VP_PREFERENCE_KEY_ALLOW_DOCK_CONNECT,
-				       &nVal);
+	    preference_get_boolean(VP_PREFERENCE_KEY_ALLOW_DOCK_CONNECT,
+	                           &nVal);
 	if (nErr != 0) {
 		VideoLogError("VP_PREFERENCE_KEY_ALLOW_DOCK_CONNECT is fail [%d]",
-			      nErr);
+		              nErr);
 		return FALSE;
 	}
 
@@ -1278,11 +1278,11 @@ bool vp_play_preference_set_allow_dock_connect_key(bool bEnable)
 	int nErr = 0;
 
 	nErr =
-		preference_set_boolean(VP_PREFERENCE_KEY_ALLOW_DOCK_CONNECT,
-				       bEnable);
+	    preference_set_boolean(VP_PREFERENCE_KEY_ALLOW_DOCK_CONNECT,
+	                           bEnable);
 	if (nErr != 0) {
 		VideoLogError("VP_PREFERENCE_KEY_ALLOW_DOCK_CONNECT is fail [%d]",
-			      nErr);
+		              nErr);
 		return FALSE;
 	}
 

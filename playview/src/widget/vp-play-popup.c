@@ -25,12 +25,12 @@
 #include "vp-util.h"
 
 Evas_Object *vp_popup_create(Evas_Object *pParent,
-			     video_popup_style_t nStyle, char *szTitle,
-			     char *szContent, double dTimeOut,
-			     Evas_Smart_Cb pTimeoutFunc,
-			     Eext_Event_Cb pCancelKeyCb,
-			     Evas_Object_Event_Cb pCancelMouseCb,
-			     void *pUserData)
+                             video_popup_style_t nStyle, char *szTitle,
+                             char *szContent, double dTimeOut,
+                             Evas_Smart_Cb pTimeoutFunc,
+                             Eext_Event_Cb pCancelKeyCb,
+                             Evas_Object_Event_Cb pCancelMouseCb,
+                             void *pUserData)
 {
 	if (pParent == NULL) {
 		VideoLogError("pParent is NULL");
@@ -62,11 +62,11 @@ Evas_Object *vp_popup_create(Evas_Object *pParent,
 
 	if (nStyle == POPUP_STYLE_FULLSCREEN_NO_TITLE_NO_CANCEL_BTN) {
 		elm_layout_theme_set(pObj, "popup", "fullsrceen/notitle",
-				     "default");
+		                     "default");
 	}
 
 	evas_object_size_hint_weight_set(pObj, EVAS_HINT_EXPAND,
-					 EVAS_HINT_EXPAND);
+	                                 EVAS_HINT_EXPAND);
 
 	if (szTitle) {
 		elm_object_part_text_set(pObj, "title,text", szTitle);
@@ -80,26 +80,26 @@ Evas_Object *vp_popup_create(Evas_Object *pParent,
 		elm_popup_timeout_set(pObj, dTimeOut);
 		if (pTimeoutFunc) {
 			evas_object_smart_callback_add(pObj, "timeout", pTimeoutFunc,
-						       (void *) pUserData);
+			                               (void *) pUserData);
 		}
 	}
 
 	if (pCancelKeyCb) {
 		eext_object_event_callback_add(pObj, EEXT_CALLBACK_BACK,
-					       pCancelKeyCb, (void *) pUserData);
+		                               pCancelKeyCb, (void *) pUserData);
 	}
 
 	if (nStyle == POPUP_STYLE_DEFAULT_NO_CANCEL_BTN
-			|| nStyle == POPUP_STYLE_MENU_LIST_NO_CANCEL_BTN
-			|| nStyle == POPUP_STYLE_EXPAND_NO_CANCEL_BTN
-			|| nStyle == POPUP_STYLE_PROGRESS_WITH_NO_CANCEL_BTN)
+	        || nStyle == POPUP_STYLE_MENU_LIST_NO_CANCEL_BTN
+	        || nStyle == POPUP_STYLE_EXPAND_NO_CANCEL_BTN
+	        || nStyle == POPUP_STYLE_PROGRESS_WITH_NO_CANCEL_BTN)
 		evas_object_smart_callback_add(pObj, "block,clicked",
-					       pCancelKeyCb, (void *) pUserData);
+		                               pCancelKeyCb, (void *) pUserData);
 
 	if (pCancelMouseCb) {
 		evas_object_event_callback_add(pObj, EVAS_CALLBACK_MOUSE_UP,
-					       pCancelMouseCb,
-					       (void *) pUserData);
+		                               pCancelMouseCb,
+		                               (void *) pUserData);
 	}
 
 	return pObj;
@@ -107,13 +107,13 @@ Evas_Object *vp_popup_create(Evas_Object *pParent,
 
 
 Evas_Object *vp_two_button_popup_create(Evas_Object *pParent,
-					char *szTitle,
-					char *szContent,
-					char *pLeftButtonText,
-					Evas_Smart_Cb leftButtonCb,
-					char *pRightButtonText,
-					Evas_Smart_Cb rightButtonCb,
-					const void *pUserData)
+                                        char *szTitle,
+                                        char *szContent,
+                                        char *pLeftButtonText,
+                                        Evas_Smart_Cb leftButtonCb,
+                                        char *pRightButtonText,
+                                        Evas_Smart_Cb rightButtonCb,
+                                        const void *pUserData)
 {
 	Evas_Object *pPopup = NULL;
 	Evas_Object *pBtn1 = NULL;
@@ -131,13 +131,15 @@ Evas_Object *vp_two_button_popup_create(Evas_Object *pParent,
 		return NULL;
 	}
 
-	if (szTitle)
+	if (szTitle) {
 		elm_object_part_text_set(pPopup, "title,text", szTitle);
+	}
 
 	evas_object_size_hint_weight_set(pPopup, EVAS_HINT_EXPAND,
-					 EVAS_HINT_EXPAND);
-	if (szContent)
+	                                 EVAS_HINT_EXPAND);
+	if (szContent) {
 		elm_object_part_text_set(pPopup, "default", szContent);
+	}
 
 	pBtn1 = elm_button_add(pPopup);
 	elm_object_style_set(pBtn1, "popup");
@@ -145,7 +147,7 @@ Evas_Object *vp_two_button_popup_create(Evas_Object *pParent,
 	elm_object_part_content_set(pPopup, "button1", pBtn1);
 	if (leftButtonCb)
 		evas_object_smart_callback_add(pBtn1, "clicked", leftButtonCb,
-					       (const void *) pUserData);
+		                               (const void *) pUserData);
 
 	pBtn2 = elm_button_add(pPopup);
 	elm_object_style_set(pBtn2, "popup");
@@ -154,7 +156,7 @@ Evas_Object *vp_two_button_popup_create(Evas_Object *pParent,
 
 	if (rightButtonCb)
 		evas_object_smart_callback_add(pBtn2, "clicked", rightButtonCb,
-					       (const void *) pUserData);
+		                               (const void *) pUserData);
 
 	evas_object_show(pPopup);
 
@@ -163,22 +165,23 @@ Evas_Object *vp_two_button_popup_create(Evas_Object *pParent,
 
 #ifdef _SUBTITLE_MULTI_LANGUAGE
 Evas_Object *vp_title_two_button_popup_create(Evas_Object *pParent,
-		char *szTitle,
-		char *szContent,
-		char *pLeftButtonText,
-		Evas_Smart_Cb leftButtonCb,
-		char *pRightButtonText,
-		Evas_Smart_Cb rightButtonCb,
-		const void *pUserData)
+        char *szTitle,
+        char *szContent,
+        char *pLeftButtonText,
+        Evas_Smart_Cb leftButtonCb,
+        char *pRightButtonText,
+        Evas_Smart_Cb rightButtonCb,
+        const void *pUserData)
 {
 	Evas_Object *pPopup = NULL;
 	pPopup =
-		vp_two_button_popup_create(pParent, NULL, szContent,
-					   pLeftButtonText, leftButtonCb,
-					   pRightButtonText, rightButtonCb,
-					   pUserData);
-	if (szTitle && pPopup)
+	    vp_two_button_popup_create(pParent, NULL, szContent,
+	                               pLeftButtonText, leftButtonCb,
+	                               pRightButtonText, rightButtonCb,
+	                               pUserData);
+	if (szTitle && pPopup) {
 		elm_object_part_text_set(pPopup, "title,text", szTitle);
+	}
 
 	return pPopup;
 }
@@ -198,8 +201,8 @@ bool vp_popup_check_landspace_by_win(Evas_Object *pWin)
 }
 
 void vp_popup_set_popup_min_size(Evas_Object *pWin, Evas_Object *pBox,
-				 int nListCount,
-				 video_list_popup_style_t eStyle)
+                                 int nListCount,
+                                 video_list_popup_style_t eStyle)
 {
 	if (!pWin) {
 		VideoLogError("win is NULL.");
@@ -225,10 +228,10 @@ void vp_popup_set_popup_min_size(Evas_Object *pWin, Evas_Object *pBox,
 		case VIDEO_POPUP_2_TEXT_1_ICON:
 			if (vp_popup_check_landspace_by_win(pWin)) {
 				nMinHeight =
-					VP_POPUP_LIST_2_TEXT_1_ICON_HEIGHT_L(nListCount);
+				    VP_POPUP_LIST_2_TEXT_1_ICON_HEIGHT_L(nListCount);
 			} else {
 				nMinHeight =
-					VP_POPUP_LIST_2_TEXT_1_ICON_HEIGHT(nListCount);
+				    VP_POPUP_LIST_2_TEXT_1_ICON_HEIGHT(nListCount);
 			}
 			break;
 		case VIDEO_POPUP_LOADING_LIST:
@@ -245,7 +248,7 @@ void vp_popup_set_popup_min_size(Evas_Object *pWin, Evas_Object *pBox,
 		}
 
 		evas_object_size_hint_min_set(pBox,
-					      VP_POPUP_LIST_WIDTH * VP_SCALE,
-					      nMinHeight * VP_SCALE);
+		                              VP_POPUP_LIST_WIDTH * VP_SCALE,
+		                              nMinHeight * VP_SCALE);
 	}
 }

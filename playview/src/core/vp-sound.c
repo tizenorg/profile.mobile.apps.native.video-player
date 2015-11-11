@@ -40,9 +40,9 @@ bool vp_sound_init_session()
 	}
 
 	nRet =
-		sound_manager_set_media_session_option
-		(SOUND_SESSION_OPTION_PAUSE_OTHERS_WHEN_START,
-		 SOUND_SESSION_OPTION_INTERRUPTIBLE_DURING_PLAY);
+	    sound_manager_set_media_session_option
+	    (SOUND_SESSION_OPTION_PAUSE_OTHERS_WHEN_START,
+	     SOUND_SESSION_OPTION_INTERRUPTIBLE_DURING_PLAY);
 	if (nRet != SOUND_MANAGER_ERROR_NONE) {
 		VideoLogError("sound_manager_set_media_session_option fail");
 		return FALSE;
@@ -139,21 +139,22 @@ bool vp_sound_get_active_device(video_sound_device_type_t *nDeviceType)
 	sound_device_type_e type = SOUND_DEVICE_BUILTIN_SPEAKER;
 	sound_device_list_h g_device_list = NULL;
 	sound_device_mask_e g_device_mask =
-		SOUND_DEVICE_IO_DIRECTION_OUT_MASK;
+	    SOUND_DEVICE_IO_DIRECTION_OUT_MASK;
 //              WARN_TRACE("Enter sound_manager_get_active_device");
 	int ret;
 	if ((ret =
-				sound_manager_get_current_device_list(g_device_mask,
-						&g_device_list)))
+	            sound_manager_get_current_device_list(g_device_mask,
+	                    &g_device_list)))
 //                      ERROR_TRACE("sound_manager_get_active_device()... [0x%x]", ret);
 
 
 		if (!
-				(ret =
-					 sound_manager_get_next_device(g_device_list, &device))) {
+		        (ret =
+		             sound_manager_get_next_device(g_device_list, &device))) {
 //                   ERROR_TRACE("success to get next device\n");
-			if ((ret = sound_manager_get_device_type(device, &type)))
+			if ((ret = sound_manager_get_device_type(device, &type))) {
 				return FALSE;
+			}
 		}
 
 
@@ -201,13 +202,14 @@ bool vp_sound_is_sound_path_enable(bool *bIsSoundPath)
 	sound_device_type_e type;
 	sound_device_list_h g_device_list = NULL;
 	sound_device_mask_e g_device_mask =
-		SOUND_DEVICE_IO_DIRECTION_OUT_MASK;
+	    SOUND_DEVICE_IO_DIRECTION_OUT_MASK;
 
 	int ret;
 	if ((ret =
-				sound_manager_get_current_device_list(g_device_mask,
-						&g_device_list)))
+	            sound_manager_get_current_device_list(g_device_mask,
+	                    &g_device_list))) {
 		return bConnected;
+	}
 
 	while (!(ret = sound_manager_get_next_device(g_device_list, &device))) {
 		if ((ret = sound_manager_get_device_type(device, &type))) {
@@ -258,9 +260,9 @@ COUNT_CHECK:
 }
 
 sound_device_connected_cb vp_audio_jack_connected_cb(sound_device_h
-		device,
-		bool is_connected,
-		void *user_data)
+                                device,
+                                bool is_connected,
+                                void *user_data)
 {
 	if (!user_data) {
 		return NULL;
@@ -269,18 +271,19 @@ sound_device_connected_cb vp_audio_jack_connected_cb(sound_device_h
 	void *pPlayview = NULL;
 	pPlayview = user_data;
 	if (sound_manager_get_device_type(device, &type) ==
-			SOUND_MANAGER_ERROR_NONE) {
+	        SOUND_MANAGER_ERROR_NONE) {
 		if (type == SOUND_DEVICE_AUDIO_JACK) {
 			vp_play_normal_view_show_volume_popup(pPlayview);
-			if (!is_connected)
+			if (!is_connected) {
 				vp_play_normal_view_pause_player(pPlayview);
+			}
 		}
 	}
 	return NULL;
 }
 
 bool vp_sound_device_is_enable(video_sound_device_type_t nDeviceType,
-			       void *pUserdata)
+                               void *pUserdata)
 {
 	if (!pUserdata) {
 		return FALSE;
@@ -291,11 +294,12 @@ bool vp_sound_device_is_enable(video_sound_device_type_t nDeviceType,
 	sound_device_type_e type;
 	sound_device_list_h g_device_list = NULL;
 	sound_device_mask_e g_device_mask =
-		SOUND_DEVICE_IO_DIRECTION_OUT_MASK;
+	    SOUND_DEVICE_IO_DIRECTION_OUT_MASK;
 
 	if (sound_manager_get_current_device_list
-			(g_device_mask, &g_device_list) != SOUND_MANAGER_ERROR_NONE)
+	        (g_device_mask, &g_device_list) != SOUND_MANAGER_ERROR_NONE) {
 		return FALSE;
+	}
 
 	sound_manager_set_device_connected_cb
 	(SOUND_DEVICE_IO_DIRECTION_OUT_MASK,
@@ -303,11 +307,12 @@ bool vp_sound_device_is_enable(video_sound_device_type_t nDeviceType,
 	 (void *) pPlayview);
 
 	while (sound_manager_get_next_device(g_device_list, &device) ==
-			SOUND_MANAGER_ERROR_NONE) {
+	        SOUND_MANAGER_ERROR_NONE) {
 		if (sound_manager_get_device_type(device, &type) ==
-				SOUND_MANAGER_ERROR_NONE) {
-			if (type == SOUND_DEVICE_AUDIO_JACK)
+		        SOUND_MANAGER_ERROR_NONE) {
+			if (type == SOUND_DEVICE_AUDIO_JACK) {
 				return TRUE;
+			}
 		}
 	}
 
@@ -415,18 +420,18 @@ bool vp_sound_set_active_route(video_sound_device_type_t nDeviceType)
 }
 
 bool vp_sound_set_route_change_cb(vp_sound_route_change_cb func,
-				  void *pUserData)
+                                  void *pUserData)
 {
 	int nRet = SOUND_MANAGER_ERROR_NONE;
 
 	//nRet = sound_manager_set_available_route_changed_cb((sound_available_route_changed_cb), pUserData);
 
 	sound_device_mask_e g_device_mask =
-		SOUND_DEVICE_IO_DIRECTION_OUT_MASK;
+	    SOUND_DEVICE_IO_DIRECTION_OUT_MASK;
 
 	nRet =
-		sound_manager_set_device_information_changed_cb(g_device_mask,
-				NULL, pUserData);
+	    sound_manager_set_device_information_changed_cb(g_device_mask,
+	            NULL, pUserData);
 	if (nRet != SOUND_MANAGER_ERROR_NONE) {
 		VideoLogError
 		("sound_manager_set_available_route_changed_cb fail");
@@ -436,12 +441,12 @@ bool vp_sound_set_route_change_cb(vp_sound_route_change_cb func,
 }
 
 bool vp_sound_set_volume_change_cb(vp_sound_volume_change_cb func,
-				   void *pUserData)
+                                   void *pUserData)
 {
 	int nRet = SOUND_MANAGER_ERROR_NONE;
 
 	nRet =
-		sound_manager_set_volume_changed_cb((sound_manager_volume_changed_cb) func, pUserData);
+	    sound_manager_set_volume_changed_cb((sound_manager_volume_changed_cb) func, pUserData);
 	if (nRet != SOUND_MANAGER_ERROR_NONE) {
 		VideoLogError("sound_manager_set_volume_changed_cb fail");
 		return FALSE;

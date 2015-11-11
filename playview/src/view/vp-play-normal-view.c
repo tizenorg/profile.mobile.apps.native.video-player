@@ -150,26 +150,23 @@
 
 typedef struct _ProgressMouseInfo {
 	int			nDownPosX;
-}ProgressMouseInfo;
+} ProgressMouseInfo;
 
-typedef enum
-{
+typedef enum {
 	BUTTON_TYPE_NORMAL = 0,
 	BUTTON_TYPE_PRESSED,
 	BUTTON_TYPE_DIM,
-}ButtonType;
+} ButtonType;
 
 #ifdef K_FEATURE_MICROSEEK
-typedef enum
-{
+typedef enum {
 	SEEK_LEVEL_NORMAL = 1,
 	SEEK_LEVEL_HALF = 2,
 	SEEK_LEVEL_QUARTER = 4,
-}SeekLevel;
+} SeekLevel;
 #endif
 
-typedef struct _NormalView
-{
+typedef struct _NormalView {
 	PlayView			*pPlayView;
 	Ecore_X_Window			nXwinID;
 
@@ -419,7 +416,7 @@ typedef struct _NormalView
 	int		nSubtitleLanguageCount;
 	bool 		*pSelectedSubtitleLanguage;
 #endif
-}NormalView;
+} NormalView;
 
 
 static void _vp_play_normal_view_destroy_handle(NormalView *pNormalView);
@@ -495,7 +492,7 @@ static void __vp_play_normal_view_seek_pipe_cb(void *pUserData, void *pBuf, int 
 static void __vp_normal_error_popup_time_out_cb(void *pUserData, Evas_Object *pObj, void *pEventInfo);
 static void __vp_normal_error_popup_key_event_cb(void *pUserData, Evas_Object *pObj, void *pEventInfo);
 static void __vp_normal_error_popup_mouse_event_cb(void *pUserData, Evas *pEvas, Evas_Object *pObj, void *pEventInfo);
-static void __vp_normal_completed_cb (void *pUserData);
+static void __vp_normal_completed_cb(void *pUserData);
 
 
 //Focus UI
@@ -536,18 +533,18 @@ static void __vp_normal_subtitle_set_caption_window(NormalView *pNormalView)
 	}
 	vp_play_subtitle_get_alignment(pNormalView->pSubtitle, &nAlignment);
 	vp_play_util_set_object_size(_EDJ(vp_play_subtitle_get_object(pNormalView->pSubtitle)),
-								ww, hh, VP_NORMAL_SET_CAPTION_WINDOW_SIZE_ID);
+	                             ww, hh, VP_NORMAL_SET_CAPTION_WINDOW_SIZE_ID);
 	width = bLandscape ? VP_SUBTITLE_LANDSCAPE_SIZE : VP_SUBTITLE_PORTRAIT_SIZE;
 	if (nAlignment == VP_SUBTITLE_ALIGNMENT_LEFT) {
 		offset_x = 0;
 	} else if (nAlignment == VP_SUBTITLE_ALIGNMENT_CENTER) {
-		offset_x = (width-ww)/2;
+		offset_x = (width - ww) / 2;
 	} else if (nAlignment == VP_SUBTITLE_ALIGNMENT_RIGHT) {
-		offset_x = width-ww;
+		offset_x = width - ww;
 	}
 	VideoLogInfo("nAlignment:%d,offset_x:%d", nAlignment, offset_x);
 	vp_play_util_set_object_offset(_EDJ(vp_play_subtitle_get_object(pNormalView->pSubtitle)),
-					offset_x, 0, VP_NORMAL_SET_CAPTION_WINDOW_OFFSET_ID);
+	                               offset_x, 0, VP_NORMAL_SET_CAPTION_WINDOW_OFFSET_ID);
 
 	vp_play_subtitle_set_caption_win_color(pNormalView->pSubtitle, TRUE);
 }
@@ -694,7 +691,7 @@ static void __vp_normal_prepare_error_popup_time_out_cb(void *pUserData, Evas_Ob
 	pNormalView->bIsPopupShow = FALSE;
 
 	if (pNormalView->nRepeatMode == VIDEO_PLAY_REPEAT_ONE ||
-		pNormalView->nRepeatMode == VIDEO_PLAY_REPEAT_ALL) {
+	        pNormalView->nRepeatMode == VIDEO_PLAY_REPEAT_ALL) {
 		PlayView *pPlayView = pNormalView->pPlayView;
 		if (!pPlayView) {
 			VideoLogError("pPlayView is NULL");
@@ -733,7 +730,7 @@ static void __vp_normal_error_popup_key_event_cb(void *pUserData, Evas_Object *p
 
 	pNormalView->bIsPopupShow = FALSE;
 	if (pNormalView->nRepeatMode == VIDEO_PLAY_REPEAT_ONE ||
-		pNormalView->nRepeatMode == VIDEO_PLAY_REPEAT_ALL) {
+	        pNormalView->nRepeatMode == VIDEO_PLAY_REPEAT_ALL) {
 		PlayView *pPlayView = pNormalView->pPlayView;
 		if (!pPlayView) {
 			VideoLogError("pPlayView is NULL");
@@ -752,8 +749,7 @@ static void __vp_normal_error_popup_key_event_cb(void *pUserData, Evas_Object *p
 		vp_play_util_set_unlock_power_key();
 
 		pPlayView->pFunc->vp_play_func_exit(pPlayView);
-	}
-	else {
+	} else {
 		_vp_play_normal_view_on_next_play(pNormalView, FALSE);
 	}
 
@@ -778,7 +774,7 @@ static void __vp_normal_error_popup_mouse_event_cb(void *pUserData, Evas *pEvas,
 		VP_EVAS_DEL(pNormalView->pPopup);
 		pNormalView->bIsPopupShow = FALSE;
 		if (pNormalView->nRepeatMode == VIDEO_PLAY_REPEAT_ONE ||
-			pNormalView->nRepeatMode == VIDEO_PLAY_REPEAT_ALL) {
+		        pNormalView->nRepeatMode == VIDEO_PLAY_REPEAT_ALL) {
 			PlayView *pPlayView = pNormalView->pPlayView;
 			if (!pPlayView) {
 				VideoLogError("pPlayView is NULL");
@@ -797,8 +793,7 @@ static void __vp_normal_error_popup_mouse_event_cb(void *pUserData, Evas *pEvas,
 			vp_play_util_set_unlock_power_key();
 
 			pPlayView->pFunc->vp_play_func_exit(pPlayView);
-		}
-		else {
+		} else {
 			_vp_play_normal_view_on_next_play(pNormalView, FALSE);
 		}
 	}
@@ -856,8 +851,7 @@ static void __vp_normal_sound_alive_popup_close_cb(int nType, bool bPause, void 
 		}
 		_vp_play_normal_view_set_play_state(pNormalView);
 		_vp_play_normal_view_on_capture_mode(pNormalView);
-	}
-	else {
+	} else {
 		if (pNormalView->bManualPause == FALSE) {
 			if (!vp_mm_player_play(pNormalView->pPlayerHandle)) {
 				VideoLogWarning("Pause Fail");
@@ -873,14 +867,11 @@ static void __vp_normal_sound_alive_popup_close_cb(int nType, bool bPause, void 
 
 	if (nSAType == VIDEO_SA_NORMAL) {
 		nSoundFilter = VP_MM_PLAYER_FILTER_NONE;
-	}
-	else if (nSAType == VIDEO_SA_VOICE) {
+	} else if (nSAType == VIDEO_SA_VOICE) {
 		nSoundFilter = VP_MM_PLAYER_FILTER_VOICE;
-	}
-	else if (nSAType == VIDEO_SA_MOVIE) {
+	} else if (nSAType == VIDEO_SA_MOVIE) {
 		nSoundFilter = VP_MM_PLAYER_FILTER_MOVIE;
-	}
-	else if (nSAType == VIDEO_SA_7_1_CH) {
+	} else if (nSAType == VIDEO_SA_7_1_CH) {
 		nSoundFilter = VP_MM_PLAYER_FILTER_VITUAL_71;
 
 		video_sound_device_type_t nSoundDevType = VP_SOUND_DEVICE_NONE;
@@ -899,17 +890,17 @@ static void __vp_normal_sound_alive_popup_close_cb(int nType, bool bPause, void 
 			pNormalView->bIsPopupShow = TRUE;
 			char *szMsg = g_strdup_printf(VP_PLAY_STRING_71CH_ONLY_EARPHONE, "7.1");
 			pNormalView->pPopup = vp_popup_create(pPlayView->pWin, POPUP_STYLE_DEFAULT_WITH_CANCEL_BTN,
-								NULL,
-								szMsg,
-								0.0, NULL,
-								__vp_normal_popup_key_event_cb,
-								__vp_normal_popup_mouse_event_cb,
-								pNormalView);
+			                                      NULL,
+			                                      szMsg,
+			                                      0.0, NULL,
+			                                      __vp_normal_popup_key_event_cb,
+			                                      __vp_normal_popup_mouse_event_cb,
+			                                      pNormalView);
 			VP_FREE(szMsg);
 
 			Evas_Object *pBtn = NULL;
 			pBtn = elm_button_add(pNormalView->pPopup);
-			elm_object_style_set (pBtn, "popup_button/default");
+			elm_object_style_set(pBtn, "popup_button/default");
 			elm_object_domain_translatable_text_set(pBtn, VP_SYS_STR_PREFIX, VP_PLAY_STRING_COM_OK_IDS);
 			elm_object_part_content_set(pNormalView->pPopup, "button1", pBtn);
 			evas_object_smart_callback_add(pBtn, "clicked", __vp_normal_popup_key_event_cb, (void*)pNormalView);
@@ -955,8 +946,7 @@ static void __vp_normal_sound_path_popup_close_cb(int nType, bool bPause, void *
 
 		_vp_play_normal_view_set_play_state(pNormalView);
 		_vp_play_normal_view_on_capture_mode(pNormalView);
-	}
-	else {
+	} else {
 		if (pNormalView->bManualPause == FALSE) {
 			if (!vp_mm_player_play(pNormalView->pPlayerHandle)) {
 				VideoLogWarning("play Fail");
@@ -1052,8 +1042,7 @@ static void __vp_normal_setting_popup_close_cb(int nType, bool bPause, void *pUs
 		}
 	}
 
-	switch (nType)
-	{
+	switch (nType) {
 	case VP_SETTING_MODE_PLAY_SPEED:
 		_vp_play_normal_view_on_play_speed_popup(pNormalView);
 		break;
@@ -1079,7 +1068,7 @@ static void __vp_normal_capture_popup_close_cb(int nType, bool bPause, void *pUs
 	NormalView *pNormalView = (NormalView *)pUserData;
 
 	if (nType != -1) {
-		pNormalView->bCaptureMode= (bool)nType;
+		pNormalView->bCaptureMode = (bool)nType;
 	}
 	vp_play_preference_set_capture_on_key(pNormalView->bCaptureMode);
 
@@ -1143,8 +1132,7 @@ static void __vp_normal_play_speed_popup_done_cb(double fValue, bool bSetValue, 
 			pNormalView->pPlayView->fPlaySpeed = fValue;
 		}
 
-		if ((fValue - 0.05) > 1.000 || (fValue + 0.05) < 1.000)
-		{
+		if ((fValue - 0.05) > 1.000 || (fValue + 0.05) < 1.000) {
 			elm_object_signal_emit(pNormalView->pMainLayout, VP_NORMAL_SIGNAL_MAIN_PLAYING_SPEED_SHOW, "*");
 			elm_object_signal_callback_add(pNormalView->pMainLayout, "elm,action,click", "", _vp_play_normal_view_on_play_speed_popup_cb, pNormalView);
 			_vp_play_normal_view_create_layout_hide_timer(pNormalView);
@@ -1186,25 +1174,22 @@ static void __vp_normal_subtitle_popup_close_cb(int nType, bool bPause, void *pU
 		pNormalView->bIsSubtitleShow = FALSE;
 	}
 
-	switch (nSubtitleMode)
-	{
+	switch (nSubtitleMode) {
 	case VP_SUBTITLE_MODE_NONE:
 	case VP_SUBTITLE_MODE_CLOSE:
 		break;
-	case VP_SUBTITLE_MODE_ACTIVATION:
-	{
+	case VP_SUBTITLE_MODE_ACTIVATION: {
 		bool bShow = FALSE;
 		vp_play_preference_get_subtitle_show_key(&bShow);
 		if (bShow) {
 			vp_play_subtitle_realize(pNormalView->pSubtitle);
 			vp_mm_player_set_deactivate_subtitle(pNormalView->pPlayerHandle, FALSE);
-		}
-		else {
+		} else {
 			vp_play_subtitle_unrealize(pNormalView->pSubtitle);
 			vp_mm_player_set_deactivate_subtitle(pNormalView->pPlayerHandle, TRUE);
 		}
 	}
-		break;
+	break;
 	case VP_SUBTITLE_MODE_SYNC:
 		_vp_play_normal_view_on_subtitle_sync_popup(pNormalView);
 		break;
@@ -1312,10 +1297,10 @@ static void __vp_normal_subtitle_size_popup_done_cb(int nType, bool bPause, void
 		vp_play_subtitle_set_size_zoom(pNormalView->pSubtitle, 1.0);
 		vp_play_preference_set_subtitle_size_key(nType);
 		_vp_play_normal_view_set_subtitle_font_config(pNormalView);
-	#ifdef SUBTITLE_K_FEATURE
+#ifdef SUBTITLE_K_FEATURE
 		/*Set caption window: size, rel1, color*/
 		__vp_normal_subtitle_set_caption_window(pNormalView);
-	#endif
+#endif
 	}
 
 	if (bPause) {
@@ -1327,16 +1312,16 @@ static void __vp_normal_subtitle_size_popup_done_cb(int nType, bool bPause, void
 	}
 	_vp_play_normal_view_on_subtitle_popup(pNormalView);
 
-/*
-	if (pNormalView->bManualPause == FALSE) {
-		if (!vp_mm_player_play(pNormalView->pPlayerHandle)) {
-			VideoLogWarning("Pause Fail");
+	/*
+		if (pNormalView->bManualPause == FALSE) {
+			if (!vp_mm_player_play(pNormalView->pPlayerHandle)) {
+				VideoLogWarning("Pause Fail");
+			}
+			_vp_play_normal_view_set_play_state(pNormalView);
+			_vp_play_normal_view_on_capture_mode(pNormalView);
+			_vp_play_normal_view_create_layout_hide_timer(pNormalView);
 		}
-		_vp_play_normal_view_set_play_state(pNormalView);
-		_vp_play_normal_view_on_capture_mode(pNormalView);
-		_vp_play_normal_view_create_layout_hide_timer(pNormalView);
-	}
-*/
+	*/
 }
 
 
@@ -1353,26 +1338,26 @@ static void __vp_normal_subtitle_font_popup_done_cb(char *szFontName, void *pUse
 		vp_play_subtitle_set_font(pNormalView->pSubtitle, szFontName);
 		vp_play_preference_set_subtitle_font_name_key(szFontName);
 		_vp_play_normal_view_set_subtitle_font_config(pNormalView);
-	#ifdef SUBTITLE_K_FEATURE
+#ifdef SUBTITLE_K_FEATURE
 		/*Set caption window: size, rel1, color*/
 		__vp_normal_subtitle_set_caption_window(pNormalView);
-	#endif
+#endif
 	}
 
 	vp_subtitle_font_destroy(pNormalView->pSubtitleFontPopup);
 	pNormalView->pSubtitleFontPopup = NULL;
 	pNormalView->bIsPopupShow = FALSE;
 
-/*
-	if (pNormalView->bManualPause == FALSE) {
-		if (!vp_mm_player_play(pNormalView->pPlayerHandle)) {
-			VideoLogWarning("Pause Fail");
+	/*
+		if (pNormalView->bManualPause == FALSE) {
+			if (!vp_mm_player_play(pNormalView->pPlayerHandle)) {
+				VideoLogWarning("Pause Fail");
+			}
+			_vp_play_normal_view_set_play_state(pNormalView);
+			_vp_play_normal_view_on_capture_mode(pNormalView);
+			_vp_play_normal_view_create_layout_hide_timer(pNormalView);
 		}
-		_vp_play_normal_view_set_play_state(pNormalView);
-		_vp_play_normal_view_on_capture_mode(pNormalView);
-		_vp_play_normal_view_create_layout_hide_timer(pNormalView);
-	}
-*/
+	*/
 	_vp_play_normal_view_on_subtitle_popup(pNormalView);
 }
 
@@ -1449,14 +1434,14 @@ static void __vp_normal_subtitle_select_popup_done_cb(char *szFilePath, void *pU
 			goto SELECT_DONE;
 		}
 	}
-/*
-	int nPosition = 0;
-	if (!vp_mm_player_get_position(pNormalView->pPlayerHandle, &nPosition)) {
-		VideoLogError("vp_mm_player_get_position is fail");
-		pNormalView->nStartPosition = nPosition;
-	}
-*/
-	pNormalView->bIsExistSubtitle = vp_mm_player_set_subtitle_url(pNormalView->pPlayerHandle,szFilePath);
+	/*
+		int nPosition = 0;
+		if (!vp_mm_player_get_position(pNormalView->pPlayerHandle, &nPosition)) {
+			VideoLogError("vp_mm_player_get_position is fail");
+			pNormalView->nStartPosition = nPosition;
+		}
+	*/
+	pNormalView->bIsExistSubtitle = vp_mm_player_set_subtitle_url(pNormalView->pPlayerHandle, szFilePath);
 
 SELECT_DONE:
 	VP_FREE(szSubtitle);
@@ -1485,14 +1470,11 @@ static void __vp_normal_subtitle_font_color_popup_done_cb(int nType, bool bPause
 		video_subtitle_color_t nColor = VP_SUBTITLE_COLOR_BLACK;
 		if (nType == VIDEO_SUBTITLE_COLOR_BLACK) {
 			nColor = VP_SUBTITLE_COLOR_BLACK;
-		}
-		else if (nType == VIDEO_SUBTITLE_COLOR_BLUE) {
+		} else if (nType == VIDEO_SUBTITLE_COLOR_BLUE) {
 			nColor = VP_SUBTITLE_COLOR_BLUE;
-		}
-		else if (nType == VIDEO_SUBTITLE_COLOR_GREEN) {
+		} else if (nType == VIDEO_SUBTITLE_COLOR_GREEN) {
 			nColor = VP_SUBTITLE_COLOR_GREEN;
-		}
-		else if (nType == VIDEO_SUBTITLE_COLOR_WHITE) {
+		} else if (nType == VIDEO_SUBTITLE_COLOR_WHITE) {
 			nColor = VP_SUBTITLE_COLOR_WHITE;
 		}
 		//need to improve....
@@ -1540,11 +1522,9 @@ static void __vp_normal_subtitle_bg_color_popup_done_cb(int nType, bool bPause, 
 		video_subtitle_color_t nColor = VP_SUBTITLE_COLOR_BLACK;
 		if (nType == VIDEO_SUBTITLE_COLOR_BLACK) {
 			nColor = VP_SUBTITLE_COLOR_BLACK;
-		}
-		else if (nType == VIDEO_SUBTITLE_COLOR_WHITE) {
+		} else if (nType == VIDEO_SUBTITLE_COLOR_WHITE) {
 			nColor = VP_SUBTITLE_COLOR_WHITE;
-		}
-		else if (nType == VIDEO_SUBTITLE_COLOR_NONE) {
+		} else if (nType == VIDEO_SUBTITLE_COLOR_NONE) {
 			nColor = VP_SUBTITLE_COLOR_NONE;
 		}
 		vp_play_subtitle_set_bg_color(pNormalView->pSubtitle, nColor);
@@ -1697,13 +1677,12 @@ static void __vp_normal_subtitle_track_popup_close_cb(int nType, bool bPause, vo
 		}*/
 
 		pNormalView->nDefaultSubtitleTrackIndex = nType;
-	#ifndef _SUBTITLE_MULTI_LANGUAGE
+#ifndef _SUBTITLE_MULTI_LANGUAGE
 		vp_mm_player_set_subtitle_track(pNormalView->pPlayerHandle, pNormalView->nDefaultSubtitleTrackIndex);
-	#endif
+#endif
 		_vp_play_normal_view_on_subtitle_popup(pNormalView);
 
-	}
-	else {
+	} else {
 		_vp_play_normal_view_on_subtitle_popup(pNormalView);
 	}
 
@@ -1739,8 +1718,7 @@ static void __vp_normal_detail_popup_close_cb(int nType, bool bPause, void *pUse
 		}
 		_vp_play_normal_view_set_play_state(pNormalView);
 		_vp_play_normal_view_on_capture_mode(pNormalView);
-	}
-	else {
+	} else {
 		_vp_play_normal_view_create_layout_hide_timer(pNormalView);
 	}
 
@@ -1762,8 +1740,7 @@ static void __vp_normal_audio_track_popup_close_cb(int nType, bool bPause, void 
 		}
 		_vp_play_normal_view_set_play_state(pNormalView);
 		_vp_play_normal_view_on_capture_mode(pNormalView);
-	}
-	else {
+	} else {
 		if (pNormalView->bManualPause == FALSE) {
 			if (!vp_mm_player_play(pNormalView->pPlayerHandle)) {
 				VideoLogWarning("Pause Fail");
@@ -1784,8 +1761,7 @@ static void __vp_normal_audio_track_popup_close_cb(int nType, bool bPause, void 
 		}
 		_vp_play_normal_view_set_play_state(pNormalView);
 		_vp_play_normal_view_on_capture_mode(pNormalView);
-	}
-	else {
+	} else {
 		_vp_play_normal_view_create_layout_hide_timer(pNormalView);
 	}
 	if (nType != -1) {
@@ -1825,7 +1801,7 @@ static Evas_Event_Flags __vp_normal_gesture_n_tab_end_cb(void *pUserData , void 
 
 	Elm_Gesture_Taps_Info *p = (Elm_Gesture_Taps_Info *) pEventInfo;
 	NormalView *pNormalView = (NormalView *)pUserData;
-	VideoLogInfo("gesture tab = %d" ,p->n);
+	VideoLogInfo("gesture tab = %d" , p->n);
 
 	if (p->n == 1) {
 		if (pNormalView->pVolumeHandle) {
@@ -1844,8 +1820,7 @@ static Evas_Event_Flags __vp_normal_gesture_n_tab_end_cb(void *pUserData , void 
 
 		if (pNormalView->bShowLayout) {
 			_vp_play_normal_view_hide_layout(pNormalView, FALSE);
-		}
-		else {
+		} else {
 			_vp_play_normal_view_show_layout(pNormalView);
 		}
 	}
@@ -1930,8 +1905,7 @@ static void __vp_normal_volume_job_cb(void *pUserData)
 				pNormalView->nMomentDefaultVal = nMaxVal;
 			}
 		}
-	}
-	else {
+	} else {
 		if (!vp_play_volume_popup_set_value(pNormalView->pVolumePopupHandle, pNormalView->nMomentDefaultVal - pNormalView->nMomentWeight)) {
 			VideoLogWarning("vp_play_volume_popup_set_value is fail");
 		}
@@ -2007,8 +1981,7 @@ static void __vp_normal_brightness_job_cb(void *pUserData)
 				pNormalView->nMomentDefaultVal = nMaxVal;
 			}
 		}
-	}
-	else {
+	} else {
 		int nMinVal = 0;
 		if (!vp_play_brightness_set_value(pNormalView->pBrightnessHandle, pNormalView->nMomentDefaultVal - pNormalView->nMomentWeight)) {
 			VideoLogWarning("vp_play_brightness_set_value is fail");
@@ -2046,17 +2019,16 @@ static Eina_Bool __vp_normal_momentum_press_timer_cb(void *pUserData)
 	pNormalView->pMomentTimer = NULL;
 	bool bVolumeMode = FALSE;
 
-	if (pNormalView->nGestureStartPosX < (pNormalView->nWindowWidth/2)) {
+	if (pNormalView->nGestureStartPosX < (pNormalView->nWindowWidth / 2)) {
 		bVolumeMode = TRUE;
 	}
 
 	if (bVolumeMode) {
 		VP_EVAS_JOB_DEL(pNormalView->pVolumeJob);
-		pNormalView->pVolumeJob = ecore_job_add(__vp_normal_volume_job_cb,(void *)pNormalView);
-	}
-	else {
+		pNormalView->pVolumeJob = ecore_job_add(__vp_normal_volume_job_cb, (void *)pNormalView);
+	} else {
 		VP_EVAS_JOB_DEL(pNormalView->pBrightnessJob);
-		pNormalView->pBrightnessJob = ecore_job_add(__vp_normal_brightness_job_cb,(void *)pNormalView);
+		pNormalView->pBrightnessJob = ecore_job_add(__vp_normal_brightness_job_cb, (void *)pNormalView);
 	}
 
 	return EINA_FALSE;
@@ -2099,8 +2071,7 @@ static Evas_Event_Flags __vp_normal_gesture_momentum_start_cb(void *pUserData, v
 	if (bLandscape) {
 		pNormalView->nWindowWidth = nHeight;
 		pNormalView->nWindowHeight = nWidth;
-	}
-	else {
+	} else {
 
 		pNormalView->nWindowWidth = nWidth;
 		pNormalView->nWindowHeight = nHeight;
@@ -2115,7 +2086,7 @@ static Evas_Event_Flags __vp_normal_gesture_momentum_start_cb(void *pUserData, v
 		pNormalView->nGestureStartPosX = p->x1;
 		pNormalView->nMomentWeight = 0;
 
-		if (p->x1 < (pNormalView->nWindowWidth/2)) {
+		if (p->x1 < (pNormalView->nWindowWidth / 2)) {
 			bVolumeMode = TRUE;
 		}
 
@@ -2142,8 +2113,7 @@ static Evas_Event_Flags __vp_normal_gesture_momentum_start_cb(void *pUserData, v
 			if (!vp_play_volume_popup_get_max_value(&nMaxVal)) {
 				VideoLogError("vp_play_volume_popup_get_max_value is fail");
 			}
-		}
-		else {
+		} else {
 
 			if (!vp_play_brightness_get_value(&pNormalView->nMomentDefaultVal)) {
 				VideoLogError("vp_play_brightness_get_value is fail");
@@ -2160,15 +2130,14 @@ static Evas_Event_Flags __vp_normal_gesture_momentum_start_cb(void *pUserData, v
 		pNormalView->pMomentTimer = NULL;
 
 		pNormalView->pMomentTimer = ecore_timer_add(VP_NORMAL_MOMENTUM_PRESS_TIMER_INTERVAL,
-				__vp_normal_momentum_press_timer_cb, (void *)pNormalView);
+		                            __vp_normal_momentum_press_timer_cb, (void *)pNormalView);
 
 		if (nMaxVal <= 0) {
 			nMaxVal = 1;
 		}
-		pNormalView->nMomentStep = (pNormalView->nWindowHeight/2) / (nMaxVal-nMinVal);
+		pNormalView->nMomentStep = (pNormalView->nWindowHeight / 2) / (nMaxVal - nMinVal);
 #endif
-	}
-	else	{
+	} else	{
 		pNormalView->nGestureStartPosX = p->x2;
 		pNormalView->nGestureStartPosY = p->y2;
 	}
@@ -2211,7 +2180,7 @@ static Evas_Event_Flags __vp_normal_gesture_momentum_move_cb(void *pUserData, vo
 	if (pNormalView->bZoomEnable == FALSE) {
 #ifdef ENABLE_VOLUME_BRIGHTNESS_POPUP
 		if (pNormalView->pMomentTimer ||
-			pNormalView->bLockScreen) {
+		        pNormalView->bLockScreen) {
 			return EVAS_EVENT_FLAG_NONE;
 		}
 
@@ -2225,7 +2194,7 @@ static Evas_Event_Flags __vp_normal_gesture_momentum_move_cb(void *pUserData, vo
 			pNormalView->nMomentStep = 1;
 		}
 
-		if (p->x1 < (pNormalView->nWindowWidth/2)) {
+		if (p->x1 < (pNormalView->nWindowWidth / 2)) {
 			bVolumeMode = TRUE;
 		}
 
@@ -2257,14 +2226,13 @@ static Evas_Event_Flags __vp_normal_gesture_momentum_move_cb(void *pUserData, vo
 
 		if (bVolumeMode) {
 			VP_EVAS_JOB_DEL(pNormalView->pVolumeJob);
-			pNormalView->pVolumeJob = ecore_job_add(__vp_normal_volume_job_cb,(void *)pNormalView);
+			pNormalView->pVolumeJob = ecore_job_add(__vp_normal_volume_job_cb, (void *)pNormalView);
 		} else {
 			VP_EVAS_JOB_DEL(pNormalView->pBrightnessJob);
-			pNormalView->pBrightnessJob = ecore_job_add(__vp_normal_brightness_job_cb,(void *)pNormalView);
+			pNormalView->pBrightnessJob = ecore_job_add(__vp_normal_brightness_job_cb, (void *)pNormalView);
 		}
 #endif
-	}
-	else {
+	} else {
 		int nDiffX = 0;
 		int nDiffY = 0;
 		int nWidth = 0;
@@ -2285,8 +2253,7 @@ static Evas_Event_Flags __vp_normal_gesture_momentum_move_cb(void *pUserData, vo
 		if (pNormalView->nRotate == VIDEO_PLAY_ROTATE_90 || pNormalView->nRotate == VIDEO_PLAY_ROTATE_270) {
 			rtDst.w = nHeight;
 			rtDst.h = nWidth;
-		}
-		else {
+		} else {
 			rtDst.w = nWidth;
 			rtDst.h = nHeight;
 		}
@@ -2294,8 +2261,8 @@ static Evas_Event_Flags __vp_normal_gesture_momentum_move_cb(void *pUserData, vo
 
 		vp_play_util_calculator_position(rtSrc, rtDst, &rtResult, pNormalView->nDisplayMode);
 
-		fX -= (double)nDiffX/rtResult.w;
-		fY -= (double)nDiffY/rtResult.h;
+		fX -= (double)nDiffX / rtResult.w;
+		fY -= (double)nDiffY / rtResult.h;
 
 		pNormalView->nGestureStartPosX = p->x2;
 		pNormalView->nGestureStartPosY = p->y2;
@@ -2417,7 +2384,7 @@ static Evas_Event_Flags __vp_normal_gesture_zoom_move_cb(void *pUserData, void *
 		return EVAS_EVENT_FLAG_NONE;
 	}
 
-	double fVal = pZoomInfo->zoom/ pNormalView->fActiveZoom;
+	double fVal = pZoomInfo->zoom / pNormalView->fActiveZoom;
 
 	pNormalView->fActiveZoom = pZoomInfo->zoom;
 
@@ -2434,7 +2401,7 @@ static Evas_Event_Flags __vp_normal_gesture_zoom_move_cb(void *pUserData, void *
 	if (pNormalView->nRotate == VIDEO_PLAY_ROTATE_90 || pNormalView->nRotate == VIDEO_PLAY_ROTATE_270) {
 		bLandscape = TRUE;
 	}
-	if (bLandscape && fabs(pNormalView->fPrevZoomValue - pNormalView->fZoomValue)< 0.05) {
+	if (bLandscape && fabs(pNormalView->fPrevZoomValue - pNormalView->fZoomValue) < 0.05) {
 //		VideoLogWarning("same ZoomValue. skip it");
 		return EVAS_EVENT_FLAG_ON_HOLD;
 	}
@@ -2451,7 +2418,7 @@ static Evas_Event_Flags __vp_normal_gesture_zoom_move_cb(void *pUserData, void *
 
 	// event filtering
 	if ((pNormalView->fZoomValue > 1.0 && pNormalView->fZoomValue < 3.0) &&
-	     (pNormalView->nPrevZoomPosX == (int)(fX * nSrcW)) && (pNormalView->nPrevZoomPosY == (int)(fY * nSrcH))) {
+	        (pNormalView->nPrevZoomPosX == (int)(fX * nSrcW)) && (pNormalView->nPrevZoomPosY == (int)(fY * nSrcH))) {
 //		VideoLogWarning("skip same position");
 		return EVAS_EVENT_FLAG_ON_HOLD;
 	}
@@ -2487,7 +2454,7 @@ static Evas_Event_Flags __vp_normal_gesture_zoom_end_cb(void *pUserData, void *p
 		return EVAS_EVENT_FLAG_NONE;
 	}
 
-	double fVal = pZoomInfo->zoom/ pNormalView->fActiveZoom;
+	double fVal = pZoomInfo->zoom / pNormalView->fActiveZoom;
 
 	pNormalView->fActiveZoom = pZoomInfo->zoom;
 
@@ -2564,8 +2531,7 @@ static Evas_Event_Flags __vp_normal_gesture_double_click_end_cb(void *pUserData,
 #ifdef ENABLE_GESTURE_ZOOM_FEATURE
 		_vp_play_normal_view_on_zoom_mode(pNormalView);
 #endif
-	}
-	else if (pEvent->n == 1) {
+	} else if (pEvent->n == 1) {
 
 		if (pNormalView->bLockScreen) {
 			_vp_play_normal_view_show_layout(pNormalView);
@@ -2577,8 +2543,7 @@ static Evas_Event_Flags __vp_normal_gesture_double_click_end_cb(void *pUserData,
 			if (nState == VP_MM_PLAYER_STATE_PLAYING) {
 				vp_mm_player_pause(pNormalView->pPlayerHandle);
 				pNormalView->bManualPause = TRUE;
-			}
-			else {
+			} else {
 				bool bSpeedMode = FALSE;
 
 				if (pNormalView->pSpeedTimer) {
@@ -2598,7 +2563,7 @@ static Evas_Event_Flags __vp_normal_gesture_double_click_end_cb(void *pUserData,
 						if (vp_mm_player_set_position(pNormalView->pPlayerHandle, pNormalView->nCurPosition)) {
 							pNormalView->bSeekComplete = FALSE;
 							pNormalView->nWaitPos = -1;
-						}else {
+						} else {
 							pNormalView->nWaitPos = nPosition;
 						}
 					}
@@ -2689,8 +2654,7 @@ static Eina_Bool __vp_normal_flickjump_seek(void *pUserData, bool rewind)
 		} else {
 			nSetPosition = nCurPosition - 5000;
 		}
-	}
-	else {
+	} else {
 		if (nCurPosition + 5000 > pNormalView->nDuration) {
 			nSetPosition = pNormalView->nDuration;
 		} else {
@@ -2742,10 +2706,11 @@ static void __vp_normal_flickjump_layout_position(void *pUserData)
 			nScreenWidth = 720;
 			nScreenHeight = 1280;
 		}
-		if (pNormalView->bFlickRewind == FALSE)
-			evas_object_move(pNormalView->pFlickJumpSeek, nScreenWidth - (nFlickSeekLeftMargin+nFlickSeekImageWidth/2), (nScreenHeight-nFlickSeekImageHeight/2)/2);
-		else
-			evas_object_move(pNormalView->pFlickJumpSeek, nFlickSeekLeftMargin+nFlickSeekImageWidth/2, (nScreenHeight-nFlickSeekImageHeight/2)/2);
+		if (pNormalView->bFlickRewind == FALSE) {
+			evas_object_move(pNormalView->pFlickJumpSeek, nScreenWidth - (nFlickSeekLeftMargin + nFlickSeekImageWidth / 2), (nScreenHeight - nFlickSeekImageHeight / 2) / 2);
+		} else {
+			evas_object_move(pNormalView->pFlickJumpSeek, nFlickSeekLeftMargin + nFlickSeekImageWidth / 2, (nScreenHeight - nFlickSeekImageHeight / 2) / 2);
+		}
 	}
 }
 
@@ -2757,17 +2722,17 @@ static void __vp_normal_gesture_flick_animation_done_cb(void *data, Evas_Object 
 	}
 	NormalView *pNormalView = (NormalView *)data;
 
-	if (emission)
-	{
-		if (!g_strcmp0(emission, "rew_animation_done") || !g_strcmp0(emission, "ff_animation_done"))
-		{
+	if (emission) {
+		if (!g_strcmp0(emission, "rew_animation_done") || !g_strcmp0(emission, "ff_animation_done")) {
 			if (pNormalView->bFlickWaiting == TRUE) {
 				if (pNormalView->bFlickRewind == TRUE) {
-					if (pNormalView->pFlickJumpSeek)
+					if (pNormalView->pFlickJumpSeek) {
 						elm_object_signal_emit(pNormalView->pFlickJumpSeek, VP_NORMAL_SIGNAL_FLICKJUMP_FF, "*");
+					}
 				} else {
-					if (pNormalView->pFlickJumpSeek)
+					if (pNormalView->pFlickJumpSeek) {
 						elm_object_signal_emit(pNormalView->pFlickJumpSeek, VP_NORMAL_SIGNAL_FLICKJUMP_REW, "*");
+					}
 				}
 			} else {
 				VP_EVAS_DEL(pNormalView->pFlickJumpSeek);
@@ -2804,12 +2769,12 @@ static Evas_Event_Flags __vp_normal_gesture_flick_end_cb(void *pUserData, void *
 	}
 
 	if (pNormalView->nLaunchingType == VIDEO_PLAY_TYPE_WEB &&
-			pNormalView->nLaunchingType == VIDEO_PLAY_TYPE_PREVIEW &&
-			pNormalView->nLaunchingType == VIDEO_PLAY_TYPE_MESSAGE &&
-			pNormalView->nLaunchingType == VIDEO_PLAY_TYPE_EMAIL &&
-			pNormalView->nLaunchingType == VIDEO_PLAY_TYPE_MULTI_PATH) {
-			VideoLogWarning("pNormalView->nLaunchingType : [%d]. not support gesture flick in this mode", pNormalView->nLaunchingType);
-			return EVAS_EVENT_FLAG_NONE;
+	        pNormalView->nLaunchingType == VIDEO_PLAY_TYPE_PREVIEW &&
+	        pNormalView->nLaunchingType == VIDEO_PLAY_TYPE_MESSAGE &&
+	        pNormalView->nLaunchingType == VIDEO_PLAY_TYPE_EMAIL &&
+	        pNormalView->nLaunchingType == VIDEO_PLAY_TYPE_MULTI_PATH) {
+		VideoLogWarning("pNormalView->nLaunchingType : [%d]. not support gesture flick in this mode", pNormalView->nLaunchingType);
+		return EVAS_EVENT_FLAG_NONE;
 	}
 
 	pNormalView->pFlickJumpSeek = elm_layout_add(pNormalView->pMainLayout);
@@ -3034,8 +2999,7 @@ static void __vp_normal_progress_mouse_up_cb(void *pUserData, Evas * e, Evas_Obj
 		if (pNormalView->bSeekComplete == FALSE) {
 			pNormalView->nWaitPos = nCurPos;
 			VideoLogWarning("== REAL SEEK SET == [%d]", pNormalView->nWaitPos);
-		}
-		else {
+		} else {
 			VideoLogWarning("== REAL SEEK == [%d]", nCurPos);
 
 			pNormalView->bBufferingComplete = TRUE;
@@ -3058,8 +3022,7 @@ static void __vp_normal_progress_mouse_up_cb(void *pUserData, Evas * e, Evas_Obj
 	if (pNormalView->bSeekComplete == FALSE) {
 		pNormalView->nWaitPos = nCurPos;
 		VideoLogWarning("== REAL SEEK SET == [%d]", pNormalView->nWaitPos);
-	}
-	else {
+	} else {
 		VideoLogWarning("== REAL SEEK == [%d]", nCurPos);
 		if (vp_mm_player_set_position(pNormalView->pPlayerHandle, nCurPos)) {
 			pNormalView->nWaitPos = -1;
@@ -3143,14 +3106,14 @@ static void __vp_normal_progress_mouse_move_cb(void *pUserData, Evas * e, Evas_O
 	SeekLevel Level = SEEK_LEVEL_NORMAL;
 	dDistance = (pMouseMoveEvent->cur.canvas.x - pNormalView->nPrevCanvasX);
 
-	if (pMouseMoveEvent->cur.canvas.y > (nScreenHeight-nControllerHeight)) {
+	if (pMouseMoveEvent->cur.canvas.y > (nScreenHeight - nControllerHeight)) {
 		Level = SEEK_LEVEL_NORMAL;
-	} else if (pMouseMoveEvent->cur.canvas.y > (nScreenHeight-nControllerHeight-nSeek_Height)) {
+	} else if (pMouseMoveEvent->cur.canvas.y > (nScreenHeight - nControllerHeight - nSeek_Height)) {
 		Level = SEEK_LEVEL_HALF;
-		dDistance = dDistance/2;
+		dDistance = dDistance / 2;
 	} else {
 		Level = SEEK_LEVEL_QUARTER;
-		dDistance = dDistance/4;
+		dDistance = dDistance / 4;
 	}
 
 	pNormalView->nPrevCanvasX = (double)pMouseMoveEvent->cur.canvas.x;
@@ -3187,18 +3150,18 @@ static void __vp_normal_progress_mouse_move_cb(void *pUserData, Evas * e, Evas_O
 			edje_object_size_min_restricted_calc(_EDJ(pNormalView->pMicroSeekTextLayout), &nTextWidth, &nTextHeight, nTextWidth, nTextHeight);
 			evas_object_resize(pNormalView->pMicroSeekTextLayout, nTextWidth, nTextHeight);
 
-			int nTextPositionX = (int)pNormalView->nPrevPositionX - nTextWidth/2;
+			int nTextPositionX = (int)pNormalView->nPrevPositionX - nTextWidth / 2;
 
-			if (nTextPositionX <0)
+			if (nTextPositionX < 0) {
 				nTextPositionX = 0;
-			else if (nTextPositionX + nTextWidth > nScreenWidth) {
+			} else if (nTextPositionX + nTextWidth > nScreenWidth) {
 				nTextPositionX = nScreenWidth - nTextWidth;
 			}
 
 			if (Level == SEEK_LEVEL_HALF) {
-				evas_object_move(pNormalView->pMicroSeekTextLayout, nTextPositionX, nScreenHeight-nControllerHeight-nSeek_Height);
+				evas_object_move(pNormalView->pMicroSeekTextLayout, nTextPositionX, nScreenHeight - nControllerHeight - nSeek_Height);
 			} else if (Level == SEEK_LEVEL_QUARTER) {
-				evas_object_move(pNormalView->pMicroSeekTextLayout, nTextPositionX, nScreenHeight-nControllerHeight-nSeek_Height*2);
+				evas_object_move(pNormalView->pMicroSeekTextLayout, nTextPositionX, nScreenHeight - nControllerHeight - nSeek_Height * 2);
 			}
 			elm_object_signal_emit(pNormalView->pMicroSeekTextLayout, VP_NORMAL_SIGNAL_MICROSEEK_TEXT_SHOW, "*");
 			evas_object_show(pNormalView->pMicroSeekTextLayout);
@@ -3211,28 +3174,28 @@ static void __vp_normal_progress_mouse_move_cb(void *pUserData, Evas * e, Evas_O
 				edje_object_size_min_restricted_calc(_EDJ(pNormalView->pMicroSeekImageLayout), &nImageWidth, &nImageHeight, nImageWidth, nImageHeight);
 				evas_object_resize(pNormalView->pMicroSeekImageLayout, nImageWidth, nImageHeight);
 
-				int nImagePositionX = (int)pNormalView->nPrevPositionX - nImageWidth/2;
+				int nImagePositionX = (int)pNormalView->nPrevPositionX - nImageWidth / 2;
 
 				int nImageLeftPadding = 0;
 				int nImageRightPadding = 0;
 				if (bLandscape) {
-					nImageLeftPadding = 28+112;
-					nImageRightPadding = 28+162;
+					nImageLeftPadding = 28 + 112;
+					nImageRightPadding = 28 + 162;
 				} else {
 					nImageLeftPadding = 6;
 					nImageRightPadding = 26;
 				}
 
-				if (nImagePositionX < nImageLeftPadding)
+				if (nImagePositionX < nImageLeftPadding) {
 					nImagePositionX = nImageLeftPadding;
-				else if (nImagePositionX > nScreenWidth-nImageRightPadding) {
-					nImagePositionX = nScreenWidth-nImageRightPadding;
+				} else if (nImagePositionX > nScreenWidth - nImageRightPadding) {
+					nImagePositionX = nScreenWidth - nImageRightPadding;
 				}
 
 				if (Level == SEEK_LEVEL_HALF) {
-					evas_object_move(pNormalView->pMicroSeekImageLayout, nImagePositionX, nScreenHeight-nControllerHeight-nSeek_Height + nTextHeight + 6);
+					evas_object_move(pNormalView->pMicroSeekImageLayout, nImagePositionX, nScreenHeight - nControllerHeight - nSeek_Height + nTextHeight + 6);
 				} else if (Level == SEEK_LEVEL_QUARTER) {
-					evas_object_move(pNormalView->pMicroSeekImageLayout, nImagePositionX, nScreenHeight-nControllerHeight-nSeek_Height*2 + nTextHeight + 6);
+					evas_object_move(pNormalView->pMicroSeekImageLayout, nImagePositionX, nScreenHeight - nControllerHeight - nSeek_Height * 2 + nTextHeight + 6);
 				}
 				elm_object_signal_emit(pNormalView->pMicroSeekImageLayout, VP_NORMAL_SIGNAL_MICROSEEK_IMAGE_SHOW, "*");
 				evas_object_show(pNormalView->pMicroSeekImageLayout);
@@ -3251,14 +3214,13 @@ static void __vp_normal_progress_mouse_move_cb(void *pUserData, Evas * e, Evas_O
 	vp_play_progressbar_set_position(pNormalView->pProgressbar, nCurPos);
 
 	if (pNormalView->nLaunchingType == VIDEO_PLAY_TYPE_WEB ||
-		pNormalView->nLaunchingType == VIDEO_PLAY_TYPE_MULTI_PATH) {
-			return;
+	        pNormalView->nLaunchingType == VIDEO_PLAY_TYPE_MULTI_PATH) {
+		return;
 	}
 
 	if (pNormalView->bSeekComplete == FALSE) {
 		pNormalView->nWaitPos = nCurPos;
-	}
-	else {
+	} else {
 		VideoLogWarning("== I FRMAE SEEK == [%d]", nCurPos);
 		if (vp_mm_player_set_position_by_key_frame(pNormalView->pPlayerHandle, nCurPos)) {
 			pNormalView->nWaitPos = -1;
@@ -3284,10 +3246,12 @@ static void __vp_normal_focus_key_down_cb(void *pUserData, Evas * e, Evas_Object
 
 	Evas_Event_Key_Down *ev = pEvent;
 
-	if (!ev)
+	if (!ev) {
 		return;
-	if (ev->event_flags & EVAS_EVENT_FLAG_ON_HOLD)
+	}
+	if (ev->event_flags & EVAS_EVENT_FLAG_ON_HOLD) {
 		return;
+	}
 
 	VideoLogInfo("KEY: %s", ev->keyname);
 
@@ -3321,10 +3285,12 @@ static void __vp_normal_focus_key_up_cb(void *pUserData, Evas * e, Evas_Object *
 
 	Evas_Event_Key_Down *ev = pEvent;
 
-	if (!ev)
+	if (!ev) {
 		return;
-	if (ev->event_flags & EVAS_EVENT_FLAG_ON_HOLD)
+	}
+	if (ev->event_flags & EVAS_EVENT_FLAG_ON_HOLD) {
 		return;
+	}
 
 	VideoLogInfo("KEY: %s", ev->keyname);
 
@@ -3377,12 +3343,12 @@ static void __vp_normal_bookmark_capture_cb(void *pUserData)
 
 		VP_EVAS_DEL(pNormalView->pPopup);
 		pNormalView->pPopup = vp_popup_create(pPlayView->pWin,
-								POPUP_STYLE_DEFAULT_NO_CANCEL_BTN,
-								VP_PLAY_STRING_COM_ERROR,
-								VP_PLAY_STRING_ERROR_BOOKMARK_LIST_FULL,
-								3.0, __vp_normal_popup_time_out_cb,
-								NULL, NULL,
-								pNormalView);
+		                                      POPUP_STYLE_DEFAULT_NO_CANCEL_BTN,
+		                                      VP_PLAY_STRING_COM_ERROR,
+		                                      VP_PLAY_STRING_ERROR_BOOKMARK_LIST_FULL,
+		                                      3.0, __vp_normal_popup_time_out_cb,
+		                                      NULL, NULL,
+		                                      pNormalView);
 		evas_object_show(pNormalView->pPopup);
 		pNormalView->bIsPopupShow = TRUE;
 
@@ -3401,12 +3367,12 @@ static void __vp_normal_bookmark_capture_cb(void *pUserData)
 
 		VP_EVAS_DEL(pNormalView->pPopup);
 		pNormalView->pPopup = vp_popup_create(pPlayView->pWin,
-								POPUP_STYLE_DEFAULT_NO_CANCEL_BTN,
-								VP_PLAY_STRING_COM_ERROR,
-								VP_PLAY_STRING_COM_ENOUGH_MEMORY,
-								3.0, __vp_normal_popup_time_out_cb,
-								NULL, NULL,
-								pNormalView);
+		                                      POPUP_STYLE_DEFAULT_NO_CANCEL_BTN,
+		                                      VP_PLAY_STRING_COM_ERROR,
+		                                      VP_PLAY_STRING_COM_ENOUGH_MEMORY,
+		                                      3.0, __vp_normal_popup_time_out_cb,
+		                                      NULL, NULL,
+		                                      pNormalView);
 		evas_object_show(pNormalView->pPopup);
 		pNormalView->bIsPopupShow = TRUE;
 
@@ -3437,8 +3403,7 @@ static void __vp_normal_bookmark_item_select_cb(int nPos, const char *szPath, vo
 
 	if (pNormalView->bSeekComplete == FALSE) {
 		pNormalView->nWaitPos = nPos;
-	}
-	else {
+	} else {
 		if (vp_mm_player_set_position(pNormalView->pPlayerHandle, nPos)) {
 			pNormalView->nWaitPos = -1;
 			pNormalView->bSeekComplete = FALSE;
@@ -3509,11 +3474,11 @@ static Eina_Bool __vp_normal_hide_layout_finish_timer_cb(void *pUserData)
 	pNormalView->pHideFinishTimer = NULL;
 
 	if (pNormalView->pImageBufferObj == NULL &&
-		pNormalView->bIsPopupShow == FALSE &&
-		pNormalView->bIsSubtitleShow == FALSE &&
-		pPlayView->bMouseOut == FALSE &&
-		pNormalView->bVideoOnlyMode == FALSE &&
-		pNormalView->bCaptureMode == FALSE) {
+	        pNormalView->bIsPopupShow == FALSE &&
+	        pNormalView->bIsSubtitleShow == FALSE &&
+	        pPlayView->bMouseOut == FALSE &&
+	        pNormalView->bVideoOnlyMode == FALSE &&
+	        pNormalView->bCaptureMode == FALSE) {
 		vp_play_util_fb_visible_off(pPlayView->pWin, FALSE);
 	}
 	vp_device_set_frame_rate(40);
@@ -3536,7 +3501,7 @@ static Eina_Bool __vp_normal_subtitle_timer_cb(void *pUserData)
 	}
 
 	if (nPosition > pNormalView->dSubtitleStartTime &&
-		nPosition < pNormalView->dSubtitleEndTime) {
+	        nPosition < pNormalView->dSubtitleEndTime) {
 		return EINA_TRUE;
 	}
 
@@ -3598,16 +3563,16 @@ static Eina_Bool __vp_normal_dlna_speed_timer_cb(void *pUserData)
 	pNormalView->bIsPopupShow = TRUE;
 
 	pNormalView->pPopup = vp_popup_create(pPlayView->pWin, POPUP_STYLE_DEFAULT_WITH_CANCEL_BTN,
-						NULL,
-						VP_PLAY_STRING_UNABLE_TO_FF_REW,
-						0.0, NULL,
-						__vp_normal_popup_key_event_cb,
-						__vp_normal_popup_mouse_event_cb,
-						pNormalView);
+	                                      NULL,
+	                                      VP_PLAY_STRING_UNABLE_TO_FF_REW,
+	                                      0.0, NULL,
+	                                      __vp_normal_popup_key_event_cb,
+	                                      __vp_normal_popup_mouse_event_cb,
+	                                      pNormalView);
 
- 	Evas_Object *pBtn = NULL;
+	Evas_Object *pBtn = NULL;
 	pBtn = elm_button_add(pNormalView->pPopup);
-	elm_object_style_set (pBtn, "popup_button/default");
+	elm_object_style_set(pBtn, "popup_button/default");
 	elm_object_domain_translatable_text_set(pBtn, VP_SYS_STR_PREFIX, VP_PLAY_STRING_COM_OK_IDS);
 	elm_object_part_content_set(pNormalView->pPopup, "button1", pBtn);
 	evas_object_smart_callback_add(pBtn, "clicked", __vp_normal_popup_key_event_cb, (void*)pNormalView);
@@ -3679,7 +3644,7 @@ static Eina_Bool __vp_normal_speed_timer_cb(void *pUserData)
 		return EINA_TRUE;
 	}
 
-	if (pNormalView->nSpeedValue >1) {
+	if (pNormalView->nSpeedValue > 1) {
 		// during FAST FF/REW moving(player state is paused). don't allow sleep mode
 		vp_play_util_set_lock_power_key();
 	}
@@ -3724,8 +3689,7 @@ static Eina_Bool __vp_normal_speed_timer_cb(void *pUserData)
 
 	if (pNormalView->bSpeedFF) {
 		nSetPosition = nCurPosition  + (nStep * 1000);
-	}
-	else {
+	} else {
 		nSetPosition = nCurPosition  - (nStep * 1000);
 	}
 
@@ -3740,8 +3704,9 @@ static Eina_Bool __vp_normal_speed_timer_cb(void *pUserData)
 		VP_EVAS_TIMER_DEL(pNormalView->pSpeedTimer);
 		elm_object_signal_emit(pNormalView->pMainLayout, VP_NORMAL_SIGNAL_MAIN_SPEED_HIDE, "*");
 	}
-	if (pNormalView->pProgressTimer)
+	if (pNormalView->pProgressTimer) {
 		VP_EVAS_TIMER_DEL(pNormalView->pProgressTimer);
+	}
 
 	if (vp_mm_player_set_position_by_key_frame(pNormalView->pPlayerHandle, nSetPosition)) {
 		pNormalView->bSeekComplete = FALSE;
@@ -3788,18 +3753,16 @@ static void  __vp_normal_hide_finish_cb(void *pUserData, Evas_Object *pObj, cons
 	VP_EVAS_TIMER_DEL(pNormalView->pHideFinishTimer);
 
 	pNormalView->pHideFinishTimer = ecore_timer_add(VP_NORMAL_HIDE_LAYOUT_FINISH_TIMER_INTERVAL,
-						__vp_normal_hide_layout_finish_timer_cb, (void *)pNormalView);
+	                                __vp_normal_hide_layout_finish_timer_cb, (void *)pNormalView);
 
 #ifndef SUBTITLE_K_FEATURE
 	if (pNormalView->nDisplayMode != VP_MM_PLAYER_DISPLAY_FULL_SCREEN) {
 		if (pNormalView->nRotate == VIDEO_PLAY_ROTATE_NONE || pNormalView->nRotate == VIDEO_PLAY_ROTATE_180) {
 			elm_object_signal_emit(pNormalView->pMainLayout, VP_NORMAL_SIGNAL_MAIN_SUBTITLE_PORTRAIT, "*");
- 		}
-		else {
+		} else {
 			elm_object_signal_emit(pNormalView->pMainLayout, VP_NORMAL_SIGNAL_MAIN_SUBTITLE_HIDE, "*");
 		}
-	}
-	else {
+	} else {
 		elm_object_signal_emit(pNormalView->pMainLayout, VP_NORMAL_SIGNAL_MAIN_SUBTITLE_HIDE, "*");
 	}
 #endif
@@ -3873,7 +3836,7 @@ static void __vp_normal_prepare_cb(void *pUserData)
 	}
 }
 
-static void __vp_normal_completed_cb (void *pUserData)
+static void __vp_normal_completed_cb(void *pUserData)
 {
 	if (!pUserData) {
 		VideoLogError("pUserData is NULL");
@@ -3894,21 +3857,20 @@ static void __vp_normal_completed_cb (void *pUserData)
 #endif
 
 	if (pNormalView->nLaunchingType != VIDEO_PLAY_TYPE_WEB &&
-		pNormalView->nLaunchingType != VIDEO_PLAY_TYPE_PREVIEW &&
-		pNormalView->nLaunchingType != VIDEO_PLAY_TYPE_MESSAGE &&
-		pNormalView->nLaunchingType != VIDEO_PLAY_TYPE_EMAIL &&
-		pNormalView->nLaunchingType != VIDEO_PLAY_TYPE_MULTI_PATH) {
+	        pNormalView->nLaunchingType != VIDEO_PLAY_TYPE_PREVIEW &&
+	        pNormalView->nLaunchingType != VIDEO_PLAY_TYPE_MESSAGE &&
+	        pNormalView->nLaunchingType != VIDEO_PLAY_TYPE_EMAIL &&
+	        pNormalView->nLaunchingType != VIDEO_PLAY_TYPE_MULTI_PATH) {
 		vp_media_contents_set_played_position(pNormalView->szMediaURL, 0);
-	}
-	else if (pNormalView->nLaunchingType == VIDEO_PLAY_TYPE_MULTI_PATH) {
+	} else if (pNormalView->nLaunchingType == VIDEO_PLAY_TYPE_MULTI_PATH) {
 		vp_multi_path_set_item_position(pNormalView->szMediaURL, 0, pPlayView->pMultiPathList);
 	}
 
 	vp_mm_player_unrealize(pNormalView->pPlayerHandle);
 
 	if (pNormalView->nLaunchingType == VIDEO_PLAY_TYPE_MESSAGE ||
-		pNormalView->nLaunchingType == VIDEO_PLAY_TYPE_EMAIL ||
-		pNormalView->nLaunchingType == VIDEO_PLAY_TYPE_PREVIEW) {
+	        pNormalView->nLaunchingType == VIDEO_PLAY_TYPE_EMAIL ||
+	        pNormalView->nLaunchingType == VIDEO_PLAY_TYPE_PREVIEW) {
 		if (!pPlayView->pFunc) {
 			VideoLogError("pPlayView pFunc is NULL");
 			return;
@@ -3949,8 +3911,7 @@ static void __vp_play_normal_view_seek_pipe_cb(void *pUserData, void *pBuf, int 
 				pNormalView->nWaitPos = -1;
 				return;
 			}
-		}
-		else {
+		} else {
 			VideoLogWarning("== REAL SEEK ==[%d]", pNormalView->nWaitPos);
 			if (vp_mm_player_set_position(pNormalView->pPlayerHandle, pNormalView->nWaitPos)) {
 				pNormalView->bSeekComplete = FALSE;
@@ -3962,7 +3923,7 @@ static void __vp_play_normal_view_seek_pipe_cb(void *pUserData, void *pBuf, int 
 	}
 }
 
-static void __vp_normal_seek_completed_cb (void *pUserData)
+static void __vp_normal_seek_completed_cb(void *pUserData)
 {
 	if (!pUserData) {
 		VideoLogError("pUserData is NULL");
@@ -4026,14 +3987,13 @@ static void __vp_normal_seek_completed_cb (void *pUserData)
 			return;
 		}
 
-		if (pNormalView->bManualPause|| pNormalView->bSharepopup) {
+		if (pNormalView->bManualPause || pNormalView->bSharepopup) {
 			vp_mm_player_pause(pNormalView->pPlayerHandle);
-		}
-		else {
+		} else {
 			vp_mm_player_play(pNormalView->pPlayerHandle);
 		}
 
-		if (!vp_mm_player_set_subtitle_position(pNormalView->pPlayerHandle, pNormalView->fSubtitleSyncValue*1000)) {
+		if (!vp_mm_player_set_subtitle_position(pNormalView->pPlayerHandle, pNormalView->fSubtitleSyncValue * 1000)) {
 			VideoLogError("vp_mm_player_set_subtitle_position is fail");
 		}
 
@@ -4073,15 +4033,15 @@ static void __vp_normal_seek_completed_cb (void *pUserData)
 	}
 
 	if (pNormalView->bManualPause == FALSE &&
-		pNormalView->bProgressDown == FALSE &&
-		!pNormalView->pSpeedTimer) {
+	        pNormalView->bProgressDown == FALSE &&
+	        !pNormalView->pSpeedTimer) {
 		vp_mm_player_play(pNormalView->pPlayerHandle);
 		_vp_play_normal_view_set_play_state(pNormalView);
 		_vp_play_normal_view_on_capture_mode(pNormalView);
 	}
 
 }
-static void __vp_normal_interrupted_cb (vp_mm_player_interrupt_t nCode, void *pUserData)
+static void __vp_normal_interrupted_cb(vp_mm_player_interrupt_t nCode, void *pUserData)
 {
 	if (!pUserData) {
 		VideoLogError("pUserData is NULL");
@@ -4096,19 +4056,16 @@ static void __vp_normal_interrupted_cb (vp_mm_player_interrupt_t nCode, void *pU
 		if (pNormalView->bManualPause == FALSE) {
 			vp_mm_player_play(pNormalView->pPlayerHandle);
 		}
-	}
-	else if (nCode == VP_MM_PLAYER_INTERRUPTED_BY_MEDIA) {
+	} else if (nCode == VP_MM_PLAYER_INTERRUPTED_BY_MEDIA) {
 		pNormalView->bManualPause = TRUE;
-	}
-	else if (nCode == VP_MM_PLAYER_INTERRUPTED_BY_EARJACK_UNPLUG) {
+	} else if (nCode == VP_MM_PLAYER_INTERRUPTED_BY_EARJACK_UNPLUG) {
 		if (pNormalView->bDeviceRemoveInterrupt) {
 			if (pNormalView->bManualPause == FALSE) {
 				vp_mm_player_play(pNormalView->pPlayerHandle);
 			}
 			pNormalView->bDeviceRemoveInterrupt = FALSE;
 		}
-	}
-	else if (nCode == VP_MM_PLAYER_INTERRUPTED_BY_RESOURCE_CONFLICT) {
+	} else if (nCode == VP_MM_PLAYER_INTERRUPTED_BY_RESOURCE_CONFLICT) {
 
 		PlayView *pPlayView = pNormalView->pPlayView;
 		if (!pPlayView) {
@@ -4129,7 +4086,7 @@ static void __vp_normal_interrupted_cb (vp_mm_player_interrupt_t nCode, void *pU
 	_vp_play_normal_view_on_capture_mode(pNormalView);
 }
 
-static void __vp_normal_error_cb (vp_mm_player_error_t nError, void *pUserData)
+static void __vp_normal_error_cb(vp_mm_player_error_t nError, void *pUserData)
 {
 	if (!pUserData) {
 		VideoLogError("pUserData is NULL");
@@ -4149,123 +4106,122 @@ static void __vp_normal_error_cb (vp_mm_player_error_t nError, void *pUserData)
 		return;
 	}
 	Evas_Object *pParent = pPlayView->pWin;
-	switch (nError)
-	{
-		case VP_MM_PLAYER_ERR_OUT_OF_MEMORY:
-		case VP_MM_PLAYER_ERR_INVALID_OPERATION:
-		case VP_MM_PLAYER_ERR_FILE_NO_SPACE_ON_DEVICE:
-			case VP_MM_PLAYER_ERR_INVALID_PARAMETER:
-			pNormalView->pPopup = vp_popup_create(pParent,
-								POPUP_STYLE_DEFAULT_NO_CANCEL_BTN,
-								VP_PLAY_STRING_COM_ERROR,
-								VP_PLAY_STRING_ERROR_UNABLE_PLAY,
-								3.0, __vp_normal_error_popup_time_out_cb,
-								__vp_normal_error_popup_key_event_cb,
-								__vp_normal_error_popup_mouse_event_cb,
-								pNormalView);
-			evas_object_show(pNormalView->pPopup);
-			pNormalView->bIsPopupShow = TRUE;
+	switch (nError) {
+	case VP_MM_PLAYER_ERR_OUT_OF_MEMORY:
+	case VP_MM_PLAYER_ERR_INVALID_OPERATION:
+	case VP_MM_PLAYER_ERR_FILE_NO_SPACE_ON_DEVICE:
+	case VP_MM_PLAYER_ERR_INVALID_PARAMETER:
+		pNormalView->pPopup = vp_popup_create(pParent,
+		                                      POPUP_STYLE_DEFAULT_NO_CANCEL_BTN,
+		                                      VP_PLAY_STRING_COM_ERROR,
+		                                      VP_PLAY_STRING_ERROR_UNABLE_PLAY,
+		                                      3.0, __vp_normal_error_popup_time_out_cb,
+		                                      __vp_normal_error_popup_key_event_cb,
+		                                      __vp_normal_error_popup_mouse_event_cb,
+		                                      pNormalView);
+		evas_object_show(pNormalView->pPopup);
+		pNormalView->bIsPopupShow = TRUE;
 
-			break;
-		case VP_MM_PLAYER_ERR_NO_SUCH_FILE:
-			pNormalView->pPopup = vp_popup_create(pParent,
-								POPUP_STYLE_DEFAULT_NO_CANCEL_BTN,
-								VP_PLAY_STRING_COM_ERROR,
-								VP_PLAY_STRING_ERROR_FILE_NOT_EXIST,
-								3.0, __vp_normal_error_popup_time_out_cb,
-								__vp_normal_error_popup_key_event_cb,
-								__vp_normal_error_popup_mouse_event_cb,
-								pNormalView);
-			evas_object_show(pNormalView->pPopup);
-			pNormalView->bIsPopupShow = TRUE;
+		break;
+	case VP_MM_PLAYER_ERR_NO_SUCH_FILE:
+		pNormalView->pPopup = vp_popup_create(pParent,
+		                                      POPUP_STYLE_DEFAULT_NO_CANCEL_BTN,
+		                                      VP_PLAY_STRING_COM_ERROR,
+		                                      VP_PLAY_STRING_ERROR_FILE_NOT_EXIST,
+		                                      3.0, __vp_normal_error_popup_time_out_cb,
+		                                      __vp_normal_error_popup_key_event_cb,
+		                                      __vp_normal_error_popup_mouse_event_cb,
+		                                      pNormalView);
+		evas_object_show(pNormalView->pPopup);
+		pNormalView->bIsPopupShow = TRUE;
 
-			break;
+		break;
 
 
-		case VP_MM_PLAYER_ERR_SEEK_FAILED:
-			VideoLogWarning("VP_MM_PLAYER_ERR_SEEK_FAILED");
-			break;
-		case VP_MM_PLAYER_ERR_INVALID_STATE:
-			VideoLogWarning("VP_MM_PLAYER_ERR_INVALID_STATE");
-			break;
-		case VP_MM_PLAYER_ERR_SOUND_POLICY:
-			VideoLogWarning("VP_MM_PLAYER_ERR_SOUND_POLICY");
-			break;
-		case VP_MM_PLAYER_ERR_VIDEO_CAPTUR_FAILED:
-			VideoLogWarning("VP_MM_PLAYER_ERR_VIDEO_CAPTUR_FAILED");
-			break;
-		case VP_MM_PLAYER_ERR_NOT_SUPPORTED_FILE:
-			pNormalView->pPopup = vp_popup_create(pParent,
-								POPUP_STYLE_DEFAULT_NO_CANCEL_BTN,
-								VP_PLAY_STRING_COM_ERROR,
-								VP_PLAY_STRING_ERROR_UNSUPPORTED_FORMAT,
-								3.0, __vp_normal_error_popup_time_out_cb,
-								__vp_normal_error_popup_key_event_cb,
-								__vp_normal_error_popup_mouse_event_cb,
-								pNormalView);
-			evas_object_show(pNormalView->pPopup);
-			pNormalView->bIsPopupShow = TRUE;
-			break;
-		case VP_MM_PLAYER_ERR_INVALID_URI:
-			pNormalView->pPopup = vp_popup_create(pParent,
-								POPUP_STYLE_DEFAULT_NO_CANCEL_BTN,
-								VP_PLAY_STRING_COM_ERROR,
-								VP_PLAY_STRING_ERROR_INVALID_URL,
-								3.0, __vp_normal_error_popup_time_out_cb,
-								__vp_normal_error_popup_key_event_cb,
-								__vp_normal_error_popup_mouse_event_cb,
-								pNormalView);
-			evas_object_show(pNormalView->pPopup);
-			pNormalView->bIsPopupShow = TRUE;
-			break;
+	case VP_MM_PLAYER_ERR_SEEK_FAILED:
+		VideoLogWarning("VP_MM_PLAYER_ERR_SEEK_FAILED");
+		break;
+	case VP_MM_PLAYER_ERR_INVALID_STATE:
+		VideoLogWarning("VP_MM_PLAYER_ERR_INVALID_STATE");
+		break;
+	case VP_MM_PLAYER_ERR_SOUND_POLICY:
+		VideoLogWarning("VP_MM_PLAYER_ERR_SOUND_POLICY");
+		break;
+	case VP_MM_PLAYER_ERR_VIDEO_CAPTUR_FAILED:
+		VideoLogWarning("VP_MM_PLAYER_ERR_VIDEO_CAPTUR_FAILED");
+		break;
+	case VP_MM_PLAYER_ERR_NOT_SUPPORTED_FILE:
+		pNormalView->pPopup = vp_popup_create(pParent,
+		                                      POPUP_STYLE_DEFAULT_NO_CANCEL_BTN,
+		                                      VP_PLAY_STRING_COM_ERROR,
+		                                      VP_PLAY_STRING_ERROR_UNSUPPORTED_FORMAT,
+		                                      3.0, __vp_normal_error_popup_time_out_cb,
+		                                      __vp_normal_error_popup_key_event_cb,
+		                                      __vp_normal_error_popup_mouse_event_cb,
+		                                      pNormalView);
+		evas_object_show(pNormalView->pPopup);
+		pNormalView->bIsPopupShow = TRUE;
+		break;
+	case VP_MM_PLAYER_ERR_INVALID_URI:
+		pNormalView->pPopup = vp_popup_create(pParent,
+		                                      POPUP_STYLE_DEFAULT_NO_CANCEL_BTN,
+		                                      VP_PLAY_STRING_COM_ERROR,
+		                                      VP_PLAY_STRING_ERROR_INVALID_URL,
+		                                      3.0, __vp_normal_error_popup_time_out_cb,
+		                                      __vp_normal_error_popup_key_event_cb,
+		                                      __vp_normal_error_popup_mouse_event_cb,
+		                                      pNormalView);
+		evas_object_show(pNormalView->pPopup);
+		pNormalView->bIsPopupShow = TRUE;
+		break;
 
-		case VP_MM_PLAYER_ERR_CONNECTION_FAILED:
-			pNormalView->pPopup = vp_popup_create(pParent,
-								POPUP_STYLE_DEFAULT_NO_CANCEL_BTN,
-								VP_PLAY_STRING_COM_ERROR,
-								VP_PLAY_STRING_ERROR_CONNECTION_FAILED,
-								3.0, __vp_normal_error_popup_time_out_cb,
-								__vp_normal_error_popup_key_event_cb,
-								__vp_normal_error_popup_mouse_event_cb,
-								pNormalView);
-			evas_object_show(pNormalView->pPopup);
-			pNormalView->bIsPopupShow = TRUE;
-			break;
-		case VP_MM_PLAYER_ERR_DRM_EXPIRED:
-		case VP_MM_PLAYER_ERR_DRM_FUTURE_USE:
-			VideoLogWarning("DRM BUG");
-			pNormalView->pPopup = vp_popup_create(pParent,
-								POPUP_STYLE_DEFAULT_NO_CANCEL_BTN,
-								VP_PLAY_STRING_COM_ERROR,
-								VP_PLAY_STRING_ERROR_UNABLE_PLAY,
-								3.0, __vp_normal_error_popup_time_out_cb,
-								__vp_normal_error_popup_key_event_cb,
-								__vp_normal_error_popup_mouse_event_cb,
-								pNormalView);
-			evas_object_show(pNormalView->pPopup);
-			pNormalView->bIsPopupShow = TRUE;
-			break;
-		case VP_MM_PLAYER_ERR_DRM_NO_LICENSE:
-			pNormalView->pPopup = vp_popup_create(pPlayView->pWin, POPUP_STYLE_DEFAULT_NO_CANCEL_BTN,
-								VP_PLAY_STRING_COM_ERROR,
-								VP_PLAY_STRING_DIVX_DRM_AUTHORIZATION_ERROR,
-								3.0, __vp_normal_error_popup_time_out_cb,
-								__vp_normal_error_popup_key_event_cb,
-								__vp_normal_error_popup_mouse_event_cb,
-								pNormalView);
-			evas_object_show(pNormalView->pPopup);
-			pNormalView->bIsPopupShow = TRUE;
-			break;
-		default:
-			VideoLogWarning("UNKNOWN TYPE : %d", nError);
-			break;
+	case VP_MM_PLAYER_ERR_CONNECTION_FAILED:
+		pNormalView->pPopup = vp_popup_create(pParent,
+		                                      POPUP_STYLE_DEFAULT_NO_CANCEL_BTN,
+		                                      VP_PLAY_STRING_COM_ERROR,
+		                                      VP_PLAY_STRING_ERROR_CONNECTION_FAILED,
+		                                      3.0, __vp_normal_error_popup_time_out_cb,
+		                                      __vp_normal_error_popup_key_event_cb,
+		                                      __vp_normal_error_popup_mouse_event_cb,
+		                                      pNormalView);
+		evas_object_show(pNormalView->pPopup);
+		pNormalView->bIsPopupShow = TRUE;
+		break;
+	case VP_MM_PLAYER_ERR_DRM_EXPIRED:
+	case VP_MM_PLAYER_ERR_DRM_FUTURE_USE:
+		VideoLogWarning("DRM BUG");
+		pNormalView->pPopup = vp_popup_create(pParent,
+		                                      POPUP_STYLE_DEFAULT_NO_CANCEL_BTN,
+		                                      VP_PLAY_STRING_COM_ERROR,
+		                                      VP_PLAY_STRING_ERROR_UNABLE_PLAY,
+		                                      3.0, __vp_normal_error_popup_time_out_cb,
+		                                      __vp_normal_error_popup_key_event_cb,
+		                                      __vp_normal_error_popup_mouse_event_cb,
+		                                      pNormalView);
+		evas_object_show(pNormalView->pPopup);
+		pNormalView->bIsPopupShow = TRUE;
+		break;
+	case VP_MM_PLAYER_ERR_DRM_NO_LICENSE:
+		pNormalView->pPopup = vp_popup_create(pPlayView->pWin, POPUP_STYLE_DEFAULT_NO_CANCEL_BTN,
+		                                      VP_PLAY_STRING_COM_ERROR,
+		                                      VP_PLAY_STRING_DIVX_DRM_AUTHORIZATION_ERROR,
+		                                      3.0, __vp_normal_error_popup_time_out_cb,
+		                                      __vp_normal_error_popup_key_event_cb,
+		                                      __vp_normal_error_popup_mouse_event_cb,
+		                                      pNormalView);
+		evas_object_show(pNormalView->pPopup);
+		pNormalView->bIsPopupShow = TRUE;
+		break;
+	default:
+		VideoLogWarning("UNKNOWN TYPE : %d", nError);
+		break;
 	}
 
 }
 
 static void _vp_normal_view_loading_ani_layout_del_cb(void *data, Evas *e,
-					      Evas_Object *obj,
-					      void *event_info)
+        Evas_Object *obj,
+        void *event_info)
 {
 	if (!data) {
 		VideoLogError("pNormalView is NULL");
@@ -4303,7 +4259,7 @@ static bool _vp_play_normal_view_create_loading_ani(NormalView *pNormalView)
 	return TRUE;
 }
 
-static void __vp_normal_buffering_cb (int nPercent, void *pUserData)
+static void __vp_normal_buffering_cb(int nPercent, void *pUserData)
 {
 	if (!pUserData) {
 		VideoLogError("pUserData is NULL");
@@ -4339,16 +4295,14 @@ static void __vp_normal_buffering_cb (int nPercent, void *pUserData)
 				if (pNormalView->bManualPause || pPlayView->bActivate == FALSE) {
 					vp_mm_player_set_visible(pNormalView->pPlayerHandle, TRUE);
 					vp_mm_player_pause(pNormalView->pPlayerHandle);
-				}
-				else {
+				} else {
 					vp_mm_player_play(pNormalView->pPlayerHandle);
 				}
 				_vp_play_normal_view_set_play_state(pNormalView);
 				_vp_play_normal_view_on_capture_mode(pNormalView);
 			}
 		}
-	}
-	else {
+	} else {
 		pNormalView->bBufferingComplete = FALSE;
 		if (pNormalView->bManualPause == FALSE) {
 			vp_play_util_set_lock_power_key();
@@ -4365,7 +4319,7 @@ static void __vp_normal_buffering_cb (int nPercent, void *pUserData)
 	}
 }
 
-static void __vp_normal_subtitle_updated_cb (unsigned long nDuration, char *text, void *pUserData)
+static void __vp_normal_subtitle_updated_cb(unsigned long nDuration, char *text, void *pUserData)
 {
 	if (!pUserData) {
 		VideoLogError("pUserData is NULL");
@@ -4410,7 +4364,7 @@ static void __vp_normal_subtitle_updated_cb (unsigned long nDuration, char *text
 	pNormalView->dSubtitleEndTime = nPosition + nDuration;
 
 	pNormalView->pSubtitleTimer = ecore_timer_add(dTimeInterval,
-			__vp_normal_subtitle_timer_cb, (void *)pNormalView);
+	                              __vp_normal_subtitle_timer_cb, (void *)pNormalView);
 
 	vp_play_subtitle_set_text(pNormalView->pSubtitle, text);
 #ifdef SUBTITLE_K_FEATURE
@@ -4420,7 +4374,7 @@ static void __vp_normal_subtitle_updated_cb (unsigned long nDuration, char *text
 }
 
 
-static void __vp_normal_pd_message_cb (vp_mm_player_pd_message_t nType, void *pUserData)
+static void __vp_normal_pd_message_cb(vp_mm_player_pd_message_t nType, void *pUserData)
 {
 	if (!pUserData) {
 		VideoLogError("pUserData is NULL");
@@ -4430,7 +4384,7 @@ static void __vp_normal_pd_message_cb (vp_mm_player_pd_message_t nType, void *pU
 }
 
 
-static void __vp_normal_video_captured_cb (unsigned char *pFrame, int nWidth, int nHeight, unsigned int nSize, void *pUserData)
+static void __vp_normal_video_captured_cb(unsigned char *pFrame, int nWidth, int nHeight, unsigned int nSize, void *pUserData)
 {
 	if (!pUserData) {
 		VideoLogError("pUserData is NULL");
@@ -4457,9 +4411,9 @@ static void __vp_normal_video_captured_cb (unsigned char *pFrame, int nWidth, in
 		if (!szFileName) {
 			VideoLogError("failed to allocate memory");
 			VP_FREE(szVideoID);
-			return;	
+			return;
 		}
-		snprintf(szFileName, VP_URL_LEN_MAX, "%s/%s",VP_PLAY_DATA_DIR, szVideoID);
+		snprintf(szFileName, VP_URL_LEN_MAX, "%s/%s", VP_PLAY_DATA_DIR, szVideoID);
 
 		if (!vp_file_exists(szFileName)) {
 			if (!vp_mkdir(szFileName)) {
@@ -4477,8 +4431,7 @@ static void __vp_normal_video_captured_cb (unsigned char *pFrame, int nWidth, in
 
 		if (nWidth > nHeight) {
 			nScale = 146.0 / nWidth;
-		}
-		else {
+		} else {
 			nScale = 88.0 / nHeight;
 		}
 
@@ -4492,8 +4445,7 @@ static void __vp_normal_video_captured_cb (unsigned char *pFrame, int nWidth, in
 		}
 		VP_FREE(szFileName);
 		VP_FREE(szVideoID);
-	}
-	else {
+	} else {
 
 		if (!vp_file_exists(VP_PLAY_SCREEN_SHOT_DIR)) {
 			if (!vp_mkdir(VP_PLAY_SCREEN_SHOT_DIR)) {
@@ -4512,7 +4464,7 @@ static void __vp_normal_video_captured_cb (unsigned char *pFrame, int nWidth, in
 			return;
 		}
 
-		snprintf(szFileName, VP_URL_LEN_MAX, "%s/%s_%d.jpg",VP_PLAY_SCREEN_SHOT_DIR, szTitle, pNormalView->nCapturePosition);
+		snprintf(szFileName, VP_URL_LEN_MAX, "%s/%s_%d.jpg", VP_PLAY_SCREEN_SHOT_DIR, szTitle, pNormalView->nCapturePosition);
 
 		if (vp_image_util_image_save(szFileName, pFrame, nWidth, nHeight, 100)) {
 			vp_media_contents_update_db(szFileName);
@@ -4525,8 +4477,7 @@ static void __vp_normal_video_captured_cb (unsigned char *pFrame, int nWidth, in
 
 			if (!pNormalView->pScreenShot) {
 				VideoLogError("Scrennshot is NULL ####");
-			}
-			else {
+			} else {
 				evas_object_size_hint_weight_set(pNormalView->pScreenShot, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
 				evas_object_size_hint_align_set(pNormalView->pScreenShot, EVAS_HINT_FILL, EVAS_HINT_FILL);
 				evas_object_show(pNormalView->pScreenShot);
@@ -4539,15 +4490,14 @@ static void __vp_normal_video_captured_cb (unsigned char *pFrame, int nWidth, in
 				if (bLandscape) {
 					elm_object_signal_emit(pNormalView->pMainLayout, VP_NORMAL_SIGNAL_MAIN_SCREEN_LANDSCAPE_SHOW, "*");
 					elm_object_part_content_set(pNormalView->pMainLayout, VP_PLAY_SWALLOW_NORMAL_SCREENSHOT_LANDSCAPE, pNormalView->pScreenShot);
-				}
-				else {
+				} else {
 					elm_object_signal_emit(pNormalView->pMainLayout, VP_NORMAL_SIGNAL_MAIN_SCREEN_PORTRAIT_SHOW, "*");
 					elm_object_part_content_set(pNormalView->pMainLayout, VP_PLAY_SWALLOW_NORMAL_SCREENSHOT_PORTRAIT, pNormalView->pScreenShot);
 				}
 
 				VP_EVAS_TIMER_DEL(pNormalView->pScreenShotTimer);
 				pNormalView->pScreenShotTimer = ecore_timer_add(VP_NORMAL_SCREENSHOT_TIMER_INTERVAL,
-									__vp_normal_screenshot_timer_cb, (void *)pNormalView);
+				                                __vp_normal_screenshot_timer_cb, (void *)pNormalView);
 			}
 
 		}
@@ -4559,7 +4509,7 @@ static void __vp_normal_video_captured_cb (unsigned char *pFrame, int nWidth, in
 	pNormalView->bCaptureComplete = TRUE;
 }
 
-static void __vp_normal_missed_plugin_cb (vp_mm_player_missed_plugin_t nType, void *pUserData)
+static void __vp_normal_missed_plugin_cb(vp_mm_player_missed_plugin_t nType, void *pUserData)
 {
 	if (!pUserData) {
 		VideoLogError("pUserData is NULL");
@@ -4580,33 +4530,32 @@ static void __vp_normal_missed_plugin_cb (vp_mm_player_missed_plugin_t nType, vo
 #if 1
 	if (nType == VP_MM_PLAYER_MISSED_PLUGIN_AUDIO) {
 		_vp_play_normal_view_show_video_only_popup(pNormalView);
-	}
-	else if (nType == VP_MM_PLAYER_MISSED_PLUGIN_VIDEO) {
+	} else if (nType == VP_MM_PLAYER_MISSED_PLUGIN_VIDEO) {
 		_vp_play_normal_view_show_audio_only_popup(pNormalView);
 	}
 #else /* Disabled. please use ecore_pipe if need to use popup. */
 	Evas_Object *pParent = pPlayView->pWin;
 	if (nType == VP_MM_PLAYER_MISSED_PLUGIN_AUDIO) {
 		pNormalView->pPopup = vp_popup_create(pParent,
-							POPUP_STYLE_DEFAULT,
-							NULL,
-							VP_PLAY_STRING_ERROR_UNSUPPORTED_AUDIO,
-							3.0,__vp_normal_popup_time_out_cb,
-							__vp_normal_popup_key_event_cb,
-							__vp_normal_popup_mouse_event_cb,
-							pNormalView);
+		                                      POPUP_STYLE_DEFAULT,
+		                                      NULL,
+		                                      VP_PLAY_STRING_ERROR_UNSUPPORTED_AUDIO,
+		                                      3.0, __vp_normal_popup_time_out_cb,
+		                                      __vp_normal_popup_key_event_cb,
+		                                      __vp_normal_popup_mouse_event_cb,
+		                                      pNormalView);
 
 		evas_object_show(pNormalView->pPopup);
 		pNormalView->bIsPopupShow = TRUE;
 	} else if (nType == VP_MM_PLAYER_MISSED_PLUGIN_VIDEO) {
 		pNormalView->pPopup = vp_popup_create(pParent,
-							POPUP_STYLE_DEFAULT,
-							NULL,
-							VP_PLAY_STRING_ERROR_UNSUPPORTED_VIDEO,
-							3.0, __vp_normal_popup_time_out_cb,
-							__vp_normal_popup_key_event_cb,
-							__vp_normal_popup_mouse_event_cb,
-							pNormalView);
+		                                      POPUP_STYLE_DEFAULT,
+		                                      NULL,
+		                                      VP_PLAY_STRING_ERROR_UNSUPPORTED_VIDEO,
+		                                      3.0, __vp_normal_popup_time_out_cb,
+		                                      __vp_normal_popup_key_event_cb,
+		                                      __vp_normal_popup_mouse_event_cb,
+		                                      pNormalView);
 
 		evas_object_show(pNormalView->pPopup);
 		pNormalView->bIsPopupShow = TRUE;
@@ -4618,7 +4567,7 @@ static void __vp_normal_missed_plugin_cb (vp_mm_player_missed_plugin_t nType, vo
 #endif
 }
 
-static void __vp_normal_image_buffer_cb (char *pBuffer, int nSize, void *pUserData)
+static void __vp_normal_image_buffer_cb(char *pBuffer, int nSize, void *pUserData)
 {
 	if (!pUserData) {
 		VideoLogError("pUserData is NULL");
@@ -4653,8 +4602,8 @@ static void _vp_normal_set_audio_only_image(NormalView *pNormalView, bool bAudio
 
 	if (bAudioOnly == TRUE) {
 		pNormalView->pImageBufferObj = vp_button_create_image(pNormalView->pMainLayout,
-																VP_PLAY_RESROUCE_EDJ_PATH,
-																VP_PLAY_NORMAL_AUDIO_ERROR_IMG);
+		                               VP_PLAY_RESROUCE_EDJ_PATH,
+		                               VP_PLAY_NORMAL_AUDIO_ERROR_IMG);
 		evas_object_size_hint_weight_set(pNormalView->pImageBufferObj, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
 		evas_object_size_hint_align_set(pNormalView->pImageBufferObj, EVAS_HINT_FILL, EVAS_HINT_FILL);
 		evas_object_color_set(pNormalView->pImageBufferObj, 255, 255, 255, 255);
@@ -4781,8 +4730,7 @@ static void __vp_normal_del_popup_delete_cb(void *data, Evas_Object *obj, void *
 		vp_play_config_get_preview_url_videos(&szPreviewURL);
 
 		if (szPreviewURL) {
-			if (!g_strcmp0(szPreviewURL, pNormalView->szMediaURL))
-			{
+			if (!g_strcmp0(szPreviewURL, pNormalView->szMediaURL)) {
 				VideoLogInfo("Erase preview url.");
 				vp_play_config_set_preview_url_videos("");
 			}
@@ -4847,14 +4795,14 @@ static void __vp_normal_ctx_popup_delete_cb(void *pUserData, Evas_Object *pObj, 
 	}
 
 	VP_EVAS_DEL(pNormalView->pPopup);
-	pNormalView->pPopup	= vp_two_button_popup_create(	pPlayView->pWin,
-														VP_PLAY_STRING_POPUP_DELETE,
-														VP_PLAY_STRING_POPUP_DELETE_CONTENT,
-														VP_PLAY_STRING_CANCEL,
-														__vp_normal_del_popup_cancel_cb,
-														VP_PLAY_STRING_POPUP_DELETE,
-														__vp_normal_del_popup_delete_cb,
-														(const void*)pNormalView	);
+	pNormalView->pPopup	= vp_two_button_popup_create(pPlayView->pWin,
+	                      VP_PLAY_STRING_POPUP_DELETE,
+	                      VP_PLAY_STRING_POPUP_DELETE_CONTENT,
+	                      VP_PLAY_STRING_CANCEL,
+	                      __vp_normal_del_popup_cancel_cb,
+	                      VP_PLAY_STRING_POPUP_DELETE,
+	                      __vp_normal_del_popup_delete_cb,
+	                      (const void*)pNormalView);
 
 	pNormalView->bIsPopupShow = TRUE;
 	eext_object_event_callback_add(pNormalView->pPopup, EEXT_CALLBACK_BACK, __vp_normal_del_popup_cancel_cb, (void*)pNormalView);
@@ -5005,8 +4953,8 @@ static bool _vp_play_normal_view_show_lock_screen(normal_view_handle pViewHandle
 	elm_object_signal_emit(pNormalView->pMainLayout, VP_NORMAL_SIGNAL_LOCKSCREEN_SHOW, "*");
 
 	pNormalView->pLockScreenTimer =
-		ecore_timer_add(VP_NORMAL_HIDE_SCREEN_LOCK_TIMER_INTERVAL,
-		__vp_normal_lockscreen_timer_cb, (void *)pNormalView);
+	    ecore_timer_add(VP_NORMAL_HIDE_SCREEN_LOCK_TIMER_INTERVAL,
+	                    __vp_normal_lockscreen_timer_cb, (void *)pNormalView);
 
 	return TRUE;
 }
@@ -5061,7 +5009,7 @@ static void __vp_normal_more_btn_clicked_cb(void *pUserData, Evas_Object *pObj, 
 		VideoLogInfo("current launching type not support menu.");
 		return;
 	}
-	if (strstr(pPlayView->szMediaURL,"/.") != NULL) {
+	if (strstr(pPlayView->szMediaURL, "/.") != NULL) {
 		VideoLogInfo("hidden file not suport menu.");
 		return;
 	}
@@ -5087,7 +5035,7 @@ static void __vp_normal_more_btn_clicked_cb(void *pUserData, Evas_Object *pObj, 
 	char *szMediaID = NULL;
 
 	if (pNormalView->nLaunchingType != VIDEO_PLAY_TYPE_WEB &&
-		pNormalView->nLaunchingType != VIDEO_PLAY_TYPE_MULTI_PATH) {
+	        pNormalView->nLaunchingType != VIDEO_PLAY_TYPE_MULTI_PATH) {
 		vp_media_contents_get_video_id(pNormalView->szMediaURL, &szMediaID);
 		if (!szMediaID) {
 		}
@@ -5100,61 +5048,60 @@ static void __vp_normal_more_btn_clicked_cb(void *pUserData, Evas_Object *pObj, 
 #endif
 	//bool bIsPersonal = FALSE;
 
-	switch (pNormalView->nLaunchingType)
-	{
-		case VIDEO_PLAY_TYPE_STORE:
-		case VIDEO_PLAY_TYPE_LIST:
-		case VIDEO_PLAY_TYPE_GALLERY:
-		case VIDEO_PLAY_TYPE_MYFILE:
-		case VIDEO_PLAY_TYPE_OTHER:
+	switch (pNormalView->nLaunchingType) {
+	case VIDEO_PLAY_TYPE_STORE:
+	case VIDEO_PLAY_TYPE_LIST:
+	case VIDEO_PLAY_TYPE_GALLERY:
+	case VIDEO_PLAY_TYPE_MYFILE:
+	case VIDEO_PLAY_TYPE_OTHER:
 
-			/* Share via */
-			elm_ctxpopup_item_append(pNormalView->pCtxPopup, VP_PLAY_STRING_POPUP_SHARE, NULL, __vp_normal_ctx_popup_share_cb, (void *)pNormalView);
+		/* Share via */
+		elm_ctxpopup_item_append(pNormalView->pCtxPopup, VP_PLAY_STRING_POPUP_SHARE, NULL, __vp_normal_ctx_popup_share_cb, (void *)pNormalView);
 
-			/* delete */
-			elm_ctxpopup_item_append(pNormalView->pCtxPopup, VP_PLAY_STRING_POPUP_DELETE, NULL, __vp_normal_ctx_popup_delete_cb, (void *)pNormalView);
+		/* delete */
+		elm_ctxpopup_item_append(pNormalView->pCtxPopup, VP_PLAY_STRING_POPUP_DELETE, NULL, __vp_normal_ctx_popup_delete_cb, (void *)pNormalView);
 
-			/* Play speed */
-			elm_ctxpopup_item_append(pNormalView->pCtxPopup, VP_PLAY_STRING_POPUP_PLAY_SPEED, NULL, __vp_normal_ctx_popup_play_speed_cb, (void *)pNormalView);
+		/* Play speed */
+		elm_ctxpopup_item_append(pNormalView->pCtxPopup, VP_PLAY_STRING_POPUP_PLAY_SPEED, NULL, __vp_normal_ctx_popup_play_speed_cb, (void *)pNormalView);
 
-			/* subtitles */
-			elm_ctxpopup_item_append(pNormalView->pCtxPopup, VP_PLAY_STRING_POPUP_SUBTITLE, NULL, __vp_normal_ctx_popup_subtitle_cb, (void *)pNormalView);
+		/* subtitles */
+		elm_ctxpopup_item_append(pNormalView->pCtxPopup, VP_PLAY_STRING_POPUP_SUBTITLE, NULL, __vp_normal_ctx_popup_subtitle_cb, (void *)pNormalView);
 
-			/* repeat mode */
-			//elm_ctxpopup_item_append(pNormalView->pCtxPopup, VP_PLAY_STRING_POPUP_REPEAT_SETTING, NULL, __vp_normal_ctx_popup_repeat_cb, (void *)pNormalView);
+		/* repeat mode */
+		//elm_ctxpopup_item_append(pNormalView->pCtxPopup, VP_PLAY_STRING_POPUP_REPEAT_SETTING, NULL, __vp_normal_ctx_popup_repeat_cb, (void *)pNormalView);
 
-			/* Sound alive */
-			//elm_ctxpopup_item_append(pNormalView->pCtxPopup, VP_PLAY_STRING_POPUP_SOUND_ALIVE, NULL, __vp_normal_ctx_popup_sound_alive_cb, (void *)pNormalView);
+		/* Sound alive */
+		//elm_ctxpopup_item_append(pNormalView->pCtxPopup, VP_PLAY_STRING_POPUP_SOUND_ALIVE, NULL, __vp_normal_ctx_popup_sound_alive_cb, (void *)pNormalView);
 
-			/* Details */
-			elm_ctxpopup_item_append(pNormalView->pCtxPopup, VP_PLAY_STRING_COM_DETAILS, NULL, __vp_normal_ctx_popup_detail_cb, (void *)pNormalView);
-			break;
+		/* Details */
+		elm_ctxpopup_item_append(pNormalView->pCtxPopup, VP_PLAY_STRING_COM_DETAILS, NULL, __vp_normal_ctx_popup_detail_cb, (void *)pNormalView);
+		break;
 
-		case VIDEO_PLAY_TYPE_MESSAGE:
-		case VIDEO_PLAY_TYPE_EMAIL:
+	case VIDEO_PLAY_TYPE_MESSAGE:
+	case VIDEO_PLAY_TYPE_EMAIL:
 
-			/* Play speed */
-			elm_ctxpopup_item_append(pNormalView->pCtxPopup, VP_PLAY_STRING_POPUP_PLAY_SPEED, NULL, __vp_normal_ctx_popup_play_speed_cb, (void *)pNormalView);
+		/* Play speed */
+		elm_ctxpopup_item_append(pNormalView->pCtxPopup, VP_PLAY_STRING_POPUP_PLAY_SPEED, NULL, __vp_normal_ctx_popup_play_speed_cb, (void *)pNormalView);
 
-			/* subtitles */
-			elm_ctxpopup_item_append(pNormalView->pCtxPopup, VP_PLAY_STRING_POPUP_SUBTITLE, NULL, __vp_normal_ctx_popup_subtitle_cb, (void *)pNormalView);
-			break;
+		/* subtitles */
+		elm_ctxpopup_item_append(pNormalView->pCtxPopup, VP_PLAY_STRING_POPUP_SUBTITLE, NULL, __vp_normal_ctx_popup_subtitle_cb, (void *)pNormalView);
+		break;
 
-		case VIDEO_PLAY_TYPE_WEB:
+	case VIDEO_PLAY_TYPE_WEB:
 
-			/* Settings */
-			if (FALSE) {
-				elm_ctxpopup_item_append(pNormalView->pCtxPopup, VP_PLAY_STRING_POPUP_SETTINGS, NULL, __vp_normal_ctx_popup_setting_cb, (void *)pNormalView);
-			}
-			break;
+		/* Settings */
+		if (FALSE) {
+			elm_ctxpopup_item_append(pNormalView->pCtxPopup, VP_PLAY_STRING_POPUP_SETTINGS, NULL, __vp_normal_ctx_popup_setting_cb, (void *)pNormalView);
+		}
+		break;
 
-		case VIDEO_PLAY_TYPE_MULTI_PATH:
-			/* Details */
-			elm_ctxpopup_item_append(pNormalView->pCtxPopup, VP_PLAY_STRING_COM_DETAILS, NULL, __vp_normal_ctx_popup_detail_cb, (void *)pNormalView);
-			break;
+	case VIDEO_PLAY_TYPE_MULTI_PATH:
+		/* Details */
+		elm_ctxpopup_item_append(pNormalView->pCtxPopup, VP_PLAY_STRING_COM_DETAILS, NULL, __vp_normal_ctx_popup_detail_cb, (void *)pNormalView);
+		break;
 
-		case VIDEO_PLAY_TYPE_PREVIEW:
-			break;
+	case VIDEO_PLAY_TYPE_PREVIEW:
+		break;
 	}
 
 	int nW = 0;
@@ -5163,19 +5110,16 @@ static void __vp_normal_more_btn_clicked_cb(void *pUserData, Evas_Object *pObj, 
 	Evas_Coord_Rectangle rect = {0,};
 	elm_win_screen_size_get(pPlayView->pWin,  &rect.x, &rect.y, &rect.w, &rect.h);
 	if (pNormalView->nRotate == VIDEO_PLAY_ROTATE_NONE) {
-		nW = rect.w/2;
+		nW = rect.w / 2;
 		nH = rect.h;
-	}
-	else if (pNormalView->nRotate == VIDEO_PLAY_ROTATE_90) {
-		nW = rect.h/2;
+	} else if (pNormalView->nRotate == VIDEO_PLAY_ROTATE_90) {
+		nW = rect.h / 2;
 		nH = rect.w;
-	}
-	else if (pNormalView->nRotate == VIDEO_PLAY_ROTATE_180) {
-		nW = rect.w/2;
+	} else if (pNormalView->nRotate == VIDEO_PLAY_ROTATE_180) {
+		nW = rect.w / 2;
 		nH = rect.h;
-	}
-	else if (pNormalView->nRotate == VIDEO_PLAY_ROTATE_270) {
-		nW = rect.h/2;
+	} else if (pNormalView->nRotate == VIDEO_PLAY_ROTATE_270) {
+		nW = rect.h / 2;
 		nH = rect.w;
 	}
 
@@ -5187,8 +5131,9 @@ static void __vp_normal_more_btn_clicked_cb(void *pUserData, Evas_Object *pObj, 
 
 void vp_play_normal_view_pause_player(void *pPlayview)
 {
-	if (!pPlayview)
+	if (!pPlayview) {
 		return;
+	}
 	PlayView *vPlayview = (PlayView *)pPlayview;
 	NormalView *pNormalView = vPlayview->pNormalView;
 	vp_mm_player_state_t nState = VP_MM_PLAYER_STATE_NONE;
@@ -5206,8 +5151,9 @@ void vp_play_normal_view_pause_player(void *pPlayview)
 
 void vp_play_normal_view_show_volume_popup(void *pPlayview)
 {
-	if (!pPlayview)
+	if (!pPlayview) {
 		return;
+	}
 	PlayView *vPlayview = (PlayView *)pPlayview;
 	NormalView *pNormalView = vPlayview->pNormalView;
 	pNormalView->pVolumePopupHandle = NULL;
@@ -5234,8 +5180,7 @@ static void __vp_normal_function_btn_clicked_cb(void *pUserData, Evas_Object *pO
 		vp_play_volume_update_value(pNormalView->pVolumeHandle);
 		_vp_play_normal_view_on_volume_popup(pNormalView, TRUE);
 		vp_play_volume_set_focus_in(pNormalView->pVolumeHandle);
-	}
-	else if (pObj == pNormalView->pBookmarkBtn) {
+	} else if (pObj == pNormalView->pBookmarkBtn) {
 		VideoLogWarning("pBookmarkBtn button");
 
 		bool bIsRealize = FALSE;
@@ -5245,31 +5190,25 @@ static void __vp_normal_function_btn_clicked_cb(void *pUserData, Evas_Object *pO
 		}
 		if (bIsRealize) {
 			_vp_play_normal_view_on_bookmark_mode(pNormalView, FALSE);
-		}
-		else {
+		} else {
 			_vp_play_normal_view_on_bookmark_mode(pNormalView, TRUE);
 		}
-	}
-	else if (pObj == pNormalView->pShareBtn) {
+	} else if (pObj == pNormalView->pShareBtn) {
 		VideoLogWarning("pShareBtn button");
 		_vp_play_normal_view_on_share_popup(pNormalView);
-	}
-	else if (pObj == pNormalView->pLockBtn) {
+	} else if (pObj == pNormalView->pLockBtn) {
 		VideoLogWarning("pLockBtn button");
 		if (!pNormalView->bLockScreen) {
-		pNormalView->bLockScreen = TRUE;
-		vp_play_normal_view_set_lock_screen(pNormalView, pNormalView->bLockScreen);
+			pNormalView->bLockScreen = TRUE;
+			vp_play_normal_view_set_lock_screen(pNormalView, pNormalView->bLockScreen);
+		} else {
+			pNormalView->bLockScreen = FALSE;
+			vp_play_normal_view_set_lock_screen(pNormalView, pNormalView->bLockScreen);
 		}
-		else {
-		pNormalView->bLockScreen = FALSE;
-		vp_play_normal_view_set_lock_screen(pNormalView, pNormalView->bLockScreen);
-		}
-	}
-	else if (pObj == pNormalView->pSoundAliveBtn) {
+	} else if (pObj == pNormalView->pSoundAliveBtn) {
 		VideoLogWarning("pSoundAliveBtn button");
 		_vp_play_normal_view_on_sound_alive_popup(pNormalView);
-	}
-	else if (pObj == pNormalView->pRepeatBtn) {
+	} else if (pObj == pNormalView->pRepeatBtn) {
 		VideoLogWarning("pRepeatBtn button");
 		if (pNormalView->nRepeatMode == VIDEO_PLAY_REPEAT_NONE) {
 			pNormalView->nRepeatMode = VIDEO_PLAY_REPEAT_ONE;
@@ -5299,8 +5238,7 @@ static void __vp_normal_function_btn_clicked_cb(void *pUserData, Evas_Object *pO
 
 			pIcon = vp_button_create_icon(pNormalView->pRepeatBtn, VP_PLAY_RESROUCE_EDJ_PATH, VP_PLAY_NORMAL_RES_REPEAT_ONE_DIM);
 			elm_object_part_content_set(pNormalView->pRepeatBtn, VP_PLAY_SWALLOW_BUTTON_DIM_ICON, pIcon);
-		}
-		else if (pNormalView->nRepeatMode == VIDEO_PLAY_REPEAT_ONE) {
+		} else if (pNormalView->nRepeatMode == VIDEO_PLAY_REPEAT_ONE) {
 			pNormalView->nRepeatMode = VIDEO_PLAY_REPEAT_ALL;
 
 			Evas_Object *pIcon = NULL;
@@ -5329,8 +5267,7 @@ static void __vp_normal_function_btn_clicked_cb(void *pUserData, Evas_Object *pO
 			pIcon = vp_button_create_icon(pNormalView->pRepeatBtn, VP_PLAY_RESROUCE_EDJ_PATH, VP_PLAY_NORMAL_RES_REPEAT_ALL_DIM);
 			elm_object_part_content_set(pNormalView->pRepeatBtn, VP_PLAY_SWALLOW_BUTTON_DIM_ICON, pIcon);
 
-		}
-		else if (pNormalView->nRepeatMode == VIDEO_PLAY_REPEAT_ALL) {
+		} else if (pNormalView->nRepeatMode == VIDEO_PLAY_REPEAT_ALL) {
 			pNormalView->nRepeatMode = VIDEO_PLAY_REPEAT_NONE;
 			Evas_Object *pIcon = NULL;
 			pIcon = elm_object_part_content_get(pNormalView->pRepeatBtn, VP_PLAY_SWALLOW_BUTTON_ICON);
@@ -5358,8 +5295,7 @@ static void __vp_normal_function_btn_clicked_cb(void *pUserData, Evas_Object *pO
 			pIcon = vp_button_create_icon(pNormalView->pRepeatBtn, VP_PLAY_RESROUCE_EDJ_PATH, VP_PLAY_NORMAL_RES_REPEAT_OFF_DIM);
 			elm_object_part_content_set(pNormalView->pRepeatBtn, VP_PLAY_SWALLOW_BUTTON_DIM_ICON, pIcon);
 		}
-	}
-	else if (pObj == pNormalView->pScreenSizeBtn) {
+	} else if (pObj == pNormalView->pScreenSizeBtn) {
 		VideoLogWarning("pScreenSizeBtn button");
 
 		if (pNormalView->nDisplayMode == VP_MM_PLAYER_DISPLAY_FULL_SCREEN) {
@@ -5396,8 +5332,7 @@ static void __vp_normal_function_btn_clicked_cb(void *pUserData, Evas_Object *pO
 			//elm_object_part_content_set(pNormalView->pScreenSizeBtn, VP_PLAY_SWALLOW_BUTTON_DIM_ICON, pIcon);
 
 			return;
-		}
-		else if (pNormalView->nDisplayMode == VP_MM_PLAYER_DISPLAY_LETTER_BOX) {
+		} else if (pNormalView->nDisplayMode == VP_MM_PLAYER_DISPLAY_LETTER_BOX) {
 			VideoLogWarning("VP_MM_PLAYER_DISPLAY_FULL_SCREEN");
 			pNormalView->nDisplayMode = VP_MM_PLAYER_DISPLAY_FULL_SCREEN;
 			vp_play_preference_set_screen_mode_key(pNormalView->nDisplayMode);
@@ -5463,15 +5398,14 @@ static void __vp_normal_control_btn_clicked_cb(void *pUserData, Evas_Object *pOb
 		} else {
 			if (!vp_mm_player_pause(pNormalView->pPlayerHandle)) {
 				VideoLogWarning("Pause Fail");
- 			}
+			}
 		}
 
 		VP_EVAS_IDLER_DEL(pNormalView->pControlIdler);
 		pNormalView->pControlIdler = ecore_idler_add(__vp_normal_control_idler_cb, (void *)pNormalView);
 
 		pNormalView->bManualPause = TRUE;
-	}
-	else if (pObj == pNormalView->pResumeBtn) {
+	} else if (pObj == pNormalView->pResumeBtn) {
 		VideoLogWarning("Resume button");
 		vp_util_lock_cpu();
 		_vp_play_normal_view_check_during_call(pNormalView);
@@ -5485,22 +5419,21 @@ static void __vp_normal_control_btn_clicked_cb(void *pUserData, Evas_Object *pOb
 		} else {
 			if (!vp_mm_player_play(pNormalView->pPlayerHandle)) {
 				VideoLogWarning("Resume Fail");
- 			}
+			}
 		}
 
 		VP_EVAS_IDLER_DEL(pNormalView->pControlIdler);
 		pNormalView->pControlIdler = ecore_idler_add(__vp_normal_control_idler_cb, (void *)pNormalView);
 
 		pNormalView->bManualPause = FALSE;
-	}
-	else if (pObj == pNormalView->pPlayFocusBtn) {
+	} else if (pObj == pNormalView->pPlayFocusBtn) {
 		VideoLogWarning("pPlayFocusBtn click");
 		Evas_Object *pObj = elm_object_part_content_get(pNormalView->pControlLayout, VP_PLAY_SWALLOW_NORMAL_PLAY);
 		if (pNormalView->pPauseBtn == pObj) {
 
 			if (!vp_mm_player_pause(pNormalView->pPlayerHandle)) {
 				VideoLogWarning("Pause Fail");
- 			}
+			}
 
 			VP_EVAS_IDLER_DEL(pNormalView->pControlIdler);
 			pNormalView->pControlIdler = ecore_idler_add(__vp_normal_control_idler_cb, (void *)pNormalView);
@@ -5511,14 +5444,13 @@ static void __vp_normal_control_btn_clicked_cb(void *pUserData, Evas_Object *pOb
 
 			if (!vp_mm_player_play(pNormalView->pPlayerHandle)) {
 				VideoLogWarning("Resume Fail");
- 			}
+			}
 			VP_EVAS_IDLER_DEL(pNormalView->pControlIdler);
 			pNormalView->pControlIdler = ecore_idler_add(__vp_normal_control_idler_cb, (void *)pNormalView);
 
 			pNormalView->bManualPause = FALSE;
 		}
-	}
-	else if (pObj == pNormalView->pPrevBtn) {
+	} else if (pObj == pNormalView->pPrevBtn) {
 		VideoLogWarning("Prev button");
 		if (pNormalView->bHLSMode == FALSE) {
 			if (pNormalView->nSpeedValue < 2) {
@@ -5526,17 +5458,15 @@ static void __vp_normal_control_btn_clicked_cb(void *pUserData, Evas_Object *pOb
 				_vp_play_normal_view_on_prev_play(pNormalView, TRUE, FALSE);
 			}
 		}
-	}
-	else if (pObj == pNormalView->pNextBtn) {
+	} else if (pObj == pNormalView->pNextBtn) {
 		VideoLogWarning("Next button");
 		if (pNormalView->bHLSMode == FALSE) {
-			if (pNormalView->nSpeedValue < 2 && strstr (pPlayView->szMediaURL,"/.") == NULL) {
+			if (pNormalView->nSpeedValue < 2 && strstr(pPlayView->szMediaURL, "/.") == NULL) {
 				VP_EVAS_TIMER_DEL(pNormalView->pSpeedTimer);
 				_vp_play_normal_view_on_next_play(pNormalView, TRUE);
 			}
 		}
-	}
-	else if (pObj == pNormalView->pRotateBtn) {
+	} else if (pObj == pNormalView->pRotateBtn) {
 		VideoLogWarning("Rotate button");
 
 		bool bLandscape = vp_play_util_get_landscape_check(pNormalView->nRotate);
@@ -5573,16 +5503,16 @@ static void __vp_normal_control_btn_clicked_cb(void *pUserData, Evas_Object *pOb
 			}
 
 			pNormalView->pPopup = vp_popup_create(pPlayView->pWin, POPUP_STYLE_DEFAULT_WITH_CANCEL_BTN,
-								NULL,
-								VP_PLAY_STRING_ERROR_UNABLE_CAPTURE_DRM_CONTENT,
-								0.0, NULL,
-								__vp_normal_popup_key_event_cb,
-								__vp_normal_popup_mouse_event_cb,
-								pNormalView);
+			                                      NULL,
+			                                      VP_PLAY_STRING_ERROR_UNABLE_CAPTURE_DRM_CONTENT,
+			                                      0.0, NULL,
+			                                      __vp_normal_popup_key_event_cb,
+			                                      __vp_normal_popup_mouse_event_cb,
+			                                      pNormalView);
 
 			Evas_Object *pBtn = NULL;
 			pBtn = elm_button_add(pNormalView->pPopup);
-			elm_object_style_set (pBtn, "popup_button/default");
+			elm_object_style_set(pBtn, "popup_button/default");
 			elm_object_domain_translatable_text_set(pBtn, VP_SYS_STR_PREFIX, VP_PLAY_STRING_COM_OK_IDS);
 			elm_object_part_content_set(pNormalView->pPopup, "button1", pBtn);
 			evas_object_smart_callback_add(pBtn, "clicked", __vp_normal_popup_key_event_cb, (void*)pNormalView);
@@ -5601,16 +5531,16 @@ static void __vp_normal_control_btn_clicked_cb(void *pUserData, Evas_Object *pOb
 			}
 
 			pNormalView->pPopup = vp_popup_create(pPlayView->pWin, POPUP_STYLE_DEFAULT_WITH_CANCEL_BTN,
-								NULL,
-								VP_PLAY_STRING_ERROR_UNSUPPORTED_FORMAT,
-								0.0, NULL,
-								__vp_normal_popup_key_event_cb,
-								__vp_normal_popup_mouse_event_cb,
-								pNormalView);
+			                                      NULL,
+			                                      VP_PLAY_STRING_ERROR_UNSUPPORTED_FORMAT,
+			                                      0.0, NULL,
+			                                      __vp_normal_popup_key_event_cb,
+			                                      __vp_normal_popup_mouse_event_cb,
+			                                      pNormalView);
 
 			Evas_Object *pBtn = NULL;
 			pBtn = elm_button_add(pNormalView->pPopup);
-			elm_object_style_set (pBtn, "popup_button/default");
+			elm_object_style_set(pBtn, "popup_button/default");
 			elm_object_domain_translatable_text_set(pBtn, VP_SYS_STR_PREFIX, VP_PLAY_STRING_COM_OK_IDS);
 			elm_object_part_content_set(pNormalView->pPopup, "button1", pBtn);
 			evas_object_smart_callback_add(pBtn, "clicked", __vp_normal_popup_key_event_cb, (void*)pNormalView);
@@ -5631,12 +5561,12 @@ static void __vp_normal_control_btn_clicked_cb(void *pUserData, Evas_Object *pOb
 
 			VP_EVAS_DEL(pNormalView->pPopup);
 			pNormalView->pPopup = vp_popup_create(pPlayView->pWin,
-									POPUP_STYLE_DEFAULT_NO_CANCEL_BTN,
-									VP_PLAY_STRING_COM_ERROR,
-									VP_PLAY_STRING_COM_ENOUGH_MEMORY,
-									3.0, __vp_normal_popup_time_out_cb,
-									NULL, NULL,
-									pNormalView);
+			                                      POPUP_STYLE_DEFAULT_NO_CANCEL_BTN,
+			                                      VP_PLAY_STRING_COM_ERROR,
+			                                      VP_PLAY_STRING_COM_ENOUGH_MEMORY,
+			                                      3.0, __vp_normal_popup_time_out_cb,
+			                                      NULL, NULL,
+			                                      pNormalView);
 			evas_object_show(pNormalView->pPopup);
 			pNormalView->bIsPopupShow = TRUE;
 
@@ -5645,14 +5575,11 @@ static void __vp_normal_control_btn_clicked_cb(void *pUserData, Evas_Object *pOb
 
 		_vp_play_normal_view_hide_layout(pNormalView, TRUE);
 		_vp_play_normal_view_screen_capture(pNormalView);
-	}
-	else if (pObj == pNormalView->pCaptureRewBtn) {
+	} else if (pObj == pNormalView->pCaptureRewBtn) {
 		_vp_play_normal_view_screen_move(pNormalView, FALSE);
-	}
-	else if (pObj == pNormalView->pCaptureFFBtn) {
+	} else if (pObj == pNormalView->pCaptureFFBtn) {
 		_vp_play_normal_view_screen_move(pNormalView, TRUE);
-	}
-	else {
+	} else {
 		VideoLogWarning("Unknown button");
 	}
 }
@@ -5692,33 +5619,29 @@ static void __vp_normal_control_btn_press_cb(void *pUserData, Evas_Object *pObj,
 			pNormalView->nSpeedValue = 1;
 			pNormalView->bSpeedDown = TRUE;
 			pNormalView->pSpeedTimer = ecore_timer_add(VP_NORMAL_LONG_PRESS_TIMER_INTERVAL,
-								__vp_normal_speed_timer_cb,
-								(void *)pNormalView);
-		}
-		else {
+			                           __vp_normal_speed_timer_cb,
+			                           (void *)pNormalView);
+		} else {
 			pNormalView->pSpeedTimer = ecore_timer_add(VP_NORMAL_LONG_PRESS_TIMER_INTERVAL,
-								__vp_normal_dlna_speed_timer_cb,
-								(void *)pNormalView);
+			                           __vp_normal_dlna_speed_timer_cb,
+			                           (void *)pNormalView);
 		}
 
-	}
-	else if (pObj == pNormalView->pPrevBtn) {
+	} else if (pObj == pNormalView->pPrevBtn) {
 		VideoLogInfo("pPrevBtn Press");
 		if (pNormalView->bHLSMode == FALSE) {
 			pNormalView->bSpeedFF = FALSE;
 			pNormalView->nSpeedValue = 1;
 			pNormalView->bSpeedDown = TRUE;
 			pNormalView->pSpeedTimer = ecore_timer_add(VP_NORMAL_LONG_PRESS_TIMER_INTERVAL,
-								__vp_normal_speed_timer_cb,
-								(void *)pNormalView);
-		}
-		else {
+			                           __vp_normal_speed_timer_cb,
+			                           (void *)pNormalView);
+		} else {
 			pNormalView->pSpeedTimer = ecore_timer_add(VP_NORMAL_LONG_PRESS_TIMER_INTERVAL,
-								__vp_normal_dlna_speed_timer_cb,
-								(void *)pNormalView);
+			                           __vp_normal_dlna_speed_timer_cb,
+			                           (void *)pNormalView);
 		}
-	}
-	else if (pObj == pNormalView->pResumeBtn) {
+	} else if (pObj == pNormalView->pResumeBtn) {
 		if (bSpeedMode) {
 			int nPosition = 0;
 			if (vp_mm_player_get_position(pNormalView->pPlayerHandle, &nPosition)) {
@@ -5727,13 +5650,12 @@ static void __vp_normal_control_btn_press_cb(void *pUserData, Evas_Object *pObj,
 				if (vp_mm_player_set_position(pNormalView->pPlayerHandle, pNormalView->nCurPosition)) {
 					pNormalView->bSeekComplete = FALSE;
 					pNormalView->nWaitPos = -1;
-				}else {
+				} else {
 					pNormalView->nWaitPos = nPosition;
 				}
 			}
 		}
-	}
-	else if (pObj == pNormalView->pPlayFocusBtn) {
+	} else if (pObj == pNormalView->pPlayFocusBtn) {
 		VideoLogInfo("pPlayFocusBtn Press");
 		Evas_Object *pObj = elm_object_part_content_get(pNormalView->pControlLayout, VP_PLAY_SWALLOW_NORMAL_PLAY);
 		if (pNormalView->pResumeBtn == pObj) {
@@ -5743,7 +5665,7 @@ static void __vp_normal_control_btn_press_cb(void *pUserData, Evas_Object *pObj,
 					if (vp_mm_player_set_position(pNormalView->pPlayerHandle, pNormalView->nCurPosition)) {
 						pNormalView->bSeekComplete = FALSE;
 						pNormalView->nWaitPos = -1;
-					}else {
+					} else {
 						pNormalView->nWaitPos = nPosition;
 					}
 				}
@@ -5770,26 +5692,22 @@ static void __vp_normal_control_btn_unpress_cb(void *pUserData, Evas_Object *pOb
 	pNormalView->bKeyPressed = FALSE;
 
 	if (pObj == pNormalView->pPauseBtn) {
-	}
-	else if (pObj == pNormalView->pResumeBtn) {
-	}
-	else if (pObj == pNormalView->pNextBtn) {
+	} else if (pObj == pNormalView->pResumeBtn) {
+	} else if (pObj == pNormalView->pNextBtn) {
 		pNormalView->bSpeedDown = FALSE;
 		VP_EVAS_TIMER_DEL(pNormalView->pSpeedTimer);
 		elm_object_signal_emit(pNormalView->pMainLayout, VP_NORMAL_SIGNAL_MAIN_SPEED_HIDE, "*");
 		if (!pNormalView->pProgressTimer) {
 			_vp_play_normal_view_create_progress_timer(pNormalView);
 		}
-	}
-	else if (pObj == pNormalView->pPrevBtn) {
+	} else if (pObj == pNormalView->pPrevBtn) {
 		pNormalView->bSpeedDown = FALSE;
 		VP_EVAS_TIMER_DEL(pNormalView->pSpeedTimer);
 		elm_object_signal_emit(pNormalView->pMainLayout, VP_NORMAL_SIGNAL_MAIN_SPEED_HIDE, "*");
 		if (!pNormalView->pProgressTimer) {
 			_vp_play_normal_view_create_progress_timer(pNormalView);
 		}
-	}
-	else if (pObj == pNormalView->pAllsharBtn) {
+	} else if (pObj == pNormalView->pAllsharBtn) {
 		VP_EVAS_IDLER_DEL(pNormalView->pControlIdler);
 		pNormalView->pControlIdler = ecore_idler_add(__vp_normal_control_idler_cb, (void *)pNormalView);
 	}
@@ -5809,8 +5727,7 @@ static void __vp_normal_media_key_event_cb(vp_media_key_event_t nKey, bool bRele
 		return;
 	}
 
-	switch (nKey)
-	{
+	switch (nKey) {
 	case VP_MEDIA_KEY_PLAY:
 	case VP_MEDIA_KEY_PAUSE:
 	case VP_MEDIA_KEY_PLAYPAUSE:
@@ -5834,8 +5751,7 @@ static void __vp_normal_media_key_event_cb(vp_media_key_event_t nKey, bool bRele
 					VideoLogError("Pause Fail");
 				}
 				pNormalView->bManualPause = FALSE;
-			}
-			else {
+			} else {
 				if (!vp_mm_player_pause(pNormalView->pPlayerHandle)) {
 					VideoLogError("Pause Fail");
 				}
@@ -5887,8 +5803,7 @@ static void __vp_normal_media_key_event_cb(vp_media_key_event_t nKey, bool bRele
 
 			_vp_play_normal_view_set_play_state(pNormalView);
 			_vp_play_normal_view_on_capture_mode(pNormalView);
-		}
-		else {
+		} else {
 			if (pNormalView->pDetailHandle) {
 				vp_detail_destroy(pNormalView->pDetailHandle);
 				pNormalView->pDetailHandle = NULL;
@@ -5903,8 +5818,8 @@ static void __vp_normal_media_key_event_cb(vp_media_key_event_t nKey, bool bRele
 			pNormalView->nSpeedValue = 1;
 			pNormalView->bSpeedDown = TRUE;
 			pNormalView->pSpeedTimer = ecore_timer_add(VP_NORMAL_LONG_PRESS_TIMER_INTERVAL,
-								__vp_normal_speed_timer_cb,
-								(void *)pNormalView);
+			                           __vp_normal_speed_timer_cb,
+			                           (void *)pNormalView);
 		}
 		break;
 	case VP_MEDIA_KEY_FASTFORWARD:
@@ -5933,8 +5848,7 @@ static void __vp_normal_media_key_event_cb(vp_media_key_event_t nKey, bool bRele
 
 			_vp_play_normal_view_set_play_state(pNormalView);
 			_vp_play_normal_view_on_capture_mode(pNormalView);
-		}
-		else {
+		} else {
 			VP_EVAS_TIMER_DEL(pNormalView->pHideTimer);
 			VP_EVAS_TIMER_DEL(pNormalView->pHideFinishTimer);
 			VP_EVAS_TIMER_DEL(pNormalView->pSpeedTimer);
@@ -5950,8 +5864,8 @@ static void __vp_normal_media_key_event_cb(vp_media_key_event_t nKey, bool bRele
 			pNormalView->nSpeedValue = 1;
 			pNormalView->bSpeedDown = TRUE;
 			pNormalView->pSpeedTimer = ecore_timer_add(VP_NORMAL_LONG_PRESS_TIMER_INTERVAL,
-								__vp_normal_speed_timer_cb,
-								(void *)pNormalView);
+			                           __vp_normal_speed_timer_cb,
+			                           (void *)pNormalView);
 		}
 		break;
 	case VP_MEDIA_KEY_STOP:
@@ -5995,11 +5909,12 @@ void vp_play_normal_view_ff_rew_keyboard_longpress_event_cb(normal_view_handle p
 
 	NormalView	*pNormalView = (NormalView *)pViewHandle;
 
-	if (pNormalView->pSpeedTimer== NULL && bRelease == FALSE) {
-		if (bFFseek)
+	if (pNormalView->pSpeedTimer == NULL && bRelease == FALSE) {
+		if (bFFseek) {
 			__vp_normal_media_key_event_cb(VP_MEDIA_KEY_FASTFORWARD, bRelease, pNormalView);
-		else
+		} else {
 			__vp_normal_media_key_event_cb(VP_MEDIA_KEY_REWIND, bRelease, pNormalView);
+		}
 	} else if (pNormalView->pSpeedTimer && bRelease == TRUE) {
 		if (pNormalView->nSpeedValue < 2) {
 			VideoLogInfo("speed up");
@@ -6066,8 +5981,7 @@ static void _vp_normal_view_speed_for_steps(NormalView *pNormalView, bool bSpeed
 	VideoLogInfo("pNormalView->nDuration %d", pNormalView->nDuration);
 	if (bSpeedFF) {
 		nSetPosition = nCurPosition  + (15 * 1000);//15 sec
-	}
-	else {
+	} else {
 		nSetPosition = nCurPosition  - (15 * 1000);
 	}
 
@@ -6360,8 +6274,7 @@ static Eina_Bool __vp_normal_naviframe_pop_cb(void *pUserData, Elm_Object_Item *
 			pPlayView->pFunc->vp_play_func_exit(pPlayView);
 
 			return EINA_FALSE;
-		}
-		else {
+		} else {
 			PlayView *pPlayView = pNormalView->pPlayView;
 
 			if (!pPlayView) {
@@ -6377,7 +6290,7 @@ static Eina_Bool __vp_normal_naviframe_pop_cb(void *pUserData, Elm_Object_Item *
 			vp_play_util_status_noti_show(VP_PLAY_STRING_COM_WAIT_BACK);
 
 			pNormalView->pExitWaitTimer = ecore_timer_add(VP_NORMAL_EXIT_WAIT_TIMER_INTERVAL,
-								__vp_normal_exit_wait_timer_cb, (void *)pNormalView);
+			                              __vp_normal_exit_wait_timer_cb, (void *)pNormalView);
 
 			return EINA_FALSE;
 		}
@@ -6419,7 +6332,7 @@ static void __vp_normal_sdp_download_state_change_cb(VppDownloadHandle pDownload
 		}
 
 		VP_FREE(szDownloadedFilePath);
-		if (!vp_mm_player_realize_async(pNormalView->pPlayerHandle,pNormalView->szMediaURL)) {
+		if (!vp_mm_player_realize_async(pNormalView->pPlayerHandle, pNormalView->szMediaURL)) {
 			VideoLogError("vp_mm_player_realize_async fail");
 			VppDownloadDestroyItem(pNormalView->pDownloadHandle);
 			pNormalView->pDownloadHandle = NULL;
@@ -6429,7 +6342,7 @@ static void __vp_normal_sdp_download_state_change_cb(VppDownloadHandle pDownload
 		VppDownloadDestroyItem(pNormalView->pDownloadHandle);
 		pNormalView->pDownloadHandle = NULL;
 	} else if (eState == VPP_DOWNLOAD_STATE_FAILED || eState == VPP_DOWNLOAD_STATE_CANCELED) {
-		if (!vp_mm_player_realize_async(pNormalView->pPlayerHandle,pNormalView->szMediaURL)) {
+		if (!vp_mm_player_realize_async(pNormalView->pPlayerHandle, pNormalView->szMediaURL)) {
 
 			VppDownloadDestroyItem(pNormalView->pDownloadHandle);
 			pNormalView->pDownloadHandle = NULL;
@@ -6455,7 +6368,7 @@ static void __vp_normal_main_layout_resize_cb(void *pUserData, Evas *pEvas, Evas
 static unsigned int _vp_play_normal_view_convert_color_to_argb(char *szColorHex)
 {
 	unsigned int nColor = 0;
-	char *szColor = g_strdup_printf("%s%6.6s", (szColorHex+7), (szColorHex+1));
+	char *szColor = g_strdup_printf("%s%6.6s", (szColorHex + 7), (szColorHex + 1));
 	nColor = strtoul(szColor, NULL, 16);
 	VideoLogInfo("szColorHex:%s, szColor: %s, nColor:%0x", szColorHex, szColor, nColor);
 	VP_FREE(szColor);
@@ -6489,11 +6402,9 @@ static bool _vp_play_normal_view_set_subtitle_font_config(NormalView *pNormalVie
 
 	if (nSubtitleSize == VIDEO_SUBTITLE_SIZE_SMALL) {
 		nSubtitleSizeValue = VP_SUBTITLE_SIZE_SMALL_VALUE;
-	}
-	else if (nSubtitleSize == VIDEO_SUBTITLE_SIZE_MEDIUM) {
+	} else if (nSubtitleSize == VIDEO_SUBTITLE_SIZE_MEDIUM) {
 		nSubtitleSizeValue = VP_SUBTITLE_SIZE_MEDIUM_VALUE;
-	}
-	else if (nSubtitleSize == VIDEO_SUBTITLE_SIZE_LARGE) {
+	} else if (nSubtitleSize == VIDEO_SUBTITLE_SIZE_LARGE) {
 		nSubtitleSizeValue = VP_SUBTITLE_SIZE_LARGE_VALUE;
 	}
 #ifndef SUBTITLE_K_FEATURE
@@ -6504,14 +6415,11 @@ static bool _vp_play_normal_view_set_subtitle_font_config(NormalView *pNormalVie
 
 	if (nFontColorKey == VIDEO_SUBTITLE_COLOR_BLACK) {
 		nFontColor = 0xff000000;
-	}
-	else if (nFontColorKey == VIDEO_SUBTITLE_COLOR_BLUE) {
+	} else if (nFontColorKey == VIDEO_SUBTITLE_COLOR_BLUE) {
 		nFontColor = 0xff0000ff;
-	}
-	else if (nFontColorKey == VIDEO_SUBTITLE_COLOR_GREEN) {
+	} else if (nFontColorKey == VIDEO_SUBTITLE_COLOR_GREEN) {
 		nFontColor = 0xff00ff00;
-	}
-	else if (nFontColorKey == VIDEO_SUBTITLE_COLOR_WHITE) {
+	} else if (nFontColorKey == VIDEO_SUBTITLE_COLOR_WHITE) {
 		nFontColor = 0xffffffff;
 	}
 
@@ -6519,11 +6427,9 @@ static bool _vp_play_normal_view_set_subtitle_font_config(NormalView *pNormalVie
 
 	if (nBGColorKey == VIDEO_SUBTITLE_COLOR_BLACK) {
 		nBGColor = 0xff000000;
-	}
-	else if (nBGColorKey == VIDEO_SUBTITLE_COLOR_WHITE) {
+	} else if (nBGColorKey == VIDEO_SUBTITLE_COLOR_WHITE) {
 		nBGColor = 0xffffffff;
-	}
-	else if (nBGColorKey == VIDEO_SUBTITLE_COLOR_NONE) {
+	} else if (nBGColorKey == VIDEO_SUBTITLE_COLOR_NONE) {
 		nBGColor = 0x00000000;
 	}
 
@@ -6636,13 +6542,13 @@ static bool _vp_play_normal_view_check_during_call(NormalView *pNormalView)
 			return FALSE;
 		}
 		pNormalView->pPopup = vp_popup_create(pPlayView->pWin,
-							POPUP_STYLE_DEFAULT_NO_CANCEL_BTN,
-							NULL,
-							VP_PLAY_STRING_UNABLE_TO_PLAY_VIDEO_DURING_CALL,
-							3.0, __vp_normal_popup_time_out_cb,
-							__vp_normal_popup_key_event_cb,
-							__vp_normal_popup_mouse_event_cb,
-							pNormalView);
+		                                      POPUP_STYLE_DEFAULT_NO_CANCEL_BTN,
+		                                      NULL,
+		                                      VP_PLAY_STRING_UNABLE_TO_PLAY_VIDEO_DURING_CALL,
+		                                      3.0, __vp_normal_popup_time_out_cb,
+		                                      __vp_normal_popup_key_event_cb,
+		                                      __vp_normal_popup_mouse_event_cb,
+		                                      pNormalView);
 
 		evas_object_show(pNormalView->pPopup);
 		pNormalView->bIsPopupShow = TRUE;
@@ -6795,16 +6701,13 @@ static bool _vp_play_normal_view_check_drm(NormalView *pNormalView, bool *bIsAva
 	if (bIsDrm == FALSE) {
 		VideoLogWarning("Not DRM File");
 		return TRUE;
-	}
-	else {
+	} else {
 		VideoLogWarning("== IS DRM FILE ================================");
 	}
 
-	if (pNormalView->pPlayView->bStoreDownload == TRUE)
-	{
+	if (pNormalView->pPlayView->bStoreDownload == TRUE) {
 		bool	bCheckLicense	= FALSE;
-		if (!vp_drm_is_check_license(pNormalView->szMediaURL, &bCheckLicense))
-		{
+		if (!vp_drm_is_check_license(pNormalView->szMediaURL, &bCheckLicense)) {
 			VideoLogError("vp_drm_is_check_license is fail");
 
 			*bIsAvailablePlay = FALSE;
@@ -6812,16 +6715,14 @@ static bool _vp_play_normal_view_check_drm(NormalView *pNormalView, bool *bIsAva
 			return FALSE;
 		}
 
-		if (bCheckLicense == FALSE)
-		{
-			if (!vp_store_license_acquisition(	pNormalView->szMediaURL,
-												pNormalView->pPlayView->pStoreAppId,
-												pNormalView->pPlayView->pStoreOrderId,
-												pNormalView->pPlayView->pStoreMvId,
-												pNormalView->pPlayView->pStoreServerId,
-												_vp_play_normal_view_store_la_cb,
-												(const void*)pNormalView	))
-			{
+		if (bCheckLicense == FALSE) {
+			if (!vp_store_license_acquisition(pNormalView->szMediaURL,
+			                                  pNormalView->pPlayView->pStoreAppId,
+			                                  pNormalView->pPlayView->pStoreOrderId,
+			                                  pNormalView->pPlayView->pStoreMvId,
+			                                  pNormalView->pPlayView->pStoreServerId,
+			                                  _vp_play_normal_view_store_la_cb,
+			                                  (const void*)pNormalView)) {
 				VideoLogError("vp_store_license_acquisition is fail");
 
 				*bIsAvailablePlay = FALSE;
@@ -6864,10 +6765,10 @@ static bool _vp_play_normal_view_check_drm(NormalView *pNormalView, bool *bIsAva
 			szMessage = g_strdup_printf(VP_PLAY_STRING_DRM_CURRENTLY_LOCKED_UNLOCK_Q, szTitleTemp);
 
 			pNormalView->pPopup = vp_popup_create(pPlayView->pWin, POPUP_STYLE_DEFAULT,
-								VP_PLAY_STRING_COM_ERROR,
-								szMessage,
-								3.0,__vp_normal_error_popup_time_out_cb,
-								NULL, NULL, pNormalView);
+			                                      VP_PLAY_STRING_COM_ERROR,
+			                                      szMessage,
+			                                      3.0, __vp_normal_error_popup_time_out_cb,
+			                                      NULL, NULL, pNormalView);
 			evas_object_show(pNormalView->pPopup);
 			pNormalView->bIsPopupShow = TRUE;
 
@@ -6894,10 +6795,10 @@ static bool _vp_play_normal_view_check_drm(NormalView *pNormalView, bool *bIsAva
 			VP_EVAS_DEL(pNormalView->pPopup);
 			pNormalView->pPopup = NULL;
 			pNormalView->pPopup = vp_popup_create(pPlayView->pWin, POPUP_STYLE_DEFAULT_NO_CANCEL_BTN,
-								VP_PLAY_STRING_COM_ERROR,
-								VP_PLAY_STRING_DIVX_DRM_AUTHORIZATION_ERROR,
-								3.0,__vp_normal_error_popup_time_out_cb,
-								NULL, NULL, pNormalView);
+			                                      VP_PLAY_STRING_COM_ERROR,
+			                                      VP_PLAY_STRING_DIVX_DRM_AUTHORIZATION_ERROR,
+			                                      3.0, __vp_normal_error_popup_time_out_cb,
+			                                      NULL, NULL, pNormalView);
 
 			evas_object_show(pNormalView->pPopup);
 			pNormalView->bIsPopupShow = TRUE;
@@ -6907,32 +6808,26 @@ static bool _vp_play_normal_view_check_drm(NormalView *pNormalView, bool *bIsAva
 			return TRUE;
 		}
 
-		while (stConstraintInfo.constraints)
-		{
+		while (stConstraintInfo.constraints) {
 			if (stConstraintInfo.constraints & VP_DRM_CONSTRAINT_COUNT) {
 				if (stConstraintInfo.remaining_count == 0) {
 					szMsg = g_strdup_printf(VP_PLAY_STRING_DIVX_DRM_RENTAL_EXPIRED_ERROR, stConstraintInfo.original_count - stConstraintInfo.remaining_count, stConstraintInfo.original_count);
-				}
-				else {
+				} else {
 					szMsg = g_strdup_printf(VP_PLAY_STRING_DIVX_DRM_RENTAL_CONFIRMATION_CHOICE, stConstraintInfo.original_count - stConstraintInfo.remaining_count, stConstraintInfo.original_count);
 				}
 				break;
 			}
 		}
-	}
-	else {
+	} else {
 		bool bNotiPopup = FALSE;
 
-		while (stConstraintInfo.constraints)
-		{
+		while (stConstraintInfo.constraints) {
 			if (stConstraintInfo.constraints & VP_DRM_CONSTRAINT_COUNT) {
 				if (stConstraintInfo.remaining_count == 2) {
 					szMsg = g_strdup_printf(VP_PLAY_STRING_DRM_PS_2_MORE_TIME_START_NOW_Q, szTitle);
-				}
-				else if (stConstraintInfo.remaining_count == 1) {
+				} else if (stConstraintInfo.remaining_count == 1) {
 					szMsg = g_strdup_printf(VP_PLAY_STRING_DRM_PS_1_MORE_TIME_START_NOW_Q, szTitle);
-				}
-				else if (stConstraintInfo.remaining_count == 0) {
+				} else if (stConstraintInfo.remaining_count == 0) {
 					bNotiPopup = TRUE;
 				}
 				break;
@@ -6948,8 +6843,7 @@ static bool _vp_play_normal_view_check_drm(NormalView *pNormalView, bool *bIsAva
 			if (stConstraintInfo.constraints & VP_DRM_CONSTRAINT_INTERVAL) {
 				if (stConstraintInfo.remaining_interval_sec == 0) {
 					bNotiPopup = TRUE;
-				}
-				else {
+				} else {
 					int nDays = stConstraintInfo.remaining_interval_sec / VP_ACCUMULATED_DATE + 1;
 					szMsg = g_strdup_printf(VP_PLAY_STRING_DRM_PS_FOR_PD_DAYS_START_NOW_Q, szTitle, nDays);
 				}
@@ -6991,8 +6885,7 @@ static void _vp_play_normal_view_free_subtitle_list(GList *pSubtitleList)
 		int nCount = 0;
 		int i = 0;
 		nCount = g_list_length(pSubtitleList);
-		for (i = 0; i < nCount ; i++)
-		{
+		for (i = 0; i < nCount ; i++) {
 			char *szName = NULL;
 			szName = (char *)g_list_nth_data(pSubtitleList, i);
 			VP_FREE(szName);
@@ -7038,7 +6931,7 @@ static Evas_Object *_vp_play_normal_view_create_image_sink(void *pParent, void *
 	int nBufSize = VP_NORMAL_DEFAULT_WIDTH * VP_NORMAL_DEFAULT_HEIGHT * 4;
 
 	memset(pImageBuf, 0, nBufSize);
-	evas_object_image_data_set(pObj,pImageBuf);
+	evas_object_image_data_set(pObj, pImageBuf);
 
 //	evas_object_event_callback_add(pObj, EVAS_CALLBACK_RESIZE,
 //					__vp_play_multi_view_imagesink_resize_cb, (void *)pNormalView);
@@ -7050,14 +6943,15 @@ static Evas_Object *_vp_play_normal_view_create_image_sink(void *pParent, void *
 }
 #endif
 
-bool vp_play_normal_view_play_start(normal_view_handle pViewHandle) {
+bool vp_play_normal_view_play_start(normal_view_handle pViewHandle)
+{
 	if (!pViewHandle) {
 		VideoLogError("pViewHandle is NULL");
 		return FALSE;
 	}
 
 	NormalView *pNormalView = (NormalView *)pViewHandle;
-	_vp_play_normal_view_play_start(pNormalView,FALSE);
+	_vp_play_normal_view_play_start(pNormalView, FALSE);
 	return TRUE;
 }
 
@@ -7124,7 +7018,7 @@ static bool _vp_play_normal_view_play_start(NormalView *pNormalView, bool bCheck
 	}
 
 	if (pNormalView->nLaunchingType != VIDEO_PLAY_TYPE_WEB &&
-		pNormalView->nLaunchingType != VIDEO_PLAY_TYPE_MULTI_PATH) {
+	        pNormalView->nLaunchingType != VIDEO_PLAY_TYPE_MULTI_PATH) {
 
 		if (!vp_play_util_local_file_check(pNormalView->szMediaURL)) {
 			/* popup show */
@@ -7136,10 +7030,10 @@ static bool _vp_play_normal_view_play_start(NormalView *pNormalView, bool bCheck
 				return FALSE;
 			}
 			pNormalView->pPopup = vp_popup_create(pPlayView->pWin, POPUP_STYLE_DEFAULT_NO_CANCEL_BTN,
-								VP_PLAY_STRING_COM_ERROR,
-								VP_PLAY_STRING_ERROR_FILE_NOT_EXIST,
-								3.0, __vp_normal_error_popup_time_out_cb,
-								NULL, NULL, pNormalView);
+			                                      VP_PLAY_STRING_COM_ERROR,
+			                                      VP_PLAY_STRING_ERROR_FILE_NOT_EXIST,
+			                                      3.0, __vp_normal_error_popup_time_out_cb,
+			                                      NULL, NULL, pNormalView);
 
 			evas_object_show(pNormalView->pPopup);
 			pNormalView->bIsPopupShow = TRUE;
@@ -7150,7 +7044,7 @@ static bool _vp_play_normal_view_play_start(NormalView *pNormalView, bool bCheck
 
 	if (bCheckDRM) {
 		if (pNormalView->nLaunchingType != VIDEO_PLAY_TYPE_WEB &&
-			pNormalView->nLaunchingType != VIDEO_PLAY_TYPE_MULTI_PATH) {
+		        pNormalView->nLaunchingType != VIDEO_PLAY_TYPE_MULTI_PATH) {
 			bool bIsAvailablePlay = TRUE;
 #ifdef ENABLE_DRM_FEATURE
 			if (_vp_play_normal_view_check_drm(pNormalView, &bIsAvailablePlay)) {
@@ -7158,32 +7052,27 @@ static bool _vp_play_normal_view_play_start(NormalView *pNormalView, bool bCheck
 					VideoLogWarning("Wait Drm popup result");
 					return TRUE;
 				}
-			}
-			else
+			} else
 #endif
 			{
-				if (pNormalView->pPlayView->bStoreDownload == TRUE)
-				{
-					if (bIsAvailablePlay == FALSE)
-					{
+				if (pNormalView->pPlayView->bStoreDownload == TRUE) {
+					if (bIsAvailablePlay == FALSE) {
 						VideoLogWarning("license acquisition failed!!!");
 
 						Evas_Object *pPopup = NULL;
 						pPopup = vp_popup_create(pNormalView->pPlayView->pWin,
-									POPUP_STYLE_DEFAULT_NO_CANCEL_BTN,
-									VP_PLAY_STRING_COM_ERROR,
-									VP_PLAY_STRING_ERROR_UNABLE_PLAY,
-									3.0, __vp_normal_prepare_error_popup_time_out_cb,
-									NULL, NULL, pNormalView);
+						                         POPUP_STYLE_DEFAULT_NO_CANCEL_BTN,
+						                         VP_PLAY_STRING_COM_ERROR,
+						                         VP_PLAY_STRING_ERROR_UNABLE_PLAY,
+						                         3.0, __vp_normal_prepare_error_popup_time_out_cb,
+						                         NULL, NULL, pNormalView);
 
 						evas_object_show(pPopup);
 
 						pNormalView->bIsPopupShow = TRUE;
 
 						return FALSE;
-					}
-					else
-					{
+					} else {
 						VideoLogWarning("need license acquisition");
 						return FALSE;
 					}
@@ -7194,8 +7083,8 @@ static bool _vp_play_normal_view_play_start(NormalView *pNormalView, bool bCheck
 
 	if (pNormalView->nStartPosition == 0) {
 		if (pNormalView->nLaunchingType == VIDEO_PLAY_TYPE_STORE ||
-			pNormalView->nLaunchingType == VIDEO_PLAY_TYPE_LIST ||
-			pNormalView->nLaunchingType == VIDEO_PLAY_TYPE_OTHER) {
+		        pNormalView->nLaunchingType == VIDEO_PLAY_TYPE_LIST ||
+		        pNormalView->nLaunchingType == VIDEO_PLAY_TYPE_OTHER) {
 			int nStartPos = 0;
 			if (vp_media_contents_get_played_position(pNormalView->szMediaURL, &nStartPos)) {
 				pNormalView->nStartPosition = nStartPos;
@@ -7204,8 +7093,8 @@ static bool _vp_play_normal_view_play_start(NormalView *pNormalView, bool bCheck
 	}
 
 	if (pNormalView->nLaunchingType == VIDEO_PLAY_TYPE_STORE ||
-		pNormalView->nLaunchingType == VIDEO_PLAY_TYPE_LIST ||
-		pNormalView->nLaunchingType == VIDEO_PLAY_TYPE_OTHER) {
+	        pNormalView->nLaunchingType == VIDEO_PLAY_TYPE_LIST ||
+	        pNormalView->nLaunchingType == VIDEO_PLAY_TYPE_OTHER) {
 		vp_media_contents_set_played_time(pNormalView->szMediaURL);
 	}
 
@@ -7213,7 +7102,7 @@ static bool _vp_play_normal_view_play_start(NormalView *pNormalView, bool bCheck
 
 	if (bCheckDRM) {
 		if (pNormalView->nLaunchingType != VIDEO_PLAY_TYPE_WEB &&
-			pNormalView->nLaunchingType != VIDEO_PLAY_TYPE_MULTI_PATH) {
+		        pNormalView->nLaunchingType != VIDEO_PLAY_TYPE_MULTI_PATH) {
 
 			bool bDRMLock = FALSE;
 			_vp_play_normal_view_check_drm_lock(pNormalView, &bDRMLock);
@@ -7324,8 +7213,8 @@ static bool _vp_play_normal_view_play_start(NormalView *pNormalView, bool bCheck
 
 #ifdef _NATIVE_BUFFER_SYNC
 	if (!vp_mm_player_set_video_sink(pNormalView->pPlayerHandle,
-					VP_MM_PLAYER_VIDEO_TYPE_EVAS,
-					(void *)pNormalView->pVideoSink)) {
+	                                 VP_MM_PLAYER_VIDEO_TYPE_EVAS,
+	                                 (void *)pNormalView->pVideoSink)) {
 		VideoLogError("vp_mm_player_set_video_sink fail");
 		_vp_play_normal_view_destroy_handle(pNormalView);
 		return FALSE;
@@ -7344,14 +7233,11 @@ static bool _vp_play_normal_view_play_start(NormalView *pNormalView, bool bCheck
 
 	if (pNormalView->nRotate == VIDEO_PLAY_ROTATE_NONE) {
 		vp_mm_player_set_video_rotate(pNormalView->pPlayerHandle, VP_MM_PLAYER_ROTATE_0);
-	}
-	else if (pNormalView->nRotate == VIDEO_PLAY_ROTATE_90) {
+	} else if (pNormalView->nRotate == VIDEO_PLAY_ROTATE_90) {
 		vp_mm_player_set_video_rotate(pNormalView->pPlayerHandle, VP_MM_PLAYER_ROTATE_90);
-	}
-	else if (pNormalView->nRotate == VIDEO_PLAY_ROTATE_180) {
+	} else if (pNormalView->nRotate == VIDEO_PLAY_ROTATE_180) {
 		vp_mm_player_set_video_rotate(pNormalView->pPlayerHandle, VP_MM_PLAYER_ROTATE_180);
-	}
-	else if (pNormalView->nRotate == VIDEO_PLAY_ROTATE_270) {
+	} else if (pNormalView->nRotate == VIDEO_PLAY_ROTATE_270) {
 		vp_mm_player_set_video_rotate(pNormalView->pPlayerHandle, VP_MM_PLAYER_ROTATE_270);
 	}
 
@@ -7359,14 +7245,11 @@ static bool _vp_play_normal_view_play_start(NormalView *pNormalView, bool bCheck
 
 	if (pNormalView->nSoundAlive == VIDEO_SA_NORMAL) {
 		nSoundFilter = VP_MM_PLAYER_FILTER_NONE;
-	}
-	else if (pNormalView->nSoundAlive == VIDEO_SA_VOICE) {
+	} else if (pNormalView->nSoundAlive == VIDEO_SA_VOICE) {
 		nSoundFilter = VP_MM_PLAYER_FILTER_VOICE;
-	}
-	else if (pNormalView->nSoundAlive == VIDEO_SA_MOVIE) {
+	} else if (pNormalView->nSoundAlive == VIDEO_SA_MOVIE) {
 		nSoundFilter = VP_MM_PLAYER_FILTER_MOVIE;
-	}
-	else if (pNormalView->nSoundAlive == VIDEO_SA_7_1_CH) {
+	} else if (pNormalView->nSoundAlive == VIDEO_SA_7_1_CH) {
 		nSoundFilter = VP_MM_PLAYER_FILTER_VITUAL_71;
 
 		video_sound_device_type_t nSoundDevType = VP_SOUND_DEVICE_NONE;
@@ -7390,7 +7273,7 @@ static bool _vp_play_normal_view_play_start(NormalView *pNormalView, bool bCheck
 	}
 
 	if (pNormalView->nLaunchingType != VIDEO_PLAY_TYPE_WEB &&
-		pNormalView->nLaunchingType != VIDEO_PLAY_TYPE_MULTI_PATH) {
+	        pNormalView->nLaunchingType != VIDEO_PLAY_TYPE_MULTI_PATH) {
 		if (pPlayView->szMediaTitle) {
 			elm_object_item_text_set(pNormalView->pNaviItem, pPlayView->szMediaTitle);
 		} else {
@@ -7401,17 +7284,17 @@ static bool _vp_play_normal_view_play_start(NormalView *pNormalView, bool bCheck
 			}
 			VP_FREE(szTitle);
 		}
-		if (!vp_mm_player_realize_async(pNormalView->pPlayerHandle,pNormalView->szMediaURL)) {
+		if (!vp_mm_player_realize_async(pNormalView->pPlayerHandle, pNormalView->szMediaURL)) {
 			VideoLogError("vp_mm_player_realize_async fail");
 
 			//_vp_play_normal_view_show_layout(pNormalView);
 			Evas_Object *pPopup = NULL;
 			pPopup = vp_popup_create(pPlayView->pWin,
-						POPUP_STYLE_DEFAULT_NO_CANCEL_BTN,
-						VP_PLAY_STRING_COM_ERROR,
-						VP_PLAY_STRING_ERROR_UNABLE_PLAY,
-						3.0, __vp_normal_prepare_error_popup_time_out_cb,
-						NULL, NULL, pNormalView);
+			                         POPUP_STYLE_DEFAULT_NO_CANCEL_BTN,
+			                         VP_PLAY_STRING_COM_ERROR,
+			                         VP_PLAY_STRING_ERROR_UNABLE_PLAY,
+			                         3.0, __vp_normal_prepare_error_popup_time_out_cb,
+			                         NULL, NULL, pNormalView);
 
 
 			evas_object_show(pPopup);
@@ -7420,8 +7303,7 @@ static bool _vp_play_normal_view_play_start(NormalView *pNormalView, bool bCheck
 
 			return TRUE;
 		}
-	}
-	else {
+	} else {
 		if (pNormalView->nLaunchingType == VIDEO_PLAY_TYPE_WEB) {
 			VideoLogInfo("VIDEO_PLAY_TYPE_WEB:%s", pNormalView->szMediaURL);
 			if (pPlayView->szMediaTitle) {
@@ -7441,8 +7323,7 @@ static bool _vp_play_normal_view_play_start(NormalView *pNormalView, bool bCheck
 			}
 			char *szSdpPath = NULL;
 			szSdpPath = vp_play_util_get_sdp_url((const char *)pNormalView->szMediaURL);
-			if (vp_play_util_check_sdp_url((const char *)szSdpPath))
-			{
+			if (vp_play_util_check_sdp_url((const char *)szSdpPath)) {
 				_vp_play_normal_view_download_sdp(pNormalView, pNormalView->szMediaURL);
 				//_vp_play_normal_view_show_layout(pNormalView);
 
@@ -7450,16 +7331,16 @@ static bool _vp_play_normal_view_play_start(NormalView *pNormalView, bool bCheck
 			}
 			VP_FREE(szSdpPath);
 
-			if (!vp_mm_player_realize_async(pNormalView->pPlayerHandle,pNormalView->szMediaURL)) {
+			if (!vp_mm_player_realize_async(pNormalView->pPlayerHandle, pNormalView->szMediaURL)) {
 				VideoLogError("vp_mm_player_realize_async fail");
 				//_vp_play_normal_view_show_layout(pNormalView);
 				Evas_Object *pPopup = NULL;
 				pPopup = vp_popup_create(pPlayView->pWin,
-							POPUP_STYLE_DEFAULT_NO_CANCEL_BTN,
-							VP_PLAY_STRING_COM_ERROR,
-							VP_PLAY_STRING_ERROR_UNABLE_PLAY,
-							3.0, __vp_normal_prepare_error_popup_time_out_cb,
-							NULL, NULL, pNormalView);
+				                         POPUP_STYLE_DEFAULT_NO_CANCEL_BTN,
+				                         VP_PLAY_STRING_COM_ERROR,
+				                         VP_PLAY_STRING_ERROR_UNABLE_PLAY,
+				                         3.0, __vp_normal_prepare_error_popup_time_out_cb,
+				                         NULL, NULL, pNormalView);
 
 				evas_object_show(pPopup);
 
@@ -7467,8 +7348,7 @@ static bool _vp_play_normal_view_play_start(NormalView *pNormalView, bool bCheck
 
 				return TRUE;
 			}
-		}
-		else if (pNormalView->nLaunchingType == VIDEO_PLAY_TYPE_MULTI_PATH) {
+		} else if (pNormalView->nLaunchingType == VIDEO_PLAY_TYPE_MULTI_PATH) {
 
 			char *szTitle = NULL;
 			char *szMultiPathURL = NULL;
@@ -7484,17 +7364,17 @@ static bool _vp_play_normal_view_play_start(NormalView *pNormalView, bool bCheck
 					if (vp_file_exists(szSubtitleForMultiPath)) {
 						pNormalView->bIsExistSubtitle = TRUE;
 						VideoSecureLogInfo("SUBTITLE : %s", szSubtitleForMultiPath);
-						vp_mm_player_set_subtitle_url(pNormalView->pPlayerHandle,szSubtitleForMultiPath);
+						vp_mm_player_set_subtitle_url(pNormalView->pPlayerHandle, szSubtitleForMultiPath);
 						VP_FREE(pNormalView->szSubtitleURL);
 					} else {
 						pNormalView->pPopup = vp_popup_create(pPlayView->pWin,
-									POPUP_STYLE_DEFAULT_NO_CANCEL_BTN,
-									VP_PLAY_STRING_COM_ERROR,
-									VP_PLAY_STRING_ERROR_SUBTITLE_FAIL,
-									3.0, __vp_normal_error_popup_time_out_cb,
-									__vp_normal_error_popup_key_event_cb,
-									__vp_normal_error_popup_mouse_event_cb,
-									pNormalView);
+						                                      POPUP_STYLE_DEFAULT_NO_CANCEL_BTN,
+						                                      VP_PLAY_STRING_COM_ERROR,
+						                                      VP_PLAY_STRING_ERROR_SUBTITLE_FAIL,
+						                                      3.0, __vp_normal_error_popup_time_out_cb,
+						                                      __vp_normal_error_popup_key_event_cb,
+						                                      __vp_normal_error_popup_mouse_event_cb,
+						                                      pNormalView);
 						evas_object_show(pNormalView->pPopup);
 						pNormalView->bIsPopupShow = TRUE;
 					}
@@ -7507,30 +7387,31 @@ static bool _vp_play_normal_view_play_start(NormalView *pNormalView, bool bCheck
 
 			if (szTitle) {
 				elm_object_item_text_set(pNormalView->pNaviItem, szTitle);
-			}
-			else {
+			} else {
 				elm_object_item_text_set(pNormalView->pNaviItem, VP_PLAY_STRING_NO_TITLE);
 			}
 
-			if (pNormalView->nStartPosition == 0)
+			if (pNormalView->nStartPosition == 0) {
 				pNormalView->nStartPosition = nMultiPathPosition;
+			}
 
-			if (nMultiPathDuration>0)
+			if (nMultiPathDuration > 0) {
 				pNormalView->nDuration = nMultiPathDuration;
+			}
 
 			VP_FREE(szMultiPathURL);
 			VP_FREE(szSubtitleForMultiPath);
 			VP_FREE(szTitle);
 
-			if (!vp_mm_player_realize_async(pNormalView->pPlayerHandle,pNormalView->szMediaURL)) {
+			if (!vp_mm_player_realize_async(pNormalView->pPlayerHandle, pNormalView->szMediaURL)) {
 				VideoLogError("vp_mm_player_realize_async fail");
 				Evas_Object *pPopup = NULL;
 				pPopup = vp_popup_create(pPlayView->pWin,
-							POPUP_STYLE_DEFAULT_NO_CANCEL_BTN,
-							VP_PLAY_STRING_COM_ERROR,
-							VP_PLAY_STRING_ERROR_UNABLE_PLAY,
-							3.0, __vp_normal_prepare_error_popup_time_out_cb,
-							NULL, NULL, pNormalView);
+				                         POPUP_STYLE_DEFAULT_NO_CANCEL_BTN,
+				                         VP_PLAY_STRING_COM_ERROR,
+				                         VP_PLAY_STRING_ERROR_UNABLE_PLAY,
+				                         3.0, __vp_normal_prepare_error_popup_time_out_cb,
+				                         NULL, NULL, pNormalView);
 
 				evas_object_show(pPopup);
 
@@ -7563,8 +7444,8 @@ static void _vp_play_normal_view_on_next_play(NormalView *pNormalView, bool bMan
 	}
 
 	if (pNormalView->nLaunchingType == VIDEO_PLAY_TYPE_MESSAGE ||
-		pNormalView->nLaunchingType == VIDEO_PLAY_TYPE_EMAIL ||
-		pNormalView->nLaunchingType == VIDEO_PLAY_TYPE_PREVIEW) {
+	        pNormalView->nLaunchingType == VIDEO_PLAY_TYPE_EMAIL ||
+	        pNormalView->nLaunchingType == VIDEO_PLAY_TYPE_PREVIEW) {
 		return;
 	}
 
@@ -7580,23 +7461,19 @@ static void _vp_play_normal_view_on_next_play(NormalView *pNormalView, bool bMan
 		if (pNormalView->nRepeatMode == VIDEO_PLAY_REPEAT_NONE) {
 			if (bManual) {
 				return;
-			}
-			else {
+			} else {
 				bIsExit = TRUE;
 			}
-		}
-		else {
+		} else {
 			_vp_play_normal_view_play_start(pNormalView, FALSE);
 		}
-	}
-	else if (pNormalView->nLaunchingType == VIDEO_PLAY_TYPE_MULTI_PATH) {
+	} else if (pNormalView->nLaunchingType == VIDEO_PLAY_TYPE_MULTI_PATH) {
 		PlayView *pPlayView = pNormalView->pPlayView;
 
 		if (!pPlayView) {
 			VideoLogError("pPlayView is NULL");
 			bIsExit = TRUE;
-		}
-		else if (!pPlayView->pMultiPathList) {
+		} else if (!pPlayView->pMultiPathList) {
 			VideoLogError("pMultiPathList is NULL");
 			bIsExit = TRUE;
 		} else {
@@ -7616,8 +7493,7 @@ static void _vp_play_normal_view_on_next_play(NormalView *pNormalView, bool bMan
 					pNormalView->nStartPosition = nPosition;
 					pNormalView->nDuration = nDuration;
 					_vp_play_normal_view_play_start(pNormalView, TRUE);
-				}
-				else {
+				} else {
 					_vp_play_normal_view_play_start(pNormalView, TRUE);
 				}
 				return;
@@ -7625,11 +7501,9 @@ static void _vp_play_normal_view_on_next_play(NormalView *pNormalView, bool bMan
 
 			if (pNormalView->nRepeatMode == VIDEO_PLAY_REPEAT_NONE) {
 				bIsExit = TRUE;
-			}
-			else if (pNormalView->nRepeatMode == VIDEO_PLAY_REPEAT_OFF) {
+			} else if (pNormalView->nRepeatMode == VIDEO_PLAY_REPEAT_OFF) {
 				bIsExit = TRUE;
-			}
-			else if (pNormalView->nRepeatMode == VIDEO_PLAY_REPEAT_ALL_STOP) {
+			} else if (pNormalView->nRepeatMode == VIDEO_PLAY_REPEAT_ALL_STOP) {
 				char *szNextURL = NULL;
 				char *szSubtitle = NULL;
 				int nPosition = 0;
@@ -7640,19 +7514,16 @@ static void _vp_play_normal_view_on_next_play(NormalView *pNormalView, bool bMan
 
 				if (!szNextURL) {
 					bIsExit = TRUE;
-				}
-				else {
+				} else {
 					VP_FREE(pNormalView->szMediaURL);
 					VP_STRDUP(pNormalView->szMediaURL, szNextURL);
 					VP_FREE(szNextURL);
 					pNormalView->nDuration = nDuration;
 					_vp_play_normal_view_play_start(pNormalView, TRUE);
 				}
-			}
-			else if (pNormalView->nRepeatMode == VIDEO_PLAY_REPEAT_ONE) {
+			} else if (pNormalView->nRepeatMode == VIDEO_PLAY_REPEAT_ONE) {
 				_vp_play_normal_view_play_start(pNormalView, TRUE);
-			}
-			else if (pNormalView->nRepeatMode == VIDEO_PLAY_REPEAT_ALL) {
+			} else if (pNormalView->nRepeatMode == VIDEO_PLAY_REPEAT_ALL) {
 				char *szNextURL = NULL;
 				char *szSubtitle = NULL;
 				int nPosition = 0;
@@ -7661,8 +7532,7 @@ static void _vp_play_normal_view_on_next_play(NormalView *pNormalView, bool bMan
 				VP_FREE(szSubtitle);
 				if (!szNextURL) {
 					bIsExit = TRUE;
-				}
-				else {
+				} else {
 					VP_FREE(pNormalView->szMediaURL);
 					VP_STRDUP(pNormalView->szMediaURL, szNextURL);
 					VP_FREE(szNextURL);
@@ -7671,8 +7541,7 @@ static void _vp_play_normal_view_on_next_play(NormalView *pNormalView, bool bMan
 				}
 			}
 		}
-	}
-	else {
+	} else {
 		if (bManual) {
 			_vp_play_normal_view_set_played_time(pNormalView);
 			char *szNextURL = NULL;
@@ -7694,8 +7563,7 @@ static void _vp_play_normal_view_on_next_play(NormalView *pNormalView, bool bMan
 				}
 				_vp_play_normal_view_set_play_state(pNormalView);
 				_vp_play_normal_view_on_capture_mode(pNormalView);
-			}
-			else {
+			} else {
 				_vp_play_normal_view_play_start(pNormalView, TRUE);
 			}
 			return;
@@ -7703,33 +7571,27 @@ static void _vp_play_normal_view_on_next_play(NormalView *pNormalView, bool bMan
 
 		if (pNormalView->nRepeatMode == VIDEO_PLAY_REPEAT_NONE) {
 			bIsExit = TRUE;
-		}
-		else if (pNormalView->nRepeatMode == VIDEO_PLAY_REPEAT_OFF) {
+		} else if (pNormalView->nRepeatMode == VIDEO_PLAY_REPEAT_OFF) {
 			bIsExit = TRUE;
-		}
-		else if (pNormalView->nRepeatMode == VIDEO_PLAY_REPEAT_ALL_STOP) {
+		} else if (pNormalView->nRepeatMode == VIDEO_PLAY_REPEAT_ALL_STOP) {
 			char *szNextURL = NULL;
 			vp_media_contents_get_next_file_path(pNormalView->szMediaURL, &szNextURL, FALSE, pNormalView->pMediaItemList);
 			if (!szNextURL) {
 				bIsExit = TRUE;
-			}
-			else {
+			} else {
 				VP_FREE(pNormalView->szMediaURL);
 				VP_STRDUP(pNormalView->szMediaURL, szNextURL);
 				VP_FREE(szNextURL);
 				_vp_play_normal_view_play_start(pNormalView, TRUE);
 			}
-		}
-		else if (pNormalView->nRepeatMode == VIDEO_PLAY_REPEAT_ONE) {
+		} else if (pNormalView->nRepeatMode == VIDEO_PLAY_REPEAT_ONE) {
 			_vp_play_normal_view_play_start(pNormalView, TRUE);
-		}
-		else if (pNormalView->nRepeatMode == VIDEO_PLAY_REPEAT_ALL) {
+		} else if (pNormalView->nRepeatMode == VIDEO_PLAY_REPEAT_ALL) {
 			char *szNextURL = NULL;
 			vp_media_contents_get_next_file_path(pNormalView->szMediaURL, &szNextURL, TRUE, pNormalView->pMediaItemList);
 			if (!szNextURL) {
 				bIsExit = TRUE;
-			}
-			else {
+			} else {
 				VP_FREE(pNormalView->szMediaURL);
 				VP_STRDUP(pNormalView->szMediaURL, szNextURL);
 				VP_FREE(szNextURL);
@@ -7789,9 +7651,9 @@ static void _vp_play_normal_view_on_prev_play(NormalView *pNormalView, bool bMan
 	}
 
 	if (pNormalView->nLaunchingType == VIDEO_PLAY_TYPE_MESSAGE ||
-		pNormalView->nLaunchingType == VIDEO_PLAY_TYPE_EMAIL ||
-		pNormalView->nLaunchingType == VIDEO_PLAY_TYPE_PREVIEW ||
-		(pPlayView && (strstr(pPlayView->szMediaURL,"/.") != NULL))) {
+	        pNormalView->nLaunchingType == VIDEO_PLAY_TYPE_EMAIL ||
+	        pNormalView->nLaunchingType == VIDEO_PLAY_TYPE_PREVIEW ||
+	        (pPlayView && (strstr(pPlayView->szMediaURL, "/.") != NULL))) {
 		return;
 	}
 
@@ -7804,12 +7666,10 @@ static void _vp_play_normal_view_on_prev_play(NormalView *pNormalView, bool bMan
 		if (!pPlayView) {
 			_vp_play_normal_view_play_start(pNormalView, TRUE);
 			return;
-		}
-		else if (pPlayView->pMultiPathList== NULL) {
+		} else if (pPlayView->pMultiPathList == NULL) {
 			_vp_play_normal_view_play_start(pNormalView, TRUE);
 			return;
-		}
-		else {
+		} else {
 			char *szSubtitle = NULL;
 			int nPosition = 0;
 			int nDuration = 0;
@@ -7826,8 +7686,7 @@ static void _vp_play_normal_view_on_prev_play(NormalView *pNormalView, bool bMan
 			_vp_play_normal_view_play_start(pNormalView, TRUE);
 		}
 
-	}
-	else {
+	} else {
 		vp_media_contents_get_prev_file_path(pNormalView->szMediaURL, &szPrevURL, TRUE, pNormalView->pMediaItemList);
 		VideoSecureLogInfo("pNormalView->szMediaURL pre is %s", pNormalView->szMediaURL);
 		if (szPrevURL) {
@@ -7841,7 +7700,7 @@ static void _vp_play_normal_view_on_prev_play(NormalView *pNormalView, bool bMan
 		vp_mm_player_state_t nState = VP_MM_PLAYER_STATE_NONE;
 		if (!vp_mm_player_get_state(pNormalView->pPlayerHandle, &nState)) {
 			VideoLogWarning("vp_mm_player_get_state is fail");
-			}
+		}
 		if (nState != VP_MM_PLAYER_STATE_PLAYING) {
 			vp_mm_player_play(pNormalView->pPlayerHandle);
 			pNormalView->bManualPause = FALSE;
@@ -7861,10 +7720,10 @@ static void _vp_play_normal_view_set_played_time(NormalView *pNormalView)
 	//PlayView *pPlayView = pNormalView->pPlayView;
 	int nPosition = 0;
 	if (pNormalView->nLaunchingType != VIDEO_PLAY_TYPE_WEB &&
-		pNormalView->nLaunchingType != VIDEO_PLAY_TYPE_PREVIEW &&
-		pNormalView->nLaunchingType != VIDEO_PLAY_TYPE_MESSAGE &&
-		pNormalView->nLaunchingType != VIDEO_PLAY_TYPE_EMAIL &&
-		pNormalView->nLaunchingType != VIDEO_PLAY_TYPE_MULTI_PATH) {
+	        pNormalView->nLaunchingType != VIDEO_PLAY_TYPE_PREVIEW &&
+	        pNormalView->nLaunchingType != VIDEO_PLAY_TYPE_MESSAGE &&
+	        pNormalView->nLaunchingType != VIDEO_PLAY_TYPE_EMAIL &&
+	        pNormalView->nLaunchingType != VIDEO_PLAY_TYPE_MULTI_PATH) {
 		if (!vp_mm_player_get_position(pNormalView->pPlayerHandle, &nPosition)) {
 			VideoLogError("vp_mm_player_get_position is fail");
 		} else {
@@ -7887,12 +7746,10 @@ static void _vp_play_normal_view_set_played_time(NormalView *pNormalView)
 				vp_media_contents_set_played_position(pNormalView->szMediaURL, nPosition);
 			}
 		}
-	}
-	else if (pNormalView->nLaunchingType == VIDEO_PLAY_TYPE_MULTI_PATH) {
+	} else if (pNormalView->nLaunchingType == VIDEO_PLAY_TYPE_MULTI_PATH) {
 		if (!vp_mm_player_get_position(pNormalView->pPlayerHandle, &nPosition)) {
 			VideoLogError("vp_mm_player_get_position is fail");
-		}
-		else {
+		} else {
 			PlayView *pPlayView = pNormalView->pPlayView;
 			if (!pPlayView) {
 				VideoLogError("pPlayView is NULL");
@@ -7909,12 +7766,11 @@ static void _vp_play_normal_view_set_played_time(NormalView *pNormalView)
 		}
 
 	}
-	if (pNormalView->nLaunchingType== VIDEO_PLAY_TYPE_LIST ||
-		pNormalView->nLaunchingType == VIDEO_PLAY_TYPE_OTHER) {
+	if (pNormalView->nLaunchingType == VIDEO_PLAY_TYPE_LIST ||
+	        pNormalView->nLaunchingType == VIDEO_PLAY_TYPE_OTHER) {
 		bool bIsCloud = FALSE;
 		vp_media_contents_get_cloud_attribute(pNormalView->szMediaURL, &bIsCloud);
-		if (!bIsCloud)
-		{
+		if (!bIsCloud) {
 			PlayView *pPlayView = pNormalView->pPlayView;
 			if (!pPlayView) {
 				VideoLogError("pPlayView is NULL");
@@ -7973,8 +7829,7 @@ static void _vp_play_normal_view_screen_move(NormalView *pNormalView, bool bFowa
 
 	if (bFoward) {
 		nSetPosition = nCurPosition  + 1000;
-	}
-	else {
+	} else {
 		nSetPosition = nCurPosition  - 1000;
 	}
 
@@ -8032,8 +7887,7 @@ static void _vp_play_normal_view_on_zoom_mode(NormalView *pNormalView)
 			Evas_Object *pZoomGuideLayout = vp_zoom_guide_get_object(pNormalView->pZoomGuide);
 			if (pZoomGuideLayout) {
 				elm_object_part_content_set(pNormalView->pMainLayout, VP_PLAY_SWALLOW_NORMAL_ZOOM_GUIDE, pZoomGuideLayout);
-			}
-			else {
+			} else {
 				VideoLogError("pZoomGuideLayout is NULL");
 			}
 
@@ -8048,16 +7902,15 @@ static void _vp_play_normal_view_on_zoom_mode(NormalView *pNormalView)
 			if (pNormalView->nRotate == VIDEO_PLAY_ROTATE_90 || pNormalView->nRotate == VIDEO_PLAY_ROTATE_270) {
 				rtDst.w = nHeight;
 				rtDst.h = nWidth;
-			}
-			else {
+			} else {
 				rtDst.w = nWidth;
 				rtDst.h = nHeight;
 			}
 			vp_mm_player_get_resolution(pNormalView->pPlayerHandle, &(rtSrc.w), &(rtSrc.h));
 			vp_play_util_calculator_position(rtSrc, rtDst, &rtResult, pNormalView->nDisplayMode);
-			vp_zoom_guide_set_move_position(pNormalView->pZoomGuide, (double)pNormalView->nZoomPosX/rtDst.w, (double)pNormalView->nZoomPosY/rtDst.h);
-			float fPosX = pNormalView->nZoomPosX/rtResult.w;
-			float fPosY = pNormalView->nZoomPosY/rtResult.h;
+			vp_zoom_guide_set_move_position(pNormalView->pZoomGuide, (double)pNormalView->nZoomPosX / rtDst.w, (double)pNormalView->nZoomPosY / rtDst.h);
+			float fPosX = pNormalView->nZoomPosX / rtResult.w;
+			float fPosY = pNormalView->nZoomPosY / rtResult.h;
 			if (fPosX > 1.0) {
 				fPosX = 1.0;
 			}
@@ -8079,15 +7932,14 @@ static void _vp_play_normal_view_on_zoom_mode(NormalView *pNormalView)
 		if (pNormalView->nRotate == VIDEO_PLAY_ROTATE_90 || pNormalView->nRotate == VIDEO_PLAY_ROTATE_270) {
 			bLandscape = TRUE;
 		}
-		if (bLandscape && fabs(pNormalView->fPrevZoomValue - pNormalView->fZoomValue)< 0.05) {
+		if (bLandscape && fabs(pNormalView->fPrevZoomValue - pNormalView->fZoomValue) < 0.05) {
 //			VideoLogWarning("same ZoomValue. skip it");
 			return;
 		}
 
 		vp_zoom_guide_set_zoom_value(pNormalView->pZoomGuide, pNormalView->fZoomValue);
 		pNormalView->fPrevZoomValue = pNormalView->fZoomValue;
-	}
-	else {
+	} else {
 		pNormalView->fZoomValue = 1.0;
 		pNormalView->bZoomEnable = FALSE;
 		vp_zoom_guide_set_zoom_value(pNormalView->pZoomGuide, pNormalView->fZoomValue);
@@ -8140,12 +7992,12 @@ static void _vp_play_normal_view_on_capture_mode(NormalView *pNormalView)
 
 	if (pNormalView->bCaptureMode) {
 		pNormalView->pCaptureBtn = vp_button_create(
-						pNormalView->pNaviFrame, "playview/custom/flat_63_63/default",
-						NULL,
-						(Evas_Smart_Cb)__vp_normal_control_btn_clicked_cb,
-						(Evas_Smart_Cb)__vp_normal_control_btn_press_cb,
-						(Evas_Smart_Cb)__vp_normal_control_btn_unpress_cb,
-						(void *)pNormalView);
+		                               pNormalView->pNaviFrame, "playview/custom/flat_63_63/default",
+		                               NULL,
+		                               (Evas_Smart_Cb)__vp_normal_control_btn_clicked_cb,
+		                               (Evas_Smart_Cb)__vp_normal_control_btn_press_cb,
+		                               (Evas_Smart_Cb)__vp_normal_control_btn_unpress_cb,
+		                               (void *)pNormalView);
 		Evas_Object *pIcon = NULL;
 		pIcon = vp_button_create_icon(pNormalView->pCaptureBtn, VP_PLAY_RESROUCE_EDJ_PATH, VP_PLAY_NORMAL_RES_CAPTURE);
 		elm_object_part_content_set(pNormalView->pCaptureBtn, VP_PLAY_SWALLOW_BUTTON_ICON, pIcon);
@@ -8165,22 +8017,22 @@ static void _vp_play_normal_view_on_capture_mode(NormalView *pNormalView)
 			VideoLogWarning("vp_mm_player_get_state is fail");
 		}
 		if (nState == VP_MM_PLAYER_STATE_PAUSED ||
-			(nState != VP_MM_PLAYER_STATE_PLAYING && pNormalView->bManualPause)) {
+		        (nState != VP_MM_PLAYER_STATE_PLAYING && pNormalView->bManualPause)) {
 			pNormalView->pCaptureRewBtn = vp_button_create(
-							pNormalView->pNaviFrame, "playview/custom/flat_63_63/default",
-							NULL,
-							(Evas_Smart_Cb)__vp_normal_control_btn_clicked_cb,
-							(Evas_Smart_Cb)__vp_normal_control_btn_press_cb,
-							(Evas_Smart_Cb)__vp_normal_control_btn_unpress_cb,
-							(void *)pNormalView);
+			                                  pNormalView->pNaviFrame, "playview/custom/flat_63_63/default",
+			                                  NULL,
+			                                  (Evas_Smart_Cb)__vp_normal_control_btn_clicked_cb,
+			                                  (Evas_Smart_Cb)__vp_normal_control_btn_press_cb,
+			                                  (Evas_Smart_Cb)__vp_normal_control_btn_unpress_cb,
+			                                  (void *)pNormalView);
 
 			pNormalView->pCaptureFFBtn = vp_button_create(
-							pNormalView->pNaviFrame, "playview/custom/flat_63_63/default",
-							NULL,
-							(Evas_Smart_Cb)__vp_normal_control_btn_clicked_cb,
-							(Evas_Smart_Cb)__vp_normal_control_btn_press_cb,
-							(Evas_Smart_Cb)__vp_normal_control_btn_unpress_cb,
-							(void *)pNormalView);
+			                                 pNormalView->pNaviFrame, "playview/custom/flat_63_63/default",
+			                                 NULL,
+			                                 (Evas_Smart_Cb)__vp_normal_control_btn_clicked_cb,
+			                                 (Evas_Smart_Cb)__vp_normal_control_btn_press_cb,
+			                                 (Evas_Smart_Cb)__vp_normal_control_btn_unpress_cb,
+			                                 (void *)pNormalView);
 
 			pIcon = vp_button_create_icon(pNormalView->pCaptureRewBtn, VP_PLAY_RESROUCE_EDJ_PATH, VP_PLAY_NORMAL_RES_CAPTURE_REW);
 			elm_object_part_content_set(pNormalView->pCaptureRewBtn, VP_PLAY_SWALLOW_BUTTON_ICON, pIcon);
@@ -8231,11 +8083,11 @@ static void _vp_play_normal_view_on_share_popup(NormalView *pNormalView)
 		pNormalView->pPopup = NULL;
 
 		pNormalView->pPopup = vp_popup_create(pPlayView->pWin,
-						POPUP_STYLE_DEFAULT_NO_CANCEL_BTN,
-						VP_PLAY_STRING_COM_ERROR,
-						VP_PLAY_STRING_DRM_UNABLE_TO_SHARE_DRM_FILE,
-						3.0, __vp_normal_popup_time_out_cb,
-						NULL, NULL, pNormalView);
+		                                      POPUP_STYLE_DEFAULT_NO_CANCEL_BTN,
+		                                      VP_PLAY_STRING_COM_ERROR,
+		                                      VP_PLAY_STRING_DRM_UNABLE_TO_SHARE_DRM_FILE,
+		                                      3.0, __vp_normal_popup_time_out_cb,
+		                                      NULL, NULL, pNormalView);
 
 		evas_object_show(pNormalView->pPopup);
 		pNormalView->bIsPopupShow = TRUE;
@@ -8298,9 +8150,9 @@ static void _vp_play_normal_view_on_sound_alive_popup(NormalView *pNormalView)
 	}
 
 	pNormalView->pSAHandle = vp_sound_alive_create(pPlayView->pWin,
-							pNormalView->szMediaURL,
-							__vp_normal_sound_alive_popup_close_cb,
-							pNormalView->nSoundAlive);
+	                         pNormalView->szMediaURL,
+	                         __vp_normal_sound_alive_popup_close_cb,
+	                         pNormalView->nSoundAlive);
 	if (!pNormalView->pSAHandle) {
 		VideoLogError("vp_sound_alive_create fail");
 		return;
@@ -8350,7 +8202,7 @@ static void _vp_play_normal_view_on_sound_path_popup(NormalView *pNormalView)
 	}
 
 	pNormalView->pSoundPathHandle = vp_sound_path_create(pPlayView->pWin,
-							__vp_normal_sound_path_popup_close_cb);
+	                                __vp_normal_sound_path_popup_close_cb);
 	if (!pNormalView->pSoundPathHandle) {
 		VideoLogError("vp_sound_path_create fail");
 		return;
@@ -8398,8 +8250,8 @@ static void _vp_play_normal_view_on_audio_track_popup(NormalView *pNormalView)
 		return;
 	}
 	pNormalView->pAudioTrackHandle = vp_audio_track_create(pPlayView->pWin,
-							__vp_normal_audio_track_popup_close_cb,
-							pNormalView->nDefaultAudioTrackIndex);
+	                                 __vp_normal_audio_track_popup_close_cb,
+	                                 pNormalView->nDefaultAudioTrackIndex);
 	if (!pNormalView->pAudioTrackHandle) {
 		VideoLogError("vp_audio_track_create fail");
 		return;
@@ -8413,25 +8265,22 @@ static void _vp_play_normal_view_on_audio_track_popup(NormalView *pNormalView)
 	if (vp_mm_player_get_audio_track_count(pNormalView->pPlayerHandle, &nCount)) {
 		if (nCount > 1) {
 			int nIdx = 0;
-			for (nIdx = 0; nIdx < nCount; nIdx++)
-			{	char *szCode = NULL;
+			for (nIdx = 0; nIdx < nCount; nIdx++) {
+				char *szCode = NULL;
 
 				if (vp_mm_player_get_audio_track_language_code(pNormalView->pPlayerHandle, nIdx, &szCode)) {
 					vp_audio_track_add_Item(pNormalView->pAudioTrackHandle, szCode, nIdx);
-				}
-				else {
+				} else {
 					vp_audio_track_add_Item(pNormalView->pAudioTrackHandle, VP_PLAY_STRING_COM_UNKNOWN, nIdx);
 				}
 				VP_FREE(szCode);
 			}
-		}
-		else {
+		} else {
 			char *szTrack = g_strdup_printf("%s %d", VP_PLAY_STRING_AUDIO_TRACK, 0);
 			vp_audio_track_add_Item(pNormalView->pAudioTrackHandle, szTrack, 0);
 			VP_FREE(szTrack);
 		}
-	}
-	else {
+	} else {
 		char *szTrack = g_strdup_printf("%s %d", VP_PLAY_STRING_AUDIO_TRACK, 0);
 		vp_audio_track_add_Item(pNormalView->pAudioTrackHandle, szTrack, 0);
 		VP_FREE(szTrack);
@@ -8477,7 +8326,7 @@ static void _vp_play_normal_view_on_subtitle_popup(NormalView *pNormalView)
 	if (vp_mm_player_get_subtitle_track_count(pNormalView->pPlayerHandle, &nCount)) {
 		if (nCount > 0) {
 			char *szCode = NULL;
-			#ifdef _SUBTITLE_MULTI_LANGUAGE
+#ifdef _SUBTITLE_MULTI_LANGUAGE
 			if (pNormalView->pSelectedSubtitleLanguage && nCount == pNormalView->nSubtitleLanguageCount) {
 				int index = 0;
 				VP_FREE(pSubtitleInfo->szLanguage);
@@ -8498,16 +8347,14 @@ static void _vp_play_normal_view_on_subtitle_popup(NormalView *pNormalView)
 						VP_FREE(szCode);
 					}
 				}
-			}
-			else
-			#endif
+			} else
+#endif
 			{
 				vp_mm_player_get_subtitle_track_language_code(pNormalView->pPlayerHandle, pNormalView->nDefaultSubtitleTrackIndex, &szCode);
 				vp_subtitle_track_get_name(szCode, &(pSubtitleInfo->szLanguage));
 				VP_FREE(szCode);
 			}
-		}
-		else {
+		} else {
 			pSubtitleInfo->szLanguage = g_strdup_printf("%s", VP_PLAY_STRING_COM_UNKNOWN);
 		}
 	}
@@ -8547,8 +8394,7 @@ static void _vp_play_normal_view_on_subtitle_popup(NormalView *pNormalView)
 
 	if (pNormalView->nLaunchingType == VIDEO_PLAY_TYPE_WEB) {
 		pSubtitleInfo->bSupportSelect = FALSE;
-	}
-	else {
+	} else {
 		pSubtitleInfo->bSupportSelect = TRUE;
 	}
 	vp_play_subtitle_get_text(pNormalView->pSubtitle, &pSubtitleInfo->szText);
@@ -8559,7 +8405,7 @@ static void _vp_play_normal_view_on_subtitle_popup(NormalView *pNormalView)
 		vp_subtitle_update(pNormalView->pSubtitlePopup, pSubtitleInfo);
 	} else {
 		pNormalView->pSubtitlePopup = vp_subtitle_create(pPlayView->pWin, pSubtitleInfo,
-								__vp_normal_subtitle_popup_close_cb);
+		                              __vp_normal_subtitle_popup_close_cb);
 
 		if (!pNormalView->pSubtitlePopup) {
 			VideoLogError("vp_subtitle_create fail");
@@ -8609,9 +8455,9 @@ static void _vp_play_normal_view_on_subtitle_sync_popup(NormalView *pNormalView)
 	}
 
 	pNormalView->pSubtitleSyncPopup = vp_subtitle_sync_popup_create(pPlayView->pWin,
-								pNormalView->fSubtitleSyncValue,
-								__vp_normal_subtitle_sync_popup_update_cb,
-								__vp_normal_subtitle_sync_popup_done_cb);
+	                                  pNormalView->fSubtitleSyncValue,
+	                                  __vp_normal_subtitle_sync_popup_update_cb,
+	                                  __vp_normal_subtitle_sync_popup_done_cb);
 
 	if (!pNormalView->pSubtitleSyncPopup) {
 		VideoLogError("vp_subtitle_sync_popup_create fail");
@@ -8775,11 +8621,11 @@ static void _vp_play_normal_view_on_subtitle_language_popup(NormalView *pNormalV
 	}
 #ifdef _SUBTITLE_MULTI_LANGUAGE
 	pNormalView->pSubtitleTrackHandle = vp_subtitle_track_create(pPlayView->pWin,
-							__vp_normal_subtitle_track_popup_close_cb);
+	                                    __vp_normal_subtitle_track_popup_close_cb);
 #else
 	pNormalView->pSubtitleTrackHandle = vp_subtitle_track_create(pPlayView->pWin,
-							__vp_normal_subtitle_track_popup_close_cb,
-							pNormalView->nDefaultSubtitleTrackIndex);
+	                                    __vp_normal_subtitle_track_popup_close_cb,
+	                                    pNormalView->nDefaultSubtitleTrackIndex);
 #endif
 	if (!pNormalView->pSubtitleTrackHandle) {
 		VideoLogError("vp_subtitle_track_create fail");
@@ -8794,44 +8640,43 @@ static void _vp_play_normal_view_on_subtitle_language_popup(NormalView *pNormalV
 	if (vp_mm_player_get_subtitle_track_count(pNormalView->pPlayerHandle, &nCount)) {
 		VideoLogInfo("== TRACK : %d ==", nCount);
 		if (nCount > 0) {
-			#ifdef _SUBTITLE_MULTI_LANGUAGE
+#ifdef _SUBTITLE_MULTI_LANGUAGE
 			pNormalView->nSubtitleLanguageCount = nCount;
 			_vp_play_normal_view_selected_subtitle_language(pNormalView);
-			#endif
+#endif
 			int nIdx = 0;
-			for (nIdx = 0; nIdx < nCount; nIdx++)
-			{	char *szCode = NULL;
+			for (nIdx = 0; nIdx < nCount; nIdx++) {
+				char *szCode = NULL;
 				if (vp_mm_player_get_subtitle_track_language_code(pNormalView->pPlayerHandle, nIdx, &szCode)) {
 					VideoLogWarning("== language : %s ==", szCode);
-					#ifdef _SUBTITLE_MULTI_LANGUAGE
+#ifdef _SUBTITLE_MULTI_LANGUAGE
 					vp_subtitle_track_add_Item(pNormalView->pSubtitleTrackHandle, szCode, nIdx, pNormalView->pSelectedSubtitleLanguage[nIdx]);
-					#else
+#else
 					vp_subtitle_track_add_Item(pNormalView->pSubtitleTrackHandle, szCode, nIdx);
-					#endif
+#endif
 				}
 				VP_FREE(szCode);
 			}
-			#ifdef _SUBTITLE_MULTI_LANGUAGE
+#ifdef _SUBTITLE_MULTI_LANGUAGE
 			vp_subtitle_track_set_add_language_cb(pNormalView->pSubtitleTrackHandle, _vp_play_normal_view_subtitle_add_language_cb);
 			vp_subtitle_track_set_remove_language_cb(pNormalView->pSubtitleTrackHandle, _vp_play_normal_view_subtitle_remove_language_cb);
-			#endif
-		}
-		else {
+#endif
+		} else {
 			char *szTrack = g_strdup_printf("%s %d", VP_PLAY_STRING_COM_DEFAULT, 0);
-			#ifdef _SUBTITLE_MULTI_LANGUAGE
+#ifdef _SUBTITLE_MULTI_LANGUAGE
 			vp_subtitle_track_add_Item(pNormalView->pSubtitleTrackHandle, szTrack, 0, true);
-			#else
+#else
 			vp_subtitle_track_add_Item(pNormalView->pSubtitleTrackHandle, szTrack, 0);
-			#endif
+#endif
 			VP_FREE(szTrack);
 		}
 	} else {
 		char *szTrack = g_strdup_printf("%s %d", VP_PLAY_STRING_COM_DEFAULT, 0);
-		#ifdef _SUBTITLE_MULTI_LANGUAGE
+#ifdef _SUBTITLE_MULTI_LANGUAGE
 		vp_subtitle_track_add_Item(pNormalView->pSubtitleTrackHandle, szTrack, 0, true);
-		#else
+#else
 		vp_subtitle_track_add_Item(pNormalView->pSubtitleTrackHandle, szTrack, 0);
-		#endif
+#endif
 		VP_FREE(szTrack);
 	}
 
@@ -8862,11 +8707,9 @@ static void __vp_normal_subtitle_alignment_popup_done_cb(int nType, bool bPause,
 		vp_subtitle_alignment_t nAlignment = VP_SUBTITLE_ALIGNMENT_CENTER;
 		if (nType == VIDEO_SUBTITLE_ALIGNMENT_LEFT) {
 			nAlignment = VP_SUBTITLE_ALIGNMENT_LEFT;
-		}
-		else if (nType == VIDEO_SUBTITLE_ALIGNMENT_CENTER) {
+		} else if (nType == VIDEO_SUBTITLE_ALIGNMENT_CENTER) {
 			nAlignment = VP_SUBTITLE_ALIGNMENT_CENTER;
-		}
-		else if (nType == VIDEO_SUBTITLE_ALIGNMENT_RIGHT) {
+		} else if (nType == VIDEO_SUBTITLE_ALIGNMENT_RIGHT) {
 			nAlignment = VP_SUBTITLE_ALIGNMENT_RIGHT;
 		}
 
@@ -8916,8 +8759,8 @@ static void _vp_play_normal_view_on_subtitle_alignment_popup(NormalView *pNormal
 	vp_play_preference_get_subtitle_alignment_key(&nAlignment);
 
 	pNormalView->pSubtitleAlignmentPopup = vp_subtitle_alignment_create(pPlayView->pWin,
-								__vp_normal_subtitle_alignment_popup_done_cb,
-								nAlignment);
+	                                       __vp_normal_subtitle_alignment_popup_done_cb,
+	                                       nAlignment);
 
 	if (!pNormalView->pSubtitleAlignmentPopup) {
 		VideoLogError("vp_subtitle_alignment_create fail");
@@ -9018,15 +8861,14 @@ static void _vp_play_normal_view_on_subtitle_select_popup(NormalView *pNormalVie
 	VP_FREE(szDir);
 	vp_mm_player_get_subtitle_url(pNormalView->pPlayerHandle, &szSubtitle);
 	pNormalView->pSubtitleSelectPopup = vp_subtitle_select_create(pPlayView->pWin, __vp_normal_subtitle_select_popup_done_cb, __vp_normal_subtitle_select_button_popup_done_cb,
-								pItemList, szSubtitle, !(pNormalView->bIsExistSubtitle));
+	                                    pItemList, szSubtitle, !(pNormalView->bIsExistSubtitle));
 	VP_FREE(szSubtitle);
 	if (pItemList) {
 
 		int nCount = 0;
 		int i = 0;
 		nCount = g_list_length(pItemList);
-		for (i = 0; i < nCount; i++)
-		{
+		for (i = 0; i < nCount; i++) {
 			char *szName = NULL;
 			szName = (char *)g_list_nth_data(pItemList, i);
 			VP_FREE(szName);
@@ -9072,8 +8914,8 @@ static void _vp_play_normal_view_on_subtitle_font_popup(NormalView *pNormalView)
 	vp_play_preference_get_subtitle_font_name_key(&szFont);
 
 	pNormalView->pSubtitleFontPopup = vp_subtitle_font_create(pPlayView->pWin,
-								__vp_normal_subtitle_font_popup_done_cb,
-								szFont);
+	                                  __vp_normal_subtitle_font_popup_done_cb,
+	                                  szFont);
 	VP_FREE(szFont);
 
 	if (!pNormalView->pSubtitleFontPopup) {
@@ -9113,8 +8955,8 @@ static void _vp_play_normal_view_on_subtitle_size_popup(NormalView *pNormalView)
 	vp_play_preference_get_subtitle_size_key(&nSize);
 
 	pNormalView->pSubtitleSizePopup = vp_subtitle_size_create(pPlayView->pWin,
-								__vp_normal_subtitle_size_popup_done_cb,
-								nSize);
+	                                  __vp_normal_subtitle_size_popup_done_cb,
+	                                  nSize);
 
 	if (!pNormalView->pSubtitleSizePopup) {
 		VideoLogError("vp_subtitle_size_create fail");
@@ -9191,8 +9033,8 @@ static void _vp_play_normal_view_on_subtitle_edge_popup(NormalView *pNormalView)
 	vp_play_preference_get_subtitle_edge_key(&nEdge);
 
 	pNormalView->pSubtitleEdgePopup = vp_subtitle_edge_create(pPlayView->pWin,
-								__vp_normal_subtitle_edge_popup_done_cb,
-								nEdge);
+	                                  __vp_normal_subtitle_edge_popup_done_cb,
+	                                  nEdge);
 
 	if (!pNormalView->pSubtitleEdgePopup) {
 		VideoLogError("vp_subtitle_size_create fail");
@@ -9230,19 +9072,17 @@ static void _vp_play_normal_view_on_subtitle_font_color_popup(NormalView *pNorma
 
 #ifndef SUBTITLE_K_FEATURE
 	pNormalView->pSubtitleFontColorPopup = vp_subtitle_color_create(pPlayView->pWin,
-								__vp_normal_subtitle_font_color_popup_done_cb,
-								nColor);
+	                                       __vp_normal_subtitle_font_color_popup_done_cb,
+	                                       nColor);
 #else
 	char *szColorHex = NULL;
 	vp_play_preference_get_subtitle_font_color_hex_key(&szColorHex);
 	if (!szColorHex) {
 		VideoLogError("szColorHex is NULL");
-	}
-	else
-	{
-	pNormalView->pSubtitleFontColorPopup = vp_subtitle_color_hex_create(pPlayView->pWin,
-																	__vp_normal_subtitle_font_color_popup_done_hex_cb,
-																	szColorHex);
+	} else {
+		pNormalView->pSubtitleFontColorPopup = vp_subtitle_color_hex_create(pPlayView->pWin,
+		                                       __vp_normal_subtitle_font_color_popup_done_hex_cb,
+		                                       szColorHex);
 	}
 	VP_FREE(szColorHex);
 #endif
@@ -9285,21 +9125,19 @@ static void _vp_play_normal_view_on_subtitle_bg_color_popup(NormalView *pNormalV
 	vp_play_preference_get_subtitle_bg_color_key(&nColor);
 
 	pNormalView->pSubtitleBGColorPopup = vp_subtitle_bg_color_create(pPlayView->pWin,
-								__vp_normal_subtitle_bg_color_popup_done_cb,
-								nColor);
+	                                     __vp_normal_subtitle_bg_color_popup_done_cb,
+	                                     nColor);
 #else
 	char *szColorHex = NULL;
 	vp_play_preference_get_subtitle_bg_color_hex_key(&szColorHex);
 	if (!szColorHex) {
 		VideoLogError("szColorHex is NULL");
+	} else { //prevent issue fix
+		pNormalView->pSubtitleBGColorPopup = vp_subtitle_color_hex_create(pPlayView->pWin,
+		                                     __vp_normal_subtitle_bg_color_popup_done_hex_cb,
+		                                     szColorHex);
+		VP_FREE(szColorHex);
 	}
-       else  //prevent issue fix
-       {
-	    pNormalView->pSubtitleBGColorPopup = vp_subtitle_color_hex_create(pPlayView->pWin,
-																	__vp_normal_subtitle_bg_color_popup_done_hex_cb,
-																	szColorHex);
-	    VP_FREE(szColorHex);
-       }
 #endif
 
 	if (!pNormalView->pSubtitleBGColorPopup) {
@@ -9338,12 +9176,10 @@ static void _vp_play_normal_view_on_subtitle_caption_win_color_popup(NormalView 
 	vp_play_preference_get_subtitle_caption_win_color_hex_key(&szColorHex);
 	if (!szColorHex) {
 		VideoLogError("szColorHex is NULL");
-	}
-	else
-	{
-	pNormalView->pSubtitleCaptionWinColorPopup = vp_subtitle_color_hex_create(pPlayView->pWin,
-																	__vp_normal_subtitle_caption_win_color_popup_done_hex_cb,
-																	szColorHex);
+	} else {
+		pNormalView->pSubtitleCaptionWinColorPopup = vp_subtitle_color_hex_create(pPlayView->pWin,
+		        __vp_normal_subtitle_caption_win_color_popup_done_hex_cb,
+		        szColorHex);
 	}
 	VP_FREE(szColorHex);
 
@@ -9384,8 +9220,8 @@ static void _vp_play_normal_view_on_capture_popup(NormalView *pNormalView)
 	vp_play_preference_get_capture_on_key(&pNormalView->bCaptureMode);
 
 	pNormalView->pCapturePopup = vp_capture_popup_create(pPlayView->pWin,
-							pNormalView->bCaptureMode,
-							__vp_normal_capture_popup_close_cb);
+	                             pNormalView->bCaptureMode,
+	                             __vp_normal_capture_popup_close_cb);
 	if (!pNormalView->pCapturePopup) {
 		VideoLogError("vp_capture_popup_create fail");
 		return;
@@ -9427,9 +9263,9 @@ static void _vp_play_normal_view_on_play_speed_popup(NormalView *pNormalView)
 	}
 
 	pNormalView->pPlaySpeedPopup = vp_play_speed_popup_create(pPlayView->pWin,
-								pNormalView->fPlaySpeed,
-								__vp_normal_play_speed_popup_update_cb,
-								__vp_normal_play_speed_popup_done_cb);
+	                               pNormalView->fPlaySpeed,
+	                               __vp_normal_play_speed_popup_update_cb,
+	                               __vp_normal_play_speed_popup_done_cb);
 
 	if (!pNormalView->pPlaySpeedPopup) {
 		VideoLogError("vp_play_speed_popup_create fail");
@@ -9508,8 +9344,7 @@ static void _vp_play_normal_view_on_setting_popup(NormalView *pNormalView)
 	pSettingInfo->bExternalMode = pNormalView->bVideoOnlyMode;
 	if (pNormalView->bIsExistSubtitle == FALSE) {
 		pSettingInfo->bSelectSubtitle = vp_play_util_is_exist_subtitle_from_path(szDir);
-	}
-	else {
+	} else {
 		pSettingInfo->bSelectSubtitle = TRUE;
 	}
 
@@ -9518,7 +9353,7 @@ static void _vp_play_normal_view_on_setting_popup(NormalView *pNormalView)
 	pSettingInfo->bStreaming = FALSE;
 
 	if (pNormalView->nLaunchingType == VIDEO_PLAY_TYPE_WEB ||
-		pNormalView->nLaunchingType == VIDEO_PLAY_TYPE_MULTI_PATH) {
+	        pNormalView->nLaunchingType == VIDEO_PLAY_TYPE_MULTI_PATH) {
 		pSettingInfo->bStreaming = TRUE;
 	}
 #ifdef ENABLE_DRM_FEATURE
@@ -9530,16 +9365,13 @@ static void _vp_play_normal_view_on_setting_popup(NormalView *pNormalView)
 		if (nCount > 1) {
 			if (vp_mm_player_get_audio_track_language_code(pNormalView->pPlayerHandle, pNormalView->nDefaultAudioTrackIndex, &szCode)) {
 				vp_audio_track_get_name(szCode, &(pSettingInfo->szAudioTrack));
+			} else {
+				pSettingInfo->szAudioTrack = g_strdup_printf("%s", VP_PLAY_STRING_COM_UNKNOWN);
 			}
-			else {
-				pSettingInfo->szAudioTrack = g_strdup_printf("%s",VP_PLAY_STRING_COM_UNKNOWN);
-			}
-		}
-		else {
+		} else {
 			pSettingInfo->szAudioTrack = g_strdup_printf("%s %d", VP_PLAY_STRING_AUDIO_TRACK, 0);
 		}
-	}
-	else {
+	} else {
 		pSettingInfo->szAudioTrack = g_strdup_printf("%s %d", VP_PLAY_STRING_AUDIO_TRACK, 0);
 	}
 	VP_FREE(szCode);
@@ -9547,7 +9379,7 @@ static void _vp_play_normal_view_on_setting_popup(NormalView *pNormalView)
 	vp_play_preference_get_capture_on_key(&pSettingInfo->bCapture);
 
 	pNormalView->pSettingHandle = vp_setting_create(pPlayView->pWin, pSettingInfo,
-							__vp_normal_setting_popup_close_cb);
+	                              __vp_normal_setting_popup_close_cb);
 	if (!pNormalView->pSettingHandle) {
 		VideoLogError("vp_setting_create fail");
 
@@ -9750,8 +9582,7 @@ static void _vp_play_normal_view_on_volume_popup(NormalView *pNormalView, bool b
 		if (!vp_play_volume_unrealize(pNormalView->pVolumeHandle)) {
 			VideoLogWarning("vp_play_volume_unrealize is fail");
 		}
-	}
-	else {
+	} else {
 		if (!vp_play_volume_update_value(pNormalView->pVolumeHandle)) {
 			VideoLogWarning("vp_play_volume_update_value is fail");
 		}
@@ -9782,8 +9613,7 @@ static void _vp_play_normal_view_on_bookmark_mode(NormalView *pNormalView, bool 
 		elm_object_signal_emit(pNormalView->pMainLayout, VP_NORMAL_SIGNAL_MAIN_BOOKMARK_ON, "*");
 #endif
 		elm_object_part_content_set(pNormalView->pControlLayout, VP_PLAY_SWALLOW_NORMAL_BOOKMARK, pNormalView->pBookmarkObj);
-	}
-	else {
+	} else {
 		pNormalView->bCaptureComplete = TRUE;
 #ifndef SUBTITLE_K_FEATURE
 		elm_object_signal_emit(pNormalView->pMainLayout, VP_NORMAL_SIGNAL_MAIN_BOOKMARK_OFF, "*");
@@ -9814,7 +9644,7 @@ static void _vp_play_normal_view_download_sdp(NormalView *pNormalView, char *szS
 
 	pFunc.stateChangedCb = __vp_normal_sdp_download_state_change_cb;
 
-	VideoSecureLogDebug(" ############### %s ##########################",szSdpPath);
+	VideoSecureLogDebug(" ############### %s ##########################", szSdpPath);
 	pNormalView->pDownloadHandle = VppDownloadCreateItem(szSdpPath, VP_PLAY_SDP_TEMP_DIR, NULL, VPP_DOWNLOAD_ITEM_TYPE_VIDEO_FILE, pFunc, (void *)pNormalView);
 
 	if (!pNormalView->pDownloadHandle) {
@@ -9989,8 +9819,7 @@ static void _vp_play_normal_view_show_layout(NormalView *pNormalView)
 		elm_object_signal_emit(pNormalView->pControlLayout, VP_NORMAL_SIGNAL_CONTROL_LANDSCAPE_MODE, "*");
 		elm_object_signal_emit(pNormalView->pFunctionLayout, VP_NORMAL_SIGNAL_FUNCTION_LANDSCAPE_MODE, "*");
 		vp_play_progressbar_set_landscape_mode(pNormalView->pProgressbar, TRUE);
-	}
-	else {
+	} else {
 		elm_object_signal_emit(pNormalView->pMainLayout, VP_NORMAL_SIGNAL_MAIN_PORTRAIT_SHOW, "*");
 		elm_object_signal_emit(pNormalView->pMainLayout, VP_NORMAL_SIGNAL_MAIN_NO_EFFECT_PORTRAIT_SHOW, "*");
 		elm_object_signal_emit(pNormalView->pControlLayout, VP_NORMAL_SIGNAL_CONTROL_PORTRAIT_MODE, "*");
@@ -10084,8 +9913,7 @@ static void _vp_play_normal_view_hide_layout(NormalView *pNormalView, bool bNoEf
 	if (bNoEffect) {
 		elm_object_item_signal_emit(pNormalView->pNaviItem, VP_NORMAL_SIGNAL_NAVIFRAME_TITLE_NO_EFFECT_HIDE, "elm");
 		elm_object_signal_emit(pNormalView->pMainLayout, VP_NORMAL_SIGNAL_MAIN_NO_EFFECT_HIDE, "*");
-	}
-	else {
+	} else {
 		elm_object_item_signal_emit(pNormalView->pNaviItem, VP_NORMAL_SIGNAL_NAVIFRAME_TITLE_HIDE, "elm");
 		elm_object_signal_emit(pNormalView->pMainLayout, VP_NORMAL_SIGNAL_MAIN_HIDE, "*");
 	}
@@ -10130,8 +9958,8 @@ static void _vp_play_normal_view_create_progress_timer(NormalView *pNormalView)
 	VP_EVAS_TIMER_DEL(pNormalView->pProgressTimer);
 
 	pNormalView->pProgressTimer =
-		ecore_timer_add(VP_NORMAL_PROGRESS_TIMER_INTERVAL,
-		__vp_normal_progressbar_timer_cb, (void *)pNormalView);
+	    ecore_timer_add(VP_NORMAL_PROGRESS_TIMER_INTERVAL,
+	                    __vp_normal_progressbar_timer_cb, (void *)pNormalView);
 }
 
 static void _vp_play_normal_view_create_layout_hide_timer(NormalView *pNormalView)
@@ -10144,7 +9972,7 @@ static void _vp_play_normal_view_create_layout_hide_timer(NormalView *pNormalVie
 	VP_EVAS_TIMER_DEL(pNormalView->pHideTimer);
 	VP_EVAS_TIMER_DEL(pNormalView->pHideFinishTimer);
 	pNormalView->pHideTimer = ecore_timer_add(VP_NORMAL_HIDE_LAYOUT_TIMER_INTERVAL,
-				__vp_normal_hide_layout_timer_cb, (void *)pNormalView);
+	                          __vp_normal_hide_layout_timer_cb, (void *)pNormalView);
 
 }
 
@@ -10175,8 +10003,7 @@ static void _vp_play_normal_view_show_volume(NormalView *pNormalView)
 
 	if (!bLockState) {
 		if (pNormalView->pMainLayout) {
-			if ((pNormalView->fPlaySpeed - 0.05) > 1.000 || (pNormalView->fPlaySpeed + 0.05) < 1.000)
-			{
+			if ((pNormalView->fPlaySpeed - 0.05) > 1.000 || (pNormalView->fPlaySpeed + 0.05) < 1.000) {
 				elm_object_signal_emit(pNormalView->pMainLayout, VP_NORMAL_SIGNAL_MAIN_PLAYING_SPEED_SHOW, "*");
 				elm_object_signal_callback_add(pNormalView->pMainLayout, "elm,action,click", "", _vp_play_normal_view_on_play_speed_popup_cb, pNormalView);
 				_vp_play_normal_view_create_layout_hide_timer(pNormalView);
@@ -10186,14 +10013,14 @@ static void _vp_play_normal_view_show_volume(NormalView *pNormalView)
 			char szTxt[5] = {0,};
 			snprintf(szTxt, 5, "%1.1fX", (float)pNormalView->fPlaySpeed);
 			elm_object_part_text_set(pNormalView->pMainLayout, VP_PLAY_PART_NORMAL_PLAYING_SPEED_TXT, szTxt);
-			}
-			bool bLandscape = vp_play_util_get_landscape_check(pNormalView->nRotate);
-			if (bLandscape) {
+		}
+		bool bLandscape = vp_play_util_get_landscape_check(pNormalView->nRotate);
+		if (bLandscape) {
 			elm_object_signal_emit(pNormalView->pMainLayout, VP_NORMAL_SIGNAL_MAIN_VOLUME_LANDSCAPE_SHOW, "*");
-			}
-			else
+		} else {
 			elm_object_signal_emit(pNormalView->pMainLayout, VP_NORMAL_SIGNAL_MAIN_VOLUME_PORTRAIT_SHOW, "*");
 		}
+	}
 }
 
 static void _vp_play_normal_view_set_rotate_lock_state(NormalView *pNormalView)
@@ -10239,12 +10066,12 @@ static void _vp_play_normal_view_set_rotate_lock_state(NormalView *pNormalView)
 
 	if (!bLockState) {
 		pNormalView->pRotateBtn = vp_button_create(
-					pParent, "playview/custom/flat_46_46/default",
-					VP_PLAY_STRING_COM_ROTATE,
-					(Evas_Smart_Cb)__vp_normal_control_btn_clicked_cb,
-					(Evas_Smart_Cb)__vp_normal_control_btn_press_cb,
-					(Evas_Smart_Cb)__vp_normal_control_btn_unpress_cb,
-					(void *)pNormalView);
+		                              pParent, "playview/custom/flat_46_46/default",
+		                              VP_PLAY_STRING_COM_ROTATE,
+		                              (Evas_Smart_Cb)__vp_normal_control_btn_clicked_cb,
+		                              (Evas_Smart_Cb)__vp_normal_control_btn_press_cb,
+		                              (Evas_Smart_Cb)__vp_normal_control_btn_unpress_cb,
+		                              (void *)pNormalView);
 
 		Evas_Object *pIcon = NULL;
 		pIcon = vp_button_create_icon(pNormalView->pRotateBtn, VP_PLAY_RESROUCE_EDJ_PATH, VP_PLAY_NORMAL_RES_ROTATE);
@@ -10298,8 +10125,7 @@ static void _vp_play_normal_view_set_volume_lock_state(NormalView *pNormalView)
 
 
 	Evas_Object *pParent = NULL;
-	if (pNormalView->pSoundPathBtn == NULL)
-	{
+	if (pNormalView->pSoundPathBtn == NULL) {
 		pParent = pNormalView->pMainLayout;
 
 	} else if (pNormalView->pFunctionLayout) {
@@ -10313,14 +10139,14 @@ static void _vp_play_normal_view_set_volume_lock_state(NormalView *pNormalView)
 
 	if (!bLockState) {
 		pNormalView->pVolumeBtn = vp_button_create(
-					pParent, "playview/custom/flat_46_46/default",  VP_PLAY_STRING_COM_VOLUME,
-					(Evas_Smart_Cb)__vp_normal_function_btn_clicked_cb,
-					(Evas_Smart_Cb)__vp_normal_control_btn_press_cb,
-					(Evas_Smart_Cb)__vp_normal_control_btn_unpress_cb,
-					(void *)pNormalView);
+		                              pParent, "playview/custom/flat_46_46/default",  VP_PLAY_STRING_COM_VOLUME,
+		                              (Evas_Smart_Cb)__vp_normal_function_btn_clicked_cb,
+		                              (Evas_Smart_Cb)__vp_normal_control_btn_press_cb,
+		                              (Evas_Smart_Cb)__vp_normal_control_btn_unpress_cb,
+		                              (void *)pNormalView);
 		if (!pNormalView->pVolumeBtn) {
-		VideoLogError("elm_button_add is fail");
-		return;
+			VideoLogError("elm_button_add is fail");
+			return;
 		}
 		Evas_Object *pIcon = NULL;
 		int nVolume = 0;
@@ -10349,8 +10175,8 @@ static void _vp_play_normal_view_set_volume_lock_state(NormalView *pNormalView)
 		}
 
 		if (pNormalView->pMainLayout) {
-		elm_object_part_content_set(pNormalView->pMainLayout, VP_PLAY_SWALLOW_NORMAL_VOLUME, pNormalView->pVolumeBtn);
-		}	
+			elm_object_part_content_set(pNormalView->pMainLayout, VP_PLAY_SWALLOW_NORMAL_VOLUME, pNormalView->pVolumeBtn);
+		}
 	}
 }
 
@@ -10406,8 +10232,7 @@ static void _vp_play_normal_view_set_sound_path_state(NormalView *pNormalView)
 		video_sound_device_type_t nType = VP_SOUND_DEVICE_NONE;
 		vp_sound_get_active_device(&nType);
 		char *szIconPath = VP_PLAY_NORMAL_RES_SPEAKER;
-		switch (nType)
-		{
+		switch (nType) {
 		case VP_SOUND_DEVICE_SPEAKER:
 			szIconPath = VP_PLAY_NORMAL_RES_SPEAKER;
 			break;
@@ -10438,7 +10263,7 @@ static void _vp_play_normal_view_set_sound_path_state(NormalView *pNormalView)
 		}
 
 		pNormalView->pSoundPathBtn = vp_navirame_button_create(pNormalView->pNaviFrame, "playview/custom/navi_button/default", VP_PLAY_RESROUCE_EDJ_PATH,
-			(const char *)szIconPath, (Evas_Smart_Cb)__vp_normal_control_btn_clicked_cb, (void *)pNormalView);
+		                             (const char *)szIconPath, (Evas_Smart_Cb)__vp_normal_control_btn_clicked_cb, (void *)pNormalView);
 
 		elm_object_item_part_content_set(pNormalView->pNaviItem, "title_right_btn", pNormalView->pSoundPathBtn);
 	}
@@ -10489,8 +10314,7 @@ static void _vp_play_normal_view_set_play_state(NormalView *pNormalView)
 		}
 		vp_play_util_set_lock_power_key();
 		vp_play_progressbar_set_opacity(pNormalView->pProgressbar, FALSE);
-	}
-	else {
+	} else {
 		VideoLogWarning("Play_Status[%d]", nState);
 		evas_object_show(pNormalView->pResumeBtn);
 		elm_object_part_content_set(pParent, VP_PLAY_SWALLOW_NORMAL_PLAY, pNormalView->pResumeBtn);
@@ -10561,46 +10385,46 @@ static bool _vp_play_normal_view_create_gesture_layout(NormalView *pNormalView)
 	elm_gesture_layer_hold_events_set(pNormalView->pGestureRect, EINA_FALSE);
 
 	elm_gesture_layer_cb_set(pNormalView->pGestureRect, ELM_GESTURE_N_TAPS,
-				ELM_GESTURE_STATE_START, __vp_normal_gesture_n_tab_start_cb, (void *)pNormalView);
+	                         ELM_GESTURE_STATE_START, __vp_normal_gesture_n_tab_start_cb, (void *)pNormalView);
 	elm_gesture_layer_cb_set(pNormalView->pGestureRect, ELM_GESTURE_N_TAPS,
-				ELM_GESTURE_STATE_END, __vp_normal_gesture_n_tab_end_cb, (void *)pNormalView);
+	                         ELM_GESTURE_STATE_END, __vp_normal_gesture_n_tab_end_cb, (void *)pNormalView);
 	elm_gesture_layer_cb_set(pNormalView->pGestureRect, ELM_GESTURE_N_TAPS,
-				ELM_GESTURE_STATE_ABORT, __vp_normal_gesture_n_tab_abort_cb, (void *)pNormalView);
+	                         ELM_GESTURE_STATE_ABORT, __vp_normal_gesture_n_tab_abort_cb, (void *)pNormalView);
 
 	elm_gesture_layer_cb_set(pNormalView->pGestureRect, ELM_GESTURE_MOMENTUM,
-				ELM_GESTURE_STATE_START, __vp_normal_gesture_momentum_start_cb, (void *)pNormalView);
+	                         ELM_GESTURE_STATE_START, __vp_normal_gesture_momentum_start_cb, (void *)pNormalView);
 	elm_gesture_layer_cb_set(pNormalView->pGestureRect, ELM_GESTURE_MOMENTUM,
-				ELM_GESTURE_STATE_END, __vp_normal_gesture_momentum_end_cb, (void *)pNormalView);
+	                         ELM_GESTURE_STATE_END, __vp_normal_gesture_momentum_end_cb, (void *)pNormalView);
 	elm_gesture_layer_cb_set(pNormalView->pGestureRect, ELM_GESTURE_MOMENTUM,
-				ELM_GESTURE_STATE_ABORT, __vp_normal_gesture_momentum_end_cb, (void *)pNormalView);
+	                         ELM_GESTURE_STATE_ABORT, __vp_normal_gesture_momentum_end_cb, (void *)pNormalView);
 	elm_gesture_layer_cb_set(pNormalView->pGestureRect, ELM_GESTURE_MOMENTUM,
-				ELM_GESTURE_STATE_MOVE, __vp_normal_gesture_momentum_move_cb, (void *)pNormalView);
+	                         ELM_GESTURE_STATE_MOVE, __vp_normal_gesture_momentum_move_cb, (void *)pNormalView);
 
 #ifdef ENABLE_GESTURE_ZOOM_FEATURE
 	elm_gesture_layer_cb_set(pNormalView->pGestureRect, ELM_GESTURE_ZOOM,
-				ELM_GESTURE_STATE_START, __vp_normal_gesture_zoom_start_cb, (void *)pNormalView);
+	                         ELM_GESTURE_STATE_START, __vp_normal_gesture_zoom_start_cb, (void *)pNormalView);
 	elm_gesture_layer_cb_set(pNormalView->pGestureRect, ELM_GESTURE_ZOOM,
-				ELM_GESTURE_STATE_END, __vp_normal_gesture_zoom_end_cb, (void *)pNormalView);
+	                         ELM_GESTURE_STATE_END, __vp_normal_gesture_zoom_end_cb, (void *)pNormalView);
 	elm_gesture_layer_cb_set(pNormalView->pGestureRect, ELM_GESTURE_ZOOM,
-				ELM_GESTURE_STATE_ABORT, __vp_normal_gesture_zoom_abort_cb, (void *)pNormalView);
+	                         ELM_GESTURE_STATE_ABORT, __vp_normal_gesture_zoom_abort_cb, (void *)pNormalView);
 	elm_gesture_layer_cb_set(pNormalView->pGestureRect, ELM_GESTURE_ZOOM,
-				ELM_GESTURE_STATE_MOVE, __vp_normal_gesture_zoom_move_cb, (void *)pNormalView);
+	                         ELM_GESTURE_STATE_MOVE, __vp_normal_gesture_zoom_move_cb, (void *)pNormalView);
 #endif
 
 	elm_gesture_layer_cb_set(pNormalView->pGestureRect, ELM_GESTURE_N_DOUBLE_TAPS,
-				ELM_GESTURE_STATE_START, __vp_normal_gesture_double_click_start_cb, (void *)pNormalView);
+	                         ELM_GESTURE_STATE_START, __vp_normal_gesture_double_click_start_cb, (void *)pNormalView);
 	elm_gesture_layer_cb_set(pNormalView->pGestureRect, ELM_GESTURE_N_DOUBLE_TAPS,
-				ELM_GESTURE_STATE_END, __vp_normal_gesture_double_click_end_cb, (void *)pNormalView);
+	                         ELM_GESTURE_STATE_END, __vp_normal_gesture_double_click_end_cb, (void *)pNormalView);
 	elm_gesture_layer_cb_set(pNormalView->pGestureRect, ELM_GESTURE_N_DOUBLE_TAPS,
-				ELM_GESTURE_STATE_ABORT, __vp_normal_gesture_double_click_abort_cb, (void *)pNormalView);
+	                         ELM_GESTURE_STATE_ABORT, __vp_normal_gesture_double_click_abort_cb, (void *)pNormalView);
 
 #ifdef FLICK_JUMP
 	elm_gesture_layer_cb_set(pNormalView->pGestureRect, ELM_GESTURE_N_FLICKS,
-				ELM_GESTURE_STATE_START, __vp_normal_gesture_flick_start_cb, (void *)pNormalView);
+	                         ELM_GESTURE_STATE_START, __vp_normal_gesture_flick_start_cb, (void *)pNormalView);
 	elm_gesture_layer_cb_set(pNormalView->pGestureRect, ELM_GESTURE_N_FLICKS,
-				ELM_GESTURE_STATE_END, __vp_normal_gesture_flick_end_cb, (void *)pNormalView);
+	                         ELM_GESTURE_STATE_END, __vp_normal_gesture_flick_end_cb, (void *)pNormalView);
 	elm_gesture_layer_cb_set(pNormalView->pGestureRect, ELM_GESTURE_N_FLICKS,
-				ELM_GESTURE_STATE_ABORT, __vp_normal_gesture_flick_abort_cb, (void *)pNormalView);
+	                         ELM_GESTURE_STATE_ABORT, __vp_normal_gesture_flick_abort_cb, (void *)pNormalView);
 #endif
 
 	elm_gesture_layer_line_angular_tolerance_set(pNormalView->pGestureRect, 60);	// 60 degree ??
@@ -10691,8 +10515,8 @@ static Evas_Object *_vp_play_normal_view_create_function_layout(Evas_Object *pPa
 }
 
 static void _vp_normal_view_top_layout_del_cb(void *data, Evas *e,
-					      Evas_Object *obj,
-					      void *event_info)
+        Evas_Object *obj,
+        void *event_info)
 {
 	if (!data) {
 		VideoLogError("pNormalView is NULL");
@@ -10781,72 +10605,72 @@ static bool _vp_play_normal_view_create_main_control(NormalView *pNormalView)
 
 	elm_object_part_content_set(pNormalView->pMainLayout, VP_PLAY_SWALLOW_NORMAL_CONTROL, pNormalView->pControlLayout);
 	evas_object_event_callback_add(pNormalView->pControlLayout, EVAS_CALLBACK_DEL,
-				       _vp_play_normal_view_control_layout_del_cb,
-				       (void *)pNormalView);
+	                               _vp_play_normal_view_control_layout_del_cb,
+	                               (void *)pNormalView);
 
 	pParent = pNormalView->pControlLayout;
 
 	pNormalView->pResumeBtn = vp_button_create(
-					pParent, "playview/custom/circle_1/default", VP_PLAY_STRING_COM_PLAY,
-					(Evas_Smart_Cb)__vp_normal_control_btn_clicked_cb,
-					(Evas_Smart_Cb)__vp_normal_control_btn_press_cb,
-					(Evas_Smart_Cb)__vp_normal_control_btn_unpress_cb,
-					(void *)pNormalView);
+	                              pParent, "playview/custom/circle_1/default", VP_PLAY_STRING_COM_PLAY,
+	                              (Evas_Smart_Cb)__vp_normal_control_btn_clicked_cb,
+	                              (Evas_Smart_Cb)__vp_normal_control_btn_press_cb,
+	                              (Evas_Smart_Cb)__vp_normal_control_btn_unpress_cb,
+	                              (void *)pNormalView);
 	if (!pNormalView->pResumeBtn) {
 		VideoLogError("elm_button_add is fail");
 		return FALSE;
 	}
 
 	pNormalView->pPauseBtn = vp_button_create(
-					pParent, "playview/custom/circle_1_focus/default", VP_PLAY_STRING_COM_PAUSE,
-					(Evas_Smart_Cb)__vp_normal_control_btn_clicked_cb,
-					(Evas_Smart_Cb)__vp_normal_control_btn_press_cb,
-					(Evas_Smart_Cb)__vp_normal_control_btn_unpress_cb,
-					(void *)pNormalView);
+	                             pParent, "playview/custom/circle_1_focus/default", VP_PLAY_STRING_COM_PAUSE,
+	                             (Evas_Smart_Cb)__vp_normal_control_btn_clicked_cb,
+	                             (Evas_Smart_Cb)__vp_normal_control_btn_press_cb,
+	                             (Evas_Smart_Cb)__vp_normal_control_btn_unpress_cb,
+	                             (void *)pNormalView);
 	if (!pNormalView->pPauseBtn) {
 		VideoLogError("elm_button_add is fail");
 		return FALSE;
 	}
 
 	pNormalView->pPlayFocusBtn = vp_button_create(
-					pParent, "focus", NULL,
-					(Evas_Smart_Cb)__vp_normal_control_btn_clicked_cb,
-					(Evas_Smart_Cb)__vp_normal_control_btn_press_cb,
-					(Evas_Smart_Cb)__vp_normal_control_btn_unpress_cb,
-					(void *)pNormalView);
+	                                 pParent, "focus", NULL,
+	                                 (Evas_Smart_Cb)__vp_normal_control_btn_clicked_cb,
+	                                 (Evas_Smart_Cb)__vp_normal_control_btn_press_cb,
+	                                 (Evas_Smart_Cb)__vp_normal_control_btn_unpress_cb,
+	                                 (void *)pNormalView);
 	if (!pNormalView->pPlayFocusBtn) {
 		VideoLogError("elm_button_add is fail");
 		return FALSE;
 	}
 
 	pNormalView->pPrevBtn = vp_button_create(
-					pParent, "playview/custom/circle_2/default", VP_PLAY_STRING_COM_PREVIOUS,
-					(Evas_Smart_Cb)__vp_normal_control_btn_clicked_cb,
-					(Evas_Smart_Cb)__vp_normal_control_btn_press_cb,
-					(Evas_Smart_Cb)__vp_normal_control_btn_unpress_cb,
-					(void *)pNormalView);
+	                            pParent, "playview/custom/circle_2/default", VP_PLAY_STRING_COM_PREVIOUS,
+	                            (Evas_Smart_Cb)__vp_normal_control_btn_clicked_cb,
+	                            (Evas_Smart_Cb)__vp_normal_control_btn_press_cb,
+	                            (Evas_Smart_Cb)__vp_normal_control_btn_unpress_cb,
+	                            (void *)pNormalView);
 	if (!pNormalView->pPrevBtn) {
 		VideoLogError("elm_button_add is fail");
 		return FALSE;
 	}
 
 	pNormalView->pNextBtn = vp_button_create(
-					pParent, "playview/custom/circle_3/default", VP_PLAY_STRING_COM_NEXT,
-					(Evas_Smart_Cb)__vp_normal_control_btn_clicked_cb,
-					(Evas_Smart_Cb)__vp_normal_control_btn_press_cb,
-					(Evas_Smart_Cb)__vp_normal_control_btn_unpress_cb,
-					(void *)pNormalView);
+	                            pParent, "playview/custom/circle_3/default", VP_PLAY_STRING_COM_NEXT,
+	                            (Evas_Smart_Cb)__vp_normal_control_btn_clicked_cb,
+	                            (Evas_Smart_Cb)__vp_normal_control_btn_press_cb,
+	                            (Evas_Smart_Cb)__vp_normal_control_btn_unpress_cb,
+	                            (void *)pNormalView);
 	if (!pNormalView->pNextBtn) {
 		VideoLogError("elm_button_add is fail");
 		return FALSE;
 	}
 
 	pNormalView->pScreenSizeBtn = vp_button_create(
-					pParent, "playview/custom/flat_56_56/default", NULL,
-					(Evas_Smart_Cb)__vp_normal_function_btn_clicked_cb,
-					(Evas_Smart_Cb)__vp_normal_control_btn_press_cb,
-					(Evas_Smart_Cb)__vp_normal_control_btn_unpress_cb,
-					(void *)pNormalView);
+	                                  pParent, "playview/custom/flat_56_56/default", NULL,
+	                                  (Evas_Smart_Cb)__vp_normal_function_btn_clicked_cb,
+	                                  (Evas_Smart_Cb)__vp_normal_control_btn_press_cb,
+	                                  (Evas_Smart_Cb)__vp_normal_control_btn_unpress_cb,
+	                                  (void *)pNormalView);
 	evas_object_color_set(pNormalView->pScreenSizeBtn, 0, 166, 191, 255);
 	if (!pNormalView->pScreenSizeBtn) {
 		VideoLogError("elm_button_add is fail");
@@ -10854,11 +10678,11 @@ static bool _vp_play_normal_view_create_main_control(NormalView *pNormalView)
 	}
 
 	pNormalView->pPopupBtn = vp_button_create(
-					pParent, "playview/custom/flat_56_56/default", NULL,
-					NULL,
-					NULL,
-					NULL,
-					(void *)pNormalView);
+	                             pParent, "playview/custom/flat_56_56/default", NULL,
+	                             NULL,
+	                             NULL,
+	                             NULL,
+	                             (void *)pNormalView);
 	evas_object_color_set(pNormalView->pPopupBtn, 0, 166, 191, 255);
 	if (!pNormalView->pPopupBtn) {
 		VideoLogError("elm_button_add is fail");
@@ -10866,14 +10690,14 @@ static bool _vp_play_normal_view_create_main_control(NormalView *pNormalView)
 	}
 
 	pNormalView->pLockBtn = vp_button_create(
-						pNormalView->pMainLayout, "playview/custom/flat_46_46/default", NULL,
-						(Evas_Smart_Cb)__vp_normal_function_btn_clicked_cb,
-						(Evas_Smart_Cb)__vp_normal_control_btn_press_cb,
-						(Evas_Smart_Cb)__vp_normal_control_btn_unpress_cb,
-						(void *)pNormalView);
+	                            pNormalView->pMainLayout, "playview/custom/flat_46_46/default", NULL,
+	                            (Evas_Smart_Cb)__vp_normal_function_btn_clicked_cb,
+	                            (Evas_Smart_Cb)__vp_normal_control_btn_press_cb,
+	                            (Evas_Smart_Cb)__vp_normal_control_btn_unpress_cb,
+	                            (void *)pNormalView);
 	if (!pNormalView->pLockBtn) {
-			VideoLogError("elm_button_add is fail");
-			return FALSE;
+		VideoLogError("elm_button_add is fail");
+		return FALSE;
 	}
 
 	Evas_Object *pIcon = NULL;
@@ -10927,8 +10751,7 @@ static bool _vp_play_normal_view_create_main_control(NormalView *pNormalView)
 
 		//pIcon = vp_button_create_icon(pNormalView->pScreenSizeBtn, VP_PLAY_RESROUCE_EDJ_PATH, VP_PLAY_NORMAL_RES_SCREEN_3_MODE_DIM);
 		//elm_object_part_content_set(pNormalView->pScreenSizeBtn, VP_PLAY_SWALLOW_BUTTON_DIM_ICON, pIcon);
-	}
-	else {
+	} else {
 		pIcon = vp_button_create_icon(pNormalView->pScreenSizeBtn, VP_PLAY_RESROUCE_EDJ_PATH, VP_PLAY_NORMAL_RES_SCREEN_1_MODE);
 		elm_object_part_content_set(pNormalView->pScreenSizeBtn, VP_PLAY_SWALLOW_BUTTON_ICON, pIcon);
 
@@ -10975,17 +10798,17 @@ static bool _vp_play_normal_view_create_main_control(NormalView *pNormalView)
 	vp_play_util_focus_next_object_set(pNormalView->pNextBtn, pNormalView->pScreenSizeBtn, ELM_FOCUS_RIGHT);
 
 
-	if (	pNormalView->nLaunchingType == VIDEO_PLAY_TYPE_STORE ||
-		pNormalView->nLaunchingType == VIDEO_PLAY_TYPE_LIST ||
-		pNormalView->nLaunchingType == VIDEO_PLAY_TYPE_GALLERY||
-		pNormalView->nLaunchingType == VIDEO_PLAY_TYPE_OTHER ||
-		pNormalView->nLaunchingType == VIDEO_PLAY_TYPE_MYFILE) {
+	if (pNormalView->nLaunchingType == VIDEO_PLAY_TYPE_STORE ||
+	        pNormalView->nLaunchingType == VIDEO_PLAY_TYPE_LIST ||
+	        pNormalView->nLaunchingType == VIDEO_PLAY_TYPE_GALLERY ||
+	        pNormalView->nLaunchingType == VIDEO_PLAY_TYPE_OTHER ||
+	        pNormalView->nLaunchingType == VIDEO_PLAY_TYPE_MYFILE) {
 
 		pNormalView->pBookmarkHandle = vp_play_bookmark_create(pParent);
 		pNormalView->pBookmarkObj = vp_play_bookmark_get_object(pNormalView->pBookmarkHandle);
 		evas_object_event_callback_add(pNormalView->pBookmarkObj, EVAS_CALLBACK_DEL,
-				       		_vp_play_normal_view_bookmark_object_del_cb,
-				       		(void *)pNormalView);
+		                               _vp_play_normal_view_bookmark_object_del_cb,
+		                               (void *)pNormalView);
 		vp_play_bookmark_set_user_param(pNormalView->pBookmarkHandle, (void *)pNormalView);
 		vp_play_bookmark_set_capture_callback(pNormalView->pBookmarkHandle, __vp_normal_bookmark_capture_cb);
 		vp_play_bookmark_set_item_select_callback(pNormalView->pBookmarkHandle, __vp_normal_bookmark_item_select_cb);
@@ -10997,8 +10820,8 @@ static bool _vp_play_normal_view_create_main_control(NormalView *pNormalView)
 }
 
 static void _vp_normal_view_function_layout_del_cb(void *data, Evas *e,
-					      Evas_Object *obj,
-					      void *event_info)
+        Evas_Object *obj,
+        void *event_info)
 {
 	if (!data) {
 		VideoLogError("pNormalView is NULL");
@@ -11060,23 +10883,23 @@ static bool _vp_play_normal_view_create_progressbar(NormalView *pNormalView)
 	elm_object_part_content_set(pParent, VP_PLAY_SWALLOW_NORMAL_PROGRESS, pNormalView->pProgressEvent);
 
 	evas_object_event_callback_add(pNormalView->pProgressEvent, EVAS_CALLBACK_MOUSE_DOWN,
-				       __vp_normal_progress_mouse_down_cb, (void *)pNormalView);
+	                               __vp_normal_progress_mouse_down_cb, (void *)pNormalView);
 
 	evas_object_event_callback_add(pNormalView->pProgressEvent, EVAS_CALLBACK_MOUSE_UP,
-				       __vp_normal_progress_mouse_up_cb, (void *)pNormalView);
+	                               __vp_normal_progress_mouse_up_cb, (void *)pNormalView);
 
 	evas_object_event_callback_add(pNormalView->pProgressEvent, EVAS_CALLBACK_MOUSE_MOVE,
-				       __vp_normal_progress_mouse_move_cb, (void *)pNormalView);
+	                               __vp_normal_progress_mouse_move_cb, (void *)pNormalView);
 
 	evas_object_event_callback_add(pNormalView->pProgressEvent, EVAS_CALLBACK_DEL,
-					  __vp_normal_progress_del_cb, (void *)pNormalView);
+	                               __vp_normal_progress_del_cb, (void *)pNormalView);
 
 	Evas_Object *pProgressFocus = vp_play_progressbar_get_focus_object(pNormalView->pProgressbar);
 
 	evas_object_event_callback_add(pProgressFocus, EVAS_CALLBACK_KEY_DOWN,
-					  __vp_normal_focus_key_down_cb, (void *)pNormalView);
+	                               __vp_normal_focus_key_down_cb, (void *)pNormalView);
 	evas_object_event_callback_add(pProgressFocus, EVAS_CALLBACK_KEY_UP,
-					  __vp_normal_focus_key_up_cb, (void *)pNormalView);
+	                               __vp_normal_focus_key_up_cb, (void *)pNormalView);
 
 
 	return TRUE;
@@ -11142,24 +10965,19 @@ static bool _vp_play_normal_view_create_subtitle(NormalView *pNormalView)
 
 	if (nFontColorKey == VIDEO_SUBTITLE_COLOR_BLACK) {
 		nFontColor = VP_SUBTITLE_COLOR_BLACK;
-	}
-	else if (nFontColorKey == VIDEO_SUBTITLE_COLOR_BLUE) {
+	} else if (nFontColorKey == VIDEO_SUBTITLE_COLOR_BLUE) {
 		nFontColor = VP_SUBTITLE_COLOR_BLUE;
-	}
-	else if (nFontColorKey == VIDEO_SUBTITLE_COLOR_GREEN) {
+	} else if (nFontColorKey == VIDEO_SUBTITLE_COLOR_GREEN) {
 		nFontColor = VP_SUBTITLE_COLOR_GREEN;
-	}
-	else if (nFontColorKey == VIDEO_SUBTITLE_COLOR_WHITE) {
+	} else if (nFontColorKey == VIDEO_SUBTITLE_COLOR_WHITE) {
 		nFontColor = VP_SUBTITLE_COLOR_WHITE;
 	}
 
 	if (nBGColorKey == VIDEO_SUBTITLE_COLOR_BLACK) {
 		nBGColor = VP_SUBTITLE_COLOR_BLACK;
-	}
-	else if (nBGColorKey == VIDEO_SUBTITLE_COLOR_WHITE) {
+	} else if (nBGColorKey == VIDEO_SUBTITLE_COLOR_WHITE) {
 		nBGColor = VP_SUBTITLE_COLOR_WHITE;
-	}
-	else if (nBGColorKey == VIDEO_SUBTITLE_COLOR_NONE) {
+	} else if (nBGColorKey == VIDEO_SUBTITLE_COLOR_NONE) {
 		nBGColor = VP_SUBTITLE_COLOR_NONE;
 	}
 	vp_play_subtitle_set_color(pNormalView->pSubtitle, nFontColor);
@@ -11246,8 +11064,8 @@ static Evas_Object *_vp_play_normal_view_create_layout(Evas_Object *pParent)
 	}
 
 	bRet = elm_layout_theme_set(pObj, VP_PLAY_CUSTOM_LAYOUT_KLASS,
-					VP_PLAY_CUSTOM_LAYOUT_GROUP,
-					VP_PLAY_CUSTOM_LAYOUT_STYLE);
+	                            VP_PLAY_CUSTOM_LAYOUT_GROUP,
+	                            VP_PLAY_CUSTOM_LAYOUT_STYLE);
 	if (bRet != EINA_TRUE) {
 		VideoLogError("elm_layout_theme_set fail");
 	}
@@ -11288,8 +11106,8 @@ static Evas_Object *_vp_play_normal_view_create_naviframe(Evas_Object *pParent)
 #endif
 
 static void _vp_play_normal_view_del_cb(void *data, Evas *e,
-					      Evas_Object *obj,
-					      void *event_info)
+                                        Evas_Object *obj,
+                                        void *event_info)
 {
 	if (!data) {
 		VideoLogError("pNormalView is NULL");
@@ -11304,7 +11122,7 @@ static void _vp_play_normal_view_del_cb(void *data, Evas *e,
 		//pNormalView->pNaviItem = NULL;
 		pNormalView->pAllsharBtn = NULL;
 		//if (pNormalView->pPlayView)
-			//pNormalView->pPlayView->pNormalView = NULL;
+		//pNormalView->pPlayView->pNormalView = NULL;
 	}
 }
 
@@ -11458,19 +11276,18 @@ static void _vp_play_normal_view_destroy_handle(NormalView *pNormalView)
 	VP_EVAS_TIMER_DEL(pNormalView->pExitWaitTimer);
 	VP_EVAS_TIMER_DEL(pNormalView->pMomentTimer);
 
-	if (pNormalView->pProgressEvent)
-	{
+	if (pNormalView->pProgressEvent) {
 		evas_object_event_callback_del(pNormalView->pProgressEvent,
-					       EVAS_CALLBACK_MOUSE_DOWN,
-					       __vp_normal_progress_mouse_down_cb);
+		                               EVAS_CALLBACK_MOUSE_DOWN,
+		                               __vp_normal_progress_mouse_down_cb);
 
 		evas_object_event_callback_del(pNormalView->pProgressEvent,
-					       EVAS_CALLBACK_MOUSE_UP,
-					       __vp_normal_progress_mouse_up_cb);
+		                               EVAS_CALLBACK_MOUSE_UP,
+		                               __vp_normal_progress_mouse_up_cb);
 
 		evas_object_event_callback_del(pNormalView->pProgressEvent,
-					       EVAS_CALLBACK_MOUSE_MOVE,
-					       __vp_normal_progress_mouse_move_cb);
+		                               EVAS_CALLBACK_MOUSE_MOVE,
+		                               __vp_normal_progress_mouse_move_cb);
 		pNormalView->pProgressEvent = NULL;
 	}
 #ifdef K_FEATURE_MICROSEEK
@@ -11668,8 +11485,7 @@ static void _vp_play_normal_view_prepare_pipe_cb(void *data, void *pipeData, uns
 	}
 	if (pNormalView->nLaunchingType == VIDEO_PLAY_TYPE_WEB && nDuration == 0) {
 		pNormalView->bHLSMode = TRUE;
-	}
-	else {
+	} else {
 		pNormalView->bHLSMode = FALSE;
 	}
 
@@ -11731,12 +11547,11 @@ static void _vp_play_normal_view_prepare_pipe_cb(void *data, void *pipeData, uns
 	if (pNormalView->bManualPause || bXwincheck == FALSE) {
 		vp_mm_player_set_visible(pNormalView->pPlayerHandle, TRUE);
 		vp_mm_player_pause(pNormalView->pPlayerHandle);
-	}
-	else {
+	} else {
 		vp_mm_player_play(pNormalView->pPlayerHandle);
 	}
 
-	if (!vp_mm_player_set_subtitle_position(pNormalView->pPlayerHandle, pNormalView->fSubtitleSyncValue*1000)) {
+	if (!vp_mm_player_set_subtitle_position(pNormalView->pPlayerHandle, pNormalView->fSubtitleSyncValue * 1000)) {
 		VideoLogError("vp_mm_player_set_subtitle_position is fail");
 	}
 
@@ -11804,7 +11619,8 @@ normal_view_handle vp_play_normal_view_create(PlayView *pPlayView, video_play_la
 	return (normal_view_handle)pNormalView;
 }
 
-void vp_play_normal_view_key_create(PlayView *pPlayView, normal_view_handle pViewHandle) {
+void vp_play_normal_view_key_create(PlayView *pPlayView, normal_view_handle pViewHandle)
+{
 	if (!pViewHandle) {
 		VideoLogError("pViewHandle is NULL");
 		return;
@@ -11901,8 +11717,7 @@ bool vp_play_normal_view_realize(normal_view_handle pViewHandle)
 			char *szFolder = vp_play_util_get_folder_from_path(pNormalView->szMediaURL);
 			vp_media_contents_get_video_items_to_folder(nType, szFolder, &(pNormalView->pMediaItemList));
 			VP_FREE(szFolder);
-		}
-		else {
+		} else {
 			vp_media_contents_get_video_items(nType, &(pNormalView->pMediaItemList));
 		}
 	}
@@ -12063,8 +11878,7 @@ bool vp_play_normal_view_resume_or_pause(normal_view_handle pViewHandle)
 		VideoLogWarning("vp_mm_player_get_state is fail");
 	}
 
-	switch (nState)
-	{
+	switch (nState) {
 	case VP_MM_PLAYER_STATE_NONE:
 	case VP_MM_PLAYER_STATE_IDLE:
 	case VP_MM_PLAYER_STATE_READY:
@@ -12146,10 +11960,11 @@ bool vp_play_normal_view_player_state_changed_get(normal_view_handle pViewHandle
 		VideoLogWarning("vp_mm_player_get_state is fail");
 	}
 
-	if (nState == pState)
+	if (nState == pState) {
 		return FALSE;
-	else
+	} else {
 		pState = nState;
+	}
 
 	return TRUE;
 }
@@ -12162,7 +11977,7 @@ bool vp_play_normal_view_stop_player(normal_view_handle pViewHandle)
 	}
 
 	NormalView *pNormalView = (NormalView *)pViewHandle;
-	if(!(vp_mm_player_stop(pNormalView->pPlayerHandle))) {
+	if (!(vp_mm_player_stop(pNormalView->pPlayerHandle))) {
 		VideoLogError("player_stop failed");
 		return FALSE;
 	}
@@ -12192,8 +12007,9 @@ bool vp_play_normal_view_set_video_only(normal_view_handle pViewHandle, bool bVi
 		VideoLogWarning("vp_mm_player_get_state is fail");
 	}
 
-	if (nState != VP_MM_PLAYER_STATE_NONE && nState != VP_MM_PLAYER_STATE_IDLE)
+	if (nState != VP_MM_PLAYER_STATE_NONE && nState != VP_MM_PLAYER_STATE_IDLE) {
 		vp_play_subtitle_set_text(pNormalView->pSubtitle, "");
+	}
 
 	if (bVideoOnly == TRUE) {
 		if (pNormalView->pImageBufferObj) {
@@ -12229,16 +12045,16 @@ bool vp_play_normal_view_set_video_only(normal_view_handle pViewHandle, bool bVi
 		VP_EVAS_DISABLE_SET(pNormalView->pScreenSizeBtn, EINA_FALSE);
 		VP_EVAS_DISABLE_SET(pNormalView->pRepeatBtn, EINA_FALSE);
 		if (pNormalView->nLaunchingType == VIDEO_PLAY_TYPE_EMAIL) {
-				char *szMediaID = NULL;
-				bool bReturn = FALSE;
-				bReturn = vp_media_contents_get_video_id(pNormalView->szMediaURL, &szMediaID);
+			char *szMediaID = NULL;
+			bool bReturn = FALSE;
+			bReturn = vp_media_contents_get_video_id(pNormalView->szMediaURL, &szMediaID);
 
-				if (szMediaID && bReturn) {
-					VP_EVAS_DISABLE_SET(pNormalView->pTrimBtn, EINA_FALSE);
-				} else {
-					VP_EVAS_DISABLE_SET(pNormalView->pTrimBtn, EINA_TRUE);
-				}
-				VP_FREE(szMediaID);
+			if (szMediaID && bReturn) {
+				VP_EVAS_DISABLE_SET(pNormalView->pTrimBtn, EINA_FALSE);
+			} else {
+				VP_EVAS_DISABLE_SET(pNormalView->pTrimBtn, EINA_TRUE);
+			}
+			VP_FREE(szMediaID);
 		} else {
 			VP_EVAS_DISABLE_SET(pNormalView->pTrimBtn, EINA_FALSE);
 		}
@@ -12246,9 +12062,9 @@ bool vp_play_normal_view_set_video_only(normal_view_handle pViewHandle, bool bVi
 
 		if (pNormalView->nLaunchingType == VIDEO_PLAY_TYPE_MULTI_PATH) {
 			if (vp_play_util_check_streaming(pNormalView->szMediaURL) == TRUE) {
-					VP_EVAS_DISABLE_SET(pNormalView->pShareBtn, EINA_TRUE);
+				VP_EVAS_DISABLE_SET(pNormalView->pShareBtn, EINA_TRUE);
 			} else {
-					VP_EVAS_DISABLE_SET(pNormalView->pShareBtn, EINA_FALSE);
+				VP_EVAS_DISABLE_SET(pNormalView->pShareBtn, EINA_FALSE);
 			}
 		} else {
 			VP_EVAS_DISABLE_SET(pNormalView->pShareBtn, EINA_FALSE);
@@ -12530,39 +12346,40 @@ bool vp_play_normal_view_set_rotate(normal_view_handle pViewHandle, video_play_r
 
 	if (nRotate == VIDEO_PLAY_ROTATE_NONE) {
 		vp_mm_player_set_video_rotate(pNormalView->pPlayerHandle, VP_MM_PLAYER_ROTATE_0);
-	}
-	else if (nRotate == VIDEO_PLAY_ROTATE_90) {
+	} else if (nRotate == VIDEO_PLAY_ROTATE_90) {
 		vp_mm_player_set_video_rotate(pNormalView->pPlayerHandle, VP_MM_PLAYER_ROTATE_90);
-	}
-	else if (nRotate == VIDEO_PLAY_ROTATE_180) {
+	} else if (nRotate == VIDEO_PLAY_ROTATE_180) {
 		vp_mm_player_set_video_rotate(pNormalView->pPlayerHandle, VP_MM_PLAYER_ROTATE_180);
-	}
-	else if (nRotate == VIDEO_PLAY_ROTATE_270) {
+	} else if (nRotate == VIDEO_PLAY_ROTATE_270) {
 		vp_mm_player_set_video_rotate(pNormalView->pPlayerHandle, VP_MM_PLAYER_ROTATE_270);
 	}
 
 	int nAngle = elm_win_rotation_get(pPlayView->pWin);
 	video_play_rotate_t nCurRot = VIDEO_PLAY_ROTATE_NONE;
 
-	switch (nAngle)
-	{
-	case 0: 	nCurRot = VIDEO_PLAY_ROTATE_NONE; 	break;
-	case 90:	nCurRot = VIDEO_PLAY_ROTATE_90; 	break;
-	case 180:	nCurRot = VIDEO_PLAY_ROTATE_180; 	break;
-	case 270:	nCurRot = VIDEO_PLAY_ROTATE_270; 	break;
+	switch (nAngle) {
+	case 0:
+		nCurRot = VIDEO_PLAY_ROTATE_NONE;
+		break;
+	case 90:
+		nCurRot = VIDEO_PLAY_ROTATE_90;
+		break;
+	case 180:
+		nCurRot = VIDEO_PLAY_ROTATE_180;
+		break;
+	case 270:
+		nCurRot = VIDEO_PLAY_ROTATE_270;
+		break;
 	}
 
 	if (nRotate != nCurRot) {
 		if (nRotate == VIDEO_PLAY_ROTATE_NONE) {
 			elm_win_wm_rotation_preferred_rotation_set(pPlayView->pWin, 0);
-		}
-		else if (nRotate == VIDEO_PLAY_ROTATE_90) {
+		} else if (nRotate == VIDEO_PLAY_ROTATE_90) {
 			elm_win_wm_rotation_preferred_rotation_set(pPlayView->pWin, 90);
-		}
-		else if (nRotate == VIDEO_PLAY_ROTATE_180) {
+		} else if (nRotate == VIDEO_PLAY_ROTATE_180) {
 			elm_win_wm_rotation_preferred_rotation_set(pPlayView->pWin, 180);
-		}
-		else if (nRotate == VIDEO_PLAY_ROTATE_270) {
+		} else if (nRotate == VIDEO_PLAY_ROTATE_270) {
 			elm_win_wm_rotation_preferred_rotation_set(pPlayView->pWin, 270);
 		}
 	}
@@ -12645,12 +12462,10 @@ bool vp_play_normal_view_set_rotate(normal_view_handle pViewHandle, video_play_r
 	if (pNormalView->nDisplayMode != VP_MM_PLAYER_DISPLAY_FULL_SCREEN) {
 		if (nRotate == VIDEO_PLAY_ROTATE_NONE || nRotate == VIDEO_PLAY_ROTATE_180) {
 			elm_object_signal_emit(pNormalView->pMainLayout, VP_NORMAL_SIGNAL_MAIN_SUBTITLE_PORTRAIT, "*");
-		}
-		else {
+		} else {
 			elm_object_signal_emit(pNormalView->pMainLayout, VP_NORMAL_SIGNAL_MAIN_SUBTITLE_HIDE, "*");
 		}
-	}
-	else {
+	} else {
 		elm_object_signal_emit(pNormalView->pMainLayout, VP_NORMAL_SIGNAL_MAIN_SUBTITLE_HIDE, "*");
 	}
 #endif
@@ -12681,19 +12496,16 @@ bool vp_play_normal_view_set_rotate(normal_view_handle pViewHandle, video_play_r
 		Evas_Coord_Rectangle rect = {0,};
 		elm_win_screen_size_get(pPlayView->pWin,  &rect.x, &rect.y, &rect.w, &rect.h);
 		if (pNormalView->nRotate == VIDEO_PLAY_ROTATE_NONE) {
-			nW = rect.w/2;
+			nW = rect.w / 2;
 			nH = rect.h;
-		}
-		else if (pNormalView->nRotate == VIDEO_PLAY_ROTATE_90) {
-			nW = rect.h/2;
+		} else if (pNormalView->nRotate == VIDEO_PLAY_ROTATE_90) {
+			nW = rect.h / 2;
 			nH = rect.w;
-		}
-		else if (pNormalView->nRotate == VIDEO_PLAY_ROTATE_180) {
-			nW = rect.w/2;
+		} else if (pNormalView->nRotate == VIDEO_PLAY_ROTATE_180) {
+			nW = rect.w / 2;
 			nH = rect.h;
-		}
-		else if (pNormalView->nRotate == VIDEO_PLAY_ROTATE_270) {
-			nW = rect.h/2;
+		} else if (pNormalView->nRotate == VIDEO_PLAY_ROTATE_270) {
+			nW = rect.h / 2;
 			nH = rect.w;
 		}
 
@@ -12775,7 +12587,7 @@ bool vp_play_normal_view_update(normal_view_handle pViewHandle)
 	vp_play_normal_view_get_lock_screen(pNormalView, &bLock);
 	if (bLock) {
 		vp_play_normal_view_set_lock_screen(pNormalView, bLock);
-		}
+	}
 
 	_vp_play_normal_view_set_sound_path_state(pNormalView);
 //	_vp_play_normal_view_set_rotate_lock_state(pNormalView);
@@ -12852,8 +12664,7 @@ bool vp_play_normal_view_on_more_menu(normal_view_handle pViewHandle)
 		if (!vp_play_volume_unrealize(pNormalView->pVolumeHandle)) {
 			VideoLogWarning("vp_play_volume_unrealize is fail");
 		}
-	}
-	else {
+	} else {
 		__vp_normal_more_btn_clicked_cb((void *)pNormalView, pNormalView->pMoreBtn, NULL);
 	}
 
@@ -12931,7 +12742,7 @@ bool vp_play_normal_view_volume_mute(normal_view_handle pViewHandle)
 	_vp_play_normal_view_on_volume_popup(pNormalView, FALSE);
 
 	int nMuteVal = vp_play_volume_get_mute_value(pNormalView->pVolumeHandle);
-	if (nMuteVal >0) {
+	if (nMuteVal > 0) {
 		pNormalView->nLastVolume = nMuteVal;
 		vp_play_volume_set_value(pNormalView->pVolumeHandle, pNormalView->nLastVolume);
 	} else {
@@ -12976,7 +12787,7 @@ bool vp_play_normal_view_set_lock_screen(normal_view_handle pViewHandle, bool bL
 	pNormalView->bLockScreen = bLock;
 	VP_EVAS_TIMER_DEL(pNormalView->pLockScreenTimer);
 
-	elm_object_part_content_unset(pNormalView->pMainLayout,VP_PLAY_SWALLOW_NORMAL_LOCKSCREEN);
+	elm_object_part_content_unset(pNormalView->pMainLayout, VP_PLAY_SWALLOW_NORMAL_LOCKSCREEN);
 	VP_EVAS_DEL(pNormalView->pLockBtn);
 	PlayView *pPlayView = pNormalView->pPlayView;
 	Evas_Object *pParent = NULL;
@@ -13008,17 +12819,17 @@ bool vp_play_normal_view_set_lock_screen(normal_view_handle pViewHandle, bool bL
 		vp_play_volume_unset_mouse_callbacks(pNormalView->pVolumeHandle, pNormalView->pPlayView->pWin);
 
 		pNormalView->pLockScreenTimer =
-			ecore_timer_add(VP_NORMAL_HIDE_SCREEN_LOCK_TIMER_INTERVAL,
-			__vp_normal_lockscreen_timer_cb, (void *)pNormalView);
+		    ecore_timer_add(VP_NORMAL_HIDE_SCREEN_LOCK_TIMER_INTERVAL,
+		                    __vp_normal_lockscreen_timer_cb, (void *)pNormalView);
 
 		elm_object_signal_emit(pNormalView->pMainLayout, VP_NORMAL_SIGNAL_LOCKSCREEN_SHOW, "*");
 
 		pNormalView->pLockBtn = vp_button_create(
-						pParent, "playview/custom/flat_46_46/default", NULL,
-						(Evas_Smart_Cb)__vp_normal_function_btn_clicked_cb,
-						(Evas_Smart_Cb)__vp_normal_control_btn_press_cb,
-						(Evas_Smart_Cb)__vp_normal_control_btn_unpress_cb,
-						(void *)pNormalView);
+		                            pParent, "playview/custom/flat_46_46/default", NULL,
+		                            (Evas_Smart_Cb)__vp_normal_function_btn_clicked_cb,
+		                            (Evas_Smart_Cb)__vp_normal_control_btn_press_cb,
+		                            (Evas_Smart_Cb)__vp_normal_control_btn_unpress_cb,
+		                            (void *)pNormalView);
 		if (!pNormalView->pLockBtn) {
 			VideoLogError("elm_button_add is fail");
 			return FALSE;
@@ -13036,7 +12847,7 @@ bool vp_play_normal_view_set_lock_screen(normal_view_handle pViewHandle, bool bL
 		pIcon = vp_button_create_icon(pNormalView->pLockBtn, VP_PLAY_RESROUCE_EDJ_PATH, VP_PLAY_NORMAL_RES_LOCK);
 		elm_object_part_content_set(pNormalView->pLockBtn, VP_PLAY_SWALLOW_BUTTON_DIM_ICON, pIcon);
 
-		elm_object_part_content_set(pNormalView->pMainLayout,VP_PLAY_SWALLOW_NORMAL_LOCKSCREEN, pNormalView->pLockBtn);
+		elm_object_part_content_set(pNormalView->pMainLayout, VP_PLAY_SWALLOW_NORMAL_LOCKSCREEN, pNormalView->pLockBtn);
 
 		evas_object_show(pNormalView->pLockBtn);
 
@@ -13086,8 +12897,7 @@ void vp_play_normal_view_hide_sound_popup(normal_view_handle pViewHandle)
 
 	NormalView	*pNormalView = (NormalView *)pViewHandle;
 
-	if (pNormalView->bIsPopupShow)
-	{
+	if (pNormalView->bIsPopupShow) {
 
 		VP_EVAS_DEL(pNormalView->pPopup);
 		pNormalView->bIsPopupShow = FALSE;
@@ -13110,13 +12920,14 @@ void vp_play_normal_view_web_type_disconnect(normal_view_handle pViewHandle)
 
 	PlayView *pPlayView = pNormalView->pPlayView;
 
-	if (pPlayView->nStartPosition<=0) {
+	if (pPlayView->nStartPosition <= 0) {
 		int nPosition = 0;
 		if (!vp_mm_player_get_position(pNormalView->pPlayerHandle, &nPosition)) {
 			VideoLogError("vp_mm_player_get_position is fail");
 		}
-			if (nPosition>0)
-				pNormalView->nStartPosition = nPosition;
+		if (nPosition > 0) {
+			pNormalView->nStartPosition = nPosition;
+		}
 	} else {
 		pNormalView->nStartPosition = pPlayView->nStartPosition;
 	}
@@ -13152,8 +12963,9 @@ void vp_play_normal_view_web_type_reconnect(normal_view_handle pViewHandle)
 	}
 
 	PlayView *pPlayView = pNormalView->pPlayView;
-	if (pPlayView->nStartPosition > 0)
+	if (pPlayView->nStartPosition > 0) {
 		pNormalView->nStartPosition = pPlayView->nStartPosition;
+	}
 
 	VideoLogInfo("pNormalView->nStartPosition : [%d]", pNormalView->nStartPosition);
 	_vp_play_normal_view_play_start(pNormalView, FALSE);
@@ -13243,8 +13055,7 @@ char *vp_controller_normal_view_get_thumbnail(normal_view_handle pViewHandle)
 		VideoLogError("pViewHandle is NULL ");
 		return NULL;
 	}
-	if (!pNormalView->szMediaURL)
-	{
+	if (!pNormalView->szMediaURL) {
 		VideoLogError("pNormalView->szMediaURL");
 		return NULL;
 	}
@@ -13256,13 +13067,12 @@ char *vp_controller_normal_view_get_thumbnail(normal_view_handle pViewHandle)
 char *vp_controller_normal_view_get_title(normal_view_handle pViewHandle)
 {
 	char *pTitle = NULL;
-	NormalView	*pNormalView= (NormalView *)pViewHandle;
+	NormalView	*pNormalView = (NormalView *)pViewHandle;
 	if (!pNormalView) {
 		VideoLogError("pViewHandle is NULL");
 		return NULL;
 	}
-	if (!pNormalView->szMediaURL)
-	{
+	if (!pNormalView->szMediaURL) {
 		VideoLogError("pNormalView->szMediaURL IS null");
 		return NULL;
 	}
@@ -13274,13 +13084,12 @@ char *vp_controller_normal_view_get_title(normal_view_handle pViewHandle)
 
 int vp_controller_normal_view_get_duration(normal_view_handle pViewHandle)
 {
-	NormalView	*pNormalView= (NormalView *)pViewHandle;
+	NormalView	*pNormalView = (NormalView *)pViewHandle;
 	if (!pNormalView) {
 		VideoLogError("pViewHandle is NULL");
 		return 0;
 	}
-	if (!pNormalView->szMediaURL)
-	{
+	if (!pNormalView->szMediaURL) {
 		VideoLogError("pNormalView->szMediaURL IS null");
 		return 0;
 	}
@@ -13290,7 +13099,7 @@ int vp_controller_normal_view_get_duration(normal_view_handle pViewHandle)
 
 bool vp_controller_normal_view_pop_view(normal_view_handle pViewHandle)
 {
-	NormalView	*pNormalView= (NormalView *)pViewHandle;
+	NormalView	*pNormalView = (NormalView *)pViewHandle;
 	if (!pNormalView) {
 		VideoLogError("pViewHandle is NULL");
 		return FALSE;
@@ -13301,7 +13110,7 @@ bool vp_controller_normal_view_pop_view(normal_view_handle pViewHandle)
 
 int vp_controller_normal_view_get_played_state(normal_view_handle pViewHandle)
 {
-	NormalView	*pNormalView= (NormalView *)pViewHandle;
+	NormalView	*pNormalView = (NormalView *)pViewHandle;
 	vp_mm_player_state_t nState = VP_MM_PLAYER_STATE_NONE;
 	if (!pNormalView) {
 		VideoLogError("pViewHandle is NULL");
@@ -13317,7 +13126,7 @@ int vp_controller_normal_view_get_played_state(normal_view_handle pViewHandle)
 
 bool vp_controller_normal_view_add_played_state_cb(normal_view_handle pViewHandle, vp_normal_view_state_cb fState_cb)
 {
-	NormalView	*pNormalView= (NormalView *)pViewHandle;
+	NormalView	*pNormalView = (NormalView *)pViewHandle;
 	if (!pNormalView) {
 		VideoLogError("pViewHandle is NULL");
 		return FALSE;
@@ -13342,10 +13151,10 @@ void vp_play_normal_view_db_change(normal_view_handle pViewHandle)
 	}
 
 	if (pNormalView->nLaunchingType != VIDEO_PLAY_TYPE_WEB &&
-			pNormalView->nLaunchingType != VIDEO_PLAY_TYPE_PREVIEW &&
-			pNormalView->nLaunchingType != VIDEO_PLAY_TYPE_MESSAGE &&
-			pNormalView->nLaunchingType != VIDEO_PLAY_TYPE_EMAIL &&
-			pNormalView->nLaunchingType != VIDEO_PLAY_TYPE_MULTI_PATH) {
+	        pNormalView->nLaunchingType != VIDEO_PLAY_TYPE_PREVIEW &&
+	        pNormalView->nLaunchingType != VIDEO_PLAY_TYPE_MESSAGE &&
+	        pNormalView->nLaunchingType != VIDEO_PLAY_TYPE_EMAIL &&
+	        pNormalView->nLaunchingType != VIDEO_PLAY_TYPE_MULTI_PATH) {
 
 		char *pVideoId = NULL;
 		vp_media_contents_get_video_id(pNormalView->szMediaURL, &pVideoId);

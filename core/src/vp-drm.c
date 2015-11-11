@@ -151,7 +151,7 @@ bool vp_drm_is_divx_drm_file(const char *szMediaURL, bool *bIsDivXDRM)
 }
 
 bool vp_drm_is_playready_drm_file(const char *szMediaURL,
-				  bool *bIsPlayReadyDRM)
+                                  bool *bIsPlayReadyDRM)
 {
 	if (!szMediaURL) {
 		vp_dbgE("szMediaURL is NULL");
@@ -182,7 +182,7 @@ bool vp_drm_is_playready_drm_file(const char *szMediaURL,
 	}
 
 	if (drm_type == DRM_TYPE_PLAYREADY
-			|| drm_type == DRM_TYPE_PLAYREADY_ENVELOPE) {
+	        || drm_type == DRM_TYPE_PLAYREADY_ENVELOPE) {
 		*bIsPlayReadyDRM = TRUE;
 		vp_dbgW("%s file is PlayReady", szMediaURL);
 	} else {
@@ -205,8 +205,8 @@ bool vp_drm_is_check_license(const char *szMediaURL, bool *bCheckLicense)
 
 	drm_license_status_e nLicenseStatus = DRM_LICENSE_STATUS_UNDEFINED;
 	int nRet =
-		drm_get_license_status(szMediaURL, DRM_PERMISSION_TYPE_PLAY,
-				       &nLicenseStatus);
+	    drm_get_license_status(szMediaURL, DRM_PERMISSION_TYPE_PLAY,
+	                           &nLicenseStatus);
 	if (nRet != DRM_RETURN_SUCCESS) {
 		vp_dbgE("drm_get_license_status is fail");
 		_vp_drm_print_error_code(nRet);
@@ -222,7 +222,7 @@ bool vp_drm_is_check_license(const char *szMediaURL, bool *bCheckLicense)
 }
 
 bool vp_drm_is_check_forward_lock(const char *szMediaURL,
-				  bool *bIsFowardLock)
+                                  bool *bIsFowardLock)
 {
 	if (!szMediaURL) {
 		vp_dbgE("szMediaURL is NULL");
@@ -273,7 +273,7 @@ bool vp_drm_is_check_forward_lock(const char *szMediaURL,
 }
 
 bool vp_drm_get_constarint_info(const char *szMediaURL,
-				vp_drm_constraint_info *pConstraintInfo)
+                                vp_drm_constraint_info *pConstraintInfo)
 {
 	if (!szMediaURL) {
 		vp_dbgE("szMediaURL is NULL");
@@ -285,8 +285,8 @@ bool vp_drm_get_constarint_info(const char *szMediaURL,
 	memset(&sDrmConstraintInfo, 0, sizeof(drm_constraint_info_s));
 
 	int nRet =
-		drm_get_constraint_info(szMediaURL, DRM_PERMISSION_TYPE_PLAY,
-					&sDrmConstraintInfo);
+	    drm_get_constraint_info(szMediaURL, DRM_PERMISSION_TYPE_PLAY,
+	                            &sDrmConstraintInfo);
 	if (nRet != DRM_RETURN_SUCCESS) {
 		vp_dbgE("drm_get_constraint_info is fail");
 		_vp_drm_print_error_code(nRet);
@@ -320,7 +320,7 @@ bool vp_drm_get_constarint_info(const char *szMediaURL,
 	case DRM_CONSTRAINT_TYPE_INVALID_DRM_VERSION:
 		vp_dbgW("DRM_CONSTRAINT_TYPE_INVALID_DRM_VERSION");
 		pConstraintInfo->status =
-			VP_DRM_CONSTRAINT_TYPE_INVALID_DRM_VERSION;
+		    VP_DRM_CONSTRAINT_TYPE_INVALID_DRM_VERSION;
 		break;
 	case DRM_CONSTRAINT_TYPE_UNKNOWN_TYPE:
 		vp_dbgW("DRM_CONSTRAINT_TYPE_UNKNOWN_TYPE");
@@ -342,25 +342,25 @@ bool vp_drm_get_constarint_info(const char *szMediaURL,
 		vp_dbgW("DRM_COUNT [%d]", sDrmConstraintInfo.remaining_count);
 		pConstraintInfo->constraints |= VP_DRM_CONSTRAINT_COUNT;
 		pConstraintInfo->original_count =
-			sDrmConstraintInfo.original_count;
+		    sDrmConstraintInfo.original_count;
 		pConstraintInfo->remaining_count =
-			sDrmConstraintInfo.remaining_count;
+		    sDrmConstraintInfo.remaining_count;
 	}
 
 	if (sDrmConstraintInfo.const_type.is_datetime) {
 		vp_dbgW("DRM_DATETIME");
 		pConstraintInfo->constraints |= VP_DRM_CONSTRAINT_DATE_TIME;
 		vp_dbgW("%d.%d.%d %d:%d~%d.%d.%d %d:%d",
-			sDrmConstraintInfo.start_time.tm_mday,
-			sDrmConstraintInfo.start_time.tm_mon,
-			sDrmConstraintInfo.start_time.tm_year,
-			sDrmConstraintInfo.start_time.tm_hour,
-			sDrmConstraintInfo.start_time.tm_min,
-			sDrmConstraintInfo.end_time.tm_mday,
-			sDrmConstraintInfo.end_time.tm_mon,
-			sDrmConstraintInfo.end_time.tm_year,
-			sDrmConstraintInfo.end_time.tm_hour,
-			sDrmConstraintInfo.end_time.tm_min);
+		        sDrmConstraintInfo.start_time.tm_mday,
+		        sDrmConstraintInfo.start_time.tm_mon,
+		        sDrmConstraintInfo.start_time.tm_year,
+		        sDrmConstraintInfo.start_time.tm_hour,
+		        sDrmConstraintInfo.start_time.tm_min,
+		        sDrmConstraintInfo.end_time.tm_mday,
+		        sDrmConstraintInfo.end_time.tm_mon,
+		        sDrmConstraintInfo.end_time.tm_year,
+		        sDrmConstraintInfo.end_time.tm_hour,
+		        sDrmConstraintInfo.end_time.tm_min);
 
 		struct timeval tv;
 		gettimeofday(&tv, NULL);
@@ -375,10 +375,10 @@ bool vp_drm_get_constarint_info(const char *szMediaURL,
 
 
 		vp_dbgW("%d.%d.%d %d:%d",
-			ptm->tm_mday, ptm->tm_mon, ptm->tm_year,
-			ptm->tm_hour, ptm->tm_min);
+		        ptm->tm_mday, ptm->tm_mon, ptm->tm_year,
+		        ptm->tm_hour, ptm->tm_min);
 
-		if (local_t >= start_t &&local_t <= end_t) {
+		if (local_t >= start_t && local_t <= end_t) {
 			pConstraintInfo->date_time_expired = FALSE;
 		} else {
 			pConstraintInfo->date_time_expired = TRUE;
@@ -390,50 +390,50 @@ bool vp_drm_get_constarint_info(const char *szMediaURL,
 		vp_dbgW("DRM_INTERVAL");
 		pConstraintInfo->constraints |= VP_DRM_CONSTRAINT_INTERVAL;
 		vp_dbgW("Remain... %d.%d.%d %d:%d",
-			sDrmConstraintInfo.interval_time.tm_mon,
-			sDrmConstraintInfo.interval_time.tm_mday,
-			sDrmConstraintInfo.interval_time.tm_year,
-			sDrmConstraintInfo.interval_time.tm_hour,
-			sDrmConstraintInfo.interval_time.tm_min);
+		        sDrmConstraintInfo.interval_time.tm_mon,
+		        sDrmConstraintInfo.interval_time.tm_mday,
+		        sDrmConstraintInfo.interval_time.tm_year,
+		        sDrmConstraintInfo.interval_time.tm_hour,
+		        sDrmConstraintInfo.interval_time.tm_min);
 
 		pConstraintInfo->remaining_interval_sec =
-			sDrmConstraintInfo.interval_time.tm_sec +
-			sDrmConstraintInfo.interval_time.tm_min * 60 +
-			sDrmConstraintInfo.interval_time.tm_hour * 3600;
+		    sDrmConstraintInfo.interval_time.tm_sec +
+		    sDrmConstraintInfo.interval_time.tm_min * 60 +
+		    sDrmConstraintInfo.interval_time.tm_hour * 3600;
 		pConstraintInfo->remaining_interval_sec +=
-			(sDrmConstraintInfo.interval_time.tm_mday +
-			 sDrmConstraintInfo.interval_time.tm_mon * 30 +
-			 sDrmConstraintInfo.interval_time.tm_year * 365) * (3600 *
-					 24);
+		    (sDrmConstraintInfo.interval_time.tm_mday +
+		     sDrmConstraintInfo.interval_time.tm_mon * 30 +
+		     sDrmConstraintInfo.interval_time.tm_year * 365) * (3600 *
+		             24);
 	}
 
 	if (sDrmConstraintInfo.const_type.is_timedcount) {
 		vp_dbgW("DRM_TIMED_COUNT");
 		vp_dbgW("%d left (%d sec)",
-			sDrmConstraintInfo.timed_remaining_count,
-			sDrmConstraintInfo.timed_count_timer);
+		        sDrmConstraintInfo.timed_remaining_count,
+		        sDrmConstraintInfo.timed_count_timer);
 		pConstraintInfo->constraints |= VP_DRM_CONSTRAINT_TIMED_COUNT;
 		pConstraintInfo->remaining_timed_count =
-			sDrmConstraintInfo.timed_remaining_count;
+		    sDrmConstraintInfo.timed_remaining_count;
 	}
 
 	if (sDrmConstraintInfo.const_type.is_accumulated) {
 		vp_dbgW("DRM_ACCUMULATED [%d]",
-			sDrmConstraintInfo.accumulated_remaining_seconds);
+		        sDrmConstraintInfo.accumulated_remaining_seconds);
 		pConstraintInfo->constraints |= VP_DRM_CONSTRAINT_ACCUMLATED_TIME;
 		pConstraintInfo->remaining_acc_sec =
-			sDrmConstraintInfo.accumulated_remaining_seconds;
+		    sDrmConstraintInfo.accumulated_remaining_seconds;
 	}
 
 	if (sDrmConstraintInfo.const_type.is_individual) {
 		vp_sdbg("DRM_INDIVISUAL_ID [%s]",
-			sDrmConstraintInfo.individual_id);
+		        sDrmConstraintInfo.individual_id);
 	}
 
 	if (sDrmConstraintInfo.const_type.is_system) {
 		vp_sdbg("DRM_SYSTEM [ID:%s, type:%d]",
-			sDrmConstraintInfo.system_id,
-			sDrmConstraintInfo.system_identity_type);
+		        sDrmConstraintInfo.system_id,
+		        sDrmConstraintInfo.system_identity_type);
 	}
 
 	return TRUE;
@@ -466,7 +466,7 @@ bool vp_drm_get_file_mime_type(const char *szMediaURL, char **szMime)
 	}
 
 	if (drm_type == DRM_TYPE_PLAYREADY
-			|| drm_type == DRM_TYPE_PLAYREADY_ENVELOPE) {
+	        || drm_type == DRM_TYPE_PLAYREADY_ENVELOPE) {
 		vp_sdbg("contentType: video/vnd.ms-playready.media.pyv");
 		return FALSE;
 	} else if (drm_type == DRM_TYPE_OMA_V1 || drm_type == DRM_TYPE_OMA_V2) {
@@ -494,8 +494,8 @@ bool vp_drm_get_file_mime_type(const char *szMediaURL, char **szMime)
 
 bool
 vp_drm_get_store_item_license(char *pPath, char *pStoreAppId,
-			      char *pUserId, char *pImei, char *pOrderId,
-			      char *pMvId, char *pServerId)
+                              char *pUserId, char *pImei, char *pOrderId,
+                              char *pMvId, char *pServerId)
 {
 	int nRet = -1;
 
@@ -545,24 +545,24 @@ vp_drm_get_store_item_license(char *pPath, char *pStoreAppId,
 	initiator_info.init_type = DRM_INITIATOR_TYPE_LICENSE_ACQ;
 	initiator_info.initiator_url_len = strlen(pPath);
 	snprintf(initiator_info.initiator_url, DRM_MAX_LEN_INITIATOR_URL,
-		 "%s", pPath);
+	         "%s", pPath);
 	snprintf(initiator_info.custom_data.app_id, DRM_MAX_LEN_APP_ID + 1,
-		 "%s", pStoreAppId);
+	         "%s", pStoreAppId);
 	snprintf(initiator_info.custom_data.user_guid,
-		 DRM_MAX_LEN_USER_GUID + 1, "%s", pUserId);
+	         DRM_MAX_LEN_USER_GUID + 1, "%s", pUserId);
 	snprintf(initiator_info.custom_data.device_id,
-		 DRM_MAX_LEN_DEVICE_ID + 1, "%s", pImei);
+	         DRM_MAX_LEN_DEVICE_ID + 1, "%s", pImei);
 	snprintf(initiator_info.custom_data.order_id,
-		 DRM_MAX_LEN_ORDER_ID + 1, "%s", pOrderId);
+	         DRM_MAX_LEN_ORDER_ID + 1, "%s", pOrderId);
 	snprintf(initiator_info.custom_data.mv_id, DRM_MAX_LEN_MV_ID + 1,
-		 "%s", pMvId);
+	         "%s", pMvId);
 	snprintf(initiator_info.custom_data.svr_id, DRM_MAX_LEN_SVR_ID + 1,
-		 "%s", pServerId);
+	         "%s", pServerId);
 
 	nRet =
-		drm_process_request(DRM_REQUEST_TYPE_SUBMIT_INITIATOR_URL,
-				    (void *)(&initiator_info),
-				    (void *)(&ws_resp_data));
+	    drm_process_request(DRM_REQUEST_TYPE_SUBMIT_INITIATOR_URL,
+	                        (void *)(&initiator_info),
+	                        (void *)(&ws_resp_data));
 
 	if (nRet == DRM_RETURN_SUCCESS) {
 		vp_dbg("Server Error Code = %d", ws_resp_data.result_code);

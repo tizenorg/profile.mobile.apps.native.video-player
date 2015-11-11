@@ -71,9 +71,9 @@ enum VP_FILE_SIZE_TYPE {
 };
 
 static char *_vp_play_util_convert_string(const char *szLocale,
-		const char *szCustomSkeleton,
-		const char *szTimezone,
-		UDate st_Date)
+        const char *szCustomSkeleton,
+        const char *szTimezone,
+        UDate st_Date)
 {
 #define UG_ICU_ARR_LENGTH 			256
 
@@ -84,7 +84,7 @@ static char *_vp_play_util_convert_string(const char *szLocale,
 	i18n_uchar ucustomSkeleton[UG_ICU_ARR_LENGTH] = { 0, };
 
 	if (i18n_ustring_copy_ua_n
-			(ucustomSkeleton, szCustomSkeleton, UG_ICU_ARR_LENGTH) == NULL) {
+	        (ucustomSkeleton, szCustomSkeleton, UG_ICU_ARR_LENGTH) == NULL) {
 		VideoLogInfo("i18n_ustring_copy_au_n() error.");
 		return NULL;
 	}
@@ -92,7 +92,7 @@ static char *_vp_play_util_convert_string(const char *szLocale,
 	i18n_uchar utimezone[UG_ICU_ARR_LENGTH] = { 0, };
 
 	if (i18n_ustring_copy_ua_n(utimezone, szTimezone, UG_ICU_ARR_LENGTH)
-			== NULL) {
+	        == NULL) {
 		VideoLogInfo("i18n_ustring_copy_au_n() error.");
 		return NULL;
 	}
@@ -124,27 +124,27 @@ static char *_vp_play_util_convert_string(const char *szLocale,
 	}
 
 	status =
-		i18n_udatepg_get_best_pattern(generator, ucustomSkeleton,
-					      i18n_ustring_get_length
-					      (ucustomSkeleton), bestPattern,
-					      UG_ICU_ARR_LENGTH,
-					      &bestPatternLength);
+	    i18n_udatepg_get_best_pattern(generator, ucustomSkeleton,
+	                                  i18n_ustring_get_length
+	                                  (ucustomSkeleton), bestPattern,
+	                                  UG_ICU_ARR_LENGTH,
+	                                  &bestPatternLength);
 	if (bestPatternLength <= 0 || status != I18N_ERROR_NONE) {
 		i18n_udatepg_destroy(generator);
 		return NULL;
 	}
 
 	status =
-		i18n_udate_create(I18N_UDATE_MEDIUM, I18N_UDATE_MEDIUM, szLocale,
-				  NULL, -1, bestPattern, -1, &formatter);
+	    i18n_udate_create(I18N_UDATE_MEDIUM, I18N_UDATE_MEDIUM, szLocale,
+	                      NULL, -1, bestPattern, -1, &formatter);
 	if (formatter == NULL || status != I18N_ERROR_NONE) {
 		i18n_udatepg_destroy(generator);
 		return NULL;
 	}
 
 	status =
-		i18n_udate_format_date(formatter, st_Date, formatted,
-				       UG_ICU_ARR_LENGTH, NULL, &formattedLength);
+	    i18n_udate_format_date(formatter, st_Date, formatted,
+	                           UG_ICU_ARR_LENGTH, NULL, &formattedLength);
 	if (formattedLength <= 0 || status != I18N_ERROR_NONE) {
 		VideoLogInfo("i18n_udate_format_date() is failed.");
 		i18n_udate_destroy(formatter);
@@ -287,7 +287,7 @@ bool vp_play_util_get_landscape_check(int nRotateVal)
 	nRotate = (video_play_rotate_t) nRotateVal;
 
 	if (nRotate == VIDEO_PLAY_ROTATE_90 ||
-			nRotate == VIDEO_PLAY_ROTATE_270) {
+	        nRotate == VIDEO_PLAY_ROTATE_270) {
 		return TRUE;
 	}
 	return FALSE;
@@ -307,9 +307,9 @@ int vp_play_util_get_root_window_angle(Evas_Object *pWin)
 	Ecore_X_Window xwin = elm_win_xwindow_get(pWin);
 	Ecore_X_Window root = ecore_x_window_root_get(xwin);
 	nRet = ecore_x_window_prop_property_get(root,
-						ECORE_X_ATOM_E_ILLUME_ROTATE_ROOT_ANGLE,
-						ECORE_X_ATOM_CARDINAL, 32,
-						&pProp_data, &nCount);
+	                                        ECORE_X_ATOM_E_ILLUME_ROTATE_ROOT_ANGLE,
+	                                        ECORE_X_ATOM_CARDINAL, 32,
+	                                        &pProp_data, &nCount);
 
 	if (nRet && pProp_data) {
 		memcpy(&nAngle, pProp_data, sizeof(int));
@@ -393,7 +393,7 @@ bool vp_play_util_local_file_check(char *szMediaURL)
 }
 
 bool vp_play_util_get_subtitle_path(const char *szMediaURL,
-				    char **szSubtitle)
+                                    char **szSubtitle)
 {
 	if (!szMediaURL) {
 		VideoLogError("szMediaURL is NULL");
@@ -435,11 +435,11 @@ bool vp_play_util_get_subtitle_path(const char *szMediaURL,
 		memset(szCheckFilePath, 0, nOutputLen);
 		strncpy(szCheckFilePath, szMediaURL, nStrLength);
 		strncat(szCheckFilePath, szExtWildkey[nCount],
-				strlen(szExtWildkey[nCount]));
+		        strlen(szExtWildkey[nCount]));
 
 		if (!stat(szCheckFilePath, &buf)) {
 			VideoLogWarning("Success finding subtitle file. - %d, %s",
-					nCount, szCheckFilePath);
+			                nCount, szCheckFilePath);
 			VP_STRDUP(*szSubtitle, szCheckFilePath);
 			break;
 		}
@@ -470,7 +470,7 @@ bool vp_play_util_status_noti_show(const char *szStr)
 	int nRet = notification_status_message_post(szStr);
 	if (nRet != 0) {
 		VideoLogError("notification_status_message_post() : [0x%x]",
-			      nRet);
+		              nRet);
 		return FALSE;
 	}
 
@@ -486,10 +486,10 @@ char *vp_play_util_remove_prefix_to_url(char *szURL)
 
 	if (strstr(szURL, VP_PLAY_FILE_PREFIX)) {
 		char *szTemp =
-			calloc(1, strlen(szURL) - strlen(VP_PLAY_FILE_PREFIX) + 1);
+		    calloc(1, strlen(szURL) - strlen(VP_PLAY_FILE_PREFIX) + 1);
 		if (szTemp) {
 			snprintf(szTemp, strlen(szURL) - strlen(VP_PLAY_FILE_PREFIX) + 1,
-				 "%s", szURL + strlen(VP_PLAY_FILE_PREFIX));
+			         "%s", szURL + strlen(VP_PLAY_FILE_PREFIX));
 		}
 		return szTemp;
 	}
@@ -525,8 +525,7 @@ char *vp_play_util_get_sdp_url(const char *szUri)
 
 	for (uri_idx = 0; splited_str[uri_idx]; uri_idx++) {
 		VideoLogInfo("szUrl = %s", splited_str[uri_idx]);
-		if (eina_str_has_prefix(splited_str[uri_idx], "http"))	// http(or https)
-		{
+		if (eina_str_has_prefix(splited_str[uri_idx], "http")) {	// http(or https)
 			parsed_url = g_strdup(splited_str[uri_idx]);
 			VideoLogInfo("parsed_url = %s", parsed_url);
 			break;
@@ -569,8 +568,8 @@ void vp_play_util_get_convert_time(double dtime, char **szFileDate)
 
 	char *szLocale = NULL;	// eg en_US.UTF-8
 	int retcode =
-		system_settings_get_value_string
-		(SYSTEM_SETTINGS_KEY_LOCALE_COUNTRY, &szLocale);
+	    system_settings_get_value_string
+	    (SYSTEM_SETTINGS_KEY_LOCALE_COUNTRY, &szLocale);
 	if ((retcode != SYSTEM_SETTINGS_ERROR_NONE) || (szLocale == NULL)) {
 		VideoLogInfo("Cannot get region format.");
 		VP_STRDUP(szLocale, "en_US");	//// Default value.
@@ -586,16 +585,16 @@ void vp_play_util_get_convert_time(double dtime, char **szFileDate)
 
 	char *szTimezone = NULL;
 	retcode =
-		system_settings_get_value_string
-		(SYSTEM_SETTINGS_KEY_LOCALE_TIMEZONE, &szTimezone);
+	    system_settings_get_value_string
+	    (SYSTEM_SETTINGS_KEY_LOCALE_TIMEZONE, &szTimezone);
 	if ((retcode != SYSTEM_SETTINGS_ERROR_NONE) || (szTimezone == NULL)) {
 		VideoLogWarning("Cannot get time zone.");
 		VP_STRDUP(szTimezone, VP_PLAY_STRING_COM_UNKNOWN);
 	}
 
 	*szFileDate =
-		_vp_play_util_convert_string(szLocale, szSkeleton, szTimezone,
-					     (UDate) dtime * 1000);
+	    _vp_play_util_convert_string(szLocale, szSkeleton, szTimezone,
+	                                 (UDate) dtime * 1000);
 	if (*szFileDate == NULL) {
 		VideoLogWarning("Cannot get time string.");
 		VP_STRDUP(*szFileDate, VP_PLAY_STRING_COM_UNKNOWN);
@@ -605,7 +604,7 @@ void vp_play_util_get_convert_time(double dtime, char **szFileDate)
 }
 
 bool vp_play_util_get_file_info(const char *szMediaURL, char **szFileSize,
-				char **szFileDate, char **szFileExtention)
+                                char **szFileDate, char **szFileExtention)
 {
 	if (!szMediaURL) {
 		VideoLogError("szMediaURL is NULL.");
@@ -661,7 +660,7 @@ bool vp_play_util_get_file_info(const char *szMediaURL, char **szFileSize,
 	int nErr = 0;
 	if (vp_drm_get_file_mime_type(szMediaURL, &szMime)) {
 		nErr =
-			mime_type_get_file_extension(szMime, &dTempExt, &nArrayLen);
+		    mime_type_get_file_extension(szMime, &dTempExt, &nArrayLen);
 
 		VP_FREE(szMime);
 
@@ -672,7 +671,7 @@ bool vp_play_util_get_file_info(const char *szMediaURL, char **szFileSize,
 
 			if (szExt == NULL) {
 				*szFileExtention =
-					g_strdup_printf(VP_PLAY_STRING_COM_UNKNOWN);
+				    g_strdup_printf(VP_PLAY_STRING_COM_UNKNOWN);
 			} else {
 				VP_STRDUP(*szFileExtention, (szExt + 1));
 			}
@@ -685,7 +684,7 @@ bool vp_play_util_get_file_info(const char *szMediaURL, char **szFileSize,
 			}
 		} else {
 			*szFileExtention =
-				g_strdup_printf(VP_PLAY_STRING_COM_UNKNOWN);
+			    g_strdup_printf(VP_PLAY_STRING_COM_UNKNOWN);
 		}
 		VP_FREE(dTempExt);
 	} else
@@ -695,7 +694,7 @@ bool vp_play_util_get_file_info(const char *szMediaURL, char **szFileSize,
 		szExt = strrchr(szMediaURL, EXT_SPLITTER);
 		if (szExt == NULL) {
 			*szFileExtention =
-				g_strdup_printf(VP_PLAY_STRING_COM_UNKNOWN);
+			    g_strdup_printf(VP_PLAY_STRING_COM_UNKNOWN);
 		} else {
 			VP_STRDUP(*szFileExtention, (szExt + 1));
 		}
@@ -747,8 +746,8 @@ bool vp_play_util_rtsp_url_check(const char *szURL)
 	while (rtsp_protocal_name[i] != NULL) {
 		if (strlen(szURL) > strlen(rtsp_protocal_name[i])) {
 			if (strncmp
-					(szURL, rtsp_protocal_name[i],
-					 strlen(rtsp_protocal_name[i])) == 0) {
+			        (szURL, rtsp_protocal_name[i],
+			         strlen(rtsp_protocal_name[i])) == 0) {
 				return true;
 			}
 		}
@@ -761,9 +760,9 @@ bool vp_play_util_rtsp_url_check(const char *szURL)
 
 
 bool vp_play_util_calculator_position(Evas_Coord_Rectangle rtSrc,
-				      Evas_Coord_Rectangle rtDst,
-				      Evas_Coord_Rectangle *rtResult,
-				      int nType)
+                                      Evas_Coord_Rectangle rtDst,
+                                      Evas_Coord_Rectangle *rtResult,
+                                      int nType)
 {
 	video_play_display_mode_t nMode = (video_play_display_mode_t) nType;
 
@@ -796,7 +795,7 @@ bool vp_play_util_calculator_position(Evas_Coord_Rectangle rtSrc,
 		rtResult->y = (rtDst.h - rtResult->h) / 2;
 
 	} else if ((nMode == VIDEO_DISPLAY_FULL)
-			|| (nMode == VIDEO_DISPLAY_CROPPED_FULL)) {
+	           || (nMode == VIDEO_DISPLAY_CROPPED_FULL)) {
 		rtResult->w = rtDst.w;
 		rtResult->h = rtDst.h;
 		rtResult->x = 0;
@@ -808,7 +807,7 @@ bool vp_play_util_calculator_position(Evas_Coord_Rectangle rtSrc,
 }
 
 bool vp_play_util_save_file(const char *szFileName, char *szBuffer,
-			    int nSize)
+                            int nSize)
 {
 	if (!szFileName) {
 		VideoLogError("szFileName is NULL");
@@ -827,7 +826,7 @@ bool vp_play_util_save_file(const char *szFileName, char *szBuffer,
 	}
 
 	if (!g_file_set_contents
-			(szFileName, (const char *) szBuffer, nSize, NULL)) {
+	        (szFileName, (const char *) szBuffer, nSize, NULL)) {
 		VideoLogError("g_file_set_contents is fail");
 		return FALSE;
 	}
@@ -855,7 +854,7 @@ bool vp_play_util_get_network_status(void)
 
 		if (err != CONNECTION_ERROR_NONE) {
 			VideoLogWarning("connection_get_type error. err is [%d]",
-					err);
+			                err);
 			bSuccessful = false;
 		}
 
@@ -875,10 +874,10 @@ bool vp_play_util_check_personal_status(const char *szPreviewUrl)
 	Eina_Bool bRet = EINA_FALSE;
 	if (szPreviewUrl) {
 		bRet =
-			eina_str_has_prefix(szPreviewUrl, VP_PLAY_PERSONAL_HEAD_STR);
+		    eina_str_has_prefix(szPreviewUrl, VP_PLAY_PERSONAL_HEAD_STR);
 	}
 	VideoSecureLogInfo("eina_str_has_prefix=%s:%d", szPreviewUrl,
-			   (int) bRet);
+	                   (int) bRet);
 	return (bool) bRet;
 }
 
@@ -940,7 +939,7 @@ bool vp_play_util_is_exist_subtitle_from_path(const char *szPath)
 }
 
 bool vp_play_util_get_subtitles_from_path(const char *szPath,
-		GList **pSubtitleList)
+        GList **pSubtitleList)
 {
 	if (szPath == NULL) {
 		VideoLogError("szPath is NULL");
@@ -981,9 +980,9 @@ bool vp_play_util_get_subtitles_from_path(const char *szPath,
 				if (strcmp(szExt, szExtWildkey[nIdx]) == 0) {
 					char *szSubtitleName = NULL;
 					szSubtitleName =
-						g_strdup_printf("%s/%s", szPath, szFileName);
+					    g_strdup_printf("%s/%s", szPath, szFileName);
 					*pSubtitleList =
-						g_list_append(*pSubtitleList, szSubtitleName);
+					    g_list_append(*pSubtitleList, szSubtitleName);
 				}
 			}
 			VP_FREE(szName);
@@ -1107,7 +1106,7 @@ bool vp_play_util_check_valid_file_name(const char *szFileName)
 }
 
 unsigned long long vp_play_util_get_disk_available_space(const char
-		*szFilePath)
+        *szFilePath)
 {
 	if (szFilePath == NULL) {
 		VideoLogError("szFilePath is NULL");
@@ -1116,8 +1115,8 @@ unsigned long long vp_play_util_get_disk_available_space(const char
 	int nRet = 0;
 	struct statvfs info;
 	if (szFilePath
-			&& 0 == strncmp(szFilePath, VP_ROOT_PATH_MMC,
-					strlen(VP_ROOT_PATH_MMC))) {
+	        && 0 == strncmp(szFilePath, VP_ROOT_PATH_MMC,
+	                        strlen(VP_ROOT_PATH_MMC))) {
 		if (-1 == statvfs(VP_ROOT_PATH_MMC, &info)) {
 			return 0;
 		}
@@ -1183,9 +1182,9 @@ bool vp_play_util_is_Xwindow_focused(Ecore_X_Window nXwinID)
 
 	nXWindowFocus = ecore_x_window_focus_get();
 
-	if (nXWindowFocus == nXwinID)
+	if (nXWindowFocus == nXwinID) {
 		return TRUE;
-	else
+	} else
 #endif
 		return FALSE;
 }
@@ -1195,15 +1194,15 @@ char *vp_play_util_convert_rgba_to_hex(int r, int g, int b, int a)
 	char *pColorHex;
 
 	pColorHex =
-		g_strdup_printf("#%08lx",
-				(long unsigned int)(r << 24 | g << 16 | b << 8 |
-						a));
+	    g_strdup_printf("#%08lx",
+	                    (long unsigned int)(r << 24 | g << 16 | b << 8 |
+	                                        a));
 
 	return pColorHex;
 }
 
 bool vp_play_util_convert_hex_to_rgba(char *pColorHex, int *r, int *g,
-				      int *b, int *a)
+                                      int *b, int *a)
 {
 	if (pColorHex == NULL) {
 		return FALSE;
@@ -1235,8 +1234,8 @@ bool vp_play_util_convert_hex_to_rgba(char *pColorHex, int *r, int *g,
 void vp_play_util_set_object_size(Evas_Object *obj, int w, int h, int id)
 {
 	Edje_Message_Int_Set *msg =
-		(Edje_Message_Int_Set *) malloc(sizeof(Edje_Message_Int_Set) +
-						3 * sizeof(int));
+	    (Edje_Message_Int_Set *) malloc(sizeof(Edje_Message_Int_Set) +
+	                                    3 * sizeof(int));
 	if (!msg) {
 		return;
 	}
@@ -1248,11 +1247,11 @@ void vp_play_util_set_object_size(Evas_Object *obj, int w, int h, int id)
 }
 
 void vp_play_util_set_object_color(Evas_Object *obj, int r, int g, int b,
-				   int a, int id)
+                                   int a, int id)
 {
 	Edje_Message_Int_Set *msg =
-		(Edje_Message_Int_Set *) malloc(sizeof(Edje_Message_Int_Set) +
-						4 * sizeof(int));
+	    (Edje_Message_Int_Set *) malloc(sizeof(Edje_Message_Int_Set) +
+	                                    4 * sizeof(int));
 	if (!msg) {
 		return;
 	}
@@ -1267,11 +1266,11 @@ void vp_play_util_set_object_color(Evas_Object *obj, int r, int g, int b,
 }
 
 void vp_play_util_set_object_offset(Evas_Object *obj, int left, int top,
-				    int id)
+                                    int id)
 {
 	Edje_Message_Int_Set *msg =
-		(Edje_Message_Int_Set *) malloc(sizeof(Edje_Message_Int_Set) +
-						2 * sizeof(float));
+	    (Edje_Message_Int_Set *) malloc(sizeof(Edje_Message_Int_Set) +
+	                                    2 * sizeof(float));
 	if (!msg) {
 		return;
 	}
@@ -1326,8 +1325,8 @@ static int __vp_play_util_append_variant(DBusMessageIter *iter, const char *sig,
 
 #define DBUS_REPLY_TIMEOUT (120 * 1000)
 DBusMessage * vp_play_util_invoke_dbus_method(const char *dest, const char *path,
-											  const char *interface, const char *method,
-											  const char *sig, const char *param[])
+        const char *interface, const char *method,
+        const char *sig, const char *param[])
 {
 	VideoLogInfo("");
 
@@ -1340,7 +1339,7 @@ DBusMessage * vp_play_util_invoke_dbus_method(const char *dest, const char *path
 
 	conn = dbus_bus_get(DBUS_BUS_SYSTEM, NULL);
 	if (!conn) {
-		VideoLogError( "dbus_bus_get error");
+		VideoLogError("dbus_bus_get error");
 		return NULL;
 	}
 
@@ -1386,7 +1385,7 @@ vp_play_util_set_lock_power_key()
 	DBusMessage *msg;
 
 	msg = vp_play_util_invoke_dbus_method("org.tizen.system.deviced", "/Org/Tizen/System/DeviceD/Display",
-										  "org.tizen.system.deviced.display", "lockstate", "sssi", arr);
+	                                      "org.tizen.system.deviced.display", "lockstate", "sssi", arr);
 
 	if (!msg) {
 		VideoLogError("vp_play_util_invoke_dbus_method failed");
@@ -1402,7 +1401,7 @@ vp_play_util_set_unlock_power_key()
 	DBusMessage *msg;
 
 	msg = vp_play_util_invoke_dbus_method("org.tizen.system.deviced", "/Org/Tizen/System/DeviceD/Display",
-										  "org.tizen.system.deviced.display", "unlockstate", "ss", arr);
+	                                      "org.tizen.system.deviced.display", "unlockstate", "ss", arr);
 
 	if (!msg) {
 		VideoLogError("vp_play_util_invoke_dbus_method failed");
@@ -1421,10 +1420,11 @@ vp_play_util_set_unlock_power_key()
 }
 #endif
 void vp_play_util_focus_next_object_set(Evas_Object *obj,
-					Evas_Object *next,
-					Elm_Focus_Direction dir)
+                                        Evas_Object *next,
+                                        Elm_Focus_Direction dir)
 {
-	if (obj)
+	if (obj) {
 		elm_object_focus_next_object_set(obj, next, dir);
+	}
 
 }
