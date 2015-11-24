@@ -63,7 +63,7 @@
 		<!--Latin-->
 			<label xml:lang="pt-br">Video Player</label>
 			<label xml:lang="es-us">Reproductor de Video</label>
-      <application-service>
+      <app-control>
 			<operation name="http://tizen.org/appcontrol/operation/view" />
 			<mime name="video/mp4" />
 			<mime name="video/3gp" />
@@ -88,8 +88,8 @@
 			<uri name="https" />
 			<uri name="rtsp" />
 			<uri name="rtp" />
-		</application-service>
-		<application-service>
+		</app-control>
+		<app-control>
 			<operation name="http://tizen.org/appcontrol/operation/view" />
 			<mime name="video/mp4" />
 			<mime name="video/3gp" />
@@ -110,7 +110,7 @@
 			<mime name="video/mp2t" />
 			<mime name="audio/isma" />
 			<mime name="application/sdp" />
-		</application-service>
+		</app-control>
 	</ui-application>
 	<privileges>
 		<privilege>http://tizen.org/privilege/wifi.wifidirect.admin</privilege>
