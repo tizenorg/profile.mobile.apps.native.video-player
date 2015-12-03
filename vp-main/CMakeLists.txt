@@ -34,7 +34,6 @@ SET(VIDEO_PLAYER_PACKAGE "org.tizen.video-player")
 SET(VIDEO_PLAYER_DIR "/usr/apps/${VIDEO_PLAYER_PACKAGE}")
 SET(VIDEO_PLAYER_RES_DIR "/usr/apps/${VIDEO_PLAYER_PACKAGE}/res")
 SET(VIDEO_PLAYER_BINDIR "/usr/apps/${VIDEO_PLAYER_PACKAGE}/bin")
-SET(VIDEO_PLAYER_SMACKDIR "/etc/smack/accesses.d/")
 SET(DESKTOPDIR "/usr/share/packages/")
 SET(VIDEO_PLAYER_DATADIR "/opt/usr/apps/${VIDEO_PLAYER_PACKAGE}/data")
 SET(VP_RESDIR "/usr/apps/${VIDEO_PLAYER_PACKAGE}/res")
@@ -68,7 +67,6 @@ INSTALL(FILES ${CMAKE_SOURCE_DIR}/res/images/org.tizen.video-player.png DESTINAT
 INSTALL(FILES ${CMAKE_SOURCE_DIR}/res/images/video_preview.png DESTINATION /usr/apps/org.tizen.video-player/shared/res/)
 INSTALL(FILES ${CMAKE_SOURCE_DIR}/res/images/video_preview_l.png DESTINATION /usr/apps/org.tizen.video-player/shared/res/)
 INSTALL(FILES ${VIDEO_PLAYER_PACKAGE}.xml DESTINATION ${DESKTOPDIR})
-INSTALL(FILES ${VIDEO_PLAYER_PACKAGE}.efl DESTINATION ${VIDEO_PLAYER_SMACKDIR})
 
 # install application HOME directory
 INSTALL(DIRECTORY DESTINATION ${VIDEO_PLAYER_DATADIR})

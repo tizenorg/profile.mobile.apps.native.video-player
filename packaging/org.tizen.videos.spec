@@ -217,13 +217,10 @@ chmod 777 /opt/usr/apps/org.tizen.video-player/shared/data
 #/usr/apps/org.tizen.videos/res/script/*
 #/usr/apps/org.tizen.videos/libexec/*
 
-/etc/smack/accesses.d/org.tizen.videos.efl
-
 #/usr/apps/org.tizen.videos/author-signature.xml
 #/usr/apps/org.tizen.videos/signature1.xml
 
 %files -n org.tizen.video-player
-/etc/smack/accesses.d/org.tizen.video-player.efl
 %manifest org.tizen.video-player.manifest
 %defattr(-,root,root,-)
 /opt/usr/media/.video_thumb

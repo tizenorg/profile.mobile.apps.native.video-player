@@ -344,8 +344,6 @@ INSTALL(FILES ${CMAKE_SOURCE_DIR}/res/images/core_theme_bg_01.png DESTINATION ${
 #INSTALL(DIRECTORY ${CMAKE_SOURCE_DIR}/res/images/icon/ DESTINATION ${RESDIR}/images/icon)
 #INSTALL(DIRECTORY ${CMAKE_SOURCE_DIR}/res/images/toolbar/ DESTINATION ${RESDIR}/images/toolbar)
 
-INSTALL(FILES ${CMAKE_SOURCE_DIR}/org.tizen.videos.efl DESTINATION /etc/smack/accesses.d)
-
 #INSTALL(FILES ${CMAKE_SOURCE_DIR}/res/images/video_fake_image.jpg DESTINATION /usr/apps/org.tizen.videos/res/images/)
 
 #video-downloader
