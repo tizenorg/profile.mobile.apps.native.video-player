@@ -1,14 +1,5 @@
 <manifest>
-        <define>
-              <domain name="org.tizen.video-player" />
-        </define>
-        <assign>
- 		<filesystem path="/usr/share/icons/default/small/org.tizen.video-player.png" label="_" />
-		<filesystem path="/usr/ug/lib/*" label="_" />
-		<filesystem path="/usr/ug/res/*" label="_" />
-		<filesystem path="/usr/ug/bin/*" label="_" exec_label="_" />
-        </assign>
         <request>
-                <domain name="org.tizen.video-player" />
+                <domain name="_" />
        </request>
 </manifest>
