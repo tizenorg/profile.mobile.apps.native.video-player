@@ -131,7 +131,10 @@ styles {
 
 
 #define GENLIST_NAME(NAME) \
-	   name: "elm/genlist/item/"NAME;
+	   name: "elm/genlist/item/"NAME; \
+	   alias: "elm/genlist/item_compress/"NAME; \
+	   alias: "elm/genlist/tree/"NAME; \
+	   alias: "elm/genlist/tree_compress/"NAME;
 
  // |  PART == HERE  |
  // ------------------
@@ -1286,6 +1289,9 @@ styles {
 
  group {
 	name: "elm/genlist/item/custom.subtitle/default";
+	alias: "elm/genlist/item_compress/custom.subtitle/default";
+	alias: "elm/genlist/tree/custom.subtitle/default";
+	alias: "elm/genlist/tree_compress/custom.subtitle/default";
 	data.item: "stacking" "above";
 	data.item: "selectraise" "on";
 	data.item: "texts" "elm.text";
