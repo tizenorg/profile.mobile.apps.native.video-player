@@ -30,15 +30,20 @@ pkg_check_modules(${PROJECT_NAME}_pkgs REQUIRED
 )
 
 #SET(VIDEO_PLAYER_PACKAGE "com.${VIDEO_PLAYER_VENDOR}.video-player")
+SET(APPDIR ${CMAKE_INSTALL_APPDIR})
+SET(SHAREDIR ${CMAKE_INSTALL_SHAREDIR})
+
 SET(VIDEO_PLAYER_PACKAGE "org.tizen.video-player")
-SET(VIDEO_PLAYER_DIR "/usr/apps/${VIDEO_PLAYER_PACKAGE}")
-SET(VIDEO_PLAYER_RES_DIR "/usr/apps/${VIDEO_PLAYER_PACKAGE}/res")
-SET(VIDEO_PLAYER_BINDIR "/usr/apps/${VIDEO_PLAYER_PACKAGE}/bin")
-SET(DESKTOPDIR "/usr/share/packages/")
-SET(VIDEO_PLAYER_DATADIR "/opt/usr/apps/${VIDEO_PLAYER_PACKAGE}/data")
-SET(VP_RESDIR "/usr/apps/${VIDEO_PLAYER_PACKAGE}/res")
+SET(VIDEO_PLAYER_DIR "${APPDIR}/${VIDEO_PLAYER_PACKAGE}")
+SET(VIDEO_PLAYER_RES_DIR "${APPDIR}/${VIDEO_PLAYER_PACKAGE}/res")
+SET(VIDEO_PLAYER_BINDIR "${APPDIR}/${VIDEO_PLAYER_PACKAGE}/bin")
+SET(VP_APPDIR "${APPDIR}")
+SET(DESKTOPDIR "${SHAREDIR}")
+SET(ICONDIR ${CMAKE_INSTALL_ICON_DIR})
+SET(VIDEO_PLAYER_DATADIR "${APPDIR}/${VIDEO_PLAYER_PACKAGE}/data")
+SET(VP_RESDIR "${APPDIR}/${VIDEO_PLAYER_PACKAGE}/res")
 SET(VP_LOCALEDIR "${VP_RESDIR}/locale")
-SET(VP_DATADIR "/opt/usr/apps/org.tizen.videos/data")
+SET(VP_DATADIR "${APPDIR}/org.tizen.videos/data")
 SET(VP_THUMBDIR "/opt/usr/media/.video_thumb")
 SET(VP_CUR_THUMBDIR "/opt/usr/media/.cur_video_thumb")
 SET(VP_TEMPDIR "/opt/usr/media/.video_thumb/tmp")
@@ -63,9 +68,9 @@ TARGET_LINK_LIBRARIES(${PROJECT_NAME} ${${PROJECT_NAME}_pkgs_LDFLAGS} feature co
 INSTALL(TARGETS ${PROJECT_NAME} DESTINATION ${VIDEO_PLAYER_BINDIR})
 
 # install desktop file & icon
-INSTALL(FILES ${CMAKE_SOURCE_DIR}/res/images/org.tizen.video-player.png DESTINATION /usr/share/icons/default/small/)
-INSTALL(FILES ${CMAKE_SOURCE_DIR}/res/images/video_preview.png DESTINATION /usr/apps/org.tizen.video-player/shared/res/)
-INSTALL(FILES ${CMAKE_SOURCE_DIR}/res/images/video_preview_l.png DESTINATION /usr/apps/org.tizen.video-player/shared/res/)
+INSTALL(FILES ${CMAKE_SOURCE_DIR}/res/images/org.tizen.video-player.png DESTINATION ${ICONDIR})
+INSTALL(FILES ${CMAKE_SOURCE_DIR}/res/images/video_preview.png DESTINATION ${VP_APPDIR}/org.tizen.video-player/shared/res/)
+INSTALL(FILES ${CMAKE_SOURCE_DIR}/res/images/video_preview_l.png DESTINATION ${VP_APPDIR}/org.tizen.video-player/shared/res/)
 INSTALL(FILES ${VIDEO_PLAYER_PACKAGE}.xml DESTINATION ${DESKTOPDIR})
 
 # install application HOME directory
