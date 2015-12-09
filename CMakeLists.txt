@@ -141,11 +141,13 @@ ENDIF(CMAKE_DISABLE_FEATURE_MMS)
 IF(CMAKE_ENABLE_MULTI_WINDOW)
 #ADD_DEFINITIONS("-D_MULTI_WINDOW")
 ENDIF(CMAKE_ENABLE_MULTI_WINDOW)
-
+SET(APPDIR ${CMAKE_INSTALL_APPDIR})
+SET(DESKTOPDIRVP ${CMAKE_INSTALL_SHAREDIR})
 SET(PREFIX ${CMAKE_INSTALL_PREFIX})
+SET(ICONDIRVP ${CMAKE_INSTALL_ICON_DIR})
 SET(BINDIR "${PREFIX}/bin")
 SET(RESDIR "${PREFIX}/res")
-SET(DATADIR "/opt/usr/apps/org.tizen.videos/data")
+SET(DATADIR "${APPDIR}/org.tizen.videos/data")
 SET(LOCALEDIR "${RESDIR}/locale")
 SET(ICONDIR "${RESDIR}/icons/default/small")
 SET(EDJDIR "${RESDIR}/edje")
@@ -334,17 +336,17 @@ INSTALL(FILES ${CMAKE_BINARY_DIR}/res/edc/vp-thumbnail-view.edj DESTINATION ${ED
 INSTALL(FILES ${CMAKE_BINARY_DIR}/res/edc/vp-main-layout.edj DESTINATION ${EDJDIR})
 INSTALL(FILES ${CMAKE_BINARY_DIR}/res/edc/vp-naviframe.edj DESTINATION ${EDJDIR})
 
-INSTALL(FILES ${CMAKE_SOURCE_DIR}/org.tizen.videos.xml DESTINATION /usr/share/packages)
+INSTALL(FILES ${CMAKE_SOURCE_DIR}/org.tizen.videos.xml DESTINATION ${DESKTOPDIRVP})
 INSTALL(FILES ${CMAKE_SOURCE_DIR}/res/shared/res/video.edc DESTINATION ${SHAREDRESDIR})
 
-INSTALL(FILES ${CMAKE_SOURCE_DIR}/res/images/org.tizen.videos.png DESTINATION /usr/share/icons/default/small/)
+INSTALL(FILES ${CMAKE_SOURCE_DIR}/res/images/org.tizen.videos.png DESTINATION ${ICONDIRVP})
 INSTALL(FILES ${CMAKE_SOURCE_DIR}/res/images/core_theme_bg_01.png DESTINATION ${RESDIR}/images)
 
 #INSTALL(DIRECTORY ${CMAKE_SOURCE_DIR}/res/images/ DESTINATION ${RESDIR}/images)
 #INSTALL(DIRECTORY ${CMAKE_SOURCE_DIR}/res/images/icon/ DESTINATION ${RESDIR}/images/icon)
 #INSTALL(DIRECTORY ${CMAKE_SOURCE_DIR}/res/images/toolbar/ DESTINATION ${RESDIR}/images/toolbar)
 
-#INSTALL(FILES ${CMAKE_SOURCE_DIR}/res/images/video_fake_image.jpg DESTINATION /usr/apps/org.tizen.videos/res/images/)
+#INSTALL(FILES ${CMAKE_SOURCE_DIR}/res/images/video_fake_image.jpg DESTINATION ${APPDIR}/org.tizen.videos/res/images/)
 
 #video-downloader
 ADD_SUBDIRECTORY(video-downloader)

@@ -95,35 +95,37 @@ export FFLAGS="$FFLAGS -DTIZEN_ENGINEER_MODE"
 CFLAGS+=" -fvisibility=hidden"; export CFLAGS
 CXXFLAGS+=" -fvisibility=hidden"; export CXXFLAGS
 FFLAGS+=" -fvisibility=hidden"; export FFLAGS
-
+%define APPDIR %{TZ_SYS_RO_APP}
+%define SHARE %{TZ_SYS_RO_PACKAGES}
+cmake . -DCMAKE_INSTALL_APPDIR="%{APPDIR}"  -DCMAKE_INSTALL_SHAREDIR="%{SHARE}" -DCMAKE_INSTALL_ICON_DIR="%{TZ_SYS_RW_ICONS}/default/small"
 %if  0%{?sec_product_feature_cloud_enable_content_sync_dropbox}
-cmake . -DCMAKE_INSTALL_PREFIX=/usr/apps/org.tizen.videos  -DENABLE_CLOUD_FEATURE=YES -DARCH=%{ARCH}
+cmake . -DCMAKE_INSTALL_PREFIX=%{TZ_SYS_RO_APP}/org.tizen.videos  -DENABLE_CLOUD_FEATURE=YES -DARCH=%{ARCH}
 %else
-cmake . -DCMAKE_INSTALL_PREFIX=/usr/apps/org.tizen.videos  -DARCH=%{ARCH}
+cmake . -DCMAKE_INSTALL_PREFIX=%{TZ_SYS_RO_APP}/org.tizen.videos  -DARCH=%{ARCH}
 %endif
 
 %if 0%{?sec_product_feature_msg_disable_mms}
-cmake . -DCMAKE_INSTALL_PREFIX=/usr/apps/org.tizen.videos  -DCMAKE_DISABLE_FEATURE_MMS=YES -DARCH=%{ARCH}
+cmake . -DCMAKE_INSTALL_PREFIX=%{TZ_SYS_RO_APP}/org.tizen.videos  -DCMAKE_DISABLE_FEATURE_MMS=YES -DARCH=%{ARCH}
 %else
-cmake . -DCMAKE_INSTALL_PREFIX=/usr/apps/org.tizen.videos  -DARCH=%{ARCH}
+cmake . -DCMAKE_INSTALL_PREFIX=%{TZ_SYS_RO_APP}/org.tizen.videos  -DARCH=%{ARCH}
 %endif
 
 %if 0%{?sec_product_feature_multiwindow}
-cmake . -DCMAKE_INSTALL_PREFIX=/usr/apps/org.tizen.videos  -DCMAKE_ENABLE_MULTI_WINDOW=YES -DARCH=%{ARCH}
+cmake . -DCMAKE_INSTALL_PREFIX=%{TZ_SYS_RO_APP}/org.tizen.videos  -DCMAKE_ENABLE_MULTI_WINDOW=YES -DARCH=%{ARCH}
 %else
-cmake . -DCMAKE_INSTALL_PREFIX=/usr/apps/org.tizen.videos  -DARCH=%{ARCH}
+cmake . -DCMAKE_INSTALL_PREFIX=%{TZ_SYS_RO_APP}/org.tizen.videos  -DARCH=%{ARCH}
 %endif
 
 %if 0%{?sec_product_feature_hw_enable_back_menu_key}
-cmake . -DCMAKE_INSTALL_PREFIX=/usr/apps/org.tizen.videos  -DENABLE_HW_BACK_KEY=YES -DARCH=%{ARCH}
+cmake . -DCMAKE_INSTALL_PREFIX=%{TZ_SYS_RO_APP}/org.tizen.videos  -DENABLE_HW_BACK_KEY=YES -DARCH=%{ARCH}
 %else
-cmake . -DCMAKE_INSTALL_PREFIX=/usr/apps/org.tizen.videos  -DARCH=%{ARCH}
+cmake . -DCMAKE_INSTALL_PREFIX=%{TZ_SYS_RO_APP}/org.tizen.videos  -DARCH=%{ARCH}
 %endif
 
 %if 0%{?sec_product_feature_nfc_disable}
-cmake . -DCMAKE_INSTALL_PREFIX=/usr/apps/org.tizen.videos  -DENABLE_NFC_FEATURE=YES -DARCH=%{ARCH}
+cmake . -DCMAKE_INSTALL_PREFIX=%{TZ_SYS_RO_APP}/org.tizen.videos  -DENABLE_NFC_FEATURE=YES -DARCH=%{ARCH}
 %else
-cmake . -DCMAKE_INSTALL_PREFIX=/usr/apps/org.tizen.videos  -DARCH=%{ARCH}
+cmake . -DCMAKE_INSTALL_PREFIX=%{TZ_SYS_RO_APP}/org.tizen.videos  -DARCH=%{ARCH}
 %endif
 
 %if 0%{?sec_build_binary_debug_enable}
@@ -137,36 +139,36 @@ make %{?jobs:-j%jobs}
 %install
 rm -rf %{buildroot}
 
-if [ ! -d %{buildroot}/opt/usr/apps/org.tizen.videos/data/ ]
+if [ ! -d %{buildroot}%{TZ_SYS_RO_APP}org.tizen.videos/data/ ]
 then
-        mkdir -p %{buildroot}/opt/usr/apps/org.tizen.videos/data/
+        mkdir -p %{buildroot}%{TZ_SYS_RO_APP}/org.tizen.videos/data/
 fi
 %make_install
-#execstack -c %{buildroot}/usr/apps/org.tizen.videos/bin/videos
-mkdir -p %{buildroot}/usr/share/license
-cp LICENSE %{buildroot}/usr/share/license/%{name}
+#execstack -c %{buildroot}%{TZ_SYS_RO_APP}/org.tizen.videos/bin/videos
+mkdir -p %{buildroot}%{TZ_SYS_SHARE}/license
+cp LICENSE %{buildroot}%{TZ_SYS_SHARE}/license/%{name}
 %define tizen_sign 1
-%define tizen_sign_base /usr/apps/org.tizen.videos;/usr/apps/org.tizen.video-player;
+%define tizen_sign_base %{TZ_SYS_RO_APP}/org.tizen.videos;%{TZ_SYS_RO_APP}/org.tizen.video-player;
 %define tizen_sign_level platform
 %define tizen_author_sign 1
 %define tizen_dist_sign 1
 
 %post
-#/usr/bin/signing-client/hash-signer-client.sh -a -d -p platform /usr/apps/org.tizen.videos
+#/usr/bin/signing-client/hash-signer-client.sh -a -d -p platform %{TZ_SYS_RO_APP}/org.tizen.videos
 
 %postun
 
 %post -n org.tizen.video-player
 /sbin/ldconfig
 
-if [ ! -d %{buildroot}/opt/usr/apps/org.tizen.videos/ ]
+if [ ! -d %{buildroot}%{TZ_SYS_RO_APP}/org.tizen.videos/ ]
 then
-        mkdir -p %{buildroot}/opt/usr/apps/org.tizen.videos/
+        mkdir -p %{buildroot}%{TZ_SYS_RO_APP}/org.tizen.videos/
 fi
 
-if [ ! -d %{buildroot}/opt/usr/apps/org.tizen.videos/data/ ]
+if [ ! -d %{buildroot}%{TZ_SYS_RO_APP}/org.tizen.videos/data/ ]
 then
-        mkdir -p %{buildroot}/opt/usr/apps/org.tizen.videos/data/
+        mkdir -p %{buildroot}%{TZ_SYS_RO_APP}/org.tizen.videos/data/
 fi
 
 if [ ! -d %{buildroot}/opt/usr/media/.video_thumb ]
@@ -190,29 +192,29 @@ then
 fi
 
 # Change file owner
-chown -R app:app /opt/usr/apps/org.tizen.videos/data
-chown -R app:app /opt/usr/apps/org.tizen.video-player/data
+chown -R app:app %{TZ_SYS_RO_APP}/org.tizen.videos/data
+chown -R app:app %{TZ_SYS_RO_APP}/org.tizen.video-player/data
 chown -R 5000:5000 /opt/usr/media/.video_thumb
 chown -R 5000:5000 /opt/usr/media/.cur_video_thumb
 chown -R 5000:5000 /opt/usr/media/.video_thumb/tmp
 chown -R 5000:5000 /opt/usr/media/.video_thumb/sdp
 
-chmod 777 /opt/usr/apps/org.tizen.videos/data
-chmod 777 /opt/usr/apps/org.tizen.video-player/shared/data
+chmod 777 %{TZ_SYS_RO_APP}/org.tizen.videos/data
+chmod 777 %{TZ_SYS_RO_APP}/org.tizen.video-player/shared/data
 
-#/usr/bin/signing-client/hash-signer-client.sh -a -d -p platform /usr/apps/org.tizen.video-player
+#/usr/bin/signing-client/hash-signer-client.sh -a -d -p platform %{TZ_SYS_RO_APP}/org.tizen.video-player
 
 %files -n org.tizen.videos
 %manifest org.tizen.videos.manifest
 
-/usr/apps/org.tizen.videos/bin/*
-/usr/apps/org.tizen.videos/res/locale/*
-/usr/share/icons/default/small/org.tizen.videos.png
-/usr/apps/org.tizen.videos/res/edje/*
-#/usr/apps/org.tizen.videos/res/images/*
-/usr/share/packages/org.tizen.videos.xml
-/usr/apps/org.tizen.videos/shared/res/video.edc
-/usr/apps/org.tizen.videos/res/images/core_theme_bg_01.png
+%{TZ_SYS_RO_APP}/org.tizen.videos/bin/*
+%{TZ_SYS_RO_APP}/org.tizen.videos/res/locale/*
+%{TZ_SYS_RW_ICONS}/default/small/org.tizen.videos.png
+%{TZ_SYS_RO_APP}/org.tizen.videos/res/edje/*
+
+%{TZ_SYS_RO_PACKAGES}/org.tizen.videos.xml
+%{TZ_SYS_RO_APP}/org.tizen.videos/shared/res/video.edc
+%{TZ_SYS_RO_APP}/org.tizen.videos/res/images/core_theme_bg_01.png
 
 #/usr/apps/org.tizen.videos/res/script/*
 #/usr/apps/org.tizen.videos/libexec/*
@@ -227,17 +229,17 @@ chmod 777 /opt/usr/apps/org.tizen.video-player/shared/data
 /opt/usr/media/.cur_video_thumb
 /opt/usr/media/.video_thumb/tmp
 /opt/usr/media/.video_thumb/sdp
-/opt/usr/apps/org.tizen.videos/data
-/usr/apps/org.tizen.video-player/bin/*
-/usr/apps/org.tizen.video-player/res/locale/*
-/usr/apps/org.tizen.video-player/res/edje/*
-/usr/share/icons/default/small/org.tizen.video-player.png
-/usr/apps/org.tizen.video-player/shared/res/video_preview.png
-/usr/apps/org.tizen.video-player/shared/res/video_preview_l.png
-/opt/usr/apps/org.tizen.video-player/data
-/opt/usr/apps/org.tizen.video-player/shared/data
-/usr/share/packages/org.tizen.video-player.xml
+%{TZ_SYS_RO_APP}/org.tizen.videos/data
+%{TZ_SYS_RO_APP}/org.tizen.video-player/bin/*
+%{TZ_SYS_RO_APP}/org.tizen.video-player/res/locale/*
+%{TZ_SYS_RO_APP}/org.tizen.video-player/res/edje/*
+%{TZ_SYS_RW_ICONS}/default/small/org.tizen.video-player.png
+%{TZ_SYS_RO_APP}/org.tizen.video-player/shared/res/video_preview.png
+%{TZ_SYS_RO_APP}/org.tizen.video-player/shared/res/video_preview_l.png
+%{TZ_SYS_RO_APP}/org.tizen.video-player/data
+%{TZ_SYS_RO_APP}/org.tizen.video-player/shared/data
+%{TZ_SYS_RO_PACKAGES}/org.tizen.video-player.xml
 #/usr/apps/org.tizen.video-player/author-signature.xml
 #/usr/apps/org.tizen.video-player/signature1.xml
 
-/usr/share/license/%{name}
+%{TZ_SYS_SHARE}/license/%{name}

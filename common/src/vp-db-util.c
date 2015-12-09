@@ -18,7 +18,7 @@
 #include "vp-db-common.h"
 #include "vp-db-util.h"
 
-#define VIDEO_THUMB_DB_NAME "/opt/usr/apps/org.tizen.videos/data/.video-thumb.db"
+#define VIDEO_THUMB_DB_NAME "/usr/apps/org.tizen.videos/data/.video-thumb.db"
 
 static sqlite3 *g_sqlite3_handle = NULL;
 static int g_nRefCount = 0;

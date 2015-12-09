@@ -34,7 +34,7 @@
 
 #define VP_PLAY_EDJ_PATH			VP_PLAY_PREFIX"/res/edje"
 
-#define VP_PLAY_DATA_DIR			"/opt/usr/apps/org.tizen.videos/data"
+#define VP_PLAY_DATA_DIR			"/usr/apps/org.tizen.videos/data"
 #define VP_PLAY_THUMB_DIR			"/opt/usr/media/.video_thumb"
 #define VP_PLAY_CUR_THUMB_DIR			"/opt/usr/media/.cur_video_thumb"
 #define VP_PLAY_TEMP_DIR			"/opt/usr/media/.video_thumb/tmp/"
@@ -42,7 +42,7 @@
 #define VP_PLAY_IMAGE_BUFFER_PATH		"/opt/usr/media/.video_thumb/.image_buff.jpg"
 
 #define VP_PLAY_SCREEN_SHOT_DIR			"/opt/usr/media/Screenshots"
-#define VP_PLAY_MULTIPATH_INI_PATH		"/opt/usr/apps/org.tizen.video-player/shared/data/saveposition.ini"
+#define VP_PLAY_MULTIPATH_INI_PATH		"/usr/apps/org.tizen.video-player/shared/data/saveposition.ini"
 
 #define VP_PLAY_MEDIA_DIR					"/opt/usr/media/Videos"
 #define VP_PLAY_PERSONAL_HEAD_STR			"/opt/storage/PersonalStorage"
