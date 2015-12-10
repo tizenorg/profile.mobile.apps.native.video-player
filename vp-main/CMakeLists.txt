@@ -27,22 +27,16 @@ pkg_check_modules(${PROJECT_NAME}_pkgs REQUIRED
 	capi-content-media-content
 	capi-web-url-download
 	libcore-context-manager
+	libtzplatform-config
 )
 
 #SET(VIDEO_PLAYER_PACKAGE "com.${VIDEO_PLAYER_VENDOR}.video-player")
 SET(VIDEO_PLAYER_PACKAGE "org.tizen.video-player")
-SET(VIDEO_PLAYER_DIR "/usr/apps/${VIDEO_PLAYER_PACKAGE}")
-SET(VIDEO_PLAYER_RES_DIR "/usr/apps/${VIDEO_PLAYER_PACKAGE}/res")
-SET(VIDEO_PLAYER_BINDIR "/usr/apps/${VIDEO_PLAYER_PACKAGE}/bin")
-SET(DESKTOPDIR "/usr/share/packages/")
-SET(VIDEO_PLAYER_DATADIR "/opt/usr/apps/${VIDEO_PLAYER_PACKAGE}/data")
-SET(VP_RESDIR "/usr/apps/${VIDEO_PLAYER_PACKAGE}/res")
+SET(VIDEO_PLAYER_DIR "${TZ_SYS_RO_APP}/${VIDEO_PLAYER_PACKAGE}")
+SET(VIDEO_PLAYER_RES_DIR "${TZ_SYS_RO_APP}/${VIDEO_PLAYER_PACKAGE}/res")
+SET(VIDEO_PLAYER_BINDIR "${TZ_SYS_RO_APP}/${VIDEO_PLAYER_PACKAGE}/bin")
+SET(VP_RESDIR "${TZ_SYS_RO_APP}/${VIDEO_PLAYER_PACKAGE}/res")
 SET(VP_LOCALEDIR "${VP_RESDIR}/locale")
-SET(VP_DATADIR "/opt/usr/apps/org.tizen.videos/data")
-SET(VP_THUMBDIR "/opt/usr/media/.video_thumb")
-SET(VP_CUR_THUMBDIR "/opt/usr/media/.cur_video_thumb")
-SET(VP_TEMPDIR "/opt/usr/media/.video_thumb/tmp")
-SET(VP_SDPDIR "/opt/usr/media/.video_thumb/sdp")
 
 ADD_DEFINITIONS("-DVP_LOCALEDIR=\"${VP_LOCALEDIR}\"")
 
@@ -63,17 +57,8 @@ TARGET_LINK_LIBRARIES(${PROJECT_NAME} ${${PROJECT_NAME}_pkgs_LDFLAGS} feature co
 INSTALL(TARGETS ${PROJECT_NAME} DESTINATION ${VIDEO_PLAYER_BINDIR})
 
 # install desktop file & icon
-INSTALL(FILES ${CMAKE_SOURCE_DIR}/res/images/org.tizen.video-player.png DESTINATION /usr/share/icons/default/small/)
-INSTALL(FILES ${CMAKE_SOURCE_DIR}/res/images/video_preview.png DESTINATION /usr/apps/org.tizen.video-player/shared/res/)
-INSTALL(FILES ${CMAKE_SOURCE_DIR}/res/images/video_preview_l.png DESTINATION /usr/apps/org.tizen.video-player/shared/res/)
-INSTALL(FILES ${VIDEO_PLAYER_PACKAGE}.xml DESTINATION ${DESKTOPDIR})
+INSTALL(FILES ${CMAKE_SOURCE_DIR}/res/images/org.tizen.video-player.png DESTINATION  ${CMAKE_DESKTOP_ICON_DIR})
+INSTALL(FILES ${VIDEO_PLAYER_PACKAGE}.xml DESTINATION ${CMAKE_APP_SHARE_PACKAGES_DIR})
 
-# install application HOME directory
-INSTALL(DIRECTORY DESTINATION ${VIDEO_PLAYER_DATADIR})
-INSTALL(DIRECTORY DESTINATION ${VP_DATADIR})
-INSTALL(DIRECTORY DESTINATION ${VP_THUMBDIR})
-INSTALL(DIRECTORY DESTINATION ${VP_CUR_THUMBDIR})
-INSTALL(DIRECTORY DESTINATION ${VP_TEMPDIR})
-INSTALL(DIRECTORY DESTINATION ${VP_SDPDIR})
 ADD_SUBDIRECTORY(res/po)
 

@@ -18,8 +18,6 @@
 #include "vp-db-common.h"
 #include "vp-db-util.h"
 
-#define VIDEO_THUMB_DB_NAME "/opt/usr/apps/org.tizen.videos/data/.video-thumb.db"
-
 static sqlite3 *g_sqlite3_handle = NULL;
 static int g_nRefCount = 0;
 
@@ -39,8 +37,17 @@ static sqlite3 *_vp_db_util_connect_db()
 	sqlite3 *pSqlite = NULL;
 	int ret = SQLITE_OK;
 
+	char *app_path = app_get_data_path();
+	if (!app_path) {
+		vp_dbgE("cannot retrieve app install path");
+		return NULL;
+	}
+	char db_path[1024] = {0,};
+	snprintf(db_path, 1024, "%s%s", app_path, ".video-thumb.db");
+	vp_dbgI("db_path: %s", db_path);
+
 	/*Connect DB */
-	ret = sqlite3_open(VIDEO_THUMB_DB_NAME, &pSqlite);
+	ret = sqlite3_open(db_path, &pSqlite);
 	if (SQLITE_OK != ret) {
 		vp_dbgE("sqlite3_open fail [0x%x] : %s", ret,
 		        sqlite3_errmsg(pSqlite));
