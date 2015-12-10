@@ -45,10 +45,18 @@ typedef struct _MultiPath {
 static bool _vp_multi_path_write_multi_path_set_position(char *szURL,
                         int nPosition)
 {
-	FILE *fp = fopen(VP_PLAY_MULTIPATH_INI_PATH, "w");
+	char *app_path = app_get_data_path();
+	if (!app_path) {
+		VideoLogError("cannot retrieve app install path");
+		return FALSE;
+	}
+	char db_path[1024] = {0,};
+	snprintf(db_path, 1024, "%s%s", app_path, "saveposition.ini");
+	VideoLogError("db_path: %s", db_path);
+	FILE *fp = fopen(db_path, "w");
 
 	if (fp == NULL) {
-		VideoLogError("%s is NULL.", VP_PLAY_MULTIPATH_INI_PATH);
+		VideoLogError("%s is NULL.", db_path);
 		return FALSE;
 	}
 

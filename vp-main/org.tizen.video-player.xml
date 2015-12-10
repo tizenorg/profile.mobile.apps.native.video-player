@@ -33,8 +33,6 @@
 	<ui-application appid="org.tizen.video-player" exec="/usr/apps/org.tizen.video-player/bin/video-player" nodisplay="true" multiple="false" type="capp" taskmanage="true" process-pool="false" hw-acceleration="use-GL" launch_mode="caller">
 		<label>Video player</label>
 		<icon>org.tizen.video-player.png</icon>
-		<metadata key="http://developer.samsung.com/tizen/metadata/floatingapp/preview" value="shared/res/video_preview.png"/>
-		<metadata key="http://developer.samsung.com/tizen/metadata/floatingapp/preview/landscape" value="shared/res/video_preview_l.png"/>
 		<metadata key="http://developer.samsung.com/tizen/metadata/multiwindow"/>
 		<!--INDIA-->
 			<label xml:lang="en-gb">Video Player</label>	<!--  -->

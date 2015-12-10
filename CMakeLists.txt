@@ -99,6 +99,7 @@ pkg_check_modules(pkgs REQUIRED
 	efl-extension
 	capi-telephony
 	capi-appfw-preference
+	libtzplatform-config
 )
 
 FOREACH(flag ${pkgs_CFLAGS})
@@ -132,20 +133,9 @@ ADD_DEFINITIONS("-D_ENABLE_HW_BACK_KEY")
 ENDIF(ENABLE_HW_BACK_KEY)
 
 
-#MMS for DOCOMO.
-IF(CMAKE_DISABLE_FEATURE_MMS)
-message("##### Disable MMS for DOCOMO #####")
-ADD_DEFINITIONS("-DMP_DISABLE_MMS")
-ENDIF(CMAKE_DISABLE_FEATURE_MMS)
-
-IF(CMAKE_ENABLE_MULTI_WINDOW)
-#ADD_DEFINITIONS("-D_MULTI_WINDOW")
-ENDIF(CMAKE_ENABLE_MULTI_WINDOW)
-
 SET(PREFIX ${CMAKE_INSTALL_PREFIX})
 SET(BINDIR "${PREFIX}/bin")
 SET(RESDIR "${PREFIX}/res")
-SET(DATADIR "/opt/usr/apps/org.tizen.videos/data")
 SET(LOCALEDIR "${RESDIR}/locale")
 SET(ICONDIR "${RESDIR}/icons/default/small")
 SET(EDJDIR "${RESDIR}/edje")
@@ -154,8 +144,6 @@ SET(SLP_LD_PATH_FLAGS -L${CMAKE_CURRENT_SOURCE_DIR}/src/ext)
 
 ADD_DEFINITIONS("-DPREFIX=\"${PREFIX}\"")
 ADD_DEFINITIONS("-DRESDIR=\"${RESDIR}\"")
-ADD_DEFINITIONS("-DDATADIR=\"${DATADIR}\"")
-ADD_DEFINITIONS("-DTHUMBDIR=\"${THUMBDIR}\"")
 ADD_DEFINITIONS("-DLOCALEDIR=\"${LOCALEDIR}\"")
 ADD_DEFINITIONS("-DICONDIR=\"${ICONDIR}\"")
 ADD_DEFINITIONS("-DEDJDIR=\"${EDJDIR}\"")
@@ -311,8 +299,6 @@ ADD_DEPENDENCIES(${PROJECT_NAME} vp-naviframe.edj)
 # install desktop file & icon, edje  #
 ######################################
 
-#INSTALL(DIRECTORY DESTINATION ${DATADIR})
-#INSTALL(DIRECTORY DESTINATION ${THUMBDIR})
 INSTALL(TARGETS ${PROJECT_NAME} DESTINATION bin)
 INSTALL(FILES ${CMAKE_BINARY_DIR}/res/edc/vp_font.edj DESTINATION ${EDJDIR})
 INSTALL(FILES ${CMAKE_BINARY_DIR}/res/edc/image_res.edj DESTINATION ${EDJDIR})
@@ -334,17 +320,11 @@ INSTALL(FILES ${CMAKE_BINARY_DIR}/res/edc/vp-thumbnail-view.edj DESTINATION ${ED
 INSTALL(FILES ${CMAKE_BINARY_DIR}/res/edc/vp-main-layout.edj DESTINATION ${EDJDIR})
 INSTALL(FILES ${CMAKE_BINARY_DIR}/res/edc/vp-naviframe.edj DESTINATION ${EDJDIR})
 
-INSTALL(FILES ${CMAKE_SOURCE_DIR}/org.tizen.videos.xml DESTINATION /usr/share/packages)
+INSTALL(FILES ${CMAKE_SOURCE_DIR}/org.tizen.videos.xml DESTINATION ${CMAKE_APP_SHARE_PACKAGES_DIR})
 INSTALL(FILES ${CMAKE_SOURCE_DIR}/res/shared/res/video.edc DESTINATION ${SHAREDRESDIR})
 
-INSTALL(FILES ${CMAKE_SOURCE_DIR}/res/images/org.tizen.videos.png DESTINATION /usr/share/icons/default/small/)
+INSTALL(FILES ${CMAKE_SOURCE_DIR}/res/images/org.tizen.videos.png DESTINATION ${CMAKE_DESKTOP_ICON_DIR})
 INSTALL(FILES ${CMAKE_SOURCE_DIR}/res/images/core_theme_bg_01.png DESTINATION ${RESDIR}/images)
-
-#INSTALL(DIRECTORY ${CMAKE_SOURCE_DIR}/res/images/ DESTINATION ${RESDIR}/images)
-#INSTALL(DIRECTORY ${CMAKE_SOURCE_DIR}/res/images/icon/ DESTINATION ${RESDIR}/images/icon)
-#INSTALL(DIRECTORY ${CMAKE_SOURCE_DIR}/res/images/toolbar/ DESTINATION ${RESDIR}/images/toolbar)
-
-#INSTALL(FILES ${CMAKE_SOURCE_DIR}/res/images/video_fake_image.jpg DESTINATION /usr/apps/org.tizen.videos/res/images/)
 
 #video-downloader
 ADD_SUBDIRECTORY(video-downloader)

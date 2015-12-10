@@ -3307,86 +3307,6 @@ static void __vp_normal_focus_key_up_cb(void *pUserData, Evas * e, Evas_Object *
 	}
 }
 
-static void __vp_normal_bookmark_capture_cb(void *pUserData)
-{
-	if (!pUserData) {
-		VideoLogError("pUserData is NULL");
-		return;
-	}
-
-	NormalView *pNormalView = (NormalView *)pUserData;
-	int nCount = 0;
-
-	_vp_play_normal_view_create_layout_hide_timer(pNormalView);
-
-	if (!vp_mm_player_get_position(pNormalView->pPlayerHandle, &(pNormalView->nCapturePosition))) {
-		VideoLogError("vp_mm_player_get_position is fail");
-	}
-
-	if (pNormalView->bCaptureComplete == FALSE) {
-		VideoLogWarning("Not Complete capture");
-		return;
-	}
-
-	if (!vp_play_bookmark_get_item_count(pNormalView->pBookmarkHandle, &nCount)) {
-		VideoLogWarning("vp_play_bookmark_get_item_count is fail");
-		return;
-	}
-
-	if (nCount > VP_BOOKMARK_ITEM_MAX_COUNT - 1) {
-		VideoLogWarning("Skip for max item count");
-		PlayView *pPlayView = pNormalView->pPlayView;
-		if (!pPlayView) {
-			VideoLogError("pPlayView is NULL");
-			return;
-		}
-
-		VP_EVAS_DEL(pNormalView->pPopup);
-		pNormalView->pPopup = vp_popup_create(pPlayView->pWin,
-		                                      POPUP_STYLE_DEFAULT_NO_CANCEL_BTN,
-		                                      VP_PLAY_STRING_COM_ERROR,
-		                                      VP_PLAY_STRING_ERROR_BOOKMARK_LIST_FULL,
-		                                      3.0, __vp_normal_popup_time_out_cb,
-		                                      NULL, NULL,
-		                                      pNormalView);
-		evas_object_show(pNormalView->pPopup);
-		pNormalView->bIsPopupShow = TRUE;
-
-		return;
-	}
-
-	unsigned long long lAvailableSpace = vp_play_util_get_disk_available_space(VP_PLAY_DATA_DIR);
-
-	if (lAvailableSpace < VP_MB(100)) {
-		VideoLogWarning("Skip for not enough memory");
-		PlayView *pPlayView = pNormalView->pPlayView;
-		if (!pPlayView) {
-			VideoLogError("pPlayView is NULL");
-			return;
-		}
-
-		VP_EVAS_DEL(pNormalView->pPopup);
-		pNormalView->pPopup = vp_popup_create(pPlayView->pWin,
-		                                      POPUP_STYLE_DEFAULT_NO_CANCEL_BTN,
-		                                      VP_PLAY_STRING_COM_ERROR,
-		                                      VP_PLAY_STRING_COM_ENOUGH_MEMORY,
-		                                      3.0, __vp_normal_popup_time_out_cb,
-		                                      NULL, NULL,
-		                                      pNormalView);
-		evas_object_show(pNormalView->pPopup);
-		pNormalView->bIsPopupShow = TRUE;
-
-		return;
-	}
-
-	pNormalView->bCaptureComplete = FALSE;
-	pNormalView->bCaptureBookmark = TRUE;
-	if (!vp_mm_player_capture_start(pNormalView->pPlayerHandle)) {
-		pNormalView->bCaptureComplete = TRUE;
-		VideoLogError("vp_mm_player_capture_start fail");
-	}
-}
-
 static void __vp_normal_bookmark_item_select_cb(int nPos, const char *szPath, void *pUserData)
 {
 	if (!pUserData) {
@@ -4383,132 +4303,6 @@ static void __vp_normal_pd_message_cb(vp_mm_player_pd_message_t nType, void *pUs
 	VideoLogWarning("");
 }
 
-
-static void __vp_normal_video_captured_cb(unsigned char *pFrame, int nWidth, int nHeight, unsigned int nSize, void *pUserData)
-{
-	if (!pUserData) {
-		VideoLogError("pUserData is NULL");
-		return;
-	}
-	VideoLogWarning("");
-
-	NormalView *pNormalView = (NormalView *)pUserData;
-
-	if (pNormalView->bCaptureBookmark) {
-		char *szFileName = NULL;
-		char *szVideoID = NULL;
-
-		float nScale = 0.0;
-		int nDestW = 0;
-		int nDestH = 0;
-
-		if (!vp_media_contents_get_video_id(pNormalView->szMediaURL, &szVideoID)) {
-			VideoLogError("vp_media_contents_get_video_id is Fail");
-			return;
-		}
-
-		szFileName = calloc(1, sizeof(char) * VP_URL_LEN_MAX);
-		if (!szFileName) {
-			VideoLogError("failed to allocate memory");
-			VP_FREE(szVideoID);
-			return;
-		}
-		snprintf(szFileName, VP_URL_LEN_MAX, "%s/%s", VP_PLAY_DATA_DIR, szVideoID);
-
-		if (!vp_file_exists(szFileName)) {
-			if (!vp_mkdir(szFileName)) {
-				VideoSecureLogError("Make directory Fail : %s", szFileName);
-				pNormalView->bCaptureComplete = TRUE;
-
-				VP_FREE(szFileName);
-				VP_FREE(szVideoID);
-				return;
-			}
-		}
-		memset(szFileName, 0, sizeof(char) * VP_URL_LEN_MAX);
-
-		snprintf(szFileName, VP_URL_LEN_MAX, "%s/%s/%d.jpg", VP_PLAY_DATA_DIR, szVideoID, pNormalView->nCapturePosition);
-
-		if (nWidth > nHeight) {
-			nScale = 146.0 / nWidth;
-		} else {
-			nScale = 88.0 / nHeight;
-		}
-
-		nDestW = nWidth * nScale;
-		nDestH = nHeight * nScale;
-
-		if (vp_image_util_image_resize_save(szFileName, pFrame, nWidth, nHeight, nDestW, nDestH, 100)) {
-			if (!vp_play_bookmark_insert_item(pNormalView->pBookmarkHandle, szFileName, pNormalView->nCapturePosition)) {
-				VideoLogError("vp_play_bookmark_insert_item is Fail");
-			}
-		}
-		VP_FREE(szFileName);
-		VP_FREE(szVideoID);
-	} else {
-
-		if (!vp_file_exists(VP_PLAY_SCREEN_SHOT_DIR)) {
-			if (!vp_mkdir(VP_PLAY_SCREEN_SHOT_DIR)) {
-				VideoSecureLogError("Make directory Fail : %s", VP_PLAY_SCREEN_SHOT_DIR);
-			}
-		}
-
-		char *szFileName = NULL;
-		char *szTitle = NULL;
-		szTitle = vp_play_util_get_title_from_path(pNormalView->szMediaURL);
-
-		szFileName = calloc(1, sizeof(char) * VP_URL_LEN_MAX);
-		if (!szFileName) {
-			VideoLogError("failed to allocate memory");
-			VP_FREE(szTitle);
-			return;
-		}
-
-		snprintf(szFileName, VP_URL_LEN_MAX, "%s/%s_%d.jpg", VP_PLAY_SCREEN_SHOT_DIR, szTitle, pNormalView->nCapturePosition);
-
-		if (vp_image_util_image_save(szFileName, pFrame, nWidth, nHeight, 100)) {
-			vp_media_contents_update_db(szFileName);
-			bool bLandscape = vp_play_util_get_landscape_check(pNormalView->nRotate);
-			vp_media_contents_update_db(szFileName);
-			VP_EVAS_DEL(pNormalView->pScreenShot);
-			pNormalView->pScreenShot = NULL;
-
-			pNormalView->pScreenShot = vp_button_create_image(pNormalView->pMainLayout, szFileName, NULL);
-
-			if (!pNormalView->pScreenShot) {
-				VideoLogError("Scrennshot is NULL ####");
-			} else {
-				evas_object_size_hint_weight_set(pNormalView->pScreenShot, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
-				evas_object_size_hint_align_set(pNormalView->pScreenShot, EVAS_HINT_FILL, EVAS_HINT_FILL);
-				evas_object_show(pNormalView->pScreenShot);
-
-				elm_object_signal_emit(pNormalView->pMainLayout, VP_NORMAL_SIGNAL_MAIN_SCREEN_HIDE, "*");
-				elm_object_signal_emit(pNormalView->pMainLayout, VP_NORMAL_SIGNAL_MAIN_ROTATE_HIDE, "*");
-				elm_object_signal_emit(pNormalView->pMainLayout, VP_NORMAL_SIGNAL_MAIN_VOLUME_HIDE, "*");
-				elm_object_signal_emit(pNormalView->pMainLayout, VP_NORMAL_SIGNAL_MAIN_PLAYING_SPEED_HIDE, "*");
-
-				if (bLandscape) {
-					elm_object_signal_emit(pNormalView->pMainLayout, VP_NORMAL_SIGNAL_MAIN_SCREEN_LANDSCAPE_SHOW, "*");
-					elm_object_part_content_set(pNormalView->pMainLayout, VP_PLAY_SWALLOW_NORMAL_SCREENSHOT_LANDSCAPE, pNormalView->pScreenShot);
-				} else {
-					elm_object_signal_emit(pNormalView->pMainLayout, VP_NORMAL_SIGNAL_MAIN_SCREEN_PORTRAIT_SHOW, "*");
-					elm_object_part_content_set(pNormalView->pMainLayout, VP_PLAY_SWALLOW_NORMAL_SCREENSHOT_PORTRAIT, pNormalView->pScreenShot);
-				}
-
-				VP_EVAS_TIMER_DEL(pNormalView->pScreenShotTimer);
-				pNormalView->pScreenShotTimer = ecore_timer_add(VP_NORMAL_SCREENSHOT_TIMER_INTERVAL,
-				                                __vp_normal_screenshot_timer_cb, (void *)pNormalView);
-			}
-
-		}
-
-		VP_FREE(szFileName);
-		VP_FREE(szTitle);
-	}
-
-	pNormalView->bCaptureComplete = TRUE;
-}
-
 static void __vp_normal_missed_plugin_cb(vp_mm_player_missed_plugin_t nType, void *pUserData)
 {
 	if (!pUserData) {
@@ -5489,92 +5283,6 @@ static void __vp_normal_control_btn_clicked_cb(void *pUserData, Evas_Object *pOb
 	} else if (pObj == pNormalView->pSoundPathBtn) {
 		VideoLogWarning("SoundPath button");
 		_vp_play_normal_view_on_sound_path_popup(pNormalView);
-
-	} else if (pObj == pNormalView->pCaptureBtn) {
-		bool bDRMLock = FALSE;
-
-		_vp_play_normal_view_check_drm_lock(pNormalView, &bDRMLock);
-		if (bDRMLock) {
-			PlayView *pPlayView = pNormalView->pPlayView;
-
-			if (!pPlayView) {
-				VideoLogError("pPlayView is NULL");
-				return;
-			}
-
-			pNormalView->pPopup = vp_popup_create(pPlayView->pWin, POPUP_STYLE_DEFAULT_WITH_CANCEL_BTN,
-			                                      NULL,
-			                                      VP_PLAY_STRING_ERROR_UNABLE_CAPTURE_DRM_CONTENT,
-			                                      0.0, NULL,
-			                                      __vp_normal_popup_key_event_cb,
-			                                      __vp_normal_popup_mouse_event_cb,
-			                                      pNormalView);
-
-			Evas_Object *pBtn = NULL;
-			pBtn = elm_button_add(pNormalView->pPopup);
-			elm_object_style_set(pBtn, "popup_button/default");
-			elm_object_domain_translatable_text_set(pBtn, VP_SYS_STR_PREFIX, VP_PLAY_STRING_COM_OK_IDS);
-			elm_object_part_content_set(pNormalView->pPopup, "button1", pBtn);
-			evas_object_smart_callback_add(pBtn, "clicked", __vp_normal_popup_key_event_cb, (void*)pNormalView);
-			evas_object_show(pNormalView->pPopup);
-			pNormalView->bIsPopupShow = TRUE;
-
-			return;
-		}
-
-		if (pNormalView->bIsVideoUnsupport) {
-			PlayView *pPlayView = pNormalView->pPlayView;
-
-			if (!pPlayView) {
-				VideoLogError("pPlayView is NULL");
-				return;
-			}
-
-			pNormalView->pPopup = vp_popup_create(pPlayView->pWin, POPUP_STYLE_DEFAULT_WITH_CANCEL_BTN,
-			                                      NULL,
-			                                      VP_PLAY_STRING_ERROR_UNSUPPORTED_FORMAT,
-			                                      0.0, NULL,
-			                                      __vp_normal_popup_key_event_cb,
-			                                      __vp_normal_popup_mouse_event_cb,
-			                                      pNormalView);
-
-			Evas_Object *pBtn = NULL;
-			pBtn = elm_button_add(pNormalView->pPopup);
-			elm_object_style_set(pBtn, "popup_button/default");
-			elm_object_domain_translatable_text_set(pBtn, VP_SYS_STR_PREFIX, VP_PLAY_STRING_COM_OK_IDS);
-			elm_object_part_content_set(pNormalView->pPopup, "button1", pBtn);
-			evas_object_smart_callback_add(pBtn, "clicked", __vp_normal_popup_key_event_cb, (void*)pNormalView);
-			evas_object_show(pNormalView->pPopup);
-			pNormalView->bIsPopupShow = TRUE;
-
-			return;
-		}
-		unsigned long long lAvailableSpace = vp_play_util_get_disk_available_space(VP_PLAY_DATA_DIR);
-
-		if (lAvailableSpace < VP_MB(100)) {
-			VideoLogWarning("Skip for not enough memory");
-			PlayView *pPlayView = pNormalView->pPlayView;
-			if (!pPlayView) {
-				VideoLogError("pPlayView is NULL");
-				return;
-			}
-
-			VP_EVAS_DEL(pNormalView->pPopup);
-			pNormalView->pPopup = vp_popup_create(pPlayView->pWin,
-			                                      POPUP_STYLE_DEFAULT_NO_CANCEL_BTN,
-			                                      VP_PLAY_STRING_COM_ERROR,
-			                                      VP_PLAY_STRING_COM_ENOUGH_MEMORY,
-			                                      3.0, __vp_normal_popup_time_out_cb,
-			                                      NULL, NULL,
-			                                      pNormalView);
-			evas_object_show(pNormalView->pPopup);
-			pNormalView->bIsPopupShow = TRUE;
-
-			return;
-		}
-
-		_vp_play_normal_view_hide_layout(pNormalView, TRUE);
-		_vp_play_normal_view_screen_capture(pNormalView);
 	} else if (pObj == pNormalView->pCaptureRewBtn) {
 		_vp_play_normal_view_screen_move(pNormalView, FALSE);
 	} else if (pObj == pNormalView->pCaptureFFBtn) {
@@ -7190,10 +6898,6 @@ static bool _vp_play_normal_view_play_start(NormalView *pNormalView, bool bCheck
 		return FALSE;
 	}
 	if (!vp_mm_player_set_callback(pNormalView->pPlayerHandle, VP_MM_PLAYER_PD_MESSAGE_CB, (void *)__vp_normal_pd_message_cb)) {
-		VideoLogError("vp_mm_player_set_callback fail");
-		return FALSE;
-	}
-	if (!vp_mm_player_set_callback(pNormalView->pPlayerHandle, VP_MM_PLAYER_CAPTURE_VIDEO_CB, (void *)__vp_normal_video_captured_cb)) {
 		VideoLogError("vp_mm_player_set_callback fail");
 		return FALSE;
 	}
@@ -9645,7 +9349,18 @@ static void _vp_play_normal_view_download_sdp(NormalView *pNormalView, char *szS
 	pFunc.stateChangedCb = __vp_normal_sdp_download_state_change_cb;
 
 	VideoSecureLogDebug(" ############### %s ##########################", szSdpPath);
-	pNormalView->pDownloadHandle = VppDownloadCreateItem(szSdpPath, VP_PLAY_SDP_TEMP_DIR, NULL, VPP_DOWNLOAD_ITEM_TYPE_VIDEO_FILE, pFunc, (void *)pNormalView);
+
+	char *app_path = app_get_data_path();
+	if (!app_path) {
+		VideoLogError("cannot retrieve app install path");
+		return;
+	}
+	char db_path[1024] = {0,};
+	snprintf(db_path, 1024, "%s%s", app_path, "sdp");
+	VideoLogError("db_path: %s", db_path);
+
+
+	pNormalView->pDownloadHandle = VppDownloadCreateItem(szSdpPath, db_path, NULL, VPP_DOWNLOAD_ITEM_TYPE_VIDEO_FILE, pFunc, (void *)pNormalView);
 
 	if (!pNormalView->pDownloadHandle) {
 		VideoLogError("pDownloadHandle is NULL");
@@ -10797,22 +10512,6 @@ static bool _vp_play_normal_view_create_main_control(NormalView *pNormalView)
 	vp_play_util_focus_next_object_set(pNormalView->pPlayFocusBtn, pNormalView->pNextBtn, ELM_FOCUS_RIGHT);
 	vp_play_util_focus_next_object_set(pNormalView->pNextBtn, pNormalView->pScreenSizeBtn, ELM_FOCUS_RIGHT);
 
-
-	if (pNormalView->nLaunchingType == VIDEO_PLAY_TYPE_STORE ||
-	        pNormalView->nLaunchingType == VIDEO_PLAY_TYPE_LIST ||
-	        pNormalView->nLaunchingType == VIDEO_PLAY_TYPE_GALLERY ||
-	        pNormalView->nLaunchingType == VIDEO_PLAY_TYPE_OTHER ||
-	        pNormalView->nLaunchingType == VIDEO_PLAY_TYPE_MYFILE) {
-
-		pNormalView->pBookmarkHandle = vp_play_bookmark_create(pParent);
-		pNormalView->pBookmarkObj = vp_play_bookmark_get_object(pNormalView->pBookmarkHandle);
-		evas_object_event_callback_add(pNormalView->pBookmarkObj, EVAS_CALLBACK_DEL,
-		                               _vp_play_normal_view_bookmark_object_del_cb,
-		                               (void *)pNormalView);
-		vp_play_bookmark_set_user_param(pNormalView->pBookmarkHandle, (void *)pNormalView);
-		vp_play_bookmark_set_capture_callback(pNormalView->pBookmarkHandle, __vp_normal_bookmark_capture_cb);
-		vp_play_bookmark_set_item_select_callback(pNormalView->pBookmarkHandle, __vp_normal_bookmark_item_select_cb);
-	}
 	_vp_play_normal_view_set_rotate_lock_state(pNormalView);
 	_vp_play_normal_view_set_volume_lock_state(pNormalView);
 
