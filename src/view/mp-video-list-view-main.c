@@ -926,6 +926,10 @@ void mp_list_view_update_count_layout()
 
 		if (g_pMainViewWidget->pListViewTitlelayout == NULL) {
 			Evas_Object *pTTSObject = NULL;
+			char edj_path[1024] = {0};
+
+			char *path = app_get_resource_path();
+			snprintf(edj_path, 1024, "%s%s/%s", path , "edje", VIDEO_CUSTOM_THEME);
 
 			/* create layout*/
 			g_pMainViewWidget->pListViewTitlelayout =
@@ -938,7 +942,7 @@ void mp_list_view_update_count_layout()
 							EVAS_HINT_FILL,
 							EVAS_HINT_FILL);
 			elm_layout_file_set(g_pMainViewWidget->pListViewTitlelayout,
-					    VIDEO_CUSTOM_THEME,
+					    edj_path,
 					    "count_info_groupindex");
 			evas_object_event_callback_add(g_pMainViewWidget->
 						       pListViewTitlelayout,
@@ -994,10 +998,14 @@ Evas_Object *mp_list_view_create_base_layout(void *pParent)
 		evas_object_del(g_pMainViewWidget->pListViewBaselayout);
 		g_pMainViewWidget->pListViewBaselayout = NULL;
 	}
+	char edj_path[1024] = {0};
+
+	char *path = app_get_resource_path();
+	snprintf(edj_path, 1024, "%s%s/%s", path , "edje", VIDEO_PLAYER_LISTVIEW_EDJ);
 
 	g_pMainViewWidget->pListViewBaselayout = elm_layout_add(pParent);
 	elm_layout_file_set(g_pMainViewWidget->pListViewBaselayout,
-			    VIDEO_PLAYER_LISTVIEW_EDJ, LISTVIEW_EDJ_GROUP);
+			    edj_path, LISTVIEW_EDJ_GROUP);
 	evas_object_size_hint_weight_set(g_pMainViewWidget->
 					 pListViewBaselayout,
 					 EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);

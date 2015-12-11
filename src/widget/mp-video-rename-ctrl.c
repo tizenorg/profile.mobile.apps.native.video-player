@@ -503,10 +503,14 @@ Evas_Object *mp_rename_ctrl_show(void *pNaviFrameHandle, void *pUserData, mpRena
 
 	Evas_Object *pLayout = NULL;
 	//mp_util_svc_set_update_db_cb_func(pRenameCtrlCb);
+	char edj_path[1024] = {0};
 
+	char *path = app_get_resource_path();
+	snprintf(edj_path, 1024, "%s%s/%s", path , "edje", VIDEO_CUSTOM_THEME);
+	free(path);
 	//Create popup
 	g_pRenameHandle->pBaseLayout = elm_layout_add(g_pRenameHandle->pNaviFrameHandle);
-	elm_layout_file_set(g_pRenameHandle->pBaseLayout, VIDEO_CUSTOM_THEME, "transparent_layout");
+	elm_layout_file_set(g_pRenameHandle->pBaseLayout, edj_path, "transparent_layout");
 
 	g_pRenameHandle->pGenlist = elm_genlist_add(g_pRenameHandle->pBaseLayout);
 	elm_scroller_bounce_set(g_pRenameHandle->pGenlist, EINA_FALSE, EINA_TRUE);
@@ -530,7 +534,7 @@ Evas_Object *mp_rename_ctrl_show(void *pNaviFrameHandle, void *pUserData, mpRena
 	//evas_object_smart_callback_add(mp_util_get_main_conformat(), "virtualkeypad,state,off", __mp_rename_ctrl_keypad_off, g_pRenameHandle->pPopUpHandle);
 
 	pLayout = elm_layout_add(g_pRenameHandle->pPopUpHandle);
-	elm_layout_file_set(pLayout, VIDEO_CUSTOM_THEME, "pv.popup.entry");
+	elm_layout_file_set(pLayout, edj_path, "pv.popup.entry");
 
 	//Create entry
 	Evas_Object *en = NULL;

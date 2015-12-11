@@ -119,9 +119,13 @@ Evas_Object *mp_widget_ctrl_create_navi_btn(Evas_Object *pParent,
 	}
 
 	VideoLogInfo("");
+	char edj_path[1024] = {0};
 
+	char *path = app_get_resource_path();
+	snprintf(edj_path, 1024, "%s%s/%s", path , "edje", VIDEO_PLAYER_IMAGE_NAME_EDJ);
+	free(path);
 	Evas_Object *pImage = elm_image_add(pParent);
-	elm_image_file_set(pImage, VIDEO_PLAYER_IMAGE_NAME_EDJ, pIconPath);
+	elm_image_file_set(pImage, edj_path, pIconPath);
 	elm_image_resizable_set(pImage, EINA_TRUE, EINA_TRUE);
 	evas_object_show(pImage);
 

@@ -915,11 +915,15 @@ static void _vp_subtitle_create_title(SubtitlePopup *pSubtitle)
 		VideoLogError("pBox is NULL");
 		return;
 	}
+	char edj_path[1024] = {0};
 
+	char *path = app_get_resource_path();
+	snprintf(edj_path, 1024, "%s%s/%s", path , "edje", VP_PLAY_POPUP_EDJ_PATH);
+	free(path);
 	pSubtitle->pPopupTitle = elm_layout_add(pSubtitle->pBox);
 	//evas_object_size_hint_weight_set(pSubtitle->pPopupTitle, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
 	evas_object_size_hint_align_set(pSubtitle->pPopupTitle, EVAS_HINT_FILL, EVAS_HINT_FILL);
-	elm_layout_file_set(pSubtitle->pPopupTitle, VP_PLAY_POPUP_EDJ_PATH, VP_PLAY_EDJ_GROUP_TITLE_POPUP);
+	elm_layout_file_set(pSubtitle->pPopupTitle, edj_path, VP_PLAY_EDJ_GROUP_TITLE_POPUP);
 
 	/*set title*/
 	elm_object_part_text_set(pSubtitle->pPopupTitle, "elm.text.title", VP_PLAY_STRING_POPUP_SUBTITLE);
@@ -973,11 +977,15 @@ static Evas_Object * _vp_subtitle_create_caption_layout(SubtitlePopup *pSubtitle
 		VideoLogError("pSubtitleInfo is NULL");
 		return NULL;
 	}
+	char edj_path[1024] = {0};
 
+	char *path = app_get_resource_path();
+	snprintf(edj_path, 1024, "%s%s/%s", path , "edje", VP_PLAY_POPUP_EDJ_PATH);
+	free(path);
 	pSubtitle->pCaptionLayout = elm_layout_add(pParent);
 	evas_object_size_hint_weight_set(pSubtitle->pCaptionLayout, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
 	evas_object_size_hint_align_set(pSubtitle->pCaptionLayout, EVAS_HINT_FILL, EVAS_HINT_FILL);
-	elm_layout_file_set(pSubtitle->pCaptionLayout, VP_PLAY_POPUP_EDJ_PATH, VP_PLAY_EDJ_GROUP_CAPTION_POPUP);
+	elm_layout_file_set(pSubtitle->pCaptionLayout, edj_path, VP_PLAY_EDJ_GROUP_CAPTION_POPUP);
 
 	char *szText = NULL;
 	Evas_Object *pLab = NULL;

@@ -310,10 +310,14 @@ bool mp_remove_ctrl_show(bool *pCheckedItemsEditList,
 	   elm_object_part_content_set(g_pRemoveCtrl->pPopUpHandle, "button1", pButton);
 	   evas_object_smart_callback_add(pButton, "clicked", mp_remove_ctrl_button_popup_cb, pUserData);
 	   evas_object_show(pButton); */
+	char edj_path[1024] = {0};
 
+	char *path = app_get_resource_path();
+	snprintf(edj_path, 1024, "%s%s/%s", path , "edje", VIDEO_PLAYER_POPUP_PROGRESSBAR_EDJ);
+	free(path);
 	Evas_Object *pPopupLayout =
 		elm_layout_add(g_pRemoveCtrl->pPopUpHandle);
-	elm_layout_file_set(pPopupLayout, VIDEO_PLAYER_POPUP_PROGRESSBAR_EDJ,
+	elm_layout_file_set(pPopupLayout, edj_path,
 			    "popup_text_progressbar_view_layout");
 	elm_object_part_text_set(pPopupLayout, "elm.text.description",
 				 VIDEOS_DELETEPOP_MSG_DELETING);

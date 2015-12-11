@@ -2928,9 +2928,13 @@ static Evas_Object *_vp_play_multi_view_create_layout(Evas_Object *
 		VideoLogError("elm_layout_add object is NULL");
 		return NULL;
 	}
+	char edj_path[1024] = {0};
 
+	char *path = app_get_resource_path();
+	snprintf(edj_path, 1024, "%s%s/%s", path , "edje", VP_PLAY_MULTI_MAIN_EDJ);
+	free(path);
 	bRet =
-	    elm_layout_file_set(pObj, VP_PLAY_MULTI_MAIN_EDJ,
+	    elm_layout_file_set(pObj, edj_path,
 	                        VP_PLAY_EDJ_GROUP_MULTI);
 	if (bRet != EINA_TRUE) {
 		VideoLogError("elm_layout_file_set fail");
@@ -3173,7 +3177,11 @@ static bool _vp_play_multi_view_init_buttons(MultiView *pMultiView)
 	}
 
 	Evas_Object *pParent = pMultiView->pLayout;
+	char edj_path[1024] = {0};
 
+	char *path = app_get_resource_path();
+	snprintf(edj_path, 1024, "%s%s/%s", path , "edje", VP_PLAY_RESROUCE_EDJ_PATH);
+	free(path);
 	pMultiView->pExitBtn =
 	    vp_button_create(pParent, "playview/custom/flat_94_60/default",
 	                     NULL,
@@ -3311,21 +3319,21 @@ static bool _vp_play_multi_view_init_buttons(MultiView *pMultiView)
 	Evas_Object *pIcon = NULL;
 	pIcon =
 	    vp_button_create_icon(pMultiView->pResizeBtn,
-	                          VP_PLAY_RESROUCE_EDJ_PATH,
+	                          edj_path,
 	                          VP_PLAY_MULTI_VIEW_RESIZE);
 	elm_object_part_content_set(pMultiView->pResizeBtn,
 	                            VP_PLAY_SWALLOW_BUTTON_ICON, pIcon);
 
 	pIcon =
 	    vp_button_create_icon(pMultiView->pResizeBtn,
-	                          VP_PLAY_RESROUCE_EDJ_PATH,
+	                          edj_path,
 	                          VP_PLAY_MULTI_VIEW_RESIZE_PRESS);
 	elm_object_part_content_set(pMultiView->pResizeBtn,
 	                            VP_PLAY_SWALLOW_BUTTON_PRESS_ICON, pIcon);
 
 	pIcon =
 	    vp_button_create_icon(pMultiView->pResizeBtn,
-	                          VP_PLAY_RESROUCE_EDJ_PATH,
+	                          edj_path,
 	                          VP_PLAY_MULTI_VIEW_RESIZE);
 	elm_object_part_content_set(pMultiView->pResizeBtn,
 	                            VP_PLAY_SWALLOW_BUTTON_DIM_ICON, pIcon);
@@ -3333,28 +3341,28 @@ static bool _vp_play_multi_view_init_buttons(MultiView *pMultiView)
 
 	pIcon =
 	    vp_button_create_icon(pMultiView->pPlayBtn,
-	                          VP_PLAY_RESROUCE_EDJ_PATH,
+	                          edj_path,
 	                          VP_PLAY_MULTI_VIEW_PLAY);
 	elm_object_part_content_set(pMultiView->pPlayBtn,
 	                            VP_PLAY_SWALLOW_BUTTON_ICON, pIcon);
 
 	pIcon =
 	    vp_button_create_icon(pMultiView->pPauseBtn,
-	                          VP_PLAY_RESROUCE_EDJ_PATH,
+	                          edj_path,
 	                          VP_PLAY_MULTI_VIEW_PAUSE);
 	elm_object_part_content_set(pMultiView->pPauseBtn,
 	                            VP_PLAY_SWALLOW_BUTTON_ICON, pIcon);
 
 	pIcon =
 	    vp_button_create_icon(pMultiView->pPrevBtn,
-	                          VP_PLAY_RESROUCE_EDJ_PATH,
+	                          edj_path,
 	                          VP_PLAY_MULTI_VIEW_REW);
 	elm_object_part_content_set(pMultiView->pPrevBtn,
 	                            VP_PLAY_SWALLOW_BUTTON_ICON, pIcon);
 
 	pIcon =
 	    vp_button_create_icon(pMultiView->pNextBtn,
-	                          VP_PLAY_RESROUCE_EDJ_PATH,
+	                          edj_path,
 	                          VP_PLAY_MULTI_VIEW_FF);
 	elm_object_part_content_set(pMultiView->pNextBtn,
 	                            VP_PLAY_SWALLOW_BUTTON_ICON, pIcon);
@@ -3392,15 +3400,19 @@ static bool _vp_play_multi_view_create_gesture_layout(MultiView *
 	Eina_Bool bRet = EINA_FALSE;
 
 	pParent = pMultiView->pLayout;
+	char edj_path[1024] = {0};
 
+	char *path = app_get_resource_path();
+	snprintf(edj_path, 1024, "%s%s/%s", path , "edje", VP_PLAY_GESTURE_EDJ);
+	free(path);
 	pMultiView->pMainEventRect = elm_layout_add(pParent);
 	bRet =
 	    elm_layout_file_set(pMultiView->pMainEventRect,
-	                        VP_PLAY_GESTURE_EDJ,
+	                        edj_path,
 	                        VP_PLAY_EDJ_GROUP_GESTURE);
 	if (bRet != EINA_TRUE) {
 		VideoLogError("elm_layout_file_set fail : %s [%s]",
-		              VP_PLAY_GESTURE_EDJ, VP_PLAY_EDJ_GROUP_GESTURE);
+		              edj_path, VP_PLAY_EDJ_GROUP_GESTURE);
 		return FALSE;
 	}
 	elm_object_part_content_set(pParent, "pv.multi.event",

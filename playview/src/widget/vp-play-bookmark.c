@@ -125,42 +125,6 @@ static void __vp_play_bookmark_delete_btn_press_cb(void *pUserData,
 		evas_object_del(pIcon);
 		pIcon = NULL;
 	}
-
-	pIcon =
-	    vp_button_create_icon(pObj, VP_PLAY_RESROUCE_EDJ_PATH,
-	                          VP_PLAY_BOOKMARK_RES_DEL_PRESS);
-	elm_object_part_content_set(pObj, VP_PLAY_SWALLOW_BUTTON_ICON, pIcon);
-
-	BookmarkWidget *pBookmarkWidget =
-	    (BookmarkWidget *) evas_object_data_get(pObj,
-	            VP_BOOKMARK_GENGRID_ITEM_DATA_KEY);
-	if (pBookmarkWidget == NULL) {
-		VideoLogError("pBookmarkWidget is NULL");
-		return;
-	}
-
-	BookmarkItem *pBookmarkItem = (BookmarkItem *) pUserData;
-
-	if (pBookmarkWidget->bEditMode == FALSE) {
-		return;
-	}
-
-	if (!vp_media_contents_bookmark_delete
-	        (pBookmarkWidget->szMediaID, pBookmarkItem->nPos)) {
-		VideoLogError("vp_media_contents_bookmark_delete is fail");
-		return;
-	}
-
-	pBookmarkWidget->pItemList =
-	    g_list_remove(pBookmarkWidget->pItemList, (void *) pBookmarkItem);
-
-	VP_EVAS_ITEM_DEL(pBookmarkItem->pElmItem);
-
-	VP_FREE(pBookmarkItem->szFilePath);
-	VP_FREE(pBookmarkItem);
-
-	pBookmarkItem = NULL;
-
 }
 
 static void __vp_play_bookmark_delete_btn_unpress_cb(void *pUserData,
@@ -185,12 +149,6 @@ static void __vp_play_bookmark_delete_btn_unpress_cb(void *pUserData,
 		evas_object_del(pIcon);
 		pIcon = NULL;
 	}
-
-	pIcon =
-	    vp_button_create_icon(pObj, VP_PLAY_RESROUCE_EDJ_PATH,
-	                          VP_PLAY_BOOKMARK_RES_DEL);
-	elm_object_part_content_set(pObj, VP_PLAY_SWALLOW_BUTTON_ICON, pIcon);
-
 }
 
 static Evas_Object *__vp_play_bookmark_gengrid_icon_get_cb(const void
@@ -216,7 +174,11 @@ static Evas_Object *__vp_play_bookmark_gengrid_icon_get_cb(const void
 	}
 
 	BookmarkItem *pBookmarkItem = (BookmarkItem *) pUserData;
+	char edj_path[1024] = {0};
 
+	char *path = app_get_resource_path();
+	snprintf(edj_path, 1024, "%s%s/%s", path , "edje", VP_PLAY_BOOKMARK_ITEM_EDJ_PATH);
+	free(path);
 	if (!strcmp(pPart, "elm.swallow.icon")) {
 		Evas_Object *layout = NULL;
 		Evas_Object *bg = NULL;
@@ -229,7 +191,7 @@ static Evas_Object *__vp_play_bookmark_gengrid_icon_get_cb(const void
 			VideoLogError("evas object is NULL");
 			return NULL;
 		}
-		elm_layout_file_set(layout, VP_PLAY_BOOKMARK_ITEM_EDJ_PATH,
+		elm_layout_file_set(layout, edj_path,
 		                    VP_PLAY_EDJ_GROUP_BOOKMARK_ITEM);
 		elm_bg_load_size_set(bg, VP_BOOKMARK_THUMB_WIDTH,
 		                     VP_BOOKMARK_THUMB_HEIGHT);
@@ -275,7 +237,7 @@ static Evas_Object *__vp_play_bookmark_gengrid_icon_get_cb(const void
 		Evas_Object *pBtn = NULL;
 
 		layout = elm_layout_add(pObj);
-		elm_layout_file_set(layout, VP_PLAY_BOOKMARK_ITEM_EDJ_PATH,
+		elm_layout_file_set(layout, edj_path,
 		                    VP_PLAY_EDJ_GROUP_BOOKMARK_ITEM_END);
 		pBtn =
 		    vp_button_create(layout, "playview/custom/icon_48_48", NULL,
@@ -289,20 +251,6 @@ static Evas_Object *__vp_play_bookmark_gengrid_icon_get_cb(const void
 
 		evas_object_data_set(pBtn, VP_BOOKMARK_GENGRID_ITEM_DATA_KEY,
 		                     (void *) pBookmarkWidget);
-
-		pIcon =
-		    vp_button_create_icon(pBtn, VP_PLAY_RESROUCE_EDJ_PATH,
-		                          VP_PLAY_BOOKMARK_RES_DEL);
-		elm_object_part_content_set(pBtn, VP_PLAY_SWALLOW_BUTTON_ICON,
-		                            pIcon);
-
-		elm_object_part_content_set(layout,
-		                            VP_PLAY_SWALLOW_BOOKMARK_ITEM_DEL,
-		                            pBtn);
-
-		evas_object_show(pBtn);
-		evas_object_show(layout);
-
 		return layout;
 	}
 	return NULL;
@@ -476,13 +424,6 @@ static void __vp_play_bookmark_btn_press_cb(void *pUserData,
 			evas_object_del(pIcon);
 			pIcon = NULL;
 		}
-
-		pIcon =
-		    vp_button_create_icon(pBookmarkWidget->pAddButton,
-		                          VP_PLAY_RESROUCE_EDJ_PATH,
-		                          VP_PLAY_BOOKMARK_RES_ADD_PRESS);
-		elm_object_part_content_set(pBookmarkWidget->pAddButton,
-		                            VP_PLAY_SWALLOW_BUTTON_ICON, pIcon);
 	}
 }
 
@@ -511,12 +452,6 @@ static void __vp_play_bookmark_btn_unpress_cb(void *pUserData,
 			pIcon = NULL;
 		}
 
-		pIcon =
-		    vp_button_create_icon(pBookmarkWidget->pAddButton,
-		                          VP_PLAY_RESROUCE_EDJ_PATH,
-		                          VP_PLAY_BOOKMARK_RES_ADD);
-		elm_object_part_content_set(pBookmarkWidget->pAddButton,
-		                            VP_PLAY_SWALLOW_BUTTON_ICON, pIcon);
 	}
 }
 
@@ -738,9 +673,13 @@ static Evas_Object *_vp_play_bookmark_create_layout(Evas_Object *pParent)
 		VideoLogError("elm_layout_add object is NULL");
 		return NULL;
 	}
+	char edj_path[1024] = {0};
 
+	char *path = app_get_resource_path();
+	snprintf(edj_path, 1024, "%s%s/%s", path , "edje", VP_PLAY_BOOKMARK_EDJ_PATH);
+	free(path);
 	bRet =
-	    elm_layout_file_set(pObj, VP_PLAY_BOOKMARK_EDJ_PATH,
+	    elm_layout_file_set(pObj, edj_path,
 	                        VP_PLAY_EDJ_GROUP_BOOKMARK);
 	if (bRet != EINA_TRUE) {
 		VideoLogError("elm_layout_file_set fail");
@@ -840,10 +779,6 @@ static bool _vp_play_bookmark_init_layout(BookmarkWidget *
 	}
 
 	Evas_Object *pIcon = NULL;
-	pIcon =
-	    vp_button_create_icon(pBookmarkWidget->pAddButton,
-	                          VP_PLAY_RESROUCE_EDJ_PATH,
-	                          VP_PLAY_BOOKMARK_RES_ADD);
 	elm_object_part_content_set(pBookmarkWidget->pAddButton,
 	                            VP_PLAY_SWALLOW_BUTTON_ICON, pIcon);
 

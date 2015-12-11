@@ -398,13 +398,18 @@ Evas_Object *__mp_thumbnail_view_get_icon_of_no_item_cb(const void
 		pObject,
 		const char *pPart)
 {
+	char edj_path[1024] = {0};
+
+	char *path = app_get_resource_path();
+	snprintf(edj_path, 1024, "%s%s/%s", path , "edje", VIDEO_PLAYER_NO_ITEM_EDJ);
+	free(path);
 	if (!strcmp(pPart, "elm.icon")) {
 		int width = NO_ITEM_GENLIST_WIDTH * elm_config_scale_get();
 		int height = NO_ITEM_GENLIST_HEIGHT * elm_config_scale_get();
 
 		Evas_Object *pNoItemLayout = NULL;
 		pNoItemLayout = elm_layout_add(pObject);
-		elm_layout_file_set(pNoItemLayout, VIDEO_PLAYER_NO_ITEM_EDJ,
+		elm_layout_file_set(pNoItemLayout, edj_path,
 				    GENLIST_NOITEM_EDJ_GROUP);
 		evas_object_size_hint_min_set(pNoItemLayout, width, height);
 
@@ -1221,7 +1226,11 @@ static Evas_Object *__mp_thumbnail_view_get_grid_icon_cb(const void
 		*pPart)
 {
 	int nVideoItemIndex = (int) pUserData;
+	char edj_path[1024] = {0};
 
+	char *path = app_get_resource_path();
+	snprintf(edj_path, 1024, "%s%s/%s", path , "edje", VIDEO_PLAYER_IMAGE_NAME_EDJ);
+	free(path);
 	if (!strcmp(pPart, "elm.swallow.icon")) {
 		char *pThumbIconUri =
 			mp_util_svc_get_video_thumbnail(nVideoItemIndex);
@@ -1281,7 +1290,7 @@ static Evas_Object *__mp_thumbnail_view_get_grid_icon_cb(const void
 		MP_FREE_STRING(pVideoFile);
 		if (bRet) {
 			Evas_Object *pLockIcon = elm_image_add(pObject);
-			elm_image_file_set(pLockIcon, VIDEO_PLAYER_IMAGE_NAME_EDJ,
+			elm_image_file_set(pLockIcon, edj_path,
 					   VIDEO_LIST_VIEW_ICON_PERSONAL_LOCK);
 			evas_object_size_hint_align_set(pLockIcon, EVAS_HINT_FILL,
 							EVAS_HINT_FILL);
@@ -1296,7 +1305,7 @@ static Evas_Object *__mp_thumbnail_view_get_grid_icon_cb(const void
 		bool bRet = mp_util_svc_is_cloud_storage(nVideoItemIndex);
 		if (bRet) {
 			Evas_Object *pDropboxIcon = elm_image_add(pObject);
-			elm_image_file_set(pDropboxIcon, VIDEO_PLAYER_IMAGE_NAME_EDJ,
+			elm_image_file_set(pDropboxIcon, edj_path,
 					   VIDEO_LIST_VIEW_ICON_DROPBOX);
 			evas_object_size_hint_align_set(pDropboxIcon, EVAS_HINT_FILL,
 							EVAS_HINT_FILL);

@@ -571,7 +571,11 @@ static void _vp_play_normal_view_set_volume_state(NormalView *pNormalView)
 	elm_object_part_content_unset(pNormalView->pVolumeBtn, VP_PLAY_SWALLOW_BUTTON_ICON);
 	elm_object_part_content_unset(pNormalView->pVolumeBtn, VP_PLAY_SWALLOW_BUTTON_PRESS_ICON);
 	elm_object_part_content_unset(pNormalView->pVolumeBtn, VP_PLAY_SWALLOW_BUTTON_DIM_ICON);
+	char edj_path[1024] = {0};
 
+	char *path = app_get_resource_path();
+	snprintf(edj_path, 1024, "%s%s/%s", path , "edje", VP_PLAY_RESROUCE_EDJ_PATH);
+	free(path);
 	int nVolume = 0;
 	bool bMute = FALSE;
 	vp_sound_get_volume(&nVolume);
@@ -579,22 +583,22 @@ static void _vp_play_normal_view_set_volume_state(NormalView *pNormalView)
 	VideoLogError("nVolume = %d:%d", nVolume, bMute);
 
 	if ((nVolume == 0) || bMute) {
-		pIcon = vp_button_create_icon(pNormalView->pVolumeBtn, VP_PLAY_RESROUCE_EDJ_PATH, VP_PLAY_NORMAL_RES_MUTE);
+		pIcon = vp_button_create_icon(pNormalView->pVolumeBtn, edj_path, VP_PLAY_NORMAL_RES_MUTE);
 		elm_object_part_content_set(pNormalView->pVolumeBtn, VP_PLAY_SWALLOW_BUTTON_ICON, pIcon);
 
-		pIcon = vp_button_create_icon(pNormalView->pVolumeBtn, VP_PLAY_RESROUCE_EDJ_PATH, VP_PLAY_NORMAL_RES_MUTE_PRESS);
+		pIcon = vp_button_create_icon(pNormalView->pVolumeBtn, edj_path, VP_PLAY_NORMAL_RES_MUTE_PRESS);
 		elm_object_part_content_set(pNormalView->pVolumeBtn, VP_PLAY_SWALLOW_BUTTON_PRESS_ICON, pIcon);
 
-		pIcon = vp_button_create_icon(pNormalView->pVolumeBtn, VP_PLAY_RESROUCE_EDJ_PATH, VP_PLAY_NORMAL_RES_MUTE_DIM);
+		pIcon = vp_button_create_icon(pNormalView->pVolumeBtn, edj_path, VP_PLAY_NORMAL_RES_MUTE_DIM);
 		elm_object_part_content_set(pNormalView->pVolumeBtn, VP_PLAY_SWALLOW_BUTTON_DIM_ICON, pIcon);
 	} else {
-		pIcon = vp_button_create_icon(pNormalView->pVolumeBtn, VP_PLAY_RESROUCE_EDJ_PATH, VP_PLAY_NORMAL_RES_VOLUME);
+		pIcon = vp_button_create_icon(pNormalView->pVolumeBtn, edj_path, VP_PLAY_NORMAL_RES_VOLUME);
 		elm_object_part_content_set(pNormalView->pVolumeBtn, VP_PLAY_SWALLOW_BUTTON_ICON, pIcon);
 
-		pIcon = vp_button_create_icon(pNormalView->pVolumeBtn, VP_PLAY_RESROUCE_EDJ_PATH, VP_PLAY_NORMAL_RES_VOLUME_PRESS);
+		pIcon = vp_button_create_icon(pNormalView->pVolumeBtn, edj_path, VP_PLAY_NORMAL_RES_VOLUME_PRESS);
 		elm_object_part_content_set(pNormalView->pVolumeBtn, VP_PLAY_SWALLOW_BUTTON_PRESS_ICON, pIcon);
 
-		pIcon = vp_button_create_icon(pNormalView->pVolumeBtn, VP_PLAY_RESROUCE_EDJ_PATH, VP_PLAY_NORMAL_RES_VOLUME_DIM);
+		pIcon = vp_button_create_icon(pNormalView->pVolumeBtn, edj_path, VP_PLAY_NORMAL_RES_VOLUME_DIM);
 		elm_object_part_content_set(pNormalView->pVolumeBtn, VP_PLAY_SWALLOW_BUTTON_DIM_ICON, pIcon);
 	}
 
@@ -2776,9 +2780,13 @@ static Evas_Event_Flags __vp_normal_gesture_flick_end_cb(void *pUserData, void *
 		VideoLogWarning("pNormalView->nLaunchingType : [%d]. not support gesture flick in this mode", pNormalView->nLaunchingType);
 		return EVAS_EVENT_FLAG_NONE;
 	}
+	char edj_path[1024] = {0};
 
+	char *path = app_get_resource_path();
+	snprintf(edj_path, 1024, "%s%s/%s", path , "edje", VP_PLAY_NORMAL_MAIN_EDJ);
+	free(path);
 	pNormalView->pFlickJumpSeek = elm_layout_add(pNormalView->pMainLayout);
-	elm_layout_file_set(pNormalView->pFlickJumpSeek, VP_PLAY_NORMAL_MAIN_EDJ, VP_PLAY_EDJ_GROUP_FLICKJUMP_SEEK);
+	elm_layout_file_set(pNormalView->pFlickJumpSeek, edj_path, VP_PLAY_EDJ_GROUP_FLICKJUMP_SEEK);
 	evas_object_size_hint_weight_set(pNormalView->pFlickJumpSeek, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
 	evas_object_size_hint_align_set(pNormalView->pFlickJumpSeek, EVAS_HINT_FILL, EVAS_HINT_FILL);
 	evas_object_event_callback_add(pNormalView->pFlickJumpSeek, EVAS_CALLBACK_DEL, __vp_normal_flickjump_seek_del_cb, (void *)pNormalView);
@@ -2892,16 +2900,20 @@ static void __vp_normal_progress_mouse_down_cb(void *pUserData, Evas * e, Evas_O
 	pNormalView->nPrevPositionX = (double)pNormalView->nPrevCanvasX;
 
 	VP_EVAS_DEL(pNormalView->pMicroSeekTextLayout);
+	char edj_path[1024] = {0};
 
+	char *path = app_get_resource_path();
+	snprintf(edj_path, 1024, "%s%s/%s", path , "edje", VP_PLAY_NORMAL_MAIN_EDJ);
+	free(path);
 	pNormalView->pMicroSeekTextLayout = elm_layout_add(pNormalView->pMainLayout);
-	elm_layout_file_set(pNormalView->pMicroSeekTextLayout, VP_PLAY_NORMAL_MAIN_EDJ, VP_PLAY_EDJ_GROUP_MICROSEEK_TEXT);
+	elm_layout_file_set(pNormalView->pMicroSeekTextLayout, edj_path, VP_PLAY_EDJ_GROUP_MICROSEEK_TEXT);
 	evas_object_size_hint_weight_set(pNormalView->pMicroSeekTextLayout, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
 	evas_object_size_hint_align_set(pNormalView->pMicroSeekTextLayout, EVAS_HINT_FILL, EVAS_HINT_FILL);
 	evas_object_event_callback_add(pNormalView->pMicroSeekTextLayout, EVAS_CALLBACK_DEL, __vp_normal_progress_microseek_textlayout_del_cb, (void *)pNormalView);
 	evas_object_hide(pNormalView->pMicroSeekTextLayout);
 
 	pNormalView->pMicroSeekImageLayout = elm_layout_add(pNormalView->pMainLayout);
-	elm_layout_file_set(pNormalView->pMicroSeekImageLayout, VP_PLAY_NORMAL_MAIN_EDJ, VP_PLAY_EDJ_GROUP_MICROSEEK_IMAGE);
+	elm_layout_file_set(pNormalView->pMicroSeekImageLayout, edj_path, VP_PLAY_EDJ_GROUP_MICROSEEK_IMAGE);
 	evas_object_size_hint_weight_set(pNormalView->pMicroSeekImageLayout, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
 	evas_object_size_hint_align_set(pNormalView->pMicroSeekImageLayout, EVAS_HINT_FILL, EVAS_HINT_FILL);
 	evas_object_event_callback_add(pNormalView->pMicroSeekImageLayout, EVAS_CALLBACK_DEL, __vp_normal_progress_microseek_imagelayout_del_cb, (void *)pNormalView);
@@ -4394,9 +4406,14 @@ static void _vp_normal_set_audio_only_image(NormalView *pNormalView, bool bAudio
 		VP_EVAS_DEL(pNormalView->pImageBufferObj);
 	}
 
+	char edj_path[1024] = {0};
+
+	char *path = app_get_resource_path();
+	snprintf(edj_path, 1024, "%s%s/%s", path , "edje", VP_PLAY_RESROUCE_EDJ_PATH);
+	free(path);
 	if (bAudioOnly == TRUE) {
 		pNormalView->pImageBufferObj = vp_button_create_image(pNormalView->pMainLayout,
-		                               VP_PLAY_RESROUCE_EDJ_PATH,
+		                               edj_path,
 		                               VP_PLAY_NORMAL_AUDIO_ERROR_IMG);
 		evas_object_size_hint_weight_set(pNormalView->pImageBufferObj, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
 		evas_object_size_hint_align_set(pNormalView->pImageBufferObj, EVAS_HINT_FILL, EVAS_HINT_FILL);
@@ -4406,7 +4423,7 @@ static void _vp_normal_set_audio_only_image(NormalView *pNormalView, bool bAudio
 		/*double dImageAspectRatio = (double)270/214;
 
 		pNormalView->pImageBufferObj = vp_button_create_image(pNormalView->pMainLayout,
-																VP_PLAY_RESROUCE_EDJ_PATH,
+																edj_path,
 																VP_PLAY_NORMAL_AUDIO_ONLY_IMG);
 		evas_object_size_hint_weight_set(pNormalView->pImageBufferObj, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
 		evas_object_size_hint_align_set(pNormalView->pImageBufferObj, EVAS_HINT_FILL, EVAS_HINT_FILL);
@@ -4968,7 +4985,11 @@ static void __vp_normal_function_btn_clicked_cb(void *pUserData, Evas_Object *pO
 	if (pObj != pNormalView->pVolumeBtn && pObj != pNormalView->pScreenSizeBtn && pObj != pNormalView->pLockBtn) {
 		return;
 	}
+	char edj_path[1024] = {0};
 
+	char *path = app_get_resource_path();
+	snprintf(edj_path, 1024, "%s%s/%s", path , "edje", VP_PLAY_RESROUCE_EDJ_PATH);
+	free(path);
 	if (pObj == pNormalView->pVolumeBtn) {
 		VideoLogWarning("pVolumeBtn button");
 		vp_play_volume_update_value(pNormalView->pVolumeHandle);
@@ -5024,13 +5045,13 @@ static void __vp_normal_function_btn_clicked_cb(void *pUserData, Evas_Object *pO
 				pIcon = NULL;
 			}
 
-			pIcon = vp_button_create_icon(pNormalView->pRepeatBtn, VP_PLAY_RESROUCE_EDJ_PATH, VP_PLAY_NORMAL_RES_REPEAT_ONE);
+			pIcon = vp_button_create_icon(pNormalView->pRepeatBtn, edj_path, VP_PLAY_NORMAL_RES_REPEAT_ONE);
 			elm_object_part_content_set(pNormalView->pRepeatBtn, VP_PLAY_SWALLOW_BUTTON_ICON, pIcon);
 
-			pIcon = vp_button_create_icon(pNormalView->pRepeatBtn, VP_PLAY_RESROUCE_EDJ_PATH, VP_PLAY_NORMAL_RES_REPEAT_ONE_PRESS);
+			pIcon = vp_button_create_icon(pNormalView->pRepeatBtn, edj_path, VP_PLAY_NORMAL_RES_REPEAT_ONE_PRESS);
 			elm_object_part_content_set(pNormalView->pRepeatBtn, VP_PLAY_SWALLOW_BUTTON_PRESS_ICON, pIcon);
 
-			pIcon = vp_button_create_icon(pNormalView->pRepeatBtn, VP_PLAY_RESROUCE_EDJ_PATH, VP_PLAY_NORMAL_RES_REPEAT_ONE_DIM);
+			pIcon = vp_button_create_icon(pNormalView->pRepeatBtn, edj_path, VP_PLAY_NORMAL_RES_REPEAT_ONE_DIM);
 			elm_object_part_content_set(pNormalView->pRepeatBtn, VP_PLAY_SWALLOW_BUTTON_DIM_ICON, pIcon);
 		} else if (pNormalView->nRepeatMode == VIDEO_PLAY_REPEAT_ONE) {
 			pNormalView->nRepeatMode = VIDEO_PLAY_REPEAT_ALL;
@@ -5052,13 +5073,13 @@ static void __vp_normal_function_btn_clicked_cb(void *pUserData, Evas_Object *pO
 				pIcon = NULL;
 			}
 
-			pIcon = vp_button_create_icon(pNormalView->pRepeatBtn, VP_PLAY_RESROUCE_EDJ_PATH, VP_PLAY_NORMAL_RES_REPEAT_ALL);
+			pIcon = vp_button_create_icon(pNormalView->pRepeatBtn, edj_path, VP_PLAY_NORMAL_RES_REPEAT_ALL);
 			elm_object_part_content_set(pNormalView->pRepeatBtn, VP_PLAY_SWALLOW_BUTTON_ICON, pIcon);
 
-			pIcon = vp_button_create_icon(pNormalView->pRepeatBtn, VP_PLAY_RESROUCE_EDJ_PATH, VP_PLAY_NORMAL_RES_REPEAT_ALL_PRESS);
+			pIcon = vp_button_create_icon(pNormalView->pRepeatBtn, edj_path, VP_PLAY_NORMAL_RES_REPEAT_ALL_PRESS);
 			elm_object_part_content_set(pNormalView->pRepeatBtn, VP_PLAY_SWALLOW_BUTTON_PRESS_ICON, pIcon);
 
-			pIcon = vp_button_create_icon(pNormalView->pRepeatBtn, VP_PLAY_RESROUCE_EDJ_PATH, VP_PLAY_NORMAL_RES_REPEAT_ALL_DIM);
+			pIcon = vp_button_create_icon(pNormalView->pRepeatBtn, edj_path, VP_PLAY_NORMAL_RES_REPEAT_ALL_DIM);
 			elm_object_part_content_set(pNormalView->pRepeatBtn, VP_PLAY_SWALLOW_BUTTON_DIM_ICON, pIcon);
 
 		} else if (pNormalView->nRepeatMode == VIDEO_PLAY_REPEAT_ALL) {
@@ -5080,13 +5101,13 @@ static void __vp_normal_function_btn_clicked_cb(void *pUserData, Evas_Object *pO
 				pIcon = NULL;
 			}
 
-			pIcon = vp_button_create_icon(pNormalView->pRepeatBtn, VP_PLAY_RESROUCE_EDJ_PATH, VP_PLAY_NORMAL_RES_REPEAT_OFF);
+			pIcon = vp_button_create_icon(pNormalView->pRepeatBtn, edj_path, VP_PLAY_NORMAL_RES_REPEAT_OFF);
 			elm_object_part_content_set(pNormalView->pRepeatBtn, VP_PLAY_SWALLOW_BUTTON_ICON, pIcon);
 
-			pIcon = vp_button_create_icon(pNormalView->pRepeatBtn, VP_PLAY_RESROUCE_EDJ_PATH, VP_PLAY_NORMAL_RES_REPEAT_OFF_PRESS);
+			pIcon = vp_button_create_icon(pNormalView->pRepeatBtn, edj_path, VP_PLAY_NORMAL_RES_REPEAT_OFF_PRESS);
 			elm_object_part_content_set(pNormalView->pRepeatBtn, VP_PLAY_SWALLOW_BUTTON_PRESS_ICON, pIcon);
 
-			pIcon = vp_button_create_icon(pNormalView->pRepeatBtn, VP_PLAY_RESROUCE_EDJ_PATH, VP_PLAY_NORMAL_RES_REPEAT_OFF_DIM);
+			pIcon = vp_button_create_icon(pNormalView->pRepeatBtn, edj_path, VP_PLAY_NORMAL_RES_REPEAT_OFF_DIM);
 			elm_object_part_content_set(pNormalView->pRepeatBtn, VP_PLAY_SWALLOW_BUTTON_DIM_ICON, pIcon);
 		}
 	} else if (pObj == pNormalView->pScreenSizeBtn) {
@@ -5116,13 +5137,13 @@ static void __vp_normal_function_btn_clicked_cb(void *pUserData, Evas_Object *pO
 				pIcon = NULL;
 			}
 
-			pIcon = vp_button_create_icon(pNormalView->pScreenSizeBtn, VP_PLAY_RESROUCE_EDJ_PATH, VP_PLAY_NORMAL_RES_SCREEN_1_MODE);
+			pIcon = vp_button_create_icon(pNormalView->pScreenSizeBtn, edj_path, VP_PLAY_NORMAL_RES_SCREEN_1_MODE);
 			elm_object_part_content_set(pNormalView->pScreenSizeBtn, VP_PLAY_SWALLOW_BUTTON_ICON, pIcon);
 
-			pIcon = vp_button_create_icon(pNormalView->pScreenSizeBtn, VP_PLAY_RESROUCE_EDJ_PATH, VP_PLAY_NORMAL_RES_SCREEN_1_MODE);
+			pIcon = vp_button_create_icon(pNormalView->pScreenSizeBtn, edj_path, VP_PLAY_NORMAL_RES_SCREEN_1_MODE);
 			elm_object_part_content_set(pNormalView->pScreenSizeBtn, VP_PLAY_SWALLOW_BUTTON_PRESS_ICON, pIcon);
 
-			//pIcon = vp_button_create_icon(pNormalView->pScreenSizeBtn, VP_PLAY_RESROUCE_EDJ_PATH, VP_PLAY_NORMAL_RES_SCREEN_1_MODE_DIM);
+			//pIcon = vp_button_create_icon(pNormalView->pScreenSizeBtn, edj_path, VP_PLAY_NORMAL_RES_SCREEN_1_MODE_DIM);
 			//elm_object_part_content_set(pNormalView->pScreenSizeBtn, VP_PLAY_SWALLOW_BUTTON_DIM_ICON, pIcon);
 
 			return;
@@ -5150,13 +5171,13 @@ static void __vp_normal_function_btn_clicked_cb(void *pUserData, Evas_Object *pO
 				pIcon = NULL;
 			}
 
-			pIcon = vp_button_create_icon(pNormalView->pScreenSizeBtn, VP_PLAY_RESROUCE_EDJ_PATH, VP_PLAY_NORMAL_RES_SCREEN_2_MODE);
+			pIcon = vp_button_create_icon(pNormalView->pScreenSizeBtn, edj_path, VP_PLAY_NORMAL_RES_SCREEN_2_MODE);
 			elm_object_part_content_set(pNormalView->pScreenSizeBtn, VP_PLAY_SWALLOW_BUTTON_ICON, pIcon);
 
-			pIcon = vp_button_create_icon(pNormalView->pScreenSizeBtn, VP_PLAY_RESROUCE_EDJ_PATH, VP_PLAY_NORMAL_RES_SCREEN_2_MODE_PRESS);
+			pIcon = vp_button_create_icon(pNormalView->pScreenSizeBtn, edj_path, VP_PLAY_NORMAL_RES_SCREEN_2_MODE_PRESS);
 			elm_object_part_content_set(pNormalView->pScreenSizeBtn, VP_PLAY_SWALLOW_BUTTON_PRESS_ICON, pIcon);
 
-			//pIcon = vp_button_create_icon(pNormalView->pScreenSizeBtn, VP_PLAY_RESROUCE_EDJ_PATH, VP_PLAY_NORMAL_RES_SCREEN_2_MODE_DIM);
+			//pIcon = vp_button_create_icon(pNormalView->pScreenSizeBtn, edj_path, VP_PLAY_NORMAL_RES_SCREEN_2_MODE_DIM);
 			//elm_object_part_content_set(pNormalView->pScreenSizeBtn, VP_PLAY_SWALLOW_BUTTON_DIM_ICON, pIcon);
 
 			return;
@@ -7686,6 +7707,11 @@ static void _vp_play_normal_view_on_capture_mode(NormalView *pNormalView)
 	VP_EVAS_DEL(pNormalView->pCaptureRewBtn);
 	VP_EVAS_DEL(pNormalView->pCaptureFFBtn);
 
+	char edj_path[1024] = {0};
+
+	char *path = app_get_resource_path();
+	snprintf(edj_path, 1024, "%s%s/%s", path , "edje", VP_PLAY_RESROUCE_EDJ_PATH);
+	free(path);
 	if (!pNormalView->szMediaURL) {
 		return;
 	}
@@ -7703,13 +7729,13 @@ static void _vp_play_normal_view_on_capture_mode(NormalView *pNormalView)
 		                               (Evas_Smart_Cb)__vp_normal_control_btn_unpress_cb,
 		                               (void *)pNormalView);
 		Evas_Object *pIcon = NULL;
-		pIcon = vp_button_create_icon(pNormalView->pCaptureBtn, VP_PLAY_RESROUCE_EDJ_PATH, VP_PLAY_NORMAL_RES_CAPTURE);
+		pIcon = vp_button_create_icon(pNormalView->pCaptureBtn, edj_path, VP_PLAY_NORMAL_RES_CAPTURE);
 		elm_object_part_content_set(pNormalView->pCaptureBtn, VP_PLAY_SWALLOW_BUTTON_ICON, pIcon);
 
-		pIcon = vp_button_create_icon(pNormalView->pCaptureBtn, VP_PLAY_RESROUCE_EDJ_PATH, VP_PLAY_NORMAL_RES_CAPTURE_PRESS);
+		pIcon = vp_button_create_icon(pNormalView->pCaptureBtn, edj_path, VP_PLAY_NORMAL_RES_CAPTURE_PRESS);
 		elm_object_part_content_set(pNormalView->pCaptureBtn, VP_PLAY_SWALLOW_BUTTON_PRESS_ICON, pIcon);
 
-		pIcon = vp_button_create_icon(pNormalView->pCaptureBtn, VP_PLAY_RESROUCE_EDJ_PATH, VP_PLAY_NORMAL_RES_CAPTURE_DIM);
+		pIcon = vp_button_create_icon(pNormalView->pCaptureBtn, edj_path, VP_PLAY_NORMAL_RES_CAPTURE_DIM);
 		elm_object_part_content_set(pNormalView->pCaptureBtn, VP_PLAY_SWALLOW_BUTTON_DIM_ICON, pIcon);
 
 		elm_object_part_content_set(pParent, VP_PLAY_SWALLOW_NORMAL_TOP_CAPTURE, pNormalView->pCaptureBtn);
@@ -7738,23 +7764,23 @@ static void _vp_play_normal_view_on_capture_mode(NormalView *pNormalView)
 			                                 (Evas_Smart_Cb)__vp_normal_control_btn_unpress_cb,
 			                                 (void *)pNormalView);
 
-			pIcon = vp_button_create_icon(pNormalView->pCaptureRewBtn, VP_PLAY_RESROUCE_EDJ_PATH, VP_PLAY_NORMAL_RES_CAPTURE_REW);
+			pIcon = vp_button_create_icon(pNormalView->pCaptureRewBtn, edj_path, VP_PLAY_NORMAL_RES_CAPTURE_REW);
 			elm_object_part_content_set(pNormalView->pCaptureRewBtn, VP_PLAY_SWALLOW_BUTTON_ICON, pIcon);
 
-			pIcon = vp_button_create_icon(pNormalView->pCaptureRewBtn, VP_PLAY_RESROUCE_EDJ_PATH, VP_PLAY_NORMAL_RES_CAPTURE_REW_PRESS);
+			pIcon = vp_button_create_icon(pNormalView->pCaptureRewBtn, edj_path, VP_PLAY_NORMAL_RES_CAPTURE_REW_PRESS);
 			elm_object_part_content_set(pNormalView->pCaptureRewBtn, VP_PLAY_SWALLOW_BUTTON_PRESS_ICON, pIcon);
 
-			pIcon = vp_button_create_icon(pNormalView->pCaptureRewBtn, VP_PLAY_RESROUCE_EDJ_PATH, VP_PLAY_NORMAL_RES_CAPTURE_REW_DIM);
+			pIcon = vp_button_create_icon(pNormalView->pCaptureRewBtn, edj_path, VP_PLAY_NORMAL_RES_CAPTURE_REW_DIM);
 			elm_object_part_content_set(pNormalView->pCaptureRewBtn, VP_PLAY_SWALLOW_BUTTON_DIM_ICON, pIcon);
 
 
-			pIcon = vp_button_create_icon(pNormalView->pCaptureFFBtn, VP_PLAY_RESROUCE_EDJ_PATH, VP_PLAY_NORMAL_RES_CAPTURE_FF);
+			pIcon = vp_button_create_icon(pNormalView->pCaptureFFBtn, edj_path, VP_PLAY_NORMAL_RES_CAPTURE_FF);
 			elm_object_part_content_set(pNormalView->pCaptureFFBtn, VP_PLAY_SWALLOW_BUTTON_ICON, pIcon);
 
-			pIcon = vp_button_create_icon(pNormalView->pCaptureFFBtn, VP_PLAY_RESROUCE_EDJ_PATH, VP_PLAY_NORMAL_RES_CAPTURE_FF_PRESS);
+			pIcon = vp_button_create_icon(pNormalView->pCaptureFFBtn, edj_path, VP_PLAY_NORMAL_RES_CAPTURE_FF_PRESS);
 			elm_object_part_content_set(pNormalView->pCaptureFFBtn, VP_PLAY_SWALLOW_BUTTON_PRESS_ICON, pIcon);
 
-			pIcon = vp_button_create_icon(pNormalView->pCaptureFFBtn, VP_PLAY_RESROUCE_EDJ_PATH, VP_PLAY_NORMAL_RES_CAPTURE_FF_DIM);
+			pIcon = vp_button_create_icon(pNormalView->pCaptureFFBtn, edj_path, VP_PLAY_NORMAL_RES_CAPTURE_FF_DIM);
 			elm_object_part_content_set(pNormalView->pCaptureFFBtn, VP_PLAY_SWALLOW_BUTTON_DIM_ICON, pIcon);
 
 			elm_object_part_content_set(pParent, VP_PLAY_SWALLOW_NORMAL_TOP_CAPTURE_REW, pNormalView->pCaptureRewBtn);
@@ -9764,8 +9790,11 @@ static void _vp_play_normal_view_set_rotate_lock_state(NormalView *pNormalView)
 
 	VP_EVAS_DEL(pNormalView->pRotateBtn);
 	pNormalView->pRotateBtn = NULL;
+	char edj_path[1024] = {0};
 
-
+	char *path = app_get_resource_path();
+	snprintf(edj_path, 1024, "%s%s/%s", path , "edje", VP_PLAY_RESROUCE_EDJ_PATH);
+	free(path);
 	Evas_Object *pParent = NULL;
 	if (!pNormalView->pSoundPathBtn) {
 		pParent = pNormalView->pMainLayout;
@@ -9789,13 +9818,13 @@ static void _vp_play_normal_view_set_rotate_lock_state(NormalView *pNormalView)
 		                              (void *)pNormalView);
 
 		Evas_Object *pIcon = NULL;
-		pIcon = vp_button_create_icon(pNormalView->pRotateBtn, VP_PLAY_RESROUCE_EDJ_PATH, VP_PLAY_NORMAL_RES_ROTATE);
+		pIcon = vp_button_create_icon(pNormalView->pRotateBtn, edj_path, VP_PLAY_NORMAL_RES_ROTATE);
 		elm_object_part_content_set(pNormalView->pRotateBtn, VP_PLAY_SWALLOW_BUTTON_ICON, pIcon);
 
-		pIcon = vp_button_create_icon(pNormalView->pRotateBtn, VP_PLAY_RESROUCE_EDJ_PATH, VP_PLAY_NORMAL_RES_ROTATE_PRESS);
+		pIcon = vp_button_create_icon(pNormalView->pRotateBtn, edj_path, VP_PLAY_NORMAL_RES_ROTATE_PRESS);
 		elm_object_part_content_set(pNormalView->pRotateBtn, VP_PLAY_SWALLOW_BUTTON_PRESS_ICON, pIcon);
 
-		pIcon = vp_button_create_icon(pNormalView->pRotateBtn, VP_PLAY_RESROUCE_EDJ_PATH, VP_PLAY_NORMAL_RES_ROTATE_DIM);
+		pIcon = vp_button_create_icon(pNormalView->pRotateBtn, edj_path, VP_PLAY_NORMAL_RES_ROTATE_DIM);
 		elm_object_part_content_set(pNormalView->pRotateBtn, VP_PLAY_SWALLOW_BUTTON_DIM_ICON, pIcon);
 
 		/*if (!pNormalView->pSoundPathBtn) {
@@ -9819,7 +9848,11 @@ static void _vp_play_normal_view_set_volume_lock_state(NormalView *pNormalView)
 	}
 
 	bool bLockState = FALSE;
+	char edj_path[1024] = {0};
 
+	char *path = app_get_resource_path();
+	snprintf(edj_path, 1024, "%s%s/%s", path , "edje", VP_PLAY_RESROUCE_EDJ_PATH);
+	free(path);
 	/*if (!vp_play_config_get_rotate_lock_status(&bLockState)) {
 		VideoLogError("vp_play_config_get_rotate_lock_status is fail");
 		return;
@@ -9870,22 +9903,22 @@ static void _vp_play_normal_view_set_volume_lock_state(NormalView *pNormalView)
 		VideoLogError("nVolume = %d:", nVolume);
 
 		if ((nVolume == 0)) {
-			pIcon = vp_button_create_icon(pNormalView->pVolumeBtn, VP_PLAY_RESROUCE_EDJ_PATH, VP_PLAY_NORMAL_RES_MUTE);
+			pIcon = vp_button_create_icon(pNormalView->pVolumeBtn, edj_path, VP_PLAY_NORMAL_RES_MUTE);
 			elm_object_part_content_set(pNormalView->pVolumeBtn, VP_PLAY_SWALLOW_BUTTON_ICON, pIcon);
 
-			pIcon = vp_button_create_icon(pNormalView->pVolumeBtn, VP_PLAY_RESROUCE_EDJ_PATH, VP_PLAY_NORMAL_RES_MUTE_PRESS);
+			pIcon = vp_button_create_icon(pNormalView->pVolumeBtn, edj_path, VP_PLAY_NORMAL_RES_MUTE_PRESS);
 			elm_object_part_content_set(pNormalView->pVolumeBtn, VP_PLAY_SWALLOW_BUTTON_PRESS_ICON, pIcon);
 
-			pIcon = vp_button_create_icon(pNormalView->pVolumeBtn, VP_PLAY_RESROUCE_EDJ_PATH, VP_PLAY_NORMAL_RES_MUTE_DIM);
+			pIcon = vp_button_create_icon(pNormalView->pVolumeBtn, edj_path, VP_PLAY_NORMAL_RES_MUTE_DIM);
 			elm_object_part_content_set(pNormalView->pVolumeBtn, VP_PLAY_SWALLOW_BUTTON_DIM_ICON, pIcon);
 		} else {
-			pIcon = vp_button_create_icon(pNormalView->pVolumeBtn, VP_PLAY_RESROUCE_EDJ_PATH, VP_PLAY_NORMAL_RES_VOLUME);
+			pIcon = vp_button_create_icon(pNormalView->pVolumeBtn, edj_path, VP_PLAY_NORMAL_RES_VOLUME);
 			elm_object_part_content_set(pNormalView->pVolumeBtn, VP_PLAY_SWALLOW_BUTTON_ICON, pIcon);
 
-			pIcon = vp_button_create_icon(pNormalView->pVolumeBtn, VP_PLAY_RESROUCE_EDJ_PATH, VP_PLAY_NORMAL_RES_VOLUME_PRESS);
+			pIcon = vp_button_create_icon(pNormalView->pVolumeBtn, edj_path, VP_PLAY_NORMAL_RES_VOLUME_PRESS);
 			elm_object_part_content_set(pNormalView->pVolumeBtn, VP_PLAY_SWALLOW_BUTTON_PRESS_ICON, pIcon);
 
-			pIcon = vp_button_create_icon(pNormalView->pVolumeBtn, VP_PLAY_RESROUCE_EDJ_PATH, VP_PLAY_NORMAL_RES_VOLUME_DIM);
+			pIcon = vp_button_create_icon(pNormalView->pVolumeBtn, edj_path, VP_PLAY_NORMAL_RES_VOLUME_DIM);
 			elm_object_part_content_set(pNormalView->pVolumeBtn, VP_PLAY_SWALLOW_BUTTON_DIM_ICON, pIcon);
 		}
 
@@ -9913,6 +9946,11 @@ static void _vp_play_normal_view_set_sound_path_state(NormalView *pNormalView)
 
 	bEarjack = vp_sound_device_is_enable(VP_SOUND_DEVICE_EARJACK, pNormalView->pPlayView);
 
+	char edj_path[1024] = {0};
+
+	char *path = app_get_resource_path();
+	snprintf(edj_path, 1024, "%s%s/%s", path , "edje", VP_PLAY_RESROUCE_EDJ_PATH);
+	free(path);
 	if (pNormalView->bEarjackConnect != bEarjack) {
 		if (bEarjack == FALSE) {
 			pNormalView->bManualPause = TRUE;
@@ -9977,7 +10015,7 @@ static void _vp_play_normal_view_set_sound_path_state(NormalView *pNormalView)
 			break;
 		}
 
-		pNormalView->pSoundPathBtn = vp_navirame_button_create(pNormalView->pNaviFrame, "playview/custom/navi_button/default", VP_PLAY_RESROUCE_EDJ_PATH,
+		pNormalView->pSoundPathBtn = vp_navirame_button_create(pNormalView->pNaviFrame, "playview/custom/navi_button/default", edj_path,
 		                             (const char *)szIconPath, (Evas_Smart_Cb)__vp_normal_control_btn_clicked_cb, (void *)pNormalView);
 
 		elm_object_item_part_content_set(pNormalView->pNaviItem, "title_right_btn", pNormalView->pSoundPathBtn);
@@ -10060,10 +10098,14 @@ static Evas_Object *_vp_play_normal_view_create_main_layout(Evas_Object *pParent
 		VideoLogError("elm_layout_add object is NULL");
 		return NULL;
 	}
+	char edj_path[1024] = {0};
 
-	bRet = elm_layout_file_set(pObj, VP_PLAY_NORMAL_MAIN_EDJ, VP_PLAY_EDJ_GROUP_NORMAL_MAIN);
+	char *path = app_get_resource_path();
+	snprintf(edj_path, 1024, "%s%s/%s", path , "edje", VP_PLAY_NORMAL_MAIN_EDJ);
+	free(path);
+	bRet = elm_layout_file_set(pObj, edj_path, VP_PLAY_EDJ_GROUP_NORMAL_MAIN);
 	if (bRet != EINA_TRUE) {
-		VideoLogError("elm_layout_file_set fail : %s [%s]", VP_PLAY_NORMAL_MAIN_EDJ, VP_PLAY_EDJ_GROUP_NORMAL_MAIN);
+		VideoLogError("elm_layout_file_set fail : %s [%s]", edj_path, VP_PLAY_EDJ_GROUP_NORMAL_MAIN);
 	}
 
 	evas_object_show(pObj);
@@ -10083,11 +10125,15 @@ static bool _vp_play_normal_view_create_gesture_layout(NormalView *pNormalView)
 	Eina_Bool bRet = EINA_FALSE;
 
 	pParent = pPlayView->pMainLayout;
+	char edj_path[1024] = {0};
 
+	char *path = app_get_resource_path();
+	snprintf(edj_path, 1024, "%s%s/%s", path , "edje", VP_PLAY_GESTURE_EDJ);
+	free(path);
 	pNormalView->pMainEventRect = elm_layout_add(pParent);
-	bRet = elm_layout_file_set(pNormalView->pMainEventRect, VP_PLAY_GESTURE_EDJ, VP_PLAY_EDJ_GROUP_GESTURE);
+	bRet = elm_layout_file_set(pNormalView->pMainEventRect, edj_path, VP_PLAY_EDJ_GROUP_GESTURE);
 	if (bRet != EINA_TRUE) {
-		VideoLogError("elm_layout_file_set fail : %s [%s]", VP_PLAY_GESTURE_EDJ, VP_PLAY_EDJ_GROUP_GESTURE);
+		VideoLogError("elm_layout_file_set fail : %s [%s]", edj_path, VP_PLAY_EDJ_GROUP_GESTURE);
 		return FALSE;
 	}
 	elm_object_part_content_set(pParent, "elm.swallow.event", pNormalView->pMainEventRect);
@@ -10166,8 +10212,12 @@ static Evas_Object *_vp_play_normal_view_create_top_control_layout(Evas_Object *
 		VideoLogError("elm_layout_add object is NULL");
 		return NULL;
 	}
+	char edj_path[1024] = {0};
 
-	bRet = elm_layout_file_set(pObj, VP_PLAY_NORMAL_TOP_CONTROL_EDJ, VP_PLAY_EDJ_GROUP_NORMAL_TOP_CONTROL);
+	char *path = app_get_resource_path();
+	snprintf(edj_path, 1024, "%s%s/%s", path , "edje", VP_PLAY_NORMAL_TOP_CONTROL_EDJ);
+	free(path);
+	bRet = elm_layout_file_set(pObj, edj_path, VP_PLAY_EDJ_GROUP_NORMAL_TOP_CONTROL);
 	if (bRet != EINA_TRUE) {
 		VideoLogError("elm_layout_file_set fail");
 	}
@@ -10192,8 +10242,12 @@ static Evas_Object *_vp_play_normal_view_create_control_layout(Evas_Object *pPar
 		VideoLogError("elm_layout_add object is NULL");
 		return NULL;
 	}
+	char edj_path[1024] = {0};
 
-	bRet = elm_layout_file_set(pObj, VP_PLAY_NORMAL_CONTROL_EDJ, VP_PLAY_EDJ_GROUP_NORMAL_CONTROL);
+	char *path = app_get_resource_path();
+	snprintf(edj_path, 1024, "%s%s/%s", path , "edje", VP_PLAY_NORMAL_CONTROL_EDJ);
+	free(path);
+	bRet = elm_layout_file_set(pObj, edj_path, VP_PLAY_EDJ_GROUP_NORMAL_CONTROL);
 	if (bRet != EINA_TRUE) {
 		VideoLogError("elm_layout_file_set fail");
 	}
@@ -10218,8 +10272,12 @@ static Evas_Object *_vp_play_normal_view_create_function_layout(Evas_Object *pPa
 		VideoLogError("elm_layout_add object is NULL");
 		return NULL;
 	}
+	char edj_path[1024] = {0};
 
-	bRet = elm_layout_file_set(pObj, VP_PLAY_NORMAL_FUNCTION_EDJ_PATH, VP_PLAY_EDJ_GROUP_NORMAL_FUNCTION);
+	char *path = app_get_resource_path();
+	snprintf(edj_path, 1024, "%s%s/%s", path , "edje", VP_PLAY_NORMAL_FUNCTION_EDJ_PATH);
+	free(path);
+	bRet = elm_layout_file_set(pObj, edj_path, VP_PLAY_EDJ_GROUP_NORMAL_FUNCTION);
 	if (bRet != EINA_TRUE) {
 		VideoLogError("elm_layout_file_set fail");
 	}
@@ -10310,6 +10368,11 @@ static bool _vp_play_normal_view_create_main_control(NormalView *pNormalView)
 
 	Evas_Object *pParent = NULL;
 
+	char edj_path[1024] = {0};
+
+	char *path = app_get_resource_path();
+	snprintf(edj_path, 1024, "%s%s/%s", path , "edje", VP_PLAY_RESROUCE_EDJ_PATH);
+	free(path);
 	pNormalView->pControlLayout = _vp_play_normal_view_create_control_layout(pNormalView->pMainLayout);
 	if (!pNormalView->pControlLayout) {
 		VideoLogError("pNormalView->pControlLayout is NULL");
@@ -10424,56 +10487,56 @@ static bool _vp_play_normal_view_create_main_control(NormalView *pNormalView)
 
 	//elm_object_focus_custom_chain_append(pParent, pNormalView->pPlayFocusBtn, NULL);
 
-	pIcon = vp_button_create_icon(pNormalView->pResumeBtn, VP_PLAY_RESROUCE_EDJ_PATH, VP_PLAY_NORMAL_RES_RESUME);
+	pIcon = vp_button_create_icon(pNormalView->pResumeBtn, edj_path, VP_PLAY_NORMAL_RES_RESUME);
 	elm_object_part_content_set(pNormalView->pResumeBtn, VP_PLAY_SWALLOW_BUTTON_ICON, pIcon);
 
-	pIcon = vp_button_create_icon(pNormalView->pPauseBtn, VP_PLAY_RESROUCE_EDJ_PATH, VP_PLAY_NORMAL_RES_PAUSE);
+	pIcon = vp_button_create_icon(pNormalView->pPauseBtn, edj_path, VP_PLAY_NORMAL_RES_PAUSE);
 	elm_object_part_content_set(pNormalView->pPauseBtn, VP_PLAY_SWALLOW_BUTTON_ICON, pIcon);
 
-	//pIcon = vp_button_create_icon(pNormalView->pPrevBtn, VP_PLAY_RESROUCE_EDJ_PATH, VP_PLAY_NORMAL_RES_PREV);
+	//pIcon = vp_button_create_icon(pNormalView->pPrevBtn, edj_path, VP_PLAY_NORMAL_RES_PREV);
 	//elm_object_part_content_set(pNormalView->pPrevBtn, VP_PLAY_SWALLOW_BUTTON_ICON, pIcon);
 
-	//pIcon = vp_button_create_icon(pNormalView->pNextBtn, VP_PLAY_RESROUCE_EDJ_PATH, VP_PLAY_NORMAL_RES_NEXT);
+	//pIcon = vp_button_create_icon(pNormalView->pNextBtn, edj_path, VP_PLAY_NORMAL_RES_NEXT);
 	//elm_object_part_content_set(pNormalView->pNextBtn, VP_PLAY_SWALLOW_BUTTON_ICON, pIcon);
 
-	pIcon = vp_button_create_icon(pNormalView->pPopupBtn, VP_PLAY_RESROUCE_EDJ_PATH, VP_PLAY_NORMAL_RES_POPUP_PLAYER);
+	pIcon = vp_button_create_icon(pNormalView->pPopupBtn, edj_path, VP_PLAY_NORMAL_RES_POPUP_PLAYER);
 	elm_object_part_content_set(pNormalView->pPopupBtn, VP_PLAY_SWALLOW_BUTTON_ICON, pIcon);
 
-	pIcon = vp_button_create_icon(pNormalView->pPopupBtn, VP_PLAY_RESROUCE_EDJ_PATH, VP_PLAY_NORMAL_RES_POPUP_PLAYER);
+	pIcon = vp_button_create_icon(pNormalView->pPopupBtn, edj_path, VP_PLAY_NORMAL_RES_POPUP_PLAYER);
 	elm_object_part_content_set(pNormalView->pPopupBtn, VP_PLAY_SWALLOW_BUTTON_PRESS_ICON, pIcon);
 
 	if (pNormalView->nDisplayMode == VP_MM_PLAYER_DISPLAY_FULL_SCREEN) {
-		pIcon = vp_button_create_icon(pNormalView->pScreenSizeBtn, VP_PLAY_RESROUCE_EDJ_PATH, VP_PLAY_NORMAL_RES_SCREEN_2_MODE);
+		pIcon = vp_button_create_icon(pNormalView->pScreenSizeBtn, edj_path, VP_PLAY_NORMAL_RES_SCREEN_2_MODE);
 		elm_object_part_content_set(pNormalView->pScreenSizeBtn, VP_PLAY_SWALLOW_BUTTON_ICON, pIcon);
 
-		pIcon = vp_button_create_icon(pNormalView->pScreenSizeBtn, VP_PLAY_RESROUCE_EDJ_PATH, VP_PLAY_NORMAL_RES_SCREEN_2_MODE);
+		pIcon = vp_button_create_icon(pNormalView->pScreenSizeBtn, edj_path, VP_PLAY_NORMAL_RES_SCREEN_2_MODE);
 		elm_object_part_content_set(pNormalView->pScreenSizeBtn, VP_PLAY_SWALLOW_BUTTON_PRESS_ICON, pIcon);
 
-		//pIcon = vp_button_create_icon(pNormalView->pScreenSizeBtn, VP_PLAY_RESROUCE_EDJ_PATH, VP_PLAY_NORMAL_RES_SCREEN_2_MODE_DIM);
+		//pIcon = vp_button_create_icon(pNormalView->pScreenSizeBtn, edj_path, VP_PLAY_NORMAL_RES_SCREEN_2_MODE_DIM);
 		//elm_object_part_content_set(pNormalView->pScreenSizeBtn, VP_PLAY_SWALLOW_BUTTON_DIM_ICON, pIcon);
 	} else if (pNormalView->nDisplayMode == VP_MM_PLAYER_DISPLAY_ORIGIN_SIZE) {
-		pIcon = vp_button_create_icon(pNormalView->pScreenSizeBtn, VP_PLAY_RESROUCE_EDJ_PATH, VP_PLAY_NORMAL_RES_SCREEN_1_MODE);
+		pIcon = vp_button_create_icon(pNormalView->pScreenSizeBtn, edj_path, VP_PLAY_NORMAL_RES_SCREEN_1_MODE);
 		elm_object_part_content_set(pNormalView->pScreenSizeBtn, VP_PLAY_SWALLOW_BUTTON_ICON, pIcon);
 
-		pIcon = vp_button_create_icon(pNormalView->pScreenSizeBtn, VP_PLAY_RESROUCE_EDJ_PATH, VP_PLAY_NORMAL_RES_SCREEN_1_MODE);
+		pIcon = vp_button_create_icon(pNormalView->pScreenSizeBtn, edj_path, VP_PLAY_NORMAL_RES_SCREEN_1_MODE);
 		elm_object_part_content_set(pNormalView->pScreenSizeBtn, VP_PLAY_SWALLOW_BUTTON_PRESS_ICON, pIcon);
 	} else if (pNormalView->nDisplayMode == VP_MM_PLAYER_DISPLAY_ORIGIN_OR_LETTER) {
-		pIcon = vp_button_create_icon(pNormalView->pScreenSizeBtn, VP_PLAY_RESROUCE_EDJ_PATH, VP_PLAY_NORMAL_RES_SCREEN_3_MODE);
+		pIcon = vp_button_create_icon(pNormalView->pScreenSizeBtn, edj_path, VP_PLAY_NORMAL_RES_SCREEN_3_MODE);
 		elm_object_part_content_set(pNormalView->pScreenSizeBtn, VP_PLAY_SWALLOW_BUTTON_ICON, pIcon);
 
-		//pIcon = vp_button_create_icon(pNormalView->pScreenSizeBtn, VP_PLAY_RESROUCE_EDJ_PATH, VP_PLAY_NORMAL_RES_SCREEN_3_MODE_PRESS);
+		//pIcon = vp_button_create_icon(pNormalView->pScreenSizeBtn, edj_path, VP_PLAY_NORMAL_RES_SCREEN_3_MODE_PRESS);
 		//elm_object_part_content_set(pNormalView->pScreenSizeBtn, VP_PLAY_SWALLOW_BUTTON_PRESS_ICON, pIcon);
 
-		//pIcon = vp_button_create_icon(pNormalView->pScreenSizeBtn, VP_PLAY_RESROUCE_EDJ_PATH, VP_PLAY_NORMAL_RES_SCREEN_3_MODE_DIM);
+		//pIcon = vp_button_create_icon(pNormalView->pScreenSizeBtn, edj_path, VP_PLAY_NORMAL_RES_SCREEN_3_MODE_DIM);
 		//elm_object_part_content_set(pNormalView->pScreenSizeBtn, VP_PLAY_SWALLOW_BUTTON_DIM_ICON, pIcon);
 	} else {
-		pIcon = vp_button_create_icon(pNormalView->pScreenSizeBtn, VP_PLAY_RESROUCE_EDJ_PATH, VP_PLAY_NORMAL_RES_SCREEN_1_MODE);
+		pIcon = vp_button_create_icon(pNormalView->pScreenSizeBtn, edj_path, VP_PLAY_NORMAL_RES_SCREEN_1_MODE);
 		elm_object_part_content_set(pNormalView->pScreenSizeBtn, VP_PLAY_SWALLOW_BUTTON_ICON, pIcon);
 
-		//pIcon = vp_button_create_icon(pNormalView->pScreenSizeBtn, VP_PLAY_RESROUCE_EDJ_PATH, VP_PLAY_NORMAL_RES_SCREEN_1_MODE_PRESS);
+		//pIcon = vp_button_create_icon(pNormalView->pScreenSizeBtn, edj_path, VP_PLAY_NORMAL_RES_SCREEN_1_MODE_PRESS);
 		//elm_object_part_content_set(pNormalView->pScreenSizeBtn, VP_PLAY_SWALLOW_BUTTON_PRESS_ICON, pIcon);
 
-		//pIcon = vp_button_create_icon(pNormalView->pScreenSizeBtn, VP_PLAY_RESROUCE_EDJ_PATH, VP_PLAY_NORMAL_RES_SCREEN_1_MODE_DIM);
+		//pIcon = vp_button_create_icon(pNormalView->pScreenSizeBtn, edj_path, VP_PLAY_NORMAL_RES_SCREEN_1_MODE_DIM);
 		//elm_object_part_content_set(pNormalView->pScreenSizeBtn, VP_PLAY_SWALLOW_BUTTON_DIM_ICON, pIcon);
 	}
 
@@ -12486,6 +12549,11 @@ bool vp_play_normal_view_set_lock_screen(normal_view_handle pViewHandle, bool bL
 	pNormalView->bLockScreen = bLock;
 	VP_EVAS_TIMER_DEL(pNormalView->pLockScreenTimer);
 
+	char edj_path[1024] = {0};
+
+	char *path = app_get_resource_path();
+	snprintf(edj_path, 1024, "%s%s/%s", path , "edje", VP_PLAY_RESROUCE_EDJ_PATH);
+	free(path);
 	elm_object_part_content_unset(pNormalView->pMainLayout, VP_PLAY_SWALLOW_NORMAL_LOCKSCREEN);
 	VP_EVAS_DEL(pNormalView->pLockBtn);
 	PlayView *pPlayView = pNormalView->pPlayView;
@@ -12537,13 +12605,13 @@ bool vp_play_normal_view_set_lock_screen(normal_view_handle pViewHandle, bool bL
 
 		Evas_Object *pIcon = NULL;
 
-		pIcon = vp_button_create_icon(pNormalView->pLockBtn, VP_PLAY_RESROUCE_EDJ_PATH, VP_PLAY_NORMAL_RES_LOCK);
+		pIcon = vp_button_create_icon(pNormalView->pLockBtn, edj_path, VP_PLAY_NORMAL_RES_LOCK);
 		elm_object_part_content_set(pNormalView->pLockBtn, VP_PLAY_SWALLOW_BUTTON_ICON, pIcon);
 
-		pIcon = vp_button_create_icon(pNormalView->pLockBtn, VP_PLAY_RESROUCE_EDJ_PATH, VP_PLAY_NORMAL_RES_LOCK_PRESS);
+		pIcon = vp_button_create_icon(pNormalView->pLockBtn, edj_path, VP_PLAY_NORMAL_RES_LOCK_PRESS);
 		elm_object_part_content_set(pNormalView->pLockBtn, VP_PLAY_SWALLOW_BUTTON_PRESS_ICON, pIcon);
 
-		pIcon = vp_button_create_icon(pNormalView->pLockBtn, VP_PLAY_RESROUCE_EDJ_PATH, VP_PLAY_NORMAL_RES_LOCK);
+		pIcon = vp_button_create_icon(pNormalView->pLockBtn, edj_path, VP_PLAY_NORMAL_RES_LOCK);
 		elm_object_part_content_set(pNormalView->pLockBtn, VP_PLAY_SWALLOW_BUTTON_DIM_ICON, pIcon);
 
 		elm_object_part_content_set(pNormalView->pMainLayout, VP_PLAY_SWALLOW_NORMAL_LOCKSCREEN, pNormalView->pLockBtn);

@@ -596,9 +596,13 @@ Evas_Object *mp_search_view_get_icon_of_video_item_cb(const void *pUserData, Eva
 
 		char *pThumbIconUri = mp_util_svc_get_video_thumbnail(nVideoItemIndex);
 		Evas_Object *pBg = NULL;
+		char edj_path[1024] = {0};
 
+		char *path = app_get_resource_path();
+		snprintf(edj_path, 1024, "%s%s/%s", path , "edje", VIDEO_CUSTOM_THEME);
+		free(path);
 		pLayout = elm_layout_add(pObject);
-		elm_layout_file_set(pLayout, VIDEO_CUSTOM_THEME, "listview.thumbnail.layout");
+		elm_layout_file_set(pLayout, edj_path, "listview.thumbnail.layout");
 
 		if (!pThumbIconUri || !vp_file_exists(pThumbIconUri))
 		{
@@ -1218,14 +1222,18 @@ static Evas_Object *__mp_search_view_init_internal_layout(void *pParent)
 		evas_object_del(g_pSearchViewWidget->pSearchViewBaselayout);
 		g_pSearchViewWidget->pSearchViewBaselayout = NULL;
 	}
+	char edj_path[1024] = {0};
 
+	char *path = app_get_resource_path();
+	snprintf(edj_path, 1024, "%s%s/%s", path , "edje", VIDEO_BASIC_NAVIFRAME_EDJ);
+	free(path);
 	// Create search view base layout.
 	g_pSearchViewWidget->pSearchViewBaselayout = elm_layout_add(pParent);
-	elm_layout_file_set(g_pSearchViewWidget->pSearchViewBaselayout, VIDEO_BASIC_NAVIFRAME_EDJ, "search_view_layout");
+	elm_layout_file_set(g_pSearchViewWidget->pSearchViewBaselayout, edj_path, "search_view_layout");
 
 	// Create search bar layout.
 	g_pSearchViewWidget->pSearchBarlayout = elm_layout_add(g_pSearchViewWidget->pSearchViewBaselayout);
-	elm_layout_file_set(g_pSearchViewWidget->pSearchBarlayout, VIDEO_BASIC_NAVIFRAME_EDJ, "searchbar_video");
+	elm_layout_file_set(g_pSearchViewWidget->pSearchBarlayout, edj_path, "searchbar_video");
 	elm_object_part_content_set(g_pSearchViewWidget->pSearchViewBaselayout, "search_bar", g_pSearchViewWidget->pSearchBarlayout);
 	elm_object_signal_callback_add(g_pSearchViewWidget->pSearchBarlayout, "elm,action,click", "back_button_callback", __mp_search_view_soft_back_button_cb, NULL);
 	elm_object_signal_emit(g_pSearchViewWidget->pSearchBarlayout, "elm,state,show,searchbar", "elm");
@@ -1463,15 +1471,6 @@ void mp_search_view_init(void *pParent)
 	elm_genlist_block_count_set(g_pSearchViewHandle->pVideosGenlist, VIDEO_GENLIST_BLOCK_COUNT);
 	elm_genlist_mode_set(g_pSearchViewHandle->pVideosGenlist, ELM_LIST_COMPRESS);
 	elm_genlist_homogeneous_set(g_pSearchViewHandle->pVideosGenlist, EINA_TRUE);
-
-	//g_pSearchViewWidget->pDimminglayout = elm_layout_add(pParent);
-	//elm_layout_file_set(g_pSearchViewWidget->pDimminglayout, VIDEO_PLAYER_SEARCH_VIEW_DIM_EDJ, SEARCH_VIEW_DIM_EDJ_GROUP);
-	//evas_object_size_hint_weight_set(g_pSearchViewWidget->pDimminglayout, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
-	//evas_object_size_hint_align_set(g_pSearchViewWidget->pDimminglayout, EVAS_HINT_FILL, EVAS_HINT_FILL);
-	//elm_object_part_content_set(g_pSearchViewWidget->pDimminglayout, "search.view.content", g_pSearchViewHandle->pVideosGenlist);
-	//evas_object_show(g_pSearchViewWidget->pDimminglayout);
-	//register db callback
-	//mp_util_svc_set_update_db_cb_func(__mp_search_view_db_changed_cb);
 
 	g_pSearchViewHandle->isViewActive = true;
 	__mp_search_view_arrange_video_list(__mp_search_view_get_sort_type(), g_pSearchViewHandle->pVideosGenlist);

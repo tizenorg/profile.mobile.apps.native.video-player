@@ -297,9 +297,13 @@ static Evas_Object *__mp_folder_share_view_get_icon_cb(const void
 		char *pThumbIconUri =
 			mp_util_get_folder_thumbnail(nFolderItemIndex,
 						     mp_sort_ctrl_get_sort_state());
+		char edj_path[1024] = {0};
 
+		char *path = app_get_resource_path();
+		snprintf(edj_path, 1024, "%s%s/%s", path , "edje", VIDEO_CUSTOM_THEME);
+		free(path);
 		pLayout = elm_layout_add(pObject);
-		elm_layout_file_set(pLayout, VIDEO_CUSTOM_THEME,
+		elm_layout_file_set(pLayout, edj_path,
 				    "listview.thumbnail.layout");
 
 		if (!pThumbIconUri || !vp_file_exists(pThumbIconUri)) {
@@ -436,10 +440,14 @@ Evas_Object *mp_folder_share_view_create_internal_layout(void *pParent)
 		evas_object_del(g_pFolderShareWidget->pBaselayout);
 		g_pFolderShareWidget->pBaselayout = NULL;
 	}
+	char edj_path[1024] = {0};
 
+	char *path = app_get_resource_path();
+	snprintf(edj_path, 1024, "%s%s/%s", path , "edje", VIDEO_PLAYER_REMOVE_LIST_EDJ);
+	free(path);
 	g_pFolderShareWidget->pBaselayout = elm_layout_add(pParent);
 	elm_layout_file_set(g_pFolderShareWidget->pBaselayout,
-			    VIDEO_PLAYER_REMOVE_LIST_EDJ,
+			    edj_path,
 			    REMOVE_LIST_EDJ_GROUP);
 	evas_object_size_hint_weight_set(g_pFolderShareWidget->pBaselayout,
 					 EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
