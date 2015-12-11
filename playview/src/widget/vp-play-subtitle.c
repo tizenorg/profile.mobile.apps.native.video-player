@@ -89,15 +89,18 @@ static Evas_Object *_vp_play_subtitle_create_layout(Evas_Object *pParent,
 		VideoLogError("elm_layout_add object is NULL");
 		return NULL;
 	}
+	char edj_path[1024] = {0};
 
+	char *path = app_get_resource_path();
+	snprintf(edj_path, 1024, "%s%s/%s", path, "edje", VP_PLAY_SUBTITLE_EDJ_PATH);
+	free(path);
 	if (nType == VP_SUBTITLE_TYPE_NORMAL) {
-		//bRet = elm_layout_file_set(pObj, VP_PLAY_SUBTITLE_EDJ_PATH, VP_PLAY_EDJ_GROUP_SUBTITLE);
 		bRet =
-		    elm_layout_file_set(pObj, VP_PLAY_SUBTITLE_EDJ_PATH,
+		    elm_layout_file_set(pObj, edj_path,
 		                        VP_PLAY_EDJ_GROUP_SUBTITLE_MULTI);
 	} else if (nType == VP_SUBTITLE_TYPE_MULTI) {
 		bRet =
-		    elm_layout_file_set(pObj, VP_PLAY_SUBTITLE_EDJ_PATH,
+		    elm_layout_file_set(pObj, edj_path,
 		                        VP_PLAY_EDJ_GROUP_SUBTITLE_MULTI);
 	}
 
