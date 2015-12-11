@@ -15,6 +15,7 @@
 *
 */
 #include <glib.h>
+#include <app.h>
 
 #include "vp-play-string-define.h"
 #include "vp-play-value-define.h"
@@ -347,6 +348,10 @@ static bool _vp_subtitle_sync_popup_create_button(Evas_Object *pParent,
 		VideoLogError("pParent is NULL");
 		return FALSE;
 	}
+	char edj_path[1024] = {0};
+
+	char *path = app_get_resource_path();
+	snprintf(edj_path, 1024, "%s/%s/%s", path , "edje", VP_PLAY_RESROUCE_EDJ_PATH);
 
 	SubtitleSyncPopup *pSubtitleSyncPopup =
 	    (SubtitleSyncPopup *) pUserData;
@@ -373,42 +378,42 @@ static bool _vp_subtitle_sync_popup_create_button(Evas_Object *pParent,
 
 	pIcon =
 	    vp_button_create_icon(pSubtitleSyncPopup->pDelButton,
-	                          VP_PLAY_RESROUCE_EDJ_PATH,
+	                          edj_path,
 	                          VP_PLAY_RES_BUTTON_DEL);
 	elm_object_part_content_set(pSubtitleSyncPopup->pDelButton,
 	                            VP_PLAY_SWALLOW_BUTTON_ICON, pIcon);
 
 	pIcon =
 	    vp_button_create_icon(pSubtitleSyncPopup->pDelButton,
-	                          VP_PLAY_RESROUCE_EDJ_PATH,
+	                          edj_path,
 	                          VP_PLAY_RES_BUTTON_DEL_PRESS);
 	elm_object_part_content_set(pSubtitleSyncPopup->pDelButton,
 	                            VP_PLAY_SWALLOW_BUTTON_PRESS_ICON, pIcon);
 
 	pIcon =
 	    vp_button_create_icon(pSubtitleSyncPopup->pDelButton,
-	                          VP_PLAY_RESROUCE_EDJ_PATH,
+	                          edj_path,
 	                          VP_PLAY_RES_BUTTON_DEL);
 	elm_object_part_content_set(pSubtitleSyncPopup->pDelButton,
 	                            VP_PLAY_SWALLOW_BUTTON_DIM_ICON, pIcon);
 
 	pIcon =
 	    vp_button_create_icon(pSubtitleSyncPopup->pAddButton,
-	                          VP_PLAY_RESROUCE_EDJ_PATH,
+	                          edj_path,
 	                          VP_PLAY_RES_BUTTON_ADD);
 	elm_object_part_content_set(pSubtitleSyncPopup->pAddButton,
 	                            VP_PLAY_SWALLOW_BUTTON_ICON, pIcon);
 
 	pIcon =
 	    vp_button_create_icon(pSubtitleSyncPopup->pAddButton,
-	                          VP_PLAY_RESROUCE_EDJ_PATH,
+	                          edj_path,
 	                          VP_PLAY_RES_BUTTON_ADD_PRESS);
 	elm_object_part_content_set(pSubtitleSyncPopup->pAddButton,
 	                            VP_PLAY_SWALLOW_BUTTON_PRESS_ICON, pIcon);
 
 	pIcon =
 	    vp_button_create_icon(pSubtitleSyncPopup->pAddButton,
-	                          VP_PLAY_RESROUCE_EDJ_PATH,
+	                          edj_path,
 	                          VP_PLAY_RES_BUTTON_ADD);
 	elm_object_part_content_set(pSubtitleSyncPopup->pAddButton,
 	                            VP_PLAY_SWALLOW_BUTTON_DIM_ICON, pIcon);
@@ -434,8 +439,12 @@ static Evas_Object *_vp_subtitle_sync_popup_create_layout(Evas_Object *
 		VideoLogError("pLayout object is NULL");
 		return NULL;
 	}
+	char edj_path[1024] = {0};
 
-	elm_layout_file_set(pLayout, VP_PLAY_SPEED_POPUP_EDJ,
+	char *path = app_get_resource_path();
+	snprintf(edj_path, 1024, "%s/%s/%s", path , "edje", VP_PLAY_SPEED_POPUP_EDJ);
+
+	elm_layout_file_set(pLayout, edj_path,
 	                    VP_PLAY_EDJ_GROUP_PLAY_SPEED_POPUP);
 
 	evas_object_size_hint_weight_set(pLayout, EVAS_HINT_EXPAND,

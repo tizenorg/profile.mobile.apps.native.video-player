@@ -16,6 +16,7 @@
 */
 
 #include <glib.h>
+#include <app.h>
 
 #include "vp-util.h"
 #include "vp-file-util.h"
@@ -244,10 +245,14 @@ static Evas_Object *__mp_folder_item_view_init_base_layout(void *pParent)
 	VideoLogInfo("");
 
 	MP_DEL_OBJ(g_pFolderViewWidget->pFolderViewBaselayout);
+	char edj_path[1024] = {0};
+
+	char *path = app_get_resource_path();
+	snprintf(edj_path, 1024, "%s/%s/%s", path , "edje", VIDEO_PLAYER_LISTVIEW_EDJ);
 
 	// Create folder view base layout.
 	g_pFolderViewWidget->pFolderViewBaselayout = elm_layout_add(pParent);
-	elm_layout_file_set(g_pFolderViewWidget->pFolderViewBaselayout, VIDEO_PLAYER_LISTVIEW_EDJ, LISTVIEW_EDJ_GROUP);
+	elm_layout_file_set(g_pFolderViewWidget->pFolderViewBaselayout, edj_path, LISTVIEW_EDJ_GROUP);
 	evas_object_size_hint_weight_set(g_pFolderViewWidget->pFolderViewBaselayout, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
 	evas_object_size_hint_align_set(g_pFolderViewWidget->pFolderViewBaselayout, EVAS_HINT_FILL, EVAS_HINT_FILL);
 	return g_pFolderViewWidget->pFolderViewBaselayout;
@@ -474,9 +479,13 @@ Evas_Object *__mp_folder_item_view_get_icon_of_video_item_cb(void *pUserData, Ev
 
 		char *pThumbIconUri = mp_util_svc_get_video_thumbnail(nVideoItemIndex);
 		Evas_Object *pBg = NULL;
+		char edj_path[1024] = {0};
+
+		char *path = app_get_resource_path();
+		snprintf(edj_path, 1024, "%s/%s/%s", path , "edje", VIDEO_CUSTOM_THEME);
 
 		pLayout = elm_layout_add(pObject);
-		elm_layout_file_set(pLayout, VIDEO_CUSTOM_THEME, "listview.thumbnail.layout");
+		elm_layout_file_set(pLayout, edj_path, "listview.thumbnail.layout");
 
 		if (!pThumbIconUri || !vp_file_exists(pThumbIconUri)) {
 			MP_FREE_STRING(pThumbIconUri);
@@ -984,9 +993,13 @@ void __mp_folder_item_view_search_item_cb(void *pUserData, Evas_Object *pObject,
 Evas_Object *__mp_folder_item_view_create_title_btn(Evas_Object *pParent, Evas_Smart_Cb pFunc)
 {
 	VideoLogInfo("");
+	char edj_path[1024] = {0};
+
+	char *path = app_get_resource_path();
+	snprintf(edj_path, 1024, "%s/%s/%s", path , "edje", VIDEO_PLAYER_IMAGE_NAME_EDJ);
 
 	Evas_Object *search_ic = elm_image_add(pParent);
-	elm_image_file_set(search_ic, VIDEO_PLAYER_IMAGE_NAME_EDJ, VIDEO_LIST_VIEW_ICON_SEARCH);
+	elm_image_file_set(search_ic, edj_path, VIDEO_LIST_VIEW_ICON_SEARCH);
 	elm_image_resizable_set(search_ic, EINA_TRUE, EINA_TRUE);
 	evas_object_show(search_ic);
 

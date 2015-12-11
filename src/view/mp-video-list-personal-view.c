@@ -19,6 +19,7 @@
 #include <Ecore_Evas.h>
 #include <Elementary.h>
 #include <glib.h>
+#include <app.h>
 #include <app_preference.h>
 
 #include "mp-util.h"
@@ -879,6 +880,10 @@ Evas_Object *mp_personal_view_get_icon_of_video_item_cb(const void
 {
 
 	int nVideoItemIndex = (int) pUserData;
+	char edj_path[1024] = {0};
+
+	char *path = app_get_resource_path();
+	snprintf(edj_path, 1024, "%s/%s/%s", path , "edje", VIDEO_PLAYER_IMAGE_NAME_EDJ);
 
 	if (!strcmp(pPart, "elm.thumbnail.icon")) {
 		char *pThumbIconUri =
@@ -938,7 +943,7 @@ Evas_Object *mp_personal_view_get_icon_of_video_item_cb(const void
 		MP_FREE_STRING(pVideoFile);
 		if (bRet) {
 			Evas_Object *pLockIcon = elm_image_add(pObject);
-			elm_image_file_set(pLockIcon, VIDEO_PLAYER_IMAGE_NAME_EDJ,
+			elm_image_file_set(pLockIcon, edj_path,
 					   VIDEO_LIST_VIEW_ICON_PERSONAL_LOCK);
 			evas_object_size_hint_align_set(pLockIcon, EVAS_HINT_FILL,
 							EVAS_HINT_FILL);
@@ -978,6 +983,10 @@ Evas_Object *mp_personal_view_get_icon_of_folder_cb(const void *pUserData,
 		const char *pPart)
 {
 	int nFolderItemIndex = (int) pUserData;
+	char edj_path[1024] = {0};
+
+	char *path = app_get_resource_path();
+	snprintf(edj_path, 1024, "%s/%s/%s", path , "edje", VIDEO_PLAYER_IMAGE_NAME_EDJ);
 
 	if (!strcmp(pPart, "elm.thumbnail.icon")) {
 		Evas_Object *pBg = elm_bg_add(pObject);
@@ -1005,7 +1014,7 @@ Evas_Object *mp_personal_view_get_icon_of_folder_cb(const void *pUserData,
 		MP_FREE_STRING(pFolderoFile);
 		if (bRet) {
 			Evas_Object *pLockIcon = elm_image_add(pObject);
-			elm_image_file_set(pLockIcon, VIDEO_PLAYER_IMAGE_NAME_EDJ,
+			elm_image_file_set(pLockIcon, edj_path,
 					   VIDEO_LIST_VIEW_ICON_PERSONAL_LOCK);
 			evas_object_size_hint_align_set(pLockIcon, EVAS_HINT_FILL,
 							EVAS_HINT_FILL);
@@ -1336,12 +1345,16 @@ Evas_Object *mp_personal_view_init_internal_layout(void *pParent)
 				pPersonalViewBaselayout);
 		g_pListPersonalViewWidget->pPersonalViewBaselayout = NULL;
 	}
+	char edj_path[1024] = {0};
+
+	char *path = app_get_resource_path();
+	snprintf(edj_path, 1024, "%s/%s/%s", path , "edje", VIDEO_PLAYER_REMOVE_LIST_EDJ);
 
 	g_pListPersonalViewWidget->pPersonalViewBaselayout =
 		elm_layout_add(pParent);
 	elm_layout_file_set(g_pListPersonalViewWidget->
 			    pPersonalViewBaselayout,
-			    VIDEO_PLAYER_REMOVE_LIST_EDJ,
+			    edj_path,
 			    REMOVE_LIST_EDJ_GROUP);
 	evas_object_size_hint_weight_set(g_pListPersonalViewWidget->
 					 pPersonalViewBaselayout,

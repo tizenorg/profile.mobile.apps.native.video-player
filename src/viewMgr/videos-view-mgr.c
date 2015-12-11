@@ -274,8 +274,12 @@ void mp_mgr_restart_main_window()
 		elm_exit();
 		return;
 	}
+	char edj_path[1024] = {0};
 
-	elm_layout_file_set(g_WindowData->pMainLayout, VIDEO_BASIC_LAYOUT_EDJ,
+	char *path = app_get_resource_path();
+	snprintf(edj_path, 1024, "%s/%s/%s", path , "edje", VIDEO_BASIC_LAYOUT_EDJ);
+
+	elm_layout_file_set(g_WindowData->pMainLayout, edj_path,
 			    "elm/layout/application/video/default");
 	evas_object_size_hint_weight_set(g_WindowData->pMainLayout,
 					 EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);

@@ -18,6 +18,7 @@
 
 #include <glib.h>
 #include <media_content.h>
+#include <app.h>
 
 #include "mp-util.h"
 #include "video-player.h"
@@ -270,6 +271,10 @@ static Evas_Object *mp_folder_view_get_icon_of_folder_cb(const void
 {
 	int nFolderItemIndex = (int) pUserData;
 	VideoLogInfo("Index : %d", nFolderItemIndex);
+	char edj_path[1024] = {0};
+
+	char *path = app_get_resource_path();
+	snprintf(edj_path, 1024, "%s/%s/%s", path , "edje", VIDEO_CUSTOM_THEME);
 
 	if (!g_strcmp0(pPart, "elm.icon.1")) {
 		VideoLogInfo("pPart: elm.icon.1 - thumbnail");
@@ -281,7 +286,7 @@ static Evas_Object *mp_folder_view_get_icon_of_folder_cb(const void
 						     mp_sort_ctrl_get_sort_state());
 
 		pLayout = elm_layout_add(pObject);
-		elm_layout_file_set(pLayout, VIDEO_CUSTOM_THEME,
+		elm_layout_file_set(pLayout, edj_path,
 				    "listview.thumbnail.layout");
 
 		if (!pThumbIconUri || !vp_file_exists(pThumbIconUri)) {
@@ -335,7 +340,7 @@ static Evas_Object *mp_folder_view_get_icon_of_folder_cb(const void
 		StorageType = mp_util_svc_get_folder_storage(nFolderItemIndex);
 		if (StorageType == MP_MEDIA_TYPE_STORAGE_EXTERNAL) {
 			Evas_Object *pSdcardIcon = elm_image_add(pObject);
-			elm_image_file_set(pSdcardIcon, VIDEO_PLAYER_IMAGE_NAME_EDJ,
+			elm_image_file_set(pSdcardIcon, edj_path,
 					   VIDEO_LIST_VIEW_ICON_FOLDER_SDCARD);
 			evas_object_size_hint_align_set(pSdcardIcon, EVAS_HINT_FILL,
 							EVAS_HINT_FILL);
@@ -364,10 +369,14 @@ Evas_Object *mp_folder_view_get_icon_of_no_folder_item_cb(const void
 	if (!strcmp(pPart, "elm.icon")) {
 		int width = NO_ITEM_GENLIST_WIDTH * elm_config_scale_get();
 		int height = NO_ITEM_GENLIST_HEIGHT * elm_config_scale_get();
+		char edj_path[1024] = {0};
+
+		char *path = app_get_resource_path();
+		snprintf(edj_path, 1024, "%s/%s/%s", path , "edje", VIDEO_PLAYER_NO_ITEM_EDJ);
 
 		Evas_Object *pNoItemLayout = NULL;
 		pNoItemLayout = elm_layout_add(pObject);
-		elm_layout_file_set(pNoItemLayout, VIDEO_PLAYER_NO_ITEM_EDJ,
+		elm_layout_file_set(pNoItemLayout, edj_path,
 				    GENLIST_NOITEM_EDJ_GROUP);
 		evas_object_size_hint_min_set(pNoItemLayout, width, height);
 
@@ -844,10 +853,14 @@ static void __mp_folder_view_respones_delete_popup_cb(void *pUserData,
 	evas_object_size_hint_align_set(pLabel, EVAS_HINT_FILL,
 					EVAS_HINT_FILL);
 	evas_object_show(pLabel);
+	char edj_path[1024] = {0};
+
+	char *path = app_get_resource_path();
+	snprintf(edj_path, 1024, "%s/%s/%s", path , "edje", VIDEO_PLAYER_POPUP_PROGRESSBAR_EDJ);
 
 	Evas_Object *pPopupLayout =
 		elm_layout_add(g_pFolderView->pRemovePopUpHandle);
-	elm_layout_file_set(pPopupLayout, VIDEO_PLAYER_POPUP_PROGRESSBAR_EDJ,
+	elm_layout_file_set(pPopupLayout, edj_path,
 			    "popup_center_text_progressview");
 	evas_object_size_hint_weight_set(pPopupLayout, EVAS_HINT_EXPAND,
 					 EVAS_HINT_EXPAND);

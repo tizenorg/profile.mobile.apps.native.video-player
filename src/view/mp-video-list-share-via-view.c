@@ -19,6 +19,7 @@
 #include <Ecore_Evas.h>
 #include <Elementary.h>
 #include <glib.h>
+#include <app.h>
 
 #include "mp-util.h"
 #include "vp-file-util.h"
@@ -919,6 +920,10 @@ char *mp_share_view_get_label_of_video_item_cb(const void *pUserData, Evas_Objec
 static Evas_Object *__mp_share_view_get_grid_icon_cb(const void *pUserData, Evas_Object *pObject, const char *pPart)
 {
 	int nVideoItemIndex = (int)pUserData;
+	char edj_path[1024] = {0};
+
+	char *path = app_get_resource_path();
+	snprintf(edj_path, 1024, "%s/%s/%s", path , "edje", VIDEO_PLAYER_IMAGE_NAME_EDJ);
 
 	if (!strcmp(pPart, "elm.swallow.icon")) {
 		char *pThumbIconUri = mp_util_svc_get_video_thumbnail(nVideoItemIndex);
@@ -973,7 +978,7 @@ static Evas_Object *__mp_share_view_get_grid_icon_cb(const void *pUserData, Evas
 		if (bRet) {
 			Evas_Object *pLockIcon = elm_image_add(pObject);
 			elm_image_file_set(pLockIcon,
-				VIDEO_PLAYER_IMAGE_NAME_EDJ,
+				edj_path,
 				VIDEO_LIST_VIEW_ICON_PERSONAL_LOCK);
 			evas_object_size_hint_align_set(pLockIcon,
 				EVAS_HINT_FILL, EVAS_HINT_FILL);
@@ -989,7 +994,7 @@ static Evas_Object *__mp_share_view_get_grid_icon_cb(const void *pUserData, Evas
 		if (bRet) {
 			Evas_Object *pDropboxIcon = elm_image_add(pObject);
 			elm_image_file_set(pDropboxIcon,
-				VIDEO_PLAYER_IMAGE_NAME_EDJ,
+				edj_path,
 				VIDEO_LIST_VIEW_ICON_DROPBOX);
 			evas_object_size_hint_align_set(pDropboxIcon,
 				EVAS_HINT_FILL, EVAS_HINT_FILL);
@@ -1035,8 +1040,12 @@ Evas_Object *mp_share_view_get_icon_of_video_item_cb(const void *pUserData,
 			VIDEO_ICON_WIDTH);
 		if (pBg)
 			evas_object_show(pBg);
+		char edj_path[1024] = {0};
 
-		elm_layout_file_set(pLayout, VIDEO_CUSTOM_THEME,
+		char *path = app_get_resource_path();
+		snprintf(edj_path, 1024, "%s/%s/%s", path , "edje", VIDEO_CUSTOM_THEME);
+
+		elm_layout_file_set(pLayout, edj_path,
 			"listview.thumbnail.layout");
 		elm_layout_content_set(pLayout, "elm.thumbnail.icon", pBg);
 
@@ -1490,10 +1499,14 @@ Evas_Object *mp_share_view_create_internal_layout(void *pParent)
 		evas_object_del(g_pShareViaWidget->pChareViaViewBaselayout);
 		g_pShareViaWidget->pChareViaViewBaselayout = NULL;
 	}
+	char edj_path[1024] = {0};
+
+	char *path = app_get_resource_path();
+	snprintf(edj_path, 1024, "%s/%s/%s", path , "edje", VIDEO_PLAYER_REMOVE_LIST_EDJ);
 
 	g_pShareViaWidget->pChareViaViewBaselayout = elm_layout_add(pParent);
 	elm_layout_file_set(g_pShareViaWidget->pChareViaViewBaselayout,
-		VIDEO_PLAYER_REMOVE_LIST_EDJ,
+		edj_path,
 		REMOVE_LIST_EDJ_GROUP);
 	evas_object_size_hint_weight_set(
 		g_pShareViaWidget->pChareViaViewBaselayout,

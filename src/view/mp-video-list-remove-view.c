@@ -19,6 +19,7 @@
 #include <Ecore_Evas.h>
 #include <Elementary.h>
 #include <glib.h>
+#include <app.h>
 
 #include "mp-util.h"
 #include "mp-video-log.h"
@@ -996,6 +997,10 @@ static Evas_Object *__mp_remove_folder_view_get_grid_icon_cb(const void *pUserDa
 static Evas_Object *__mp_remove_view_get_grid_icon_cb(const void *pUserData, Evas_Object *pObject, const char *pPart)
 {
 	int nVideoItemIndex = (int)pUserData;
+	char edj_path[1024] = {0};
+
+	char *path = app_get_resource_path();
+	snprintf(edj_path, 1024, "%s/%s/%s", path , "edje", VIDEO_PLAYER_IMAGE_NAME_EDJ);
 
 	if (!strcmp(pPart, "elm.swallow.icon")) {
 		char *pThumbIconUri = mp_util_svc_get_video_thumbnail(nVideoItemIndex);
@@ -1045,7 +1050,7 @@ static Evas_Object *__mp_remove_view_get_grid_icon_cb(const void *pUserData, Eva
 		MP_FREE_STRING(pVideoFile);
 		if (bRet) {
 			Evas_Object *pLockIcon = elm_image_add(pObject);
-			elm_image_file_set(pLockIcon, VIDEO_PLAYER_IMAGE_NAME_EDJ, VIDEO_LIST_VIEW_ICON_PERSONAL_LOCK);
+			elm_image_file_set(pLockIcon, edj_path, VIDEO_LIST_VIEW_ICON_PERSONAL_LOCK);
 			evas_object_size_hint_align_set(pLockIcon, EVAS_HINT_FILL, EVAS_HINT_FILL);
 			evas_object_size_hint_weight_set(pLockIcon, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
 			evas_object_show(pLockIcon);
@@ -1057,7 +1062,7 @@ static Evas_Object *__mp_remove_view_get_grid_icon_cb(const void *pUserData, Eva
 		bool bRet = mp_util_svc_is_cloud_storage(nVideoItemIndex);
 		if (bRet) {
 			Evas_Object *pDropboxIcon = elm_image_add(pObject);
-			elm_image_file_set(pDropboxIcon, VIDEO_PLAYER_IMAGE_NAME_EDJ, VIDEO_LIST_VIEW_ICON_DROPBOX);
+			elm_image_file_set(pDropboxIcon, edj_path, VIDEO_LIST_VIEW_ICON_DROPBOX);
 			evas_object_size_hint_align_set(pDropboxIcon, EVAS_HINT_FILL, EVAS_HINT_FILL);
 			evas_object_size_hint_weight_set(pDropboxIcon, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
 			evas_object_show(pDropboxIcon);
@@ -1092,9 +1097,13 @@ Evas_Object *mp_remove_view_get_icon_of_video_item_cb(const void *pUserData, Eva
 	if (!strcmp(pPart, "elm.icon.1")) {
 		char *pThumbIconUri = mp_util_svc_get_video_thumbnail(nVideoItemIndex);
 		Evas_Object *pBg = NULL;
+		char edj_path[1024] = {0};
+
+		char *path = app_get_resource_path();
+		snprintf(edj_path, 1024, "%s/%s/%s", path , "edje", VIDEO_CUSTOM_THEME);
 
 		pLayout = elm_layout_add(pObject);
-		elm_layout_file_set(pLayout, VIDEO_CUSTOM_THEME, "listview.thumbnail.layout");
+		elm_layout_file_set(pLayout, edj_path, "listview.thumbnail.layout");
 
 		if (!pThumbIconUri || !vp_file_exists(pThumbIconUri)) {
 			MP_FREE_STRING(pThumbIconUri);
@@ -1767,9 +1776,13 @@ Evas_Object *mp_remove_view_init_internal_layout(void *pParent)
 		evas_object_del(g_pListRemoveViewWidget->pRemoveViewBaselayout);
 		g_pListRemoveViewWidget->pRemoveViewBaselayout = NULL;
 	}
+	char edj_path[1024] = {0};
+
+	char *path = app_get_resource_path();
+	snprintf(edj_path, 1024, "%s/%s/%s", path , "edje", VIDEO_PLAYER_REMOVE_LIST_EDJ);
 
 	g_pListRemoveViewWidget->pRemoveViewBaselayout = elm_layout_add(pParent);
-	elm_layout_file_set(g_pListRemoveViewWidget->pRemoveViewBaselayout, VIDEO_PLAYER_REMOVE_LIST_EDJ, REMOVE_LIST_EDJ_GROUP);
+	elm_layout_file_set(g_pListRemoveViewWidget->pRemoveViewBaselayout, edj_path, REMOVE_LIST_EDJ_GROUP);
 	evas_object_size_hint_weight_set(g_pListRemoveViewWidget->pRemoveViewBaselayout, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
 	evas_object_size_hint_align_set(g_pListRemoveViewWidget->pRemoveViewBaselayout, EVAS_HINT_FILL, EVAS_HINT_FILL);
 

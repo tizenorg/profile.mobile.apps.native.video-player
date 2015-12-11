@@ -30,10 +30,6 @@
 #define VP_LOCAL_STR_PREFIX			"video-player"
 #define VP_SYS_STR_PREFIX			"sys_string"
 
-#define VP_PLAY_PREFIX				"/usr/apps/org.tizen.video-player"
-
-#define VP_PLAY_EDJ_PATH			VP_PLAY_PREFIX"/res/edje"
-
 #define VP_PLAY_IMAGE_BUFFER_PATH		"/opt/usr/media/.video_thumb/.image_buff.jpg"
 
 #define VP_PLAY_SCREEN_SHOT_DIR			"/opt/usr/media/Screenshots"
@@ -44,49 +40,31 @@
 
 
 /* EDJ FILE PATH */
-#define VP_PLAY_CUSTOM_THEME			VP_PLAY_EDJ_PATH"/pv-custom-winset.edj"
-#define VP_PLAY_RESROUCE_EDJ_PATH		VP_PLAY_EDJ_PATH"/pv-resource.edj"
-#define VP_PLAY_POPUP_EDJ_PATH			VP_PLAY_EDJ_PATH"/pv-popup.edj"
+#define VP_PLAY_CUSTOM_THEME			"pv-custom-winset.edj"
+#define VP_PLAY_RESROUCE_EDJ_PATH		"pv-resource.edj"
+#define VP_PLAY_POPUP_EDJ_PATH			"pv-popup.edj"
 
-#define VP_PLAY_NORMAL_MAIN_EDJ			VP_PLAY_EDJ_PATH"/pv-normal-main.edj"
-#define VP_PLAY_NORMAL_TOP_CONTROL_EDJ		VP_PLAY_EDJ_PATH"/pv-normal-top-control.edj"
-#define VP_PLAY_NORMAL_CONTROL_EDJ		VP_PLAY_EDJ_PATH"/pv-normal-control.edj"
-#define VP_PLAY_NORMAL_FUNCTION_EDJ_PATH	VP_PLAY_EDJ_PATH"/pv-normal-function.edj"
+#define VP_PLAY_NORMAL_MAIN_EDJ			"pv-normal-main.edj"
+#define VP_PLAY_NORMAL_TOP_CONTROL_EDJ		"pv-normal-top-control.edj"
+#define VP_PLAY_NORMAL_CONTROL_EDJ		"pv-normal-control.edj"
+#define VP_PLAY_NORMAL_FUNCTION_EDJ_PATH	"pv-normal-function.edj"
 
-#define VP_PLAY_BOOKMARK_EDJ_PATH		VP_PLAY_EDJ_PATH"/pv-bookmark.edj"
-#define VP_PLAY_BOOKMARK_ITEM_EDJ_PATH		VP_PLAY_EDJ_PATH"/pv-bookmark-item.edj"
-#define VP_PLAY_PROGRESSBAR_EDJ_PATH		VP_PLAY_EDJ_PATH"/pv-progressbar.edj"
-#define VP_PLAY_VOLUME_EDJ_PATH			VP_PLAY_EDJ_PATH"/pv-volume.edj"
-#define VP_PLAY_VOLUME_POPUP_EDJ_PATH		VP_PLAY_EDJ_PATH"/pv-volume-popup.edj"
-#define VP_PLAY_BRIGHTNESS_POPUP_EDJ_PATH	VP_PLAY_EDJ_PATH"/pv-brightness-popup.edj"
-#define VP_PLAY_ZOOM_GUIDE_EDJ_PATH		VP_PLAY_EDJ_PATH"/pv-zoom-guide.edj"
-
-
-#define VP_PLAY_SUBTITLE_EDJ_PATH		VP_PLAY_EDJ_PATH"/pv-subtitle.edj"
-
-#define VP_PLAY_TRIM_MAIN_EDJ			VP_PLAY_EDJ_PATH"/pv-trim-main.edj"
-#define VP_PLAY_TRIM_TOP_CONTROL_EDJ		VP_PLAY_EDJ_PATH"/pv-trim-top-control.edj"
-#define VP_PLAY_TRIM_CONTROL_EDJ		VP_PLAY_EDJ_PATH"/pv-trim-control.edj"
-#define VP_PLAY_TRIM_ITEM_EDJ_PATH		VP_PLAY_EDJ_PATH"/pv-trim-item.edj"
-
-#define VP_PLAY_MULTI_MAIN_EDJ			VP_PLAY_EDJ_PATH"/pv-multi-main.edj"
-
-#define VP_PLAY_CHAPTER_MAIN_EDJ		VP_PLAY_EDJ_PATH"/pv-chapter-main-new.edj"
-
-#define VP_PLAY_TAG_BUDDY_EDJ			VP_PLAY_EDJ_PATH"/pv-tag-buddy.edj"
-#define VP_PLAY_TAG_PREVIEW_EDJ			VP_PLAY_EDJ_PATH"/pv-tag-preview.edj"
+#define VP_PLAY_BOOKMARK_EDJ_PATH		"pv-bookmark.edj"
+#define VP_PLAY_BOOKMARK_ITEM_EDJ_PATH		"pv-bookmark-item.edj"
+#define VP_PLAY_PROGRESSBAR_EDJ_PATH		"pv-progressbar.edj"
+#define VP_PLAY_VOLUME_EDJ_PATH			"pv-volume.edj"
+#define VP_PLAY_VOLUME_POPUP_EDJ_PATH		"pv-volume-popup.edj"
+#define VP_PLAY_BRIGHTNESS_POPUP_EDJ_PATH	"pv-brightness-popup.edj"
+#define VP_PLAY_ZOOM_GUIDE_EDJ_PATH		"pv-zoom-guide.edj"
 
 
-#define VP_PLAY_SENSOR_POPUP_EDJ		VP_PLAY_EDJ_PATH"/pv-sensor-popup.edj"
+#define VP_PLAY_SUBTITLE_EDJ_PATH		"pv-subtitle.edj"
 
-#define VP_PLAY_SPEED_POPUP_EDJ			VP_PLAY_EDJ_PATH"/pv-speed-popup.edj"
-#define VP_PLAY_GESTURE_EDJ				VP_PLAY_EDJ_PATH"/pv-gesture.edj"
-#define VP_PLAY_SUBTITLE_COLOR_POPUP_EDJ			VP_PLAY_EDJ_PATH"/pv-subtitle-color-popup.edj"
-#define VP_PLAY_COLORSELECTOR_EDJ			VP_PLAY_EDJ_PATH"/pv-colorselector.edj"
+#define VP_PLAY_MULTI_MAIN_EDJ			"pv-multi-main.edj"
 
-//minicontroller
-#define VP_PLAY_MINICON_EDJ_NAME 		VP_PLAY_EDJ_PATH"/pv-minicontroller.edj"
-
+#define VP_PLAY_SPEED_POPUP_EDJ			"pv-speed-popup.edj"
+#define VP_PLAY_GESTURE_EDJ				"pv-gesture.edj"
+#define VP_PLAY_SUBTITLE_COLOR_POPUP_EDJ		"pv-subtitle-color-popup.edj"
 
 /* EDJ GROUP & SWALLOW*/
 #define VP_PLAY_CUSTOM_LAYOUT_KLASS		"layout"

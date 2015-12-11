@@ -618,9 +618,14 @@ static bool __mp_personal_ctrl_create_progress_popup(Evas_Object *
 		VideoLogError("g_mpPersonalPage is null.");
 		return FALSE;
 	}
+	char edj_path[1024] = {0};
+
+	char *path = app_get_resource_path();
+	snprintf(edj_path, 1024, "%s/%s/%s", path , "edje", VIDEO_PLAYER_POPUP_PROGRESSBAR_EDJ);
+
 	Evas_Object *pPopupLayout =
 		elm_layout_add(g_mpPersonalPage->pPopUpHandle);
-	elm_layout_file_set(pPopupLayout, VIDEO_PLAYER_POPUP_PROGRESSBAR_EDJ,
+	elm_layout_file_set(pPopupLayout, edj_path,
 			    "popup_center_progress_move_copy");
 	evas_object_size_hint_weight_set(pPopupLayout, EVAS_HINT_EXPAND,
 					 EVAS_HINT_EXPAND);

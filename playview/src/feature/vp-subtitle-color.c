@@ -15,6 +15,7 @@
 *
 */
 #include <glib.h>
+#include <app.h>
 
 #include "vp-play-string-define.h"
 #include "vp-play-value-define.h"
@@ -99,6 +100,10 @@ static void __vp_subtitle_color_popup_rotate_cb(void *data,
 		VideoLogError("pSubtitleColor IS null");
 		return;
 	}
+	char edj_path[1024] = {0};
+
+	char *path = app_get_resource_path();
+	snprintf(edj_path, 1024, "%s/%s/%s", path , "edje", VP_PLAY_SUBTITLE_COLOR_POPUP_EDJ);
 #ifndef SUBTITLE_K_FEATURE
 	if (pSubtitleColor->nListCount < VP_POPUP_MIN_ITEMS) {
 		return;
@@ -111,11 +116,11 @@ static void __vp_subtitle_color_popup_rotate_cb(void *data,
 	int nRotation = elm_win_rotation_get(pSubtitleColor->pParent);
 	if (nRotation == 90 || nRotation == 270)
 		elm_layout_file_set(pSubtitleColor->pLayoutOut,
-		                    VP_PLAY_SUBTITLE_COLOR_POPUP_EDJ,
+		                    edj_path,
 		                    "pv.subtitle.scroller.layout.landscape");
 	else
 		elm_layout_file_set(pSubtitleColor->pLayoutOut,
-		                    VP_PLAY_SUBTITLE_COLOR_POPUP_EDJ,
+		                    edj_path,
 		                    "pv.subtitle.scroller.layout");
 #endif
 }
@@ -732,8 +737,12 @@ static Evas_Object
 		VideoLogError("pLayout object is NULL");
 		return NULL;
 	}
+	char edj_path[1024] = {0};
 
-	elm_layout_file_set(pLayout, VP_PLAY_SUBTITLE_COLOR_POPUP_EDJ,
+	char *path = app_get_resource_path();
+	snprintf(edj_path, 1024, "%s/%s/%s", path , "edje", VP_PLAY_SUBTITLE_COLOR_POPUP_EDJ);
+
+	elm_layout_file_set(pLayout, edj_path,
 	                    VP_PLAY_EDJ_GROUP_PLAY_SUBTITLE_COLOR_POPUP);
 
 	evas_object_size_hint_weight_set(pLayout, EVAS_HINT_EXPAND,
@@ -827,6 +836,11 @@ static bool _vp_play_subtitle_color_popup_create_button(Evas_Object *
 		return FALSE;
 	}
 
+	char edj_path[1024] = {0};
+
+	char *path = app_get_resource_path();
+	snprintf(edj_path, 1024, "%s/%s/%s", path , "edje", VP_PLAY_RESROUCE_EDJ_PATH);
+
 	SubtitleColorPopup *pSubtitleColorPopup =
 	    (SubtitleColorPopup *) pUserData;
 
@@ -850,42 +864,42 @@ static bool _vp_play_subtitle_color_popup_create_button(Evas_Object *
 
 	pIcon =
 	    vp_button_create_icon(pSubtitleColorPopup->pDelButton,
-	                          VP_PLAY_RESROUCE_EDJ_PATH,
+	                          edj_path,
 	                          VP_PLAY_RES_BUTTON_DEL);
 	elm_object_part_content_set(pSubtitleColorPopup->pDelButton,
 	                            VP_PLAY_SWALLOW_BUTTON_ICON, pIcon);
 
 	pIcon =
 	    vp_button_create_icon(pSubtitleColorPopup->pDelButton,
-	                          VP_PLAY_RESROUCE_EDJ_PATH,
+	                          edj_path,
 	                          VP_PLAY_RES_BUTTON_DEL_PRESS);
 	elm_object_part_content_set(pSubtitleColorPopup->pDelButton,
 	                            VP_PLAY_SWALLOW_BUTTON_PRESS_ICON, pIcon);
 
 	pIcon =
 	    vp_button_create_icon(pSubtitleColorPopup->pDelButton,
-	                          VP_PLAY_RESROUCE_EDJ_PATH,
+	                          edj_path,
 	                          VP_PLAY_RES_BUTTON_DEL);
 	elm_object_part_content_set(pSubtitleColorPopup->pDelButton,
 	                            VP_PLAY_SWALLOW_BUTTON_DIM_ICON, pIcon);
 
 	pIcon =
 	    vp_button_create_icon(pSubtitleColorPopup->pAddButton,
-	                          VP_PLAY_RESROUCE_EDJ_PATH,
+	                          edj_path,
 	                          VP_PLAY_RES_BUTTON_ADD);
 	elm_object_part_content_set(pSubtitleColorPopup->pAddButton,
 	                            VP_PLAY_SWALLOW_BUTTON_ICON, pIcon);
 
 	pIcon =
 	    vp_button_create_icon(pSubtitleColorPopup->pAddButton,
-	                          VP_PLAY_RESROUCE_EDJ_PATH,
+	                          edj_path,
 	                          VP_PLAY_RES_BUTTON_ADD_PRESS);
 	elm_object_part_content_set(pSubtitleColorPopup->pAddButton,
 	                            VP_PLAY_SWALLOW_BUTTON_PRESS_ICON, pIcon);
 
 	pIcon =
 	    vp_button_create_icon(pSubtitleColorPopup->pAddButton,
-	                          VP_PLAY_RESROUCE_EDJ_PATH,
+	                          edj_path,
 	                          VP_PLAY_RES_BUTTON_ADD);
 	elm_object_part_content_set(pSubtitleColorPopup->pAddButton,
 	                            VP_PLAY_SWALLOW_BUTTON_DIM_ICON, pIcon);
@@ -1110,15 +1124,20 @@ subtitle_color_handle vp_subtitle_color_hex_create(Evas_Object *pParent,
 
 	//Used for scroller layout:
 	//popup->LayoutOut->Scroller->pLayout
+	char edj_path[1024] = {0};
+
+	char *path = app_get_resource_path();
+	snprintf(edj_path, 1024, "%s/%s/%s", path , "edje", VP_PLAY_SUBTITLE_COLOR_POPUP_EDJ);
+
 	pSubtitleColor->pLayoutOut = elm_layout_add(pSubtitleColor->pPopup);
 	int nRotation = elm_win_rotation_get(pSubtitleColor->pParent);
 	if (nRotation == 90 || nRotation == 270)
 		elm_layout_file_set(pSubtitleColor->pLayoutOut,
-		                    VP_PLAY_SUBTITLE_COLOR_POPUP_EDJ,
+		                    edj_path,
 		                    "pv.subtitle.scroller.layout.landscape");
 	else
 		elm_layout_file_set(pSubtitleColor->pLayoutOut,
-		                    VP_PLAY_SUBTITLE_COLOR_POPUP_EDJ,
+		                    edj_path,
 		                    "pv.subtitle.scroller.layout");
 	evas_object_size_hint_weight_set(pSubtitleColor->pLayoutOut,
 	                                 EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);

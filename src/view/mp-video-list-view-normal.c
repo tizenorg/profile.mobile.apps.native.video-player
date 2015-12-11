@@ -433,6 +433,10 @@ Evas_Object *mp_normal_view_get_icon_of_video_item_cb(const void
 	if (!pPart || !pObject) {
 		return NULL;
 	}
+	char edj_path[1024] = {0};
+
+	char *path = app_get_resource_path();
+	snprintf(edj_path, 1024, "%s/%s/%s", path , "edje", VIDEO_CUSTOM_THEME);
 
 	if (!strcmp(pPart, "elm.icon.1")) {
 		VideoLogInfo("pPart: elm.icon.1 - thumbnail");
@@ -442,7 +446,7 @@ Evas_Object *mp_normal_view_get_icon_of_video_item_cb(const void
 		Evas_Object *pBg = NULL;
 
 		pLayout = elm_layout_add(pObject);
-		elm_layout_file_set(pLayout, VIDEO_CUSTOM_THEME,
+		elm_layout_file_set(pLayout, edj_path,
 				    "listview.thumbnail.layout");
 
 		if (!pThumbIconUri || !vp_file_exists(pThumbIconUri)) {
@@ -502,6 +506,10 @@ Evas_Object *mp_normal_view_get_icon_of_no_item_cb(const void *pUserData,
 		Evas_Object *pObject,
 		const char *pPart)
 {
+	char edj_path[1024] = {0};
+
+	char *path = app_get_resource_path();
+	snprintf(edj_path, 1024, "%s/%s/%s", path , "edje", VIDEO_PLAYER_NO_ITEM_EDJ);
 
 	if (!strcmp(pPart, "elm.icon")) {
 		int width = NO_ITEM_GENLIST_WIDTH * elm_config_scale_get();
@@ -509,7 +517,7 @@ Evas_Object *mp_normal_view_get_icon_of_no_item_cb(const void *pUserData,
 
 		Evas_Object *pNoItemLayout = NULL;
 		pNoItemLayout = elm_layout_add(pObject);
-		elm_layout_file_set(pNoItemLayout, VIDEO_PLAYER_NO_ITEM_EDJ,
+		elm_layout_file_set(pNoItemLayout, edj_path,
 				    GENLIST_NOITEM_EDJ_GROUP);
 		evas_object_size_hint_min_set(pNoItemLayout, width, height);
 

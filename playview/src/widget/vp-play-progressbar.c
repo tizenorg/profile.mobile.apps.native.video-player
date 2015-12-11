@@ -15,6 +15,7 @@
 *
 */
 #include <glib.h>
+#include <app.h>
 
 #include "vp-play-type-define.h"
 #include "vp-play-string-define.h"
@@ -188,10 +189,14 @@ static Evas_Object *_vp_play_progressbar_create_layout(Evas_Object *
 		VideoLogError("elm_layout_add object is NULL");
 		return NULL;
 	}
+	char edj_path[1024] = {0};
+
+	char *path = app_get_resource_path();
+	snprintf(edj_path, 1024, "%s/%s/%s", path , "edje", VP_PLAY_PROGRESSBAR_EDJ_PATH);
 
 	if (nType == VIDEO_PROGRESSBAR_TYPE_NORMAL) {
 		bRet =
-		    elm_layout_file_set(pObj, VP_PLAY_PROGRESSBAR_EDJ_PATH,
+		    elm_layout_file_set(pObj, edj_path,
 		                        VP_PLAY_EDJ_GROUP_PROGRESSBAR);
 		if (bRet != EINA_TRUE) {
 			VideoLogError("elm_layout_file_set fail");
