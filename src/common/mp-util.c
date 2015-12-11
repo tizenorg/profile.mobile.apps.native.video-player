@@ -94,8 +94,12 @@ void mp_util_set_color_theme_changed_cb(mpColorThemeChangedCb fChanged)
 void mp_util_create_main_theme(void)
 {
 	mp_util_free_main_theme();
+	char edj_path[1024] = {0};
 
-	elm_theme_extension_add(NULL, VIDEO_CUSTOM_THEME);
+	char *path = app_get_resource_path();
+	snprintf(edj_path, 1024, "%s%s/%s", path, "edje", VIDEO_CUSTOM_THEME);
+	free(path);
+	elm_theme_extension_add(NULL, edj_path);
 }
 
 void mp_util_free_main_theme(void)
@@ -105,11 +109,15 @@ void mp_util_free_main_theme(void)
 	char *pItem = NULL;
 
 	pExtensionThemeList = elm_theme_extension_list_get(NULL);
+	char edj_path[1024] = {0};
 
+	char *path = app_get_resource_path();
+	snprintf(edj_path, 1024, "%s%s/%s", path, "edje", VIDEO_CUSTOM_THEME);
+	free(path);
 	if (pExtensionThemeList) {
 		EINA_LIST_FOREACH((Eina_List *) pExtensionThemeList, l, pItem) {
-			if (pItem != NULL && strcmp(pItem, VIDEO_CUSTOM_THEME) == 0) {
-				elm_theme_extension_del(NULL, VIDEO_CUSTOM_THEME);
+			if (pItem != NULL && strcmp(pItem, edj_path) == 0) {
+				elm_theme_extension_del(NULL, edj_path);
 			}
 		}
 	}
@@ -218,9 +226,13 @@ void *mp_util_create_title_icon_btn(void *pParent, const char *icon_path,
 	}
 	Evas_Object *pIcon = NULL;
 	Evas_Object *pTitleBtn = NULL;
+	char edj_path[1024] = {0};
 
+	char *path = app_get_resource_path();
+	snprintf(edj_path, 1024, "%s%s/%s", path, "edje", VIDEO_PLAYER_IMAGE_NAME_EDJ);
+	free(path);
 	pIcon = elm_image_add((Evas_Object *) pParent);
-	elm_image_file_set(pIcon, VIDEO_PLAYER_IMAGE_NAME_EDJ, icon_path);
+	elm_image_file_set(pIcon, edj_path, icon_path);
 	evas_object_size_hint_aspect_set(pIcon, EVAS_ASPECT_CONTROL_BOTH, 1,
 					 1);
 
@@ -397,9 +409,13 @@ void mp_util_text_and_check_popup(Evas_Smart_Cb response_cb,
 	evas_object_size_hint_align_set(pLabel, EVAS_HINT_FILL,
 					EVAS_HINT_FILL);
 	evas_object_show(pLabel);
+	char edj_path[1024] = {0};
 
+	char *path = app_get_resource_path();
+	snprintf(edj_path, 1024, "%s%s/%s", path, "edje", VIDEO_PLAYER_POPUP_PROGRESSBAR_EDJ);
+	free(path);
 	pLayout = elm_layout_add(pPopUpHandle);
-	elm_layout_file_set(pLayout, VIDEO_PLAYER_POPUP_PROGRESSBAR_EDJ,
+	elm_layout_file_set(pLayout, edj_path,
 			    "popup_checkview");
 	evas_object_size_hint_weight_set(pLayout, EVAS_HINT_EXPAND,
 					 EVAS_HINT_EXPAND);
@@ -475,9 +491,13 @@ bool mp_util_loading_popup(MpLoadingPopUpType style, char *szLabel,
 					 EVAS_HINT_EXPAND);
 	elm_progressbar_pulse(progressbar, EINA_TRUE);
 	evas_object_show(progressbar);
+	char edj_path[1024] = {0};
 
+	char *path = app_get_resource_path();
+	snprintf(edj_path, 1024, "%s%s/%s", path, "edje", VIDEO_PLAYER_POPUP_PROGRESSBAR_EDJ);
+	free(path);
 	pLayout = elm_layout_add(pPopUpHandle);
-	elm_layout_file_set(pLayout, VIDEO_PLAYER_POPUP_PROGRESSBAR_EDJ,
+	elm_layout_file_set(pLayout, edj_path,
 			    "popup_processing_1button");
 	evas_object_size_hint_weight_set(pLayout, EVAS_HINT_EXPAND,
 					 EVAS_HINT_EXPAND);
@@ -539,9 +559,13 @@ bool mp_util_loading_left_text_popup(MpLoadingPopUpType style,
 					 EVAS_HINT_EXPAND);
 	elm_progressbar_pulse(progressbar, EINA_TRUE);
 	evas_object_show(progressbar);
+	char edj_path[1024] = {0};
 
+	char *path = app_get_resource_path();
+	snprintf(edj_path, 1024, "%s%s/%s", path, "edje", VIDEO_PLAYER_POPUP_PROGRESSBAR_EDJ);
+	free(path);
 	pLayout = elm_layout_add(pPopUpHandle);
-	elm_layout_file_set(pLayout, VIDEO_PLAYER_POPUP_PROGRESSBAR_EDJ,
+	elm_layout_file_set(pLayout, edj_path,
 			    "popup_processingview_1button");
 	evas_object_size_hint_weight_set(pLayout, EVAS_HINT_EXPAND,
 					 EVAS_HINT_EXPAND);
@@ -1030,10 +1054,14 @@ void *mp_util_create_button_icon(void *pParent, const char *szIconPath,
 	Evas_Object *pIcon = NULL;
 
 	pButton = elm_button_add(pParent);
+	char edj_path[1024] = {0};
 
+	char *path = app_get_resource_path();
+	snprintf(edj_path, 1024, "%s%s/%s", path, "edje", VIDEO_PLAYER_IMAGE_NAME_EDJ);
+	free(path);
 	if (szIconPath) {
 		pIcon = elm_icon_add(pParent);
-		elm_image_file_set(pIcon, VIDEO_PLAYER_IMAGE_NAME_EDJ,
+		elm_image_file_set(pIcon, edj_path,
 				   szIconPath);
 		evas_object_size_hint_aspect_set(pIcon,
 						 EVAS_ASPECT_CONTROL_NEITHER,
@@ -2294,10 +2322,14 @@ Evas_Object *mp_util_create_embedded_progress()
 
 	int w = 0;
 	int h = 0;
+	char edj_path[1024] = {0};
 
+	char *path = app_get_resource_path();
+	snprintf(edj_path, 1024, "%s%s/%s", path, "edje", VIDEO_PLAYER_POPUP_PROGRESSBAR_EDJ);
+	free(path);
 	layout = elm_layout_add(mp_util_get_main_window_handle());
 	Eina_Bool r = FALSE;
-	r = elm_layout_file_set(layout, VIDEO_PLAYER_POPUP_PROGRESSBAR_EDJ,
+	r = elm_layout_file_set(layout, edj_path,
 				"popup_embeded_processing");
 	if (!r) {
 		evas_object_del(layout);
@@ -2471,9 +2503,13 @@ Evas_Object *mp_util_create_folder_icon(void *pParent,
 		VideoLogError("invalid parent and icon path");
 		return NULL;
 	}
+	char edj_path[1024] = {0};
 
+	char *path = app_get_resource_path();
+	snprintf(edj_path, 1024, "%s%s/%s", path, "edje", VIDEO_PLAYER_IMAGE_NAME_EDJ);
+	free(path);
 	Evas_Object *pIcon = elm_image_add(pParent);
-	elm_image_file_set(pIcon, VIDEO_PLAYER_IMAGE_NAME_EDJ,
+	elm_image_file_set(pIcon, edj_path,
 			   (const char *) icon_path);
 	evas_object_size_hint_align_set(pIcon, EVAS_HINT_FILL,
 					EVAS_HINT_FILL);
@@ -2502,16 +2538,20 @@ bool mp_util_create_folder_sub_icon(void *pLayout, int nVideoFolderIndex)
 
 	MpMediaStorageType storageType =
 		mp_util_svc_get_folder_storage(nVideoFolderIndex);
+	char edj_path[1024] = {0};
 
+	char *path = app_get_resource_path();
+	snprintf(edj_path, 1024, "%s%s/%s", path, "edje", VIDEO_PLAYER_IMAGE_NAME_EDJ);
+	free(path);
 	if (storageType == MP_MEDIA_TYPE_STORAGE_INTERNAL) {
-		elm_image_file_set(pIcon, VIDEO_PLAYER_IMAGE_NAME_EDJ,
+		elm_image_file_set(pIcon, edj_path,
 				   VIDEO_LIST_VIEW_ICON_FOLDER_PHONE);
-		elm_image_file_set(pSubIcon, VIDEO_PLAYER_IMAGE_NAME_EDJ,
+		elm_image_file_set(pSubIcon, edj_path,
 				   VIDEO_LIST_VIEW_ICON_FOLDER_PHONE_EF);
 	} else if (storageType == MP_MEDIA_TYPE_STORAGE_DROPBOX) {
-		elm_image_file_set(pIcon, VIDEO_PLAYER_IMAGE_NAME_EDJ,
+		elm_image_file_set(pIcon, edj_path,
 				   VIDEO_LIST_VIEW_ICON_FOLDER_DROPBOX);
-		elm_image_file_set(pSubIcon, VIDEO_PLAYER_IMAGE_NAME_EDJ,
+		elm_image_file_set(pSubIcon, edj_path,
 				   VIDEO_LIST_VIEW_ICON_FOLDER_DROPBOX_EF);
 	} else if (storageType == MP_MEDIA_TYPE_STORAGE_EXTERNAL) {
 	} else {
@@ -2553,11 +2593,15 @@ bool mp_util_create_video_sub_icon(void *pLayout, int nVideoItemIndex)
 
 	MpMediaStorageType storageType =
 		mp_util_svc_get_video_storage(nVideoItemIndex);
+	char edj_path[1024] = {0};
 
+	char *path = app_get_resource_path();
+	snprintf(edj_path, 1024, "%s%s/%s", path, "edje", VIDEO_PLAYER_IMAGE_NAME_EDJ);
+	free(path);
 	if (storageType == MP_MEDIA_TYPE_STORAGE_DROPBOX) {
-		elm_image_file_set(pIcon, VIDEO_PLAYER_IMAGE_NAME_EDJ,
+		elm_image_file_set(pIcon, edj_path,
 				   VIDEO_LIST_VIEW_ICON_FOLDER_DROPBOX);
-		elm_image_file_set(pSubIcon, VIDEO_PLAYER_IMAGE_NAME_EDJ,
+		elm_image_file_set(pSubIcon, edj_path,
 				   VIDEO_LIST_VIEW_ICON_FOLDER_DROPBOX_EF);
 	} else if (storageType == MP_MEDIA_TYPE_STORAGE_EXTERNAL) {
 	} else {
