@@ -1177,13 +1177,22 @@ static void _vp_play_view_init_config(PlayView *pPlayView)
 		VideoLogError("play view handle is NULL");
 		return;
 	}
+	char edj_path[1024] = {0};
 
-	elm_theme_extension_add(NULL, VP_PLAY_CUSTOM_THEME);
+	char *path = app_get_resource_path();
+	snprintf(edj_path, 1024, "%s%s/%s", path, "edje", VP_PLAY_CUSTOM_THEME);
+
+	elm_theme_extension_add(NULL, edj_path);
 }
 
 static void _vp_play_view_deinit_config(PlayView *pPlayView)
 {
-	elm_theme_extension_del(NULL, VP_PLAY_CUSTOM_THEME);
+	char edj_path[1024] = {0};
+
+	char *path = app_get_resource_path();
+	snprintf(edj_path, 1024, "%s%s/%s", path, "edje", VP_PLAY_CUSTOM_THEME);
+
+	elm_theme_extension_del(NULL, edj_path);
 }
 
 static void _vp_play_view_create_volume_timer(PlayView *pPlayView)
