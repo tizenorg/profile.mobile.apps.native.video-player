@@ -15,6 +15,7 @@
 *
 */
 
+#include <tzplatform_config.h>
 
 #ifndef _VIDEO_VALUE_DEFINE_
 #define  _VIDEO_VALUE_DEFINE_
@@ -50,6 +51,12 @@
 #undef LOCALEDIR
 #endif
 
+static inline char* full_path(char *str1, char *str2) {
+	char path[1024] = {};
+	snprintf(path, 1024, "%s%s", str1, str2);
+	return path;
+}
+
 //#define VIDEO_UTIL_PERSONAL_HEAD_STR		"/opt/usr/media/PersonalPage"
 #define VIDEO_UTIL_PERSONAL_HEAD_STR			"/opt/storage/PersonalStorage"
 
@@ -60,10 +67,12 @@
 #define LOCALEDIR							"/usr/apps/org.tizen.videos/res/locale"
 
 #define VIDEO_BOOKMARK_DIR					"/opt"PREFIX"/data"
-#define VIDEO_THUMB_DATA_DIR				"/opt/usr/media/.video_thumb"
-#define VIDEO_TRIM_DATA_DIR					"/opt/usr/media/.video_thumb"
-#define VIDEO_DOWNLOAD_FILE_DIR				"/opt/usr/media/Videos"
-#define VIDEO_CHAPTER_VIEW_DATA_DIR			"/opt/usr/media/.video_thumb"
+
+#define PHONE_FOLDER 						tzplatform_getenv(TZ_USER_CONTENT)
+#define VIDEO_THUMB_DATA_DIR				full_path(PHONE_FOLDER, "/.video_thumb")
+#define VIDEO_TRIM_DATA_DIR					full_path(PHONE_FOLDER, "/.video_thumb")
+#define VIDEO_DOWNLOAD_FILE_DIR				full_path(PHONE_FOLDER, "/Videos")
+#define VIDEO_CHAPTER_VIEW_DATA_DIR			full_path(PHONE_FOLDER, "/.video_thumb")
 
 #define VIDEO_LIST_VIEW_ICON_VIDEO_DEFAULT	"player_library_list_thumbnail_default.png"
 #define VIDEO_LIST_VIEW_ICON_SEARCH			"icon/T01_2_icon_search.png"
@@ -625,7 +634,7 @@
 
 //video wall
 #define MP_VIDEO_WALL_START_POSITION		0
-#define MP_VIDEO_WALL_DIR					"/opt/usr/media/.video_wall"
+#define MP_VIDEO_WALL_DIR					full_path(PHONE_FOLDER, "/.video_wall")
 #define	MP_VIDEO_WALL_FRAME_FILE_PREFIX		"%s/.frame_buff.jpg"
 #define	MP_VIDEO_WALL_GEN_FILE_NAME_PREFIX		"%s/preview.3gp"
 

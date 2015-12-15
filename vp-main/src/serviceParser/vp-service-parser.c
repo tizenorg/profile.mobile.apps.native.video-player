@@ -19,6 +19,7 @@
 #include <string.h>
 #include <app_preference.h>
 #include <Ecore_File.h>
+#include <tzplatform_config.h>
 
 #include "vp-media-content-util.h"
 
@@ -63,7 +64,15 @@
 #define VP_VIDEO_DATA_TITLE 			"slink/title"
 #define VP_VIDEO_DATA_DURATION 			"slink/duration"
 
-#define VP_DEFAULT_VIDEO_ITEM_URL_STR 			"/opt/usr/media/Videos/Color.mp4"
+static inline char* full_path(char *str1, char *str2) {
+	char path[1024] = {};
+	snprintf(path, 1024, "%s%s", str1, str2);
+	return path;
+}
+
+#define PHONE_FOLDER 					tzplatform_getenv(TZ_USER_CONTENT)
+
+#define VP_DEFAULT_VIDEO_ITEM_URL_STR 			full_path(PHONE_FOLDER, "/Videos/Color.mp4")
 
 #define VP_VIDEO_FILE_PREFIX		"file://"
 
