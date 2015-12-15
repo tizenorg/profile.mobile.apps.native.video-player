@@ -87,9 +87,9 @@ static char *__vp_detail_genlist_text_get_cb(const void *pUserData,
 
 	VideoLogWarning("%s : %s", pPart, szTxt);
 
-	if (!strcmp(pPart, "elm.text.main.left.top")) {
+	if (!strcmp(pPart, "elm.text")) {
 		return strdup(szTxt);
-	} else if (!strcmp(pPart, "elm.text.sub.left.bottom")) {
+	} else if (!strcmp(pPart, "elm.text.sub")) {
 
 		DetailPopup *pDetailPopup =
 		    (DetailPopup *) evas_object_data_get(pObj,
@@ -289,7 +289,7 @@ static bool _vp_detail_add_genlist_item(Evas_Object *pObj,
 	}
 
 	pDetailPopup->st_Detail_Itc->version = ELM_GENLIST_ITEM_CLASS_VERSION;
-	pDetailPopup->st_Detail_Itc->item_style = "2line.top";
+	pDetailPopup->st_Detail_Itc->item_style = "type1";
 	pDetailPopup->st_Detail_Itc->func.text_get =
 	    (void *) __vp_detail_genlist_text_get_cb;
 	pDetailPopup->st_Detail_Itc->func.content_get = NULL;
