@@ -41,6 +41,7 @@
 #include <net_connection.h>
 #include <telephony.h>
 #include <wifi-direct.h>
+#include <tzplatform_config.h>
 
 #include "mp-util.h"
 #include "mp-video-log.h"
@@ -62,10 +63,10 @@ enum VIDEO_PLAYER_FILE_SIZE_TYPE {
 };
 
 
-#define MP_UTIL_PHONE_PATH 						"/opt/usr/media"
+#define PHONE_FOLDER 						tzplatform_getenv(TZ_USER_CONTENT)
 #define MP_UTIL_SD_PATH							"/opt/storage/sdcard"
 #define MP_UTIL_USB_PATH						"/opt/storage/usb"
-#define MP_UTIL_MEDIA_DIR						"/opt/usr/media/Videos"
+#define MP_UTIL_MEDIA_DIR						PHONE_FOLDER"/Videos"
 
 #define MP_UTIL_FILE_PREFIX						"file://"
 
@@ -1638,8 +1639,8 @@ char *mp_util_get_dir_by_path(const char *file_path)
 	if (!dir_path)
 		return NULL;
 
-	if (!strncmp(dir_path, MP_UTIL_PHONE_PATH, strlen(MP_UTIL_PHONE_PATH))) {
-		head_dir = MP_UTIL_PHONE_PATH;
+	if (!strncmp(dir_path, PHONE_FOLDER, strlen(PHONE_FOLDER))) {
+		head_dir = PHONE_FOLDER;
 		location = VIDEOS_FOLDERVIEW_BODY_DEVICE_MEMORY;
 	} else if (!strncmp(dir_path, MP_UTIL_SD_PATH, strlen(MP_UTIL_SD_PATH))) {
 		head_dir = MP_UTIL_SD_PATH;

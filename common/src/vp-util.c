@@ -19,12 +19,14 @@
 #include <string.h>
 #include <libintl.h>
 #include <device/power.h>
+#include <tzplatform_config.h>
 
 
 #include "vp-util.h"
 
-#define PHONE_FOLDER			"/opt/usr/media"
-#define CLOUD_FOLDER			"/opt/usr/media/.cloud"
+
+#define PHONE_FOLDER 			tzplatform_getenv(TZ_USER_CONTENT)
+#define CLOUD_FOLDER			PHONE_FOLDER"/.cloud"
 
 #define MEMORY_FOLDER			"/opt/storage/sdcard"
 #define OTG_FOLDER			"/opt/storage/usb"

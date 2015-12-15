@@ -23,6 +23,7 @@
 
 #include <metadata_extractor.h>
 #include <image_util.h>
+#include <tzplatform_config.h>
 
 #include "mp-util.h"
 #include "mp-video-log.h"
@@ -34,7 +35,8 @@
 #include "vp-file-util.h"
 #include "vp-util.h"
 
-#define CAMERA_FOLDER_PATH	"/opt/usr/media/Camera"
+#define PHONE_FOLDER 		tzplatform_getenv(TZ_USER_CONTENT)
+#define CAMERA_FOLDER_PATH	PHONE_FOLDER"/Camera"
 
 
 static Eina_List *VideoFolderList = NULL;

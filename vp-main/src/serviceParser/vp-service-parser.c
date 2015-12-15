@@ -62,8 +62,9 @@
 #define VP_VIDEO_DATA_POSITION 			"slink/position"
 #define VP_VIDEO_DATA_TITLE 			"slink/title"
 #define VP_VIDEO_DATA_DURATION 			"slink/duration"
+#define PHONE_FOLDER 					tzplatform_getenv(TZ_USER_CONTENT)
 
-#define VP_DEFAULT_VIDEO_ITEM_URL_STR 			"/opt/usr/media/Videos/Color.mp4"
+#define VP_DEFAULT_VIDEO_ITEM_URL_STR 			PHONE_FOLDER"/Videos/Color.mp4"
 
 #define VP_VIDEO_FILE_PREFIX		"file://"
 

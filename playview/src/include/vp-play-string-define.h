@@ -19,6 +19,7 @@
 #pragma once
 
 #include <app.h>
+#include <tzplatform_config.h>
 
 #define VP_PLAY_FILE_PREFIX		"file://"
 
@@ -26,15 +27,16 @@
 /* window name */
 #define VP_PLAY_MAIN_WINDOW_NAME		"video-player"
 #define VP_PLAY_MAIN_MULTI_WINDOW_NAME		"multi_view"
+#define PHONE_FOLDER 						tzplatform_getenv(TZ_USER_CONTENT)
 
 #define VP_LOCAL_STR_PREFIX			"video-player"
 #define VP_SYS_STR_PREFIX			"sys_string"
 
-#define VP_PLAY_IMAGE_BUFFER_PATH		"/opt/usr/media/.video_thumb/.image_buff.jpg"
+#define VP_PLAY_IMAGE_BUFFER_PATH		PHONE_FOLDER"/.video_thumb/.image_buff.jpg"
 
-#define VP_PLAY_SCREEN_SHOT_DIR			"/opt/usr/media/Screenshots"
+#define VP_PLAY_SCREEN_SHOT_DIR			PHONE_FOLDER"/Screenshots"
 
-#define VP_PLAY_MEDIA_DIR					"/opt/usr/media/Videos"
+#define VP_PLAY_MEDIA_DIR					PHONE_FOLDER"/Videos"
 #define VP_PLAY_PERSONAL_HEAD_STR			"/opt/storage/PersonalStorage"
 #define VP_ROOT_PATH_MMC			"/opt/storage/sdcard"
 
