@@ -89,7 +89,7 @@ static char *__vp_subtitle_size_genlist_text_get_cb(const void *pUserData,
 		return NULL;
 	}
 
-	if (!strcmp(pPart, "elm.text.main.left")) {
+	if (!strcmp(pPart, "elm.text")) {
 
 		char *szTxt = (char *) pUserData;
 		char szTmp[VP_STRING_LEN_MAX] = { 0, };
@@ -124,7 +124,7 @@ static Evas_Object *__vp_subtitle_size_genlist_content_get_cb(const void
 
 	char *szTxt = (char *) pUserData;
 
-	if (!strcmp(pPart, "elm.icon.right")) {
+	if (!strcmp(pPart, "elm.swallow.end")) {
 		Evas_Object *pRadioObj = NULL;
 
 		SubtitleSizePopup *pSubtitleSize =
@@ -319,7 +319,7 @@ static bool _vp_subtitle_size_add_genlist_item(Evas_Object *pObj,
 	if (pSubtitleSize->st_SubtitleSize_Itc != NULL) {
 		pSubtitleSize->st_SubtitleSize_Itc->version =
 		    ELM_GENLIST_ITEM_CLASS_VERSION;
-		pSubtitleSize->st_SubtitleSize_Itc->item_style = "1line";
+		pSubtitleSize->st_SubtitleSize_Itc->item_style = "type1";
 		pSubtitleSize->st_SubtitleSize_Itc->func.text_get =
 		    (void *) __vp_subtitle_size_genlist_text_get_cb;
 		pSubtitleSize->st_SubtitleSize_Itc->func.content_get =

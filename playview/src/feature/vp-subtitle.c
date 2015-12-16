@@ -328,16 +328,16 @@ static char *__vp_subtitle_genlist_text_get_cb(const void *pUserData, Evas_Objec
 	}
 
 	if (!g_strcmp0(VP_PLAY_STRING_SETTINGS, szTxt)) {
-		if (!strcmp(pPart, "elm.text.main")) {
+		if (!strcmp(pPart, "elm.text")) {
 			return strdup(szTxt);
 		}
 	}
 
 	if (!g_strcmp0(VP_PLAY_STRING_SUBTITLE_SELECT_SUBTITLES, szTxt)
 	        || !g_strcmp0(VP_PLAY_STRING_SUBTITLE_ALIGNMENT, szTxt) || !g_strcmp0(VP_PLAY_STRING_SUBTITLE_SIZE, szTxt)) {
-		if (!strcmp(pPart, "elm.text.main.left.top")) {
+		if (!strcmp(pPart, "elm.text")) {
 			return strdup(szTxt);
-		} else if (!strcmp(pPart, "elm.text.sub.left.bottom")) {
+		} else if (!strcmp(pPart, "elm.text.sub")) {
 			SubtitlePopup *pSubtitle = (SubtitlePopup *)evas_object_data_get(pObj , VP_SUBTITLE_GENLIST_DATA_KEY);
 			if (pSubtitle == NULL) {
 				VideoLogWarning("evas_object_data_get is fail");
@@ -508,7 +508,7 @@ static Evas_Object *__vp_subtitle_genlist_content_get_cb(void *data, Evas_Object
 	}
 	VideoLogWarning("part = %s", part);
 
-	if (!strcmp(part, "elm.icon")) {
+	if (!strcmp(part, "elm.swallow.icon")) {
 		if (!g_strcmp0(VP_PLAY_STRING_PREVIEW_SUBTITLE_CC, (char *)data)) {
 			Evas_Object *pCaption = _vp_subtitle_create_caption_layout(pSubtitle, obj);
 			evas_object_size_hint_align_set(pCaption, EVAS_HINT_FILL, EVAS_HINT_FILL);
@@ -517,7 +517,7 @@ static Evas_Object *__vp_subtitle_genlist_content_get_cb(void *data, Evas_Object
 		}
 	}
 
-	if (!strcmp(part, "elm.icon.right")) {
+	if (!strcmp(part, "elm.swallow.end")) {
 		if (!g_strcmp0(VP_PLAY_STRING_ACTIVATION, (char *)data)) {
 			Evas_Object *pCheck = NULL;
 			pCheck	= elm_check_add(obj);
@@ -816,7 +816,7 @@ static bool _vp_subtitle_add_genlist_item(Evas_Object *pObj, void *pUserData)
 
 	if (pSubtitle->st_Subtitle_Itc_1 != NULL) {
 		pSubtitle->st_Subtitle_Itc_1->version = ELM_GENLIST_ITEM_CLASS_VERSION;
-		pSubtitle->st_Subtitle_Itc_1->item_style = "1line";
+		pSubtitle->st_Subtitle_Itc_1->item_style = "type1";
 		pSubtitle->st_Subtitle_Itc_1->func.text_get = (void *)__vp_subtitle_genlist_text_get_cb;
 		pSubtitle->st_Subtitle_Itc_1->func.content_get = (void *)__vp_subtitle_genlist_content_get_cb;
 		pSubtitle->st_Subtitle_Itc_1->func.state_get = NULL;
@@ -827,7 +827,7 @@ static bool _vp_subtitle_add_genlist_item(Evas_Object *pObj, void *pUserData)
 
 	if (pSubtitle->st_Subtitle_Itc_2 != NULL) {
 		pSubtitle->st_Subtitle_Itc_2->version = ELM_GENLIST_ITEM_CLASS_VERSION;
-		pSubtitle->st_Subtitle_Itc_2->item_style = "2line.top";
+		pSubtitle->st_Subtitle_Itc_2->item_style = "type1";
 		pSubtitle->st_Subtitle_Itc_2->func.text_get = (void *)__vp_subtitle_genlist_text_get_cb;
 		pSubtitle->st_Subtitle_Itc_2->func.content_get = NULL;
 		pSubtitle->st_Subtitle_Itc_2->func.state_get = NULL;
@@ -848,7 +848,7 @@ static bool _vp_subtitle_add_genlist_item(Evas_Object *pObj, void *pUserData)
 	if (pSubtitle->st_Subtitle_Itc_groupindex != NULL) {
 		pSubtitle->st_Subtitle_Itc_groupindex = elm_genlist_item_class_new();
 		pSubtitle->st_Subtitle_Itc_groupindex->version = ELM_GENLIST_ITEM_CLASS_VERSION;
-		pSubtitle->st_Subtitle_Itc_groupindex->item_style = "groupindex";
+		pSubtitle->st_Subtitle_Itc_groupindex->item_style = "group_index";
 		pSubtitle->st_Subtitle_Itc_groupindex->func.text_get = (void *)__vp_subtitle_genlist_text_get_cb;
 		pSubtitle->st_Subtitle_Itc_groupindex->func.content_get = NULL;
 		pSubtitle->st_Subtitle_Itc_groupindex->func.state_get = NULL;
