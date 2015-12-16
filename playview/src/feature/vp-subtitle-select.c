@@ -84,7 +84,7 @@ static char *__vp_subtitle_select_genlist_text_get_cb(const void *pUserData, Eva
 
 	const char *szTxt = (const char *)pUserData;
 
-	if (!strcmp(pPart, "elm.text.main.left")) {
+	if (!strcmp(pPart, "elm.text")) {
 		const char *szFileName = vp_file_get(szTxt);
 		if (szFileName) {
 			return strdup(szFileName);
@@ -103,7 +103,7 @@ static Evas_Object *__vp_subtitle_select_genlist_content_get_cb(const void *pUse
 
 	char *szTxt = (char *)pUserData;
 
-	if (!strcmp(pPart, "elm.icon.right")) {
+	if (!strcmp(pPart, "elm.swallow.end")) {
 		Evas_Object *pRadioObj = NULL;
 
 		SubtitleSelectPopup *pSubtitleSelect = (SubtitleSelectPopup *)evas_object_data_get(pObj , VP_SUBTITLE_SELECT_GENLIST_DATA_KEY);
@@ -340,7 +340,7 @@ static bool _vp_subtitle_select_add_genlist_item(Evas_Object *pObj, void *pUserD
 
 	if (pSubtitleSelect->st_SubtitleSelect_Itc != NULL) {
 		pSubtitleSelect->st_SubtitleSelect_Itc->version = ELM_GENLIST_ITEM_CLASS_VERSION;
-		pSubtitleSelect->st_SubtitleSelect_Itc->item_style = "1line";
+		pSubtitleSelect->st_SubtitleSelect_Itc->item_style = "type1";
 		pSubtitleSelect->st_SubtitleSelect_Itc->func.text_get = (void *)__vp_subtitle_select_genlist_text_get_cb;
 		pSubtitleSelect->st_SubtitleSelect_Itc->func.content_get = (void *)__vp_subtitle_select_genlist_content_get_cb;
 		pSubtitleSelect->st_SubtitleSelect_Itc->func.state_get = NULL;

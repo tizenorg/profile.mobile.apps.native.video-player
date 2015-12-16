@@ -96,7 +96,7 @@ static char *__vp_subtitle_alignment_genlist_text_get_cb(const void
 
 	char *szTxt = (char *) pUserData;
 
-	if (!strcmp(pPart, "elm.text.main.left")) {
+	if (!strcmp(pPart, "elm.text")) {
 		return strdup(szTxt);
 	}
 
@@ -115,7 +115,7 @@ static Evas_Object *__vp_subtitle_alignment_genlist_content_get_cb(const
 
 	char *szTxt = (char *) pUserData;
 
-	if (!strcmp(pPart, "elm.icon.right")) {
+	if (!strcmp(pPart, "elm.swallow.end")) {
 		Evas_Object *pRadioObj = NULL;
 
 		SubtitleAlignmentPopup *pSubtitleAlignment =
@@ -324,7 +324,7 @@ static bool _vp_subtitle_alignment_add_genlist_item(Evas_Object *pObj,
 	if (pSubtitleAlignment->st_SubtitleAlignment_Itc != NULL) {
 		pSubtitleAlignment->st_SubtitleAlignment_Itc->version =
 		    ELM_GENLIST_ITEM_CLASS_VERSION;
-		pSubtitleAlignment->st_SubtitleAlignment_Itc->item_style = "1line";
+		pSubtitleAlignment->st_SubtitleAlignment_Itc->item_style = "type1";
 		pSubtitleAlignment->st_SubtitleAlignment_Itc->func.text_get =
 		    (void *) __vp_subtitle_alignment_genlist_text_get_cb;
 		pSubtitleAlignment->st_SubtitleAlignment_Itc->func.content_get =
