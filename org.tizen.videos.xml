@@ -48,5 +48,6 @@
 		<privilege>http://tizen.org/privilege/network.get</privilege>
 		<privilege>http://tizen.org/privilege/volume.set</privilege>
 		<privilege>http://tizen.org/privilege/appmanager.launch</privilege>
+		<privilege>http://tizen.org/privilege/content.write</privilege>
 	</privileges>
 </manifest>
