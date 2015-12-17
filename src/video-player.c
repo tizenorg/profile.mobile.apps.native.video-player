@@ -175,7 +175,7 @@ static void appControl(app_control_h pAppSvcHandle, void *pUserData)
 	val_layout = NULL;
 
 	char *operation = NULL;
-	int nRet = service_get_operation(pAppSvcHandle, &operation);
+	int nRet = app_control_get_operation(pAppSvcHandle, &operation);
 	if (nRet == APP_CONTROL_ERROR_NONE &&
 	        strcmp(operation,
 	               "http://tizen.org/appcontrol/operation/main") == 0) {
