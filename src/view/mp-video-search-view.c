@@ -518,7 +518,7 @@ char *mp_search_view_get_label_of_video_item_cb(const void *pUserData, Evas_Obje
 
 	int nVideoItemIndex = (int)pUserData;
 
-	if (!strcmp(pPart, "elm.text.main.left.top"))
+	if (!strcmp(pPart, "elm.text"))
 	{
 		char *szTitle = NULL;
 		char *szTitleUtf8 = NULL;
@@ -556,7 +556,7 @@ char *mp_search_view_get_label_of_video_item_cb(const void *pUserData, Evas_Obje
 
 		return szTitleUtf8;
 	}
-	else if (!strcmp(pPart, "elm.text.sub.left.bottom"))
+	else if (!strcmp(pPart, "elm.text.sub"))
 	{
 		return mp_util_svc_get_duration_str_time(nVideoItemIndex);
 	}
@@ -587,7 +587,7 @@ char *mp_search_view_get_label_of_video_item_cb(const void *pUserData, Evas_Obje
 
 Evas_Object *mp_search_view_get_icon_of_video_item_cb(const void *pUserData, Evas_Object *pObject, const char *pPart)
 {
-	if (!strcmp(pPart, "elm.icon.1"))
+	if (!strcmp(pPart, "elm.swallow.icon"))
 	{
 		VideoLogError("pPart: elm.icon.1 - thumbnail");
 
@@ -1091,7 +1091,7 @@ void __mp_search_view_append_video_items(void *pVideosGenlist, bool bSearchedVie
 	int nVideoListSize = mp_util_svc_get_number_of_video_item_by_type();
 
 //	VideoSearch_Itc.item_style = "video/search_list";
-	VideoSearch_Itc.item_style = "2line.top";
+	VideoSearch_Itc.item_style = "type1";
 	VideoSearch_Itc.func.text_get = (void*)mp_search_view_get_label_of_video_item_cb;
 	VideoSearch_Itc.func.content_get = (void*)mp_search_view_get_icon_of_video_item_cb;
 	VideoSearch_Itc.func.state_get = NULL;
@@ -1594,7 +1594,7 @@ static void __mp_search_view_update_video_items(Evas_Object *pGenlist, int nGenI
 		elm_genlist_item_selected_set(pTmpVideoGenlistItem, EINA_FALSE);
 		int nLastPlayedTime = mp_util_svc_get_video_last_played_pos(nPlayVideoIndex);
 		int nDurationTime = mp_util_svc_get_video_duration_time(nPlayVideoIndex);
-		Evas_Object *pIconContent = elm_object_item_part_content_get(pTmpVideoGenlistItem, "elm.icon.1");
+		Evas_Object *pIconContent = elm_object_item_part_content_get(pTmpVideoGenlistItem, "elm.swallow.icon");
 		if (!pIconContent)
 		{
 			VideoLogError("");
@@ -1615,7 +1615,7 @@ static void __mp_search_view_update_video_items(Evas_Object *pGenlist, int nGenI
 			}
 			if (!pProgressbar)
 			{
-				elm_genlist_item_fields_update(pTmpVideoGenlistItem, "elm.icon.1", ELM_GENLIST_ITEM_FIELD_CONTENT);
+				elm_genlist_item_fields_update(pTmpVideoGenlistItem, "elm.swallow.icon", ELM_GENLIST_ITEM_FIELD_CONTENT);
 			}
 			else
 			{
@@ -1631,7 +1631,7 @@ static void __mp_search_view_update_video_items(Evas_Object *pGenlist, int nGenI
 			}
 		}
 
-		elm_genlist_item_fields_update(pTmpVideoGenlistItem, "elm.text.sub.left.bottom", ELM_GENLIST_ITEM_FIELD_TEXT);
+		elm_genlist_item_fields_update(pTmpVideoGenlistItem, "elm.text.sub", ELM_GENLIST_ITEM_FIELD_TEXT);
 	}
 
 }
