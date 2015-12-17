@@ -2726,7 +2726,7 @@ styles {
 						to: "elm.padding.left";
 					}
 					rel2 {
-						relative: 1 1;
+						relative: 1 0;
 						to: "elm.padding.left";
 					}
 					min: LITE_GENLIST_ICON_CUSTOM_THUMBNAIL_WIDTH LITE_GENLIST_ICON_CUSTOM_THUMBNAIL_HEIGHT;
