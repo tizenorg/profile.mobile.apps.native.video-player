@@ -1806,10 +1806,6 @@ int mp_util_rename_file(const char *old_path, const char *new_path,
 		return -1;
 	}
 
-	if (mp_util_set_dest_file(VIDEO_DOWNLOAD_FILE_DIR) == -1) {
-		VideoLogInfo("mp_util_set_dest_file failed");
-		return -1;
-	}
 	szNewPath = g_strdup(new_path);
 	szExt = strrchr(new_path, '.');
 
