@@ -132,7 +132,7 @@ static char *mp_sort_ctrl_get_label_of_genlist_cb(const void *pUserData, Evas_Ob
 static Evas_Object *mp_sort_ctrl_get_icon_of_genlist_cb(const void *pUserData, Evas_Object *pObject, const char *pPart)
 {
 	int nIndex = (int)pUserData;
-	Evas_Object *pLayout = NULL;
+	//Evas_Object *pLayout = NULL;
 	Evas_Object *pTmpRadio = NULL;
 	if (!g_pSortCtrlHandle)
 	{
@@ -142,10 +142,11 @@ static Evas_Object *mp_sort_ctrl_get_icon_of_genlist_cb(const void *pUserData, E
 
 	if (!strcmp(pPart, "elm.swallow.end") || !strcmp(pPart, "elm.icon.2"))
 	{
-		pLayout = elm_layout_add(pObject);
-		pTmpRadio = elm_radio_add(pLayout);
+		//pLayout = elm_layout_add(pObject);
+		//pTmpRadio = elm_radio_add(pLayout);
+		pTmpRadio = elm_radio_add(pObject);
 
-		elm_layout_theme_set(pLayout, "layout", "list/C/type.2", "default");
+		//elm_layout_theme_set(pLayout, "layout", "list/C/type.2", "default");
 		elm_radio_state_value_set(pTmpRadio, nIndex);
 		elm_radio_group_add(pTmpRadio, g_pSortCtrlHandle->pGroupRadio);
 
@@ -156,13 +157,14 @@ static Evas_Object *mp_sort_ctrl_get_icon_of_genlist_cb(const void *pUserData, E
 		}
 //		elm_object_signal_callback_add(pTmpRadio, "elm,action,show,finished", "elm", __mp_sort_ctrl_select_radio_cb, (void *)pUserData);
 		evas_object_smart_callback_add(pTmpRadio, "changed", __mp_sort_ctrl_select_radio_cb, (void *)pUserData);
-		elm_object_part_content_set(pLayout, "elm.swallow.content", pTmpRadio);
+		//elm_object_part_content_set(pLayout, "elm.swallow.content", pTmpRadio);
 
 		evas_object_show(pTmpRadio);
-		evas_object_show(pLayout);
+		//evas_object_show(pLayout);
 	}
 
-	return pLayout;
+	//return pLayout;
+	return pTmpRadio;
 }
 
 static void __mp_sort_ctrl_btn_asc_cb(void *pUserData, Evas_Object *pObject, void *pEventInfo)
