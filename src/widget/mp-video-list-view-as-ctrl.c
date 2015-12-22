@@ -142,10 +142,11 @@ static Evas_Object *__mp_view_as_ctrl_get_icon_of_genlsit_item_cb(const void *pU
 
 	if (!strcmp(pPart, "elm.swallow.end") || !strcmp(pPart, "elm.icon.2"))
 	{
-		pLayout = elm_layout_add(pObject);
-		elm_layout_theme_set(pLayout, "layout", "list/C/type.2", "default");
+		//pLayout = elm_layout_add(pObject);
+		//elm_layout_theme_set(pLayout, "layout", "list/C/type.2", "default");
 
-		pTmpRadio = elm_radio_add(pLayout);
+		//pTmpRadio = elm_radio_add(pLayout);
+		pTmpRadio = elm_radio_add(pObject);
 		elm_radio_state_value_set(pTmpRadio, nIndex);
 		elm_radio_group_add(pTmpRadio, g_pViewAsHandle->pGroupRadio);
 
@@ -156,13 +157,14 @@ static Evas_Object *__mp_view_as_ctrl_get_icon_of_genlsit_item_cb(const void *pU
 		}
 
 		evas_object_smart_callback_add(pTmpRadio, "changed", __mp_view_as_ctrl_select_radio_cb, (void *)pUserData);
-		elm_layout_content_set(pLayout, "elm.swallow.content", pTmpRadio);
+		//elm_layout_content_set(pLayout, "elm.swallow.content", pTmpRadio);
 
 		evas_object_show(pTmpRadio);
-		evas_object_show(pLayout);
+		//evas_object_show(pLayout);
 
 	}
-	return pLayout;
+	//return pLayout;
+	return pTmpRadio;
 
 }
 
