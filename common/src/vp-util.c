@@ -23,10 +23,10 @@
 
 #include "vp-util.h"
 
-#define PHONE_FOLDER			"/opt/usr/media"
+#define PHONE_FOLDER			"/home/owner/content"
 #define CLOUD_FOLDER			"/opt/usr/media/.cloud"
 
-#define MEMORY_FOLDER			"/opt/storage/sdcard"
+#define MEMORY_FOLDER			"/usr/storage/sdcard"
 #define OTG_FOLDER			"/opt/storage/usb"
 #define PERSONAL_PAGE_FOLDER		"/opt/storage/PersonalStorage"
 #define PKGNAME 			"videos"
