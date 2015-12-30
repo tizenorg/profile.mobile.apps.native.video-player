@@ -33,6 +33,7 @@ pkg_check_modules(${PROJECT_NAME}_pkgs REQUIRED
 	dlog
 	sqlite3
 	capi-content-media-content
+	storage
 )
 
 FOREACH(flag ${${PROJECT_NAME}_pkgs_CFLAGS})

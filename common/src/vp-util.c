@@ -19,14 +19,12 @@
 #include <string.h>
 #include <libintl.h>
 #include <device/power.h>
-
+#include <storage.h>
 
 #include "vp-util.h"
 
-#define PHONE_FOLDER			"/opt/usr/media"
 #define CLOUD_FOLDER			"/opt/usr/media/.cloud"
 
-#define MEMORY_FOLDER			"/opt/storage/sdcard"
 #define OTG_FOLDER			"/opt/storage/usb"
 #define PERSONAL_PAGE_FOLDER		"/opt/storage/PersonalStorage"
 #define PKGNAME 			"videos"
@@ -90,19 +88,31 @@ static Vp_Storage __vp_util_get_storage_type(const char *filepath)
 		return VP_STORAGE_NONE;
 	}
 
+	char* PHONE_FOLDER = NULL;
+	char* MEMORY_FOLDER = NULL;
+	Vp_Storage store_type = VP_STORAGE_NONE;
+
+	storage_get_root_directory(STORAGE_TYPE_INTERNAL, &PHONE_FOLDER);
+	storage_get_root_directory(STORAGE_TYPE_EXTERNAL, &MEMORY_FOLDER);
+
 	if (g_str_has_prefix(filepath, CLOUD_FOLDER)) {
-		return VP_STORAGE_CLOUD;/*store in cloud server*/
+		store_type = VP_STORAGE_CLOUD;/*store in cloud server*/
 	} else if (g_str_has_prefix(filepath, PHONE_FOLDER)) {
-		return VP_STORAGE_PHONE;/*store in phone*/
+		store_type = VP_STORAGE_PHONE;/*store in phone*/
 	} else if (g_str_has_prefix(filepath, MEMORY_FOLDER)) {
-		return VP_STORAGE_MMC;	/*store in MMC*/
+		store_type = VP_STORAGE_MMC;	/*store in MMC*/
 	} else if (g_str_has_prefix(filepath, OTG_FOLDER)) {
-		return VP_STORAGE_OTG; /*store in OTG*/
+		store_type = VP_STORAGE_OTG; /*store in OTG*/
 	} else if (g_str_has_prefix(filepath, PERSONAL_PAGE_FOLDER)) {
-		return VP_STORAGE_PERSONAL_PAGE; /*store in persona page*/
+		store_type = VP_STORAGE_PERSONAL_PAGE; /*store in persona page*/
 	} else {
-		return VP_STORAGE_NONE;
+		store_type = VP_STORAGE_NONE;
 	}
+
+	free(PHONE_FOLDER);
+	free(MEMORY_FOLDER);
+
+	return store_type;
 }
 
 static char *__vp_util_get_logic_path(const char *full_path)
@@ -111,8 +121,13 @@ static char *__vp_util_get_logic_path(const char *full_path)
 		return NULL;
 	}
 
+	char* PHONE_FOLDER = NULL;
+	char* MEMORY_FOLDER = NULL;
 	Vp_Storage store_type = VP_STORAGE_NONE;
 	int root_len = 0;
+
+	storage_get_root_directory(STORAGE_TYPE_INTERNAL, &PHONE_FOLDER);
+	storage_get_root_directory(STORAGE_TYPE_EXTERNAL, &MEMORY_FOLDER);
 
 	store_type = __vp_util_get_storage_type(full_path);
 
@@ -130,8 +145,14 @@ static char *__vp_util_get_logic_path(const char *full_path)
 		root_len = strlen(PERSONAL_PAGE_FOLDER);
 		break;
 	default:
+		free(PHONE_FOLDER);
+		free(MEMORY_FOLDER);
 		return NULL;
 	}
+
+	free(PHONE_FOLDER);
+	free(MEMORY_FOLDER);
+
 	/*size of path is DIR_PATH_LEN_MAX+1*/
 	char *logic_path = NULL;
 	logic_path = (char *)malloc(DIR_PATH_LEN_MAX + 1);
