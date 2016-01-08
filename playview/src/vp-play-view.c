@@ -1359,6 +1359,7 @@ static bool _vp_play_view_init_layout(PlayView *pPlayView)
 	}
 
 	elm_win_alpha_set(pPlayView->pWin, EINA_TRUE);
+	elm_win_shaped_set(pPlayView->pWin, EINA_TRUE);
 
 	evas_object_smart_callback_add(pPlayView->pWin, "wm,rotation,changed", __vp_play_rotate_changed_cb, pPlayView);
 
