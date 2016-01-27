@@ -672,9 +672,7 @@ void mp_rename_ctrl_delete_handle(void)
 	MP_FREE_STRING(g_pRenameHandle->szTempName);
 	//evas_object_smart_callback_del(mp_util_get_main_conformat(), "virtualkeypad,state,on", __mp_rename_ctrl_popup_sip_on_cb);
 	//evas_object_smart_callback_del(mp_util_get_main_conformat(), "virtualkeypad,state,off", __mp_rename_ctrl_popup_sip_off_cb);
-	Evas_Object *pTopNaviFrame = NULL;
-	pTopNaviFrame = elm_naviframe_item_pop(g_pRenameHandle->pNaviFrameHandle);
-	evas_object_del(pTopNaviFrame);
+
 	MP_FREE_STRING(g_pRenameHandle);
 }
 
