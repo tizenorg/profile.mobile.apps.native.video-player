@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<manifest xmlns="http://tizen.org/ns/packages" package="org.tizen.videos" version="1.0.39" install-location="internal-only" api-version="2.4">
+<manifest xmlns="http://tizen.org/ns/packages" package="org.tizen.videos" version="1.0.39" install-location="internal-only" api-version="3.0">
 	<label>Videos</label>
 	<author email="yoechan.song@samsung.com" href="www.samsung.com">Yochan Song</author>
 	<description>Videos Application</description>
