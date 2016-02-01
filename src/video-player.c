@@ -18,8 +18,7 @@
 
 #include <app.h>
 #include <glib.h>
-#include <appcore-common.h>
-
+//#include <appcore-common.h>
 #include <system_settings.h>
 #include "video-player.h"
 #include "videos-view-mgr.h"

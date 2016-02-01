@@ -27,7 +27,7 @@
 #include <media_key.h>
 #include <vconf-keys.h>
 #include <Elementary.h>
-#include <appcore-common.h>
+//#include <appcore-common.h>
 
 #include <notification.h>
 #include <media_content.h>
