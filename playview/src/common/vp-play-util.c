@@ -17,7 +17,6 @@
 
 #include <regex.h>
 //#include <Ecore_X.h>
-#include <shortcut.h>
 #include <efl_extension.h>
 #include <errno.h>
 #include <notification.h>

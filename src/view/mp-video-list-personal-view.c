@@ -1567,26 +1567,26 @@ static void __mp_personal_view_db_changed_cb(void *pUserData)
 
 }
 
-static void __mp_personal_view_personal_vconf_cb(keynode_t *pKeyNode,
+/*static void __mp_personal_view_personal_vconf_cb(keynode_t *pKeyNode,
 		void *pUserData)
 {
 	if (g_pListPersonalViewHandle) {
 		elm_naviframe_item_pop(g_pListPersonalViewHandle->
 				       pNaviFrameHandle);
 	}
-}
+}*/
 
 static void __mp_personal_view_register_personal_vconf()
 {
 #ifndef	ENABLE_PERSONAL
 	return;
 #endif
-	if (vconf_notify_key_changed
-			(MP_UTIL_VCONF_KEY_PERSONAL_TAG,
-			 __mp_personal_view_personal_vconf_cb, NULL) < 0) {
-		VideoLogInfo
-		("Fail to register MP_UTIL_VCONF_KEY_PERSONAL_TAG key callback");
-	}
+//	if (vconf_notify_key_changed
+//			(MP_UTIL_VCONF_KEY_PERSONAL_TAG,
+//			 __mp_personal_view_personal_vconf_cb, NULL) < 0) {
+//		VideoLogInfo
+//		("Fail to register MP_UTIL_VCONF_KEY_PERSONAL_TAG key callback");
+//	}
 }
 
 static void __mp_personal_view_ignore_personal_vconf()
@@ -1594,11 +1594,11 @@ static void __mp_personal_view_ignore_personal_vconf()
 #ifndef	ENABLE_PERSONAL
 	return;
 #endif
-	if (vconf_ignore_key_changed
-			(MP_UTIL_VCONF_KEY_PERSONAL_TAG,
-			 __mp_personal_view_personal_vconf_cb) < 0) {
-		VideoLogInfo("Fail to vconf_ignore_key_changed callback");
-	}
+//	if (vconf_ignore_key_changed
+//			(MP_UTIL_VCONF_KEY_PERSONAL_TAG,
+//			 __mp_personal_view_personal_vconf_cb) < 0) {
+//		VideoLogInfo("Fail to vconf_ignore_key_changed callback");
+//	}
 }
 
 static void __mp_personal_select_all_layout_down_cb(void *data,

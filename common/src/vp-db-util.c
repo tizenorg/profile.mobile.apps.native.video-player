@@ -17,6 +17,7 @@
 
 #include "vp-db-common.h"
 #include "vp-db-util.h"
+#include "app_common.h"
 
 static sqlite3 *g_sqlite3_handle = NULL;
 static int g_nRefCount = 0;
@@ -44,7 +45,7 @@ static sqlite3 *_vp_db_util_connect_db()
 	}
 	char db_path[1024] = {0,};
 	snprintf(db_path, 1024, "%s%s", app_path, ".video-thumb.db");
-	vp_dbgI("db_path: %s", db_path);
+	//vp_dbgI("db_path: %s", db_path);
 
 	/*Connect DB */
 	ret = sqlite3_open(db_path, &pSqlite);

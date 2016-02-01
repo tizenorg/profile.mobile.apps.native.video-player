@@ -75,7 +75,7 @@
 
 #include "vp-multi-path.h"
 
-#include "VppDownload.h"
+//#include "VppDownload.h"
 
 #include "vp-device-language.h"
 
@@ -339,7 +339,7 @@ typedef struct _NormalView {
 	bool				bLockScreen;
 	char				*szScreenMirrorMacAddr;
 
-	VppDownloadHandle		pDownloadHandle;
+	//VppDownloadHandle		pDownloadHandle;
 	bool				bVideoOnlyMode;
 	bool				bDeviceRemoveInterrupt;
 
@@ -478,7 +478,7 @@ static void _vp_play_normal_view_on_play_speed_popup(NormalView *pNormalView);
 static void _vp_play_normal_view_on_play_speed_popup_cb(void *data, Evas_Object *obj, const char *emission, const char *source);
 static void _vp_play_normal_view_on_volume_popup(NormalView *pNormalView, bool bToggle);
 static void _vp_play_normal_view_on_bookmark_mode(NormalView *pNormalView, bool bShow);
-static void _vp_play_normal_view_download_sdp(NormalView *pNormalView, char *szSdpPath);
+//static void _vp_play_normal_view_download_sdp(NormalView *pNormalView, char *szSdpPath);
 
 static void _vp_play_normal_view_show_rotate(NormalView *pNormalView);
 static void _vp_play_normal_view_show_volume(NormalView *pNormalView);
@@ -6035,54 +6035,54 @@ static Eina_Bool __vp_normal_naviframe_pop_cb(void *pUserData, Elm_Object_Item *
 	return EINA_FALSE;
 }
 
-static void __vp_normal_sdp_download_state_change_cb(VppDownloadHandle pDownloadHandle, VppDownloadState eState, const char *szPath, void *pUserData)
-{
-	VideoLogWarning("eState : [%d]", eState);
-
-	if (!pUserData) {
-		VideoLogError("pUserData is NULL");
-		return;
-	}
-
-	NormalView *pNormalView = (NormalView *)pUserData;
-
-	if (!pDownloadHandle) {
-		VideoLogError("pDownloadHandle == NULL!!!");
-		return;
-	}
-
-	if (eState == VPP_DOWNLOAD_STATE_COMPLETED) {
-		char *szDownloadedFilePath = VppDownloadGetDownloadedFilePath(pDownloadHandle);
-
-		if (szDownloadedFilePath) {
-			VideoLogWarning("szDownloadedFilePath : %s", szDownloadedFilePath);
-			VP_FREE(pNormalView->szMediaURL);
-			pNormalView->szMediaURL =  g_strdup(szDownloadedFilePath);
-		}
-
-		VP_FREE(szDownloadedFilePath);
-		if (!vp_mm_player_realize_async(pNormalView->pPlayerHandle, pNormalView->szMediaURL)) {
-			VideoLogError("vp_mm_player_realize_async fail");
-			VppDownloadDestroyItem(pNormalView->pDownloadHandle);
-			pNormalView->pDownloadHandle = NULL;
-			return;
-		}
-
-		VppDownloadDestroyItem(pNormalView->pDownloadHandle);
-		pNormalView->pDownloadHandle = NULL;
-	} else if (eState == VPP_DOWNLOAD_STATE_FAILED || eState == VPP_DOWNLOAD_STATE_CANCELED) {
-		if (!vp_mm_player_realize_async(pNormalView->pPlayerHandle, pNormalView->szMediaURL)) {
-
-			VppDownloadDestroyItem(pNormalView->pDownloadHandle);
-			pNormalView->pDownloadHandle = NULL;
-
-			VideoLogError("vp_mm_player_realize_async fail");
-			return;
-		}
-		VppDownloadDestroyItem(pNormalView->pDownloadHandle);
-		pNormalView->pDownloadHandle = NULL;
-	}
-}
+//static void __vp_normal_sdp_download_state_change_cb(VppDownloadHandle pDownloadHandle, VppDownloadState eState, const char *szPath, void *pUserData)
+//{
+//	VideoLogWarning("eState : [%d]", eState);
+//
+//	if (!pUserData) {
+//		VideoLogError("pUserData is NULL");
+//		return;
+//	}
+//
+//	NormalView *pNormalView = (NormalView *)pUserData;
+//
+//	if (!pDownloadHandle) {
+//		VideoLogError("pDownloadHandle == NULL!!!");
+//		return;
+//	}
+//
+//	if (eState == VPP_DOWNLOAD_STATE_COMPLETED) {
+//		char *szDownloadedFilePath = VppDownloadGetDownloadedFilePath(pDownloadHandle);
+//
+//		if (szDownloadedFilePath) {
+//			VideoLogWarning("szDownloadedFilePath : %s", szDownloadedFilePath);
+//			VP_FREE(pNormalView->szMediaURL);
+//			pNormalView->szMediaURL =  g_strdup(szDownloadedFilePath);
+//		}
+//
+//		VP_FREE(szDownloadedFilePath);
+//		if (!vp_mm_player_realize_async(pNormalView->pPlayerHandle, pNormalView->szMediaURL)) {
+//			VideoLogError("vp_mm_player_realize_async fail");
+//			VppDownloadDestroyItem(pNormalView->pDownloadHandle);
+//			pNormalView->pDownloadHandle = NULL;
+//			return;
+//		}
+//
+//		VppDownloadDestroyItem(pNormalView->pDownloadHandle);
+//		pNormalView->pDownloadHandle = NULL;
+//	} else if (eState == VPP_DOWNLOAD_STATE_FAILED || eState == VPP_DOWNLOAD_STATE_CANCELED) {
+//		if (!vp_mm_player_realize_async(pNormalView->pPlayerHandle, pNormalView->szMediaURL)) {
+//
+//			VppDownloadDestroyItem(pNormalView->pDownloadHandle);
+//			pNormalView->pDownloadHandle = NULL;
+//
+//			VideoLogError("vp_mm_player_realize_async fail");
+//			return;
+//		}
+//		VppDownloadDestroyItem(pNormalView->pDownloadHandle);
+//		pNormalView->pDownloadHandle = NULL;
+//	}
+//}
 
 static void __vp_normal_main_layout_resize_cb(void *pUserData, Evas *pEvas, Evas_Object *pObj, void *pEvent)
 {
@@ -7049,7 +7049,7 @@ static bool _vp_play_normal_view_play_start(NormalView *pNormalView, bool bCheck
 			char *szSdpPath = NULL;
 			szSdpPath = vp_play_util_get_sdp_url((const char *)pNormalView->szMediaURL);
 			if (vp_play_util_check_sdp_url((const char *)szSdpPath)) {
-				_vp_play_normal_view_download_sdp(pNormalView, pNormalView->szMediaURL);
+				//_vp_play_normal_view_download_sdp(pNormalView, pNormalView->szMediaURL);
 				//_vp_play_normal_view_show_layout(pNormalView);
 
 				return TRUE;
@@ -9353,52 +9353,52 @@ static void _vp_play_normal_view_on_bookmark_mode(NormalView *pNormalView, bool 
 	}
 }
 
-static void _vp_play_normal_view_download_sdp(NormalView *pNormalView, char *szSdpPath)
-{
-	if (!pNormalView) {
-		VideoLogError("pNormalView is NULL");
-		return;
-	}
-
-	if (!szSdpPath) {
-		VideoLogError("szSubtitlePath is NULL");
-		return;
-	}
-
-	if (pNormalView->pDownloadHandle) {
-		VppDownloadDestroyItem(pNormalView->pDownloadHandle);
-		pNormalView->pDownloadHandle = NULL;
-	}
-
-	VppDownloadCallback pFunc = {0,};
-
-	pFunc.stateChangedCb = __vp_normal_sdp_download_state_change_cb;
-
-	VideoSecureLogDebug(" ############### %s ##########################", szSdpPath);
-
-	char *app_path = app_get_data_path();
-	if (!app_path) {
-		VideoLogError("cannot retrieve app install path");
-		return;
-	}
-	char db_path[1024] = {0,};
-	snprintf(db_path, 1024, "%s%s", app_path, "sdp");
-	VideoLogError("db_path: %s", db_path);
-
-
-	pNormalView->pDownloadHandle = VppDownloadCreateItem(szSdpPath, db_path, NULL, VPP_DOWNLOAD_ITEM_TYPE_VIDEO_FILE, pFunc, (void *)pNormalView);
-
-	if (!pNormalView->pDownloadHandle) {
-		VideoLogError("pDownloadHandle is NULL");
-		return;
-	}
-
-	if (!VppDownloadRequestAppend(pNormalView->pDownloadHandle)) {
-		VideoLogError("VppDownloadRequestAppend is fail");
-		return;
-	}
-
-}
+//static void _vp_play_normal_view_download_sdp(NormalView *pNormalView, char *szSdpPath)
+//{
+//	if (!pNormalView) {
+//		VideoLogError("pNormalView is NULL");
+//		return;
+//	}
+//
+//	if (!szSdpPath) {
+//		VideoLogError("szSubtitlePath is NULL");
+//		return;
+//	}
+//
+//	if (pNormalView->pDownloadHandle) {
+//		VppDownloadDestroyItem(pNormalView->pDownloadHandle);
+//		pNormalView->pDownloadHandle = NULL;
+//	}
+//
+//	VppDownloadCallback pFunc = {0,};
+//
+//	pFunc.stateChangedCb = __vp_normal_sdp_download_state_change_cb;
+//
+//	VideoSecureLogDebug(" ############### %s ##########################", szSdpPath);
+//
+//	char *app_path = app_get_data_path();
+//	if (!app_path) {
+//		VideoLogError("cannot retrieve app install path");
+//		return;
+//	}
+//	char db_path[1024] = {0,};
+//	snprintf(db_path, 1024, "%s%s", app_path, "sdp");
+//	VideoLogError("db_path: %s", db_path);
+//
+//
+//	pNormalView->pDownloadHandle = VppDownloadCreateItem(szSdpPath, db_path, NULL, VPP_DOWNLOAD_ITEM_TYPE_VIDEO_FILE, pFunc, (void *)pNormalView);
+//
+//	if (!pNormalView->pDownloadHandle) {
+//		VideoLogError("pDownloadHandle is NULL");
+//		return;
+//	}
+//
+//	if (!VppDownloadRequestAppend(pNormalView->pDownloadHandle)) {
+//		VideoLogError("VppDownloadRequestAppend is fail");
+//		return;
+//	}
+//
+//}
 
 static void _vp_play_normal_view_all_close_popup(NormalView *pNormalView)
 {
@@ -11024,10 +11024,10 @@ static void _vp_play_normal_view_destroy_handle(NormalView *pNormalView)
 		pNormalView->pBrightnessHandle = NULL;
 	}
 
-	if (pNormalView->pDownloadHandle) {
-		VppDownloadDestroyItem(pNormalView->pDownloadHandle);
-		pNormalView->pDownloadHandle = NULL;
-	}
+//	if (pNormalView->pDownloadHandle) {
+//		VppDownloadDestroyItem(pNormalView->pDownloadHandle);
+//		pNormalView->pDownloadHandle = NULL;
+//	}
 
 	VP_EVAS_PIPE_DEL(pNormalView->pPreparePipe);
 	VP_EVAS_PIPE_DEL(pNormalView->pSeekPipe);

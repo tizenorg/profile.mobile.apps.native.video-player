@@ -18,14 +18,12 @@
 
 #include <stdbool.h>
 #include <Elementary.h>
-#include <vconf.h>
 #include <system_settings.h>
 #include <runtime_info.h>
 #include <wifi.h>
 
 
 typedef void (*KeyChangedCbFunc)(void *pNode, void* pUserData);
-typedef void (*NetworkChangedCb)(keynode_t *key, void *data);
 
 
 bool vp_play_config_get_rotate_lock_status(bool *bLocked);

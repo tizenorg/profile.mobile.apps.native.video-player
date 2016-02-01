@@ -19,6 +19,7 @@
 #include <app_preference.h>
 #include <telephony.h>
 #include <wifi-direct.h>
+#include <vconf.h>
 #include "vp-play-config.h"
 
 /* check temp */

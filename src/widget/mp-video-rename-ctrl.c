@@ -495,7 +495,7 @@ Evas_Object *mp_rename_ctrl_show(void *pNaviFrameHandle, void *pUserData, mpRena
 
 	char *pVideoFile = mp_util_svc_get_video_url(g_pRenameHandle->nVideoIndex);
 	char *szFileExt = mp_info_ctrl_get_file_extension(pVideoFile);
-	g_pRenameHandle->bPersonalType = mp_util_check_video_personal_status((const char*)pVideoFile);
+	//g_pRenameHandle->bPersonalType = mp_util_check_video_personal_status((const char*)pVideoFile);
 
 	mp_widget_ctrl_disable_navi_handle_focus_except_item(g_pRenameHandle->pNaviFrameHandle, NULL);
 
