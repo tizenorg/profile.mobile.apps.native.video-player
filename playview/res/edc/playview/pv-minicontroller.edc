@@ -225,7 +225,7 @@ program { \
 program { \
 	source: __btn; \
 	signal: "mouse,down,1"; \
-	action: PLAY_SAMPLE "button-pressed" 1.0; \
+	action: RUN_PLUGIN "touch_sound_plugin"; \
 	after:  __btn"_after_down"; \
 	transition: ACCELERATE 0.02;\
 } \
@@ -259,12 +259,13 @@ program { \
 
 collections {
 
-sounds {
-	sample {
-		name: "button-pressed" AS_IS;
-		source: "button-pressed.wav";
+plugins {
+	plugin {
+		name: "touch_sound_plugin";
+		source: "feedback";
+		param: "FEEDBACK_TYPE_SOUND FEEDBACK_PATTERN_TAP";
+		}
 	}
-}
 
 group {
 	name: "video-minicontroller";
@@ -535,7 +536,7 @@ group {
 			name: "albumart_cb_down";
 			source: "albumart_image";
 			signal: "mouse,down,1";
-			action: PLAY_SAMPLE "button-pressed" 1.0;
+			action: RUN_PLUGIN "touch_sound_plugin";
 			after:	"albumart_cb_after_down";
 			transition: ACCELERATE 0.02;
 		}
@@ -826,7 +827,7 @@ group {
 			name: "albumart_cb_down";
 			source: "albumart_image";
 			signal: "mouse,down,1";
-			action: PLAY_SAMPLE "button-pressed" 1.0;
+			action: RUN_PLUGIN "touch_sound_plugin";
 			after:	"albumart_cb_after_down";
 			transition: ACCELERATE 0.02;
 		}

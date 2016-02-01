@@ -87,14 +87,6 @@
          max: -1 GENLIST_BTN_01_HEIGHT;
 
 
-sounds {
-   sample {
-	  name: "touch_sound" RAW;
-	  source: "button-pressed.wav";
-   }
-}
-
-
 #define STYLE_TAG \
       tag:  "br" "\n";\
       tag:  "ps" "ps";\
@@ -1099,11 +1091,6 @@ styles {
             new st[31]; \
             new Float:vl; \
             get_state(PART:SRC, st, 30, vl); \
-            if (!strcmp(st, "selected") || \
-                !strcmp(st, "top_selected") || \
-                !strcmp(st, "center_selected") || \
-                !strcmp(st, "bottom_selected")) \
-               play_sample("touch_sound", 1.0); \
          } \
       }
 

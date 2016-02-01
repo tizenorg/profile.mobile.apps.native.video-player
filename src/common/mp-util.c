@@ -19,15 +19,12 @@
 #include <app.h>
 #include <glib.h>
 #include <errno.h>
-#include <vconf.h>
 #include <unistd.h>
 #include <signal.h>
 #include <stdbool.h>
-#include <shortcut.h>
 #include <media_key.h>
-#include <vconf-keys.h>
 #include <Elementary.h>
-#include <appcore-common.h>
+//#include <appcore-common.h>
 
 #include <notification.h>
 #include <media_content.h>
@@ -1738,37 +1735,12 @@ char *mp_util_get_folder_icon_path(int nVideoFolderIndex)
 
 bool mp_util_get_personal_status(void)
 {
-	int bOpened = FALSE;
-
-#ifndef	ENABLE_PERSONAL
-	return bOpened;
-#endif
-	int nErr = 0;
-	nErr = vconf_get_bool(MP_UTIL_VCONF_KEY_PERSONAL_TAG, &bOpened);
-	if (nErr != 0) {
-		VideoLogError("MP_UTIL_VCONF_KEY_PERSONAL_TAG is fail [0x%x]",
-			      nErr);
-		bOpened = FALSE;
-	}
-	VideoLogInfo("mp_util_get_personal_status = %d", bOpened);
-
-	return (bool) bOpened;
+	return FALSE;
 }
 
 bool mp_util_check_video_personal_status(const char *szPreviewUrl)
 {
-	Eina_Bool bRet = EINA_FALSE;
-#ifndef	ENABLE_PERSONAL
-	return bRet;
-#endif
-	if (szPreviewUrl) {
-		bRet =
-			eina_str_has_prefix(szPreviewUrl,
-					    VIDEO_UTIL_PERSONAL_HEAD_STR);
-	}
-	VideoSecureLogInfo("eina_str_has_prefix=%s:%d", szPreviewUrl,
-			   (int) bRet);
-	return (bool) bRet;
+	return FALSE;
 }
 
 static int __mp_util_is_file_exist(const char *fullpath)

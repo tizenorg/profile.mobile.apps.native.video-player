@@ -45,7 +45,7 @@
 #endif
 #include "vp-multi-path.h"
 
-#include "VppDownload.h"
+//#include "VppDownload.h"
 #include "vp-play-ug.h"
 
 /* check temp */

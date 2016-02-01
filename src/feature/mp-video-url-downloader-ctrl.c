@@ -23,6 +23,7 @@
 #include "mp-util.h"
 #include "mp-video-log.h"
 #include "mp-video-string-define.h"
+#include "mp-video-value-define.h"
 #include "mp-video-url-downloader-ctrl.h"
 #include "vp-file-util.h"
 

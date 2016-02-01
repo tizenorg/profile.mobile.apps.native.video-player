@@ -121,7 +121,7 @@ static int __mp_util_move_get_remain_space(const char *path, unsigned long long 
 	return 0;
 }
 
-inline bool __mp_util_move_check_exist(const char *path)
+bool __mp_util_move_check_exist(const char *path)
 {
 	if (path && (access(path, F_OK) == 0)) {
 		return true;

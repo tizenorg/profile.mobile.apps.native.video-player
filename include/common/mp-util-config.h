@@ -19,7 +19,6 @@
 
 #include <stdbool.h>
 #include <Elementary.h>
-#include <vconf.h>
 #include <app_preference.h>
 
 bool mp_util_config_set_multi_play_status(bool bMultiPlay);
