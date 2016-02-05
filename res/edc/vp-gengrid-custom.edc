@@ -512,13 +512,13 @@ group { name: "elm/gengrid/item/video/default_grid/default";
       }
 
       programs {
-		GENGRID_PROGRAM_ITEM_SELECT_VI_EFFECT(
+		/*GENGRID_PROGRAM_ITEM_SELECT_VI_EFFECT(
 		   target: "bg";
 		   //target: "item_bg";
 		   target: "elm.swallow.icon.bg";
 		   target: "elm.swallow.icon";
 		   target: "elm.swallow.end";
-		)
+		)*/
          program { name: "go_mouse_down";
             signal: "mouse,down,1";
             source: "reorder_bg";
@@ -532,7 +532,7 @@ group { name: "elm/gengrid/item/video/default_grid/default";
 			script {
 			   if (get_int(selected)) {
 				  set_int(selected, 0);
-				  run_program(PROGRAM:"vi_zoom_out");
+				  //run_program(PROGRAM:"vi_zoom_out");
 			   }
 			}
             transition: DECELERATE 0.2;
@@ -560,7 +560,7 @@ group { name: "elm/gengrid/item/video/default_grid/default";
 			script {
 			   if (!get_int(selected)) {
 				  set_int(selected, 1);
-				  run_program(PROGRAM:"vi_pressed");
+				  //run_program(PROGRAM:"vi_pressed");
 			   }
 			}
             transition: ACCELERATE 0.2;
@@ -677,7 +677,7 @@ group { name: "elm/gengrid/item/video/album_grid/default";
       programs {
 			GENGRID_TAP_SOUND
 			GENLIST_PROGRAM_FOCUS_IMAGE
-			GENGRID_PROGRAM_ITEM_SELECT_VI_EFFECT(
+			/*GENGRID_PROGRAM_ITEM_SELECT_VI_EFFECT(
 			   target: "bg";
 			   target: "item_bg";
 		   	   target: "elm.swallow.icon.bg";
@@ -686,7 +686,7 @@ group { name: "elm/gengrid/item/video/album_grid/default";
 			   target: "elm.progressbar.icon";
 			   target: "elm.lock.icon";
 			   target: "elm.dropbox.icon";
-			)
+			)*/
       }
 	program{
 		name: "touch_snd0";
@@ -852,7 +852,7 @@ group { name: "elm/gengrid/item/video/folder_grid/default";
       programs {
 			GENGRID_TAP_SOUND
 			GENLIST_PROGRAM_FOCUS_IMAGE
-			GENGRID_PROGRAM_ITEM_SELECT_VI_EFFECT(
+			/*GENGRID_PROGRAM_ITEM_SELECT_VI_EFFECT(
 			   target: "bg";
 			   target: "item_bg";
 		   	   target: "elm.swallow.icon.bg";
@@ -861,7 +861,7 @@ group { name: "elm/gengrid/item/video/folder_grid/default";
 			   target: "elm.progressbar.icon";
 			   target: "elm.lock.icon";
 			   target: "elm.dropbox.icon";
-			)
+			)*/
       }
 	program{
 		name: "touch_snd4";
