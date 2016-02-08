@@ -17,6 +17,7 @@
 
 
 #include <math.h>
+#include <sound_manager.h>
 #include "vp-play-type-define.h"
 #include "vp-play-string-define.h"
 #include "vp-play-value-define.h"
@@ -6883,6 +6884,11 @@ static bool _vp_play_normal_view_play_start(NormalView *pNormalView, bool bCheck
 	if (!pNormalView->pPlayerHandle) {
 		VideoLogError("vp_mm_player_create fail");
 		return FALSE;
+	}
+	int nRet;
+	nRet = player_set_audio_policy_info(pNormalView->pPlayerHandle, pNormalView->pPlayView->stream_info);
+	if (nRet != PLAYER_ERROR_NONE) {
+	        VideoLogError("unable to set sound policy [%x]", nRet);
 	}
 
 	if (!vp_mm_player_set_user_param(pNormalView->pPlayerHandle, (void *) pNormalView)) {
