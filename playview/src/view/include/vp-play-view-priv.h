@@ -21,6 +21,7 @@
 #include <stdbool.h>
 #include <Elementary.h>
 #include <net_connection.h>
+#include <sound_manager.h>
 
 #include "vp-play-view.h"
 #include "vp-play-type-define.h"
@@ -125,7 +126,9 @@ typedef struct _PlayView {
 	video_play_rotate_t		nRotate;
 	video_sound_alive_t		nSoundAlive;
 	video_play_list_type_t		nListType;
-
+	sound_stream_info_h             stream_info;
+	 
+        bool                            reacquire_state;
 	bool				bPopupMode;
 	bool				bTrimExit;
 	bool				bRelaunchCaller;

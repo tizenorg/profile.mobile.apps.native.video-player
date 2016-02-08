@@ -18,6 +18,7 @@
 #include <sound_manager.h>
 #include "vp-play-macro-define.h"
 #include "vp-play-normal-view.h"
+#include "vp-play-view.h"
 #include "vp-sound.h"
 
 /* check temp */
@@ -28,24 +29,45 @@
 /* internal functions */
 
 /* external functions */
-bool vp_sound_init_session()
+
+void vp_player_focus_callback(sound_stream_info_h stream_info, sound_stream_focus_change_reason_e reason_for_change,
+					const char *additional_info, void *user_data)
+{
+	PlayView *pPlayView = (PlayView *)user_data;
+
+	sound_stream_focus_state_e state_for_playback;
+	sound_stream_focus_state_e state_for_recording;
+	int ret = -1;
+	ret = sound_manager_get_focus_state(pPlayView->stream_info, &state_for_playback,
+										&state_for_recording);
+	if (state_for_playback == SOUND_STREAM_FOCUS_STATE_RELEASED) {
+		vp_play_view_unrealize(pPlayView);
+
+		if (reason_for_change != SOUND_STREAM_FOCUS_CHANGED_BY_ALARM &&
+				reason_for_change != SOUND_STREAM_FOCUS_CHANGED_BY_NOTIFICATION) {
+			sound_manager_get_focus_reacquisition(pPlayView->stream_info, &pPlayView->reacquire_state);
+			if (pPlayView->reacquire_state == EINA_TRUE) {
+				sound_manager_set_focus_reacquisition(pPlayView->stream_info, EINA_FALSE);
+			}
+		}
+	} else {
+		ret = vp_play_view_realize(pPlayView);
+	}
+}
+
+bool vp_sound_init_session(play_view_handle pViewHandle)
 {
 	VideoLogInfo(">> Sound Session : Init");
 
+        PlayView *pPlayView = (PlayView *)pViewHandle;
 	int nRet = SOUND_MANAGER_ERROR_NONE;
-	nRet = sound_manager_set_session_type(SOUND_SESSION_TYPE_MEDIA);
-	if (nRet != SOUND_MANAGER_ERROR_NONE) {
-		VideoLogError("sound_manager_set_session_type fail");
-		return FALSE;
-	}
+	if (!pPlayView->stream_info) {
+		nRet = sound_manager_create_stream_information(SOUND_STREAM_TYPE_MEDIA, vp_player_focus_callback, pPlayView, &pPlayView->stream_info);
 
-	nRet =
-	    sound_manager_set_media_session_option
-	    (SOUND_SESSION_OPTION_PAUSE_OTHERS_WHEN_START,
-	     SOUND_SESSION_OPTION_INTERRUPTIBLE_DURING_PLAY);
-	if (nRet != SOUND_MANAGER_ERROR_NONE) {
-		VideoLogError("sound_manager_set_media_session_option fail");
-		return FALSE;
+		if (nRet != SOUND_MANAGER_ERROR_NONE) {
+			VideoLogError("failed to create_stream_information %x", nRet);
+			return FALSE;
+		}
 	}
 
 	nRet = sound_manager_set_current_sound_type(SOUND_TYPE_MEDIA);
@@ -64,17 +86,17 @@ bool vp_sound_init_session()
 	return TRUE;
 }
 
-bool vp_sound_deinit_session()
+bool vp_sound_deinit_session(play_view_handle pViewHandle)
 {
 	int nRet = SOUND_MANAGER_ERROR_NONE;
-
+        PlayView *pPlayView = (PlayView *)pViewHandle;
 //      nRet = sound_manager_unset_safety_volume();
 //      if (nRet != SOUND_MANAGER_ERROR_NONE) {
 //              VideoLogError("sound_manager_unset_safety_volume fail");
 //              return FALSE;
 //      }
 
-	nRet = sound_manager_unset_current_sound_type();
+	nRet = sound_manager_destroy_stream_information(pPlayView->stream_info);
 	if (nRet != SOUND_MANAGER_ERROR_NONE) {
 		VideoLogError("sound_manager_unset_current_sound_type fail");
 		return FALSE;
