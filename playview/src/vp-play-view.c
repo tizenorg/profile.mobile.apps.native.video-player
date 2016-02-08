@@ -1889,6 +1889,7 @@ bool vp_play_view_live_stream_realize(play_view_handle pViewHandle)
 
 bool vp_play_view_realize(play_view_handle pViewHandle)
 {
+        int error = SOUND_MANAGER_ERROR_NONE;
 	if (!pViewHandle) {
 		VideoLogError("PlayView handle is NULL");
 		return FALSE;
@@ -1902,6 +1903,15 @@ bool vp_play_view_realize(play_view_handle pViewHandle)
 	pPlayView->bVisible = TRUE;
 	vp_play_normal_view_key_create(pPlayView, pPlayView->pNormalView);
 	vp_play_normal_view_set_share_panel_state(pPlayView->pNormalView);
+	error = sound_manager_acquire_focus(pPlayView->stream_info, SOUND_STREAM_FOCUS_FOR_PLAYBACK, NULL);
+	if (error != SOUND_MANAGER_ERROR_NONE) {
+		VideoLogError("failed to acquire focus [%x]", error);
+	}
+
+	sound_manager_get_focus_reacquisition(pPlayView->stream_info, &pPlayView->reacquire_state);
+	if (pPlayView->reacquire_state == EINA_FALSE) {
+		sound_manager_set_focus_reacquisition(pPlayView->stream_info, EINA_TRUE);
+	}
 	if (pPlayView->bRealized == TRUE) {
 		VideoLogWarning("Already Realize state");
 		return TRUE;
@@ -1918,7 +1928,7 @@ bool vp_play_view_realize(play_view_handle pViewHandle)
 #ifdef OLD_SENSOR_API
 	vp_sensor_realize(pPlayView->pSensorHandle);
 #endif
-	vp_sound_init_session();
+	vp_sound_init_session(pViewHandle);
 
 	vp_sound_set_route_change_cb(__vp_play_sound_route_change_cb, (void *)pPlayView);
 	vp_sound_set_volume_change_cb(__vp_play_sound_volume_change_cb, (void *)pPlayView);
@@ -2012,6 +2022,7 @@ bool vp_play_view_realize(play_view_handle pViewHandle)
 
 bool vp_play_view_unrealize(play_view_handle pViewHandle)
 {
+        int error = SOUND_MANAGER_ERROR_NONE;
 	if (!pViewHandle) {
 		VideoLogError("PlayView handle is NULL");
 		return FALSE;
@@ -2044,6 +2055,10 @@ bool vp_play_view_unrealize(play_view_handle pViewHandle)
 		vp_play_util_key_ungrab(pPlayView->pWin, VP_VOLUME_MUTE);
 		vp_play_util_key_ungrab(pPlayView->pWin, VP_HOME_KEY);
 		sound_manager_unset_current_sound_type();
+		error = sound_manager_release_focus(pPlayView->stream_info, SOUND_STREAM_FOCUS_FOR_PLAYBACK, NULL);
+	        if (error != SOUND_MANAGER_ERROR_NONE) {
+		VideoLogError("failed to release focus error[%x]", error);
+	        }
 		media_key_release();
 		int nDuration = 0;
 		if (vp_play_normal_view_get_video_duration(pPlayView->pNormalView, &nDuration)) {
@@ -2072,7 +2087,7 @@ bool vp_play_view_unrealize(play_view_handle pViewHandle)
 //	vp_device_display_deinit();
 #endif
 
-	vp_sound_deinit_session();
+	vp_sound_deinit_session(pPlayView);
 
 	if (pPlayView->bAVRCP) {
 		vp_avrcp_noti_player_state(VP_MM_PLAYER_STATE_STOP);

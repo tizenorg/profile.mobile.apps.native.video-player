@@ -237,23 +237,9 @@ static int _vp_mm_player_priv_convert_interrupt(int nCode, bool bAppToFW)
 
 	if (bAppToFW) {
 		switch (nCode) {
-		case PLAYER_INTERRUPTED_COMPLETED:
-			return VP_MM_PLAYER_INTERRUPTED_COMPLETED;
-		case PLAYER_INTERRUPTED_BY_MEDIA:
-			return VP_MM_PLAYER_INTERRUPTED_BY_MEDIA;
-		case PLAYER_INTERRUPTED_BY_CALL:
-			return VP_MM_PLAYER_INTERRUPTED_BY_CALL;
-		case PLAYER_INTERRUPTED_BY_EARJACK_UNPLUG:
-			return VP_MM_PLAYER_INTERRUPTED_BY_EARJACK_UNPLUG;
+		
 		case PLAYER_INTERRUPTED_BY_RESOURCE_CONFLICT:
 			return VP_MM_PLAYER_INTERRUPTED_BY_RESOURCE_CONFLICT;
-		case PLAYER_INTERRUPTED_BY_ALARM:
-			return VP_MM_PLAYER_INTERRUPTED_BY_ALARM;
-		case PLAYER_INTERRUPTED_BY_EMERGENCY:
-			return VP_MM_PLAYER_INTERRUPTED_BY_EMERGENCY;
-			//case PLAYER_INTERRUPTED_BY_RESUMABLE_MEDIA:   return VP_MM_PLAYER_INTERRUPTED_RESUMABLE_MEDIA;
-		case PLAYER_INTERRUPTED_BY_NOTIFICATION:
-			return VP_MM_PLAYER_INTERRUPTED_NOTIFICATION;
 		}
 	} else {
 		switch (nCode) {
@@ -1238,7 +1224,8 @@ mm_player_handle vp_mm_player_create()
 {
 	MMPlayer *pMMPlayer = NULL;
 	pMMPlayer = calloc(1, sizeof(MMPlayer));
-
+        
+        
 	if (pMMPlayer == NULL) {
 		VideoLogError("MMPlayer alloc fail");
 		return NULL;
@@ -1258,12 +1245,6 @@ mm_player_handle vp_mm_player_create()
 		VideoLogError("player handle is NULL");
 		vp_mm_player_destroy((mm_player_handle) pMMPlayer);
 		return NULL;
-	}
-
-
-	nRet = player_set_sound_type(pMMPlayer->pPlayer, SOUND_TYPE_MEDIA);
-	if (nRet != PLAYER_ERROR_NONE) {
-		_vp_mm_player_print_err(nRet);
 	}
 //      nRet = player_set_rich_audio(pMMPlayer->pPlayer);
 //      if (nRet != PLAYER_ERROR_NONE) {
