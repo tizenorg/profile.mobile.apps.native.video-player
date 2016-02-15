@@ -1821,7 +1821,7 @@ static void _vp_play_multi_view_check_exit_popup(MultiView *pMultiView)
 	    ecore_evas_ecore_evas_get(evas_object_evas_get
 	                              (pMultiView->pExitPopupWin));
 	ecore_evas_name_class_set(ee, "APP_POPUP", "APP_POPUP");
-	elm_win_alpha_set(pMultiView->pExitPopupWin, EINA_TRUE);
+	//elm_win_alpha_set(pMultiView->pExitPopupWin, EINA_TRUE);
 
 	PlayView *pPlayView = pMultiView->pPlayView;
 	elm_win_screen_size_get(pPlayView->pWin, NULL, NULL, &w, &h);
