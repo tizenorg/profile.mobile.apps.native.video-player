@@ -1678,6 +1678,26 @@ bool vp_mm_player_set_user_param(mm_player_handle pPlayerHandle,
 	return TRUE;
 }
 
+bool vp_mm_player_set_stream_info(mm_player_handle pPlayerHandle,
+                                 void *stream_info)
+{
+	if (pPlayerHandle == NULL) {
+		VideoLogError("pPlayerHandle is NULL");
+		return FALSE;
+	}
+
+	if (stream_info == NULL) {
+		VideoLogError("stream info is NULL");
+		return FALSE;
+	}
+
+	MMPlayer *pMMPlayer = (MMPlayer *)pPlayerHandle;
+
+	pMMPlayer->stream_info = stream_info;
+
+	return TRUE;
+}
+
 bool vp_mm_player_play(mm_player_handle pPlayerHandle)
 {
 	if (pPlayerHandle == NULL) {
@@ -1697,6 +1717,15 @@ bool vp_mm_player_play(mm_player_handle pPlayerHandle)
 	if (pMMPlayer->bIsRealize == FALSE) {
 		VideoLogError("Not realized");
 		return FALSE;
+	}
+	sound_manager_get_focus_reacquisition(pMMPlayer->stream_info, &pMMPlayer->reacquire_state);
+	if (pMMPlayer->reacquire_state == EINA_FALSE)
+		sound_manager_set_focus_reacquisition(pMMPlayer->stream_info, EINA_TRUE);
+
+        int error = SOUND_MANAGER_ERROR_NONE;
+	error = sound_manager_acquire_focus(pMMPlayer->stream_info, SOUND_STREAM_FOCUS_FOR_PLAYBACK, NULL);
+	if (error != SOUND_MANAGER_ERROR_NONE) {
+		VideoLogError("failed to acquire focus [%x]", error);
 	}
 
 	VideoLogWarning("[player_start start]");
@@ -1739,6 +1768,14 @@ bool vp_mm_player_stop(mm_player_handle pPlayerHandle)
 		return FALSE;
 	}
 	VideoLogWarning("[player_stop end]");
+        int error = SOUND_MANAGER_ERROR_NONE;
+	error = sound_manager_release_focus(pMMPlayer->stream_info, SOUND_STREAM_FOCUS_FOR_PLAYBACK, NULL);
+	if (error != SOUND_MANAGER_ERROR_NONE) {
+		VideoLogError("failed to acquire focus [%x]", error);
+	}
+	sound_manager_get_focus_reacquisition(pMMPlayer->stream_info, &pMMPlayer->reacquire_state);
+	if (pMMPlayer->reacquire_state == EINA_TRUE)
+		sound_manager_set_focus_reacquisition(pMMPlayer->stream_info, EINA_FALSE);
 
 	return TRUE;
 
@@ -1771,6 +1808,14 @@ bool vp_mm_player_pause(mm_player_handle pPlayerHandle)
 		return FALSE;
 	}
 	VideoLogWarning("[player_pause end]");
+        int error = SOUND_MANAGER_ERROR_NONE;
+	error = sound_manager_release_focus(pMMPlayer->stream_info, SOUND_STREAM_FOCUS_FOR_PLAYBACK, NULL);
+	if (error != SOUND_MANAGER_ERROR_NONE) {
+		VideoLogError("failed to acquire focus [%x]", error);
+	}
+	sound_manager_get_focus_reacquisition(pMMPlayer->stream_info, &pMMPlayer->reacquire_state);
+	if (pMMPlayer->reacquire_state == EINA_TRUE)
+		sound_manager_set_focus_reacquisition(pMMPlayer->stream_info, EINA_FALSE);
 
 	return TRUE;
 
