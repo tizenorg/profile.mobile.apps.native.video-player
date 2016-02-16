@@ -34,15 +34,13 @@ void vp_player_focus_callback(sound_stream_info_h stream_info, sound_stream_focu
 					const char *additional_info, void *user_data)
 {
 	PlayView *pPlayView = (PlayView *)user_data;
-
 	sound_stream_focus_state_e state_for_playback;
 	sound_stream_focus_state_e state_for_recording;
 	int ret = -1;
 	ret = sound_manager_get_focus_state(pPlayView->stream_info, &state_for_playback,
 										&state_for_recording);
 	if (state_for_playback == SOUND_STREAM_FOCUS_STATE_RELEASED) {
-		vp_play_view_unrealize(pPlayView);
-
+		vp_play_normal_view_pause_player(pPlayView);
 		if (reason_for_change != SOUND_STREAM_FOCUS_CHANGED_BY_ALARM &&
 				reason_for_change != SOUND_STREAM_FOCUS_CHANGED_BY_NOTIFICATION) {
 			sound_manager_get_focus_reacquisition(pPlayView->stream_info, &pPlayView->reacquire_state);
@@ -51,7 +49,7 @@ void vp_player_focus_callback(sound_stream_info_h stream_info, sound_stream_focu
 			}
 		}
 	} else {
-		ret = vp_play_view_realize(pPlayView);
+		ret = vp_play_normal_view_play(pPlayView);
 	}
 }
 

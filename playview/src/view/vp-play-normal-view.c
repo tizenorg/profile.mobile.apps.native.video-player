@@ -6891,6 +6891,10 @@ static bool _vp_play_normal_view_play_start(NormalView *pNormalView, bool bCheck
 	        VideoLogError("unable to set sound policy [%x]", nRet);
 	}
 
+	if (!vp_mm_player_set_stream_info(pNormalView->pPlayerHandle, (void *)(pNormalView->pPlayView->stream_info))) {
+		VideoLogError("vp_mm_player_set_stream_info fail");
+		return FALSE;
+	}
 	if (!vp_mm_player_set_user_param(pNormalView->pPlayerHandle, (void *) pNormalView)) {
 		VideoLogError("vp_mm_player_set_user_param fail");
 		return FALSE;
@@ -11600,6 +11604,21 @@ bool vp_play_normal_view_pause(normal_view_handle pViewHandle)
 	return TRUE;
 }
 
+bool vp_play_normal_view_play(normal_view_handle pViewHandle)
+{
+	if (!pViewHandle) {
+		VideoLogError("pViewHandle is NULL");
+		return FALSE;
+	}
+
+	NormalView	*pNormalView = (NormalView *)pViewHandle;
+
+	vp_mm_player_play(pNormalView->pPlayerHandle);
+	_vp_play_normal_view_set_play_state(pNormalView);
+
+	return TRUE;
+}
+
 bool vp_play_normal_view_resume(normal_view_handle pViewHandle)
 {
 	if (!pViewHandle) {
@@ -11612,7 +11631,6 @@ bool vp_play_normal_view_resume(normal_view_handle pViewHandle)
 	if (pNormalView->pPlayerHandle && pNormalView->bIsRealize) {
 		_vp_play_normal_view_all_close_popup(pNormalView);
 	}
-
 	if (pNormalView->bManualPause == FALSE && pNormalView->bSharepopup == FALSE) {
 
 		vp_mm_player_state_t nState = VP_MM_PLAYER_STATE_NONE;
