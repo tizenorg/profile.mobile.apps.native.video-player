@@ -82,6 +82,7 @@ vp_normalview_popup_style_e vp_play_normal_view_get_popup_show_state(normal_view
 bool vp_play_normal_view_set_tagbuddy_on(normal_view_handle pViewHandle, bool bTagBuddyOn);
 void vp_play_normal_view_show_volume_popup(void *pPlayview);
 void vp_play_normal_view_pause_player(void *pPlayview);
+void vp_play_normal_view_play_player(void *pPlayview);
 void vp_play_normal_view_key_create(PlayView *pPlayView, normal_view_handle pViewHandle);
 bool vp_play_normal_view_player_state_changed_get(normal_view_handle pViewHandle);
 bool vp_play_normal_view_stop_player(normal_view_handle pViewHandle);
