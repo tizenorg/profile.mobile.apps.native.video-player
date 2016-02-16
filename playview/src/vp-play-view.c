@@ -1903,14 +1903,22 @@ bool vp_play_view_realize(play_view_handle pViewHandle)
 	pPlayView->bVisible = TRUE;
 	vp_play_normal_view_key_create(pPlayView, pPlayView->pNormalView);
 	vp_play_normal_view_set_share_panel_state(pPlayView->pNormalView);
-	error = sound_manager_acquire_focus(pPlayView->stream_info, SOUND_STREAM_FOCUS_FOR_PLAYBACK, NULL);
-	if (error != SOUND_MANAGER_ERROR_NONE) {
-		VideoLogError("failed to acquire focus [%x]", error);
-	}
 
-	sound_manager_get_focus_reacquisition(pPlayView->stream_info, &pPlayView->reacquire_state);
-	if (pPlayView->reacquire_state == EINA_FALSE) {
-		sound_manager_set_focus_reacquisition(pPlayView->stream_info, EINA_TRUE);
+	sound_stream_focus_state_e state_for_playback;
+	sound_stream_focus_state_e state_for_recording;
+	int ret = -1;
+	ret = sound_manager_get_focus_state(pPlayView->stream_info, &state_for_playback, &state_for_recording);
+	if (ret != SOUND_MANAGER_ERROR_NONE) {
+		VideoLogError("failed to get focus state error[%x]", ret);
+       	}
+	if (state_for_playback == SOUND_STREAM_FOCUS_STATE_RELEASED) {
+		error = sound_manager_acquire_focus(pPlayView->stream_info, SOUND_STREAM_FOCUS_FOR_PLAYBACK, NULL);
+		if (error != SOUND_MANAGER_ERROR_NONE) {
+			VideoLogError("failed to acquire focus [%x]", error);
+		}
+		sound_manager_get_focus_reacquisition(pPlayView->stream_info, &pPlayView->reacquire_state);
+		if (pPlayView->reacquire_state == EINA_FALSE)
+			sound_manager_set_focus_reacquisition(pPlayView->stream_info, EINA_TRUE);
 	}
 	if (pPlayView->bRealized == TRUE) {
 		VideoLogWarning("Already Realize state");
@@ -2055,10 +2063,22 @@ bool vp_play_view_unrealize(play_view_handle pViewHandle)
 		vp_play_util_key_ungrab(pPlayView->pWin, VP_VOLUME_MUTE);
 		vp_play_util_key_ungrab(pPlayView->pWin, VP_HOME_KEY);
 		sound_manager_unset_current_sound_type();
-		error = sound_manager_release_focus(pPlayView->stream_info, SOUND_STREAM_FOCUS_FOR_PLAYBACK, NULL);
-	        if (error != SOUND_MANAGER_ERROR_NONE) {
-		VideoLogError("failed to release focus error[%x]", error);
-	        }
+		sound_stream_focus_state_e state_for_playback;
+		sound_stream_focus_state_e state_for_recording;
+		int ret = -1;
+		ret = sound_manager_get_focus_state(pPlayView->stream_info, &state_for_playback, &state_for_recording);
+		if (ret != SOUND_MANAGER_ERROR_NONE) {
+			VideoLogError("failed to get focus state error[%x]", ret);
+        	}
+		if (state_for_playback != SOUND_STREAM_FOCUS_STATE_RELEASED) {
+			error = sound_manager_release_focus(pPlayView->stream_info, SOUND_STREAM_FOCUS_FOR_PLAYBACK, NULL);
+			if (error != SOUND_MANAGER_ERROR_NONE) {
+				VideoLogError("failed to release focus error[%x]", error);
+	        	}
+			sound_manager_get_focus_reacquisition(pPlayView->stream_info, &pPlayView->reacquire_state);
+			if (pPlayView->reacquire_state == EINA_TRUE)
+				sound_manager_set_focus_reacquisition(pPlayView->stream_info, EINA_FALSE);
+		}
 		media_key_release();
 		int nDuration = 0;
 		if (vp_play_normal_view_get_video_duration(pPlayView->pNormalView, &nDuration)) {
