@@ -236,6 +236,7 @@ typedef struct _MMPlayer {
 	vp_mm_player_rotate_t nRotate;
 	vp_mm_player_state_t nState;
 	vp_mm_player_display_mode_t nDisplayMode;
+	sound_stream_info_h	stream_info;
 
 	int nDuration;
 	int nVideoWidth;
@@ -271,6 +272,7 @@ bool vp_mm_player_is_realize(mm_player_handle pPlayerHandle);
 
 bool vp_mm_player_set_callback(mm_player_handle pPlayerHandle, vp_mm_player_callback_t nCallbackType, void *pCallback);
 bool vp_mm_player_set_user_param(mm_player_handle pPlayerHandle, void *pParam);
+bool vp_mm_player_set_stream_info(mm_player_handle pPlayerHandle, void *stream_info);
 
 bool vp_mm_player_play(mm_player_handle pPlayerHandle);
 bool vp_mm_player_stop(mm_player_handle pPlayerHandle);

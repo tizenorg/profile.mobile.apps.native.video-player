@@ -6891,6 +6891,10 @@ static bool _vp_play_normal_view_play_start(NormalView *pNormalView, bool bCheck
 	        VideoLogError("unable to set sound policy [%x]", nRet);
 	}
 
+	if (!vp_mm_player_set_stream_info(pNormalView->pPlayerHandle, (void *)(pNormalView->pPlayView->stream_info))) {
+		VideoLogError("vp_mm_player_set_stream_info fail");
+		return FALSE;
+	}
 	if (!vp_mm_player_set_user_param(pNormalView->pPlayerHandle, (void *) pNormalView)) {
 		VideoLogError("vp_mm_player_set_user_param fail");
 		return FALSE;
