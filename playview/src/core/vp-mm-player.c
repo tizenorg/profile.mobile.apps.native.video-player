@@ -1706,6 +1706,11 @@ bool vp_mm_player_play(mm_player_handle pPlayerHandle)
 		VideoLogError("player_start fail : %d", nRet);
 		return FALSE;
 	}
+        int error = SOUND_MANAGER_ERROR_NONE;
+	error = sound_manager_acquire_focus(pMMPlayer->stream_info, SOUND_STREAM_FOCUS_FOR_PLAYBACK, NULL);
+	if (error != SOUND_MANAGER_ERROR_NONE) {
+		VideoLogError("failed to acquire focus [%x]", error);
+	}
 	VideoLogWarning("[player_start end]");
 
 	return TRUE;
@@ -1769,6 +1774,11 @@ bool vp_mm_player_pause(mm_player_handle pPlayerHandle)
 		_vp_mm_player_print_err(nRet);
 		VideoLogError("player_pause fail : %d", nRet);
 		return FALSE;
+	}
+        int error = SOUND_MANAGER_ERROR_NONE;
+	error = sound_manager_acquire_focus(pMMPlayer->stream_info, SOUND_STREAM_FOCUS_FOR_PLAYBACK, NULL);
+	if (error != SOUND_MANAGER_ERROR_NONE) {
+		VideoLogError("failed to acquire focus [%x]", error);
 	}
 	VideoLogWarning("[player_pause end]");
 

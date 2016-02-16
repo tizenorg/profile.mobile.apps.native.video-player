@@ -236,6 +236,7 @@ typedef struct _MMPlayer {
 	vp_mm_player_rotate_t nRotate;
 	vp_mm_player_state_t nState;
 	vp_mm_player_display_mode_t nDisplayMode;
+	sound_stream_info_h	stream_info;
 
 	int nDuration;
 	int nVideoWidth;

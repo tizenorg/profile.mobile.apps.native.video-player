@@ -169,6 +169,7 @@ typedef enum {
 
 typedef struct _NormalView {
 	PlayView			*pPlayView;
+	MMPlayer 			*pMMPlayer;
 	Ecore_X_Window			nXwinID;
 
 	Evas_Object			*pNaviFrame;
@@ -6890,7 +6891,7 @@ static bool _vp_play_normal_view_play_start(NormalView *pNormalView, bool bCheck
 	if (nRet != PLAYER_ERROR_NONE) {
 	        VideoLogError("unable to set sound policy [%x]", nRet);
 	}
-
+	pNormalView->pMMPlayer->stream_info = pNormalView->pPlayView->stream_info;
 	if (!vp_mm_player_set_user_param(pNormalView->pPlayerHandle, (void *) pNormalView)) {
 		VideoLogError("vp_mm_player_set_user_param fail");
 		return FALSE;
