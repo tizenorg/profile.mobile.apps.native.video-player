@@ -41,7 +41,7 @@ void vp_player_focus_callback(sound_stream_info_h stream_info, sound_stream_focu
 	ret = sound_manager_get_focus_state(pPlayView->stream_info, &state_for_playback,
 										&state_for_recording);
 	if (state_for_playback == SOUND_STREAM_FOCUS_STATE_RELEASED) {
-		vp_play_view_unrealize(pPlayView);
+		vp_play_normal_view_pause_player(pPlayView);
 
 		if (reason_for_change != SOUND_STREAM_FOCUS_CHANGED_BY_ALARM &&
 				reason_for_change != SOUND_STREAM_FOCUS_CHANGED_BY_NOTIFICATION) {
