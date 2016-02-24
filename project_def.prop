@@ -1,11 +1,73 @@
+
+# Project Name
 APPNAME = video-player
 
+# Project Type
 type = app
+
+# Project Profile
 profile = mobile-3.0
 
-USER_SRCS = src/video-player.c
-USER_DEFS =
-USER_INC_DIRS = inc
-USER_OBJS =
-USER_LIBS =
-USER_EDCS =
+# C Sources
+USER_SRCS = src/common/mp-util-preference.c video-downloader/src/VppDownload.c src/common/mp-util-media-service.c src/widget/mp-util-widget-ctrl.c playview/src/feature/vp-sound-alive.c playview/src/core/vp-image-util.c src/view/mp-video-list-folder-share-via-view.c playview/src/widget/vp-play-progressbar.c playview/src/feature/vp-capture.c playview/src/feature/vp-subtitle-alignment.c playview/src/core/vp-hollic.c src/view/mp-video-search-view.c src/view/mp-video-list-view-main.c src/feature/mp-launching-video-displayer.c src/feature/mp-util-move.c src/view/mp-video-list-view-folder.c playview/src/common/vp-play-ug.c src/view/mp-video-list-view-common.c playview/src/feature/vp-subtitle-select.c playview/src/core/vp-media-contents.c playview/src/core/vp-mm-player.c src/view/mp-video-detail-view.c src/view/mp-video-list-view-item-of-folder.c src/view/mp-video-list-remove-view.c playview/src/widget/vp-play-popup.c playview/src/common/vp-play-util.c playview/src/widget/vp-play-subtitle.c playview/src/core/vp-device.c src/common/mp-video-info-ctrl.c src/view/mp-video-list-view-normal.c src/view/mp-video-list-view-select.c common/src/vp-file-util.c src/view/mp-video-list-remove-ctrl.c src/widget/mp-video-nocontent-layout.c feature/src/vp-thumb-gen.c playview/src/feature/vp-subtitle-track.c src/video-player.c common/src/vp-media-content-util.c playview/src/core/vp-avrcp.c playview/src/core/vp-sensor.c common/src/vp-db-util.c src/view/mp-video-list-personal-view.c src/widget/mp-footer-toolbar.c feature/src/vp-feature-util.c playview/src/widget/vp-play-volume-popup.c src/widget/mp-video-rename-ctrl.c core/src/vp-drm.c src/widget/mp-video-list-sort-ctrl.c playview/src/feature/vp-audio-track.c common/src/vp-pinch-zoom.c playview/src/widget/vp-play-bookmark.c playview/src/feature/vp-subtitle-sync.c src/common/mp-video-util-db-controller.c playview/src/widget/vp-play-more.c src/common/mp-util-config.c playview/src/feature/vp-share.c src/widget/mp-video-list-option-ctrl.c playview/src/feature/vp-play-speed.c playview/src/feature/vp-setting.c common/src/vp-preview-db.c playview/src/core/vp-device-language.c playview/src/view/vp-play-normal-view.c common/src/vp-thumb-db.c playview/src/core/vp-sound.c common/src/vp-chapter-db.c src/view/mp-video-list-share-via-view.c src/widget/mp-video-view-popup-ctrl.c playview/src/common/vp-play-config.c playview/src/widget/vp-play-brightness-popup.c common/src/vp-util.c playview/src/feature/vp-detail.c playview/src/feature/vp-subtitle-edge.c src/view/mp-library-view-mgr.c src/widget/mp-external-ug.c src/common/mp-util.c playview/src/common/vp-play-preference.c playview/src/feature/vp-zoom-guide.c src/common/mp-rotate-ctrl.c playview/src/feature/vp-subtitle-font.c playview/src/widget/vp-play-button.c src/view/mp-video-list-view-thumbnail.c playview/src/feature/vp-subtitle-color.c playview/src/feature/vp-repeat.c playview/src/feature/vp-subtitle-size.c playview/src/feature/vp-sound-path.c src/common/mp-drm-ctrl.c playview/src/core/vp-media-key.c playview/src/widget/vp-play-loading-ani.c src/viewMgr/videos-view-mgr.c src/view/mp-video-list-personal-ctrl.c playview/src/widget/vp-play-volume.c src/common/mp-video-sound-manager.c playview/src/vp-play-view.c playview/src/core/vp-multi-path.c vp-main/src/serviceParser/vp-service-parser.c playview/src/feature/vp-subtitle.c src/widget/mp-video-list-view-as-ctrl.c playview/src/feature/vp-subtitle-bg-color.c 
+
+# EDC Sources
+USER_EDCS =  
+
+# PO Sources
+USER_POS = vp-main/res/po/es_US.po res/po/nb.po res/po/pt_BR.po res/po/is.po res/po/hu.po vp-main/res/po/sk.po res/po/tr_TR.po vp-main/res/po/cs.po vp-main/res/po/zh_CN.po res/po/ka.po res/po/lv.po vp-main/res/po/de.po vp-main/res/po/ar.po res/po/fr.po res/po/ru_RU.po vp-main/res/po/en_PH.po vp-main/res/po/pt_PT.po res/po/ga.po vp-main/res/po/es_ES.po vp-main/res/po/ru_RU.po vp-main/res/po/eu.po res/po/es_US.po res/po/hi.po vp-main/res/po/sl.po vp-main/res/po/hi.po vp-main/res/po/en.po res/po/az.po res/po/sl.po vp-main/res/po/da.po vp-main/res/po/is.po res/po/et.po res/po/fi.po res/po/nl.po res/po/ko_KR.po res/po/ca.po res/po/en_US.po vp-main/res/po/mk.po vp-main/res/po/lv.po res/po/sv.po res/po/uz.po vp-main/res/po/zh_TW.po res/po/hr.po vp-main/res/po/zh_HK.po vp-main/res/po/hr.po res/po/pt_PT.po res/po/ro.po res/po/eu.po vp-main/res/po/gl.po res/po/pl.po vp-main/res/po/ja_JP.po res/po/de.po vp-main/res/po/ga.po vp-main/res/po/ro.po vp-main/res/po/hy.po res/po/lt.po vp-main/res/po/it_IT.po vp-main/res/po/lt.po res/po/gl.po res/po/bg.po vp-main/res/po/pl.po res/po/hy.po vp-main/res/po/ka.po res/po/zh_HK.po vp-main/res/po/nl.po vp-main/res/po/kk.po vp-main/res/po/pt_BR.po res/po/sr.po vp-main/res/po/ca.po res/po/da.po vp-main/res/po/az.po vp-main/res/po/sr.po res/po/it_IT.po res/po/kk.po vp-main/res/po/uk.po res/po/cs.po vp-main/res/po/fi.po res/po/uk.po res/po/en.po vp-main/res/po/ko_KR.po vp-main/res/po/bg.po vp-main/res/po/fr_CA.po vp-main/res/po/fr.po res/po/zh_TW.po vp-main/res/po/et.po res/po/es_ES.po vp-main/res/po/tr_TR.po vp-main/res/po/nb.po vp-main/res/po/el_GR.po res/po/sk.po res/po/el_GR.po res/po/mk.po res/po/zh_CN.po res/po/en_PH.po res/po/ar.po res/po/ja_JP.po vp-main/res/po/uz.po vp-main/res/po/hu.po vp-main/res/po/sv.po vp-main/res/po/en_US.po res/po/fr_CA.po 
+
+# User Defines
+USER_DEFS = VS_FEATURE_LIST_VIEW VS_FEATURE_THUMBNAIL_VIEW VS_FEATURE_FOLDER_VIEW SUBTITLE_K_FEATURE 
+USER_CPP_DEFS = 
+
+# User Undefines
+USER_UNDEFS = 
+USER_CPP_UNDEFS = 
+
+# User Libraries
+USER_LIBS = 
+
+# User Objects
+USER_OBJS = 
+USER_OBJS_ABS = 
+
+# User Includes
+## C Compiler
+USER_INC_DIRS = include vp-main/include playview/src/common/include common/include include/feature include/widget include/view core/include feature/include common/src/include playview/include feature/src/include video-downloader/include vp-main/include/serviceParser playview/src/widget/include playview/src/view/include playview/src/feature/include playview/src/core/include include/viewMgr playview/src/include include/common playview/src/widget/include 
+USER_INC_DIRS_ABS = 
+USER_INC_FILES = 
+USER_INC_FILES_ABS = 
+## C++ Compiler
+USER_CPP_INC_DIRS = 
+USER_CPP_INC_DIRS_ABS = 
+USER_CPP_INC_FILES = 
+USER_CPP_INC_FILES_ABS = 
+
+# User Library Path
+USER_LIB_DIRS = 
+USER_LIB_DIRS_ABS = 
+
+# EDC Resource Path
+USER_EDCS_IMAGE_DIRS = edje/images playview/res/edc/playview/images res/images 
+USER_EDCS_IMAGE_DIRS_ABS = 
+USER_EDCS_SOUND_DIRS = edje/sounds res/edc 
+USER_EDCS_SOUND_DIRS_ABS = 
+USER_EDCS_FONT_DIRS = edje/fonts 
+USER_EDCS_FONT_DIRS_ABS = 
+
+# EDC Flags
+USER_EXT_EDC_KEYS = EDC0 
+
+USER_EXT_EDC0_EDCS = res/edc/image_res.edc playview/res/edc/playview/pv-popup.edc playview/res/edc/playview/pv-custom-winset.edc playview/res/edc/playview/pv-bookmark.edc res/edc/vp-ctxpopup-option.edc playview/res/edc/playview/pv-tag-preview.edc res/edc/vp-search-view-internal.edc playview/res/edc/playview/pv-minicontroller.edc res/edc/vp-custom-winset-style.edc playview/res/edc/playview/pv-gesture.edc res/edc/landscape_thumbnail.edc playview/res/edc/playview/pv-trim-main.edc playview/res/edc/playview/pv-resource.edc res/edc/vp-images.edc playview/res/edc/playview/pv-normal-main.edc playview/res/edc/playview/pv-bookmark-item.edc playview/res/edc/playview/pv-image.edc res/edc/panel.edc playview/res/edc/playview/pv-progressbar.edc res/edc/vp-main-listview-preview.edc res/edc/vp-genlist-no-item.edc playview/res/edc/playview/pv-trim-item.edc playview/res/edc/playview/pv-brightness-popup.edc playview/res/edc/playview/pv-trim-top-control.edc res/edc/popup_progressbar.edc res/edc/vp-main-layout.edc playview/res/edc/playview/pv-speed-popup.edc res/edc/vp-naviframe.edc res/edc/vp-device-list-internal.edc res/edc/edc_image_macro.edc playview/res/edc/playview/pv-sensor-popup.edc playview/res/edc/playview/pv-multi-main.edc playview/res/edc/playview/pv-subtitle.edc playview/res/edc/playview/pv-trim-control.edc playview/res/edc/playview/pv-chapter-main-new.edc res/edc/vp-remove-list-internal.edc res/edc/vp_font.edc playview/res/edc/playview/pv-macro.edc playview/res/edc/playview/pv-subtitle-color-popup.edc res/edc/vp-main-listview-internal.edc res/edc/vp-speedbox-popup.edc playview/res/edc/playview/pv-normal-function.edc playview/res/edc/playview/pv-volume-popup.edc res/shared/res/video.edc playview/res/edc/playview/pv-colorselector.edc playview/res/edc/playview/pv-volume.edc playview/res/edc/playview/pv-normal-top-control.edc playview/res/edc/playview/custom/pv-custom-image.edc playview/res/edc/playview/pv-tag-buddy.edc playview/res/edc/playview/custom/pv-custom-define.edc res/edc/vp-thumbnail-view.edc playview/res/edc/playview/pv-normal-control.edc res/edc/vp-motion-popup.edc playview/res/edc/playview/pv-zoom-guide.edc 
+USER_EXT_EDC0_EDCS_IMAGE_DIRS = edje/images playview/res/edc/playview/images res/images 
+USER_EXT_EDC0_EDCS_IMAGE_DIRS_ABS = 
+USER_EXT_EDC0_EDCS_SOUND_DIRS = edje/sounds res/edc 
+USER_EXT_EDC0_EDCS_SOUND_DIRS_ABS = 
+USER_EXT_EDC0_EDCS_FONT_DIRS = edje/fonts 
+USER_EXT_EDC0_EDCS_FONT_DIRS_ABS = 
+
+# Resource Filter
+USER_RES_INCLUDE = 
+USER_RES_EXCLUDE = 
+
