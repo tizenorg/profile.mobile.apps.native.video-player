@@ -1185,7 +1185,7 @@ bool vp_play_util_is_Xwindow_focused(Ecore_X_Window nXwinID)
 		return TRUE;
 	} else
 #endif
-		return FALSE;
+		return TRUE;
 }
 
 char *vp_play_util_convert_rgba_to_hex(int r, int g, int b, int a)
