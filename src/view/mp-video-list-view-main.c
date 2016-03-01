@@ -135,6 +135,7 @@ void mp_list_view_free_main_view_widget(void)
 			evas_object_del(g_pMainViewWidget->pBox);
 			g_pMainViewWidget->pBox = NULL;
 		}
+		MP_DEL_ITC(g_pMainViewWidget->pVideoGenlistTitleItc);
 		/*
 				if (g_pMainViewWidget->pSearchBtn)
 				{
@@ -1168,7 +1169,6 @@ void mp_list_view_destroy(void)
 		g_pMainViewHandle->pNaviFrameItem = NULL;
 		g_pMainViewHandle->nListTabType = LIST_TAB_TYPE_PERSONAL;
 		MP_DEL_TIMER(g_pMainViewHandle->pDbUpdateTimer);
-		MP_DEL_ITC(g_pMainViewWidget->pVideoGenlistTitleItc);
 
 		free(g_pMainViewHandle);
 		g_pMainViewHandle = NULL;
