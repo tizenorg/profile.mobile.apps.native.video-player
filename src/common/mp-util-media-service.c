@@ -1114,6 +1114,7 @@ bool mp_util_svc_get_video_id_by_video_url(const char *szPath, char **szVideoID)
 	filter_h m_FilterHandle = NULL;
 	char szTmpStr[STR_LEN_MAX] = {0,};
 	bool bRet = FALSE;
+	int ret = -1;
 
 	if (media_filter_create(&m_FilterHandle) != MEDIA_CONTENT_ERROR_NONE) {
 		VideoLogInfo("Fail to create media filter handle.");
@@ -1126,6 +1127,7 @@ bool mp_util_svc_get_video_id_by_video_url(const char *szPath, char **szVideoID)
 			MEDIA_CONTENT_ERROR_NONE) {
 		VideoLogError("Fail to set filter condition.");
 		media_filter_destroy(m_FilterHandle);
+		m_FilterHandle = NULL;
 		bRet = FALSE;
 	}
 
@@ -1133,12 +1135,19 @@ bool mp_util_svc_get_video_id_by_video_url(const char *szPath, char **szVideoID)
 		mp_util_svc_iterate_for_get_video_item_cb, &pVideoItem) !=
 			MEDIA_CONTENT_ERROR_NONE) {
 		VideoLogError("Fail to get video item list with filter condition.");
-		media_filter_destroy(m_FilterHandle);
+		if(m_FilterHandle) {
+			media_filter_destroy(m_FilterHandle);
+			m_FilterHandle = NULL;
+		}
 		bRet = FALSE;
 	}
 
-	if (media_filter_destroy(m_FilterHandle) != MEDIA_CONTENT_ERROR_NONE) {
-		VideoLogError("Fail to destroy media filter handle.");
+	if(m_FilterHandle) {
+		ret = media_filter_destroy(m_FilterHandle);
+		if (ret != MEDIA_CONTENT_ERROR_NONE) {
+			VideoLogError("Fail to destroy media filter handle.");
+			m_FilterHandle = NULL;
+		}
 		bRet = FALSE;
 	}
 

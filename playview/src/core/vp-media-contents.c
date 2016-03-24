@@ -1362,7 +1362,7 @@ bool vp_media_contents_bookmark_list_get(const char *szMediaID,
 	nRet = media_filter_destroy(pFilterHandle);
 	if (nRet != MEDIA_CONTENT_ERROR_NONE) {
 		VideoLogError("media_filter_destroy is fail : 0x%x", nRet);
-		goto Exception;
+		return FALSE;
 	}
 
 	return TRUE;
@@ -1876,7 +1876,9 @@ bool vp_media_contents_get_video_items(int nSortType, GList **pList)
 	nRet = media_filter_destroy(pFilterHandle);
 	if (nRet != MEDIA_CONTENT_ERROR_NONE) {
 		VideoLogError("media_filter_destroy is fail : 0x%x", nRet);
-		goto Exception;
+		VP_FREE(szCondition);
+		VP_FREE(szOrder);
+		return FALSE;
 	}
 
 	VP_FREE(szCondition);
@@ -2629,7 +2631,8 @@ bool vp_media_contents_subtitle_list_get(GList **pList)
 	nRet = media_filter_destroy(pFilterHandle);
 	if (nRet != MEDIA_CONTENT_ERROR_NONE) {
 		VideoLogError("media_filter_destroy is fail : 0x%x", nRet);
-		goto Exception;
+		VP_FREE(szCondition);
+		return FALSE;
 	}
 
 	VP_FREE(szCondition);
