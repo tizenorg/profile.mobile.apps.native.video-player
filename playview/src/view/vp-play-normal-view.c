@@ -10486,6 +10486,7 @@ static bool _vp_play_normal_view_create_main_control(NormalView *pNormalView)
 		return FALSE;
 	}
 
+	/*
 	pNormalView->pPopupBtn = vp_button_create(
 	                             pParent, "playview/custom/flat_56_56/default", NULL,
 	                             NULL,
@@ -10497,7 +10498,7 @@ static bool _vp_play_normal_view_create_main_control(NormalView *pNormalView)
 		VideoLogError("elm_button_add is fail");
 		return FALSE;
 	}
-
+	 */
 	pNormalView->pLockBtn = vp_button_create(
 	                            pNormalView->pMainLayout, "playview/custom/flat_46_46/default", NULL,
 	                            (Evas_Smart_Cb)__vp_normal_function_btn_clicked_cb,
@@ -10530,11 +10531,13 @@ static bool _vp_play_normal_view_create_main_control(NormalView *pNormalView)
 	//pIcon = vp_button_create_icon(pNormalView->pNextBtn, edj_path, VP_PLAY_NORMAL_RES_NEXT);
 	//elm_object_part_content_set(pNormalView->pNextBtn, VP_PLAY_SWALLOW_BUTTON_ICON, pIcon);
 
+	/*
 	pIcon = vp_button_create_icon(pNormalView->pPopupBtn, edj_path, VP_PLAY_NORMAL_RES_POPUP_PLAYER);
 	elm_object_part_content_set(pNormalView->pPopupBtn, VP_PLAY_SWALLOW_BUTTON_ICON, pIcon);
 
 	pIcon = vp_button_create_icon(pNormalView->pPopupBtn, edj_path, VP_PLAY_NORMAL_RES_POPUP_PLAYER);
 	elm_object_part_content_set(pNormalView->pPopupBtn, VP_PLAY_SWALLOW_BUTTON_PRESS_ICON, pIcon);
+	*/
 
 	if (pNormalView->nDisplayMode == VP_MM_PLAYER_DISPLAY_FULL_SCREEN) {
 		pIcon = vp_button_create_icon(pNormalView->pScreenSizeBtn, edj_path, VP_PLAY_NORMAL_RES_SCREEN_2_MODE);
@@ -10597,10 +10600,12 @@ static bool _vp_play_normal_view_create_main_control(NormalView *pNormalView)
 		elm_object_part_content_set(pParent, VP_PLAY_SWALLOW_NORMAL_SCREENSIZE, pNormalView->pScreenSizeBtn);
 		elm_object_focus_custom_chain_append(pNormalView->pMainLayout, pNormalView->pScreenSizeBtn, NULL);
 	}
+	/*
 	if (pNormalView->pPopupBtn) {
 		elm_object_part_content_set(pParent, VP_PLAY_SWALLOW_NORMAL_POPUP_PLAYER, pNormalView->pPopupBtn);
 		elm_object_focus_custom_chain_append(pNormalView->pMainLayout, pNormalView->pPopupBtn, NULL);
 	}
+	*/
 	vp_play_util_focus_next_object_set(pNormalView->pVolumeBtn, pNormalView->pPrevBtn, ELM_FOCUS_RIGHT);
 	vp_play_util_focus_next_object_set(pNormalView->pPrevBtn, pNormalView->pPlayFocusBtn, ELM_FOCUS_RIGHT);
 	vp_play_util_focus_next_object_set(pNormalView->pPlayFocusBtn, pNormalView->pNextBtn, ELM_FOCUS_RIGHT);

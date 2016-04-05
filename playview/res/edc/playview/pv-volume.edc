@@ -125,7 +125,7 @@ collections {
 					rel1 { relative: 0.0 0.0; to: "pv.volume.bottom.padding";}
 					rel2 { relative: 1.0 0.0; to: "pv.volume.bottom.padding";}
 					text {
-						size: 43;
+						size: 38;
 					}
 
 				}
