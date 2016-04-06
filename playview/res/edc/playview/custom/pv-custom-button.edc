@@ -4402,8 +4402,8 @@ group {
 			description {
 				state: "default" 0.0;
 				color: 0 0 0 0;
-				min: 50 80;
-				max: 50 80;
+				min: 80 80;
+				max: 80 80;
 			}
 		}
 		part {
