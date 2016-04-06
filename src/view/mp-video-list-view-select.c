@@ -541,9 +541,6 @@ static void __mp_select_view_genlist_selected_cb(void *pUserData, Evas_Object *p
 		char *szTitle = NULL;
 		szTitle = g_strdup(VIDEOS_SELECTVIEW_HEADER_SELECT_VIDEO);
 		g_pRenameLayout = mp_rename_ctrl_show(g_pSelectHandle->pNaviFrameHandle, NULL, (void*)__mp_select_view_result_view_update_cb, nSelectedIndex);
-		Evas_Object * pLeftbtn = elm_button_add(g_pSelectHandle->pNaviFrameHandle);
-		elm_object_style_set(pLeftbtn, "naviframe/end_btn/default");
-		elm_naviframe_item_push(g_pSelectHandle->pNaviFrameHandle, szTitle, pLeftbtn, NULL, g_pRenameLayout, NULL);
 	}
 }
 

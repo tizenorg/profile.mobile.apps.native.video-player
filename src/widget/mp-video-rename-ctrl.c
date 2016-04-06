@@ -509,20 +509,6 @@ Evas_Object *mp_rename_ctrl_show(void *pNaviFrameHandle, void *pUserData, mpRena
 	snprintf(edj_path, 1024, "%s%s/%s", path, "edje", VIDEO_CUSTOM_THEME);
 	free(path);
 	//Create popup
-	g_pRenameHandle->pBaseLayout = elm_layout_add(g_pRenameHandle->pNaviFrameHandle);
-	elm_layout_file_set(g_pRenameHandle->pBaseLayout, edj_path, "transparent_layout");
-
-	g_pRenameHandle->pGenlist = elm_genlist_add(g_pRenameHandle->pBaseLayout);
-	elm_scroller_bounce_set(g_pRenameHandle->pGenlist, EINA_FALSE, EINA_TRUE);
-	evas_object_size_hint_weight_set(g_pRenameHandle->pGenlist, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
-	evas_object_size_hint_align_set(g_pRenameHandle->pGenlist, EVAS_HINT_FILL, EVAS_HINT_FILL);
-	evas_object_show(g_pRenameHandle->pGenlist);
-	elm_object_part_content_set(g_pRenameHandle->pBaseLayout, "base_bg", g_pRenameHandle->pGenlist);
-	mp_select_view_arrange_video_list(g_pRenameHandle->pGenlist, FALSE);
-
-	evas_object_size_hint_weight_set(g_pRenameHandle->pBaseLayout, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
-	evas_object_size_hint_align_set(g_pRenameHandle->pBaseLayout, EVAS_HINT_FILL, EVAS_HINT_FILL);
-	evas_object_show(g_pRenameHandle->pBaseLayout);
 	g_pRenameHandle->pPopUpHandle = elm_popup_add(g_pRenameHandle->pNaviFrameHandle);
 
 	//elm_object_style_set(g_pRenameHandle->pPopUpHandle, "no_effect");
@@ -600,7 +586,7 @@ Evas_Object *mp_rename_ctrl_show(void *pNaviFrameHandle, void *pUserData, mpRena
 
 	MP_FREE_STRING(szFileExt);
 	MP_FREE_STRING(pVideoFile);
-	return g_pRenameHandle->pBaseLayout;
+	return g_pRenameHandle->pPopUpHandle;
 }
 
 bool mp_rename_ctrl_is_top_view()
