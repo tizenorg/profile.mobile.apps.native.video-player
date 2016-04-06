@@ -2662,8 +2662,8 @@ styles {
 #define LITE_GENLIST_ICON_CUSTOM_BG_WIDTH	90
 #define LITE_GENLIST_ICON_CUSTOM_BG_HEIGHT	55
 
-#define LITE_GENLIST_ICON_CUSTOM_THUMBNAIL_WIDTH	70
-#define LITE_GENLIST_ICON_CUSTOM_THUMBNAIL_HEIGHT	45
+#define LITE_GENLIST_ICON_CUSTOM_THUMBNAIL_WIDTH	55
+#define LITE_GENLIST_ICON_CUSTOM_THUMBNAIL_HEIGHT	40
 
 #define LITE_GENLIST_PROGRESSBAR_L		0
 #define LITE_GENLIST_PROGRESSBAR_R		(LITE_GENLIST_ICON_CUSTOM_THUMBNAIL_WIDTH-LITE_GENLIST_PROGRESSBAR_L)
@@ -2719,7 +2719,7 @@ styles {
 				scale: 1;
 				type: IMAGE;
 				description { state: "default" 0.0;
-					align: 0 0.5;
+					align: 0 0;
 					fixed: 1 1;
 					rel1 {
 						relative: 1 0;
@@ -2747,7 +2747,7 @@ styles {
 				scale: 1;
 				type: SWALLOW;
 				description { state: "default" 0.0;
-					align: 0 0.5;
+					align: 0 0;
 					fixed: 1 1;
 					rel1 {
 						relative: 0 0;
