@@ -2732,6 +2732,7 @@ styles {
 					min: LITE_GENLIST_ICON_CUSTOM_THUMBNAIL_WIDTH LITE_GENLIST_ICON_CUSTOM_THUMBNAIL_HEIGHT;
 					max: LITE_GENLIST_ICON_CUSTOM_THUMBNAIL_WIDTH LITE_GENLIST_ICON_CUSTOM_THUMBNAIL_HEIGHT;
 					image.normal: "player_library_list_thumbnail_default.png";
+					color : 0 0 0 255;
 				}
 				description { state: "fadeout" 0.0;
 					inherit: "default" 0.0;
