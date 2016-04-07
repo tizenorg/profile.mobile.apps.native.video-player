@@ -322,7 +322,7 @@ bool vp_sound_device_is_enable(video_sound_device_type_t nDeviceType,
 	}
 
 	sound_manager_set_device_connected_cb
-	(SOUND_DEVICE_IO_DIRECTION_OUT_MASK,
+	(SOUND_DEVICE_ALL_MASK,
 	 (sound_device_connected_cb) vp_audio_jack_connected_cb,
 	 (void *) pPlayview);
 
