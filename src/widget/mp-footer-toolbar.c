@@ -264,7 +264,7 @@ void mp_ft_ctrl_create_more_btn_of_personal(void *pUserData,
 	if (nVideoListSize > 0 && g_pToolbarWidget->ToolbarCbFunc.SearchCb) {
 		item =
 			elm_ctxpopup_item_append(g_pToolbarWidget->pMoreCtxPopup,
-						 VIDEOS_CTXPOP_MENU_SEARCH, NULL,
+						 VIDEOS_CTXPOP_MENU_SEARCH_IDS, NULL,
 						 g_pToolbarWidget->ToolbarCbFunc.
 						 SearchCb,
 						 (void *) FOOTER_TAB_TYPE_PERSONAL);
