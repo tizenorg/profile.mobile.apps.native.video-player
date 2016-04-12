@@ -538,8 +538,8 @@ static void __mp_select_view_genlist_selected_cb(void *pUserData, Evas_Object *p
 	{
 		VideoLogInfo("Show rename popup");
 
-		char *szTitle = NULL;
-		szTitle = g_strdup(VIDEOS_SELECTVIEW_HEADER_SELECT_VIDEO);
+		/*char *szTitle = NULL;
+		szTitle = g_strdup(VIDEOS_SELECTVIEW_HEADER_SELECT_VIDEO);*/
 		g_pRenameLayout = mp_rename_ctrl_show(g_pSelectHandle->pNaviFrameHandle, NULL, (void*)__mp_select_view_result_view_update_cb, nSelectedIndex);
 	}
 }

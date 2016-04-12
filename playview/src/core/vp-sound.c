@@ -39,8 +39,11 @@ void vp_player_focus_callback(sound_stream_info_h stream_info, sound_stream_focu
 	int ret = -1;
 	ret = sound_manager_get_focus_state(pPlayView->stream_info, &state_for_playback,
 										&state_for_recording);
+	if(ret != SOUND_MANAGER_ERROR_NONE){
+		VideoLogError("sound_manager_get_focus_state fail");
+		return;
+	}
 	if (state_for_playback == SOUND_STREAM_FOCUS_STATE_RELEASED) {
-		vp_play_normal_view_pause_player(pPlayView);
 		if (reason_for_change != SOUND_STREAM_FOCUS_CHANGED_BY_ALARM &&
 				reason_for_change != SOUND_STREAM_FOCUS_CHANGED_BY_NOTIFICATION) {
 			sound_manager_get_focus_reacquisition(pPlayView->stream_info, &pPlayView->reacquire_state);

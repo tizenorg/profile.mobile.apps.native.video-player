@@ -138,7 +138,7 @@ static Evas_Object *__mp_view_as_ctrl_get_icon_of_genlsit_item_cb(const void *pU
 
 	int nIndex = (int)pUserData;
 	Evas_Object *pTmpRadio = NULL;
-	Evas_Object *pLayout	= NULL;
+	/*Evas_Object *pLayout	= NULL;*/
 
 	if (!strcmp(pPart, "elm.swallow.end") || !strcmp(pPart, "elm.icon.2"))
 	{
