@@ -432,7 +432,7 @@ static void _vp_play_normal_view_show_video_only_popup(NormalView *pNormalView);
 static bool _vp_play_normal_view_check_audio_only(NormalView *pNormalView);
 static bool _vp_play_normal_view_check_drm_lock(NormalView *pNormalView, bool *bLock);
 static void _vp_play_normal_view_set_played_time(NormalView *pNormalView);
-static void _vp_play_normal_view_screen_capture(NormalView *pNormalView);
+/*static void _vp_play_normal_view_screen_capture(NormalView *pNormalView);*/
 static void _vp_play_normal_view_screen_move(NormalView *pNormalView, bool bFoward);
 
 static void _vp_play_normal_view_create_progress_timer(NormalView *pNormalView);
@@ -3319,7 +3319,7 @@ static void __vp_normal_focus_key_up_cb(void *pUserData, Evas * e, Evas_Object *
 		}
 	}
 }
-
+/*
 static void __vp_normal_bookmark_item_select_cb(int nPos, const char *szPath, void *pUserData)
 {
 	if (!pUserData) {
@@ -3351,7 +3351,7 @@ static void __vp_normal_bookmark_item_select_cb(int nPos, const char *szPath, vo
 
 	_vp_play_normal_view_show_layout(pNormalView);
 }
-
+*/
 static Eina_Bool __vp_normal_hide_layout_timer_cb(void *pUserData)
 {
 	if (!pUserData) {
@@ -3444,7 +3444,7 @@ static Eina_Bool __vp_normal_subtitle_timer_cb(void *pUserData)
 
 	return EINA_FALSE;
 }
-
+/*
 static Eina_Bool __vp_normal_screenshot_timer_cb(void *pUserData)
 {
 	if (!pUserData) {
@@ -3470,7 +3470,7 @@ static Eina_Bool __vp_normal_screenshot_timer_cb(void *pUserData)
 
 	return EINA_FALSE;
 }
-
+*/
 
 static Eina_Bool __vp_normal_dlna_speed_timer_cb(void *pUserData)
 {
@@ -7541,7 +7541,7 @@ static void _vp_play_normal_view_set_played_time(NormalView *pNormalView)
 		}
 	}
 }
-
+/*
 static void _vp_play_normal_view_screen_capture(NormalView *pNormalView)
 {
 	if (!pNormalView) {
@@ -7565,7 +7565,7 @@ static void _vp_play_normal_view_screen_capture(NormalView *pNormalView)
 	}
 
 }
-
+*/
 
 static void _vp_play_normal_view_screen_move(NormalView *pNormalView, bool bFoward)
 {
@@ -10375,7 +10375,7 @@ static void  _vp_play_normal_view_control_layout_del_cb(void *data, Evas *e, Eva
 		pNormalView->pScreenSizeBtn = NULL;
 	}
 }
-
+/*
 static void  _vp_play_normal_view_bookmark_object_del_cb(void *data, Evas *e, Evas_Object *obj, void *event_info)
 {
 	if (!data) {
@@ -10389,7 +10389,7 @@ static void  _vp_play_normal_view_bookmark_object_del_cb(void *data, Evas *e, Ev
 		pNormalView->pBookmarkObj = NULL;
 	}
 }
-
+*/
 static bool _vp_play_normal_view_create_main_control(NormalView *pNormalView)
 {
 	if (!pNormalView) {
