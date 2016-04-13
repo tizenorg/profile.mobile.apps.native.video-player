@@ -173,13 +173,15 @@ void mp_util_hide_indicator(void)
 	}
 
 	elm_win_indicator_mode_set((Evas_Object *) pMainWindowHandle,
+					   ELM_WIN_INDICATOR_HIDE);
+	/*elm_win_indicator_mode_set((Evas_Object *) pMainWindowHandle,
 				   ELM_WIN_INDICATOR_SHOW);
 	elm_win_indicator_opacity_set((Evas_Object *) pMainWindowHandle,
 				      ELM_WIN_INDICATOR_TRANSPARENT);
 	elm_object_signal_emit((Evas_Object *) pMainConformant,
 			       "elm,state,indicator,overlap", "");
 	evas_object_data_set((Evas_Object *) pMainConformant, "overlap",
-			     (void *) EINA_TRUE);
+			     (void *) EINA_TRUE);*/
 }
 
 void mp_util_set_main_window_handle(void *pWindowHandle)

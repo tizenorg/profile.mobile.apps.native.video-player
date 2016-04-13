@@ -162,8 +162,9 @@ static Evas_Object *__mp_mgr_create_win(const char *name)
 		VideoLogInfo("window size:%d,%d", w, h);
 
 		evas_object_resize(eo, w, h);
-		elm_win_indicator_mode_set(eo, ELM_WIN_INDICATOR_SHOW);
-		elm_win_indicator_opacity_set(eo, ELM_WIN_INDICATOR_TRANSPARENT);
+		elm_win_indicator_mode_set(eo, ELM_WIN_INDICATOR_HIDE);
+		/*elm_win_indicator_mode_set(eo, ELM_WIN_INDICATOR_SHOW);
+		elm_win_indicator_opacity_set(eo, ELM_WIN_INDICATOR_TRANSPARENT);*/
 	}
 
 	return eo;

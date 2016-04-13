@@ -1224,8 +1224,9 @@ static Evas_Object *_vp_play_view_create_window(Evas_Object *pParent, const char
 	evas_object_smart_callback_add(pObj, "delete,request",
 	                               __vp_play_view_delete_request_cb, NULL);
 
-	elm_win_indicator_mode_set(pObj, ELM_WIN_INDICATOR_SHOW);
-	elm_win_indicator_opacity_set(pObj, ELM_WIN_INDICATOR_TRANSPARENT);
+	/*elm_win_indicator_mode_set(pObj, ELM_WIN_INDICATOR_SHOW);
+	elm_win_indicator_opacity_set(pObj, ELM_WIN_INDICATOR_TRANSPARENT);*/
+	elm_win_indicator_mode_set(pObj, ELM_WIN_INDICATOR_HIDE);
 
 	if (elm_win_wm_rotation_supported_get(pObj)) {
 		const int rots[4] = { 0, 90, 180, 270 };
