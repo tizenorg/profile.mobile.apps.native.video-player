@@ -252,7 +252,7 @@ void mp_ft_ctrl_create_more_btn_of_personal(void *pUserData,
 				       EEXT_CALLBACK_MORE,
 				       eext_ctxpopup_back_cb, NULL);
 
-//	elm_object_style_set(g_pToolbarWidget->pMoreCtxPopup, "more/default");
+	elm_object_style_set(g_pToolbarWidget->pMoreCtxPopup, "more/default");
 	elm_ctxpopup_auto_hide_disabled_set(g_pToolbarWidget->pMoreCtxPopup,
 					    EINA_TRUE);
 
@@ -338,7 +338,6 @@ void mp_ft_ctrl_create_more_btn_of_personal(void *pUserData,
 				EINA_TRUE);
 		nItemCount++;
 	}
-
 
 	if (nItemCount > 0) {
 		mp_ft_ctrl_move_more_popup(g_pToolbarWidget->pMoreCtxPopup,

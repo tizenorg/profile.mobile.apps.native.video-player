@@ -4836,7 +4836,7 @@ static void __vp_normal_more_btn_clicked_cb(void *pUserData, Evas_Object *pObj, 
 	VP_EVAS_TIMER_DEL(pNormalView->pHideTimer);
 	VP_EVAS_TIMER_DEL(pNormalView->pHideFinishTimer);
 
-//	elm_object_style_set(pNormalView->pCtxPopup , "more/default");
+	elm_object_style_set(pNormalView->pCtxPopup , "more/default");
 	evas_object_smart_callback_add(pNormalView->pCtxPopup , "dismissed", __vp_normal_ctx_popup_dismiss_cb, (void *)pNormalView);
 	elm_ctxpopup_auto_hide_disabled_set(pNormalView->pCtxPopup, EINA_TRUE);
 
