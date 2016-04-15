@@ -1393,7 +1393,30 @@ static bool _vp_play_view_init_layout(PlayView *pPlayView)
 		}
 	}
 
-	VideoLogWarning("<< Play view : Init layout");
+	/*rotation check*/
+	VideoLogInfo("<< Play view : Checking initial rotation!");
+
+	int nAngle = elm_win_rotation_get((Evas_Object *)pPlayView->pWin);
+	video_play_rotate_t nRotate = VIDEO_PLAY_ROTATE_NONE;
+
+	switch (nAngle) {
+	case 0:
+		nRotate = VIDEO_PLAY_ROTATE_NONE;
+		break;
+	case 90:
+		nRotate = VIDEO_PLAY_ROTATE_90;
+		break;
+	case 180:
+		nRotate = VIDEO_PLAY_ROTATE_180;
+		break;
+	case 270:
+		nRotate = VIDEO_PLAY_ROTATE_270;
+		break;
+	}
+
+	if (pPlayView->nRotate != nRotate) {
+		vp_play_view_set_rotate(pPlayView, nRotate);
+	}
 	return TRUE;
 }
 
