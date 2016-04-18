@@ -3370,7 +3370,7 @@ static Eina_Bool __vp_normal_hide_layout_timer_cb(void *pUserData)
 		VideoLogWarning("vp_mm_player_get_state is fail");
 	}
 
-	if (nState != VP_MM_PLAYER_STATE_PLAYING) {
+	if ((nState != VP_MM_PLAYER_STATE_PLAYING) && (nState != VP_MM_PLAYER_STATE_PAUSED)) {
 		return EINA_FALSE;
 	}
 
