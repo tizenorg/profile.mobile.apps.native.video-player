@@ -74,4 +74,38 @@
 		}
 	} /* parts */
 } /* group */
+group {
+	name: "elm/layout/application/detail_view";
+	parts {
+		part {
+			name: "elm.swallow.bg";
+			type: SWALLOW;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				color: 0 0 0 255;
+			}
+		}
+		part {
+			name: "elm.swallow.event";
+			type: SWALLOW;
+			mouse_events: 1;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				rel1 { relative: 0.0 0.0; }
+				rel2 { relative: 1.0 1.0; }
+			}
+		}
+		part {
+			name: "elm.swallow.content";
+			type: SWALLOW;
+			mouse_events: 1;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+			}
+		}
+	} /* parts */
+} /* group */
 

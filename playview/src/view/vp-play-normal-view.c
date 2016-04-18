@@ -9251,7 +9251,8 @@ static void _vp_play_normal_view_on_detail_popup(NormalView *pNormalView)
 		pDetailInfo->szLocation = vp_dir_get((const char*)pNormalView->szMediaURL);
 	}
 
-	pNormalView->pDetailHandle = vp_detail_create(pPlayView->pWin, __vp_normal_detail_popup_close_cb, pDetailInfo);
+	pNormalView->pDetailHandle = vp_detail_page_create((void *)pPlayView->pNaviframe,__vp_normal_detail_popup_close_cb, pDetailInfo);
+	//pNormalView->pDetailHandle = vp_detail_create(pPlayView->pWin, __vp_normal_detail_popup_close_cb, pDetailInfo);
 	if (!pNormalView->pDetailHandle) {
 		VideoLogError("vp_detail_create fail");
 
@@ -9270,12 +9271,12 @@ static void _vp_play_normal_view_on_detail_popup(NormalView *pNormalView)
 	if (!vp_detail_set_user_data(pNormalView->pDetailHandle, (void *)pNormalView)) {
 		VideoLogWarning("vp_detail_set_user_data is fail");
 	}
-
+/*
 	if (!vp_detail_realize(pNormalView->pDetailHandle)) {
 		VideoLogWarning("vp_detail_realize is fail");
 	}
 	pNormalView->bIsPopupShow = TRUE;
-
+*/
 	VP_FREE(pDetailInfo->szTitle);
 	VP_FREE(pDetailInfo->szFormat);
 	VP_FREE(pDetailInfo->szDate);
