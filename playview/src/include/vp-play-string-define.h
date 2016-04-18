@@ -71,6 +71,7 @@
 #define VP_PLAY_CUSTOM_LAYOUT_GROUP		"application"
 #define VP_PLAY_CUSTOM_LAYOUT_STYLE		"play_view"
 #define VP_PLAY_CUSTOM_MULTI_LAYOUT_STYLE	"multi_view"
+#define VP_PLAY_DETAIL_LAYOUT_STYLE		"detail_view"
 
 #define VP_PLAY_EDJ_GROUP_GESTURE		"pv.gesture"
 

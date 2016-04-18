@@ -39,10 +39,13 @@ typedef struct _vp_detail_info{
 	bool bPlayready;
 }vp_detail_info;
 
-
-detail_handle vp_detail_create(Evas_Object *pParent, PopupCloseCbFunc pCloseCb, vp_detail_info *pDetailInfo);
+detail_handle vp_detail_page_create(void *pNaviFrame, PopupCloseCbFunc pCloseCb,
+        vp_detail_info *pDetailInfo);
+//detail_handle vp_detail_create(Evas_Object *pParent, PopupCloseCbFunc pCloseCb, vp_detail_info *pDetailInfo);
 void vp_detail_destroy(detail_handle pDetailHandle);
+/*
 bool vp_detail_realize(detail_handle pDetailHandle);
 bool vp_detail_unrealize(detail_handle pDetailHandle);
+*/
 bool vp_detail_set_user_data(detail_handle pDetailHandle, void *pUserData);
 

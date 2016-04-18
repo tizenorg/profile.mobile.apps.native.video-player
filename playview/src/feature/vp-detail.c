@@ -45,8 +45,24 @@ typedef struct _DetailPopup {
 
 } DetailPopup;
 
+typedef struct _DetailView {
+	Evas_Object *pParent;
+	Evas_Object *BaseLayout;
+	void *pNaviFrameHandle;
+	void *pNaviFrameItem;
+	Evas_Object *pGenList;
+	Elm_Genlist_Item_Class *st_Detail_Itc;
+	vp_detail_info *pDetailInfo;
+	int nListCount;
 
-static void _vp_detail_destroy_handle(DetailPopup *pDetailPopup);
+	void *pUserData;
+	PopupCloseCbFunc pCloseCb;
+
+} DetailView;
+
+DetailView *pDetailViewHandle = NULL;
+
+static void _vp_detail_destroy_handle();
 
 
 /* callback functions */
@@ -56,7 +72,7 @@ static void __vp_detail_genlist_realized(void *data, Evas_Object *obj,
 {
 	VP_GENLIST_HIDE_BOTTOMLINE(data, obj, event_info);
 }
-
+/*
 static void __vp_detail_popup_rotate_cb(void *data, Evas_Object *obj,
                                         void *event_info)
 {
@@ -73,7 +89,7 @@ static void __vp_detail_popup_rotate_cb(void *data, Evas_Object *obj,
 	                            VIDEO_POPUP_2_TEXT);
 	elm_popup_orient_set(pDetailPopup->pPopup, ELM_POPUP_ORIENT_CENTER);
 }
-
+*/
 static char *__vp_detail_genlist_text_get_cb(const void *pUserData,
                                 Evas_Object *pObj,
                                 const char *pPart)
@@ -91,8 +107,8 @@ static char *__vp_detail_genlist_text_get_cb(const void *pUserData,
 		return strdup(szTxt);
 	} else if (!strcmp(pPart, "elm.text.sub")) {
 
-		DetailPopup *pDetailPopup =
-		    (DetailPopup *) evas_object_data_get(pObj,
+		DetailView *pDetailPopup =
+		    (DetailView *) evas_object_data_get(pObj,
 		            VP_DETAIL_GENLIST_DATA_KEY);
 		if (pDetailPopup == NULL) {
 			return NULL;
@@ -156,7 +172,7 @@ static char *__vp_detail_genlist_text_get_cb(const void *pUserData,
 
 	return NULL;
 }
-
+/*
 static void __vp_detail_popup_key_event_cb(void *pUserData,
                                 Evas_Object *pObj,
                                 void *pEventInfo)
@@ -201,45 +217,47 @@ static void __vp_detail_popup_mouse_event_cb(void *pUserData,
 	}
 }
 
-
+*/
 /* internal functions */
 
-static void _vp_detail_destroy_handle(DetailPopup *pDetailPopup)
+static void _vp_detail_destroy_handle()
 {
-	if (pDetailPopup == NULL) {
-		VideoLogError("pDetailPopup is NULL");
+	if (pDetailViewHandle == NULL) {
+		VideoLogError("pDetailViewHandle is NULL");
 		return;
 	}
-	evas_object_smart_callback_del(pDetailPopup->pGenList, "realized",
+	evas_object_smart_callback_del(pDetailViewHandle->pGenList, "realized",
 	                               __vp_detail_genlist_realized);
+	/*
 	evas_object_smart_callback_del(pDetailPopup->pParent,
 	                               "rotation,changed",
 	                               __vp_detail_popup_rotate_cb);
+	 */
 
 
-	VP_EVAS_DEL(pDetailPopup->pGenList);
-	VP_EVAS_DEL(pDetailPopup->pButton);
-	VP_EVAS_DEL(pDetailPopup->pBox);
+	VP_EVAS_DEL(pDetailViewHandle->pGenList);
+	/*VP_EVAS_DEL(pDetailPopup->pButton);
+	VP_EVAS_DEL(pDetailPopup->pBox);*/
 
-	VP_FREE(pDetailPopup->pDetailInfo->szTitle);
-	VP_FREE(pDetailPopup->pDetailInfo->szDate);
-	VP_FREE(pDetailPopup->pDetailInfo->szSize);
-	VP_FREE(pDetailPopup->pDetailInfo->szFormat);
-	VP_FREE(pDetailPopup->pDetailInfo->szResolution);
-	VP_FREE(pDetailPopup->pDetailInfo->szLatitude);
-	VP_FREE(pDetailPopup->pDetailInfo->szLongitude);
-	VP_FREE(pDetailPopup->pDetailInfo->szLocation);
+	VP_FREE(pDetailViewHandle->pDetailInfo->szTitle);
+	VP_FREE(pDetailViewHandle->pDetailInfo->szDate);
+	VP_FREE(pDetailViewHandle->pDetailInfo->szSize);
+	VP_FREE(pDetailViewHandle->pDetailInfo->szFormat);
+	VP_FREE(pDetailViewHandle->pDetailInfo->szResolution);
+	VP_FREE(pDetailViewHandle->pDetailInfo->szLatitude);
+	VP_FREE(pDetailViewHandle->pDetailInfo->szLongitude);
+	VP_FREE(pDetailViewHandle->pDetailInfo->szLocation);
 
-	VP_FREE(pDetailPopup->pDetailInfo);
+	VP_FREE(pDetailViewHandle->pDetailInfo);
 
-	if (pDetailPopup->st_Detail_Itc) {
-		elm_genlist_item_class_free(pDetailPopup->st_Detail_Itc);
-		pDetailPopup->st_Detail_Itc = NULL;
+	if (pDetailViewHandle->st_Detail_Itc) {
+		elm_genlist_item_class_free(pDetailViewHandle->st_Detail_Itc);
+		pDetailViewHandle->st_Detail_Itc = NULL;
 	}
 
-	VP_EVAS_DEL(pDetailPopup->pPopup);
+/*	VP_EVAS_DEL(pDetailPopup->pPopup);*/
 
-	VP_FREE(pDetailPopup);
+	VP_FREE(pDetailViewHandle);
 }
 
 static Evas_Object *_vp_detail_create_genlist(Evas_Object *pParent)
@@ -274,7 +292,7 @@ static bool _vp_detail_add_genlist_item(Evas_Object *pObj,
 		return FALSE;
 	}
 
-	DetailPopup *pDetailPopup = (DetailPopup *) pUserData;
+	DetailView *pDetailPopup = (DetailView *) pUserData;
 	if (pDetailPopup->st_Detail_Itc) {
 		elm_genlist_item_class_free(pDetailPopup->st_Detail_Itc);
 		pDetailPopup->st_Detail_Itc = NULL;
@@ -379,7 +397,129 @@ static bool _vp_detail_add_genlist_item(Evas_Object *pObj,
 	return TRUE;
 }
 
+static Eina_Bool vp_detail_view_back_btn_cb(void *pUserData, Elm_Object_Item *pItem)
+{
+	if (!pDetailViewHandle)
+	{
+		VideoLogInfo("[ERR] pDetailViewHandle is NULL.");
+		return EINA_TRUE;
+	}
+
+	if (pDetailViewHandle->pCloseCb) {
+		pDetailViewHandle->pCloseCb(-1, FALSE,
+		                       (void *) pDetailViewHandle->pUserData);
+	}
+
+
+	return EINA_TRUE;
+}
+
+void  __vp_detail_soft_back_button_cb(void *data, Evas_Object *obj, void *event_info)
+{
+	VideoLogInfo(" ");
+	Evas_Object *pTopNaviFrame = NULL;
+	pTopNaviFrame = elm_naviframe_item_pop(pDetailViewHandle->pNaviFrameHandle);
+	evas_object_del(pTopNaviFrame);
+}
+
+detail_handle vp_detail_page_create(void *pNaviFrame, PopupCloseCbFunc pCloseCb,
+        vp_detail_info *pDetailInfo)
+{
+	if (!pNaviFrame)
+	{
+		VideoLogError("[ERR] No existed pNaviFrame.");
+		return NULL;
+	}
+
+	if (pDetailInfo == NULL) {
+		VideoLogError("pDetailInfo is NULL");
+		return NULL;
+	}
+
+	VideoLogInfo("");
+
+	pDetailViewHandle = (DetailView*)calloc(1, sizeof(DetailView));
+	memset(pDetailViewHandle, 0, sizeof(DetailView));
+	if (pDetailViewHandle == NULL) {
+		VideoLogError("pDetailViewHandle alloc fail");
+		return NULL;
+	}
+
+	pDetailViewHandle->pDetailInfo = calloc(1, sizeof(vp_detail_info));
+	if (pDetailViewHandle->pDetailInfo == NULL) {
+		VideoLogError("pDetailViewHandle pDetailInfo alloc fail");
+		_vp_detail_destroy_handle();
+		return NULL;
+	}
+	VP_STRDUP(pDetailViewHandle->pDetailInfo->szTitle, pDetailInfo->szTitle);
+	VP_STRDUP(pDetailViewHandle->pDetailInfo->szDate, pDetailInfo->szDate);
+	VP_STRDUP(pDetailViewHandle->pDetailInfo->szFormat, pDetailInfo->szFormat);
+	VP_STRDUP(pDetailViewHandle->pDetailInfo->szSize, pDetailInfo->szSize);
+	VP_STRDUP(pDetailViewHandle->pDetailInfo->szLastModified,
+	          pDetailInfo->szLastModified);
+	VP_STRDUP(pDetailViewHandle->pDetailInfo->szResolution,
+	          pDetailInfo->szResolution);
+	VP_STRDUP(pDetailViewHandle->pDetailInfo->szLatitude,
+	          pDetailInfo->szLatitude);
+	VP_STRDUP(pDetailViewHandle->pDetailInfo->szLongitude,
+	          pDetailInfo->szLongitude);
+	pDetailViewHandle->pDetailInfo->szLocation =
+	    vp_util_convert_file_location(pDetailInfo->szLocation);
+
+	pDetailViewHandle->pDetailInfo->bDrm = pDetailInfo->bDrm;
+	pDetailViewHandle->pDetailInfo->bForwardLock = pDetailInfo->bForwardLock;
+	pDetailViewHandle->pDetailInfo->bPlayready = pDetailInfo->bPlayready;
+	pDetailViewHandle->pNaviFrameHandle = pNaviFrame;
+
+	pDetailViewHandle->BaseLayout = elm_layout_add(pDetailViewHandle->pNaviFrameHandle);
+	elm_layout_theme_set(pDetailViewHandle->BaseLayout, VP_PLAY_CUSTOM_LAYOUT_KLASS,
+	                            VP_PLAY_CUSTOM_LAYOUT_GROUP,
+	                            VP_PLAY_DETAIL_LAYOUT_STYLE);
+	evas_object_size_hint_weight_set(pDetailViewHandle->BaseLayout, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
+	evas_object_size_hint_align_set(pDetailViewHandle->BaseLayout, EVAS_HINT_FILL, EVAS_HINT_FILL);
+
+	Evas_Object * pLeftbtn = elm_button_add(pDetailViewHandle->pNaviFrameHandle);
+	elm_object_style_set(pLeftbtn, "naviframe/end_btn/default");
+	evas_object_smart_callback_add(pLeftbtn, "clicked", __vp_detail_soft_back_button_cb, NULL);
+
+	pDetailViewHandle->pNaviFrameItem = elm_naviframe_item_push(pDetailViewHandle->pNaviFrameHandle, (const char*)VP_PLAY_STRING_COM_DETAILS, pLeftbtn, NULL, pDetailViewHandle->BaseLayout, NULL);
+	elm_naviframe_item_pop_cb_set(pDetailViewHandle->pNaviFrameItem, vp_detail_view_back_btn_cb, pDetailViewHandle);
+
+	pDetailViewHandle->pParent = pDetailViewHandle->BaseLayout;
+	pDetailViewHandle->pCloseCb = pCloseCb;
+
+	pDetailViewHandle->pGenList =
+	    _vp_detail_create_genlist(pDetailViewHandle->pParent);
+	if (pDetailViewHandle->pGenList == NULL) {
+		VideoLogError("_vp_detail_create_genlist fail");
+		_vp_detail_destroy_handle();
+		return NULL;
+	}
+
+	evas_object_data_set(pDetailViewHandle->pGenList,
+	                     VP_DETAIL_GENLIST_DATA_KEY,
+	                     (void *) pDetailViewHandle);
+	elm_genlist_mode_set(pDetailViewHandle->pGenList, ELM_LIST_COMPRESS);
+
+	int added_item_cnt = 0;
+	if (!_vp_detail_add_genlist_item
+	        (pDetailViewHandle->pGenList, (void *) pDetailViewHandle,
+	         &added_item_cnt)) {
+		VideoLogError("_vp_detail_add_genlist_item fail");
+		_vp_detail_destroy_handle();
+		return NULL;
+	}
+	pDetailViewHandle->nListCount = added_item_cnt;
+	evas_object_smart_callback_add(pDetailViewHandle->pGenList, "realized",
+	                               __vp_detail_genlist_realized, NULL);
+
+	VideoLogInfo("item cnt = %d", added_item_cnt);
+	elm_object_part_content_set(pDetailViewHandle->pParent, "elm.swallow.content", pDetailViewHandle->pGenList);
+	return pDetailViewHandle;
+}
+
 /* external functions */
+/*
 detail_handle vp_detail_create(Evas_Object *pParent,
                                PopupCloseCbFunc pCloseCb,
                                vp_detail_info *pDetailInfo)
@@ -488,7 +628,7 @@ detail_handle vp_detail_create(Evas_Object *pParent,
 
 	return pDetailPopup;
 }
-
+*/
 void vp_detail_destroy(detail_handle pDetailHandle)
 {
 	if (pDetailHandle == NULL) {
@@ -496,12 +636,10 @@ void vp_detail_destroy(detail_handle pDetailHandle)
 		return;
 	}
 
-	DetailPopup *pDetailPopup = (DetailPopup *) pDetailHandle;
-
-	_vp_detail_destroy_handle(pDetailPopup);
+	_vp_detail_destroy_handle();
 
 }
-
+/*
 bool vp_detail_realize(detail_handle pDetailHandle)
 {
 	if (pDetailHandle == NULL) {
@@ -529,7 +667,7 @@ bool vp_detail_unrealize(detail_handle pDetailHandle)
 
 	return TRUE;
 }
-
+*/
 bool vp_detail_set_user_data(detail_handle pDetailHandle, void *pUserData)
 {
 	if (pDetailHandle == NULL) {
@@ -537,7 +675,7 @@ bool vp_detail_set_user_data(detail_handle pDetailHandle, void *pUserData)
 		return FALSE;
 	}
 
-	DetailPopup *pDetailPopup = (DetailPopup *) pDetailHandle;
+	DetailView *pDetailPopup = (DetailView *) pDetailHandle;
 
 	pDetailPopup->pUserData = pUserData;
 
