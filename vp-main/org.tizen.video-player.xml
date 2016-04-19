@@ -100,13 +100,11 @@
 			<mime name="video/vnd.ms-playready.media.pyv" />
 			<mime name="application/vnd.apple.mpegurl" />
 			<mime name="application/x-mpegurl" />
-			<mime name="audio/x-mpegurl" />
 			<mime name="video/x-mpegurl" />
 			<mime name="video/x-flv" />
 			<mime name="video/ogg" />
 			<mime name="video/quicktime" />
 			<mime name="video/mp2t" />
-			<mime name="audio/isma" />
 			<mime name="application/sdp" />
 		</app-control>
 	</ui-application>
