@@ -282,13 +282,13 @@ static double _vp_play_volume_get_mouse_pos_ratio(Evas_Object *pObj,
 		}
 	} else {
 		if (bLandscape) {
-			nHeight = 145;
+			nHeight = VP_VOLUME_LANDSCAPE_HEIGHT;
 			nCurrent =
-			    nCurY - VP_VOLUME_LANDSCAPE_POS_Y - VP_VOLUME_TOP_PADDING_H + 60;
+			    nCurY - VP_VOLUME_LANDSCAPE_POS_Y - VP_VOLUME_TOP_PADDING_H + 10;
 		} else {
-			nHeight = 300;
+			nHeight = 390;
 			nCurrent =
-			    nCurY - VP_VOLUME_PORTRAIT_POS_Y - VP_VOLUME_TOP_PADDING_H - 56;
+			    nCurY - VP_VOLUME_PORTRAIT_POS_Y - VP_VOLUME_TOP_PADDING_H - 150;
 		}
 	}
 
