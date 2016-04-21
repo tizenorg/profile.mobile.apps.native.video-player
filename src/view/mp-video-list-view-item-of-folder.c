@@ -1974,8 +1974,8 @@ void mp_folder_item_view_update_played_item(void)
 		mp_util_svc_update_thumbnail_info(g_pFolderViewHandle->nPlayVideoIndex);
 		elm_genlist_item_update(pTmpVideoGenlistItem);
 		if (pTmpVideoGenlistItem) {
-			elm_genlist_clear(g_pFolderViewHandle->pVideosGenlist);
-			__mp_folder_item_view_append_grid_layout(g_pFolderViewHandle->pVideosGenlist);
+			//elm_genlist_clear(g_pFolderViewHandle->pVideosGenlist);
+			//__mp_folder_item_view_append_grid_layout(g_pFolderViewHandle->pVideosGenlist);
 			//elm_genlist_item_update(pTmpVideoGenlistItem);
 			//elm_genlist_item_fields_update(pTmpVideoGenlistItem, "elm.icon.1", ELM_GENLIST_ITEM_FIELD_CONTENT);
 			elm_genlist_item_selected_set(pTmpVideoGenlistItem, EINA_FALSE);
