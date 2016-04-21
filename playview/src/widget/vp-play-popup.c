@@ -67,6 +67,7 @@ Evas_Object *vp_popup_create(Evas_Object *pParent,
 
 	evas_object_size_hint_weight_set(pObj, EVAS_HINT_EXPAND,
 	                                 EVAS_HINT_EXPAND);
+	elm_popup_align_set(pObj, ELM_NOTIFY_ALIGN_FILL, 1.0);
 
 	if (szTitle) {
 		elm_object_part_text_set(pObj, "title,text", szTitle);
