@@ -674,6 +674,7 @@ static void __mp_search_view_del_no_contents_layout(void)
 
 	if (g_pSearchViewWidget->pNocontentsLayout)
 	{
+		mp_util_virtual_keypad_disabled_set(EINA_TRUE);
 		evas_object_del(g_pSearchViewWidget->pNocontentsLayout);
 		g_pSearchViewWidget->pNocontentsLayout = NULL;
 	}
@@ -694,7 +695,7 @@ static void *__mp_search_view_add_no_contents_layout(void *pParent)
 		return NULL;
 	}
 
-	//mp_util_virtual_keypad_disabled_set(EINA_TRUE);
+	mp_util_virtual_keypad_disabled_set(EINA_FALSE);
 	g_pSearchViewWidget->pNocontentsLayout = mp_create_nocontent_layout(pParent, VIDEOS_SEARCHVIEW_MSG_NO_SEARCH_RESULTS, NULL);
 
 	evas_object_show(g_pSearchViewWidget->pNocontentsLayout);
@@ -864,6 +865,12 @@ static void mp_search_view_check_landscape()
 
 	MP_FREE_STRING(szChangedStr);
 	MP_FREE_STRING(TempUtf8);
+}
+
+static void __mp_search_view_genlist_scroll_cb(void *pUserData, Evas_Object *pObject, void *pEventInfo)
+{
+	VideoLogInfo("");
+	elm_object_focus_set(g_pSearchViewWidget->pSearchBarEntry, EINA_FALSE);
 }
 
 static void __mp_search_view_entry_changed_cb(void *pUserData, Evas_Object *pObject, void *pEventInfo)
@@ -1471,6 +1478,7 @@ void mp_search_view_init(void *pParent)
 	elm_genlist_block_count_set(g_pSearchViewHandle->pVideosGenlist, VIDEO_GENLIST_BLOCK_COUNT);
 	elm_genlist_mode_set(g_pSearchViewHandle->pVideosGenlist, ELM_LIST_COMPRESS);
 	elm_genlist_homogeneous_set(g_pSearchViewHandle->pVideosGenlist, EINA_TRUE);
+	evas_object_smart_callback_add(g_pSearchViewHandle->pVideosGenlist, "scroll,anim,start", __mp_search_view_genlist_scroll_cb, (void *)g_pSearchViewWidget);
 
 	g_pSearchViewHandle->isViewActive = true;
 	__mp_search_view_arrange_video_list(__mp_search_view_get_sort_type(), g_pSearchViewHandle->pVideosGenlist);
@@ -1489,7 +1497,7 @@ void mp_search_view_init(void *pParent)
 		elm_object_part_content_set(g_pSearchViewWidget->pSearchViewBaselayout, "elm.swallow.content", pNoContentLayout);
 	}
 
-	//mp_util_virtual_keypad_disabled_set(EINA_TRUE);
+	mp_util_virtual_keypad_disabled_set(EINA_TRUE);
 	mp_util_db_set_update_fun(g_pSearchViewHandle->euLev, __mp_search_view_db_changed_cb);
 
 	mp_util_hide_indicator();
@@ -1542,6 +1550,7 @@ static void __mp_search_view_pop(void *pNaviFrame)
 		return;
 	}
 
+	mp_util_virtual_keypad_disabled_set(EINA_FALSE);
 	bool bUpdateList = FALSE;
 	g_pSearchViewHandle->isViewActive = false;
 	if (g_pSearchViewHandle->bUpdateList) {
