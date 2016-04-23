@@ -5,6 +5,7 @@
 			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="org.tizen.nativecore.config.sbi.gcc45.app.debug.794401490" moduleId="org.eclipse.cdt.core.settings" name="Debug">
 				<externalSettings/>
 				<extensions>
+					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
 					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="org.tizen.nativecore.NativeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
@@ -12,11 +13,10 @@
 					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
-					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
 				</extensions>
 			</storageModule>
 			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
-				<configuration artifactName="video-player" buildArtefactType="org.tizen.nativecore.buildArtefactType.app" buildProperties="org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug,org.eclipse.cdt.build.core.buildArtefactType=org.tizen.nativecore.buildArtefactType.app" description="" errorParsers="org.eclipse.cdt.core.MakeErrorParser;org.eclipse.cdt.core.GCCErrorParser;" id="org.tizen.nativecore.config.sbi.gcc45.app.debug.794401490" name="Debug" parent="org.tizen.nativecore.config.sbi.gcc45.app.debug">
+				<configuration artifactName="videos" buildArtefactType="org.tizen.nativecore.buildArtefactType.app" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.tizen.nativecore.buildArtefactType.app,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug" description="" errorParsers="org.eclipse.cdt.core.MakeErrorParser;org.eclipse.cdt.core.GCCErrorParser;" id="org.tizen.nativecore.config.sbi.gcc45.app.debug.794401490" name="Debug" parent="org.tizen.nativecore.config.sbi.gcc45.app.debug">
 					<folderInfo id="org.tizen.nativecore.config.sbi.gcc45.app.debug.794401490." name="/" resourcePath="">
 						<toolChain id="org.tizen.nativecore.toolchain.sbi.gcc45.app.debug.1778140973" name="Tizen Native Toolchain" superClass="org.tizen.nativecore.toolchain.sbi.gcc45.app.debug">
 							<targetPlatform binaryParser="org.eclipse.cdt.core.ELF" id="org.tizen.nativeide.target.sbi.gnu.platform.base.813105786" osList="linux,win32" superClass="org.tizen.nativeide.target.sbi.gnu.platform.base"/>
@@ -47,7 +47,6 @@
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/contacts-svc&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/content&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/context-service&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/csf&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/dali&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/dali-toolkit&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/dbus-1.0&quot;"/>
@@ -108,10 +107,7 @@
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/storage&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/system&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/telephony&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/telephony-client&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/ug-1&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/ui&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/vconf&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/web&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/widget_service&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/widget_viewer_evas&quot;"/>
@@ -179,7 +175,6 @@
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/contacts-svc&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/content&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/context-service&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/csf&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/dali&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/dali-toolkit&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/dbus-1.0&quot;"/>
@@ -240,10 +235,7 @@
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/storage&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/system&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/telephony&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/telephony-client&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/ug-1&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/ui&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/vconf&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/web&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/widget_service&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/widget_viewer_evas&quot;"/>
@@ -252,10 +244,10 @@
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/lib/glib-2.0/include&quot;"/>
 								</option>
 								<option id="sbi.gnu.c.compiler.option.frameworks_cflags.core.1996540157" name="Tizen-Frameworks-Other-Cflags" superClass="sbi.gnu.c.compiler.option.frameworks_cflags.core" valueType="stringList">
-									<listOptionValue builtIn="false" value="${TC_COMPILER_MISC}"/>
-									<listOptionValue builtIn="false" value="${RS_COMPILER_MISC}"/>
+									<listOptionValue builtIn="false" value="$(TC_COMPILER_MISC)"/>
+									<listOptionValue builtIn="false" value="$(RS_COMPILER_MISC)"/>
 									<listOptionValue builtIn="false" value=" -fPIE"/>
-									<listOptionValue builtIn="false" value="--sysroot=&quot;${SBI_SYSROOT}&quot;"/>
+									<listOptionValue builtIn="false" value="--sysroot=&quot;$(SBI_SYSROOT)&quot;"/>
 								</option>
 								<option id="gnu.c.compiler.option.include.paths.1636425230" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/include}&quot;"/>
@@ -296,14 +288,15 @@
 							<tool id="org.tizen.nativeide.tool.sbi.gnu.c.linker.base.1037564894" name="C Linker" superClass="org.tizen.nativeide.tool.sbi.gnu.c.linker.base"/>
 							<tool command="clang++" id="org.tizen.nativecore.tool.sbi.gnu.cpp.linker.1807433761" name="C++ Linker" superClass="org.tizen.nativecore.tool.sbi.gnu.cpp.linker">
 								<option id="sbi.gnu.cpp.linker.option.frameworks_lflags.core.1164531992" name="Tizen-Frameworks-Other-Lflags" superClass="sbi.gnu.cpp.linker.option.frameworks_lflags.core" valueType="stringList">
-									<listOptionValue builtIn="false" value="${TC_LINKER_MISC}"/>
-									<listOptionValue builtIn="false" value="${RS_LINKER_MISC}"/>
+									<listOptionValue builtIn="false" value="$(TC_LINKER_MISC)"/>
+									<listOptionValue builtIn="false" value="$(RS_LINKER_MISC)"/>
 									<listOptionValue builtIn="false" value="-pie -lpthread "/>
 									<listOptionValue builtIn="false" value="-Xlinker -rpath=&quot;/home/developer/sdk_tools/lib&quot;"/>
-									<listOptionValue builtIn="false" value="--sysroot=&quot;${SBI_SYSROOT}&quot;"/>
-									<listOptionValue builtIn="false" value="-Xlinker --version-script=&quot;${PROJ_PATH}/.exportMap&quot;"/>
-									<listOptionValue builtIn="false" value="-L&quot;${SBI_SYSROOT}/usr/lib&quot;"/>
+									<listOptionValue builtIn="false" value="--sysroot=&quot;$(SBI_SYSROOT)&quot;"/>
+									<listOptionValue builtIn="false" value="-Xlinker --version-script=&quot;$(PROJ_PATH)/.exportMap&quot;"/>
+									<listOptionValue builtIn="false" value="-L&quot;$(SBI_SYSROOT)/usr/lib&quot;"/>
 									<listOptionValue builtIn="false" value="$(RS_LIBRARIES)"/>
+									<listOptionValue builtIn="false" value="-Xlinker -rpath=&quot;/opt/usr/apps/org.tizen.video-player/lib&quot;"/>
 								</option>
 								<option id="gnu.cpp.link.option.paths.2072655144" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths"/>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.2015421244" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
@@ -313,91 +306,28 @@
 							</tool>
 							<tool command="i386-linux-gnueabi-as" id="org.tizen.nativeapp.tool.sbi.gnu.assembler.base.839822999" name="Assembler" superClass="org.tizen.nativeapp.tool.sbi.gnu.assembler.base">
 								<option id="gnu.both.asm.option.include.paths.227858747" name="Include paths (-I)" superClass="gnu.both.asm.option.include.paths" valueType="includePath">
-									<listOptionValue builtIn="false" value="../EmptyApplicationVideo/inc"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/libxml2"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/appcore-agent"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/appfw"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/attach-panel"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/badge"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/base"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/cairo"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/calendar-service2"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/ckm"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/contacts-svc"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/content"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/context-service"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/csf"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/dali"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/dali-toolkit"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/dbus-1.0"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/device"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/dlog"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/ecore-1"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/ecore-buffer-1"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/ecore-con-1"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/ecore-evas-1"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/ecore-file-1"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/ecore-imf-1"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/ecore-imf-evas-1"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/ecore-input-1"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/ecore-input-evas-1"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/ecore-ipc-1"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/ector-1"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/e_dbus-1"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/edje-1"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/eet-1"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/efl-1"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/efl-extension"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/efreet-1"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/eina-1"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/eina-1/eina"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/eio-1"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/eldbus-1"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/elementary-1"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/embryo-1"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/emile-1"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/eo-1"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/eom"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/ethumb-1"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/ethumb-client-1"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/evas-1"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/feedback"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/fontconfig"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/freetype2"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/geofence"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/gio-unix-2.0"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/glib-2.0"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/harfbuzz"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/iotcon"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/json-glib-1.0"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/location"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/maps"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/media"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/media-content"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/messaging"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/metadata-editor"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/minicontrol"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/minizip"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/network"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/notification"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/phonenumber-utils"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/sensor"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/service-adaptor"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/shortcut"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/storage"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/system"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/telephony"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/telephony-client"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/ug-1"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/ui"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/vconf"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/web"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/widget_service"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/widget_viewer_evas"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/include/wifi-direct"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/lib/dbus-1.0/include"/>
-									<listOptionValue builtIn="false" value="/home/sheenu.15/Tizen_3.0_SDK/platforms/tizen-3.0/mobile/rootstraps/mobile-3.0-emulator.core/usr/lib/glib-2.0/include"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/video-player/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/video-player/common/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/video-player/core/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/video-player/feature/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/video-player/core/src/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/video-player/playview/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/video-player/video-downloader/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/video-player/feature/src/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/video-player/include/common}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/video-player/include/feature}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/video-player/include/view}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/video-player/include/viewMgr}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/video-player/include/widget}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/video-player/playview/src/common/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/video-player/playview/src/common}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/video-player/playview/src/core/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/video-player/playview/src/feature/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/video-player/playview/src/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/video-player/playview/src/view/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/video-player/playview/src/widget/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/video-player/vp-main/include/serviceParser}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/video-player/vp-main/include}&quot;"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.1846929239" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
 							</tool>
@@ -437,16 +367,27 @@
 						</tool>
 					</fileInfo>
 					<sourceEntries>
-						<entry excluding="playview/res/edc/playview/custom/pv-custom-gengrid-item.edc|playview/res/edc/playview/custom/pv-custom-colorselector.edc|playview/res/edc/playview/custom/pv-custom-button.edc|playview/res/edc/playview/custom/pv-custom-genlist-item.edc|playview/res/edc/playview/custom/pv-custom-naviframe.edc|playview/res/edc/playview/custom/pv-custom-layout.edc|vp-main/src/vp-main.c|playview/src/view/vp-play-multi-view.c|src/common/mp-video-streaming-ctrl.c|include/common/mp-video-streaming-ctrl.h|res/edc/vp-layout.edc|res/edc/vp-ctxpopup.edc|res/edc/vp-entry-popup.edc|res/edc/vp-numberinfo.edc|res/edc/vp-custom-genlist-miltiline.edc|res/edc/vp-detail-popup.edc|res/edc/vp-scroller-custom.edc|res/edc/vp-nocontents.edc|res/edc/vp-progressbar-list.edc|res/edc/vp-check.edc|res/edc/vp-genlist-custom.edc|res/edc/vp-gengrid-custom.edc|res/edc/vp-gengrid.edc|res/edc/vp-controlbar.edc|res/edc/vp-button-white.edc|include/feature/mp-video-url-downloader-ctrl.h|src/feature/mp-video-url-downloader-ctrl.c|res/edc/vp-toolbar.edc" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="common"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="core"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="feature"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="include"/>
+						<entry excluding="res/edc/playview/pv-image.edc|res/edc/playview/pv-macro.edc|res/edc/playview/custom/pv-custom-button.edc|res/edc/playview/custom/pv-custom-colorselector.edc|res/edc/playview/custom/pv-custom-define.edc|res/edc/playview/custom/pv-custom-gengrid-item.edc|res/edc/playview/custom/pv-custom-genlist-item.edc|res/edc/playview/custom/pv-custom-image.edc|res/edc/playview/custom/pv-custom-layout.edc|res/edc/playview/custom/pv-custom-naviframe.edc|src/view/vp-play-multi-view.c" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="playview"/>
+						<entry excluding="edc/edc_image_macro.edc|edc/image_res.edc|edc/vp_font.edc|edc/vp-button-white.edc|edc/vp-check.edc|edc/vp-controlbar.edc|edc/vp-ctxpopup.edc|edc/vp-custom-genlist-miltiline.edc|edc/vp-detail-popup.edc|edc/vp-entry-popup.edc|edc/vp-gengrid.edc|edc/vp-gengrid-custom.edc|edc/vp-genlist-custom.edc|edc/vp-layout.edc|edc/vp-nocontents.edc|edc/vp-numberinfo.edc|edc/vp-progressbar-list.edc|edc/vp-scroller-custom.edc|edc/vp-toolbar.edc" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="res"/>
+						<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="shared"/>
+						<entry excluding="feature/mp-video-url-downloader-ctrl.c|common/mp-video-streaming-ctrl.c" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="src"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="video-downloader"/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
-			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings">
+				<externalSettings containerId="vp-main;" factoryId="org.eclipse.cdt.core.cfg.export.settings.sipplier"/>
+			</storageModule>
 		</cconfiguration>
 		<cconfiguration id="org.tizen.nativecore.config.sbi.gcc45.app.release.757821425">
 			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="org.tizen.nativecore.config.sbi.gcc45.app.release.757821425" moduleId="org.eclipse.cdt.core.settings" name="Release">
 				<externalSettings/>
 				<extensions>
+					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
 					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="org.tizen.nativecore.NativeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
@@ -454,11 +395,10 @@
 					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
-					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
 				</extensions>
 			</storageModule>
 			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
-				<configuration artifactName="org.example.emptyapplicationvideo" buildArtefactType="org.tizen.nativecore.buildArtefactType.app" buildProperties="org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.release,org.eclipse.cdt.build.core.buildArtefactType=org.tizen.nativecore.buildArtefactType.app" description="" errorParsers="org.eclipse.cdt.core.MakeErrorParser;org.eclipse.cdt.core.GCCErrorParser;" id="org.tizen.nativecore.config.sbi.gcc45.app.release.757821425" name="Release" parent="org.tizen.nativecore.config.sbi.gcc45.app.release">
+				<configuration artifactName="org.example.emptyapplicationvideo" buildArtefactType="org.tizen.nativecore.buildArtefactType.app" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.tizen.nativecore.buildArtefactType.app,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.release" description="" errorParsers="org.eclipse.cdt.core.MakeErrorParser;org.eclipse.cdt.core.GCCErrorParser;" id="org.tizen.nativecore.config.sbi.gcc45.app.release.757821425" name="Release" parent="org.tizen.nativecore.config.sbi.gcc45.app.release">
 					<folderInfo id="org.tizen.nativecore.config.sbi.gcc45.app.release.757821425." name="/" resourcePath="">
 						<toolChain id="org.tizen.nativecore.toolchain.sbi.gcc45.app.release.46315082" name="Tizen Native Toolchain" superClass="org.tizen.nativecore.toolchain.sbi.gcc45.app.release">
 							<targetPlatform binaryParser="org.eclipse.cdt.core.ELF" id="org.tizen.nativeide.target.sbi.gnu.platform.base.1193724915" osList="linux,win32" superClass="org.tizen.nativeide.target.sbi.gnu.platform.base"/>
@@ -484,7 +424,6 @@
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/contacts-svc&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/content&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/context-service&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/csf&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/dali&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/dali-toolkit&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/dbus-1.0&quot;"/>
@@ -545,10 +484,7 @@
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/storage&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/system&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/telephony&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/telephony-client&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/ug-1&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/ui&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/vconf&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/web&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/widget_service&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/widget_viewer_evas&quot;"/>
@@ -590,7 +526,6 @@
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/contacts-svc&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/content&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/context-service&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/csf&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/dali&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/dali-toolkit&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/dbus-1.0&quot;"/>
@@ -651,10 +586,7 @@
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/storage&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/system&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/telephony&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/telephony-client&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/ug-1&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/ui&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/vconf&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/web&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/widget_service&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${SBI_SYSROOT}/usr/include/widget_viewer_evas&quot;"/>
