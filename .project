@@ -3,6 +3,7 @@
 	<name>video-player</name>
 	<comment></comment>
 	<projects>
+		<project>vp-main</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
