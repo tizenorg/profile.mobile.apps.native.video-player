@@ -221,8 +221,8 @@ collections {
 					align: 0.5 0.5;
 					//rel1 { relative: 1.0 0.0; to_x: "pad_l"; to_y: "bg"; }
 					//rel2 { relative: 0.0 1.0; to_x: "pad_r"; to_y: "bg"; }
-					rel1 { relative: 0.0 0.0; to: "bg";}
-					rel2 { relative: 1.0 1.0; to: "bg";}
+					rel1 { relative: 0.0 0.0; to: "elm.caption.preview.bg";}
+					rel2 { relative: 1.0 1.0; to: "elm.caption.preview.bg";}
 				}
 				description {
 					state: "landscape" 0.0;
