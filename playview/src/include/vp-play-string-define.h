@@ -765,10 +765,10 @@
 #define VP_VIDEO_PLAYER_TEXT					(dgettext(VP_SYS_STR_PREFIX, "IDS_COM_BODY_VIDEO_PLAYER"))
 
 
-#define VP_COM_BODY_KB								(dgettext(VP_SYS_STR_PREFIX, "IDS_COM_BODY_KB"))
-#define VP_COM_BODY_B								(dgettext(VP_SYS_STR_PREFIX, "IDS_COM_BODY_B"))
-#define VP_COM_BODY_MB								(dgettext(VP_SYS_STR_PREFIX, "IDS_COM_BODY_MB"))
-#define VP_COM_BODY_GB								(dgettext(VP_SYS_STR_PREFIX, "IDS_COM_BODY_GB"))
+#define VP_COM_BODY_KB								("KB")
+#define VP_COM_BODY_B								("B")
+#define VP_COM_BODY_MB								("MB")
+#define VP_COM_BODY_GB								("KB")
 
 //this id has been reomved from po file
 #define VP_PLAY_STRING_PRIVACY_POPUP				(dgettext(VP_LOCAL_STR_PREFIX, "IDS_ST_POP_P1SS_IS_DISABLED_IN_THIS_APPLICATION_TO_ENABLE_THIS_FUNCTION_GO_TO_P2SS_SELECT_THIS_FUNCTION_AND_THEN_SELECT_THIS_APPLICATION"))
