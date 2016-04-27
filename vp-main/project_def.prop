@@ -1,11 +1,74 @@
-APPNAME = vp-main
 
+# Project Name
+APPNAME = video-player
+
+# Project Type
 type = app
+
+# Project Profile
 profile = mobile-3.0
 
-USER_SRCS = src/vp-main.c
-USER_DEFS =
-USER_INC_DIRS = inc
-USER_OBJS =
-USER_LIBS =
-USER_EDCS =
+# C Sources
+USER_SRCS = src/serviceParser/vp-service-parser.c src/vp-main.c 
+USER_SRCS_ABS = $(workspace_loc)/video-player/playview/src/core/vp-media-key.c $(workspace_loc)/video-player/src/view/mp-library-view-mgr.c $(workspace_loc)/video-player/playview/src/feature/vp-subtitle-size.c $(workspace_loc)/video-player/playview/src/feature/vp-share.c $(workspace_loc)/video-player/common/src/vp-pinch-zoom.c $(workspace_loc)/video-player/src/view/mp-video-list-remove-ctrl.c $(workspace_loc)/video-player/playview/src/feature/vp-audio-track.c $(workspace_loc)/video-player/playview/src/widget/vp-play-brightness-popup.c $(workspace_loc)/video-player/src/widget/mp-video-view-popup-ctrl.c $(workspace_loc)/video-player/playview/src/core/vp-image-util.c $(workspace_loc)/video-player/src/widget/mp-external-ug.c $(workspace_loc)/video-player/src/view/mp-video-list-view-common.c $(workspace_loc)/video-player/playview/src/core/vp-multi-path.c $(workspace_loc)/video-player/src/feature/mp-launching-video-displayer.c $(workspace_loc)/video-player/src/view/mp-video-list-view-thumbnail.c $(workspace_loc)/video-player/playview/src/common/vp-play-config.c $(workspace_loc)/video-player/src/view/mp-video-list-personal-view.c $(workspace_loc)/video-player/src/view/mp-video-detail-view.c $(workspace_loc)/video-player/playview/src/feature/vp-sound-alive.c $(workspace_loc)/video-player/src/view/mp-video-list-view-folder.c $(workspace_loc)/video-player/playview/src/vp-play-view.c $(workspace_loc)/video-player/src/view/mp-video-list-view-item-of-folder.c $(workspace_loc)/video-player/playview/src/feature/vp-subtitle-sync.c $(workspace_loc)/video-player/playview/src/feature/vp-sound-path.c $(workspace_loc)/video-player/common/src/vp-media-content-util.c $(workspace_loc)/video-player/playview/src/common/vp-play-preference.c $(workspace_loc)/video-player/playview/src/widget/vp-play-volume-popup.c $(workspace_loc)/video-player/playview/src/core/vp-media-contents.c $(workspace_loc)/video-player/common/src/vp-db-util.c $(workspace_loc)/video-player/src/widget/mp-video-list-option-ctrl.c $(workspace_loc)/video-player/playview/src/feature/vp-repeat.c $(workspace_loc)/video-player/playview/src/core/vp-avrcp.c $(workspace_loc)/video-player/playview/src/feature/vp-subtitle-alignment.c $(workspace_loc)/video-player/src/common/mp-video-sound-manager.c $(workspace_loc)/video-player/playview/src/widget/vp-play-subtitle.c $(workspace_loc)/video-player/common/src/vp-util.c $(workspace_loc)/video-player/src/widget/mp-video-list-sort-ctrl.c $(workspace_loc)/video-player/src/view/mp-video-list-personal-ctrl.c $(workspace_loc)/video-player/common/src/vp-file-util.c $(workspace_loc)/video-player/playview/src/feature/vp-subtitle-bg-color.c $(workspace_loc)/video-player/src/common/mp-util-media-service.c $(workspace_loc)/video-player/playview/src/widget/vp-play-bookmark.c $(workspace_loc)/video-player/playview/src/feature/vp-subtitle-select.c $(workspace_loc)/video-player/src/widget/mp-util-widget-ctrl.c $(workspace_loc)/video-player/playview/src/feature/vp-subtitle-font.c $(workspace_loc)/video-player/common/src/vp-chapter-db.c $(workspace_loc)/video-player/src/view/mp-video-list-view-normal.c $(workspace_loc)/video-player/src/common/mp-util-config.c $(workspace_loc)/video-player/playview/src/common/vp-play-util.c $(workspace_loc)/video-player/playview/src/widget/vp-play-popup.c $(workspace_loc)/video-player/src/common/mp-rotate-ctrl.c $(workspace_loc)/video-player/src/common/mp-util-preference.c $(workspace_loc)/video-player/playview/src/feature/vp-detail.c $(workspace_loc)/video-player/playview/src/widget/vp-play-progressbar.c $(workspace_loc)/video-player/playview/src/feature/vp-subtitle-edge.c $(workspace_loc)/video-player/src/widget/mp-video-nocontent-layout.c $(workspace_loc)/video-player/src/view/mp-video-list-share-via-view.c $(workspace_loc)/video-player/src/viewMgr/videos-view-mgr.c $(workspace_loc)/video-player/src/widget/mp-footer-toolbar.c $(workspace_loc)/video-player/playview/src/core/vp-sound.c $(workspace_loc)/video-player/playview/src/common/vp-play-ug.c $(workspace_loc)/video-player/playview/src/core/vp-device-language.c $(workspace_loc)/video-player/playview/src/feature/vp-play-speed.c $(workspace_loc)/video-player/src/view/mp-video-list-folder-share-via-view.c $(workspace_loc)/video-player/playview/src/feature/vp-subtitle-track.c $(workspace_loc)/video-player/playview/src/feature/vp-subtitle-color.c $(workspace_loc)/video-player/playview/src/core/vp-hollic.c $(workspace_loc)/video-player/src/view/mp-video-list-view-select.c $(workspace_loc)/video-player/playview/src/core/vp-mm-player.c $(workspace_loc)/video-player/src/view/mp-video-list-remove-view.c $(workspace_loc)/video-player/playview/src/widget/vp-play-volume.c $(workspace_loc)/video-player/playview/src/widget/vp-play-loading-ani.c $(workspace_loc)/video-player/playview/src/view/vp-play-normal-view.c $(workspace_loc)/video-player/playview/src/core/vp-device.c $(workspace_loc)/video-player/src/view/mp-video-list-view-main.c $(workspace_loc)/video-player/playview/src/widget/vp-play-button.c $(workspace_loc)/video-player/playview/src/widget/vp-play-more.c $(workspace_loc)/video-player/src/widget/mp-video-rename-ctrl.c $(workspace_loc)/video-player/common/src/vp-preview-db.c $(workspace_loc)/video-player/src/widget/mp-video-list-view-as-ctrl.c $(workspace_loc)/video-player/src/feature/mp-util-move.c $(workspace_loc)/video-player/src/view/mp-video-search-view.c $(workspace_loc)/video-player/playview/src/feature/vp-capture.c $(workspace_loc)/video-player/src/common/mp-drm-ctrl.c $(workspace_loc)/video-player/src/common/mp-video-info-ctrl.c $(workspace_loc)/video-player/playview/src/feature/vp-subtitle.c $(workspace_loc)/video-player/src/common/mp-video-util-db-controller.c $(workspace_loc)/video-player/common/src/vp-thumb-db.c $(workspace_loc)/video-player/src/common/mp-util.c $(workspace_loc)/video-player/playview/src/core/vp-sensor.c $(workspace_loc)/video-player/playview/src/feature/vp-zoom-guide.c $(workspace_loc)/video-player/playview/src/feature/vp-setting.c 
+
+# EDC Sources
+USER_EDCS =  
+
+# PO Sources
+USER_POS = 
+
+# User Defines
+USER_DEFS = VS_FEATURE_LIST_VIEW VS_FEATURE_THUMBNAIL_VIEW VS_FEATURE_FOLDER_VIEW SUBTITLE_K_FEATURE 
+USER_CPP_DEFS = 
+
+# User Undefines
+USER_UNDEFS = 
+USER_CPP_UNDEFS = 
+
+# User Libraries
+USER_LIBS = 
+
+# User Objects
+USER_OBJS = 
+USER_OBJS_ABS = 
+
+# User Includes
+## C Compiler
+USER_INC_DIRS = include include/serviceParser 
+USER_INC_DIRS_ABS = $(workspace_loc)/video-player/include $(workspace_loc)/video-player/playview/include $(workspace_loc)/video-player/common/include $(workspace_loc)/video-player/include/common $(workspace_loc)/video-player/include/feature $(workspace_loc)/video-player/include/view $(workspace_loc)/video-player/include/viewMgr $(workspace_loc)/video-player/include/widget $(workspace_loc)/video-player/playview/src/include $(workspace_loc)/video-player/playview/src/core/include $(workspace_loc)/video-player/playview/src/common/include $(workspace_loc)/video-player/playview/src/feature/include $(workspace_loc)/video-player/playview/src/view/include $(workspace_loc)/video-player/playview/src/widget/include $(workspace_loc)/video-player/common/src/include 
+USER_INC_FILES = 
+USER_INC_FILES_ABS = 
+## C++ Compiler
+USER_CPP_INC_DIRS = 
+USER_CPP_INC_DIRS_ABS = 
+USER_CPP_INC_FILES = 
+USER_CPP_INC_FILES_ABS = 
+
+# User Library Path
+USER_LIB_DIRS = 
+USER_LIB_DIRS_ABS = 
+
+# EDC Resource Path
+USER_EDCS_IMAGE_DIRS = edje/images 
+USER_EDCS_IMAGE_DIRS_ABS = $(workspace_loc)/video-player/playview/res/edc/playview/images 
+USER_EDCS_SOUND_DIRS = edje/sounds 
+USER_EDCS_SOUND_DIRS_ABS = 
+USER_EDCS_FONT_DIRS = edje/fonts 
+USER_EDCS_FONT_DIRS_ABS = 
+
+# EDC Flags
+USER_EXT_EDC_KEYS = EDC0 
+
+USER_EXT_EDC0_EDCS = $(workspace_loc)/video-player/playview/res/edc/playview/pv-trim-control.edc $(workspace_loc)/video-player/playview/res/edc/playview/pv-custom-winset.edc $(workspace_loc)/video-player/playview/res/edc/playview/custom/pv-custom-image.edc $(workspace_loc)/video-player/playview/res/edc/playview/pv-sensor-popup.edc $(workspace_loc)/video-player/playview/res/edc/playview/custom/pv-custom-define.edc $(workspace_loc)/video-player/playview/res/edc/playview/pv-bookmark-item.edc $(workspace_loc)/video-player/playview/res/edc/playview/pv-normal-control.edc $(workspace_loc)/video-player/playview/res/edc/playview/pv-normal-top-control.edc $(workspace_loc)/video-player/playview/res/edc/playview/pv-tag-buddy.edc $(workspace_loc)/video-player/playview/res/edc/playview/pv-volume.edc $(workspace_loc)/video-player/playview/res/edc/playview/pv-progressbar.edc $(workspace_loc)/video-player/playview/res/edc/playview/pv-macro.edc $(workspace_loc)/video-player/playview/res/edc/playview/pv-multi-main.edc $(workspace_loc)/video-player/playview/res/edc/playview/pv-trim-main.edc $(workspace_loc)/video-player/playview/res/edc/playview/pv-colorselector.edc $(workspace_loc)/video-player/playview/res/edc/playview/pv-minicontroller.edc $(workspace_loc)/video-player/playview/res/edc/playview/pv-brightness-popup.edc $(workspace_loc)/video-player/playview/res/edc/playview/pv-speed-popup.edc $(workspace_loc)/video-player/playview/res/edc/playview/pv-tag-preview.edc $(workspace_loc)/video-player/playview/res/edc/playview/pv-zoom-guide.edc $(workspace_loc)/video-player/playview/res/edc/playview/pv-normal-main.edc $(workspace_loc)/video-player/playview/res/edc/playview/pv-popup.edc $(workspace_loc)/video-player/playview/res/edc/playview/pv-gesture.edc $(workspace_loc)/video-player/playview/res/edc/playview/pv-trim-top-control.edc $(workspace_loc)/video-player/playview/res/edc/playview/pv-subtitle.edc $(workspace_loc)/video-player/playview/res/edc/playview/pv-subtitle-color-popup.edc $(workspace_loc)/video-player/playview/res/edc/playview/pv-volume-popup.edc $(workspace_loc)/video-player/playview/res/edc/playview/pv-image.edc $(workspace_loc)/video-player/playview/res/edc/playview/pv-resource.edc $(workspace_loc)/video-player/playview/res/edc/playview/pv-normal-function.edc $(workspace_loc)/video-player/playview/res/edc/playview/pv-chapter-main-new.edc $(workspace_loc)/video-player/playview/res/edc/playview/pv-trim-item.edc $(workspace_loc)/video-player/playview/res/edc/playview/pv-bookmark.edc 
+USER_EXT_EDC0_EDCS_IMAGE_DIRS = edje/images 
+USER_EXT_EDC0_EDCS_IMAGE_DIRS_ABS = $(workspace_loc)/video-player/playview/res/edc/playview/images 
+USER_EXT_EDC0_EDCS_SOUND_DIRS = edje/sounds 
+USER_EXT_EDC0_EDCS_SOUND_DIRS_ABS = 
+USER_EXT_EDC0_EDCS_FONT_DIRS = edje/fonts 
+USER_EXT_EDC0_EDCS_FONT_DIRS_ABS = 
+
+# Resource Filter
+USER_RES_INCLUDE = 
+USER_RES_EXCLUDE = 
+
