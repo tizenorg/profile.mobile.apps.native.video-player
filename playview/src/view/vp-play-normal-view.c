@@ -12449,6 +12449,12 @@ bool vp_play_normal_view_on_more_menu(normal_view_handle pViewHandle)
 
 	NormalView	*pNormalView = (NormalView *)pViewHandle;
 	VideoLogInfo("bIsPopupShow=%d,bIsSubtitleShow=%d", pNormalView->bIsPopupShow, pNormalView->bIsSubtitleShow);
+
+	if (pNormalView->pDetailHandle != NULL) {
+		VideoLogError("Detail View exists");
+		return NULL;
+	}
+
 	if (pNormalView->bIsPopupShow || pNormalView->bIsSubtitleShow) {
 		if (pNormalView->pCtxPopup) {
 			elm_ctxpopup_dismiss(pNormalView->pCtxPopup);
