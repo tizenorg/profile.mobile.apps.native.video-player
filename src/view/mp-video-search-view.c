@@ -1147,11 +1147,11 @@ void __mp_search_view_arrange_video_list(int nItemSortType, void *pVideosGenlist
 
 	int nVideoListSize = 0;
 	/*Don't need to re-make new video list, because searched data only works current video list*/
-	if (g_pSearchViewHandle->nViewType == MP_LIST_VIEW_AS_FOLDER_LIST && !mp_folder_view_is_item_view()) {
+	/*if (g_pSearchViewHandle->nViewType == MP_LIST_VIEW_AS_FOLDER_LIST && !mp_folder_view_is_item_view()) {
 		mp_util_svc_destory_video_list();
 		mp_util_svc_extract_video_list_by_item_type(nItemSortType, mp_view_ctrl_get_list_type());
 	}
-	//MpUtilMediaSvcExtractVideoListByViewType(nItemSortType, nViewType);
+	MpUtilMediaSvcExtractVideoListByViewType(nItemSortType, nViewType);*/
 	nVideoListSize = mp_util_svc_get_number_of_video_item_by_type();
 	VideoLogInfo("nVideoListSize : %d", nVideoListSize);
 
