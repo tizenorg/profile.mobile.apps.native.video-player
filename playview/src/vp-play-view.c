@@ -1899,13 +1899,16 @@ bool vp_play_view_live_stream_realize(play_view_handle pViewHandle)
 	if (nState == VP_MM_PLAYER_STATE_IDLE) {
 		return TRUE;
 	}
-	VideoLogInfo(">> Play View : ankit : LIVESTREAM");
 	int nDuration = 0;
 	if (vp_play_normal_view_get_video_duration(pPlayView->pNormalView, &nDuration)) {
 		pPlayView->nDuration = nDuration;
 	}
+	VideoLogInfo(">> Play View : %d",pPlayView->nDuration);
 	if (pPlayView->nDuration == 0) {
 		vp_play_normal_view_play_start(pPlayView->pNormalView);
+		return TRUE;
+	}else{
+		vp_play_normal_view_set_resume_or_pause(pPlayView->pNormalView);
 		return TRUE;
 	}
 	return TRUE;
