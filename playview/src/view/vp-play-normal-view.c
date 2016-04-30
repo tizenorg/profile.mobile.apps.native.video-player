@@ -3634,7 +3634,7 @@ static Eina_Bool __vp_normal_speed_timer_cb(void *pUserData)
 
 	if (nSetPosition < 0) {
 		nSetPosition = 0;
-		VP_EVAS_TIMER_DEL(pNormalView->pSpeedTimer);
+//		VP_EVAS_TIMER_DEL(pNormalView->pSpeedTimer);
 		elm_object_signal_emit(pNormalView->pMainLayout, VP_NORMAL_SIGNAL_MAIN_SPEED_HIDE, "*");
 	}
 	if (pNormalView->pProgressTimer) {
