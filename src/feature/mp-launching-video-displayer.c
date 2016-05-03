@@ -22,6 +22,7 @@
 #include <Elementary.h>
 #include <Eina.h>
 
+#include "vp-play-log.h"
 #include "mp-util.h"
 #include "mp-video-log.h"
 #include "vp-play-view.h"
