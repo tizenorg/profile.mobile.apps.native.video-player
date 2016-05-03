@@ -15,6 +15,7 @@
 *
 */
 
+#include "vp-play-log.h"
 #include "vp-pinch-zoom.h"
 
 static vp_pinch_event_s *__vp_gesture_create_event_obj(void *data,
