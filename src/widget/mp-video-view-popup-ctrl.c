@@ -23,6 +23,7 @@
 #include <Ecore_Evas.h>
 #include <Elementary.h>
 
+#include "vp-play-log.h"
 #include "mp-util.h"
 #include "mp-video-log.h"
 #include "mp-video-value-define.h"

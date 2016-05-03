@@ -26,6 +26,7 @@
 #include <Elementary.h>
 
 #include <system_settings.h>
+#include "vp-play-log.h"
 #include "mp-util.h"
 #include "mp-video-log.h"
 #include "mp-external-ug.h"
