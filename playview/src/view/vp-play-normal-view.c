@@ -225,6 +225,7 @@ typedef struct _NormalView {
 	Evas_Object			*pLoadingAni;
 
 	Ecore_Timer			*pHideTimer;
+	Ecore_Timer			*pRotateTimer;
 	Ecore_Timer			*pHideFinishTimer;
 	Ecore_Timer			*pLockScreenTimer;
 
@@ -3352,6 +3353,28 @@ static void __vp_normal_bookmark_item_select_cb(int nPos, const char *szPath, vo
 	_vp_play_normal_view_show_layout(pNormalView);
 }
 */
+
+static Eina_Bool __vp_normal_rotate_icon_timer_cb(void *pUserData)
+{
+	bool bLocked = FALSE;
+	int nErr = -1;
+	nErr = system_settings_get_value_bool(SYSTEM_SETTINGS_KEY_DISPLAY_SCREEN_ROTATION_AUTO, &bLocked);
+	if (nErr != SYSTEM_SETTINGS_ERROR_NONE) {
+		VideoLogError("failed to get screen rotation status [0x%x]", nErr);
+		return EINA_FALSE;
+	}
+
+	NormalView *pNormalView = (NormalView *)pUserData;
+	if (bLocked) {
+		if (pNormalView->pMainLayout) {
+			elm_object_signal_emit(pNormalView->pMainLayout, VP_NORMAL_SIGNAL_MAIN_ROTATE_HIDE, "*");
+		}
+	}
+
+	return TRUE;
+
+}
+
 static Eina_Bool __vp_normal_hide_layout_timer_cb(void *pUserData)
 {
 	if (!pUserData) {
@@ -3364,6 +3387,7 @@ static Eina_Bool __vp_normal_hide_layout_timer_cb(void *pUserData)
 
 	pNormalView->pHideTimer = NULL;
 	VP_EVAS_TIMER_DEL(pNormalView->pHideFinishTimer);
+	VP_EVAS_TIMER_DEL(pNormalView->pRotateTimer);
 	vp_mm_player_state_t nState = VP_MM_PLAYER_STATE_NONE;
 
 	if (!vp_mm_player_get_state(pNormalView->pPlayerHandle, &nState)) {
@@ -3634,7 +3658,7 @@ static Eina_Bool __vp_normal_speed_timer_cb(void *pUserData)
 
 	if (nSetPosition < 0) {
 		nSetPosition = 0;
-		VP_EVAS_TIMER_DEL(pNormalView->pSpeedTimer);
+//		VP_EVAS_TIMER_DEL(pNormalView->pSpeedTimer);
 		elm_object_signal_emit(pNormalView->pMainLayout, VP_NORMAL_SIGNAL_MAIN_SPEED_HIDE, "*");
 	}
 	if (pNormalView->pProgressTimer) {
@@ -9746,6 +9770,8 @@ static void _vp_play_normal_view_create_layout_hide_timer(NormalView *pNormalVie
 	VP_EVAS_TIMER_DEL(pNormalView->pHideFinishTimer);
 	pNormalView->pHideTimer = ecore_timer_add(VP_NORMAL_HIDE_LAYOUT_TIMER_INTERVAL,
 	                          __vp_normal_hide_layout_timer_cb, (void *)pNormalView);
+	pNormalView->pRotateTimer = ecore_timer_add(0.5,
+		                          __vp_normal_rotate_icon_timer_cb, (void *)pNormalView);
 
 }
 
@@ -12449,6 +12475,12 @@ bool vp_play_normal_view_on_more_menu(normal_view_handle pViewHandle)
 
 	NormalView	*pNormalView = (NormalView *)pViewHandle;
 	VideoLogInfo("bIsPopupShow=%d,bIsSubtitleShow=%d", pNormalView->bIsPopupShow, pNormalView->bIsSubtitleShow);
+
+	if (pNormalView->pDetailHandle != NULL) {
+		VideoLogError("Detail View exists");
+		return NULL;
+	}
+
 	if (pNormalView->bIsPopupShow || pNormalView->bIsSubtitleShow) {
 		if (pNormalView->pCtxPopup) {
 			elm_ctxpopup_dismiss(pNormalView->pCtxPopup);

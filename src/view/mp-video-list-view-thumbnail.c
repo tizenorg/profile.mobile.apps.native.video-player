@@ -23,6 +23,7 @@
 #include <Ecore_Evas.h>
 #include <Elementary.h>
 
+#include "vp-play-log.h"
 #include "vp-util.h"
 #include "vp-file-util.h"
 #include "vp-pinch-zoom.h"
