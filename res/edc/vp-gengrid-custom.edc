@@ -429,6 +429,20 @@ group { name: "elm/gengrid/item/video/default_grid/default";
 			   GENGRID_ITEM_SELECT_VI_EFFECT
             }
          }
+         part { name: "elm.swallow.icon_rect";
+            type: RECT;
+            description { state: "default" 0.0;
+               rel1 {
+                  relative: 1.0 1.0;
+                  to: "item_real_bg_left_top_padding";
+               }
+               rel2 {
+                  relative: 0.0 0.0;
+                  to: "item_real_bg_right_bottom_padding";
+               }
+               color : 0 0 0 0;
+            }
+         }
          part { name: "elm.swallow.end";
             type: SWALLOW;
 	    repeat_events: 1;
@@ -436,12 +450,12 @@ group { name: "elm/gengrid/item/video/default_grid/default";
 				rel1
 				{
 		  			relative: 0.8 0.1;
-          			to: "elm.swallow.icon";
+          			to: "elm.swallow.icon_rect";
 				}
 				rel2
 				{
 		  			relative: 0.9 0.2;
-		  			to: "elm.swallow.icon";
+		  			to: "elm.swallow.icon_rect";
 				}
 			    GENGRID_ITEM_SELECT_VI_EFFECT
             }
