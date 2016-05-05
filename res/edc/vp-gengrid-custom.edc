@@ -239,6 +239,7 @@ group { name: "elm/gengrid/item/video/default_grid/default";
          image : "00_thumbs_line_bg.png" COMP;
          image : "00_thumbs_bg_focus.png" COMP;
          image : "00_thumbs_loading_bg.png" COMP;
+         image: "player_library_list_thumbnail_default.png" COMP;
       }
 	  script {
 	   	 public selected = 0;
@@ -330,13 +331,13 @@ group { name: "elm/gengrid/item/video/default_grid/default";
 
 		 part{
 			name: "elm.swallow.icon.bg";
-			type: RECT;
+			type: IMAGE;
 			scale: 1;
 			mouse_events: 0;
 			description { state: "default" 0.0;
 				rel1 { relative: 0.0 0.0; to: "item_bg";}
 				rel2 { relative: 1.0 0.7; to: "item_bg";}
-				color: 0 0 0 255;
+				image.normal: "player_library_list_thumbnail_default.png";
 				GENGRID_ITEM_SELECT_VI_EFFECT
 			}
 		 }
