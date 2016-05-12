@@ -20,7 +20,7 @@
 #include <Elementary.h>
 #include <system_settings.h>
 #include <runtime_info.h>
-#include <wifi.h>
+#include <network/wifi.h>
 
 
 typedef void (*KeyChangedCbFunc)(void *pNode, void* pUserData);

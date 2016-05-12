@@ -19,7 +19,7 @@
 #include <string.h>
 #include <libintl.h>
 #include <device/power.h>
-#include <storage.h>
+#include <storage/storage.h>
 
 #include "vp-util.h"
 

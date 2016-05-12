@@ -61,14 +61,14 @@ FILE *g_log_fp;
 
 #elif defined _USE_DLOG_
 
-#define vp_dbg_tid(fmt,arg...)		LOGI_IF(true, FONT_COLOR_YELLOW"[TID:%d]" fmt FONT_COLOR_RESET"\n", syscall(__NR_gettid), ##arg)
-#define vp_dbg(fmt, arg...)		LOGD_IF(true, "" fmt "\n", ##arg)
-#define vp_dbgW(fmt, arg...)		LOGW_IF(true, FONT_COLOR_GREEN" " fmt FONT_COLOR_RESET"\n", ##arg)
-#define vp_dbgE(fmt, arg...)		LOGE_IF(true, FONT_COLOR_RED" " fmt FONT_COLOR_RESET"\n", ##arg)
+#define vp_dbg_tid(fmt,arg...)		dlog_print(DLOG_DEBUG, LOG_TAG, "[%s : %05d %lu]" fmt "\n", __func__, __LINE__, syscall(__NR_gettid), ##arg)
+#define vp_dbg(fmt, arg...)			dlog_print(DLOG_DEBUG, LOG_TAG, "[%s : %05d]" fmt "\n", __func__, __LINE__, ##arg)
+#define vp_dbgW(fmt, arg...)		dlog_print(DLOG_INFO, LOG_TAG, "[%s : %05d]" fmt "\n", __func__, __LINE__, ##arg)
+#define vp_dbgE(fmt, arg...)		dlog_print(DLOG_ERROR, LOG_TAG, "[%s : %05d]" fmt "\n", __func__, __LINE__, ##arg)
 
-#define vp_sdbg(fmt,arg...)			SECURE_LOGD( " " fmt "\n", ##arg)
-#define vp_sdbg_tid(fmt,arg...)			SECURE_LOGI( fmt "\n", ##arg)
-#define vp_sdbgE( fmt,arg...)		SECURE_LOGE( "\033[0;31m [ERR] " fmt FONT_COLOR_RESET"\n", ##arg)
+#define vp_sdbg(fmt,arg...)			dlog_print(DLOG_DEBUG, LOG_TAG, "[%s : %05d]" fmt "\n", __func__, __LINE__, ##arg)
+#define vp_sdbg_tid(fmt,arg...)		dlog_print(DLOG_INFO, LOG_TAG, "[%s : %05d %lu]" fmt "\n", __func__, __LINE__, syscall(__NR_gettid), ##arg)
+#define vp_sdbgE( fmt,arg...)		dlog_print(DLOG_ERROR, LOG_TAG, "[%s : %05d]" fmt "\n", __func__, __LINE__, ##arg)
 
 
 #elif defined _USE_LOG_CONSOLE_
@@ -109,10 +109,10 @@ FILE *g_log_fp;
 #define VP_CHECK_NULL(expr) 			vp_retvm_if(!(expr), NULL, "Invalid parameter, return NULL!")
 #define VP_CHECK_FALSE(expr) 			vp_retvm_if(!(expr), false, "Invalid parameter, return FALSE!")
 #define VP_CHECK_CANCEL(expr) 			vp_retvm_if(!(expr), ECORE_CALLBACK_CANCEL, "Invalid parameter, return ECORE_CALLBACK_CANCEL!")
-#define VP_CHECK(expr) 				vp_retm_if(!(expr), "Invalid parameter, return!")
+#define VP_CHECK(expr) 					vp_retm_if(!(expr), "Invalid parameter, return!")
 
-#define VP_START_FUNC()              	LOGD_IF(true, "*********************** [Func: %s] enter!! ********************* \n", __func__)
-#define VP_END_FUNC()              	LOGD_IF(true, "*********************** [Func: %s] leave!! ********************* \n", __func__)
+#define VP_START_FUNC()              	dlog_print(DLOG_DEBUG, "*********************** [Func: %s] enter!! ********************* \n", __func__)
+#define VP_END_FUNC()              		dlog_print(DLOG_DEBUG, "*********************** [Func: %s] leave!! ********************* \n", __func__)
 
 #ifdef _cplusplus
 }

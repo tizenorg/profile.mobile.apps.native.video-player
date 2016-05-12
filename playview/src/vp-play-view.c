@@ -16,7 +16,7 @@
 */
 
 #include <runtime_info.h>
-#include <wifi.h>
+#include <network/wifi.h>
 #include <media_key.h>
 #include <sound_manager.h>
 

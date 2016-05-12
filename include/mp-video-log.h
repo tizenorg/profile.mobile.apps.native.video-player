@@ -31,20 +31,20 @@
 
 #define LOG_TAG "VIDEOS"
 
-#define VideoLogInfoWithTid(fmt,arg...)			LOGI_IF(true, "[VP][TID:%d]" fmt "\n", syscall(__NR_gettid), ##arg)
-#define VideoLogInfo(fmt,arg...)			LOGI_IF(true, "[VP]" fmt "\n", ##arg)
-#define VideoLogDebug(fmt,arg...)			LOGD_IF(true, " " fmt "\n", ##arg)
-#define VideoLogWarning(fmt,arg...)			LOGW_IF(true, "\033[0;33m [WARN]  " fmt "\033[0m\n", ##arg)
-#define VideoLogError( fmt,arg...)			LOGE_IF(true, "\033[0;31m [ERR] " fmt "\033[0m\n", ##arg)
+#define VideoLogInfoWithTid(fmt,arg...)			dlog_print(DLOG_DEBUG, LOG_TAG, "[%s : %05d %lu]" fmt "\n", __func__, __LINE__, syscall(__NR_gettid), ##arg)
+#define VideoLogInfo(fmt,arg...)				dlog_print(DLOG_DEBUG, LOG_TAG, "[%s : %05d]" fmt "\n", __func__, __LINE__, ##arg)
+#define VideoLogDebug(fmt,arg...)				dlog_print(DLOG_INFO, LOG_TAG, "[%s : %05d]" fmt "\n", __func__, __LINE__, ##arg)
+#define VideoLogWarning(fmt,arg...)				dlog_print(DLOG_INFO, LOG_TAG, "[%s : %05d]" fmt "\n", __func__, __LINE__, ##arg)
+#define VideoLogError( fmt,arg...)				dlog_print(DLOG_ERROR, LOG_TAG, "[%s : %05d]" fmt "\n", __func__, __LINE__, ##arg)
 
-#define VideoSecureLogInfoWithTid(fmt,arg...)	SECURE_LOGI( "[VP][TID:%d]" fmt "\n", syscall(__NR_gettid), ##arg)
-#define VideoSecureLogDebug(fmt,arg...)			SECURE_LOGD( " " fmt "\n",##arg)
-#define VideoSecureLogInfo(fmt,arg...)			SECURE_LOGI( fmt "\n", ##arg)
-#define VideoSecureLogError( fmt,arg...)		SECURE_LOGE( "\033[0;31m [ERR] " fmt "\033[0m\n", ##arg)
+#define VideoSecureLogInfoWithTid(fmt,arg...)	dlog_print(DLOG_INFO, LOG_TAG, "[%s : %05d %lu]" fmt "\n", __func__, __LINE__, syscall(__NR_gettid), ##arg)
+#define VideoSecureLogDebug(fmt,arg...)			dlog_print(DLOG_DEBUG, LOG_TAG, "[%s : %05d]" fmt "\n", __func__, __LINE__, ##arg)
+#define VideoSecureLogInfo(fmt,arg...)			dlog_print(DLOG_INFO, LOG_TAG, "[%s : %05d]" fmt "\n", __func__, __LINE__, ##arg)
+#define VideoSecureLogError( fmt,arg...)		dlog_print(DLOG_ERROR, LOG_TAG, "[%s : %05d]" fmt "\n", __func__, __LINE__, ##arg)
 
 
-#define PERF_CHECK_IN(fmt, arg...)			LOGD_IF(true, "LAUNCH", "[video-player:Application:" fmt ":IN]", ##arg)
-#define PERF_CHECK_OUT(fmt, arg...)			LOGD_IF(true, "LAUNCH", "[video-player:Application:" fmt ":OUT]", ##arg)
+#define PERF_CHECK_IN(fmt, arg...)				dlog_print(DLOG_INFO, "LAUNCH", "[video-player:Application:" fmt ":IN]", ##arg)
+#define PERF_CHECK_OUT(fmt, arg...)				dlog_print(DLOG_INFO, "LAUNCH", "[video-player:Application:" fmt ":OUT]", ##arg)
 
 #define VideoLogAssert(expr) do { \
 	if(!(expr)) { \
@@ -54,8 +54,8 @@
 } while (0)
 
 
-//#define video_info(fmt,arg...)					printf( "[%s %s : %d] " fmt "\n",__FILE__,  __FUNCTION__,__LINE__, ##arg)
-//#define video_debug(fmt,arg...)					printf( "[%s %s : %d] " fmt "\n",__FILE__, __FUNCTION__,__LINE__, ##arg)
+//#define video_info(fmt,arg...)				printf( "[%s %s : %d] " fmt "\n",__FILE__,  __FUNCTION__,__LINE__, ##arg)
+//#define video_debug(fmt,arg...)				printf( "[%s %s : %d] " fmt "\n",__FILE__, __FUNCTION__,__LINE__, ##arg)
 //#define video_warning(fmt,arg...)				printf( "[%s %s : %d] " fmt "\n",__FILE__, __FUNCTION__,__LINE__, ##arg)
 //#define video_error( fmt,arg...)				printf( "[%s %s : %d] " fmt "\n", __FILE__,__FUNCTION__,__LINE__, ##arg)
 

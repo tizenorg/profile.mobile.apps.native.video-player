@@ -15,7 +15,7 @@
 *
 */
 
-#include <bluetooth.h>
+#include <network/bluetooth.h>
 
 #include "vp-play-macro-define.h"
 
