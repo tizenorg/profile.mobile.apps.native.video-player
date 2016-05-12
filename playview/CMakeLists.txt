@@ -82,7 +82,6 @@ pkg_check_modules(${PROJECT_NAME}_pkgs REQUIRED
 	#ecore-x
 	evas
 	edje
-	vconf
 	capi-appfw-application
 	capi-system-system-settings
 	glib-2.0

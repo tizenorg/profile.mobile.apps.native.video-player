@@ -11,7 +11,6 @@ ExcludeArch: %{arm} %ix86 x86_64
 %endif
 
 BuildRequires: pkgconfig(elementary)
-BuildRequires: pkgconfig(vconf)
 BuildRequires: pkgconfig(capi-system-system-settings)
 BuildRequires: pkgconfig(libmedia-service)
 BuildRequires: pkgconfig(libxml-2.0)

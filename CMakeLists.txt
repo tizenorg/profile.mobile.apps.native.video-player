@@ -72,7 +72,6 @@ INCLUDE_DIRECTORIES(
 INCLUDE(FindPkgConfig)
 pkg_check_modules(pkgs REQUIRED
 	elementary
-	vconf
 	capi-appfw-application
 	capi-system-system-settings
 	libxml-2.0

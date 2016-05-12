@@ -19,7 +19,7 @@
 #include <app_preference.h>
 #include <telephony.h>
 #include <wifi-direct.h>
-#include <vconf.h>
+#include <device/display.h>
 #include "vp-play-config.h"
 
 /* check temp */
@@ -238,15 +238,14 @@ bool vp_play_config_get_battery_charge_state(bool *bChargeState)
 bool vp_play_config_get_lcd_off_state(bool *bLCDOff)
 {
 	int nErr = 0;
-	int nVal = 0;
-
-	nErr = vconf_get_int(VCONFKEY_PM_STATE, &nVal);
-	if (nErr != 0) {
-		VideoLogError("VCONFKEY_PM_STATE is fail [0x%x]", nErr);
+	display_state_e state = DISPLAY_STATE_NORMAL;
+	nErr = device_display_get_state(&state);
+	if (nErr != DEVICE_ERROR_NONE) {
+		VideoLogError("device_display_get_state is fail [0x%x]", nErr);
 		return FALSE;
 	}
 
-	if (nVal >= VCONFKEY_PM_STATE_LCDOFF) {
+	if (state >= DISPLAY_STATE_SCREEN_DIM) {
 		*bLCDOff = TRUE;
 	} else {
 		*bLCDOff = FALSE;
