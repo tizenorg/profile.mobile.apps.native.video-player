@@ -4,7 +4,7 @@
 	<author email="yoechan.song@samsung.com" href="www.samsung.com">Yochan Song</author>
 	<description>Videos Application</description>
 	<ui-application appid="org.tizen.videos" exec="/usr/apps/org.tizen.videos/bin/videos"
-					nodisplay="false" multiple="false" type="capp" taskmanage="true" indicatordisplay="false" process-pool="false" hw-acceleration="use-GL"
+					nodisplay="false" multiple="false" type="capp" taskmanage="true" indicatordisplay="false" hw-acceleration="on" process-pool="true"
 					effectimage-type="edj-default" portrait-effectimage="/usr/apps/org.tizen.videos/shared/res/video.edj">
 		<metadata key="http://developer.samsung.com/tizen/metadata/multiwindow"/>
 		<label>Video</label>

@@ -30,7 +30,7 @@
 			<label xml:lang="es-us">Reproductor de Video</label>
    <author email="jhyuk47.lee@samsung.com" href="www.samsung.com">Jonghyuk Lee</author>
 	<description>Video player</description>
-	<ui-application appid="org.tizen.video-player" exec="/usr/apps/org.tizen.video-player/bin/video-player" nodisplay="true" multiple="false" type="capp" taskmanage="true" process-pool="false" hw-acceleration="use-GL" launch_mode="caller">
+	<ui-application appid="org.tizen.video-player" exec="/usr/apps/org.tizen.video-player/bin/video-player" nodisplay="true" multiple="false" type="capp" taskmanage="true" hw-acceleration="on" process-pool="true" launch_mode="caller">
 		<label>Video player</label>
 		<icon>org.tizen.video-player.png</icon>
 		<metadata key="http://developer.samsung.com/tizen/metadata/multiwindow"/>
