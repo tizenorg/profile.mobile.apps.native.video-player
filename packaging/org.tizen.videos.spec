@@ -48,6 +48,7 @@ BuildRequires: pkgconfig(libcore-context-manager)
 BuildRequires: pkgconfig(capi-system-device)
 BuildRequires: pkgconfig(capi-network-bluetooth)
 BuildRequires: pkgconfig(capi-base-utils-i18n)
+BuildRequires: pkgconfig(capi-ui-efl-util)
 
 BuildRequires: cmake
 BuildRequires: gettext-tools

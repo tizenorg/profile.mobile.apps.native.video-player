@@ -122,5 +122,6 @@
 		<privilege>http://tizen.org/privilege/volume.set</privilege>
 		<privilege>http://tizen.org/privilege/appmanager.launch</privilege>
 		<privilege>http://tizen.org/privilege/content.write</privilege>
+		<privilege>http://tizen.org/privilege/display</privilege>
 	</privileges>
 </manifest>
