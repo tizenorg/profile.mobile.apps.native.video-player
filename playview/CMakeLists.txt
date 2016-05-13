@@ -110,6 +110,7 @@ pkg_check_modules(${PROJECT_NAME}_pkgs REQUIRED
 	libcore-context-manager
 	capi-system-device
 	capi-network-bluetooth
+	capi-ui-efl-util
 	capi-base-utils-i18n
 	capi-network-wifi
 	efl-extension
