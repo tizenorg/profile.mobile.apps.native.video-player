@@ -7856,6 +7856,19 @@ static void _vp_play_normal_view_on_share_popup(NormalView *pNormalView)
 	}
 
 	PlayView *pPlayView = pNormalView->pPlayView;
+
+	vp_mm_player_state_t nState = VP_MM_PLAYER_STATE_NONE;
+	if (!vp_mm_player_get_state(pNormalView->pPlayerHandle, &nState)) {
+		VideoLogWarning("vp_mm_player_get_state is fail");
+	}
+	if(nState != VP_MM_PLAYER_STATE_PLAYING)
+	{
+		pPlayView->bIsPlayBeforeShare = false;
+	}
+	else
+	{
+		pPlayView->bIsPlayBeforeShare = true;
+	}
 	if (!pPlayView) {
 		VideoLogError("pPlayView is NULL");
 		return;

@@ -46,6 +46,7 @@ typedef struct _PlayView {
 
 	bool				bAVRCP;
 	bool				bWifi;
+	bool				bIsPlayBeforeShare;
 
 	bool				bStoreDownload;
 	bool				bStopAfterRepeat;

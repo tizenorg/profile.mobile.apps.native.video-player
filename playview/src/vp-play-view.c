@@ -1908,8 +1908,11 @@ bool vp_play_view_live_stream_realize(play_view_handle pViewHandle)
 		vp_play_normal_view_play_start(pPlayView->pNormalView);
 		return TRUE;
 	}else{
-		vp_play_normal_view_set_resume_or_pause(pPlayView->pNormalView);
-		return TRUE;
+		if(pPlayView->bIsPlayBeforeShare)
+		{
+			vp_play_normal_view_set_resume_or_pause(pPlayView->pNormalView);
+			return TRUE;
+		}
 	}
 	return TRUE;
 }
