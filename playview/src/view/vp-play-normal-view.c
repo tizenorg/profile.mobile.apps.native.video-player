@@ -7856,6 +7856,10 @@ static void _vp_play_normal_view_on_share_popup(NormalView *pNormalView)
 	}
 
 	PlayView *pPlayView = pNormalView->pPlayView;
+	if (!pPlayView) {
+		VideoLogError("pPlayView is NULL");
+		return;
+	}
 
 	vp_mm_player_state_t nState = VP_MM_PLAYER_STATE_NONE;
 	if (!vp_mm_player_get_state(pNormalView->pPlayerHandle, &nState)) {
@@ -7869,10 +7873,7 @@ static void _vp_play_normal_view_on_share_popup(NormalView *pNormalView)
 	{
 		pPlayView->bIsPlayBeforeShare = true;
 	}
-	if (!pPlayView) {
-		VideoLogError("pPlayView is NULL");
-		return;
-	}
+
 	bool bDRMLock = FALSE;
 
 	_vp_play_normal_view_check_drm_lock(pNormalView, &bDRMLock);

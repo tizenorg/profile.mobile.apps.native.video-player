@@ -200,7 +200,6 @@ static void __mp_rename_ctrl_ok_btn_cb(void *pUserData, Evas_Object *pObject, vo
 		MP_FREE_STRING(szFilePath);
 		MP_FREE_STRING(szFileExt);
 		MP_FREE_STRING(szLocation);
-		MP_FREE_STRING(szNewFile);
 
 		if (g_pRenameHandle->RenameCtrlUserCbFunc) {
 			g_pRenameHandle->RenameCtrlUserCbFunc();
@@ -208,6 +207,7 @@ static void __mp_rename_ctrl_ok_btn_cb(void *pUserData, Evas_Object *pObject, vo
 	}
 
 	MP_FREE_STRING(szFileExt);
+	MP_FREE_STRING(szNewFile);
 
 	mp_rename_ctrl_delete_handle();
 }

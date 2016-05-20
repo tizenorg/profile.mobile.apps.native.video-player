@@ -439,10 +439,11 @@ detail_handle vp_detail_page_create(void *pNaviFrame, PopupCloseCbFunc pCloseCb,
 	VideoLogInfo("");
 
 	pDetailViewHandle = (DetailView*)calloc(1, sizeof(DetailView));
-	memset(pDetailViewHandle, 0, sizeof(DetailView));
 	if (pDetailViewHandle == NULL) {
 		VideoLogError("pDetailViewHandle alloc fail");
 		return NULL;
+	} else {
+		memset(pDetailViewHandle, 0, sizeof(DetailView));
 	}
 
 	pDetailViewHandle->pDetailInfo = calloc(1, sizeof(vp_detail_info));
