@@ -2663,10 +2663,6 @@ int mp_util_set_translate_str(Evas_Object *obj, const char *str)
 
 	char *domain = NULL;
 
-	if (strstr(str, "IDS_COM")) {
-		domain = "sys_string";
-	}
-
 	elm_object_domain_translatable_text_set(obj, domain, str);
 
 	return 0;

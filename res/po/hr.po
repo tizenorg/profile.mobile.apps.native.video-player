@@ -181,6 +181,30 @@ msgstr "Mala"
 msgid "IDS_VIDEO_TPOP_FILE_NAME_ALREADY_IN_USE"
 msgstr "Već postoji naziv datoteke."
 
+msgid "IDS_COM_BODY_CLOSE"
+msgstr "Prekid"
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Maks. broj znakova."
+
+msgid "IDS_COM_SK_STOP"
+msgstr "Zaustavi"
+
+msgid "IDS_COM_SK_OK"
+msgstr "U redu"
+
+msgid "IDS_COM_BODY_OFF"
+msgstr "Isključeno"
+
+msgid "IDS_COM_SK_REFRESH"
+msgstr "Aktualiziraj"
+
+msgid "IDS_COM_BODY_LOCATION"
+msgstr "Lokacija"
+
+msgid "IDS_COM_POP_DELETED"
+msgstr "Obrisano."
+
 msgid "IDS_GALLERY_OPT_REMOVE_FROM_PRIVATE"
 msgstr "Ukloni iz Privatnog"
 
@@ -286,6 +310,45 @@ msgstr "Promjeni ime"
 msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
 msgstr "Slušalice"
 
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "Nepoznato"
+
+msgid "IDS_COM_POP_ERROR"
+msgstr "Greška."
+
+msgid "IDS_COM_BODY_BLUETOOTH"
+msgstr "Bluetooth"
+
+msgid "IDS_COM_BODY_NFC"
+msgstr "NFC"
+
+msgid "IDS_COM_BODY_LOW_BATTERY"
+msgstr "Baterija skoro prazna."
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "Spajanje neuspješno."
+
+msgid "IDS_COM_POP_FILE_NOT_EXIST"
+msgstr "Datoteka ne postoji."
+
+msgid "IDS_COM_POP_YOU_CAN_USE_PS_1_MORE_TIME_GET_ANOTHER_LICENCE_Q"
+msgstr "%s možete koristiti još jednom. Preuzeti drugu licencu?"
+
+msgid "IDS_COM_HEADER_AUDIO_DEVICE_ABB"
+msgstr "Audio uređaj"
+
+msgid "IDS_COM_OPT_ADDED"
+msgstr "Dodano."
+
+msgid "IDS_COM_BUTTON_SCAN"
+msgstr "Skeniraj"
+
+msgid "IDS_COM_BODY_UNABLE_TO_ADD"
+msgstr "Nije moguće dodati."
+
+msgid "IDS_COM_BODY_DEFAULT"
+msgstr "Zadano"
+
 msgid "IDS_VIDEO_BUTTON_DOWNLOAD"
 msgstr "Skidanje"
 
@@ -340,6 +403,12 @@ msgstr "Memorija uređaja"
 msgid "IDS_VIDEO_SBODY_SD_CARD"
 msgstr "SD kartica"
 
+msgid "IDS_COM_BODY_MOVE"
+msgstr "Premjesti"
+
+msgid "IDS_COM_BODY_ON"
+msgstr "Uključeno"
+
 msgid "IDS_VIDEO_OPT_SHARE_VIA"
 msgstr "Dijeli preko"
 
@@ -354,6 +423,12 @@ msgstr "Procesiranje..."
 
 msgid "IDS_MEMO_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
 msgstr "Dosegnut maksimalan broj znakova."
+
+msgid "IDS_COM_SK_YES"
+msgstr "Da"
+
+msgid "IDS_COM_SK_NO"
+msgstr "Ne"
 
 msgid "IDS_MUSIC_OPT_DELETE"
 msgstr "Obriši"
@@ -385,6 +460,57 @@ msgstr "IZBRIŠI"
 msgid "IDS_TPLATFORM_MBODY_STORAGE_LOCATION"
 msgstr "Mjesto spremanja"
 
+msgid "IDS_COM_BODY_DATE"
+msgstr "Datum"
+
 msgid "IDS_GALLERY_HEADER_SELECT_VIDEO"
 msgstr "Odaberite video"
+
+msgid "IDS_COM_OPT1_WI_FI_DIRECT"
+msgstr "Wi-Fi Direct"
+
+msgid "IDS_COM_POP_CONNECTION_ERROR"
+msgstr "Greška veze."
+
+msgid "IDS_COM_BODY_KB"
+msgstr "KB"
+
+msgid "IDS_COM_BODY_B"
+msgstr "B"
+
+msgid "IDS_COM_BODY_MB"
+msgstr "MB"
+
+msgid "IDS_COM_BODY_GB"
+msgstr "GB"
+
+msgid "IDS_COM_BODY_DOWNLOADED"
+msgstr "Skinuto."
+
+msgid "IDS_COM_BODY_SYNCHRONIZE"
+msgstr "Sinkronizacija"
+
+msgid "IDS_COM_BODY_FONT"
+msgstr "Slova"
+
+msgid "IDS_COM_POP_NONE"
+msgstr "Ništa"
+
+msgid "IDS_COM_OPT_HEADPHONES_ABB"
+msgstr "Slušalice"
+
+msgid "IDS_COM_POP_YOU_CAN_USE_PS_1_MORE_TIME_START_NOW_Q"
+msgstr "%s možete koristiti još jednom. Početak?"
+
+msgid "IDS_COM_POP_YOU_CAN_USE_PS_2_MORE_TIMES_START_NOW_Q"
+msgstr "%s možete koristiti još dvaput. Početak?"
+
+msgid "IDS_COM_POP_PS_CURRENTLY_LOCKED_UNLOCK_Q"
+msgstr "%s je trenutno zaključan. Otključati?"
+
+msgid "IDS_COM_POP_YOU_CANNOT_USE_PS_ANY_MORE_TIMES_GET_ANOTHER_LICENCE_Q"
+msgstr "Ne možete više koristiti %s. Preuzeti drugu licencu?"
+
+msgid "IDS_COM_POP_PS_IS_ABOUT_TO_EXPIRE_GET_ANOTHER_LICENCE_Q"
+msgstr "%s će uskoro isteći. Preuzeti drugu licencu?"
 

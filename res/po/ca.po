@@ -181,6 +181,30 @@ msgstr "Petita"
 msgid "IDS_VIDEO_TPOP_FILE_NAME_ALREADY_IN_USE"
 msgstr "El nom de fitxer està en ús."
 
+msgid "IDS_COM_BODY_CLOSE"
+msgstr "Tancar"
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "S'ha assolit el nombre màxim de caràcters"
+
+msgid "IDS_COM_SK_STOP"
+msgstr "Aturar"
+
+msgid "IDS_COM_SK_OK"
+msgstr "Acceptar"
+
+msgid "IDS_COM_BODY_OFF"
+msgstr "Desactivat"
+
+msgid "IDS_COM_SK_REFRESH"
+msgstr "Actualitzar"
+
+msgid "IDS_COM_BODY_LOCATION"
+msgstr "Ubicació"
+
+msgid "IDS_COM_POP_DELETED"
+msgstr "Esborrat"
+
 msgid "IDS_GALLERY_OPT_REMOVE_FROM_PRIVATE"
 msgstr "Esborrar de Privat"
 
@@ -286,6 +310,45 @@ msgstr "Canviar nom"
 msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
 msgstr "Auriculars"
 
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "Desconegut"
+
+msgid "IDS_COM_POP_ERROR"
+msgstr "Error"
+
+msgid "IDS_COM_BODY_BLUETOOTH"
+msgstr "Bluetooth"
+
+msgid "IDS_COM_BODY_NFC"
+msgstr "NFC"
+
+msgid "IDS_COM_BODY_LOW_BATTERY"
+msgstr "Bateria baixa"
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "Error de connexió"
+
+msgid "IDS_COM_POP_FILE_NOT_EXIST"
+msgstr "Aquest fitxer no existeix"
+
+msgid "IDS_COM_POP_YOU_CAN_USE_PS_1_MORE_TIME_GET_ANOTHER_LICENCE_Q"
+msgstr "Pot utilitzar %s 1 vegada més. Obtenir una altra llicència?"
+
+msgid "IDS_COM_HEADER_AUDIO_DEVICE_ABB"
+msgstr "Dispositiu d’àudio"
+
+msgid "IDS_COM_OPT_ADDED"
+msgstr "Afegit"
+
+msgid "IDS_COM_BUTTON_SCAN"
+msgstr "Escanejar"
+
+msgid "IDS_COM_BODY_UNABLE_TO_ADD"
+msgstr "No es pot afegir"
+
+msgid "IDS_COM_BODY_DEFAULT"
+msgstr "Predeterminat"
+
 msgid "IDS_VIDEO_BUTTON_DOWNLOAD"
 msgstr "Descarregar"
 
@@ -340,6 +403,12 @@ msgstr "Emmagatzematge de dispositiu"
 msgid "IDS_VIDEO_SBODY_SD_CARD"
 msgstr "Targeta SD"
 
+msgid "IDS_COM_BODY_MOVE"
+msgstr "Moure"
+
+msgid "IDS_COM_BODY_ON"
+msgstr "Activat"
+
 msgid "IDS_VIDEO_OPT_SHARE_VIA"
 msgstr "Compartir mitjançant"
 
@@ -354,6 +423,12 @@ msgstr "Processant..."
 
 msgid "IDS_MEMO_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
 msgstr "S'ha assolit el nombre màxim de caràcters."
+
+msgid "IDS_COM_SK_YES"
+msgstr "Sí"
+
+msgid "IDS_COM_SK_NO"
+msgstr "No"
 
 msgid "IDS_MUSIC_OPT_DELETE"
 msgstr "Esborrar"
@@ -385,6 +460,57 @@ msgstr "ESBORRAR"
 msgid "IDS_TPLATFORM_MBODY_STORAGE_LOCATION"
 msgstr "Ubicació d'emmagatzematge"
 
+msgid "IDS_COM_BODY_DATE"
+msgstr "Data"
+
 msgid "IDS_GALLERY_HEADER_SELECT_VIDEO"
 msgstr "Seleccionar vídeo"
+
+msgid "IDS_COM_OPT1_WI_FI_DIRECT"
+msgstr "Wi-Fi Direct"
+
+msgid "IDS_COM_POP_CONNECTION_ERROR"
+msgstr "Error de connexió"
+
+msgid "IDS_COM_BODY_KB"
+msgstr "KB"
+
+msgid "IDS_COM_BODY_B"
+msgstr "B"
+
+msgid "IDS_COM_BODY_MB"
+msgstr "MB"
+
+msgid "IDS_COM_BODY_GB"
+msgstr "GB"
+
+msgid "IDS_COM_BODY_DOWNLOADED"
+msgstr "Descarregat"
+
+msgid "IDS_COM_BODY_SYNCHRONIZE"
+msgstr "Sincronitzar"
+
+msgid "IDS_COM_BODY_FONT"
+msgstr "Font"
+
+msgid "IDS_COM_POP_NONE"
+msgstr "Cap"
+
+msgid "IDS_COM_OPT_HEADPHONES_ABB"
+msgstr "Auriculars"
+
+msgid "IDS_COM_POP_YOU_CAN_USE_PS_1_MORE_TIME_START_NOW_Q"
+msgstr "Pot utilitzar %s 1 vegada més. Començar ara?"
+
+msgid "IDS_COM_POP_YOU_CAN_USE_PS_2_MORE_TIMES_START_NOW_Q"
+msgstr "Pot utilitzar %s 2 vegades més. Començar ara?"
+
+msgid "IDS_COM_POP_PS_CURRENTLY_LOCKED_UNLOCK_Q"
+msgstr "%s bloquejat actualment. Desbloquejar?"
+
+msgid "IDS_COM_POP_YOU_CANNOT_USE_PS_ANY_MORE_TIMES_GET_ANOTHER_LICENCE_Q"
+msgstr "No pot utilitzar %s cap vegada més. Obtenir una altra llicència?"
+
+msgid "IDS_COM_POP_PS_IS_ABOUT_TO_EXPIRE_GET_ANOTHER_LICENCE_Q"
+msgstr "%s és a punt de caducar. Obtenir una altra llicència?"
 

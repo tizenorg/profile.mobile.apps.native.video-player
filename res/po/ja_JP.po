@@ -181,6 +181,30 @@ msgstr "小"
 msgid "IDS_VIDEO_TPOP_FILE_NAME_ALREADY_IN_USE"
 msgstr "ファイル名は既に使用されています。"
 
+msgid "IDS_COM_BODY_CLOSE"
+msgstr "閉じる"
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "最大文字数に達しました。"
+
+msgid "IDS_COM_SK_STOP"
+msgstr "停止"
+
+msgid "IDS_COM_SK_OK"
+msgstr "OK"
+
+msgid "IDS_COM_BODY_OFF"
+msgstr "OFF"
+
+msgid "IDS_COM_SK_REFRESH"
+msgstr "更新"
+
+msgid "IDS_COM_BODY_LOCATION"
+msgstr "場所"
+
+msgid "IDS_COM_POP_DELETED"
+msgstr "削除しました。"
+
 msgid "IDS_GALLERY_OPT_REMOVE_FROM_PRIVATE"
 msgstr "プライベートから削除"
 
@@ -286,6 +310,45 @@ msgstr "名前を変更"
 msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
 msgstr "ヘッドホン"
 
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "不明"
+
+msgid "IDS_COM_POP_ERROR"
+msgstr "エラー"
+
+msgid "IDS_COM_BODY_BLUETOOTH"
+msgstr "Bluetooth"
+
+msgid "IDS_COM_BODY_NFC"
+msgstr "NFC"
+
+msgid "IDS_COM_BODY_LOW_BATTERY"
+msgstr "バッテリー残量が不足しています。"
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "接続に失敗しました。"
+
+msgid "IDS_COM_POP_FILE_NOT_EXIST"
+msgstr "このファイルは存在しません。"
+
+msgid "IDS_COM_POP_YOU_CAN_USE_PS_1_MORE_TIME_GET_ANOTHER_LICENCE_Q"
+msgstr "%sをもう1回使用できます。追加のライセンスを取得しますか？"
+
+msgid "IDS_COM_HEADER_AUDIO_DEVICE_ABB"
+msgstr "オーディオデバイス"
+
+msgid "IDS_COM_OPT_ADDED"
+msgstr "追加しました。"
+
+msgid "IDS_COM_BUTTON_SCAN"
+msgstr "スキャン"
+
+msgid "IDS_COM_BODY_UNABLE_TO_ADD"
+msgstr "追加不可"
+
+msgid "IDS_COM_BODY_DEFAULT"
+msgstr "標準"
+
 msgid "IDS_VIDEO_BUTTON_DOWNLOAD"
 msgstr "ダウンロード"
 
@@ -340,6 +403,12 @@ msgstr "システムメモリ(本体)"
 msgid "IDS_VIDEO_SBODY_SD_CARD"
 msgstr "外部SDカード"
 
+msgid "IDS_COM_BODY_MOVE"
+msgstr "移動"
+
+msgid "IDS_COM_BODY_ON"
+msgstr "ON"
+
 msgid "IDS_VIDEO_OPT_SHARE_VIA"
 msgstr "共有"
 
@@ -354,6 +423,12 @@ msgstr "処理中..."
 
 msgid "IDS_MEMO_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
 msgstr "最大文字数に達しました。"
+
+msgid "IDS_COM_SK_YES"
+msgstr "はい"
+
+msgid "IDS_COM_SK_NO"
+msgstr "いいえ"
 
 msgid "IDS_MUSIC_OPT_DELETE"
 msgstr "削除"
@@ -385,6 +460,57 @@ msgstr "削除"
 msgid "IDS_TPLATFORM_MBODY_STORAGE_LOCATION"
 msgstr "保存場所"
 
+msgid "IDS_COM_BODY_DATE"
+msgstr "日付"
+
 msgid "IDS_GALLERY_HEADER_SELECT_VIDEO"
 msgstr "動画を選択"
+
+msgid "IDS_COM_OPT1_WI_FI_DIRECT"
+msgstr "Wi-Fi Direct"
+
+msgid "IDS_COM_POP_CONNECTION_ERROR"
+msgstr "接続エラーが発生しました。"
+
+msgid "IDS_COM_BODY_KB"
+msgstr "KB"
+
+msgid "IDS_COM_BODY_B"
+msgstr "B"
+
+msgid "IDS_COM_BODY_MB"
+msgstr "MB"
+
+msgid "IDS_COM_BODY_GB"
+msgstr "GB"
+
+msgid "IDS_COM_BODY_DOWNLOADED"
+msgstr "ダウンロードしました。"
+
+msgid "IDS_COM_BODY_SYNCHRONIZE"
+msgstr "同期"
+
+msgid "IDS_COM_BODY_FONT"
+msgstr "フォント"
+
+msgid "IDS_COM_POP_NONE"
+msgstr "なし"
+
+msgid "IDS_COM_OPT_HEADPHONES_ABB"
+msgstr "ヘッドホン"
+
+msgid "IDS_COM_POP_YOU_CAN_USE_PS_1_MORE_TIME_START_NOW_Q"
+msgstr "%sをもう1回使用できます。すぐに実行しますか？"
+
+msgid "IDS_COM_POP_YOU_CAN_USE_PS_2_MORE_TIMES_START_NOW_Q"
+msgstr "%sをあと2回使用できます。すぐに実行しますか？"
+
+msgid "IDS_COM_POP_PS_CURRENTLY_LOCKED_UNLOCK_Q"
+msgstr "%sは現在ロックされています。 ロックを解除しますか？"
+
+msgid "IDS_COM_POP_YOU_CANNOT_USE_PS_ANY_MORE_TIMES_GET_ANOTHER_LICENCE_Q"
+msgstr "%sはこれ以上使用できません。追加のライセンスを取得しますか？"
+
+msgid "IDS_COM_POP_PS_IS_ABOUT_TO_EXPIRE_GET_ANOTHER_LICENCE_Q"
+msgstr "%sの有効期限が間もなく切れます。追加のライセンスを取得しますか？"
 

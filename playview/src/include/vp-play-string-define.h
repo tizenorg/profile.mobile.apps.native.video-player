@@ -28,7 +28,7 @@
 #define VP_PLAY_MAIN_MULTI_WINDOW_NAME		"multi_view"
 
 #define VP_LOCAL_STR_PREFIX			"video-player"
-#define VP_SYS_STR_PREFIX			"sys_string"
+#define VP_SYS_STR_PREFIX			"video-player"
 
 #define VP_PLAY_IMAGE_BUFFER_PATH		"/opt/usr/media/.video_thumb/.image_buff.jpg"
 

@@ -181,6 +181,30 @@ msgstr "Мелкий"
 msgid "IDS_VIDEO_TPOP_FILE_NAME_ALREADY_IN_USE"
 msgstr "Имя файла уже используется"
 
+msgid "IDS_COM_BODY_CLOSE"
+msgstr "Закрыть"
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Достигнуто максимальное число символов."
+
+msgid "IDS_COM_SK_STOP"
+msgstr "Стоп"
+
+msgid "IDS_COM_SK_OK"
+msgstr "OK"
+
+msgid "IDS_COM_BODY_OFF"
+msgstr "Выключено"
+
+msgid "IDS_COM_SK_REFRESH"
+msgstr "Обновить"
+
+msgid "IDS_COM_BODY_LOCATION"
+msgstr "Местоположение"
+
+msgid "IDS_COM_POP_DELETED"
+msgstr "Удалено."
+
 msgid "IDS_GALLERY_OPT_REMOVE_FROM_PRIVATE"
 msgstr "Удалить из приватного режима"
 
@@ -286,6 +310,45 @@ msgstr "Переименовать"
 msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
 msgstr "Наушники"
 
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "Неизвестно"
+
+msgid "IDS_COM_POP_ERROR"
+msgstr "Ошибка"
+
+msgid "IDS_COM_BODY_BLUETOOTH"
+msgstr "Bluetooth"
+
+msgid "IDS_COM_BODY_NFC"
+msgstr "NFC"
+
+msgid "IDS_COM_BODY_LOW_BATTERY"
+msgstr "Аккумулятор разряжен"
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "Сбой при подключении."
+
+msgid "IDS_COM_POP_FILE_NOT_EXIST"
+msgstr "Файл не существует."
+
+msgid "IDS_COM_POP_YOU_CAN_USE_PS_1_MORE_TIME_GET_ANOTHER_LICENCE_Q"
+msgstr "Вы можете использовать %s еще 1 раз. Получить другую лицензию?"
+
+msgid "IDS_COM_HEADER_AUDIO_DEVICE_ABB"
+msgstr "Звуковое устройство"
+
+msgid "IDS_COM_OPT_ADDED"
+msgstr "Добавлено."
+
+msgid "IDS_COM_BUTTON_SCAN"
+msgstr "Поиск"
+
+msgid "IDS_COM_BODY_UNABLE_TO_ADD"
+msgstr "Не удалось добавить."
+
+msgid "IDS_COM_BODY_DEFAULT"
+msgstr "По умолчанию"
+
 msgid "IDS_VIDEO_BUTTON_DOWNLOAD"
 msgstr "Загрузить"
 
@@ -340,6 +403,12 @@ msgstr "Память устройства"
 msgid "IDS_VIDEO_SBODY_SD_CARD"
 msgstr "Карта памяти SD"
 
+msgid "IDS_COM_BODY_MOVE"
+msgstr "Переместить"
+
+msgid "IDS_COM_BODY_ON"
+msgstr "Включено"
+
 msgid "IDS_VIDEO_OPT_SHARE_VIA"
 msgstr "Отправить через"
 
@@ -354,6 +423,12 @@ msgstr "Обработка..."
 
 msgid "IDS_MEMO_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
 msgstr "Достигнуто максимальное число символов."
+
+msgid "IDS_COM_SK_YES"
+msgstr "Да"
+
+msgid "IDS_COM_SK_NO"
+msgstr "Нет"
 
 msgid "IDS_MUSIC_OPT_DELETE"
 msgstr "Удалить"
@@ -385,6 +460,57 @@ msgstr "УДАЛИТЬ"
 msgid "IDS_TPLATFORM_MBODY_STORAGE_LOCATION"
 msgstr "Место хранения"
 
+msgid "IDS_COM_BODY_DATE"
+msgstr "Дата"
+
 msgid "IDS_GALLERY_HEADER_SELECT_VIDEO"
 msgstr "Выберите видео"
+
+msgid "IDS_COM_OPT1_WI_FI_DIRECT"
+msgstr "Wi-Fi Direct"
+
+msgid "IDS_COM_POP_CONNECTION_ERROR"
+msgstr "Ошибка подключения"
+
+msgid "IDS_COM_BODY_KB"
+msgstr "КБ"
+
+msgid "IDS_COM_BODY_B"
+msgstr "б"
+
+msgid "IDS_COM_BODY_MB"
+msgstr "МБ"
+
+msgid "IDS_COM_BODY_GB"
+msgstr "Гб"
+
+msgid "IDS_COM_BODY_DOWNLOADED"
+msgstr "Загружено."
+
+msgid "IDS_COM_BODY_SYNCHRONIZE"
+msgstr "Синхронизация"
+
+msgid "IDS_COM_BODY_FONT"
+msgstr "Шрифт"
+
+msgid "IDS_COM_POP_NONE"
+msgstr "Нет"
+
+msgid "IDS_COM_OPT_HEADPHONES_ABB"
+msgstr "Наушники"
+
+msgid "IDS_COM_POP_YOU_CAN_USE_PS_1_MORE_TIME_START_NOW_Q"
+msgstr "Вы можете использовать %s еще 1 раз. Запустить?"
+
+msgid "IDS_COM_POP_YOU_CAN_USE_PS_2_MORE_TIMES_START_NOW_Q"
+msgstr "Вы можете использовать %s еще 2 раза. Запустить?"
+
+msgid "IDS_COM_POP_PS_CURRENTLY_LOCKED_UNLOCK_Q"
+msgstr "Файл %s сейчас заблокирован. Разблокировать?"
+
+msgid "IDS_COM_POP_YOU_CANNOT_USE_PS_ANY_MORE_TIMES_GET_ANOTHER_LICENCE_Q"
+msgstr "Вы больше не можете использовать %s. Получить другую лицензию?"
+
+msgid "IDS_COM_POP_PS_IS_ABOUT_TO_EXPIRE_GET_ANOTHER_LICENCE_Q"
+msgstr "Срок %s подходит к концу. Получить другую лицензию?"
 

@@ -181,6 +181,30 @@ msgstr "Klein"
 msgid "IDS_VIDEO_TPOP_FILE_NAME_ALREADY_IN_USE"
 msgstr "Bestandsnaam is al in gebruik."
 
+msgid "IDS_COM_BODY_CLOSE"
+msgstr "Sluiten"
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Maximumaantal tekens bereikt."
+
+msgid "IDS_COM_SK_STOP"
+msgstr "Stoppen"
+
+msgid "IDS_COM_SK_OK"
+msgstr "OK"
+
+msgid "IDS_COM_BODY_OFF"
+msgstr "Uit"
+
+msgid "IDS_COM_SK_REFRESH"
+msgstr "Vernieuw"
+
+msgid "IDS_COM_BODY_LOCATION"
+msgstr "Locatie"
+
+msgid "IDS_COM_POP_DELETED"
+msgstr "Verwijderd."
+
 msgid "IDS_GALLERY_OPT_REMOVE_FROM_PRIVATE"
 msgstr "Verwijderen uit Privé"
 
@@ -286,6 +310,45 @@ msgstr "Naam wijzigen"
 msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
 msgstr "Koptelefoons"
 
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "Onbekend"
+
+msgid "IDS_COM_POP_ERROR"
+msgstr "Fout."
+
+msgid "IDS_COM_BODY_BLUETOOTH"
+msgstr "Bluetooth"
+
+msgid "IDS_COM_BODY_NFC"
+msgstr "NFC"
+
+msgid "IDS_COM_BODY_LOW_BATTERY"
+msgstr "Batterij bijna leeg."
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "Verbinding mislukt."
+
+msgid "IDS_COM_POP_FILE_NOT_EXIST"
+msgstr "Dit bestand bestaat niet."
+
+msgid "IDS_COM_POP_YOU_CAN_USE_PS_1_MORE_TIME_GET_ANOTHER_LICENCE_Q"
+msgstr "U kunt %s nog 1 keer gebruiken. Nieuwe licentie aanvragen?"
+
+msgid "IDS_COM_HEADER_AUDIO_DEVICE_ABB"
+msgstr "Audioapparaat"
+
+msgid "IDS_COM_OPT_ADDED"
+msgstr "Toegevoegd."
+
+msgid "IDS_COM_BUTTON_SCAN"
+msgstr "Scannen"
+
+msgid "IDS_COM_BODY_UNABLE_TO_ADD"
+msgstr "Kan niet toevoegen."
+
+msgid "IDS_COM_BODY_DEFAULT"
+msgstr "Standaard"
+
 msgid "IDS_VIDEO_BUTTON_DOWNLOAD"
 msgstr "Downloaden"
 
@@ -340,6 +403,12 @@ msgstr "Apparaatopslag"
 msgid "IDS_VIDEO_SBODY_SD_CARD"
 msgstr "SD-kaart"
 
+msgid "IDS_COM_BODY_MOVE"
+msgstr "Verplaatsen"
+
+msgid "IDS_COM_BODY_ON"
+msgstr "Aan"
+
 msgid "IDS_VIDEO_OPT_SHARE_VIA"
 msgstr "Delen via"
 
@@ -354,6 +423,12 @@ msgstr "Verwerken..."
 
 msgid "IDS_MEMO_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
 msgstr "Maximumaantal tekens bereikt."
+
+msgid "IDS_COM_SK_YES"
+msgstr "Ja"
+
+msgid "IDS_COM_SK_NO"
+msgstr "Nee"
 
 msgid "IDS_MUSIC_OPT_DELETE"
 msgstr "Wissen"
@@ -385,6 +460,57 @@ msgstr "VERWIJDEREN"
 msgid "IDS_TPLATFORM_MBODY_STORAGE_LOCATION"
 msgstr "Opslaglocatie"
 
+msgid "IDS_COM_BODY_DATE"
+msgstr "Datum"
+
 msgid "IDS_GALLERY_HEADER_SELECT_VIDEO"
 msgstr "Selecteer video"
+
+msgid "IDS_COM_OPT1_WI_FI_DIRECT"
+msgstr "Wi-Fi Direct"
+
+msgid "IDS_COM_POP_CONNECTION_ERROR"
+msgstr "Verbindingsfout."
+
+msgid "IDS_COM_BODY_KB"
+msgstr "KB"
+
+msgid "IDS_COM_BODY_B"
+msgstr "B"
+
+msgid "IDS_COM_BODY_MB"
+msgstr "MB"
+
+msgid "IDS_COM_BODY_GB"
+msgstr "GB"
+
+msgid "IDS_COM_BODY_DOWNLOADED"
+msgstr "Gedownload."
+
+msgid "IDS_COM_BODY_SYNCHRONIZE"
+msgstr "Synchroniseren"
+
+msgid "IDS_COM_BODY_FONT"
+msgstr "Lettertype"
+
+msgid "IDS_COM_POP_NONE"
+msgstr "Geen"
+
+msgid "IDS_COM_OPT_HEADPHONES_ABB"
+msgstr "Koptelefoons"
+
+msgid "IDS_COM_POP_YOU_CAN_USE_PS_1_MORE_TIME_START_NOW_Q"
+msgstr "U kunt %s nog 1 keer gebruiken. Nu beginnen?"
+
+msgid "IDS_COM_POP_YOU_CAN_USE_PS_2_MORE_TIMES_START_NOW_Q"
+msgstr "U kunt %s nog 2 keer gebruiken. Nu beginnen?"
+
+msgid "IDS_COM_POP_PS_CURRENTLY_LOCKED_UNLOCK_Q"
+msgstr "%s is nu vergrendeld. Ontgrendelen?"
+
+msgid "IDS_COM_POP_YOU_CANNOT_USE_PS_ANY_MORE_TIMES_GET_ANOTHER_LICENCE_Q"
+msgstr "U kunt %s niet meer gebruiken. Nieuwe licentie aanvragen?"
+
+msgid "IDS_COM_POP_PS_IS_ABOUT_TO_EXPIRE_GET_ANOTHER_LICENCE_Q"
+msgstr "%s verloopt binnenkort. Nieuwe licentie aanvragen?"
 

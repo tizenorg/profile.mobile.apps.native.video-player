@@ -181,6 +181,30 @@ msgstr "Malé"
 msgid "IDS_VIDEO_TPOP_FILE_NAME_ALREADY_IN_USE"
 msgstr "Názov súboru sa už používa."
 
+msgid "IDS_COM_BODY_CLOSE"
+msgstr "Zavrieť"
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Bol dosiahnutý maximálny počet znakov."
+
+msgid "IDS_COM_SK_STOP"
+msgstr "Stop"
+
+msgid "IDS_COM_SK_OK"
+msgstr "OK"
+
+msgid "IDS_COM_BODY_OFF"
+msgstr "Vyp."
+
+msgid "IDS_COM_SK_REFRESH"
+msgstr "Aktualizovať"
+
+msgid "IDS_COM_BODY_LOCATION"
+msgstr "GPS"
+
+msgid "IDS_COM_POP_DELETED"
+msgstr "Odstránené."
+
 msgid "IDS_GALLERY_OPT_REMOVE_FROM_PRIVATE"
 msgstr "Odstrániť z priečinka Súkromné"
 
@@ -286,6 +310,45 @@ msgstr "Premenovať"
 msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
 msgstr "Slúchadlá"
 
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "Neznáme"
+
+msgid "IDS_COM_POP_ERROR"
+msgstr "Chyba."
+
+msgid "IDS_COM_BODY_BLUETOOTH"
+msgstr "Bluetooth"
+
+msgid "IDS_COM_BODY_NFC"
+msgstr "NFC"
+
+msgid "IDS_COM_BODY_LOW_BATTERY"
+msgstr "Batéria vybitá."
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "Pripojenie sa nepodarilo."
+
+msgid "IDS_COM_POP_FILE_NOT_EXIST"
+msgstr "Súbor neexistuje."
+
+msgid "IDS_COM_POP_YOU_CAN_USE_PS_1_MORE_TIME_GET_ANOTHER_LICENCE_Q"
+msgstr "Súbor %s môžete použiť ešte 1 raz. Získať ďalšiu licenciu?"
+
+msgid "IDS_COM_HEADER_AUDIO_DEVICE_ABB"
+msgstr "Zvukové zariadenie"
+
+msgid "IDS_COM_OPT_ADDED"
+msgstr "Pridané."
+
+msgid "IDS_COM_BUTTON_SCAN"
+msgstr "Vyhľadať"
+
+msgid "IDS_COM_BODY_UNABLE_TO_ADD"
+msgstr "Nedá sa pridať."
+
+msgid "IDS_COM_BODY_DEFAULT"
+msgstr "Predvolený"
+
 msgid "IDS_VIDEO_BUTTON_DOWNLOAD"
 msgstr "Stiahnuť"
 
@@ -340,6 +403,12 @@ msgstr "Úložisko zariadenia"
 msgid "IDS_VIDEO_SBODY_SD_CARD"
 msgstr "Karta SD"
 
+msgid "IDS_COM_BODY_MOVE"
+msgstr "Presunúť"
+
+msgid "IDS_COM_BODY_ON"
+msgstr "Zap."
+
 msgid "IDS_VIDEO_OPT_SHARE_VIA"
 msgstr "Zdieľať cez"
 
@@ -354,6 +423,12 @@ msgstr "Prebieha spracovanie..."
 
 msgid "IDS_MEMO_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
 msgstr "Dosiahol sa maximálny počet znakov."
+
+msgid "IDS_COM_SK_YES"
+msgstr "Áno"
+
+msgid "IDS_COM_SK_NO"
+msgstr "Nie"
 
 msgid "IDS_MUSIC_OPT_DELETE"
 msgstr "Odstrániť"
@@ -385,6 +460,57 @@ msgstr "ODSTRÁNIŤ"
 msgid "IDS_TPLATFORM_MBODY_STORAGE_LOCATION"
 msgstr "Umiest. úlož. priestoru"
 
+msgid "IDS_COM_BODY_DATE"
+msgstr "Dátum"
+
 msgid "IDS_GALLERY_HEADER_SELECT_VIDEO"
 msgstr "Vyberte video"
+
+msgid "IDS_COM_OPT1_WI_FI_DIRECT"
+msgstr "Wi-Fi Direct"
+
+msgid "IDS_COM_POP_CONNECTION_ERROR"
+msgstr "Chyba pripojenia."
+
+msgid "IDS_COM_BODY_KB"
+msgstr "kB"
+
+msgid "IDS_COM_BODY_B"
+msgstr "B"
+
+msgid "IDS_COM_BODY_MB"
+msgstr "MB"
+
+msgid "IDS_COM_BODY_GB"
+msgstr "GB"
+
+msgid "IDS_COM_BODY_DOWNLOADED"
+msgstr "Stiahnuté."
+
+msgid "IDS_COM_BODY_SYNCHRONIZE"
+msgstr "Synchronizácia"
+
+msgid "IDS_COM_BODY_FONT"
+msgstr "Písmo"
+
+msgid "IDS_COM_POP_NONE"
+msgstr "Žiadny"
+
+msgid "IDS_COM_OPT_HEADPHONES_ABB"
+msgstr "Slúchadlá"
+
+msgid "IDS_COM_POP_YOU_CAN_USE_PS_1_MORE_TIME_START_NOW_Q"
+msgstr "Súbor %s môžete použiť ešte 1 raz. Spustiť teraz?"
+
+msgid "IDS_COM_POP_YOU_CAN_USE_PS_2_MORE_TIMES_START_NOW_Q"
+msgstr "Súbor %s môžete použiť ešte 2 razy. Spustiť teraz?"
+
+msgid "IDS_COM_POP_PS_CURRENTLY_LOCKED_UNLOCK_Q"
+msgstr "Súbor %s je aktuálne zamknutý. Odomknúť?"
+
+msgid "IDS_COM_POP_YOU_CANNOT_USE_PS_ANY_MORE_TIMES_GET_ANOTHER_LICENCE_Q"
+msgstr "Súbor %s už nemôžete viac použiť. Získať ďalšiu licenciu?"
+
+msgid "IDS_COM_POP_PS_IS_ABOUT_TO_EXPIRE_GET_ANOTHER_LICENCE_Q"
+msgstr "Blíži sa skončenie platnosti súboru %s. Získať ďalšiu licenciu?"
 

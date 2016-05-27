@@ -181,6 +181,30 @@ msgstr "Mažas"
 msgid "IDS_VIDEO_TPOP_FILE_NAME_ALREADY_IN_USE"
 msgstr "Failo pavadinimas jau naudojamas"
 
+msgid "IDS_COM_BODY_CLOSE"
+msgstr "Uždaryti"
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Pasiektas didžiausias simbolių skaičius."
+
+msgid "IDS_COM_SK_STOP"
+msgstr "Stabdyti"
+
+msgid "IDS_COM_SK_OK"
+msgstr "Gerai"
+
+msgid "IDS_COM_BODY_OFF"
+msgstr "Išjungta"
+
+msgid "IDS_COM_SK_REFRESH"
+msgstr "Naujinti"
+
+msgid "IDS_COM_BODY_LOCATION"
+msgstr "Vieta"
+
+msgid "IDS_COM_POP_DELETED"
+msgstr "Ištrinta."
+
 msgid "IDS_GALLERY_OPT_REMOVE_FROM_PRIVATE"
 msgstr "Pašalinti iš privataus"
 
@@ -286,6 +310,45 @@ msgstr "Pervardyti"
 msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
 msgstr "Ausinės"
 
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "Nežinomas"
+
+msgid "IDS_COM_POP_ERROR"
+msgstr "Klaida"
+
+msgid "IDS_COM_BODY_BLUETOOTH"
+msgstr "Bluetooth"
+
+msgid "IDS_COM_BODY_NFC"
+msgstr "NFC"
+
+msgid "IDS_COM_BODY_LOW_BATTERY"
+msgstr "Senka akumuliatorius!"
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "Prisijungti nepavyko."
+
+msgid "IDS_COM_POP_FILE_NOT_EXIST"
+msgstr "Tokio failo nėra."
+
+msgid "IDS_COM_POP_YOU_CAN_USE_PS_1_MORE_TIME_GET_ANOTHER_LICENCE_Q"
+msgstr "%s galite naudoti dar 1 kartą. Gauti kitą licenciją?"
+
+msgid "IDS_COM_HEADER_AUDIO_DEVICE_ABB"
+msgstr "Garso įrenginys"
+
+msgid "IDS_COM_OPT_ADDED"
+msgstr "Pridėta."
+
+msgid "IDS_COM_BUTTON_SCAN"
+msgstr "Skenuoti"
+
+msgid "IDS_COM_BODY_UNABLE_TO_ADD"
+msgstr "Negalima pridėti."
+
+msgid "IDS_COM_BODY_DEFAULT"
+msgstr "Numatytoji"
+
 msgid "IDS_VIDEO_BUTTON_DOWNLOAD"
 msgstr "Atsisiųsti"
 
@@ -340,6 +403,12 @@ msgstr "Įrenginio atmintis"
 msgid "IDS_VIDEO_SBODY_SD_CARD"
 msgstr "SD kortelė"
 
+msgid "IDS_COM_BODY_MOVE"
+msgstr "Perkelti"
+
+msgid "IDS_COM_BODY_ON"
+msgstr "Įjungta"
+
 msgid "IDS_VIDEO_OPT_SHARE_VIA"
 msgstr "Bendrinti per"
 
@@ -354,6 +423,12 @@ msgstr "Apdorojama..."
 
 msgid "IDS_MEMO_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
 msgstr "Pasiektas didžiausias simbolių skaičius."
+
+msgid "IDS_COM_SK_YES"
+msgstr "Taip"
+
+msgid "IDS_COM_SK_NO"
+msgstr "Ne"
 
 msgid "IDS_MUSIC_OPT_DELETE"
 msgstr "Trinti"
@@ -385,6 +460,57 @@ msgstr "IŠTRINTI"
 msgid "IDS_TPLATFORM_MBODY_STORAGE_LOCATION"
 msgstr "Saugojimo vieta"
 
+msgid "IDS_COM_BODY_DATE"
+msgstr "Data"
+
 msgid "IDS_GALLERY_HEADER_SELECT_VIDEO"
 msgstr "Pasirinkti vaizdo įrašą"
+
+msgid "IDS_COM_OPT1_WI_FI_DIRECT"
+msgstr "„Wi-Fi Direct“"
+
+msgid "IDS_COM_POP_CONNECTION_ERROR"
+msgstr "Ryšio klaida."
+
+msgid "IDS_COM_BODY_KB"
+msgstr "KB"
+
+msgid "IDS_COM_BODY_B"
+msgstr "B"
+
+msgid "IDS_COM_BODY_MB"
+msgstr "MB"
+
+msgid "IDS_COM_BODY_GB"
+msgstr "GB"
+
+msgid "IDS_COM_BODY_DOWNLOADED"
+msgstr "Atsisiųsta."
+
+msgid "IDS_COM_BODY_SYNCHRONIZE"
+msgstr "Sinchronizuoti"
+
+msgid "IDS_COM_BODY_FONT"
+msgstr "Šriftas"
+
+msgid "IDS_COM_POP_NONE"
+msgstr "Nėra"
+
+msgid "IDS_COM_OPT_HEADPHONES_ABB"
+msgstr "Ausinės"
+
+msgid "IDS_COM_POP_YOU_CAN_USE_PS_1_MORE_TIME_START_NOW_Q"
+msgstr "%s galite naudoti dar 1 kartą. Pradėti dabar?"
+
+msgid "IDS_COM_POP_YOU_CAN_USE_PS_2_MORE_TIMES_START_NOW_Q"
+msgstr "%s galite naudoti dar 2 kartus. Pradėti dabar?"
+
+msgid "IDS_COM_POP_PS_CURRENTLY_LOCKED_UNLOCK_Q"
+msgstr "%s šiuo metu užrakintas. Atrakinti?"
+
+msgid "IDS_COM_POP_YOU_CANNOT_USE_PS_ANY_MORE_TIMES_GET_ANOTHER_LICENCE_Q"
+msgstr "Nebegalite naudotis %s. Gauti kitą licenciją?"
+
+msgid "IDS_COM_POP_PS_IS_ABOUT_TO_EXPIRE_GET_ANOTHER_LICENCE_Q"
+msgstr "%s netrukus baigs galioti. Gauti kitą licenciją?"
 

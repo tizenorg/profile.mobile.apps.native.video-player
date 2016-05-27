@@ -23,7 +23,7 @@
 #include <app.h>
 
 
-#define MP_SYS_STRING								"sys_string"
+#define MP_SYS_STRING								"videos"
 #define VIDEOS_STRING								"videos"
 
 #define VIDEOS_GET_STR(x)							dgettext(VIDEOS_STRING, x)

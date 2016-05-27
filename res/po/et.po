@@ -181,6 +181,30 @@ msgstr "Väike"
 msgid "IDS_VIDEO_TPOP_FILE_NAME_ALREADY_IN_USE"
 msgstr "Failinimi on juba kasutusel"
 
+msgid "IDS_COM_BODY_CLOSE"
+msgstr "Sulge"
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Lubatud arv märke on täis."
+
+msgid "IDS_COM_SK_STOP"
+msgstr "Lõpeta"
+
+msgid "IDS_COM_SK_OK"
+msgstr "OK"
+
+msgid "IDS_COM_BODY_OFF"
+msgstr "Väljas"
+
+msgid "IDS_COM_SK_REFRESH"
+msgstr "Värskenda"
+
+msgid "IDS_COM_BODY_LOCATION"
+msgstr "Asukoht"
+
+msgid "IDS_COM_POP_DELETED"
+msgstr "Kustutatud."
+
 msgid "IDS_GALLERY_OPT_REMOVE_FROM_PRIVATE"
 msgstr "Eemalda kaustast Privaatne"
 
@@ -286,6 +310,45 @@ msgstr "Nimeta ümber"
 msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
 msgstr "Kõrvaklapid"
 
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "Tundmatu"
+
+msgid "IDS_COM_POP_ERROR"
+msgstr "Tõrge"
+
+msgid "IDS_COM_BODY_BLUETOOTH"
+msgstr "Bluetooth"
+
+msgid "IDS_COM_BODY_NFC"
+msgstr "NFC"
+
+msgid "IDS_COM_BODY_LOW_BATTERY"
+msgstr "Aku on peaaegu tühi."
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "Ühendamine nurjus."
+
+msgid "IDS_COM_POP_FILE_NOT_EXIST"
+msgstr "Seda faili pole olemas."
+
+msgid "IDS_COM_POP_YOU_CAN_USE_PS_1_MORE_TIME_GET_ANOTHER_LICENCE_Q"
+msgstr "Te saate kasutada %s veel 1 korra. Kas hankida teine litsents?"
+
+msgid "IDS_COM_HEADER_AUDIO_DEVICE_ABB"
+msgstr "Heliseade"
+
+msgid "IDS_COM_OPT_ADDED"
+msgstr "Lisatud."
+
+msgid "IDS_COM_BUTTON_SCAN"
+msgstr "Otsi"
+
+msgid "IDS_COM_BODY_UNABLE_TO_ADD"
+msgstr "Ei saa lisada."
+
+msgid "IDS_COM_BODY_DEFAULT"
+msgstr "Vaikimisi"
+
 msgid "IDS_VIDEO_BUTTON_DOWNLOAD"
 msgstr "Laadi alla"
 
@@ -340,6 +403,12 @@ msgstr "Seadme mälu"
 msgid "IDS_VIDEO_SBODY_SD_CARD"
 msgstr "SD-kaart"
 
+msgid "IDS_COM_BODY_MOVE"
+msgstr "Teisalda"
+
+msgid "IDS_COM_BODY_ON"
+msgstr "Sees"
+
 msgid "IDS_VIDEO_OPT_SHARE_VIA"
 msgstr "Jaga:"
 
@@ -354,6 +423,12 @@ msgstr "Töötlemine..."
 
 msgid "IDS_MEMO_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
 msgstr "Tähemärkide maksimaalne arv on saavutatud."
+
+msgid "IDS_COM_SK_YES"
+msgstr "Jah"
+
+msgid "IDS_COM_SK_NO"
+msgstr "Ei"
 
 msgid "IDS_MUSIC_OPT_DELETE"
 msgstr "Kustuta"
@@ -385,6 +460,57 @@ msgstr "KUSTUTA"
 msgid "IDS_TPLATFORM_MBODY_STORAGE_LOCATION"
 msgstr "Salvestamise asukoht"
 
+msgid "IDS_COM_BODY_DATE"
+msgstr "Kuupäev"
+
 msgid "IDS_GALLERY_HEADER_SELECT_VIDEO"
 msgstr "Valige video"
+
+msgid "IDS_COM_OPT1_WI_FI_DIRECT"
+msgstr "Wi-Fi Direct"
+
+msgid "IDS_COM_POP_CONNECTION_ERROR"
+msgstr "Ühenduse tõrge."
+
+msgid "IDS_COM_BODY_KB"
+msgstr "kB"
+
+msgid "IDS_COM_BODY_B"
+msgstr "B"
+
+msgid "IDS_COM_BODY_MB"
+msgstr "MB"
+
+msgid "IDS_COM_BODY_GB"
+msgstr "GB"
+
+msgid "IDS_COM_BODY_DOWNLOADED"
+msgstr "Alla laetud."
+
+msgid "IDS_COM_BODY_SYNCHRONIZE"
+msgstr "Sünkrooni"
+
+msgid "IDS_COM_BODY_FONT"
+msgstr "Font"
+
+msgid "IDS_COM_POP_NONE"
+msgstr "Puudub"
+
+msgid "IDS_COM_OPT_HEADPHONES_ABB"
+msgstr "Kõrvaklapid"
+
+msgid "IDS_COM_POP_YOU_CAN_USE_PS_1_MORE_TIME_START_NOW_Q"
+msgstr "Te saate kasutada %s veel 1 korra. Kas alustada kohe?"
+
+msgid "IDS_COM_POP_YOU_CAN_USE_PS_2_MORE_TIMES_START_NOW_Q"
+msgstr "Te saate kasutada %s veel 2 korda. Kas alustada kohe?"
+
+msgid "IDS_COM_POP_PS_CURRENTLY_LOCKED_UNLOCK_Q"
+msgstr "%s praegu lukustatud. Kas avada?"
+
+msgid "IDS_COM_POP_YOU_CANNOT_USE_PS_ANY_MORE_TIMES_GET_ANOTHER_LICENCE_Q"
+msgstr "Te ei saa kasutada %s enam ühtegi korda. Kas hankida teine litsents?"
+
+msgid "IDS_COM_POP_PS_IS_ABOUT_TO_EXPIRE_GET_ANOTHER_LICENCE_Q"
+msgstr "%s aegub peagi. Kas hankida teine litsents?"
 

@@ -181,6 +181,30 @@ msgstr "Mały"
 msgid "IDS_VIDEO_TPOP_FILE_NAME_ALREADY_IN_USE"
 msgstr "Nazwa pliku już w użyciu."
 
+msgid "IDS_COM_BODY_CLOSE"
+msgstr "Zamknij"
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Osiągnięto maksymalną liczbę znaków."
+
+msgid "IDS_COM_SK_STOP"
+msgstr "Stop"
+
+msgid "IDS_COM_SK_OK"
+msgstr "OK"
+
+msgid "IDS_COM_BODY_OFF"
+msgstr "Wyłączone"
+
+msgid "IDS_COM_SK_REFRESH"
+msgstr "Odśwież"
+
+msgid "IDS_COM_BODY_LOCATION"
+msgstr "Miejsce"
+
+msgid "IDS_COM_POP_DELETED"
+msgstr "Usunięto."
+
 msgid "IDS_GALLERY_OPT_REMOVE_FROM_PRIVATE"
 msgstr "Usuń z Prywatnych"
 
@@ -286,6 +310,45 @@ msgstr "Zmień nazwę"
 msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
 msgstr "Słuchawki"
 
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "Nieznane"
+
+msgid "IDS_COM_POP_ERROR"
+msgstr "Błąd"
+
+msgid "IDS_COM_BODY_BLUETOOTH"
+msgstr "Bluetooth"
+
+msgid "IDS_COM_BODY_NFC"
+msgstr "NFC"
+
+msgid "IDS_COM_BODY_LOW_BATTERY"
+msgstr "Bateria rozładowana."
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "Błąd łączenia"
+
+msgid "IDS_COM_POP_FILE_NOT_EXIST"
+msgstr "Plik nie istnieje."
+
+msgid "IDS_COM_POP_YOU_CAN_USE_PS_1_MORE_TIME_GET_ANOTHER_LICENCE_Q"
+msgstr "Możesz użyć pliku %s jeszcze raz. Uzyskać kolejną licencję?"
+
+msgid "IDS_COM_HEADER_AUDIO_DEVICE_ABB"
+msgstr "Urządzenie audio"
+
+msgid "IDS_COM_OPT_ADDED"
+msgstr "Dodano."
+
+msgid "IDS_COM_BUTTON_SCAN"
+msgstr "Skanuj"
+
+msgid "IDS_COM_BODY_UNABLE_TO_ADD"
+msgstr "Nie można dodać."
+
+msgid "IDS_COM_BODY_DEFAULT"
+msgstr "Domyślnie"
+
 msgid "IDS_VIDEO_BUTTON_DOWNLOAD"
 msgstr "Pobierz"
 
@@ -340,6 +403,12 @@ msgstr "Pamięć urządzenia"
 msgid "IDS_VIDEO_SBODY_SD_CARD"
 msgstr "Karta pamięci"
 
+msgid "IDS_COM_BODY_MOVE"
+msgstr "Przenieś"
+
+msgid "IDS_COM_BODY_ON"
+msgstr "Włączone"
+
 msgid "IDS_VIDEO_OPT_SHARE_VIA"
 msgstr "Udostępnij przez"
 
@@ -354,6 +423,12 @@ msgstr "Przetwarzanie..."
 
 msgid "IDS_MEMO_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
 msgstr "Osiągnięto maksymalną liczbę znaków."
+
+msgid "IDS_COM_SK_YES"
+msgstr "Tak"
+
+msgid "IDS_COM_SK_NO"
+msgstr "Nie"
 
 msgid "IDS_MUSIC_OPT_DELETE"
 msgstr "Usuń"
@@ -385,6 +460,57 @@ msgstr "USUŃ"
 msgid "IDS_TPLATFORM_MBODY_STORAGE_LOCATION"
 msgstr "Położenie pamięci"
 
+msgid "IDS_COM_BODY_DATE"
+msgstr "Data"
+
 msgid "IDS_GALLERY_HEADER_SELECT_VIDEO"
 msgstr "Wybierz film"
+
+msgid "IDS_COM_OPT1_WI_FI_DIRECT"
+msgstr "Wi-Fi Direct"
+
+msgid "IDS_COM_POP_CONNECTION_ERROR"
+msgstr "Błąd połączenia"
+
+msgid "IDS_COM_BODY_KB"
+msgstr "kB"
+
+msgid "IDS_COM_BODY_B"
+msgstr "B"
+
+msgid "IDS_COM_BODY_MB"
+msgstr "MB"
+
+msgid "IDS_COM_BODY_GB"
+msgstr "GB"
+
+msgid "IDS_COM_BODY_DOWNLOADED"
+msgstr "Pobrano."
+
+msgid "IDS_COM_BODY_SYNCHRONIZE"
+msgstr "Synchronizuj"
+
+msgid "IDS_COM_BODY_FONT"
+msgstr "Czcionka"
+
+msgid "IDS_COM_POP_NONE"
+msgstr "Brak"
+
+msgid "IDS_COM_OPT_HEADPHONES_ABB"
+msgstr "Słuchawki"
+
+msgid "IDS_COM_POP_YOU_CAN_USE_PS_1_MORE_TIME_START_NOW_Q"
+msgstr "Możesz użyć pliku %s jeszcze raz. Rozpocząć teraz?"
+
+msgid "IDS_COM_POP_YOU_CAN_USE_PS_2_MORE_TIMES_START_NOW_Q"
+msgstr "Możesz użyć pliku %s jeszcze 2 razy. Rozpocząć teraz?"
+
+msgid "IDS_COM_POP_PS_CURRENTLY_LOCKED_UNLOCK_Q"
+msgstr "Plik %s jest obecnie zablokowany. Odblokować?"
+
+msgid "IDS_COM_POP_YOU_CANNOT_USE_PS_ANY_MORE_TIMES_GET_ANOTHER_LICENCE_Q"
+msgstr "Nie możesz już używać pliku %s. Uzyskać kolejną licencję?"
+
+msgid "IDS_COM_POP_PS_IS_ABOUT_TO_EXPIRE_GET_ANOTHER_LICENCE_Q"
+msgstr "%s niedługo wygaśnie. Uzyskać kolejną licencję?"
 

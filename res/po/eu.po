@@ -181,6 +181,30 @@ msgstr "Txikia"
 msgid "IDS_VIDEO_TPOP_FILE_NAME_ALREADY_IN_USE"
 msgstr "Fitxategi izena aurretik erabiltzen ari zara."
 
+msgid "IDS_COM_BODY_CLOSE"
+msgstr "Itxi"
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Gehienezko karaktere kopurura heldu zara."
+
+msgid "IDS_COM_SK_STOP"
+msgstr "Gelditu"
+
+msgid "IDS_COM_SK_OK"
+msgstr "Ados"
+
+msgid "IDS_COM_BODY_OFF"
+msgstr "Desaktibatuta"
+
+msgid "IDS_COM_SK_REFRESH"
+msgstr "Eguneratu"
+
+msgid "IDS_COM_BODY_LOCATION"
+msgstr "Kokalekua"
+
+msgid "IDS_COM_POP_DELETED"
+msgstr "Ezabatua"
+
 msgid "IDS_GALLERY_OPT_REMOVE_FROM_PRIVATE"
 msgstr "Kendu Pribatutik"
 
@@ -286,6 +310,45 @@ msgstr "Berrizendatu"
 msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
 msgstr "Aurikularrak"
 
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "Ezezaguna"
+
+msgid "IDS_COM_POP_ERROR"
+msgstr "Akatsa"
+
+msgid "IDS_COM_BODY_BLUETOOTH"
+msgstr "Bluetooth"
+
+msgid "IDS_COM_BODY_NFC"
+msgstr "NFC"
+
+msgid "IDS_COM_BODY_LOW_BATTERY"
+msgstr "Bateria gutxi"
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "Konektatzerakoan errorea"
+
+msgid "IDS_COM_POP_FILE_NOT_EXIST"
+msgstr "Fitxategia ez dago"
+
+msgid "IDS_COM_POP_YOU_CAN_USE_PS_1_MORE_TIME_GET_ANOTHER_LICENCE_Q"
+msgstr "%s erabili dezakezu beste behin. Lortu beste lizentzia bat?"
+
+msgid "IDS_COM_HEADER_AUDIO_DEVICE_ABB"
+msgstr "Audio gailua"
+
+msgid "IDS_COM_OPT_ADDED"
+msgstr "Gehituta"
+
+msgid "IDS_COM_BUTTON_SCAN"
+msgstr "Eskaneatzea"
+
+msgid "IDS_COM_BODY_UNABLE_TO_ADD"
+msgstr "Ezin da gehitu"
+
+msgid "IDS_COM_BODY_DEFAULT"
+msgstr "Lehenetsia"
+
 msgid "IDS_VIDEO_BUTTON_DOWNLOAD"
 msgstr "Deskargatu"
 
@@ -340,6 +403,12 @@ msgstr "Gailu biltegia"
 msgid "IDS_VIDEO_SBODY_SD_CARD"
 msgstr "SD txartela"
 
+msgid "IDS_COM_BODY_MOVE"
+msgstr "Mugitu"
+
+msgid "IDS_COM_BODY_ON"
+msgstr "Aktibatuta"
+
 msgid "IDS_VIDEO_OPT_SHARE_VIA"
 msgstr "Partekatu honen bidez"
 
@@ -354,6 +423,12 @@ msgstr "Prozesatzen..."
 
 msgid "IDS_MEMO_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
 msgstr "Gehieneko karaktere kopurura iritsi zara."
+
+msgid "IDS_COM_SK_YES"
+msgstr "Bai"
+
+msgid "IDS_COM_SK_NO"
+msgstr "Ez"
 
 msgid "IDS_MUSIC_OPT_DELETE"
 msgstr "Ezabatu"
@@ -385,6 +460,57 @@ msgstr "EZABATU"
 msgid "IDS_TPLATFORM_MBODY_STORAGE_LOCATION"
 msgstr "Biltegiratze kokapena"
 
+msgid "IDS_COM_BODY_DATE"
+msgstr "Data"
+
 msgid "IDS_GALLERY_HEADER_SELECT_VIDEO"
 msgstr "Hautatu bideoa"
+
+msgid "IDS_COM_OPT1_WI_FI_DIRECT"
+msgstr "Wi-Fi Direct"
+
+msgid "IDS_COM_POP_CONNECTION_ERROR"
+msgstr "Konexio errorea"
+
+msgid "IDS_COM_BODY_KB"
+msgstr "KB"
+
+msgid "IDS_COM_BODY_B"
+msgstr "B"
+
+msgid "IDS_COM_BODY_MB"
+msgstr "MB"
+
+msgid "IDS_COM_BODY_GB"
+msgstr "GB"
+
+msgid "IDS_COM_BODY_DOWNLOADED"
+msgstr "Deskargatuta"
+
+msgid "IDS_COM_BODY_SYNCHRONIZE"
+msgstr "Sinkronizatu"
+
+msgid "IDS_COM_BODY_FONT"
+msgstr "Letra"
+
+msgid "IDS_COM_POP_NONE"
+msgstr "Bat ere ez"
+
+msgid "IDS_COM_OPT_HEADPHONES_ABB"
+msgstr "Aurikularrak"
+
+msgid "IDS_COM_POP_YOU_CAN_USE_PS_1_MORE_TIME_START_NOW_Q"
+msgstr "%s erabili dezakezu beste behin. Hasi orain?"
+
+msgid "IDS_COM_POP_YOU_CAN_USE_PS_2_MORE_TIMES_START_NOW_Q"
+msgstr "%s erabili dezakezu beste 2 aldiz. Hasi orain?"
+
+msgid "IDS_COM_POP_PS_CURRENTLY_LOCKED_UNLOCK_Q"
+msgstr "%s blokeatuta dago orain. Desblokeatu?"
+
+msgid "IDS_COM_POP_YOU_CANNOT_USE_PS_ANY_MORE_TIMES_GET_ANOTHER_LICENCE_Q"
+msgstr "Ezin duzu beste %s elementu gehiago erabili. Lortu beste lizentzia bat?"
+
+msgid "IDS_COM_POP_PS_IS_ABOUT_TO_EXPIRE_GET_ANOTHER_LICENCE_Q"
+msgstr "%s iraungitzear dago. Lortu beste lizentzia bat?"
 

@@ -181,6 +181,30 @@ msgstr "Lítið"
 msgid "IDS_VIDEO_TPOP_FILE_NAME_ALREADY_IN_USE"
 msgstr "Skráarheitið er þegar í notkun."
 
+msgid "IDS_COM_BODY_CLOSE"
+msgstr "Loka"
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Hámarksfjölda stafa hefur verið náð."
+
+msgid "IDS_COM_SK_STOP"
+msgstr "Stöðva"
+
+msgid "IDS_COM_SK_OK"
+msgstr "Í lagi"
+
+msgid "IDS_COM_BODY_OFF"
+msgstr "Slökkt"
+
+msgid "IDS_COM_SK_REFRESH"
+msgstr "Endurnýja"
+
+msgid "IDS_COM_BODY_LOCATION"
+msgstr "Staðsetning"
+
+msgid "IDS_COM_POP_DELETED"
+msgstr "Eytt."
+
 msgid "IDS_GALLERY_OPT_REMOVE_FROM_PRIVATE"
 msgstr "Fjarlægja úr einkamálum"
 
@@ -286,6 +310,45 @@ msgstr "Endurnefna"
 msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
 msgstr "Höfuðtól"
 
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "Óþekkt"
+
+msgid "IDS_COM_POP_ERROR"
+msgstr "Villa."
+
+msgid "IDS_COM_BODY_BLUETOOTH"
+msgstr "Bluetooth"
+
+msgid "IDS_COM_BODY_NFC"
+msgstr "NFC"
+
+msgid "IDS_COM_BODY_LOW_BATTERY"
+msgstr "Rafhlaðan er að tæmast."
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "Tenging brást."
+
+msgid "IDS_COM_POP_FILE_NOT_EXIST"
+msgstr "Skráin er ekki til."
+
+msgid "IDS_COM_POP_YOU_CAN_USE_PS_1_MORE_TIME_GET_ANOTHER_LICENCE_Q"
+msgstr "Þú getur notað %s 1 sinni enn. Fá annað leyfi?"
+
+msgid "IDS_COM_HEADER_AUDIO_DEVICE_ABB"
+msgstr "Hljóðtæki"
+
+msgid "IDS_COM_OPT_ADDED"
+msgstr "Bætt við."
+
+msgid "IDS_COM_BUTTON_SCAN"
+msgstr "Skanna"
+
+msgid "IDS_COM_BODY_UNABLE_TO_ADD"
+msgstr "Ekki tókst að bæta við."
+
+msgid "IDS_COM_BODY_DEFAULT"
+msgstr "Sjálfgefið"
+
 msgid "IDS_VIDEO_BUTTON_DOWNLOAD"
 msgstr "Sækja"
 
@@ -340,6 +403,12 @@ msgstr "Geymsla tækis"
 msgid "IDS_VIDEO_SBODY_SD_CARD"
 msgstr "SD-kort"
 
+msgid "IDS_COM_BODY_MOVE"
+msgstr "Færa"
+
+msgid "IDS_COM_BODY_ON"
+msgstr "Kveikt"
+
 msgid "IDS_VIDEO_OPT_SHARE_VIA"
 msgstr "Deila um"
 
@@ -354,6 +423,12 @@ msgstr "Vinnsla í gangi..."
 
 msgid "IDS_MEMO_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
 msgstr "Hámarksfjölda stafa hefur verið náð."
+
+msgid "IDS_COM_SK_YES"
+msgstr "Já"
+
+msgid "IDS_COM_SK_NO"
+msgstr "Nei"
 
 msgid "IDS_MUSIC_OPT_DELETE"
 msgstr "Eyða"
@@ -385,6 +460,57 @@ msgstr "EYÐA"
 msgid "IDS_TPLATFORM_MBODY_STORAGE_LOCATION"
 msgstr "Geymslustaður"
 
+msgid "IDS_COM_BODY_DATE"
+msgstr "Dagsetning"
+
 msgid "IDS_GALLERY_HEADER_SELECT_VIDEO"
 msgstr "Velja myndskeið"
+
+msgid "IDS_COM_OPT1_WI_FI_DIRECT"
+msgstr "Wi-Fi Direct"
+
+msgid "IDS_COM_POP_CONNECTION_ERROR"
+msgstr "Villa í tengingu."
+
+msgid "IDS_COM_BODY_KB"
+msgstr "KB"
+
+msgid "IDS_COM_BODY_B"
+msgstr "B"
+
+msgid "IDS_COM_BODY_MB"
+msgstr "MB"
+
+msgid "IDS_COM_BODY_GB"
+msgstr "GB"
+
+msgid "IDS_COM_BODY_DOWNLOADED"
+msgstr "Halað niður."
+
+msgid "IDS_COM_BODY_SYNCHRONIZE"
+msgstr "Samstilla"
+
+msgid "IDS_COM_BODY_FONT"
+msgstr "Letur"
+
+msgid "IDS_COM_POP_NONE"
+msgstr "Ekkert"
+
+msgid "IDS_COM_OPT_HEADPHONES_ABB"
+msgstr "Höfuðtól"
+
+msgid "IDS_COM_POP_YOU_CAN_USE_PS_1_MORE_TIME_START_NOW_Q"
+msgstr "Þú getur notað %s 1 sinni enn. Byrja núna?"
+
+msgid "IDS_COM_POP_YOU_CAN_USE_PS_2_MORE_TIMES_START_NOW_Q"
+msgstr "Þú getur notað %s 2 sinnum enn. Byrja núna?"
+
+msgid "IDS_COM_POP_PS_CURRENTLY_LOCKED_UNLOCK_Q"
+msgstr "%s er læst sem stendur. Opna?"
+
+msgid "IDS_COM_POP_YOU_CANNOT_USE_PS_ANY_MORE_TIMES_GET_ANOTHER_LICENCE_Q"
+msgstr "Þú getur ekki notað %s oftar. Fá annað leyfi?"
+
+msgid "IDS_COM_POP_PS_IS_ABOUT_TO_EXPIRE_GET_ANOTHER_LICENCE_Q"
+msgstr "%s er að renna út. Fá nýtt leyfi?"
 

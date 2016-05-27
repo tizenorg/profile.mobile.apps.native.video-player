@@ -181,6 +181,30 @@ msgstr "Pieni"
 msgid "IDS_VIDEO_TPOP_FILE_NAME_ALREADY_IN_USE"
 msgstr "Tiedoston nimi jo käytössä."
 
+msgid "IDS_COM_BODY_CLOSE"
+msgstr "Sulje"
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Merkkien enimmäismäärä saavutettu."
+
+msgid "IDS_COM_SK_STOP"
+msgstr "Lopeta"
+
+msgid "IDS_COM_SK_OK"
+msgstr "OK"
+
+msgid "IDS_COM_BODY_OFF"
+msgstr "Pois"
+
+msgid "IDS_COM_SK_REFRESH"
+msgstr "Päivitä"
+
+msgid "IDS_COM_BODY_LOCATION"
+msgstr "Sijainti"
+
+msgid "IDS_COM_POP_DELETED"
+msgstr "Poistettu."
+
 msgid "IDS_GALLERY_OPT_REMOVE_FROM_PRIVATE"
 msgstr "Poista Yksityiset-kansiosta"
 
@@ -286,6 +310,45 @@ msgstr "Nimeä uudelleen"
 msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
 msgstr "Kuulokkeet"
 
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "Tuntematon"
+
+msgid "IDS_COM_POP_ERROR"
+msgstr "Virhe"
+
+msgid "IDS_COM_BODY_BLUETOOTH"
+msgstr "Bluetooth"
+
+msgid "IDS_COM_BODY_NFC"
+msgstr "NFC"
+
+msgid "IDS_COM_BODY_LOW_BATTERY"
+msgstr "Akku on loppumassa."
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "Yhdistäminen epäonnistui."
+
+msgid "IDS_COM_POP_FILE_NOT_EXIST"
+msgstr "Tiedostoa ei ole."
+
+msgid "IDS_COM_POP_YOU_CAN_USE_PS_1_MORE_TIME_GET_ANOTHER_LICENCE_Q"
+msgstr "Voit käyttää kohdetta %s vielä 1 kerran. Hankitaanko toinen lisenssi?"
+
+msgid "IDS_COM_HEADER_AUDIO_DEVICE_ABB"
+msgstr "Äänilaite"
+
+msgid "IDS_COM_OPT_ADDED"
+msgstr "Lisätty."
+
+msgid "IDS_COM_BUTTON_SCAN"
+msgstr "Hae"
+
+msgid "IDS_COM_BODY_UNABLE_TO_ADD"
+msgstr "Lisääminen ei onnistu."
+
+msgid "IDS_COM_BODY_DEFAULT"
+msgstr "Oletus"
+
 msgid "IDS_VIDEO_BUTTON_DOWNLOAD"
 msgstr "Lataa"
 
@@ -340,6 +403,12 @@ msgstr "Laitteen muisti"
 msgid "IDS_VIDEO_SBODY_SD_CARD"
 msgstr "SD-kortti"
 
+msgid "IDS_COM_BODY_MOVE"
+msgstr "Siirrä"
+
+msgid "IDS_COM_BODY_ON"
+msgstr "Päällä"
+
 msgid "IDS_VIDEO_OPT_SHARE_VIA"
 msgstr "Jakotapa"
 
@@ -354,6 +423,12 @@ msgstr "Käsitellään..."
 
 msgid "IDS_MEMO_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
 msgstr "Merkkien enimmäismäärä on saavutettu."
+
+msgid "IDS_COM_SK_YES"
+msgstr "Kyllä"
+
+msgid "IDS_COM_SK_NO"
+msgstr "Ei"
 
 msgid "IDS_MUSIC_OPT_DELETE"
 msgstr "Poista"
@@ -385,6 +460,57 @@ msgstr "POISTA"
 msgid "IDS_TPLATFORM_MBODY_STORAGE_LOCATION"
 msgstr "Tallennuspaikka"
 
+msgid "IDS_COM_BODY_DATE"
+msgstr "Päivämäärä"
+
 msgid "IDS_GALLERY_HEADER_SELECT_VIDEO"
 msgstr "Valitse video"
+
+msgid "IDS_COM_OPT1_WI_FI_DIRECT"
+msgstr "Wi-Fi Direct"
+
+msgid "IDS_COM_POP_CONNECTION_ERROR"
+msgstr "Yhteysvirhe"
+
+msgid "IDS_COM_BODY_KB"
+msgstr "kt"
+
+msgid "IDS_COM_BODY_B"
+msgstr "t"
+
+msgid "IDS_COM_BODY_MB"
+msgstr "Mt"
+
+msgid "IDS_COM_BODY_GB"
+msgstr "Gt"
+
+msgid "IDS_COM_BODY_DOWNLOADED"
+msgstr "Ladattu."
+
+msgid "IDS_COM_BODY_SYNCHRONIZE"
+msgstr "Synkronoi"
+
+msgid "IDS_COM_BODY_FONT"
+msgstr "Fontti"
+
+msgid "IDS_COM_POP_NONE"
+msgstr "Ei mitään"
+
+msgid "IDS_COM_OPT_HEADPHONES_ABB"
+msgstr "Kuulokkeet"
+
+msgid "IDS_COM_POP_YOU_CAN_USE_PS_1_MORE_TIME_START_NOW_Q"
+msgstr "Voit käyttää kohdetta %s vielä 1 kerran. Aloitetaanko nyt?"
+
+msgid "IDS_COM_POP_YOU_CAN_USE_PS_2_MORE_TIMES_START_NOW_Q"
+msgstr "Voit käyttää kohdetta %s vielä 2 kertaa. Aloitetaanko nyt?"
+
+msgid "IDS_COM_POP_PS_CURRENTLY_LOCKED_UNLOCK_Q"
+msgstr "%s on tällä hetkellä lukittu. Poistetaanko lukitus?"
+
+msgid "IDS_COM_POP_YOU_CANNOT_USE_PS_ANY_MORE_TIMES_GET_ANOTHER_LICENCE_Q"
+msgstr "Kohdetta %s ei enää voi käyttää. Hankitaanko toinen lisenssi?"
+
+msgid "IDS_COM_POP_PS_IS_ABOUT_TO_EXPIRE_GET_ANOTHER_LICENCE_Q"
+msgstr "%s on vanhentumassa. Hankitaanko toinen lisenssi?"
 

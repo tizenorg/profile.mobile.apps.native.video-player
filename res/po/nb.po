@@ -181,6 +181,30 @@ msgstr "Liten"
 msgid "IDS_VIDEO_TPOP_FILE_NAME_ALREADY_IN_USE"
 msgstr "Filnavnet er allerede i bruk."
 
+msgid "IDS_COM_BODY_CLOSE"
+msgstr "Lukk"
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Nådd maksimalt antall tegn."
+
+msgid "IDS_COM_SK_STOP"
+msgstr "Stopp"
+
+msgid "IDS_COM_SK_OK"
+msgstr "OK"
+
+msgid "IDS_COM_BODY_OFF"
+msgstr "Av"
+
+msgid "IDS_COM_SK_REFRESH"
+msgstr "Oppdater"
+
+msgid "IDS_COM_BODY_LOCATION"
+msgstr "Posisjon"
+
+msgid "IDS_COM_POP_DELETED"
+msgstr "Slettet."
+
 msgid "IDS_GALLERY_OPT_REMOVE_FROM_PRIVATE"
 msgstr "Fjern fra Privat"
 
@@ -286,6 +310,45 @@ msgstr "Endre navn"
 msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
 msgstr "Hodetelefoner"
 
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "Ukjent"
+
+msgid "IDS_COM_POP_ERROR"
+msgstr "Feil."
+
+msgid "IDS_COM_BODY_BLUETOOTH"
+msgstr "Bluetooth"
+
+msgid "IDS_COM_BODY_NFC"
+msgstr "NFC"
+
+msgid "IDS_COM_BODY_LOW_BATTERY"
+msgstr "Lavt batterinivå."
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "Kunne ikke koble til."
+
+msgid "IDS_COM_POP_FILE_NOT_EXIST"
+msgstr "Filen eksisterer ikke."
+
+msgid "IDS_COM_POP_YOU_CAN_USE_PS_1_MORE_TIME_GET_ANOTHER_LICENCE_Q"
+msgstr "Du kan bruke %s 1 gang til. Skaffe en annen lisens?"
+
+msgid "IDS_COM_HEADER_AUDIO_DEVICE_ABB"
+msgstr "Lydenhet"
+
+msgid "IDS_COM_OPT_ADDED"
+msgstr "Lagt til."
+
+msgid "IDS_COM_BUTTON_SCAN"
+msgstr "Søk"
+
+msgid "IDS_COM_BODY_UNABLE_TO_ADD"
+msgstr "Kan ikke legge til."
+
+msgid "IDS_COM_BODY_DEFAULT"
+msgstr "Standard"
+
 msgid "IDS_VIDEO_BUTTON_DOWNLOAD"
 msgstr "Last ned"
 
@@ -340,6 +403,12 @@ msgstr "Enhetsminne"
 msgid "IDS_VIDEO_SBODY_SD_CARD"
 msgstr "SD-kort"
 
+msgid "IDS_COM_BODY_MOVE"
+msgstr "Flytt"
+
+msgid "IDS_COM_BODY_ON"
+msgstr "På"
+
 msgid "IDS_VIDEO_OPT_SHARE_VIA"
 msgstr "Del via"
 
@@ -354,6 +423,12 @@ msgstr "Behandler..."
 
 msgid "IDS_MEMO_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
 msgstr "Maksimalt antall tegn er nådd."
+
+msgid "IDS_COM_SK_YES"
+msgstr "Ja"
+
+msgid "IDS_COM_SK_NO"
+msgstr "Nei"
 
 msgid "IDS_MUSIC_OPT_DELETE"
 msgstr "Slett"
@@ -385,6 +460,57 @@ msgstr "SLETT"
 msgid "IDS_TPLATFORM_MBODY_STORAGE_LOCATION"
 msgstr "Lagringssted"
 
+msgid "IDS_COM_BODY_DATE"
+msgstr "Dato"
+
 msgid "IDS_GALLERY_HEADER_SELECT_VIDEO"
 msgstr "Velg video"
+
+msgid "IDS_COM_OPT1_WI_FI_DIRECT"
+msgstr "Wi-Fi Direct"
+
+msgid "IDS_COM_POP_CONNECTION_ERROR"
+msgstr "Tilkoblingsfeil."
+
+msgid "IDS_COM_BODY_KB"
+msgstr "KB"
+
+msgid "IDS_COM_BODY_B"
+msgstr "B"
+
+msgid "IDS_COM_BODY_MB"
+msgstr "MB"
+
+msgid "IDS_COM_BODY_GB"
+msgstr "GB"
+
+msgid "IDS_COM_BODY_DOWNLOADED"
+msgstr "Nedlastet."
+
+msgid "IDS_COM_BODY_SYNCHRONIZE"
+msgstr "Synkroniser"
+
+msgid "IDS_COM_BODY_FONT"
+msgstr "Skrifttype"
+
+msgid "IDS_COM_POP_NONE"
+msgstr "Ingen"
+
+msgid "IDS_COM_OPT_HEADPHONES_ABB"
+msgstr "Hodetelefoner"
+
+msgid "IDS_COM_POP_YOU_CAN_USE_PS_1_MORE_TIME_START_NOW_Q"
+msgstr "Du kan bruke %s 1 gang til. Starte nå?"
+
+msgid "IDS_COM_POP_YOU_CAN_USE_PS_2_MORE_TIMES_START_NOW_Q"
+msgstr "Du kan bruke %s 2 ganger til. Starte nå?"
+
+msgid "IDS_COM_POP_PS_CURRENTLY_LOCKED_UNLOCK_Q"
+msgstr "%s er for tiden låst. Låse opp?"
+
+msgid "IDS_COM_POP_YOU_CANNOT_USE_PS_ANY_MORE_TIMES_GET_ANOTHER_LICENCE_Q"
+msgstr "Du kan ikke bruke %s flere ganger. Skaffe en annen lisens?"
+
+msgid "IDS_COM_POP_PS_IS_ABOUT_TO_EXPIRE_GET_ANOTHER_LICENCE_Q"
+msgstr "%s er i ferd med å utløpe. Skaffe en annen lisens?"
 

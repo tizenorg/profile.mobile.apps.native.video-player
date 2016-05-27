@@ -181,6 +181,30 @@ msgstr "Kicsi"
 msgid "IDS_VIDEO_TPOP_FILE_NAME_ALREADY_IN_USE"
 msgstr "Ilyen fájlnév már van."
 
+msgid "IDS_COM_BODY_CLOSE"
+msgstr "Bezárás"
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Nincs hely több karakternek."
+
+msgid "IDS_COM_SK_STOP"
+msgstr "Leállít"
+
+msgid "IDS_COM_SK_OK"
+msgstr "OK"
+
+msgid "IDS_COM_BODY_OFF"
+msgstr "Ki"
+
+msgid "IDS_COM_SK_REFRESH"
+msgstr "Frissít"
+
+msgid "IDS_COM_BODY_LOCATION"
+msgstr "Hely"
+
+msgid "IDS_COM_POP_DELETED"
+msgstr "Törölve."
+
 msgid "IDS_GALLERY_OPT_REMOVE_FROM_PRIVATE"
 msgstr "Eltávolítás a Privátból"
 
@@ -286,6 +310,45 @@ msgstr "Átnevezés"
 msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
 msgstr "Fejhallgató"
 
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "Ismeretlen"
+
+msgid "IDS_COM_POP_ERROR"
+msgstr "Hiba"
+
+msgid "IDS_COM_BODY_BLUETOOTH"
+msgstr "Bluetooth"
+
+msgid "IDS_COM_BODY_NFC"
+msgstr "NFC"
+
+msgid "IDS_COM_BODY_LOW_BATTERY"
+msgstr "Az akkumulátor lemerült."
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "Kapcsolódás sikertelen."
+
+msgid "IDS_COM_POP_FILE_NOT_EXIST"
+msgstr "A fájl nem létezik."
+
+msgid "IDS_COM_POP_YOU_CAN_USE_PS_1_MORE_TIME_GET_ANOTHER_LICENCE_Q"
+msgstr "A(z) %s még 1 alkalommal használható. Beszerez új licencet?"
+
+msgid "IDS_COM_HEADER_AUDIO_DEVICE_ABB"
+msgstr "Hangeszköz"
+
+msgid "IDS_COM_OPT_ADDED"
+msgstr "Hozzáadva."
+
+msgid "IDS_COM_BUTTON_SCAN"
+msgstr "Keresés"
+
+msgid "IDS_COM_BODY_UNABLE_TO_ADD"
+msgstr "Nem adható hozzá."
+
+msgid "IDS_COM_BODY_DEFAULT"
+msgstr "Alapértelmezett"
+
 msgid "IDS_VIDEO_BUTTON_DOWNLOAD"
 msgstr "Letöltés"
 
@@ -340,6 +403,12 @@ msgstr "Eszköz tárhelye"
 msgid "IDS_VIDEO_SBODY_SD_CARD"
 msgstr "SD-kártya"
 
+msgid "IDS_COM_BODY_MOVE"
+msgstr "Áthelyez"
+
+msgid "IDS_COM_BODY_ON"
+msgstr "Be"
+
 msgid "IDS_VIDEO_OPT_SHARE_VIA"
 msgstr "Megosztás"
 
@@ -354,6 +423,12 @@ msgstr "Feldolgozás folyamatban"
 
 msgid "IDS_MEMO_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
 msgstr "Elérte a karakterek maximális számát."
+
+msgid "IDS_COM_SK_YES"
+msgstr "Igen"
+
+msgid "IDS_COM_SK_NO"
+msgstr "Nem"
 
 msgid "IDS_MUSIC_OPT_DELETE"
 msgstr "Törlés"
@@ -385,6 +460,57 @@ msgstr "TÖRLÉS"
 msgid "IDS_TPLATFORM_MBODY_STORAGE_LOCATION"
 msgstr "Mentési hely"
 
+msgid "IDS_COM_BODY_DATE"
+msgstr "Dátum"
+
 msgid "IDS_GALLERY_HEADER_SELECT_VIDEO"
 msgstr "Videó kiválasztása"
+
+msgid "IDS_COM_OPT1_WI_FI_DIRECT"
+msgstr "Wi-Fi Direct"
+
+msgid "IDS_COM_POP_CONNECTION_ERROR"
+msgstr "Kapcsolódási hiba"
+
+msgid "IDS_COM_BODY_KB"
+msgstr "KB"
+
+msgid "IDS_COM_BODY_B"
+msgstr "B"
+
+msgid "IDS_COM_BODY_MB"
+msgstr "MB"
+
+msgid "IDS_COM_BODY_GB"
+msgstr "GB"
+
+msgid "IDS_COM_BODY_DOWNLOADED"
+msgstr "Letöltve."
+
+msgid "IDS_COM_BODY_SYNCHRONIZE"
+msgstr "Szinkronizálás"
+
+msgid "IDS_COM_BODY_FONT"
+msgstr "Betűtípus"
+
+msgid "IDS_COM_POP_NONE"
+msgstr "Nincs"
+
+msgid "IDS_COM_OPT_HEADPHONES_ABB"
+msgstr "Fejhallgató"
+
+msgid "IDS_COM_POP_YOU_CAN_USE_PS_1_MORE_TIME_START_NOW_Q"
+msgstr "A(z) %s még 1 alkalommal használható. Elindítja most?"
+
+msgid "IDS_COM_POP_YOU_CAN_USE_PS_2_MORE_TIMES_START_NOW_Q"
+msgstr "A(z) %s még 2 alkalommal használható. Elindítja most?"
+
+msgid "IDS_COM_POP_PS_CURRENTLY_LOCKED_UNLOCK_Q"
+msgstr "A(z) %s jelenleg blokkolva van. Feloldja?"
+
+msgid "IDS_COM_POP_YOU_CANNOT_USE_PS_ANY_MORE_TIMES_GET_ANOTHER_LICENCE_Q"
+msgstr "A(z) %s már nem használható. Beszerez új licencet?"
+
+msgid "IDS_COM_POP_PS_IS_ABOUT_TO_EXPIRE_GET_ANOTHER_LICENCE_Q"
+msgstr "A(z) %s hamarosan lejár. Beszerez új licencet?"
 

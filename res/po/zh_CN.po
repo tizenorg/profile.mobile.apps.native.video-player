@@ -181,6 +181,30 @@ msgstr "小"
 msgid "IDS_VIDEO_TPOP_FILE_NAME_ALREADY_IN_USE"
 msgstr "文件名已被使用"
 
+msgid "IDS_COM_BODY_CLOSE"
+msgstr "关闭"
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "已达到最大字符限制"
+
+msgid "IDS_COM_SK_STOP"
+msgstr "停止"
+
+msgid "IDS_COM_SK_OK"
+msgstr "确定"
+
+msgid "IDS_COM_BODY_OFF"
+msgstr "关"
+
+msgid "IDS_COM_SK_REFRESH"
+msgstr "刷新"
+
+msgid "IDS_COM_BODY_LOCATION"
+msgstr "位置"
+
+msgid "IDS_COM_POP_DELETED"
+msgstr "已删除"
+
 msgid "IDS_GALLERY_OPT_REMOVE_FROM_PRIVATE"
 msgstr "从私密模式移除"
 
@@ -286,6 +310,45 @@ msgstr "重命名"
 msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
 msgstr "耳机"
 
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "未知"
+
+msgid "IDS_COM_POP_ERROR"
+msgstr "出错"
+
+msgid "IDS_COM_BODY_BLUETOOTH"
+msgstr "蓝牙"
+
+msgid "IDS_COM_BODY_NFC"
+msgstr "NFC"
+
+msgid "IDS_COM_BODY_LOW_BATTERY"
+msgstr "电量不足。"
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "连接失败"
+
+msgid "IDS_COM_POP_FILE_NOT_EXIST"
+msgstr "此文件不存在"
+
+msgid "IDS_COM_POP_YOU_CAN_USE_PS_1_MORE_TIME_GET_ANOTHER_LICENCE_Q"
+msgstr "您还可使用%s 1 次。获取另一许可证？"
+
+msgid "IDS_COM_HEADER_AUDIO_DEVICE_ABB"
+msgstr "音频设备"
+
+msgid "IDS_COM_OPT_ADDED"
+msgstr "已添加"
+
+msgid "IDS_COM_BUTTON_SCAN"
+msgstr "扫描"
+
+msgid "IDS_COM_BODY_UNABLE_TO_ADD"
+msgstr "无法添加。"
+
+msgid "IDS_COM_BODY_DEFAULT"
+msgstr "默认"
+
 msgid "IDS_VIDEO_BUTTON_DOWNLOAD"
 msgstr "下载"
 
@@ -340,6 +403,12 @@ msgstr "设备存储"
 msgid "IDS_VIDEO_SBODY_SD_CARD"
 msgstr "SD 卡"
 
+msgid "IDS_COM_BODY_MOVE"
+msgstr "移动"
+
+msgid "IDS_COM_BODY_ON"
+msgstr "开"
+
 msgid "IDS_VIDEO_OPT_SHARE_VIA"
 msgstr "共享通过"
 
@@ -354,6 +423,12 @@ msgstr "处理中..."
 
 msgid "IDS_MEMO_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
 msgstr "已达到最大字符数"
+
+msgid "IDS_COM_SK_YES"
+msgstr "是"
+
+msgid "IDS_COM_SK_NO"
+msgstr "否"
 
 msgid "IDS_MUSIC_OPT_DELETE"
 msgstr "删除"
@@ -385,6 +460,57 @@ msgstr "删除"
 msgid "IDS_TPLATFORM_MBODY_STORAGE_LOCATION"
 msgstr "存储位置"
 
+msgid "IDS_COM_BODY_DATE"
+msgstr "日期"
+
 msgid "IDS_GALLERY_HEADER_SELECT_VIDEO"
 msgstr "选择视频"
+
+msgid "IDS_COM_OPT1_WI_FI_DIRECT"
+msgstr "Wi-Fi直连"
+
+msgid "IDS_COM_POP_CONNECTION_ERROR"
+msgstr "连接错误"
+
+msgid "IDS_COM_BODY_KB"
+msgstr "KB"
+
+msgid "IDS_COM_BODY_B"
+msgstr "B"
+
+msgid "IDS_COM_BODY_MB"
+msgstr "MB"
+
+msgid "IDS_COM_BODY_GB"
+msgstr "GB"
+
+msgid "IDS_COM_BODY_DOWNLOADED"
+msgstr "已下载"
+
+msgid "IDS_COM_BODY_SYNCHRONIZE"
+msgstr "同步"
+
+msgid "IDS_COM_BODY_FONT"
+msgstr "字体"
+
+msgid "IDS_COM_POP_NONE"
+msgstr "无"
+
+msgid "IDS_COM_OPT_HEADPHONES_ABB"
+msgstr "耳机"
+
+msgid "IDS_COM_POP_YOU_CAN_USE_PS_1_MORE_TIME_START_NOW_Q"
+msgstr "您还可使用%s 1 次。现在开始？"
+
+msgid "IDS_COM_POP_YOU_CAN_USE_PS_2_MORE_TIMES_START_NOW_Q"
+msgstr "您还可使用%s 2 次。现在开始？"
+
+msgid "IDS_COM_POP_PS_CURRENTLY_LOCKED_UNLOCK_Q"
+msgstr "%s当前已锁定。是否解锁？"
+
+msgid "IDS_COM_POP_YOU_CANNOT_USE_PS_ANY_MORE_TIMES_GET_ANOTHER_LICENCE_Q"
+msgstr "您无法再使用%s。获取另一许可证？"
+
+msgid "IDS_COM_POP_PS_IS_ABOUT_TO_EXPIRE_GET_ANOTHER_LICENCE_Q"
+msgstr "%s将过期。获取另一许可证？"
 

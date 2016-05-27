@@ -181,6 +181,30 @@ msgstr "Փոքր"
 msgid "IDS_VIDEO_TPOP_FILE_NAME_ALREADY_IN_USE"
 msgstr "Ֆայլի անունն արդեն գործածվում է"
 
+msgid "IDS_COM_BODY_CLOSE"
+msgstr "Փակել"
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Հասել եք նիշերի առավելագույն քանակին:"
+
+msgid "IDS_COM_SK_STOP"
+msgstr "Կանգնել"
+
+msgid "IDS_COM_SK_OK"
+msgstr "Ընդունել"
+
+msgid "IDS_COM_BODY_OFF"
+msgstr "Անջատված է"
+
+msgid "IDS_COM_SK_REFRESH"
+msgstr "Թարմացնել"
+
+msgid "IDS_COM_BODY_LOCATION"
+msgstr "Գտնվելու վայր"
+
+msgid "IDS_COM_POP_DELETED"
+msgstr "Ջնջված է:"
+
 msgid "IDS_GALLERY_OPT_REMOVE_FROM_PRIVATE"
 msgstr "Հեռացնել Գաղտնիից"
 
@@ -286,6 +310,45 @@ msgstr "Վերանվանել"
 msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
 msgstr "Գլխ. հեռախոսներ"
 
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "Անհայտ"
+
+msgid "IDS_COM_POP_ERROR"
+msgstr "Սխալ:"
+
+msgid "IDS_COM_BODY_BLUETOOTH"
+msgstr "Bluetooth"
+
+msgid "IDS_COM_BODY_NFC"
+msgstr "NFC"
+
+msgid "IDS_COM_BODY_LOW_BATTERY"
+msgstr "Մարտկոցի լիցքը թույլ է:"
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "Միացումը ձախողվեց:"
+
+msgid "IDS_COM_POP_FILE_NOT_EXIST"
+msgstr "Այս ֆայլը գոյություն չունի:"
+
+msgid "IDS_COM_POP_YOU_CAN_USE_PS_1_MORE_TIME_GET_ANOTHER_LICENCE_Q"
+msgstr "Կարող եք օգտագործել %s ևս 1 անգամ. ստանա՞լ այլ արտոնագիր:"
+
+msgid "IDS_COM_HEADER_AUDIO_DEVICE_ABB"
+msgstr "Ձայնային սարք"
+
+msgid "IDS_COM_OPT_ADDED"
+msgstr "Ավելացված է:"
+
+msgid "IDS_COM_BUTTON_SCAN"
+msgstr "Զննել"
+
+msgid "IDS_COM_BODY_UNABLE_TO_ADD"
+msgstr "Անհնար է ավելացնել:"
+
+msgid "IDS_COM_BODY_DEFAULT"
+msgstr "Լռելյայն"
+
 msgid "IDS_VIDEO_BUTTON_DOWNLOAD"
 msgstr "Ներլցնել"
 
@@ -340,6 +403,12 @@ msgstr "Սարքի պահոց"
 msgid "IDS_VIDEO_SBODY_SD_CARD"
 msgstr "SD քարտ"
 
+msgid "IDS_COM_BODY_MOVE"
+msgstr "Տեղափոխել"
+
+msgid "IDS_COM_BODY_ON"
+msgstr "Միացված է"
+
 msgid "IDS_VIDEO_OPT_SHARE_VIA"
 msgstr "Համօգտ. հետևյալով՝"
 
@@ -354,6 +423,12 @@ msgstr "Ընթացքում է"
 
 msgid "IDS_MEMO_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
 msgstr "Հասել է նիշերի առավելագույն քանակին:"
+
+msgid "IDS_COM_SK_YES"
+msgstr "Այո"
+
+msgid "IDS_COM_SK_NO"
+msgstr "Ոչ"
 
 msgid "IDS_MUSIC_OPT_DELETE"
 msgstr "Վերացնել"
@@ -385,6 +460,57 @@ msgstr "ՎԵՐԱՑՆԵԼ"
 msgid "IDS_TPLATFORM_MBODY_STORAGE_LOCATION"
 msgstr "Պահման տեղը"
 
+msgid "IDS_COM_BODY_DATE"
+msgstr "Ամսաթիվ"
+
 msgid "IDS_GALLERY_HEADER_SELECT_VIDEO"
 msgstr "Ընտրել տեսանյութը"
+
+msgid "IDS_COM_OPT1_WI_FI_DIRECT"
+msgstr "Wi-Fi Direct"
+
+msgid "IDS_COM_POP_CONNECTION_ERROR"
+msgstr "Միացման սխալ:"
+
+msgid "IDS_COM_BODY_KB"
+msgstr "ԿԲ"
+
+msgid "IDS_COM_BODY_B"
+msgstr "Բ"
+
+msgid "IDS_COM_BODY_MB"
+msgstr "ՄԲ"
+
+msgid "IDS_COM_BODY_GB"
+msgstr "ԳԲ"
+
+msgid "IDS_COM_BODY_DOWNLOADED"
+msgstr "Բեռնված է:"
+
+msgid "IDS_COM_BODY_SYNCHRONIZE"
+msgstr "Սինխրոնացնլ"
+
+msgid "IDS_COM_BODY_FONT"
+msgstr "Տառատեսակ"
+
+msgid "IDS_COM_POP_NONE"
+msgstr "Չկա"
+
+msgid "IDS_COM_OPT_HEADPHONES_ABB"
+msgstr "Գլխ. հեռախոսներ"
+
+msgid "IDS_COM_POP_YOU_CAN_USE_PS_1_MORE_TIME_START_NOW_Q"
+msgstr "Կարող եք օգտագործել %s ևս 1 անգամ. սկսե՞լ հիմա:"
+
+msgid "IDS_COM_POP_YOU_CAN_USE_PS_2_MORE_TIMES_START_NOW_Q"
+msgstr "Կարող եք օգտագործել %s ևս 2 անգամ. սկսե՞լ հիմա:"
+
+msgid "IDS_COM_POP_PS_CURRENTLY_LOCKED_UNLOCK_Q"
+msgstr "%s ներկայումս կողպված է: Բացե՞լ:"
+
+msgid "IDS_COM_POP_YOU_CANNOT_USE_PS_ANY_MORE_TIMES_GET_ANOTHER_LICENCE_Q"
+msgstr "Այլևս չեք կարող եք օգտագործել %s. ստանա՞լ այլ արտոնագիր:"
+
+msgid "IDS_COM_POP_PS_IS_ABOUT_TO_EXPIRE_GET_ANOTHER_LICENCE_Q"
+msgstr "%s-ի ժամկետն ավարտվում է. ստանա՞լ այլ արտոնագիր:"
 

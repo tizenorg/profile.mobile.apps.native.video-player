@@ -181,6 +181,30 @@ msgstr "صغير"
 msgid "IDS_VIDEO_TPOP_FILE_NAME_ALREADY_IN_USE"
 msgstr "اسم الملف مستخدم بالفعل"
 
+msgid "IDS_COM_BODY_CLOSE"
+msgstr "إغلاق"
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "تم الوصول إلى أقصى عدد من الحروف."
+
+msgid "IDS_COM_SK_STOP"
+msgstr "إيقاف"
+
+msgid "IDS_COM_SK_OK"
+msgstr "موافق"
+
+msgid "IDS_COM_BODY_OFF"
+msgstr "غير مفعل"
+
+msgid "IDS_COM_SK_REFRESH"
+msgstr "إنعاش"
+
+msgid "IDS_COM_BODY_LOCATION"
+msgstr "الموقع"
+
+msgid "IDS_COM_POP_DELETED"
+msgstr "تم الحذف."
+
 msgid "IDS_GALLERY_OPT_REMOVE_FROM_PRIVATE"
 msgstr "إزالة من الخاص"
 
@@ -286,6 +310,45 @@ msgstr "إعادة تسمية"
 msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
 msgstr "سماعات رأس"
 
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "غير معروف"
+
+msgid "IDS_COM_POP_ERROR"
+msgstr "خطأ"
+
+msgid "IDS_COM_BODY_BLUETOOTH"
+msgstr "البلوتوث"
+
+msgid "IDS_COM_BODY_NFC"
+msgstr "NFC"
+
+msgid "IDS_COM_BODY_LOW_BATTERY"
+msgstr "البطارية ضعيفة."
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "فشل التوصيل."
+
+msgid "IDS_COM_POP_FILE_NOT_EXIST"
+msgstr "هذا الملف غير موجود."
+
+msgid "IDS_COM_POP_YOU_CAN_USE_PS_1_MORE_TIME_GET_ANOTHER_LICENCE_Q"
+msgstr "يمكنك استخدام %s أكثر من مرة واحدة. هل تريد الحصول على ترخيص آخر؟"
+
+msgid "IDS_COM_HEADER_AUDIO_DEVICE_ABB"
+msgstr "جهاز صوت"
+
+msgid "IDS_COM_OPT_ADDED"
+msgstr "تمت الإضافة."
+
+msgid "IDS_COM_BUTTON_SCAN"
+msgstr "بحث"
+
+msgid "IDS_COM_BODY_UNABLE_TO_ADD"
+msgstr "تتعذر الإضافة."
+
+msgid "IDS_COM_BODY_DEFAULT"
+msgstr "إفتراضي"
+
 msgid "IDS_VIDEO_BUTTON_DOWNLOAD"
 msgstr "تنزيل"
 
@@ -340,6 +403,12 @@ msgstr "وحدة تخزين الجهاز"
 msgid "IDS_VIDEO_SBODY_SD_CARD"
 msgstr "بطاقة SD"
 
+msgid "IDS_COM_BODY_MOVE"
+msgstr "نقل"
+
+msgid "IDS_COM_BODY_ON"
+msgstr "مفعل"
+
 msgid "IDS_VIDEO_OPT_SHARE_VIA"
 msgstr "مشاركة عبر"
 
@@ -354,6 +423,12 @@ msgstr "جاري المعالجة..."
 
 msgid "IDS_MEMO_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
 msgstr "تم بلوغ الحد الأقصى لعدد الأحرف."
+
+msgid "IDS_COM_SK_YES"
+msgstr "نعم"
+
+msgid "IDS_COM_SK_NO"
+msgstr "لا"
 
 msgid "IDS_MUSIC_OPT_DELETE"
 msgstr "حذف"
@@ -385,6 +460,57 @@ msgstr "حذف"
 msgid "IDS_TPLATFORM_MBODY_STORAGE_LOCATION"
 msgstr "موقع التخزين"
 
+msgid "IDS_COM_BODY_DATE"
+msgstr "التاريخ"
+
 msgid "IDS_GALLERY_HEADER_SELECT_VIDEO"
 msgstr "تحديد الفيديو"
+
+msgid "IDS_COM_OPT1_WI_FI_DIRECT"
+msgstr "Wi-Fi مباشر"
+
+msgid "IDS_COM_POP_CONNECTION_ERROR"
+msgstr "حدث خطأ اتصال."
+
+msgid "IDS_COM_BODY_KB"
+msgstr "ك.ب"
+
+msgid "IDS_COM_BODY_B"
+msgstr "ب."
+
+msgid "IDS_COM_BODY_MB"
+msgstr "م.ب"
+
+msgid "IDS_COM_BODY_GB"
+msgstr "ج.ب"
+
+msgid "IDS_COM_BODY_DOWNLOADED"
+msgstr "تم التنزيل."
+
+msgid "IDS_COM_BODY_SYNCHRONIZE"
+msgstr "تزامن"
+
+msgid "IDS_COM_BODY_FONT"
+msgstr "الخط"
+
+msgid "IDS_COM_POP_NONE"
+msgstr "لاشيء"
+
+msgid "IDS_COM_OPT_HEADPHONES_ABB"
+msgstr "سماعات رأس"
+
+msgid "IDS_COM_POP_YOU_CAN_USE_PS_1_MORE_TIME_START_NOW_Q"
+msgstr "يمكنك استخدام %s مرة أخرى. هل تريد البدء الآن؟"
+
+msgid "IDS_COM_POP_YOU_CAN_USE_PS_2_MORE_TIMES_START_NOW_Q"
+msgstr "يمكنك استخدام %s مرتين آخرتين. هل تريد البدء الآن؟"
+
+msgid "IDS_COM_POP_PS_CURRENTLY_LOCKED_UNLOCK_Q"
+msgstr "تم حظر %s في الوقت الحالي. هل تريد إلغاء الحظر؟"
+
+msgid "IDS_COM_POP_YOU_CANNOT_USE_PS_ANY_MORE_TIMES_GET_ANOTHER_LICENCE_Q"
+msgstr "لا يمكنك استخدام %s لمرات أكثر من ذلك. هل تريد الحصول على ترخيص آخر؟"
+
+msgid "IDS_COM_POP_PS_IS_ABOUT_TO_EXPIRE_GET_ANOTHER_LICENCE_Q"
+msgstr "لقد أوشكت صلاحية %s على الانتهاء. هل تريد الحصول على ترخيص آخر؟"
 

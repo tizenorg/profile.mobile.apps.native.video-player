@@ -181,6 +181,30 @@ msgstr "Beag"
 msgid "IDS_VIDEO_TPOP_FILE_NAME_ALREADY_IN_USE"
 msgstr "Comhadainm in úsáid cheana."
 
+msgid "IDS_COM_BODY_CLOSE"
+msgstr "Dún"
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Uaslíon na gcarachtar bainte amach."
+
+msgid "IDS_COM_SK_STOP"
+msgstr "Stop"
+
+msgid "IDS_COM_SK_OK"
+msgstr "OK"
+
+msgid "IDS_COM_BODY_OFF"
+msgstr "As"
+
+msgid "IDS_COM_SK_REFRESH"
+msgstr "Athnuaigh"
+
+msgid "IDS_COM_BODY_LOCATION"
+msgstr "Suíomh"
+
+msgid "IDS_COM_POP_DELETED"
+msgstr "Scriosta."
+
 msgid "IDS_GALLERY_OPT_REMOVE_FROM_PRIVATE"
 msgstr "Bain ó Phríobháideach"
 
@@ -286,6 +310,45 @@ msgstr "Athainmnigh"
 msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
 msgstr "Cluasáin"
 
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "Anaithnid"
+
+msgid "IDS_COM_POP_ERROR"
+msgstr "Earráid."
+
+msgid "IDS_COM_BODY_BLUETOOTH"
+msgstr "Bluetooth"
+
+msgid "IDS_COM_BODY_NFC"
+msgstr "NFC"
+
+msgid "IDS_COM_BODY_LOW_BATTERY"
+msgstr "Ceallra lag."
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "Theip ar nascadh."
+
+msgid "IDS_COM_POP_FILE_NOT_EXIST"
+msgstr "Níl an comhad seo ann"
+
+msgid "IDS_COM_POP_YOU_CAN_USE_PS_1_MORE_TIME_GET_ANOTHER_LICENCE_Q"
+msgstr "Is féidir leat %s a úsáid uair amháin eile. Faigh ceadúnas eile?"
+
+msgid "IDS_COM_HEADER_AUDIO_DEVICE_ABB"
+msgstr "Gléas fuaime"
+
+msgid "IDS_COM_OPT_ADDED"
+msgstr "Curtha leis."
+
+msgid "IDS_COM_BUTTON_SCAN"
+msgstr "Scan"
+
+msgid "IDS_COM_BODY_UNABLE_TO_ADD"
+msgstr "Ní féidir cur leis."
+
+msgid "IDS_COM_BODY_DEFAULT"
+msgstr "Réamhshocrú"
+
 msgid "IDS_VIDEO_BUTTON_DOWNLOAD"
 msgstr "Íoslódáil"
 
@@ -340,6 +403,12 @@ msgstr "Stóras gléis"
 msgid "IDS_VIDEO_SBODY_SD_CARD"
 msgstr "Cárta SD"
 
+msgid "IDS_COM_BODY_MOVE"
+msgstr "Bog"
+
+msgid "IDS_COM_BODY_ON"
+msgstr "Air"
+
 msgid "IDS_VIDEO_OPT_SHARE_VIA"
 msgstr "Comhroinn le"
 
@@ -354,6 +423,12 @@ msgstr "Ag próiseáil..."
 
 msgid "IDS_MEMO_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
 msgstr "Uaslíon na gcarachtar bainte amach."
+
+msgid "IDS_COM_SK_YES"
+msgstr "Déan é"
+
+msgid "IDS_COM_SK_NO"
+msgstr "Ná déan é"
 
 msgid "IDS_MUSIC_OPT_DELETE"
 msgstr "Scrios"
@@ -385,6 +460,57 @@ msgstr "SCRIOS"
 msgid "IDS_TPLATFORM_MBODY_STORAGE_LOCATION"
 msgstr "Suíomh stórais"
 
+msgid "IDS_COM_BODY_DATE"
+msgstr "Dáta"
+
 msgid "IDS_GALLERY_HEADER_SELECT_VIDEO"
 msgstr "Roghnaigh físeán"
+
+msgid "IDS_COM_OPT1_WI_FI_DIRECT"
+msgstr "Wi-Fi Direct"
+
+msgid "IDS_COM_POP_CONNECTION_ERROR"
+msgstr "Earráid le nasc."
+
+msgid "IDS_COM_BODY_KB"
+msgstr "KB"
+
+msgid "IDS_COM_BODY_B"
+msgstr "B"
+
+msgid "IDS_COM_BODY_MB"
+msgstr "MB"
+
+msgid "IDS_COM_BODY_GB"
+msgstr "GB"
+
+msgid "IDS_COM_BODY_DOWNLOADED"
+msgstr "Íoslódáilte."
+
+msgid "IDS_COM_BODY_SYNCHRONIZE"
+msgstr "Sioncronaigh"
+
+msgid "IDS_COM_BODY_FONT"
+msgstr "Cló"
+
+msgid "IDS_COM_POP_NONE"
+msgstr "Dada"
+
+msgid "IDS_COM_OPT_HEADPHONES_ABB"
+msgstr "Cluasáin"
+
+msgid "IDS_COM_POP_YOU_CAN_USE_PS_1_MORE_TIME_START_NOW_Q"
+msgstr "Is féidir leat %s a úsáid uair amháin eile. Tosaigh anois?"
+
+msgid "IDS_COM_POP_YOU_CAN_USE_PS_2_MORE_TIMES_START_NOW_Q"
+msgstr "Is féidir leat %s a úsáid 2 uaire eile. Tosaigh anois?"
+
+msgid "IDS_COM_POP_PS_CURRENTLY_LOCKED_UNLOCK_Q"
+msgstr "Tá %s glasáilte faoi láthair. Díghlasáil?"
+
+msgid "IDS_COM_POP_YOU_CANNOT_USE_PS_ANY_MORE_TIMES_GET_ANOTHER_LICENCE_Q"
+msgstr "Ní féidir leat %s a úsáid arís. Faigh ceadúnas eile?"
+
+msgid "IDS_COM_POP_PS_IS_ABOUT_TO_EXPIRE_GET_ANOTHER_LICENCE_Q"
+msgstr "Tá %s ar tí dul as feidhm. Faigh ceadúnas eile?"
 

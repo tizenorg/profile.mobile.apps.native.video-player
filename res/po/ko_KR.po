@@ -181,6 +181,30 @@ msgstr "작게"
 msgid "IDS_VIDEO_TPOP_FILE_NAME_ALREADY_IN_USE"
 msgstr "사용 중인 파일 이름입니다."
 
+msgid "IDS_COM_BODY_CLOSE"
+msgstr "종료"
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "최대 글자 수에 도달하였습니다."
+
+msgid "IDS_COM_SK_STOP"
+msgstr "중지"
+
+msgid "IDS_COM_SK_OK"
+msgstr "확인"
+
+msgid "IDS_COM_BODY_OFF"
+msgstr "해제"
+
+msgid "IDS_COM_SK_REFRESH"
+msgstr "새로고침"
+
+msgid "IDS_COM_BODY_LOCATION"
+msgstr "위치"
+
+msgid "IDS_COM_POP_DELETED"
+msgstr "삭제하였습니다."
+
 msgid "IDS_GALLERY_OPT_REMOVE_FROM_PRIVATE"
 msgstr "프라이빗에서 제거"
 
@@ -286,6 +310,45 @@ msgstr "이름 변경"
 msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
 msgstr "헤드폰"
 
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "알 수 없음"
+
+msgid "IDS_COM_POP_ERROR"
+msgstr "오류가 발생하였습니다."
+
+msgid "IDS_COM_BODY_BLUETOOTH"
+msgstr "블루투스"
+
+msgid "IDS_COM_BODY_NFC"
+msgstr "NFC"
+
+msgid "IDS_COM_BODY_LOW_BATTERY"
+msgstr "배터리가 부족합니다."
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "연결하지 못하였습니다."
+
+msgid "IDS_COM_POP_FILE_NOT_EXIST"
+msgstr "파일이 존재하지 않습니다."
+
+msgid "IDS_COM_POP_YOU_CAN_USE_PS_1_MORE_TIME_GET_ANOTHER_LICENCE_Q"
+msgstr "%s을(를) 한 번 더 사용할 수 있습니다. 다른 라이선스를 가져올까요?"
+
+msgid "IDS_COM_HEADER_AUDIO_DEVICE_ABB"
+msgstr "오디오 디바이스"
+
+msgid "IDS_COM_OPT_ADDED"
+msgstr "추가하였습니다."
+
+msgid "IDS_COM_BUTTON_SCAN"
+msgstr "찾기"
+
+msgid "IDS_COM_BODY_UNABLE_TO_ADD"
+msgstr "추가할 수 없습니다."
+
+msgid "IDS_COM_BODY_DEFAULT"
+msgstr "기본"
+
 msgid "IDS_VIDEO_BUTTON_DOWNLOAD"
 msgstr "다운로드"
 
@@ -340,6 +403,12 @@ msgstr "디바이스 저장공간"
 msgid "IDS_VIDEO_SBODY_SD_CARD"
 msgstr "SD 카드"
 
+msgid "IDS_COM_BODY_MOVE"
+msgstr "이동"
+
+msgid "IDS_COM_BODY_ON"
+msgstr "사용"
+
 msgid "IDS_VIDEO_OPT_SHARE_VIA"
 msgstr "공유"
 
@@ -354,6 +423,12 @@ msgstr "진행 중..."
 
 msgid "IDS_MEMO_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
 msgstr "최대 글자 수에 도달하였습니다."
+
+msgid "IDS_COM_SK_YES"
+msgstr "예"
+
+msgid "IDS_COM_SK_NO"
+msgstr "아니요"
 
 msgid "IDS_MUSIC_OPT_DELETE"
 msgstr "삭제"
@@ -385,6 +460,57 @@ msgstr "삭제"
 msgid "IDS_TPLATFORM_MBODY_STORAGE_LOCATION"
 msgstr "저장 위치"
 
+msgid "IDS_COM_BODY_DATE"
+msgstr "날짜"
+
 msgid "IDS_GALLERY_HEADER_SELECT_VIDEO"
 msgstr "동영상 선택"
+
+msgid "IDS_COM_OPT1_WI_FI_DIRECT"
+msgstr "Wi-Fi 다이렉트"
+
+msgid "IDS_COM_POP_CONNECTION_ERROR"
+msgstr "연결 오류가 발생하였습니다."
+
+msgid "IDS_COM_BODY_KB"
+msgstr "KB"
+
+msgid "IDS_COM_BODY_B"
+msgstr "B"
+
+msgid "IDS_COM_BODY_MB"
+msgstr "MB"
+
+msgid "IDS_COM_BODY_GB"
+msgstr "GB"
+
+msgid "IDS_COM_BODY_DOWNLOADED"
+msgstr "다운로드하였습니다."
+
+msgid "IDS_COM_BODY_SYNCHRONIZE"
+msgstr "동기화"
+
+msgid "IDS_COM_BODY_FONT"
+msgstr "글꼴"
+
+msgid "IDS_COM_POP_NONE"
+msgstr "설정 안 함"
+
+msgid "IDS_COM_OPT_HEADPHONES_ABB"
+msgstr "헤드폰"
+
+msgid "IDS_COM_POP_YOU_CAN_USE_PS_1_MORE_TIME_START_NOW_Q"
+msgstr "%s을(를) 한 번 더 사용할 수 있습니다. 지금 시작할까요?"
+
+msgid "IDS_COM_POP_YOU_CAN_USE_PS_2_MORE_TIMES_START_NOW_Q"
+msgstr "%s을(를) 두 번 더 사용할 수 있습니다. 지금 시작할까요?"
+
+msgid "IDS_COM_POP_PS_CURRENTLY_LOCKED_UNLOCK_Q"
+msgstr "%s은(는) 현재 잠겨 있습니다. 잠금을 해제할까요?"
+
+msgid "IDS_COM_POP_YOU_CANNOT_USE_PS_ANY_MORE_TIMES_GET_ANOTHER_LICENCE_Q"
+msgstr "%s을(를) 더 이상 사용할 수 없습니다. 다른 라이선스를 가져올까요?"
+
+msgid "IDS_COM_POP_PS_IS_ABOUT_TO_EXPIRE_GET_ANOTHER_LICENCE_Q"
+msgstr "%s 파일이 곧 만료됩니다. 다른 라이선스를 가져올까요?"
 

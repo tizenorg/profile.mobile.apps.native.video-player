@@ -181,6 +181,30 @@ msgstr "छोटा"
 msgid "IDS_VIDEO_TPOP_FILE_NAME_ALREADY_IN_USE"
 msgstr "फाइल नाम पहले से ही उपयोग में है।"
 
+msgid "IDS_COM_BODY_CLOSE"
+msgstr "बंद करें"
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "वर्णो की संख्‍या अधिकतम पहुँची।"
+
+msgid "IDS_COM_SK_STOP"
+msgstr "रोकें"
+
+msgid "IDS_COM_SK_OK"
+msgstr "ओके"
+
+msgid "IDS_COM_BODY_OFF"
+msgstr "बंद"
+
+msgid "IDS_COM_SK_REFRESH"
+msgstr "रीफ्रेश"
+
+msgid "IDS_COM_BODY_LOCATION"
+msgstr "स्थान"
+
+msgid "IDS_COM_POP_DELETED"
+msgstr "हटाया।"
+
 msgid "IDS_GALLERY_OPT_REMOVE_FROM_PRIVATE"
 msgstr "निजी से निकालें"
 
@@ -286,6 +310,45 @@ msgstr "नाम बदलें"
 msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
 msgstr "हेडफोन्‍स"
 
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "अज्ञात"
+
+msgid "IDS_COM_POP_ERROR"
+msgstr "त्रुटि।"
+
+msgid "IDS_COM_BODY_BLUETOOTH"
+msgstr "ब्लूटूथ"
+
+msgid "IDS_COM_BODY_NFC"
+msgstr "NFC"
+
+msgid "IDS_COM_BODY_LOW_BATTERY"
+msgstr "बैटरी कम है।"
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "कनेक्शन विफल।"
+
+msgid "IDS_COM_POP_FILE_NOT_EXIST"
+msgstr "यह फाइल मौजूद नहीं है।"
+
+msgid "IDS_COM_POP_YOU_CAN_USE_PS_1_MORE_TIME_GET_ANOTHER_LICENCE_Q"
+msgstr "आप %s का उपयोग 1 बार और कर सकते हैं। लाइसेंस प्राप्त करें?"
+
+msgid "IDS_COM_HEADER_AUDIO_DEVICE_ABB"
+msgstr "ऑडियो डिवाइस"
+
+msgid "IDS_COM_OPT_ADDED"
+msgstr "जोड़ा गया।"
+
+msgid "IDS_COM_BUTTON_SCAN"
+msgstr "स्‍कैन करें"
+
+msgid "IDS_COM_BODY_UNABLE_TO_ADD"
+msgstr "जोड़ने में असमर्थ।"
+
+msgid "IDS_COM_BODY_DEFAULT"
+msgstr "डिफॉल्ट"
+
 msgid "IDS_VIDEO_BUTTON_DOWNLOAD"
 msgstr "डाउनलोड करें"
 
@@ -340,6 +403,12 @@ msgstr "डिवाइस स्टोरेज"
 msgid "IDS_VIDEO_SBODY_SD_CARD"
 msgstr "SD कार्ड"
 
+msgid "IDS_COM_BODY_MOVE"
+msgstr "ले जाएँ"
+
+msgid "IDS_COM_BODY_ON"
+msgstr "चालू"
+
 msgid "IDS_VIDEO_OPT_SHARE_VIA"
 msgstr "इसके द्वारा साझा करें"
 
@@ -354,6 +423,12 @@ msgstr "प्रक्रिया हो रही है..."
 
 msgid "IDS_MEMO_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
 msgstr "वर्णों की अधिकतम संख्या पूरी हो गई।"
+
+msgid "IDS_COM_SK_YES"
+msgstr "हाँ"
+
+msgid "IDS_COM_SK_NO"
+msgstr "नहीं"
 
 msgid "IDS_MUSIC_OPT_DELETE"
 msgstr "हटाएँ"
@@ -385,6 +460,57 @@ msgstr "हटाएँ"
 msgid "IDS_TPLATFORM_MBODY_STORAGE_LOCATION"
 msgstr "संग्रहण स्‍थान"
 
+msgid "IDS_COM_BODY_DATE"
+msgstr "तिथि"
+
 msgid "IDS_GALLERY_HEADER_SELECT_VIDEO"
 msgstr "वीडियो चुनें"
+
+msgid "IDS_COM_OPT1_WI_FI_DIRECT"
+msgstr "Wi-Fi Direct"
+
+msgid "IDS_COM_POP_CONNECTION_ERROR"
+msgstr "कनेक्‍शन त्रुटी।"
+
+msgid "IDS_COM_BODY_KB"
+msgstr "KB"
+
+msgid "IDS_COM_BODY_B"
+msgstr "B"
+
+msgid "IDS_COM_BODY_MB"
+msgstr "MB"
+
+msgid "IDS_COM_BODY_GB"
+msgstr "GB"
+
+msgid "IDS_COM_BODY_DOWNLOADED"
+msgstr "डाउनलोड हुआ।"
+
+msgid "IDS_COM_BODY_SYNCHRONIZE"
+msgstr "सिंक्रोनाइज"
+
+msgid "IDS_COM_BODY_FONT"
+msgstr "फॉन्ट"
+
+msgid "IDS_COM_POP_NONE"
+msgstr "कुछ नहीं"
+
+msgid "IDS_COM_OPT_HEADPHONES_ABB"
+msgstr "हेडफोन्‍स"
+
+msgid "IDS_COM_POP_YOU_CAN_USE_PS_1_MORE_TIME_START_NOW_Q"
+msgstr "आप %s का उपयोग 1 बार और कर सकते हैं। अभी प्रारंभ करें?"
+
+msgid "IDS_COM_POP_YOU_CAN_USE_PS_2_MORE_TIMES_START_NOW_Q"
+msgstr "आप %s का उपयोग 2 बार और कर सकते हैं। अभी प्रारंभ करें?"
+
+msgid "IDS_COM_POP_PS_CURRENTLY_LOCKED_UNLOCK_Q"
+msgstr "%s वर्तमान में लॉक किया गया। अनलॉक करें?"
+
+msgid "IDS_COM_POP_YOU_CANNOT_USE_PS_ANY_MORE_TIMES_GET_ANOTHER_LICENCE_Q"
+msgstr "आप %s का उपयोग इसके बाद नहीं कर सकते हैं। लाइसेंस प्राप्त करें?"
+
+msgid "IDS_COM_POP_PS_IS_ABOUT_TO_EXPIRE_GET_ANOTHER_LICENCE_Q"
+msgstr "%s समाप्त होने वाला है। लाइसेंस प्राप्त करें?"
 

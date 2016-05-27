@@ -181,6 +181,30 @@ msgstr "Kichik"
 msgid "IDS_VIDEO_TPOP_FILE_NAME_ALREADY_IN_USE"
 msgstr "Fayl nomi avvaldan foydalanilmoqda"
 
+msgid "IDS_COM_BODY_CLOSE"
+msgstr "Yopish"
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Belgilar soni ruxsat etilgan maksimal miqdorga yetdi."
+
+msgid "IDS_COM_SK_STOP"
+msgstr "To‘xtatish"
+
+msgid "IDS_COM_SK_OK"
+msgstr "OK"
+
+msgid "IDS_COM_BODY_OFF"
+msgstr "O‘ch."
+
+msgid "IDS_COM_SK_REFRESH"
+msgstr "Yangilash"
+
+msgid "IDS_COM_BODY_LOCATION"
+msgstr "Joylashuv"
+
+msgid "IDS_COM_POP_DELETED"
+msgstr "O'chirildi."
+
 msgid "IDS_GALLERY_OPT_REMOVE_FROM_PRIVATE"
 msgstr "Maxfiydan olib tashlash"
 
@@ -286,6 +310,45 @@ msgstr "Nom o‘zgartirish"
 msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
 msgstr "Quloqliklar"
 
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "Noma’lum"
+
+msgid "IDS_COM_POP_ERROR"
+msgstr "Xato"
+
+msgid "IDS_COM_BODY_BLUETOOTH"
+msgstr "Bluetooth"
+
+msgid "IDS_COM_BODY_NFC"
+msgstr "NFC"
+
+msgid "IDS_COM_BODY_LOW_BATTERY"
+msgstr "Batareya quvvati kam."
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "Ulanib bo‘lmadi."
+
+msgid "IDS_COM_POP_FILE_NOT_EXIST"
+msgstr "Ushbu fayl mavjud emas."
+
+msgid "IDS_COM_POP_YOU_CAN_USE_PS_1_MORE_TIME_GET_ANOTHER_LICENCE_Q"
+msgstr "%sni yana 1 marta ishlatishingiz mumkin. Boshqa litsenziya olinsinmi?"
+
+msgid "IDS_COM_HEADER_AUDIO_DEVICE_ABB"
+msgstr "Audio qurilma"
+
+msgid "IDS_COM_OPT_ADDED"
+msgstr "Qo‘shildi."
+
+msgid "IDS_COM_BUTTON_SCAN"
+msgstr "Qidirish"
+
+msgid "IDS_COM_BODY_UNABLE_TO_ADD"
+msgstr "Qo‘shib bo‘lmaydi."
+
+msgid "IDS_COM_BODY_DEFAULT"
+msgstr "Birlamchi"
+
 msgid "IDS_VIDEO_BUTTON_DOWNLOAD"
 msgstr "Yuklab olish"
 
@@ -340,6 +403,12 @@ msgstr "Qurilma xotirasi"
 msgid "IDS_VIDEO_SBODY_SD_CARD"
 msgstr "SD-karta"
 
+msgid "IDS_COM_BODY_MOVE"
+msgstr "Ko‘chirish"
+
+msgid "IDS_COM_BODY_ON"
+msgstr "Yoq."
+
 msgid "IDS_VIDEO_OPT_SHARE_VIA"
 msgstr "Quyidagi orqali ulashish"
 
@@ -354,6 +423,12 @@ msgstr "Bajarilmoqda..."
 
 msgid "IDS_MEMO_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
 msgstr "Belgilar soni maksimal miqdorga yetdi."
+
+msgid "IDS_COM_SK_YES"
+msgstr "Ha"
+
+msgid "IDS_COM_SK_NO"
+msgstr "Yo‘q"
 
 msgid "IDS_MUSIC_OPT_DELETE"
 msgstr "Yo‘q qilish"
@@ -385,6 +460,57 @@ msgstr "O‘CHIRISH"
 msgid "IDS_TPLATFORM_MBODY_STORAGE_LOCATION"
 msgstr "Xotira joylashuvi"
 
+msgid "IDS_COM_BODY_DATE"
+msgstr "Sana"
+
 msgid "IDS_GALLERY_HEADER_SELECT_VIDEO"
 msgstr "Videoi tanlash"
+
+msgid "IDS_COM_OPT1_WI_FI_DIRECT"
+msgstr "Wi-Fi Direct"
+
+msgid "IDS_COM_POP_CONNECTION_ERROR"
+msgstr "Ulanish xatosi."
+
+msgid "IDS_COM_BODY_KB"
+msgstr "KB"
+
+msgid "IDS_COM_BODY_B"
+msgstr "B"
+
+msgid "IDS_COM_BODY_MB"
+msgstr "Mb"
+
+msgid "IDS_COM_BODY_GB"
+msgstr "Gb"
+
+msgid "IDS_COM_BODY_DOWNLOADED"
+msgstr "Yuklandi."
+
+msgid "IDS_COM_BODY_SYNCHRONIZE"
+msgstr "Sinxronlash"
+
+msgid "IDS_COM_BODY_FONT"
+msgstr "Shrift"
+
+msgid "IDS_COM_POP_NONE"
+msgstr "Hech qaysi"
+
+msgid "IDS_COM_OPT_HEADPHONES_ABB"
+msgstr "Quloqliklar"
+
+msgid "IDS_COM_POP_YOU_CAN_USE_PS_1_MORE_TIME_START_NOW_Q"
+msgstr "%sni yana 1 marta ishlatishingiz mumkin. Hozir boshlansinmi?"
+
+msgid "IDS_COM_POP_YOU_CAN_USE_PS_2_MORE_TIMES_START_NOW_Q"
+msgstr "%sni yana 2 marta ishlatishingiz mumkin. Hozir boshlansinmi?"
+
+msgid "IDS_COM_POP_PS_CURRENTLY_LOCKED_UNLOCK_Q"
+msgstr "%s hozirda bloklangan. Blokdan chiqarilsinmi?"
+
+msgid "IDS_COM_POP_YOU_CANNOT_USE_PS_ANY_MORE_TIMES_GET_ANOTHER_LICENCE_Q"
+msgstr "%sni boshqa ishlata oplmaysiz. Boshqa litsenziya olinsinmi?"
+
+msgid "IDS_COM_POP_PS_IS_ABOUT_TO_EXPIRE_GET_ANOTHER_LICENCE_Q"
+msgstr "%sning muddati o‘tish arafasida. Boshqa litsenziya olinsinmi?"
 

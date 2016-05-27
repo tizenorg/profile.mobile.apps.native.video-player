@@ -181,6 +181,30 @@ msgstr "Mic"
 msgid "IDS_VIDEO_TPOP_FILE_NAME_ALREADY_IN_USE"
 msgstr "Numele de fişier este deja utilizat."
 
+msgid "IDS_COM_BODY_CLOSE"
+msgstr "Închidere"
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Adăugare la marcaje"
+
+msgid "IDS_COM_SK_STOP"
+msgstr "Oprire"
+
+msgid "IDS_COM_SK_OK"
+msgstr "OK"
+
+msgid "IDS_COM_BODY_OFF"
+msgstr "Oprit"
+
+msgid "IDS_COM_SK_REFRESH"
+msgstr "Reîncărc."
+
+msgid "IDS_COM_BODY_LOCATION"
+msgstr "Locaţie"
+
+msgid "IDS_COM_POP_DELETED"
+msgstr "Şters"
+
 msgid "IDS_GALLERY_OPT_REMOVE_FROM_PRIVATE"
 msgstr "Eliminare din Private"
 
@@ -286,6 +310,45 @@ msgstr "Redenumire"
 msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
 msgstr "Căşti"
 
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "Necunoscut"
+
+msgid "IDS_COM_POP_ERROR"
+msgstr "Eroare"
+
+msgid "IDS_COM_BODY_BLUETOOTH"
+msgstr "Bluetooth"
+
+msgid "IDS_COM_BODY_NFC"
+msgstr "NFC"
+
+msgid "IDS_COM_BODY_LOW_BATTERY"
+msgstr "Baterie descărcată"
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "Conexiune nereuşită"
+
+msgid "IDS_COM_POP_FILE_NOT_EXIST"
+msgstr "Acest fişier nu există."
+
+msgid "IDS_COM_POP_YOU_CAN_USE_PS_1_MORE_TIME_GET_ANOTHER_LICENCE_Q"
+msgstr "Puteţi utiliza %s încă 1 dată. Obţineţi altă licenţă?"
+
+msgid "IDS_COM_HEADER_AUDIO_DEVICE_ABB"
+msgstr "Dispozitiv audio"
+
+msgid "IDS_COM_OPT_ADDED"
+msgstr "Adăugat"
+
+msgid "IDS_COM_BUTTON_SCAN"
+msgstr "Căutare"
+
+msgid "IDS_COM_BODY_UNABLE_TO_ADD"
+msgstr "Imposibil de adăugat"
+
+msgid "IDS_COM_BODY_DEFAULT"
+msgstr "Implicit"
+
 msgid "IDS_VIDEO_BUTTON_DOWNLOAD"
 msgstr "Descărcare"
 
@@ -340,6 +403,12 @@ msgstr "Spaţiu stocare dispozitiv"
 msgid "IDS_VIDEO_SBODY_SD_CARD"
 msgstr "Card SD"
 
+msgid "IDS_COM_BODY_MOVE"
+msgstr "Mutare"
+
+msgid "IDS_COM_BODY_ON"
+msgstr "Pornit"
+
 msgid "IDS_VIDEO_OPT_SHARE_VIA"
 msgstr "Partajare prin"
 
@@ -354,6 +423,12 @@ msgstr "Se procesează..."
 
 msgid "IDS_MEMO_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
 msgstr "A fost atins numărul maxim de caractere."
+
+msgid "IDS_COM_SK_YES"
+msgstr "Da"
+
+msgid "IDS_COM_SK_NO"
+msgstr "Nu"
 
 msgid "IDS_MUSIC_OPT_DELETE"
 msgstr "Ştergere"
@@ -385,6 +460,57 @@ msgstr "ŞTERGERE"
 msgid "IDS_TPLATFORM_MBODY_STORAGE_LOCATION"
 msgstr "Locaţie stocare"
 
+msgid "IDS_COM_BODY_DATE"
+msgstr "Dată"
+
 msgid "IDS_GALLERY_HEADER_SELECT_VIDEO"
 msgstr "Selectare videoclip"
+
+msgid "IDS_COM_OPT1_WI_FI_DIRECT"
+msgstr "Wi-Fi Direct"
+
+msgid "IDS_COM_POP_CONNECTION_ERROR"
+msgstr "Eroare de conectare"
+
+msgid "IDS_COM_BODY_KB"
+msgstr "KO"
+
+msgid "IDS_COM_BODY_B"
+msgstr "B"
+
+msgid "IDS_COM_BODY_MB"
+msgstr "MO"
+
+msgid "IDS_COM_BODY_GB"
+msgstr "GB"
+
+msgid "IDS_COM_BODY_DOWNLOADED"
+msgstr "Descărcat"
+
+msgid "IDS_COM_BODY_SYNCHRONIZE"
+msgstr "Sincronizare"
+
+msgid "IDS_COM_BODY_FONT"
+msgstr "Font"
+
+msgid "IDS_COM_POP_NONE"
+msgstr "Niciuna"
+
+msgid "IDS_COM_OPT_HEADPHONES_ABB"
+msgstr "Căşti"
+
+msgid "IDS_COM_POP_YOU_CAN_USE_PS_1_MORE_TIME_START_NOW_Q"
+msgstr "Puteţi utiliza %s încă 1 dată. Începeţi acum?"
+
+msgid "IDS_COM_POP_YOU_CAN_USE_PS_2_MORE_TIMES_START_NOW_Q"
+msgstr "Puteţi utiliza %s de încă 2 ori. Începeţi acum?"
+
+msgid "IDS_COM_POP_PS_CURRENTLY_LOCKED_UNLOCK_Q"
+msgstr "%s este momentan blocat. Deblocaţi?"
+
+msgid "IDS_COM_POP_YOU_CANNOT_USE_PS_ANY_MORE_TIMES_GET_ANOTHER_LICENCE_Q"
+msgstr "Nu mai puteţi utiliza %s. Obţineţi altă licenţă?"
+
+msgid "IDS_COM_POP_PS_IS_ABOUT_TO_EXPIRE_GET_ANOTHER_LICENCE_Q"
+msgstr "%s este pe cale să expire. Obţineţi altă licenţă?"
 

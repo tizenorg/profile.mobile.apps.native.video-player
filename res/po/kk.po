@@ -181,6 +181,30 @@ msgstr "Кіші"
 msgid "IDS_VIDEO_TPOP_FILE_NAME_ALREADY_IN_USE"
 msgstr "Файл атауы бұрыннан пайдаланылуда"
 
+msgid "IDS_COM_BODY_CLOSE"
+msgstr "Жабу"
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Таңбалардың ен көп саны артты."
+
+msgid "IDS_COM_SK_STOP"
+msgstr "Үзіліс"
+
+msgid "IDS_COM_SK_OK"
+msgstr "OK"
+
+msgid "IDS_COM_BODY_OFF"
+msgstr "Өшірілген"
+
+msgid "IDS_COM_SK_REFRESH"
+msgstr "Жаңарту"
+
+msgid "IDS_COM_BODY_LOCATION"
+msgstr "Орналасу орны"
+
+msgid "IDS_COM_POP_DELETED"
+msgstr "Жойылды"
+
 msgid "IDS_GALLERY_OPT_REMOVE_FROM_PRIVATE"
 msgstr "Жеке қалтадан жою"
 
@@ -286,6 +310,45 @@ msgstr "Атын өзгерту"
 msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
 msgstr "Құлаққаптар"
 
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "Белгісіз"
+
+msgid "IDS_COM_POP_ERROR"
+msgstr "Қате"
+
+msgid "IDS_COM_BODY_BLUETOOTH"
+msgstr "Bluetooth"
+
+msgid "IDS_COM_BODY_NFC"
+msgstr "NFC"
+
+msgid "IDS_COM_BODY_LOW_BATTERY"
+msgstr "Батареяның заряды  аз."
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "Қосылу үзіліп кетті"
+
+msgid "IDS_COM_POP_FILE_NOT_EXIST"
+msgstr "Файл жоқ."
+
+msgid "IDS_COM_POP_YOU_CAN_USE_PS_1_MORE_TIME_GET_ANOTHER_LICENCE_Q"
+msgstr "Тағы %s 1 рет пайдалануға болады. Басқа лицензия алу керек пе?"
+
+msgid "IDS_COM_HEADER_AUDIO_DEVICE_ABB"
+msgstr "Аудио құрылғы"
+
+msgid "IDS_COM_OPT_ADDED"
+msgstr "Қосылды"
+
+msgid "IDS_COM_BUTTON_SCAN"
+msgstr "Қарап шығу"
+
+msgid "IDS_COM_BODY_UNABLE_TO_ADD"
+msgstr "Қосу мүмкін емес."
+
+msgid "IDS_COM_BODY_DEFAULT"
+msgstr "Өздігінен"
+
 msgid "IDS_VIDEO_BUTTON_DOWNLOAD"
 msgstr "Жүктеу"
 
@@ -340,6 +403,12 @@ msgstr "Құрылғы қоймасы"
 msgid "IDS_VIDEO_SBODY_SD_CARD"
 msgstr "SD картасы"
 
+msgid "IDS_COM_BODY_MOVE"
+msgstr "Орналастыру"
+
+msgid "IDS_COM_BODY_ON"
+msgstr "Қосылған"
+
 msgid "IDS_VIDEO_OPT_SHARE_VIA"
 msgstr "Бөлісу құралы"
 
@@ -354,6 +423,12 @@ msgstr "Өңделуде..."
 
 msgid "IDS_MEMO_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
 msgstr "Ең көп таңбалар санына жетті."
+
+msgid "IDS_COM_SK_YES"
+msgstr "Иә"
+
+msgid "IDS_COM_SK_NO"
+msgstr "Жоқ"
 
 msgid "IDS_MUSIC_OPT_DELETE"
 msgstr "Жою"
@@ -385,6 +460,57 @@ msgstr "ЖОЮ"
 msgid "IDS_TPLATFORM_MBODY_STORAGE_LOCATION"
 msgstr "Сақтау орны"
 
+msgid "IDS_COM_BODY_DATE"
+msgstr "Күні"
+
 msgid "IDS_GALLERY_HEADER_SELECT_VIDEO"
 msgstr "Бейнені таңдау"
+
+msgid "IDS_COM_OPT1_WI_FI_DIRECT"
+msgstr "Wi-Fi Direct"
+
+msgid "IDS_COM_POP_CONNECTION_ERROR"
+msgstr "Байланыс қатесі"
+
+msgid "IDS_COM_BODY_KB"
+msgstr "KБ"
+
+msgid "IDS_COM_BODY_B"
+msgstr "Б"
+
+msgid "IDS_COM_BODY_MB"
+msgstr "МБ"
+
+msgid "IDS_COM_BODY_GB"
+msgstr "Гбайт"
+
+msgid "IDS_COM_BODY_DOWNLOADED"
+msgstr "Жазылды."
+
+msgid "IDS_COM_BODY_SYNCHRONIZE"
+msgstr "Синхрондау"
+
+msgid "IDS_COM_BODY_FONT"
+msgstr "Қаріп"
+
+msgid "IDS_COM_POP_NONE"
+msgstr "Жоқ"
+
+msgid "IDS_COM_OPT_HEADPHONES_ABB"
+msgstr "Құлаққаптар"
+
+msgid "IDS_COM_POP_YOU_CAN_USE_PS_1_MORE_TIME_START_NOW_Q"
+msgstr "Тағы %s 1 рет пайдалануға болады. Қазір бастау керек пе?"
+
+msgid "IDS_COM_POP_YOU_CAN_USE_PS_2_MORE_TIMES_START_NOW_Q"
+msgstr "Тағы %s 2 рет пайдалануға болады. Қазір бастау керек пе?"
+
+msgid "IDS_COM_POP_PS_CURRENTLY_LOCKED_UNLOCK_Q"
+msgstr "Қазір %s құлыпталды. Құлпын ашу керек пе?"
+
+msgid "IDS_COM_POP_YOU_CANNOT_USE_PS_ANY_MORE_TIMES_GET_ANOTHER_LICENCE_Q"
+msgstr "Тағы %s рет пайдалануға болмайды. Басқа лицензия алу керек пе?"
+
+msgid "IDS_COM_POP_PS_IS_ABOUT_TO_EXPIRE_GET_ANOTHER_LICENCE_Q"
+msgstr "%s мерзімі бітуге жақын. Басқа лицензия алу керек пе?"
 

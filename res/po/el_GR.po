@@ -181,6 +181,30 @@ msgstr "Μικρό"
 msgid "IDS_VIDEO_TPOP_FILE_NAME_ALREADY_IN_USE"
 msgstr "Το όνομα αρχείου χρησιμοποιείται ήδη."
 
+msgid "IDS_COM_BODY_CLOSE"
+msgstr "Κλείσιμο"
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Ο μέγιστος αριθμός χαρακτήρων συμπληρώθηκε."
+
+msgid "IDS_COM_SK_STOP"
+msgstr "Διακοπή"
+
+msgid "IDS_COM_SK_OK"
+msgstr "OK"
+
+msgid "IDS_COM_BODY_OFF"
+msgstr "Ανενεργό"
+
+msgid "IDS_COM_SK_REFRESH"
+msgstr "Ανανέωση"
+
+msgid "IDS_COM_BODY_LOCATION"
+msgstr "Τοποθεσία"
+
+msgid "IDS_COM_POP_DELETED"
+msgstr "Διαγράφηκε."
+
 msgid "IDS_GALLERY_OPT_REMOVE_FROM_PRIVATE"
 msgstr "Κατάργηση από το φάκελο «Απόρρητο»"
 
@@ -286,6 +310,45 @@ msgstr "Μετονομασία"
 msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
 msgstr "Ακουστικά"
 
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "Άγνωστο"
+
+msgid "IDS_COM_POP_ERROR"
+msgstr "Σφάλμα."
+
+msgid "IDS_COM_BODY_BLUETOOTH"
+msgstr "Bluetooth"
+
+msgid "IDS_COM_BODY_NFC"
+msgstr "NFC"
+
+msgid "IDS_COM_BODY_LOW_BATTERY"
+msgstr "Χαμηλή μπαταρία."
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "Αποτυχία σύνδεσης. Επανάληψη;"
+
+msgid "IDS_COM_POP_FILE_NOT_EXIST"
+msgstr "Δεν υπάρχει αρχείο."
+
+msgid "IDS_COM_POP_YOU_CAN_USE_PS_1_MORE_TIME_GET_ANOTHER_LICENCE_Q"
+msgstr "Μπορείτε να χρησιμοποιήσετε το %s 1 φορά ακόμα. Λήψη νέας άδειας;"
+
+msgid "IDS_COM_HEADER_AUDIO_DEVICE_ABB"
+msgstr "Συσκευή ήχου"
+
+msgid "IDS_COM_OPT_ADDED"
+msgstr "Προστέθηκε."
+
+msgid "IDS_COM_BUTTON_SCAN"
+msgstr "Σάρωση"
+
+msgid "IDS_COM_BODY_UNABLE_TO_ADD"
+msgstr "Δεν είναι δυνατή η προσθήκη."
+
+msgid "IDS_COM_BODY_DEFAULT"
+msgstr "Προεπιλογή"
+
 msgid "IDS_VIDEO_BUTTON_DOWNLOAD"
 msgstr "Λήψη"
 
@@ -340,6 +403,12 @@ msgstr "Χώρος αποθήκευσης συσκευής"
 msgid "IDS_VIDEO_SBODY_SD_CARD"
 msgstr "Κάρτα SD"
 
+msgid "IDS_COM_BODY_MOVE"
+msgstr "Μετακίνηση"
+
+msgid "IDS_COM_BODY_ON"
+msgstr "Ενεργό"
+
 msgid "IDS_VIDEO_OPT_SHARE_VIA"
 msgstr "Κοινή χρήση μέσω"
 
@@ -354,6 +423,12 @@ msgstr "Επεξεργασία..."
 
 msgid "IDS_MEMO_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
 msgstr "Συμπληρώθηκε ο μέγιστος αριθμός χαρακτήρων."
+
+msgid "IDS_COM_SK_YES"
+msgstr "Ναι"
+
+msgid "IDS_COM_SK_NO"
+msgstr "Όχι"
 
 msgid "IDS_MUSIC_OPT_DELETE"
 msgstr "Διαγραφή"
@@ -385,6 +460,57 @@ msgstr "ΔΙΑΓΡΑΦΗ"
 msgid "IDS_TPLATFORM_MBODY_STORAGE_LOCATION"
 msgstr "Θέση αποθήκευσης"
 
+msgid "IDS_COM_BODY_DATE"
+msgstr "Ημερομηνία"
+
 msgid "IDS_GALLERY_HEADER_SELECT_VIDEO"
 msgstr "Επιλογή βίντεο"
+
+msgid "IDS_COM_OPT1_WI_FI_DIRECT"
+msgstr "Wi-Fi Direct"
+
+msgid "IDS_COM_POP_CONNECTION_ERROR"
+msgstr "Σφάλμα σύνδεσης."
+
+msgid "IDS_COM_BODY_KB"
+msgstr "KB"
+
+msgid "IDS_COM_BODY_B"
+msgstr "B"
+
+msgid "IDS_COM_BODY_MB"
+msgstr "MB"
+
+msgid "IDS_COM_BODY_GB"
+msgstr "GB"
+
+msgid "IDS_COM_BODY_DOWNLOADED"
+msgstr "Η λήψη ολοκληρώθηκε."
+
+msgid "IDS_COM_BODY_SYNCHRONIZE"
+msgstr "Συγχρονισμός"
+
+msgid "IDS_COM_BODY_FONT"
+msgstr "Γραμματοσειρά"
+
+msgid "IDS_COM_POP_NONE"
+msgstr "Κανένα"
+
+msgid "IDS_COM_OPT_HEADPHONES_ABB"
+msgstr "Ακουστικά"
+
+msgid "IDS_COM_POP_YOU_CAN_USE_PS_1_MORE_TIME_START_NOW_Q"
+msgstr "Μπορείτε να χρησιμοποιήσετε το %s 1 φορά ακόμα. Έναρξη τώρα;"
+
+msgid "IDS_COM_POP_YOU_CAN_USE_PS_2_MORE_TIMES_START_NOW_Q"
+msgstr "Μπορείτε να χρησιμοποιήσετε το %s 2 φορές ακόμα. Έναρξη τώρα;"
+
+msgid "IDS_COM_POP_PS_CURRENTLY_LOCKED_UNLOCK_Q"
+msgstr "Το %s έχει προσωρινά ξεκλειδωθεί. Ξεκλείδωμα;"
+
+msgid "IDS_COM_POP_YOU_CANNOT_USE_PS_ANY_MORE_TIMES_GET_ANOTHER_LICENCE_Q"
+msgstr "Δεν μπορείτε να χρησιμοποιήσετε το %s άλλη φορά. Λήψη νέας άδειας;"
+
+msgid "IDS_COM_POP_PS_IS_ABOUT_TO_EXPIRE_GET_ANOTHER_LICENCE_Q"
+msgstr "Το %s κοντεύει να λήξει. Λήψη νέας άδειας;"
 

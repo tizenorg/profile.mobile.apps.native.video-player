@@ -32,11 +32,7 @@ mp_object_part_translate_set(Evas_Object *pObject, const char *ID,
 	}
 
 	const char *domain;
-	if (strstr(ID, "IDS_COM")) {
-		domain = "sys_string";
-	} else {
-		domain = NULL;
-	}
+	domain = NULL;
 	elm_object_domain_translatable_part_text_set(pObject, pPart, domain,
 			ID);
 }

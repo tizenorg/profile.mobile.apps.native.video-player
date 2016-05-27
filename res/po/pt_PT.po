@@ -181,6 +181,30 @@ msgstr "Pequeno"
 msgid "IDS_VIDEO_TPOP_FILE_NAME_ALREADY_IN_USE"
 msgstr "Nome ficheiro já utilizado."
 
+msgid "IDS_COM_BODY_CLOSE"
+msgstr "Fechar"
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Número máximo de caracteres atingido."
+
+msgid "IDS_COM_SK_STOP"
+msgstr "Parar"
+
+msgid "IDS_COM_SK_OK"
+msgstr "OK"
+
+msgid "IDS_COM_BODY_OFF"
+msgstr "Desligado"
+
+msgid "IDS_COM_SK_REFRESH"
+msgstr "Actualizar"
+
+msgid "IDS_COM_BODY_LOCATION"
+msgstr "Localização"
+
+msgid "IDS_COM_POP_DELETED"
+msgstr "Eliminado."
+
 msgid "IDS_GALLERY_OPT_REMOVE_FROM_PRIVATE"
 msgstr "Remover de Privado"
 
@@ -286,6 +310,45 @@ msgstr "Mudar nome"
 msgid "IDS_MUSIC_OPT_HEADPHONES_ABB"
 msgstr "Auscultadores"
 
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "Desconhecido"
+
+msgid "IDS_COM_POP_ERROR"
+msgstr "Erro"
+
+msgid "IDS_COM_BODY_BLUETOOTH"
+msgstr "Bluetooth"
+
+msgid "IDS_COM_BODY_NFC"
+msgstr "NFC"
+
+msgid "IDS_COM_BODY_LOW_BATTERY"
+msgstr "Bateria fraca."
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "Falha na ligação."
+
+msgid "IDS_COM_POP_FILE_NOT_EXIST"
+msgstr "Ficheiro inexistente."
+
+msgid "IDS_COM_POP_YOU_CAN_USE_PS_1_MORE_TIME_GET_ANOTHER_LICENCE_Q"
+msgstr "Pode utilizar %s mais 1 vez. Obter outra licença?"
+
+msgid "IDS_COM_HEADER_AUDIO_DEVICE_ABB"
+msgstr "Dispositivo de áudio"
+
+msgid "IDS_COM_OPT_ADDED"
+msgstr "Adicionado."
+
+msgid "IDS_COM_BUTTON_SCAN"
+msgstr "Pesquisar"
+
+msgid "IDS_COM_BODY_UNABLE_TO_ADD"
+msgstr "Impossível adicionar."
+
+msgid "IDS_COM_BODY_DEFAULT"
+msgstr "Padrão"
+
 msgid "IDS_VIDEO_BUTTON_DOWNLOAD"
 msgstr "Transferir"
 
@@ -340,6 +403,12 @@ msgstr "Armazenamento do dispositivo"
 msgid "IDS_VIDEO_SBODY_SD_CARD"
 msgstr "Cartão SD"
 
+msgid "IDS_COM_BODY_MOVE"
+msgstr "Mover"
+
+msgid "IDS_COM_BODY_ON"
+msgstr "Ligado"
+
 msgid "IDS_VIDEO_OPT_SHARE_VIA"
 msgstr "Partilhar via"
 
@@ -354,6 +423,12 @@ msgstr "A processar..."
 
 msgid "IDS_MEMO_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
 msgstr "Número máximo de caracteres atingido."
+
+msgid "IDS_COM_SK_YES"
+msgstr "Sim"
+
+msgid "IDS_COM_SK_NO"
+msgstr "Não"
 
 msgid "IDS_MUSIC_OPT_DELETE"
 msgstr "Eliminar"
@@ -385,6 +460,57 @@ msgstr "ELIMINAR"
 msgid "IDS_TPLATFORM_MBODY_STORAGE_LOCATION"
 msgstr "Localização armazenamento"
 
+msgid "IDS_COM_BODY_DATE"
+msgstr "Data"
+
 msgid "IDS_GALLERY_HEADER_SELECT_VIDEO"
 msgstr "Seleccionar vídeo"
+
+msgid "IDS_COM_OPT1_WI_FI_DIRECT"
+msgstr "Wi-Fi Direct"
+
+msgid "IDS_COM_POP_CONNECTION_ERROR"
+msgstr "Erro de ligação."
+
+msgid "IDS_COM_BODY_KB"
+msgstr "KB"
+
+msgid "IDS_COM_BODY_B"
+msgstr "B"
+
+msgid "IDS_COM_BODY_MB"
+msgstr "MB"
+
+msgid "IDS_COM_BODY_GB"
+msgstr "GB"
+
+msgid "IDS_COM_BODY_DOWNLOADED"
+msgstr "Transferido."
+
+msgid "IDS_COM_BODY_SYNCHRONIZE"
+msgstr "Sincronizar"
+
+msgid "IDS_COM_BODY_FONT"
+msgstr "Fonte"
+
+msgid "IDS_COM_POP_NONE"
+msgstr "Desligado"
+
+msgid "IDS_COM_OPT_HEADPHONES_ABB"
+msgstr "Auscultadores"
+
+msgid "IDS_COM_POP_YOU_CAN_USE_PS_1_MORE_TIME_START_NOW_Q"
+msgstr "Pode utilizar %s mais 1 vez. Iniciar agora?"
+
+msgid "IDS_COM_POP_YOU_CAN_USE_PS_2_MORE_TIMES_START_NOW_Q"
+msgstr "Pode utilizar %s mais 2 vezes. Iniciar agora?"
+
+msgid "IDS_COM_POP_PS_CURRENTLY_LOCKED_UNLOCK_Q"
+msgstr "%s está actualmente bloqueado. Desbloquear?"
+
+msgid "IDS_COM_POP_YOU_CANNOT_USE_PS_ANY_MORE_TIMES_GET_ANOTHER_LICENCE_Q"
+msgstr "Já não pode utilizar %s mais vezes. Obter outra licença?"
+
+msgid "IDS_COM_POP_PS_IS_ABOUT_TO_EXPIRE_GET_ANOTHER_LICENCE_Q"
+msgstr "%s está prestes a expirar. Obter outra licença?"
 
