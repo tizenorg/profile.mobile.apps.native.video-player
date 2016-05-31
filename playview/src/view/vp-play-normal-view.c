@@ -9487,10 +9487,10 @@ static void _vp_play_normal_view_all_close_popup(NormalView *pNormalView)
 		pNormalView->pCtxPopup = NULL;
 	}
 
-	if (pNormalView->pDetailHandle) {
+	/*if (pNormalView->pDetailHandle) {
 		vp_detail_destroy(pNormalView->pDetailHandle);
 		pNormalView->pDetailHandle = NULL;
-	}
+	}*/
 
 	if (pNormalView->pSubtitlePopup) {
 		vp_subtitle_destroy(pNormalView->pSubtitlePopup);
