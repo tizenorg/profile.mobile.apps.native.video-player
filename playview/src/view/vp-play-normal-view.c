@@ -9508,6 +9508,11 @@ static void _vp_play_normal_view_all_close_popup(NormalView *pNormalView)
 		pNormalView->pSubtitleFontPopup = NULL;
 	}
 
+	if (pNormalView->pSubtitleAlignmentPopup) {
+		vp_subtitle_alignment_destroy(pNormalView->pSubtitleAlignmentPopup);
+		pNormalView->pSubtitleAlignmentPopup = NULL;
+	}
+
 	if (pNormalView->pSubtitleFontColorPopup) {
 		vp_subtitle_color_destroy(pNormalView->pSubtitleFontColorPopup);
 		pNormalView->pSubtitleFontColorPopup = NULL;
