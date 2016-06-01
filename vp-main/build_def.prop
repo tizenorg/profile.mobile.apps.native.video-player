@@ -1,6 +1,6 @@
 
 # Add pre/post build process
-PREBUILD_DESC = 
-PREBUILD_COMMAND = 
-POSTBUILD_DESC = 
-POSTBUILD_COMMAND = 
+PREBUILD_DESC = copy edc
+PREBUILD_COMMAND = cp -r ../../playview/res/edc ../res
+POSTBUILD_DESC = rm edc
+POSTBUILD_COMMAND = rm -rf ../res/edc
