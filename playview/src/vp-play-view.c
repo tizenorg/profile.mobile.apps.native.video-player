@@ -1952,7 +1952,7 @@ bool vp_play_view_realize(play_view_handle pViewHandle)
 	}
 	if (pPlayView->bRealized == TRUE) {
 		VideoLogWarning("Already Realize state");
-		return TRUE;
+		//return TRUE;
 	}
 
 	/*unregister callbacks*/
