@@ -309,8 +309,8 @@ group {
 			description {
 				state: "default" 0.0;
 				color: 0 0 0 0;
-				min: 30 30;
-				max: 30 30;
+				min: 50 50;
+				max: 50 50;
 			}
 		}
 		part {
@@ -330,6 +330,8 @@ group {
 				image {
 					normal: BUTTON_BG_CLEAR_NORMAL;
 				}
+				min: 30 30;
+				max: 30 30;
 				color: 0 0 0 255;
 			}
 		}
