@@ -3183,7 +3183,7 @@ static bool _vp_play_multi_view_init_buttons(MultiView *pMultiView)
 	snprintf(edj_path, 1024, "%s%s/%s", path, "edje", VP_PLAY_RESROUCE_EDJ_PATH);
 	free(path);
 	pMultiView->pExitBtn =
-	    vp_button_create(pParent, "playview/custom/flat_94_60/default",
+	    vp_button_create(pParent, "custom/flat_94_60/default",
 	                     NULL,
 	                     (Evas_Smart_Cb)
 	                     __vp_play_multi_view_btn_clicked_cb,
@@ -3198,7 +3198,7 @@ static bool _vp_play_multi_view_init_buttons(MultiView *pMultiView)
 	}
 
 	pMultiView->pFullSizeBtn =
-	    vp_button_create(pParent, "playview/custom/flat_94_60/default",
+	    vp_button_create(pParent, "custom/flat_94_60/default",
 	                     NULL,
 	                     (Evas_Smart_Cb)
 	                     __vp_play_multi_view_btn_clicked_cb,
@@ -3213,7 +3213,7 @@ static bool _vp_play_multi_view_init_buttons(MultiView *pMultiView)
 	}
 
 	pMultiView->pMinSizeBtn =
-	    vp_button_create(pParent, "playview/custom/flat_94_60/default",
+	    vp_button_create(pParent, "custom/flat_94_60/default",
 	                     NULL,
 	                     (Evas_Smart_Cb)
 	                     __vp_play_multi_view_btn_clicked_cb,
@@ -3228,7 +3228,7 @@ static bool _vp_play_multi_view_init_buttons(MultiView *pMultiView)
 	}
 
 	pMultiView->pResizeBtn =
-	    vp_button_create(pParent, "playview/custom/flat_36_36/default",
+	    vp_button_create(pParent, "custom/flat_36_36/default",
 	                     NULL,
 	                     (Evas_Smart_Cb)
 	                     __vp_play_multi_view_btn_clicked_cb,
@@ -3244,7 +3244,7 @@ static bool _vp_play_multi_view_init_buttons(MultiView *pMultiView)
 
 
 	pMultiView->pPlayBtn =
-	    vp_button_create(pParent, "playview/custom/round_center/default",
+	    vp_button_create(pParent, "custom/round_center/default",
 	                     VP_PLAY_STRING_COM_PLAY,
 	                     (Evas_Smart_Cb)
 	                     __vp_play_multi_view_btn_clicked_cb,
@@ -3259,7 +3259,7 @@ static bool _vp_play_multi_view_init_buttons(MultiView *pMultiView)
 	}
 
 	pMultiView->pPauseBtn =
-	    vp_button_create(pParent, "playview/custom/round_center/default",
+	    vp_button_create(pParent, "custom/round_center/default",
 	                     VP_PLAY_STRING_COM_PAUSE,
 	                     (Evas_Smart_Cb)
 	                     __vp_play_multi_view_btn_clicked_cb,
@@ -3287,7 +3287,7 @@ static bool _vp_play_multi_view_init_buttons(MultiView *pMultiView)
 	}
 
 	pMultiView->pPrevBtn =
-	    vp_button_create(pParent, "playview/custom/round_left/default",
+	    vp_button_create(pParent, "custom/round_left/default",
 	                     VP_PLAY_STRING_COM_PREVIOUS,
 	                     (Evas_Smart_Cb)
 	                     __vp_play_multi_view_btn_clicked_cb,
@@ -3302,7 +3302,7 @@ static bool _vp_play_multi_view_init_buttons(MultiView *pMultiView)
 	}
 
 	pMultiView->pNextBtn =
-	    vp_button_create(pParent, "playview/custom/round_right/default",
+	    vp_button_create(pParent, "custom/round_right/default",
 	                     VP_PLAY_STRING_COM_NEXT,
 	                     (Evas_Smart_Cb)
 	                     __vp_play_multi_view_btn_clicked_cb,

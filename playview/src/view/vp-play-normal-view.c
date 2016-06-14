@@ -7793,7 +7793,7 @@ static void _vp_play_normal_view_on_capture_mode(NormalView *pNormalView)
 
 	if (pNormalView->bCaptureMode) {
 		pNormalView->pCaptureBtn = vp_button_create(
-		                               pNormalView->pNaviFrame, "playview/custom/flat_63_63/default",
+		                               pNormalView->pNaviFrame, "custom/flat_63_63/default",
 		                               NULL,
 		                               (Evas_Smart_Cb)__vp_normal_control_btn_clicked_cb,
 		                               (Evas_Smart_Cb)__vp_normal_control_btn_press_cb,
@@ -7820,7 +7820,7 @@ static void _vp_play_normal_view_on_capture_mode(NormalView *pNormalView)
 		if (nState == VP_MM_PLAYER_STATE_PAUSED ||
 		        (nState != VP_MM_PLAYER_STATE_PLAYING && pNormalView->bManualPause)) {
 			pNormalView->pCaptureRewBtn = vp_button_create(
-			                                  pNormalView->pNaviFrame, "playview/custom/flat_63_63/default",
+			                                  pNormalView->pNaviFrame, "custom/flat_63_63/default",
 			                                  NULL,
 			                                  (Evas_Smart_Cb)__vp_normal_control_btn_clicked_cb,
 			                                  (Evas_Smart_Cb)__vp_normal_control_btn_press_cb,
@@ -7828,7 +7828,7 @@ static void _vp_play_normal_view_on_capture_mode(NormalView *pNormalView)
 			                                  (void *)pNormalView);
 
 			pNormalView->pCaptureFFBtn = vp_button_create(
-			                                 pNormalView->pNaviFrame, "playview/custom/flat_63_63/default",
+			                                 pNormalView->pNaviFrame, "custom/flat_63_63/default",
 			                                 NULL,
 			                                 (Evas_Smart_Cb)__vp_normal_control_btn_clicked_cb,
 			                                 (Evas_Smart_Cb)__vp_normal_control_btn_press_cb,
@@ -9903,7 +9903,7 @@ static void _vp_play_normal_view_set_rotate_lock_state(NormalView *pNormalView)
 
 	if (!bLockState) {
 		pNormalView->pRotateBtn = vp_button_create(
-		                              pParent, "playview/custom/flat_46_46/default",
+		                              pParent, "custom/flat_46_46/default",
 		                              VP_PLAY_STRING_COM_ROTATE,
 		                              (Evas_Smart_Cb)__vp_normal_control_btn_clicked_cb,
 		                              (Evas_Smart_Cb)__vp_normal_control_btn_press_cb,
@@ -9980,7 +9980,7 @@ static void _vp_play_normal_view_set_volume_lock_state(NormalView *pNormalView)
 
 	if (!bLockState) {
 		pNormalView->pVolumeBtn = vp_button_create(
-		                              pParent, "playview/custom/flat_46_46/default",  VP_PLAY_STRING_COM_VOLUME,
+		                              pParent, "custom/flat_46_46/default",  VP_PLAY_STRING_COM_VOLUME,
 		                              (Evas_Smart_Cb)__vp_normal_function_btn_clicked_cb,
 		                              (Evas_Smart_Cb)__vp_normal_control_btn_press_cb,
 		                              (Evas_Smart_Cb)__vp_normal_control_btn_unpress_cb,
@@ -10108,7 +10108,7 @@ static void _vp_play_normal_view_set_sound_path_state(NormalView *pNormalView)
 			break;
 		}
 
-		pNormalView->pSoundPathBtn = vp_navirame_button_create(pNormalView->pNaviFrame, "playview/custom/navi_button/default", edj_path,
+		pNormalView->pSoundPathBtn = vp_navirame_button_create(pNormalView->pNaviFrame, "custom/navi_button/default", edj_path,
 		                             (const char *)szIconPath, (Evas_Smart_Cb)__vp_normal_control_btn_clicked_cb, (void *)pNormalView);
 
 		elm_object_item_part_content_set(pNormalView->pNaviItem, "title_right_btn", pNormalView->pSoundPathBtn);
@@ -10482,7 +10482,7 @@ static bool _vp_play_normal_view_create_main_control(NormalView *pNormalView)
 	pParent = pNormalView->pControlLayout;
 
 	pNormalView->pResumeBtn = vp_button_create(
-	                              pParent, "playview/custom/circle_1/default", VP_PLAY_STRING_COM_PLAY,
+	                              pParent, "custom/circle_1/default", VP_PLAY_STRING_COM_PLAY,
 	                              (Evas_Smart_Cb)__vp_normal_control_btn_clicked_cb,
 	                              (Evas_Smart_Cb)__vp_normal_control_btn_press_cb,
 	                              (Evas_Smart_Cb)__vp_normal_control_btn_unpress_cb,
@@ -10493,7 +10493,7 @@ static bool _vp_play_normal_view_create_main_control(NormalView *pNormalView)
 	}
 
 	pNormalView->pPauseBtn = vp_button_create(
-	                             pParent, "playview/custom/circle_1_focus/default", VP_PLAY_STRING_COM_PAUSE,
+	                             pParent, "custom/circle_1_focus/default", VP_PLAY_STRING_COM_PAUSE,
 	                             (Evas_Smart_Cb)__vp_normal_control_btn_clicked_cb,
 	                             (Evas_Smart_Cb)__vp_normal_control_btn_press_cb,
 	                             (Evas_Smart_Cb)__vp_normal_control_btn_unpress_cb,
@@ -10515,7 +10515,7 @@ static bool _vp_play_normal_view_create_main_control(NormalView *pNormalView)
 	}
 
 	pNormalView->pPrevBtn = vp_button_create(
-	                            pParent, "playview/custom/circle_2/default", VP_PLAY_STRING_COM_PREVIOUS,
+	                            pParent, "custom/circle_2/default", VP_PLAY_STRING_COM_PREVIOUS,
 	                            (Evas_Smart_Cb)__vp_normal_control_btn_clicked_cb,
 	                            (Evas_Smart_Cb)__vp_normal_control_btn_press_cb,
 	                            (Evas_Smart_Cb)__vp_normal_control_btn_unpress_cb,
@@ -10526,7 +10526,7 @@ static bool _vp_play_normal_view_create_main_control(NormalView *pNormalView)
 	}
 
 	pNormalView->pNextBtn = vp_button_create(
-	                            pParent, "playview/custom/circle_3/default", VP_PLAY_STRING_COM_NEXT,
+	                            pParent, "custom/circle_3/default", VP_PLAY_STRING_COM_NEXT,
 	                            (Evas_Smart_Cb)__vp_normal_control_btn_clicked_cb,
 	                            (Evas_Smart_Cb)__vp_normal_control_btn_press_cb,
 	                            (Evas_Smart_Cb)__vp_normal_control_btn_unpress_cb,
@@ -10537,7 +10537,7 @@ static bool _vp_play_normal_view_create_main_control(NormalView *pNormalView)
 	}
 
 	pNormalView->pScreenSizeBtn = vp_button_create(
-	                                  pParent, "playview/custom/flat_56_56/default", NULL,
+	                                  pParent, "custom/flat_56_56/default", NULL,
 	                                  (Evas_Smart_Cb)__vp_normal_function_btn_clicked_cb,
 	                                  (Evas_Smart_Cb)__vp_normal_control_btn_press_cb,
 	                                  (Evas_Smart_Cb)__vp_normal_control_btn_unpress_cb,
@@ -10562,7 +10562,7 @@ static bool _vp_play_normal_view_create_main_control(NormalView *pNormalView)
 	}
 	 */
 	pNormalView->pLockBtn = vp_button_create(
-	                            pNormalView->pMainLayout, "playview/custom/flat_46_46/default", NULL,
+	                            pNormalView->pMainLayout, "custom/flat_46_46/default", NULL,
 	                            (Evas_Smart_Cb)__vp_normal_function_btn_clicked_cb,
 	                            (Evas_Smart_Cb)__vp_normal_control_btn_press_cb,
 	                            (Evas_Smart_Cb)__vp_normal_control_btn_unpress_cb,
@@ -12695,7 +12695,7 @@ bool vp_play_normal_view_set_lock_screen(normal_view_handle pViewHandle, bool bL
 		elm_object_signal_emit(pNormalView->pMainLayout, VP_NORMAL_SIGNAL_LOCKSCREEN_SHOW, "*");
 
 		pNormalView->pLockBtn = vp_button_create(
-		                            pParent, "playview/custom/flat_46_46/default", NULL,
+		                            pParent, "custom/flat_46_46/default", NULL,
 		                            (Evas_Smart_Cb)__vp_normal_function_btn_clicked_cb,
 		                            (Evas_Smart_Cb)__vp_normal_control_btn_press_cb,
 		                            (Evas_Smart_Cb)__vp_normal_control_btn_unpress_cb,
