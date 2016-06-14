@@ -49,9 +49,9 @@ USER_LIB_DIRS =
 USER_LIB_DIRS_ABS = 
 
 # EDC Resource Path
-USER_EDCS_IMAGE_DIRS = edje/images playview/res/edc/playview/images res/images 
+USER_EDCS_IMAGE_DIRS = edje/images playview/res/edje/images res/images 
 USER_EDCS_IMAGE_DIRS_ABS = 
-USER_EDCS_SOUND_DIRS = edje/sounds res/edc 
+USER_EDCS_SOUND_DIRS = edje/sounds res/edje 
 USER_EDCS_SOUND_DIRS_ABS = 
 USER_EDCS_FONT_DIRS = edje/fonts 
 USER_EDCS_FONT_DIRS_ABS = 
@@ -59,10 +59,10 @@ USER_EDCS_FONT_DIRS_ABS =
 # EDC Flags
 USER_EXT_EDC_KEYS = EDC0 
 
-USER_EXT_EDC0_EDCS = res/edc/vp-custom-winset-style.edc playview/res/edc/playview/pv-brightness-popup.edc playview/res/edc/playview/pv-normal-top-control.edc res/edc/vp-main-listview-internal.edc playview/res/edc/playview/pv-speed-popup.edc res/edc/vp-remove-list-internal.edc res/edc/vp-ctxpopup-option.edc res/edc/vp-device-list-internal.edc res/edc/vp-search-view-internal.edc playview/res/edc/playview/pv-chapter-main-new.edc res/edc/vp-thumbnail-view.edc playview/res/edc/playview/pv-trim-control.edc playview/res/edc/playview/pv-volume.edc playview/res/edc/playview/pv-progressbar.edc res/edc/vp-images.edc playview/res/edc/playview/pv-normal-control.edc playview/res/edc/playview/pv-tag-buddy.edc playview/res/edc/playview/pv-gesture.edc playview/res/edc/playview/pv-volume-popup.edc playview/res/edc/playview/pv-multi-main.edc playview/res/edc/playview/pv-minicontroller.edc playview/res/edc/playview/pv-zoom-guide.edc res/edc/landscape_thumbnail.edc playview/res/edc/playview/pv-subtitle-color-popup.edc playview/res/edc/playview/pv-popup.edc res/shared/res/video.edc res/edc/panel.edc playview/res/edc/playview/pv-sensor-popup.edc playview/res/edc/playview/pv-bookmark-item.edc res/edc/vp-main-layout.edc playview/res/edc/playview/pv-subtitle.edc res/edc/vp-motion-popup.edc res/edc/popup_progressbar.edc playview/res/edc/playview/pv-custom-winset.edc res/edc/vp-main-listview-preview.edc res/edc/vp-naviframe.edc playview/res/edc/playview/pv-resource.edc playview/res/edc/playview/pv-bookmark.edc playview/res/edc/playview/pv-trim-item.edc playview/res/edc/playview/pv-normal-function.edc res/edc/vp-speedbox-popup.edc playview/res/edc/playview/pv-trim-top-control.edc playview/res/edc/playview/pv-normal-main.edc playview/res/edc/playview/pv-tag-preview.edc playview/res/edc/playview/pv-trim-main.edc res/edc/vp-genlist-no-item.edc playview/res/edc/playview/pv-colorselector.edc 
-USER_EXT_EDC0_EDCS_IMAGE_DIRS = edje/images playview/res/edc/playview/images res/images 
+USER_EXT_EDC0_EDCS = res/edje/vp-custom-winset-style.edc playview/res/edje/pv-brightness-popup.edc playview/res/edje/pv-normal-top-control.edc res/edje/vp-main-listview-internal.edc playview/res/edje/pv-speed-popup.edc res/edje/vp-remove-list-internal.edc res/edje/vp-ctxpopup-option.edc res/edje/vp-device-list-internal.edc res/edje/vp-search-view-internal.edc playview/res/edje/pv-chapter-main-new.edc res/edje/vp-thumbnail-view.edc playview/res/edje/pv-trim-control.edc playview/res/edje/pv-volume.edc playview/res/edje/pv-progressbar.edc res/edje/vp-images.edc playview/res/edje/pv-normal-control.edc playview/res/edje/pv-tag-buddy.edc playview/res/edje/pv-gesture.edc playview/res/edje/pv-volume-popup.edc playview/res/edje/pv-multi-main.edc playview/res/edje/pv-minicontroller.edc playview/res/edje/pv-zoom-guide.edc res/edje/landscape_thumbnail.edc playview/res/edje/pv-subtitle-color-popup.edc playview/res/edje/pv-popup.edc res/shared/res/video.edc res/edje/panel.edc playview/res/edje/pv-sensor-popup.edc playview/res/edje/pv-bookmark-item.edc res/edje/vp-main-layout.edc playview/res/edje/pv-subtitle.edc res/edje/vp-motion-popup.edc res/edje/popup_progressbar.edc playview/res/edje/pv-custom-winset.edc res/edje/vp-main-listview-preview.edc res/edje/vp-naviframe.edc playview/res/edje/pv-resource.edc playview/res/edje/pv-bookmark.edc playview/res/edje/pv-trim-item.edc playview/res/edje/pv-normal-function.edc res/edje/vp-speedbox-popup.edc playview/res/edje/pv-trim-top-control.edc playview/res/edje/pv-normal-main.edc playview/res/edje/pv-tag-preview.edc playview/res/edje/pv-trim-main.edc res/edje/vp-genlist-no-item.edc playview/res/edje/pv-colorselector.edc 
+USER_EXT_EDC0_EDCS_IMAGE_DIRS = edje/images playview/res/edje/images res/images 
 USER_EXT_EDC0_EDCS_IMAGE_DIRS_ABS = 
-USER_EXT_EDC0_EDCS_SOUND_DIRS = edje/sounds res/edc 
+USER_EXT_EDC0_EDCS_SOUND_DIRS = edje/sounds res/edje 
 USER_EXT_EDC0_EDCS_SOUND_DIRS_ABS = 
 USER_EXT_EDC0_EDCS_FONT_DIRS = edje/fonts 
 USER_EXT_EDC0_EDCS_FONT_DIRS_ABS = 

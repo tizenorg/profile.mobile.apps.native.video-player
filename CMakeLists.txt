@@ -180,99 +180,99 @@ ADD_EXECUTABLE(${PROJECT_NAME} ${SRCS})
 TARGET_LINK_LIBRARIES(${PROJECT_NAME} ${pkgs_LDFLAGS} ${gles_pkg_LDFLAGS} feature common playview core video-downloader -ldl)
 
 ADD_CUSTOM_TARGET(vp_font.edj COMMAND edje_cc -no-save -id ${CMAKE_SOURCE_DIR}/res/images
-${CMAKE_SOURCE_DIR}/res/edc/vp_font.edc
-${CMAKE_BINARY_DIR}/res/edc/vp_font.edj DEPENDS
-${CMAKE_SOURCE_DIR}/res/edc/vp_font.edc)
+${CMAKE_SOURCE_DIR}/res/edje/vp_font.edc
+${CMAKE_BINARY_DIR}/res/edje/vp_font.edj DEPENDS
+${CMAKE_SOURCE_DIR}/res/edje/vp_font.edc)
 
 ADD_CUSTOM_TARGET(image_res.edj COMMAND edje_cc -no-save -id ${CMAKE_SOURCE_DIR}/res/images
-${CMAKE_SOURCE_DIR}/res/edc/image_res.edc
-${CMAKE_BINARY_DIR}/res/edc/image_res.edj DEPENDS
-${CMAKE_SOURCE_DIR}/res/edc/image_res.edc)
+${CMAKE_SOURCE_DIR}/res/edje/image_res.edc
+${CMAKE_BINARY_DIR}/res/edje/image_res.edj DEPENDS
+${CMAKE_SOURCE_DIR}/res/edje/image_res.edc)
 
 ADD_CUSTOM_TARGET(panel.edj COMMAND edje_cc -no-save -id ${CMAKE_SOURCE_DIR}/res/images
-${CMAKE_SOURCE_DIR}/res/edc/panel.edc
-${CMAKE_BINARY_DIR}/res/edc/panel.edj DEPENDS
-${CMAKE_SOURCE_DIR}/res/edc/panel.edc)
+${CMAKE_SOURCE_DIR}/res/edje/panel.edc
+${CMAKE_BINARY_DIR}/res/edje/panel.edj DEPENDS
+${CMAKE_SOURCE_DIR}/res/edje/panel.edc)
 
-ADD_CUSTOM_TARGET(vp-custom-winset-style.edj COMMAND edje_cc -no-save -id ${CMAKE_SOURCE_DIR}/res/images -sd ${CMAKE_SOURCE_DIR}/res/edc
-${CMAKE_SOURCE_DIR}/res/edc/vp-custom-winset-style.edc
-${CMAKE_BINARY_DIR}/res/edc/vp-custom-winset-style.edj DEPENDS
-${CMAKE_SOURCE_DIR}/res/edc/vp-custom-winset-style.edc)
+ADD_CUSTOM_TARGET(vp-custom-winset-style.edj COMMAND edje_cc -no-save -id ${CMAKE_SOURCE_DIR}/res/images -sd ${CMAKE_SOURCE_DIR}/res/edje
+${CMAKE_SOURCE_DIR}/res/edje/vp-custom-winset-style.edc
+${CMAKE_BINARY_DIR}/res/edje/vp-custom-winset-style.edj DEPENDS
+${CMAKE_SOURCE_DIR}/res/edje/vp-custom-winset-style.edc)
 
 ADD_CUSTOM_TARGET(popup_progressbar.edj COMMAND edje_cc -no-save -id ${CMAKE_SOURCE_DIR}/res/images
-${CMAKE_SOURCE_DIR}/res/edc/popup_progressbar.edc
-${CMAKE_BINARY_DIR}/res/edc/popup_progressbar.edj DEPENDS
-${CMAKE_SOURCE_DIR}/res/edc/popup_progressbar.edc)
+${CMAKE_SOURCE_DIR}/res/edje/popup_progressbar.edc
+${CMAKE_BINARY_DIR}/res/edje/popup_progressbar.edj DEPENDS
+${CMAKE_SOURCE_DIR}/res/edje/popup_progressbar.edc)
 
 ADD_CUSTOM_TARGET(landscape_thumbnail.edj COMMAND edje_cc -no-save -id ${CMAKE_SOURCE_DIR}/res/images
-${CMAKE_SOURCE_DIR}/res/edc/landscape_thumbnail.edc
-${CMAKE_BINARY_DIR}/res/edc/landscape_thumbnail.edj DEPENDS
-${CMAKE_SOURCE_DIR}/res/edc/landscape_thumbnail.edc)
+${CMAKE_SOURCE_DIR}/res/edje/landscape_thumbnail.edc
+${CMAKE_BINARY_DIR}/res/edje/landscape_thumbnail.edj DEPENDS
+${CMAKE_SOURCE_DIR}/res/edje/landscape_thumbnail.edc)
 
 ADD_CUSTOM_TARGET(vp-speedbox-popup.edj COMMAND edje_cc -no-save -id ${CMAKE_SOURCE_DIR}/res/images
-${CMAKE_SOURCE_DIR}/res/edc/vp-speedbox-popup.edc
-${CMAKE_BINARY_DIR}/res/edc/vp-speedbox-popup.edj DEPENDS
-${CMAKE_SOURCE_DIR}/res/edc/vp-speedbox-popup.edc)
+${CMAKE_SOURCE_DIR}/res/edje/vp-speedbox-popup.edc
+${CMAKE_BINARY_DIR}/res/edje/vp-speedbox-popup.edj DEPENDS
+${CMAKE_SOURCE_DIR}/res/edje/vp-speedbox-popup.edc)
 
 ADD_CUSTOM_TARGET(vp-remove-list-internal.edj COMMAND edje_cc -no-save -id ${CMAKE_SOURCE_DIR}/res/images
-${CMAKE_SOURCE_DIR}/res/edc/vp-remove-list-internal.edc
-${CMAKE_BINARY_DIR}/res/edc/vp-remove-list-internal.edj DEPENDS
-${CMAKE_SOURCE_DIR}/res/edc/vp-remove-list-internal.edc)
+${CMAKE_SOURCE_DIR}/res/edje/vp-remove-list-internal.edc
+${CMAKE_BINARY_DIR}/res/edje/vp-remove-list-internal.edj DEPENDS
+${CMAKE_SOURCE_DIR}/res/edje/vp-remove-list-internal.edc)
 
 ADD_CUSTOM_TARGET(vp-main-listview-internal.edj COMMAND edje_cc -no-save -id ${CMAKE_SOURCE_DIR}/res/images
-${CMAKE_SOURCE_DIR}/res/edc/vp-main-listview-internal.edc
-${CMAKE_BINARY_DIR}/res/edc/vp-main-listview-internal.edj DEPENDS
-${CMAKE_SOURCE_DIR}/res/edc/vp-main-listview-internal.edc)
+${CMAKE_SOURCE_DIR}/res/edje/vp-main-listview-internal.edc
+${CMAKE_BINARY_DIR}/res/edje/vp-main-listview-internal.edj DEPENDS
+${CMAKE_SOURCE_DIR}/res/edje/vp-main-listview-internal.edc)
 
 ADD_CUSTOM_TARGET(vp-genlist-no-item.edj COMMAND edje_cc -no-save -id ${CMAKE_SOURCE_DIR}/res/images
-${CMAKE_SOURCE_DIR}/res/edc/vp-genlist-no-item.edc
-${CMAKE_BINARY_DIR}/res/edc/vp-genlist-no-item.edj DEPENDS
-${CMAKE_SOURCE_DIR}/res/edc/vp-genlist-no-item.edc)
+${CMAKE_SOURCE_DIR}/res/edje/vp-genlist-no-item.edc
+${CMAKE_BINARY_DIR}/res/edje/vp-genlist-no-item.edj DEPENDS
+${CMAKE_SOURCE_DIR}/res/edje/vp-genlist-no-item.edc)
 
 ADD_CUSTOM_TARGET(vp-device-list-internal.edj COMMAND edje_cc -no-save -id ${CMAKE_SOURCE_DIR}/res/images
-${CMAKE_SOURCE_DIR}/res/edc/vp-device-list-internal.edc
-${CMAKE_BINARY_DIR}/res/edc/vp-device-list-internal.edj DEPENDS
-${CMAKE_SOURCE_DIR}/res/edc/vp-device-list-internal.edc)
+${CMAKE_SOURCE_DIR}/res/edje/vp-device-list-internal.edc
+${CMAKE_BINARY_DIR}/res/edje/vp-device-list-internal.edj DEPENDS
+${CMAKE_SOURCE_DIR}/res/edje/vp-device-list-internal.edc)
 
-ADD_CUSTOM_TARGET(vp-main-listview-preview.edj COMMAND edje_cc -no-save -id ${CMAKE_SOURCE_DIR}/res/images -sd ${CMAKE_SOURCE_DIR}/res/edc
-${CMAKE_SOURCE_DIR}/res/edc/vp-main-listview-preview.edc
-${CMAKE_BINARY_DIR}/res/edc/vp-main-listview-preview.edj DEPENDS
-${CMAKE_SOURCE_DIR}/res/edc/vp-main-listview-preview.edc)
+ADD_CUSTOM_TARGET(vp-main-listview-preview.edj COMMAND edje_cc -no-save -id ${CMAKE_SOURCE_DIR}/res/images -sd ${CMAKE_SOURCE_DIR}/res/edje
+${CMAKE_SOURCE_DIR}/res/edje/vp-main-listview-preview.edc
+${CMAKE_BINARY_DIR}/res/edje/vp-main-listview-preview.edj DEPENDS
+${CMAKE_SOURCE_DIR}/res/edje/vp-main-listview-preview.edc)
 
 ADD_CUSTOM_TARGET(vp-search-view-internal.edj COMMAND edje_cc -no-save -id ${CMAKE_SOURCE_DIR}/res/images
-${CMAKE_SOURCE_DIR}/res/edc/vp-search-view-internal.edc
-${CMAKE_BINARY_DIR}/res/edc/vp-search-view-internal.edj DEPENDS
-${CMAKE_SOURCE_DIR}/res/edc/vp-search-view-internal.edc)
+${CMAKE_SOURCE_DIR}/res/edje/vp-search-view-internal.edc
+${CMAKE_BINARY_DIR}/res/edje/vp-search-view-internal.edj DEPENDS
+${CMAKE_SOURCE_DIR}/res/edje/vp-search-view-internal.edc)
 
 ADD_CUSTOM_TARGET(vp-images.edj COMMAND edje_cc -no-save -id ${CMAKE_SOURCE_DIR}/res/images
-${CMAKE_SOURCE_DIR}/res/edc/vp-images.edc
-${CMAKE_BINARY_DIR}/res/edc/vp-images.edj DEPENDS
-${CMAKE_SOURCE_DIR}/res/edc/vp-images.edc)
+${CMAKE_SOURCE_DIR}/res/edje/vp-images.edc
+${CMAKE_BINARY_DIR}/res/edje/vp-images.edj DEPENDS
+${CMAKE_SOURCE_DIR}/res/edje/vp-images.edc)
 
 ADD_CUSTOM_TARGET(vp-motion-popup.edj COMMAND edje_cc -no-save -id ${CMAKE_SOURCE_DIR}/res/images
-${CMAKE_SOURCE_DIR}/res/edc/vp-motion-popup.edc
-${CMAKE_BINARY_DIR}/res/edc/vp-motion-popup.edj DEPENDS
-${CMAKE_SOURCE_DIR}/res/edc/vp-motion-popup.edc)
+${CMAKE_SOURCE_DIR}/res/edje/vp-motion-popup.edc
+${CMAKE_BINARY_DIR}/res/edje/vp-motion-popup.edj DEPENDS
+${CMAKE_SOURCE_DIR}/res/edje/vp-motion-popup.edc)
 
 ADD_CUSTOM_TARGET(vp-ctxpopup-option.edj COMMAND edje_cc -no-save -id ${CMAKE_SOURCE_DIR}/res/images
-${CMAKE_SOURCE_DIR}/res/edc/vp-ctxpopup-option.edc
-${CMAKE_BINARY_DIR}/res/edc/vp-ctxpopup-option.edj DEPENDS
-${CMAKE_SOURCE_DIR}/res/edc/vp-ctxpopup-option.edc)
+${CMAKE_SOURCE_DIR}/res/edje/vp-ctxpopup-option.edc
+${CMAKE_BINARY_DIR}/res/edje/vp-ctxpopup-option.edj DEPENDS
+${CMAKE_SOURCE_DIR}/res/edje/vp-ctxpopup-option.edc)
 
-ADD_CUSTOM_TARGET(vp-thumbnail-view.edj COMMAND edje_cc -no-save -id ${CMAKE_SOURCE_DIR}/res/images -sd ${CMAKE_SOURCE_DIR}/res/edc
-${CMAKE_SOURCE_DIR}/res/edc/vp-thumbnail-view.edc
-${CMAKE_BINARY_DIR}/res/edc/vp-thumbnail-view.edj DEPENDS
-${CMAKE_SOURCE_DIR}/res/edc/vp-thumbnail-view.edc)
+ADD_CUSTOM_TARGET(vp-thumbnail-view.edj COMMAND edje_cc -no-save -id ${CMAKE_SOURCE_DIR}/res/images -sd ${CMAKE_SOURCE_DIR}/res/edje
+${CMAKE_SOURCE_DIR}/res/edje/vp-thumbnail-view.edc
+${CMAKE_BINARY_DIR}/res/edje/vp-thumbnail-view.edj DEPENDS
+${CMAKE_SOURCE_DIR}/res/edje/vp-thumbnail-view.edc)
 
 ADD_CUSTOM_TARGET(vp-main-layout.edj COMMAND edje_cc -no-save -id ${CMAKE_SOURCE_DIR}/res/images
-${CMAKE_SOURCE_DIR}/res/edc/vp-main-layout.edc
-${CMAKE_BINARY_DIR}/res/edc/vp-main-layout.edj DEPENDS
-${CMAKE_SOURCE_DIR}/res/edc/vp-main-layout.edc)
+${CMAKE_SOURCE_DIR}/res/edje/vp-main-layout.edc
+${CMAKE_BINARY_DIR}/res/edje/vp-main-layout.edj DEPENDS
+${CMAKE_SOURCE_DIR}/res/edje/vp-main-layout.edc)
 
 ADD_CUSTOM_TARGET(vp-naviframe.edj COMMAND edje_cc -no-save -id ${CMAKE_SOURCE_DIR}/res/images
-${CMAKE_SOURCE_DIR}/res/edc/vp-naviframe.edc
-${CMAKE_BINARY_DIR}/res/edc/vp-naviframe.edj DEPENDS
-${CMAKE_SOURCE_DIR}/res/edc/vp-naviframe.edc)
+${CMAKE_SOURCE_DIR}/res/edje/vp-naviframe.edc
+${CMAKE_BINARY_DIR}/res/edje/vp-naviframe.edj DEPENDS
+${CMAKE_SOURCE_DIR}/res/edje/vp-naviframe.edc)
 
 ADD_DEPENDENCIES(${PROJECT_NAME} vp_font.edj)
 ADD_DEPENDENCIES(${PROJECT_NAME} image_res.edj)
@@ -299,25 +299,25 @@ ADD_DEPENDENCIES(${PROJECT_NAME} vp-naviframe.edj)
 ######################################
 
 INSTALL(TARGETS ${PROJECT_NAME} DESTINATION bin)
-INSTALL(FILES ${CMAKE_BINARY_DIR}/res/edc/vp_font.edj DESTINATION ${EDJDIR})
-INSTALL(FILES ${CMAKE_BINARY_DIR}/res/edc/image_res.edj DESTINATION ${EDJDIR})
-INSTALL(FILES ${CMAKE_BINARY_DIR}/res/edc/panel.edj DESTINATION ${EDJDIR})
-INSTALL(FILES ${CMAKE_BINARY_DIR}/res/edc/vp-custom-winset-style.edj DESTINATION ${EDJDIR})
-INSTALL(FILES ${CMAKE_BINARY_DIR}/res/edc/popup_progressbar.edj DESTINATION ${EDJDIR})
-INSTALL(FILES ${CMAKE_BINARY_DIR}/res/edc/landscape_thumbnail.edj DESTINATION ${EDJDIR})
-INSTALL(FILES ${CMAKE_BINARY_DIR}/res/edc/vp-speedbox-popup.edj DESTINATION ${EDJDIR})
-INSTALL(FILES ${CMAKE_BINARY_DIR}/res/edc/vp-remove-list-internal.edj DESTINATION ${EDJDIR})
-INSTALL(FILES ${CMAKE_BINARY_DIR}/res/edc/vp-main-listview-internal.edj DESTINATION ${EDJDIR})
-INSTALL(FILES ${CMAKE_BINARY_DIR}/res/edc/vp-genlist-no-item.edj DESTINATION ${EDJDIR})
-INSTALL(FILES ${CMAKE_BINARY_DIR}/res/edc/vp-device-list-internal.edj DESTINATION ${EDJDIR})
-INSTALL(FILES ${CMAKE_BINARY_DIR}/res/edc/vp-main-listview-preview.edj DESTINATION ${EDJDIR})
-INSTALL(FILES ${CMAKE_BINARY_DIR}/res/edc/vp-search-view-internal.edj DESTINATION ${EDJDIR})
-INSTALL(FILES ${CMAKE_BINARY_DIR}/res/edc/vp-images.edj DESTINATION ${EDJDIR})
-INSTALL(FILES ${CMAKE_BINARY_DIR}/res/edc/vp-motion-popup.edj DESTINATION ${EDJDIR})
-INSTALL(FILES ${CMAKE_BINARY_DIR}/res/edc/vp-ctxpopup-option.edj DESTINATION ${EDJDIR})
-INSTALL(FILES ${CMAKE_BINARY_DIR}/res/edc/vp-thumbnail-view.edj DESTINATION ${EDJDIR})
-INSTALL(FILES ${CMAKE_BINARY_DIR}/res/edc/vp-main-layout.edj DESTINATION ${EDJDIR})
-INSTALL(FILES ${CMAKE_BINARY_DIR}/res/edc/vp-naviframe.edj DESTINATION ${EDJDIR})
+INSTALL(FILES ${CMAKE_BINARY_DIR}/res/edje/vp_font.edj DESTINATION ${EDJDIR})
+INSTALL(FILES ${CMAKE_BINARY_DIR}/res/edje/image_res.edj DESTINATION ${EDJDIR})
+INSTALL(FILES ${CMAKE_BINARY_DIR}/res/edje/panel.edj DESTINATION ${EDJDIR})
+INSTALL(FILES ${CMAKE_BINARY_DIR}/res/edje/vp-custom-winset-style.edj DESTINATION ${EDJDIR})
+INSTALL(FILES ${CMAKE_BINARY_DIR}/res/edje/popup_progressbar.edj DESTINATION ${EDJDIR})
+INSTALL(FILES ${CMAKE_BINARY_DIR}/res/edje/landscape_thumbnail.edj DESTINATION ${EDJDIR})
+INSTALL(FILES ${CMAKE_BINARY_DIR}/res/edje/vp-speedbox-popup.edj DESTINATION ${EDJDIR})
+INSTALL(FILES ${CMAKE_BINARY_DIR}/res/edje/vp-remove-list-internal.edj DESTINATION ${EDJDIR})
+INSTALL(FILES ${CMAKE_BINARY_DIR}/res/edje/vp-main-listview-internal.edj DESTINATION ${EDJDIR})
+INSTALL(FILES ${CMAKE_BINARY_DIR}/res/edje/vp-genlist-no-item.edj DESTINATION ${EDJDIR})
+INSTALL(FILES ${CMAKE_BINARY_DIR}/res/edje/vp-device-list-internal.edj DESTINATION ${EDJDIR})
+INSTALL(FILES ${CMAKE_BINARY_DIR}/res/edje/vp-main-listview-preview.edj DESTINATION ${EDJDIR})
+INSTALL(FILES ${CMAKE_BINARY_DIR}/res/edje/vp-search-view-internal.edj DESTINATION ${EDJDIR})
+INSTALL(FILES ${CMAKE_BINARY_DIR}/res/edje/vp-images.edj DESTINATION ${EDJDIR})
+INSTALL(FILES ${CMAKE_BINARY_DIR}/res/edje/vp-motion-popup.edj DESTINATION ${EDJDIR})
+INSTALL(FILES ${CMAKE_BINARY_DIR}/res/edje/vp-ctxpopup-option.edj DESTINATION ${EDJDIR})
+INSTALL(FILES ${CMAKE_BINARY_DIR}/res/edje/vp-thumbnail-view.edj DESTINATION ${EDJDIR})
+INSTALL(FILES ${CMAKE_BINARY_DIR}/res/edje/vp-main-layout.edj DESTINATION ${EDJDIR})
+INSTALL(FILES ${CMAKE_BINARY_DIR}/res/edje/vp-naviframe.edj DESTINATION ${EDJDIR})
 
 INSTALL(FILES ${CMAKE_SOURCE_DIR}/org.tizen.videos.xml DESTINATION ${CMAKE_APP_SHARE_PACKAGES_DIR})
 INSTALL(FILES ${CMAKE_SOURCE_DIR}/res/shared/res/video.edc DESTINATION ${SHAREDRESDIR})

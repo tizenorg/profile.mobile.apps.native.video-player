@@ -290,7 +290,7 @@ static Evas_Object *__vp_play_bookmark_gengrid_icon_get_cb(const void
 		elm_layout_file_set(layout, edj_path,
 		                    VP_PLAY_EDJ_GROUP_BOOKMARK_ITEM_END);
 		pBtn =
-		    vp_button_create(layout, "playview/custom/icon_48_48", NULL,
+		    vp_button_create(layout, "custom/icon_48_48", NULL,
 		                     (Evas_Smart_Cb)
 		                     __vp_play_bookmark_delete_btn_clicked_cb,
 		                     (Evas_Smart_Cb)
@@ -858,7 +858,7 @@ static bool _vp_play_bookmark_init_layout(BookmarkWidget *
 	                     (void *) pBookmarkWidget);
 
 	pBookmarkWidget->pAddButton =
-	    vp_button_create(pParent, "playview/custom/icon_44_44", NULL,
+	    vp_button_create(pParent, "custom/icon_44_44", NULL,
 	                     (Evas_Smart_Cb)
 	                     __vp_play_bookmark_btn_clicked_cb,
 	                     (Evas_Smart_Cb) __vp_play_bookmark_btn_press_cb,
