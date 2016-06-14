@@ -1,21 +1,64 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <manifest xmlns="http://tizen.org/ns/packages" api-version="3.0" package="org.tizen.video-player" version="1.0.0">
     <profile name="mobile"/>
-    <ui-application appid="org.tizen.video-player" exec="video-player" launch_mode="single" hw-acceleration="on" process-pool="true" multiple="false" nodisplay="false" taskmanage="true" type="capp">
+    <ui-application appid="org.tizen.video-player" exec="video-player" launch_mode="caller" hw-acceleration="on" multiple="false" nodisplay="true" taskmanage="true" type="capp">
         <label>video-player</label>
         <icon>org.tizen.video-player.png</icon>
+        <app-control>
+		<operation name="http://tizen.org/appcontrol/operation/view" />
+		<mime name="video/mp4" />
+		<mime name="video/3gp" />
+		<mime name="video/divx" />
+		<mime name="video/x-msvideo" />
+		<mime name="video/x-ms-wmv" />
+		<mime name="video/x-ms-asf" />
+		<mime name="video/3gpp" />
+		<mime name="video/x-matroska" />
+		<mime name="video/vnd.ms-playready.media.pyv" />
+		<mime name="application/vnd.apple.mpegurl" />
+		<mime name="application/x-mpegurl" />
+		<mime name="audio/x-mpegurl" />
+		<mime name="video/x-mpegurl" />
+		<mime name="video/x-flv" />
+		<mime name="video/ogg" />
+		<mime name="video/quicktime" />
+		<mime name="video/mp2t" />
+		<mime name="audio/isma" />
+		<mime name="application/sdp" />
+		<uri name="http" />
+		<uri name="https" />
+		<uri name="rtsp" />
+		<uri name="rtp" />
+	</app-control>
+	<app-control>
+		<operation name="http://tizen.org/appcontrol/operation/view" />
+		<mime name="video/mp4" />
+		<mime name="video/3gp" />
+		<mime name="video/divx" />
+		<mime name="video/x-msvideo" />
+		<mime name="video/x-ms-wmv" />
+		<mime name="video/x-ms-asf" />
+		<mime name="video/3gpp" />
+		<mime name="video/x-matroska" />
+		<mime name="video/vnd.ms-playready.media.pyv" />
+		<mime name="application/vnd.apple.mpegurl" />
+		<mime name="application/x-mpegurl" />
+		<mime name="video/x-mpegurl" />
+		<mime name="video/x-flv" />
+		<mime name="video/ogg" />
+		<mime name="video/quicktime" />
+		<mime name="video/mp2t" />
+		<mime name="application/sdp" />
+	</app-control>
     </ui-application>
     <privileges>
-        <privilege>http://tizen.org/privilege/systemsettings</privilege>
         <privilege>http://tizen.org/privilege/network.get</privilege>
-        <privilege>http://tizen.org/privilege/maps</privilege>
+        <privilege>http://tizen.org/privilege/mapservice</privilege>
         <privilege>http://tizen.org/privilege/wifidirect</privilege>
         <privilege>http://tizen.org/privilege/content.write</privilege>
         <privilege>http://tizen.org/privilege/appmanager.launch</privilege>
         <privilege>http://tizen.org/privilege/externalstorage</privilege>
-        <privilege>http://tizen.org/privilege/wifi.wifidirect.admin</privilege>
         <privilege>http://tizen.org/privilege/mediastorage</privilege>
-        <privilege>http://tizen.org/privilege/wifi.wifidirect.read</privilege>
         <privilege>http://tizen.org/privilege/externalstorage.appdata</privilege>
         <privilege>http://tizen.org/privilege/telephony</privilege>
         <privilege>http://tizen.org/privilege/volume.set</privilege>

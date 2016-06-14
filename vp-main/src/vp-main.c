@@ -55,6 +55,16 @@ static bool __appCreate(void *pUserData)
 		return FALSE;
 	}
 
+	char locale_path[1024] = {0};
+	char *path = app_get_resource_path();
+	if (path == NULL) {
+		return FALSE;
+	}
+	snprintf(locale_path, 1024, "%s%s", path, "locale");
+	VideoLogDebug("Locale Path is: %s", locale_path);
+	bindtextdomain("video-player", locale_path);
+	free(path);
+
 	VpAppData *pAppData = (VpAppData*)pUserData;
 
 	pAppData->bPause 		= FALSE;

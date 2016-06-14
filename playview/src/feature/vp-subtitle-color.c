@@ -845,7 +845,7 @@ static bool _vp_play_subtitle_color_popup_create_button(Evas_Object *
 	    (SubtitleColorPopup *) pUserData;
 
 	pSubtitleColorPopup->pDelButton =
-	    vp_button_create(pParent, "playview/custom/flat_63_78/default",
+	    vp_button_create(pParent, "custom/flat_63_78/default",
 	                     NULL,
 	                     (Evas_Smart_Cb)
 	                     __vp_play_subtitle_color_btn_clicked_cb,
@@ -853,7 +853,7 @@ static bool _vp_play_subtitle_color_popup_create_button(Evas_Object *
 	                     (void *) pSubtitleColorPopup);
 
 	pSubtitleColorPopup->pAddButton =
-	    vp_button_create(pParent, "playview/custom/flat_63_78/default",
+	    vp_button_create(pParent, "custom/flat_63_78/default",
 	                     NULL,
 	                     (Evas_Smart_Cb)
 	                     __vp_play_subtitle_color_btn_clicked_cb,

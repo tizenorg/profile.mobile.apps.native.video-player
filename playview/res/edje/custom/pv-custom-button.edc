@@ -47,7 +47,7 @@
 
 #define BUTTON_CUSTOM_ICON_STYLES(style_name, min_width, min_height) 	\
 group { 																\
-	name: "elm/button/base/playview/custom/"style_name; 				\
+	name: "elm/button/base/custom/"style_name; 				\
 	parts  {															\
 		part { 														\
 			name: "button_image";										\
@@ -159,7 +159,7 @@ group { 																\
 
 
 group {
-	name: "elm/button/base/playview/custom/circle_1/default";
+	name: "elm/button/base/custom/circle_1/default";
 	parts {
 		part {
 			name: "button_image";
@@ -416,7 +416,7 @@ group {
 }
 
 group {
-	name: "elm/button/base/playview/custom/circle_1_focus/default";
+	name: "elm/button/base/custom/circle_1_focus/default";
 	parts {
 		part {
 			name: "button_image";
@@ -678,7 +678,7 @@ group {
 }
 
 group {
-	name: "elm/button/base/playview/custom/circle_2/default";
+	name: "elm/button/base/custom/circle_2/default";
 	parts {
 		part {
 			name: "button_image";
@@ -931,7 +931,7 @@ group {
 
 
 group {
-	name: "elm/button/base/playview/custom/circle_3/default";
+	name: "elm/button/base/custom/circle_3/default";
 	parts {
 		part {
 			name: "button_image";
@@ -1185,7 +1185,7 @@ group {
 
 
 
-group { name: "elm/button/base/playview/custom/navi_button/default";
+group { name: "elm/button/base/custom/navi_button/default";
    parts {
 	  part { name: "button_image";
 		 type: RECT;
@@ -1349,7 +1349,7 @@ group { name: "elm/button/base/playview/custom/navi_button/default";
 }
 
 group {
-	name: "elm/button/base/playview/custom/sound_path/default";
+	name: "elm/button/base/custom/sound_path/default";
 	parts {
 		part {
 			name: "button_image";
@@ -1510,7 +1510,7 @@ group {
 
 group
 {
-	name: "elm/button/base/playview/custom/allshare/default";
+	name: "elm/button/base/custom/allshare/default";
 	parts
 	{
 		part {
@@ -1702,7 +1702,7 @@ group
 }
 
 group {
-	name: "elm/button/base/playview/custom/check/default";
+	name: "elm/button/base/custom/check/default";
 	parts {
 		part {
 			name: "button_image";
@@ -2040,7 +2040,7 @@ group {
 
 
 group {
-	name: "elm/button/base/playview/custom/round_left/default";
+	name: "elm/button/base/custom/round_left/default";
 	parts {
 		part {
 			name: "button_image";
@@ -2226,7 +2226,7 @@ group {
 
 
 group {
-	name: "elm/button/base/playview/custom/round_right/default";
+	name: "elm/button/base/custom/round_right/default";
 	parts {
 		part {
 			name: "button_image";
@@ -2412,7 +2412,7 @@ group {
 
 
 group {
-	name: "elm/button/base/playview/custom/round_center/default";
+	name: "elm/button/base/custom/round_center/default";
 	parts {
 		part {
 			name: "button_image";
@@ -2598,7 +2598,7 @@ group {
 
 
 group {
-	name: "elm/button/base/playview/custom/flat_70_70/default";
+	name: "elm/button/base/custom/flat_70_70/default";
 	parts {
 		part {
 			name: "button_image";
@@ -2818,7 +2818,7 @@ group {
 //volume icon
 
 group {
-	name: "elm/button/base/playview/custom/flat_46_46/default";
+	name: "elm/button/base/custom/flat_46_46/default";
 	parts {
 		part {
 			name: "button_image";
@@ -3041,7 +3041,7 @@ group {
 //screen size icon
 
 group {
-	name: "elm/button/base/playview/custom/flat_56_56/default";
+	name: "elm/button/base/custom/flat_56_56/default";
 	parts {
 		part {
 			name: "button_image";
@@ -3261,7 +3261,7 @@ group {
 
 
 group {
-	name: "elm/button/base/playview/custom/flat_63_63/default";
+	name: "elm/button/base/custom/flat_63_63/default";
 	parts {
 		part {
 			name: "button_image";
@@ -3478,7 +3478,7 @@ group {
 }
 
 group {
-	name: "elm/button/base/playview/custom/flat_63_85/default";
+	name: "elm/button/base/custom/flat_63_85/default";
 	parts {
 		part {
 			name: "button_image";
@@ -3725,7 +3725,7 @@ group {
 }
 
 group {
-	name: "elm/button/base/playview/custom/flat_94_60/default";
+	name: "elm/button/base/custom/flat_94_60/default";
 	parts {
 		part {
 			name: "button_image";
@@ -3947,7 +3947,7 @@ group {
 
 
 group {
-	name: "elm/button/base/playview/custom/flat_36_36/default";
+	name: "elm/button/base/custom/flat_36_36/default";
 	parts {
 		part {
 			name: "button_image";
@@ -4169,7 +4169,7 @@ group {
 
 
 group {
-	name: "elm/button/base/playview/custom/flat_63_78/default";
+	name: "elm/button/base/custom/flat_63_78/default";
 	parts {
 		part {
 			name: "button_image";

@@ -350,7 +350,7 @@ static bool _vp_play_speed_popup_create_button(Evas_Object *pParent,
 	PlaySpeedPopup *pPlaySpeedPopup = (PlaySpeedPopup *) pUserData;
 
 	pPlaySpeedPopup->pDelButton =
-	    vp_button_create(pParent, "playview/custom/flat_63_78/default",
+	    vp_button_create(pParent, "custom/flat_63_78/default",
 	                     NULL,
 	                     (Evas_Smart_Cb) __vp_play_speed_btn_clicked_cb,
 	                     (Evas_Smart_Cb) NULL, (Evas_Smart_Cb) NULL,
@@ -359,7 +359,7 @@ static bool _vp_play_speed_popup_create_button(Evas_Object *pParent,
 
 
 	pPlaySpeedPopup->pAddButton =
-	    vp_button_create(pParent, "playview/custom/flat_63_78/default",
+	    vp_button_create(pParent, "custom/flat_63_78/default",
 	                     NULL,
 	                     (Evas_Smart_Cb) __vp_play_speed_btn_clicked_cb,
 	                     (Evas_Smart_Cb) NULL, (Evas_Smart_Cb) NULL,
