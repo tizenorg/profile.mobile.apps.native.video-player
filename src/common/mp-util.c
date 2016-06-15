@@ -82,6 +82,31 @@ static Evas_Object *pMainWindowHandle = NULL;
 static Evas_Object *pMainConformant = NULL;
 
 mpColorThemeChangedCb g_fThemeChangedCb = NULL;
+static bool auto_play = false;
+
+bool vp_is_auto_play_on(){
+	VideoLogInfo("");
+	int nErr = 0;
+	bool nVal = 0;
+	nErr = preference_get_boolean(PREF_MP_VIDEO_AUTO_PLAY_TYPE_KEY, &nVal);
+	if (nErr != 0) {
+		VideoLogError("failed to get MULTI PLAY FLAG [0x%x]", nErr);
+		return FALSE;
+	}
+	if(nVal)
+		return TRUE;
+	else
+		return false;
+}
+void vp_set_auto_play(bool val){
+	auto_play = val;
+	int nErr = 0;
+	nErr = preference_set_boolean(PREF_MP_VIDEO_AUTO_PLAY_TYPE_KEY, val);
+	if (nErr != 0) {
+		VideoLogError("failed to set MULTI PLAY FLAG [0x%x]", nErr);
+	}
+}
+
 
 void mp_util_set_color_theme_changed_cb(mpColorThemeChangedCb fChanged)
 {

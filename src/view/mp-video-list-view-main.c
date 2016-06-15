@@ -39,6 +39,7 @@
 #include "mp-video-list-remove-view.h"
 #include "mp-video-search-view.h"
 #include "mp-video-list-view-as-ctrl.h"
+#include "mp-video-list-auto-play-ctrl.h"
 #include "mp-launching-video-displayer.h"
 #include "mp-video-list-view-normal.h"
 #include "mp-video-info-ctrl.h"
@@ -243,6 +244,21 @@ void mp_list_view_view_as_cb(void *pUserData, Evas_Object *pObject,
 	}
 }
 
+void mp_list_view_auto_play_cb(void *pUserData, Evas_Object *pObject,
+			     void *pEventInfo)
+{
+
+	mp_ft_ctrl_hide_more_popup();
+
+	MpFooterLibraryMainListTabType footerTabType =
+		(MpFooterLibraryMainListTabType) pUserData;
+	if (FOOTER_TAB_TYPE_PERSONAL == footerTabType) {
+		mp_auto_play_ctrl_show();
+	} else {
+		VideoLogError("invalid footer type");
+	}
+}
+
 void mp_list_view_rename_cb(void *pUserData, Evas_Object *pObject,
 			    void *pEventInfo)
 {
@@ -378,6 +394,7 @@ void mp_list_view_check_more_button_of_toolbar(void)
 				(void *) mp_list_view_search_item_cb;
 			pRegisteCbFunc->DeleteCb = (void *) mp_list_view_delete_cb;
 			pRegisteCbFunc->ViewAsCb = (void *) mp_list_view_view_as_cb;
+			pRegisteCbFunc->AutoPlayCb = (void *) mp_list_view_auto_play_cb;
 			if (mp_view_as_ctrl_get_type() != MP_LIST_VIEW_AS_FOLDER_LIST) {
 				pRegisteCbFunc->SortItemCb =
 					(void *) mp_list_view_sort_item_cb;

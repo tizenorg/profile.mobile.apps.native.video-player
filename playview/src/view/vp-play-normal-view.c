@@ -3808,6 +3808,23 @@ static void __vp_normal_completed_cb(void *pUserData)
 		return;
 	}
 
+	if(pPlayView->szAutoPlay != NULL) {
+	if(!strcmp(pPlayView->szAutoPlay,"TRUE")) {
+		VideoLogError("===========================vp_is_auto_play_on is True");
+		_vp_play_normal_view_on_next_play(pNormalView, TRUE);
+	}
+	else
+	{
+		VideoLogError("===========================vp_is_auto_play_on is False");
+		_vp_play_normal_view_on_next_play(pNormalView, FALSE);
+	}
+	}
+	else
+	{
+		VideoLogError("===========================vp_is_auto_play_on is False");
+				_vp_play_normal_view_on_next_play(pNormalView, FALSE);
+	}
+
 #ifdef FLICK_JUMP
 	pNormalView->bFlickWaiting = FALSE;
 	VP_EVAS_DEL(pNormalView->pFlickJumpSeek);
@@ -3847,7 +3864,6 @@ static void __vp_normal_completed_cb(void *pUserData)
 		return;
 	}
 
-	_vp_play_normal_view_on_next_play(pNormalView, FALSE);
 }
 
 

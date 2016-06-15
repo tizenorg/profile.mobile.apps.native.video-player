@@ -24,6 +24,7 @@
 #include <Ecore_Evas.h>
 
 #include "mp-video-list-view-as-ctrl.h"
+#include "mp-video-list-auto-play-ctrl.h"
 #include <efl_extension.h>
 
 typedef void (*MpUtilExitCbFunc)(void);
@@ -185,5 +186,9 @@ void mp_util_virtual_keypad_disabled_set(Eina_Bool bDisabled);
 
 int mp_util_set_translate_str(Evas_Object *obj, const char *str);
 
+bool vp_is_auto_play_on();
+void vp_set_auto_play(bool val);
+
+#define PREF_MP_VIDEO_AUTO_PLAY_TYPE_KEY  "preference/org.tizen.videos/auto_play_type"
 #endif // _MP_UTIL_
 

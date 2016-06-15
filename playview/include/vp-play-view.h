@@ -45,6 +45,7 @@ bool vp_play_view_set_url(play_view_handle pViewHandle, const char *szMediaURL);
 bool vp_play_view_get_url(play_view_handle pViewHandle, char **szMediaURL);
 bool vp_play_view_get_visible_status(play_view_handle pViewHandle, bool *bVisible);
 bool vp_play_view_set_device_id(play_view_handle pViewHandle, const char *szDeviceID);
+bool vp_play_view_set_auto_play_setting(play_view_handle pViewHandle, const char *autoplay);
 bool vp_play_view_set_dmr_id(play_view_handle pViewHandle, const char *szDMRID);
 bool vp_play_view_set_media_title(play_view_handle pViewHandle, const char *szMediaTitle);
 bool vp_play_view_set_play_mode(play_view_handle pViewHandle, video_play_mode_t nMode);

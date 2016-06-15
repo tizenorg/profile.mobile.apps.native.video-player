@@ -1596,6 +1596,7 @@ static void _vp_play_view_destroy_handle(PlayView *pPlayView)
 	VP_FREE(pPlayView->szSubtitleURL);
 	VP_FREE(pPlayView->szMediaURL);
 	VP_FREE(pPlayView->szDeviceID);
+	VP_FREE(pPlayView->szAutoPlay);
 	VP_FREE(pPlayView->szDMRID);
 	VP_FREE(pPlayView->szCookie);
 	VP_FREE(pPlayView->szProxy);
@@ -2334,7 +2335,23 @@ bool vp_play_view_set_device_id(play_view_handle pViewHandle, const char *szDevi
 
 	VP_FREE(pPlayView->szDeviceID);
 	VP_STRDUP(pPlayView->szDeviceID, szDeviceID);
+	return TRUE;
+}
 
+bool vp_play_view_set_auto_play_setting(play_view_handle pViewHandle, const char *autoplay)
+{
+	if (!pViewHandle) {
+		VideoLogError("PlayView handle is NULL");
+		return FALSE;
+	}
+	if (!autoplay) {
+		VideoLogError("autoplay is NULL");
+		return FALSE;
+	}
+
+	PlayView *pPlayView = (PlayView *)pViewHandle;
+	VP_FREE(pPlayView->szAutoPlay);
+	VP_STRDUP(pPlayView->szAutoPlay, autoplay);
 	return TRUE;
 }
 

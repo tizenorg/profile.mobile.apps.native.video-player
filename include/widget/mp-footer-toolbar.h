@@ -35,6 +35,7 @@ typedef struct
 	void* ShareViaCb;
 	void* DeleteCb;
 	void* ViewAsCb;
+	void* AutoPlayCb;
 	void* SortItemCb;
 	void* RenameCb;
 	void* DetailsCb;

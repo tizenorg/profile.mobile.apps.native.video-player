@@ -304,6 +304,17 @@ void mp_ft_ctrl_create_more_btn_of_personal(void *pUserData,
 				EINA_TRUE);
 		nItemCount++;
 	}
+	if (nVideoListSize > 0 && g_pToolbarWidget->ToolbarCbFunc.AutoPlayCb) {
+			item =
+				elm_ctxpopup_item_append(g_pToolbarWidget->pMoreCtxPopup,
+						"Auto play next", NULL,
+							 g_pToolbarWidget->ToolbarCbFunc.
+							 AutoPlayCb,
+							 (void *) FOOTER_TAB_TYPE_PERSONAL);
+			elm_object_item_domain_text_translatable_set(item, VIDEOS_STRING,
+					EINA_TRUE);
+			nItemCount++;
+	}
 	if (nVideoListSize > 0 && g_pToolbarWidget->ToolbarCbFunc.SortItemCb) {
 		item =
 			elm_ctxpopup_item_append(g_pToolbarWidget->pMoreCtxPopup,
@@ -521,6 +532,11 @@ void mp_ft_ctrl_registe_cb_func(st_RegisteCbFunc *pCallbackFunc)
 	if (pCallbackFunc->ViewAsCb) {
 		g_pToolbarWidget->ToolbarCbFunc.ViewAsCb =
 			pCallbackFunc->ViewAsCb;
+	}
+
+	if (pCallbackFunc->AutoPlayCb) {
+			g_pToolbarWidget->ToolbarCbFunc.AutoPlayCb =
+				pCallbackFunc->AutoPlayCb;
 	}
 
 	if (pCallbackFunc->SignInCb) {

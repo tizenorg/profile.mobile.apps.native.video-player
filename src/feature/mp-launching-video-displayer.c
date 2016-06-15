@@ -113,6 +113,8 @@ void mp_launch_video_play(char *szMediaUrl, MpPlayerType nPlayerType,
 
 	app_control_h pService = NULL;
 
+	bool bAutoPlay = vp_is_auto_play_on();
+	VideoLogError("vp_is_auto_play_on= %d",bAutoPlay);
 	VideoSecureLogInfo("start play:%s,%d,%s,%d", szMediaUrl, nPlayerType,
 			   szDeviceID, bMultiPlay);
 
@@ -131,6 +133,23 @@ void mp_launch_video_play(char *szMediaUrl, MpPlayerType nPlayerType,
 	nRet = app_control_set_uri(pService, szMediaUrl);
 	if (nRet != APP_CONTROL_ERROR_NONE) {
 		VideoLogError("app_control_set_uri is fail [0x%x]", nRet);
+	}
+
+	if (bAutoPlay == TRUE) {
+		nRet = app_control_add_extra_data(pService, "auto_play_setting",
+				"TRUE");
+		if (nRet != APP_CONTROL_ERROR_NONE) {
+			VideoLogError("app_control_add_extra_data is fail [0x%x]",
+					nRet);
+		}
+	}
+	else{
+		nRet = app_control_add_extra_data(pService, "auto_play_setting",
+				"FALSE");
+		if (nRet != APP_CONTROL_ERROR_NONE) {
+			VideoLogError("app_control_add_extra_data is fail [0x%x]",
+					nRet);
+		}
 	}
 
 	if (nPlayerType == MP_PLAYER_TYPE_VIDEO) {

@@ -109,6 +109,7 @@ typedef struct _PlayView {
 	char				*szMediaURL;
 	char				*szMediaTitle;
 	char				*szDeviceID;
+	char				*szAutoPlay;
 	char				*szDMRID;
 
 	int				nStartPosition;

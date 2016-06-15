@@ -88,6 +88,7 @@ typedef struct
 	char			*pMediaUri;			// play file path or url
 	char			*szMediaTitle;			// media file title
 	char			*szDeviceID;
+	char			*szAutoPlay;
 	char			*szDMRID;
 	char			*szCookie;
 	char			*szProxy;

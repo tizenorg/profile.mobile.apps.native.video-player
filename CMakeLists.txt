@@ -26,6 +26,7 @@ src/widget/mp-video-list-sort-ctrl.c
 src/widget/mp-util-widget-ctrl.c
 src/widget/mp-video-rename-ctrl.c
 src/widget/mp-video-list-view-as-ctrl.c
+src/widget/mp-video-list-auto-play-ctrl.c
 src/widget/mp-footer-toolbar.c
 src/widget/mp-video-nocontent-layout.c
 

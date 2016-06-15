@@ -87,6 +87,7 @@ static void __VpServiceParserGetStoreOrderInfo(app_control_h pAppSvcHandle, VpSe
 
 static Eina_Bool __VpServiceParserGetStreamingLaunch(char *pUri);
 static char *__VpServiceParserGetDeviceID(app_control_h pAppSvcHandle);
+static char *__VpServiceParserGetAutoPlaySetting(app_control_h pAppSvcHandle);
 static char *__VpServiceParserGetDMRID(app_control_h pAppSvcHandle);
 
 static char *__VpServiceParserGetCookie(app_control_h pAppSvcHandle);
@@ -190,7 +191,7 @@ Eina_Bool VpServiceParserGetServiceData(app_control_h pAppSvcHandle, VpServiceDa
 		pReceiveData->eSortType	= VP_VIDEO_SORT_TYPE_BY_NONE;
 		pReceiveData->eListType	= VP_VIDEO_PLAY_LIST_TYPE_NONE;
 	}
-
+	pReceiveData->szAutoPlay = __VpServiceParserGetAutoPlaySetting(pAppSvcHandle);
 	return EINA_TRUE;
 }
 
@@ -709,6 +710,29 @@ static char *__VpServiceParserGetDeviceID(app_control_h pAppSvcHandle)
 	}
 
 	return szDeviceID;
+
+}
+
+static char *__VpServiceParserGetAutoPlaySetting(app_control_h pAppSvcHandle)
+{
+	if (pAppSvcHandle == NULL) {
+		VideoLogError("pAppSvcHandle == NULL!!!");
+		return NULL;
+	}
+
+	char *AutoSetting = NULL;
+
+	if (app_control_get_extra_data(pAppSvcHandle, "auto_play_setting", &AutoSetting) != APP_CONTROL_ERROR_NONE) {
+		VideoLogInfo("No exist buntle type.");
+
+		if (!AutoSetting) {
+			free(AutoSetting);
+			AutoSetting	= NULL;
+		}
+		return NULL;
+	}
+
+	return AutoSetting;
 
 }
 

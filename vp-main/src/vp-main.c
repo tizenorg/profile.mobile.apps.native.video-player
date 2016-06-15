@@ -372,7 +372,9 @@ static Eina_Bool __appControl_idler_cb(void *data)
 			VideoLogError("vp_play_view_set_device_id is fail");
 		}
 	}
-
+	if (!vp_play_view_set_auto_play_setting(pAppData->pPlayView , pAppData->pServiceData->szAutoPlay)) {
+				VideoLogError("vp_play_view_set_auto_play_setting is fail");
+			}
 	if (pAppData->pServiceData->szMediaTitle) {
 		VideoLogWarning("szMediaTitle : %s", pAppData->pServiceData->szMediaTitle);
 		if (!vp_play_view_set_media_title(pAppData->pPlayView , pAppData->pServiceData->szMediaTitle)) {
