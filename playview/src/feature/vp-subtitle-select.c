@@ -169,6 +169,10 @@ static void __vp_subtitle_select_genlist_item_selected_cb(void *pUserData, Evas_
 	char *szTxt = (char *)elm_object_item_data_get(pItem);
 
 	VideoSecureLogInfo("Selected subtitle path=%s", szTxt);
+	if (szTxt == NULL) {
+		VideoLogError("szTxt is NULL");
+		return;
+	}
 
 	SubtitleSelectPopup *pSubtitleSelect = (SubtitleSelectPopup *)pUserData;
 	int nIndex = 0;

@@ -329,7 +329,10 @@ int _vp_subtitle_color_get_platte_index(char *colorHex)
 	int nIndex = 0;
 	char *pColorHex = g_strndup(colorHex, 7);
 	VideoLogInfo("pColorHex %s", pColorHex);
-
+	if (pColorHex == NULL) {
+		VideoLogError("pColorHex is NULL");
+		return 0;
+	}
 	if (!strcmp(pColorHex, "#ffffff")) {
 		nIndex = 0;
 	} else if (!strcmp(pColorHex, "#000000")) {

@@ -227,6 +227,10 @@ static void __vp_subtitle_font_genlist_item_selected_cb(void *pUserData,
 	}
 	char *szTxt = (char *)elm_object_item_data_get(pItem);
 	VideoLogError("szTxt = %s", szTxt);
+	if (szTxt == NULL) {
+		VideoLogError("szTxt is NULL");
+		return;
+	}
 
 	SubtitleFontPopup *pSubtitleFont = (SubtitleFontPopup *) pUserData;
 	int nIdx = 0;

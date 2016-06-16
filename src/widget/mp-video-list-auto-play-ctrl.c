@@ -55,7 +55,7 @@ static void __mp_auto_play_ctrl_cancel_btn_cb(void *pUserData, Evas_Object *pObj
 static void __mp_auto_play_ctrl_select_item_cb(void *pUserData, Evas_Object *pObject, void *pEventInfo);
 static void  __mp_auto_play_ctrl_select_radio_cb(void *pUserData, Evas_Object *pObject, void *pEventInfo);
 
-void mp_auto_play_config_set_auto_play_status(bool bMultiPlay)
+/*void mp_auto_play_config_set_auto_play_status(bool bMultiPlay)
 {
 	int nErr = 0;
 
@@ -66,7 +66,7 @@ void mp_auto_play_config_set_auto_play_status(bool bMultiPlay)
 	}
 
 	return TRUE;
-}
+}*/
 
 bool mp_auto_play_config_get_auto_play_status()
 {
