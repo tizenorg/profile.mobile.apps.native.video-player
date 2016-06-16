@@ -916,10 +916,10 @@ bool vp_play_util_is_exist_subtitle_from_path(const char *szPath)
 				continue;
 			}
 			szExt = szFileName + strlen(szName);
-			if (szExt == NULL) {
+			/*if (szExt == NULL) {
 				VP_FREE(szName);
 				continue;
-			}
+			}*/
 			for (nIdx = 0; nIdx < 6; nIdx++) {
 				if (strcmp(szExt, szExtWildkey[nIdx]) == 0) {
 					nCount++;
@@ -971,10 +971,10 @@ bool vp_play_util_get_subtitles_from_path(const char *szPath,
 				continue;
 			}
 			szExt = szFileName + strlen(szName);
-			if (szExt == NULL) {
+			/*if (szExt == NULL) {
 				VP_FREE(szName);
 				continue;
-			}
+			}*/
 			for (nIdx = 0; nIdx < 6; nIdx++) {
 				if (strcmp(szExt, szExtWildkey[nIdx]) == 0) {
 					char *szSubtitleName = NULL;

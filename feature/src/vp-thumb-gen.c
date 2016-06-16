@@ -326,7 +326,7 @@ static void *_vp_thumb_gen_thread_loop(void *pUserData)
 		}
 		_vp_thumb_gen_unlock();
 
-		usleep(1000);
+		usleep(10000);
 	}
 	vp_dbgW(" == Thread End ==");
 

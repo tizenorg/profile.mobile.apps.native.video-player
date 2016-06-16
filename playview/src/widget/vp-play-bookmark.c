@@ -427,7 +427,10 @@ static void __vp_play_bookmark_item_select_cb(void *pUserData,
 	pBookmarkItem =
 	    (BookmarkItem *) elm_object_item_data_get((Elm_Object_Item *)
 	            pEvent);
-
+	if (pBookmarkItem == NULL) {
+		VideoLogError("pBookmarkItem is NULL");
+		return;
+	}
 	elm_gengrid_item_selected_set(pBookmarkItem->pElmItem, EINA_FALSE);
 
 	if (pBookmarkWidget->bEditMode) {
