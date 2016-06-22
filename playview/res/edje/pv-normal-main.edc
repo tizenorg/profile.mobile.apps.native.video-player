@@ -576,11 +576,11 @@ collections {
 				description {
 					state: "default" 0.0;
 					visible: 0;
-					min: 320 80;
+					min: 0 80;
 					fixed: 1 1;
-					align: 0.5 1.0;
-					rel1 { relative: 0.5 0.0; to_y : "pv.normal.main.control"; }
-					rel2 { relative: 0.5 0.0; to_y : "pv.normal.main.control"; }
+					align: 0.0 1.0;
+					rel1 { relative: 0.0 0.0; to_y : "pv.normal.main.control"; }
+					rel2 { relative: 1.0 0.0; to_y : "pv.normal.main.control"; }
 					color:  0 0 0 102;
 				}
 				description {
