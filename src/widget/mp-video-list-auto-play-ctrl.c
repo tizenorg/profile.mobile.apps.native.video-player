@@ -390,7 +390,9 @@ bool mp_auto_play_ctrl_show()
 		nMax_view_list++;
 	}
 #else
-*/	vp_set_auto_play(false);
+*/
+	if(!vp_is_auto_play_on())
+	vp_set_auto_play(false);
 	elm_genlist_item_append(g_pAutoPlayHandle->pGenList, g_pAutoPlayHandle->stAutoPlayItc, (void *)MP_LIST_AUTO_PLAY_ON, NULL, ELM_GENLIST_ITEM_NONE, __mp_auto_play_ctrl_select_item_cb, NULL);
 	elm_genlist_item_append(g_pAutoPlayHandle->pGenList, g_pAutoPlayHandle->stAutoPlayItc, (void *)MP_LIST_AUTO_PLAY_OFF, NULL, ELM_GENLIST_ITEM_NONE, __mp_auto_play_ctrl_select_item_cb, NULL);
 	nMax_view_list++;
