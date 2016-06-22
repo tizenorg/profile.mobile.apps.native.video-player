@@ -115,6 +115,7 @@ pkg_check_modules(${PROJECT_NAME}_pkgs REQUIRED
 	capi-network-wifi
 	efl-extension
 	capi-telephony
+	dbus-1
 )
 
 FOREACH(flag ${${PROJECT_NAME}_pkgs_CFLAGS})
