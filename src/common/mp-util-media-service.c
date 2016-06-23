@@ -2760,12 +2760,12 @@ char *mp_util_svc_get_duration_str_time(int nVideoItemIndex)
 
 		mp_util_convert_time(nVideoInfoDuration, szTmpStrDurationTime, FALSE);
 
-		if (nVideoInfoLastTime > 0) {
+	/*	if (nVideoInfoLastTime > 0) {
 			mp_util_convert_time(nVideoInfoLastTime, szTmpStrLastPlayedPos, TRUE);
 			snprintf(szTmpStr, STR_LEN_MAX, "<match>%s</match>/%s", szTmpStrLastPlayedPos, szTmpStrDurationTime);
-		} else {
+		} else {*/
 			snprintf(szTmpStr, STR_LEN_MAX, "%s", szTmpStrDurationTime);
-		}
+	/*	}*/
 	}
 	else
 	{

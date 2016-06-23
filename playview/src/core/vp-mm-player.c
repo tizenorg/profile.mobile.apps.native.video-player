@@ -1989,7 +1989,7 @@ bool vp_mm_player_set_position_by_key_frame(mm_player_handle
 	}
 #if 1				//#ifdef USE_I_FRAMESEKK        //fix. because of changing API
 	int nRet =
-	    player_set_play_position(pMMPlayer->pPlayer, nPosition, FALSE,
+	    player_set_play_position(pMMPlayer->pPlayer, nPosition, TRUE,
 	                             __vp_mm_player_seek_completed_cb,
 	                             (void *) pMMPlayer);
 	if (nRet != PLAYER_ERROR_NONE) {
