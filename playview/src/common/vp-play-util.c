@@ -29,7 +29,6 @@
 #include <metadata_extractor.h>
 #include <storage.h>
 #include <system_settings.h>
-#include <dbus/dbus.h>
 
 #include <sys/statvfs.h>
 #include <unicode/udat.h>
@@ -1281,6 +1280,7 @@ void vp_play_util_set_object_offset(Evas_Object *obj, int left, int top,
 	free(msg);
 }
 
+#if 0//Tizen3.0 Build error
 static int __vp_play_util_append_variant(DBusMessageIter *iter, const char *sig, const char *param[])
 {
 	VideoLogInfo("");
@@ -1407,7 +1407,17 @@ vp_play_util_set_unlock_power_key()
 		return;
 	}
 }
+#else
+void
+vp_play_util_set_lock_power_key()
+{
+}
 
+void
+vp_play_util_set_unlock_power_key()
+{
+}
+#endif
 void vp_play_util_focus_next_object_set(Evas_Object *obj,
                                         Evas_Object *next,
                                         Elm_Focus_Direction dir)

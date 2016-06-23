@@ -25,7 +25,6 @@ pkg_check_modules(${PROJECT_NAME}_pkgs REQUIRED
 	dlog
 	capi-appfw-application
 	capi-system-system-settings
-	dbus-1
 )
 
 FOREACH(flag ${${PROJECT_NAME}_pkgs_CFLAGS})
