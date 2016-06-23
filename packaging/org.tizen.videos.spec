@@ -1,6 +1,6 @@
 Name:       org.tizen.videos
-#VCS_FROM:   profile/mobile/apps/native/video-player#71c71f2a4141e3bb790e9fc33388d96d39f11403
-#RS_Ver:    20160620_2 
+VCS:         profile/mobile/apps/native/video-player#963e279c86be0577fa0021bd0e064e4c5beadd49
+#RS_Ver:    20160622_2 
 Summary:    video library & store
 Version:    1.0.0
 Release:    1
@@ -26,7 +26,7 @@ Requires(post):  /usr/bin/tpk-backend
 %endif
 
 %description
-profile/mobile/apps/native/video-player#71c71f2a4141e3bb790e9fc33388d96d39f11403
+#
 This is a container package which have preload TPK files
 
 %prep
