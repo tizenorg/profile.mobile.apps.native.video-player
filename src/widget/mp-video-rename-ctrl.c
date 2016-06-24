@@ -384,6 +384,11 @@ static void __mp_rename_ctrl_entry_long_pressed_cb(void *pUserData, Evas_Object 
 	Evas_Object *en = (Evas_Object *)pObj;
 	evas_object_smart_callback_del (en, "clicked", (Evas_Smart_Cb) __mp_rename_ctrl_entry_clicked_cb);
 }
+
+static void __mp_entry_show_cb(void *data, Evas *e, Evas_Object *pObj, void *event_pEvent)
+{
+  elm_object_focus_set(pObj, EINA_TRUE);
+}
 ////////////////////////////////////////////////////////////
 // Internal function
 ////////////////////////////////////////////////////////////
@@ -547,6 +552,7 @@ Evas_Object *mp_rename_ctrl_show(void *pNaviFrameHandle, void *pUserData, mpRena
 	evas_object_smart_callback_add(en, "preedit,changed", __mp_rename_ctrl_entry_changed_cb, pUserData);
 	evas_object_smart_callback_add(en, "clicked", __mp_rename_ctrl_entry_clicked_cb, pUserData);
 	evas_object_smart_callback_add(en, "longpressed", __mp_rename_ctrl_entry_long_pressed_cb, pUserData);
+	evas_object_event_callback_add(en, EVAS_CALLBACK_SHOW, __mp_entry_show_cb, pUserData);
 
 	__mp_rename_ctrl_set_save_file_name();
 	MP_FREE_STRING(g_pRenameHandle->szOldName);
