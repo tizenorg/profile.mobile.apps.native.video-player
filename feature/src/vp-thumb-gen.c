@@ -433,8 +433,12 @@ vp_thumb_gen_h vp_thumb_gen_create(const char *szMediaURL)
 		vp_dbgE("metadata_extractor_get_metadata is fail : [0x%x]", nRet);
 		return NULL;
 	}
-	pThumbGen->nSrcWidth = atoi(szVal);
-	VP_FREE(szVal);
+	if (szVal == NULL) {
+		pThumbGen->nSrcWidth = 0;
+	} else {
+		pThumbGen->nSrcWidth = atoi(szVal);
+		VP_FREE(szVal);
+	}
 
 	nRet =
 	    metadata_extractor_get_metadata(pThumbGen->meta_h,
@@ -444,8 +448,12 @@ vp_thumb_gen_h vp_thumb_gen_create(const char *szMediaURL)
 		vp_dbgE("metadata_extractor_get_metadata is fail : [0x%x]", nRet);
 		return NULL;
 	}
-	pThumbGen->nSrcHeight = atoi(szVal);
-	VP_FREE(szVal);
+	if (szVal == NULL) {
+		pThumbGen->nSrcHeight = 0;
+	} else {
+		pThumbGen->nSrcHeight = atoi(szVal);
+		VP_FREE(szVal);
+	}
 
 	pthread_mutex_init(&g_mutex, NULL);
 
