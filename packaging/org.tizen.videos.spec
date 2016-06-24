@@ -1,6 +1,6 @@
 Name:       org.tizen.videos
 VCS:         profile/mobile/apps/native/video-player#963e279c86be0577fa0021bd0e064e4c5beadd49
-#RS_Ver:    20160622_2 
+#RS_Ver:    20160623_1 
 Summary:    video library & store
 Version:    1.0.0
 Release:    1
