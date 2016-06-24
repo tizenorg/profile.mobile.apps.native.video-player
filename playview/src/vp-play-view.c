@@ -719,6 +719,7 @@ static Eina_Bool __vp_play_view_event_key_down_cb(void *pUserData, int nType, vo
 			VP_EVAS_TIMER_DEL(pPlayView->pHwKeyLongPressTimer);
 			pPlayView->pHwKeyLongPressTimer = ecore_timer_add(0.5, __vp_play_view_hw_key_long_press_timer_cb, (void *)pPlayView);
 
+			vp_play_normal_check_detail_view(pPlayView->pNormalView);
 			bool bPause = FALSE;
 			vp_play_normal_view_get_pause_status(pPlayView->pNormalView, &bPause);
 			if (bPause) {

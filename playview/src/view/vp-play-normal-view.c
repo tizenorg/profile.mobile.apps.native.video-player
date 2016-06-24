@@ -12135,6 +12135,23 @@ bool vp_play_normal_view_get_manual_pause(normal_view_handle pViewHandle, bool *
 	return TRUE;
 }
 
+void vp_play_normal_check_detail_view(normal_view_handle pViewHandle) {
+
+	if (!pViewHandle) {
+		VideoLogError("pViewHandle is NULL");
+		return;
+	}
+
+	NormalView	*pNormalView = (NormalView *)pViewHandle;
+
+	if (pNormalView->pDetailHandle) {
+		vp_detail_destroy(pNormalView->pDetailHandle);
+		pNormalView->pDetailHandle = NULL;
+	}
+
+	return;
+}
+
 bool vp_play_normal_view_get_pause_status(normal_view_handle pViewHandle, bool *bPause)
 {
 	if (!pViewHandle) {

@@ -410,7 +410,6 @@ static Eina_Bool vp_detail_view_back_btn_cb(void *pUserData, Elm_Object_Item *pI
 		                       (void *) pDetailViewHandle->pUserData);
 	}
 
-
 	return EINA_TRUE;
 }
 
@@ -632,10 +631,21 @@ detail_handle vp_detail_create(Evas_Object *pParent,
 */
 void vp_detail_destroy(detail_handle pDetailHandle)
 {
+	VideoLogError("vp_detail_destroy called");
 	if (pDetailHandle == NULL) {
 		VideoLogError("pDetailHandle is NULL");
 		return;
 	}
+
+	if(pDetailViewHandle->pGenList) {
+		evas_object_del(pDetailViewHandle->pGenList);
+	}
+	if(pDetailViewHandle->BaseLayout) {
+		evas_object_del(pDetailViewHandle->BaseLayout);
+	}
+	Evas_Object *pTopNaviFrame = NULL;
+	pTopNaviFrame = elm_naviframe_item_pop(pDetailViewHandle->pNaviFrameHandle);
+	evas_object_del(pTopNaviFrame);
 
 	_vp_detail_destroy_handle();
 

@@ -60,6 +60,7 @@ bool vp_play_normal_view_set_audio_track(normal_view_handle pViewHandle, int nAu
 bool vp_play_normal_view_set_manual_pause(normal_view_handle pViewHandle, bool bStartPause);
 bool vp_play_normal_view_get_manual_pause(normal_view_handle pViewHandle, bool *bManualPause);
 bool vp_play_normal_view_get_pause_status(normal_view_handle pViewHandle, bool *bPause);
+void vp_play_normal_check_detail_view(normal_view_handle pViewHandle);
 bool vp_play_normal_view_get_sound_filter(normal_view_handle pViewHandle, video_sound_alive_t *nSoundAlive);
 bool vp_play_normal_view_set_sound_filter(normal_view_handle pViewHandle, video_sound_alive_t nSoundAlive);
 bool vp_play_normal_view_update(normal_view_handle pViewHandle);
