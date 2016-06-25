@@ -16,7 +16,7 @@
 */
 
 #define NAVIFRAME_TOP_LINE_COLOR  146 130 255 255
-#define SEARCHBAR_H_INC 99
+#define SEARCHBAR_H_INC 69
 externals {
 	   external: "elm";
 	   external: "feedback";
@@ -197,7 +197,7 @@ plugins {
 				scale: 1;
 				description {
 					state: "default" 0.0;
-					// min: 0 SEARCHBAR_H_INC;
+					min: 0 SEARCHBAR_H_INC;
 					//fixed: 0 1;
 					align: 0.0 0.5;
 					rel1 { relative: 0.0 0.05; to: "searchbar_inner_rect"; }
