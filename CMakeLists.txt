@@ -100,6 +100,7 @@ pkg_check_modules(pkgs REQUIRED
 	capi-telephony
 	capi-appfw-preference
 	libtzplatform-config
+	dbus-1
 )
 
 FOREACH(flag ${pkgs_CFLAGS})

@@ -61,6 +61,7 @@ BuildRequires: pkgconfig(tapi)
 BuildRequires: pkgconfig(efl-extension)
 BuildRequires: pkgconfig(capi-telephony)
 BuildRequires: pkgconfig(libtzplatform-config)
+BuildRequires: pkgconfig(dbus-1)
 
 %description
 video library

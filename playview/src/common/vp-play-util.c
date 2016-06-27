@@ -54,6 +54,7 @@
 #include "vp-media-contents.h"
 #include "vp-file-util.h"
 #include "utils_i18n.h"
+#include <dbus/dbus.h>
 
 #define FILE_SIZE_LEN_MAX			64
 #define UG_DATE_FORMAT_12			"yMMMdhms"
@@ -1280,7 +1281,7 @@ void vp_play_util_set_object_offset(Evas_Object *obj, int left, int top,
 	free(msg);
 }
 
-#if 0//Tizen3.0 Build error
+#if 1//Tizen3.0 Build error
 static int __vp_play_util_append_variant(DBusMessageIter *iter, const char *sig, const char *param[])
 {
 	VideoLogInfo("");
