@@ -2122,7 +2122,7 @@ bool vp_play_view_unrealize(play_view_handle pViewHandle)
 
 	if (pPlayView->bDestroy == FALSE) {
 		VideoLogWarning("Skip for screen mirroring mode");
-		return TRUE;
+		//return TRUE;
 	}
 
 	pPlayView->bRealized = FALSE;
