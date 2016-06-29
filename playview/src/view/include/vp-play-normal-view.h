@@ -108,7 +108,7 @@ int vp_controller_normal_view_get_duration(normal_view_handle pViewHandle);
 bool vp_controller_normal_view_pop_view(normal_view_handle pViewHandle);
 int vp_controller_normal_view_get_played_state(normal_view_handle pViewHandle);
 bool vp_controller_normal_view_add_played_state_cb(normal_view_handle pViewHandle, vp_normal_view_state_cb fState_cb);
-
+bool vp_normal_rotate_icon_timer_cb(void *pUserData);
 //db
 void vp_play_normal_view_db_change(normal_view_handle pViewHandle);
 

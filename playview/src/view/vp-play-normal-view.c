@@ -225,7 +225,6 @@ typedef struct _NormalView {
 	Evas_Object			*pLoadingAni;
 
 	Ecore_Timer			*pHideTimer;
-	Ecore_Timer			*pRotateTimer;
 	Ecore_Timer			*pHideFinishTimer;
 	Ecore_Timer			*pLockScreenTimer;
 
@@ -502,6 +501,7 @@ static void _vp_play_normal_view_set_button_focus_sequence(NormalView *pNormalVi
 static void _vp_normal_view_speed_for_steps(NormalView *pNormalView, bool bSpeedFF);
 
 static vp_mm_player_state_t pState = VP_MM_PLAYER_STATE_NONE;
+static NormalView *curr_Handle = NULL;
 
 #ifdef SUBTITLE_K_FEATURE
 /*Set caption window: size, rel1, color*/
@@ -3354,25 +3354,11 @@ static void __vp_normal_bookmark_item_select_cb(int nPos, const char *szPath, vo
 }
 */
 
-static Eina_Bool __vp_normal_rotate_icon_timer_cb(void *pUserData)
+bool vp_normal_rotate_icon_timer_cb(void *pUserData)
 {
-	bool bLocked = FALSE;
-	int nErr = -1;
-	nErr = system_settings_get_value_bool(SYSTEM_SETTINGS_KEY_DISPLAY_SCREEN_ROTATION_AUTO, &bLocked);
-	if (nErr != SYSTEM_SETTINGS_ERROR_NONE) {
-		VideoLogError("failed to get screen rotation status [0x%x]", nErr);
-		return EINA_FALSE;
-	}
-
-	NormalView *pNormalView = (NormalView *)pUserData;
-	if (bLocked) {
-		if (pNormalView->pMainLayout) {
-			elm_object_signal_emit(pNormalView->pMainLayout, VP_NORMAL_SIGNAL_MAIN_ROTATE_HIDE, "*");
-		}
-	}
-
+	VideoLogError("vp_normal_rotate_icon_timer_cb");
+	_vp_play_normal_view_hide_layout(curr_Handle, TRUE);
 	return TRUE;
-
 }
 
 static Eina_Bool __vp_normal_hide_layout_timer_cb(void *pUserData)
@@ -3387,7 +3373,6 @@ static Eina_Bool __vp_normal_hide_layout_timer_cb(void *pUserData)
 
 	pNormalView->pHideTimer = NULL;
 	VP_EVAS_TIMER_DEL(pNormalView->pHideFinishTimer);
-	VP_EVAS_TIMER_DEL(pNormalView->pRotateTimer);
 	vp_mm_player_state_t nState = VP_MM_PLAYER_STATE_NONE;
 
 	if (!vp_mm_player_get_state(pNormalView->pPlayerHandle, &nState)) {
@@ -9805,9 +9790,6 @@ static void _vp_play_normal_view_create_layout_hide_timer(NormalView *pNormalVie
 	VP_EVAS_TIMER_DEL(pNormalView->pHideFinishTimer);
 	pNormalView->pHideTimer = ecore_timer_add(VP_NORMAL_HIDE_LAYOUT_TIMER_INTERVAL,
 	                          __vp_normal_hide_layout_timer_cb, (void *)pNormalView);
-	pNormalView->pRotateTimer = ecore_timer_add(0.5,
-		                          __vp_normal_rotate_icon_timer_cb, (void *)pNormalView);
-
 }
 
 static void _vp_play_normal_view_show_rotate(NormalView *pNormalView)
@@ -11300,7 +11282,6 @@ static void _vp_play_normal_view_destroy_handle(NormalView *pNormalView)
 	VP_FREE(pNormalView->pSelectedSubtitleLanguage);
 #endif
 	VP_FREE(pNormalView);
-
 	VideoLogError("_vp_play_normal_view_destroy End");
 }
 
@@ -11453,7 +11434,7 @@ normal_view_handle vp_play_normal_view_create(PlayView *pPlayView, video_play_la
 	pNormalView->nWaitPos = -1;
 	pNormalView->fPlaySpeed = pPlayView->fPlaySpeed;
 	pNormalView->fSubtitleSyncValue = pPlayView->fSubtitleSyncValue;
-
+	curr_Handle = pNormalView;
 	elm_object_focus_allow_set(pNormalView->pNaviFrame, EINA_TRUE);
 	elm_object_tree_focus_allow_set(pNormalView->pNaviFrame, EINA_TRUE);
 	elm_object_focus_set(pNormalView->pNaviFrame, EINA_TRUE);
@@ -11510,6 +11491,7 @@ void vp_play_normal_view_destroy(normal_view_handle pViewHandle)
 	elm_naviframe_item_pop(pNormalView->pNaviFrame);
 
 	_vp_play_normal_view_destroy_handle(pNormalView);
+	curr_Handle = NULL;
 }
 
 bool vp_play_normal_view_realize(normal_view_handle pViewHandle)

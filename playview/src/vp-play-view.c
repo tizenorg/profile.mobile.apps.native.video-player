@@ -1000,7 +1000,7 @@ static void __vp_play_view_rotate_lock_key_changed_cb(system_settings_key_e key,
 		VideoLogError("vp_play_config_get_rotate_lock_status is fail");
 		return;
 	}
-
+	vp_normal_rotate_icon_timer_cb(pUserData);
 	if (bLockState == FALSE) {
 		elm_win_wm_rotation_preferred_rotation_set(pPlayView->pWin, 0);
 	} else {
