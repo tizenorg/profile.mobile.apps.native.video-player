@@ -29,7 +29,6 @@
 #include "vp-play-view-priv.h"
 
 #include "vp-play-normal-view.h"
-#include "vp-play-multi-view.h"
 
 #include "vp-play-popup.h"
 #include "vp-play-button.h"
