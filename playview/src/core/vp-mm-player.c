@@ -1230,21 +1230,17 @@ mm_player_handle vp_mm_player_create()
 
 	VideoLogInfo(">> player create");
 
-	sound_manager_get_focus_reacquisition(pMMPlayer->stream_info, &pMMPlayer->reacquire_state);
-	if (pMMPlayer->reacquire_state == EINA_FALSE)
-		sound_manager_set_focus_reacquisition(pMMPlayer->stream_info, EINA_TRUE);
-	sound_stream_focus_state_e state_for_playback;
-	sound_stream_focus_state_e state_for_recording;
-	int ret = -1;
-	ret = sound_manager_get_focus_state(pMMPlayer->stream_info, &state_for_playback, &state_for_recording);
-	if (ret != SOUND_MANAGER_ERROR_NONE) {
-		VideoLogError("failed to get focus state error[%x]", ret);
-       	}
-	if (state_for_playback == SOUND_STREAM_FOCUS_STATE_RELEASED) {
-	        int error = SOUND_MANAGER_ERROR_NONE;
+	if (pMMPlayer->stream_info) {
+		int error = SOUND_MANAGER_ERROR_NONE;
 		error = sound_manager_acquire_focus(pMMPlayer->stream_info, SOUND_STREAM_FOCUS_FOR_PLAYBACK, NULL);
-		if (error != SOUND_MANAGER_ERROR_NONE)
+		if (error != SOUND_MANAGER_ERROR_NONE) {
 			VideoLogError("failed to acquire focus [%x]", error);
+		}
+
+		sound_manager_get_focus_reacquisition(pMMPlayer->stream_info, &pMMPlayer->reacquire_state);
+		if (&pMMPlayer->reacquire_state == EINA_FALSE) {
+			sound_manager_set_focus_reacquisition(pMMPlayer->stream_info, EINA_TRUE);
+		}
 	}
 
 	int nRet = 0;

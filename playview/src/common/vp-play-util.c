@@ -44,6 +44,9 @@
 #include "vp-play-value-define.h"
 #include "vp-play-macro-define.h"
 
+/* Dbus Replacement */
+#include <gio/gio.h>
+
 #ifdef ENABLE_DRM_FEATURE
 #include "vp-drm.h"
 #endif
@@ -1280,15 +1283,16 @@ void vp_play_util_set_object_offset(Evas_Object *obj, int left, int top,
 	free(msg);
 }
 
-#if 0//Tizen3.0 Build error
-static int __vp_play_util_append_variant(DBusMessageIter *iter, const char *sig, const char *param[])
+static int __vp_play_util_append_variant(GDBusMessage *msg, const char *sig, const char *param[])
 {
-	VideoLogInfo("");
-
 	char *ch;
 	int i;
 	int int_type;
 	uint64_t int64_type;
+	GVariant *result_int32;
+	GVariant *result_uint32;
+	GVariant *result_uint64;
+	GVariant *result_string;
 
 	if (!sig || !param) {
 		VideoLogInfo("!sig || !param");
@@ -1301,18 +1305,22 @@ static int __vp_play_util_append_variant(DBusMessageIter *iter, const char *sig,
 		switch (*ch) {
 		case 'i':
 			int_type = atoi(param[i]);
-			dbus_message_iter_append_basic(iter, DBUS_TYPE_INT32, &int_type);
+			result_int32 = g_variant_new ("i", int_type);
+			g_dbus_message_set_body(msg, result_int32);
 			break;
 		case 'u':
 			int_type = atoi(param[i]);
-			dbus_message_iter_append_basic(iter, DBUS_TYPE_UINT32, &int_type);
+			result_uint32 = g_variant_new("u", int_type);
+			g_dbus_message_set_body(msg, result_uint32);
 			break;
 		case 't':
 			int64_type = atoi(param[i]);
-			dbus_message_iter_append_basic(iter, DBUS_TYPE_UINT64, &int64_type);
+			result_uint64 = g_variant_new("t", int64_type);
+			g_dbus_message_set_body(msg, result_uint64);
 			break;
 		case 's':
-			dbus_message_iter_append_basic(iter, DBUS_TYPE_STRING, &(param[i]));
+			result_string = g_variant_new("s", param[i]);
+			g_dbus_message_set_body(msg, result_string);
 			break;
 		default:
 			return -EINVAL;
@@ -1322,55 +1330,49 @@ static int __vp_play_util_append_variant(DBusMessageIter *iter, const char *sig,
 	return 0;
 }
 
-#define DBUS_REPLY_TIMEOUT (120 * 1000)
-DBusMessage * vp_play_util_invoke_dbus_method(const char *dest, const char *path,
+#define GDBUS_REPLY_TIMEOUT (-1)
+GDBusMessage * vp_play_util_invoke_dbus_method(const char *dest, const char *path,
         const char *interface, const char *method,
         const char *sig, const char *param[])
 {
 	VideoLogInfo("");
 
-	DBusConnection *conn;
-	DBusMessage *msg;
-	DBusMessageIter iter;
-	DBusMessage *reply;
-	DBusError err;
+	GDBusConnection *conn = NULL;
+	GDBusMessage *msg = NULL;
+	GDBusMessage *reply = NULL;
+	GError *err = NULL;
 	int r;
 
-	conn = dbus_bus_get(DBUS_BUS_SYSTEM, NULL);
+	conn = g_bus_get_sync(G_BUS_TYPE_SYSTEM, NULL, &err);
 	if (!conn) {
-		VideoLogError("dbus_bus_get error");
+		VideoLogError("e_dbus_bus_get error: %s", err ? err->message : "none");
+		g_error_free(err);
 		return NULL;
 	}
 
-	msg = dbus_message_new_method_call(dest, path, interface, method);
+	msg = g_dbus_message_new_method_call(dest, path, interface, method);
 	if (!msg) {
 		VideoLogError("dbus_message_new_method_call error!");
+		g_object_unref(conn);
 		return NULL;
 	}
 
-	dbus_message_iter_init_append(msg, &iter);
-
-	r = __vp_play_util_append_variant(&iter, sig, param);
+	r = __vp_play_util_append_variant(msg, sig, param);
 	if (r < 0) {
 		VideoLogError("append_variant error(%d)", r);
-		dbus_message_unref(msg);
+		g_object_unref(msg);
 		return NULL;
 	}
 
-	dbus_error_init(&err);
-
-	reply = dbus_connection_send_with_reply_and_block(conn, msg, DBUS_REPLY_TIMEOUT, &err);
+	reply = g_dbus_connection_send_message_with_reply_sync(conn, msg, G_DBUS_SEND_MESSAGE_FLAGS_NONE, GDBUS_REPLY_TIMEOUT, NULL, NULL, &err);
 	if (!reply) {
-		VideoLogError("dbus_connection_send error(No reply)");
+		VideoLogError("g_dbus_connection_send_message_with_reply_sync error : (%s) %s %s:%s-%s", err ? err->message : "none", dest, path, interface, method);
+		g_error_free(err);
+		g_object_unref(msg);
+		g_object_unref(conn);
+	} else {
+		VideoLogInfo("g_dbus_connection_send_message_with_reply_sync success");
 	}
-
-	if (dbus_error_is_set(&err)) {
-		VideoLogError("dbus_connection_send error(%s:%s)", err.name, err.message);
-		reply = NULL;
-	}
-
-	dbus_message_unref(msg);
-	dbus_error_free(&err);
 
 	return reply;
 }
@@ -1378,10 +1380,11 @@ DBusMessage * vp_play_util_invoke_dbus_method(const char *dest, const char *path
 void
 vp_play_util_set_lock_power_key()
 {
+	VideoLogDebug("lock power key pressed");
 	const char *arr[] = {"lcdon", "gotostatenow", "holdkeyblock", "0"};
 
 
-	DBusMessage *msg;
+	GDBusMessage *msg;
 
 	msg = vp_play_util_invoke_dbus_method("org.tizen.system.deviced", "/Org/Tizen/System/DeviceD/Display",
 	                                      "org.tizen.system.deviced.display", "lockstate", "sssi", arr);
@@ -1395,9 +1398,10 @@ vp_play_util_set_lock_power_key()
 void
 vp_play_util_set_unlock_power_key()
 {
+	VideoLogDebug("unlock power key pressed");
 	const char *arr[] = {"lcdon", "resettimer"};
 
-	DBusMessage *msg;
+	GDBusMessage *msg = NULL;
 
 	msg = vp_play_util_invoke_dbus_method("org.tizen.system.deviced", "/Org/Tizen/System/DeviceD/Display",
 	                                      "org.tizen.system.deviced.display", "unlockstate", "ss", arr);
@@ -1407,17 +1411,7 @@ vp_play_util_set_unlock_power_key()
 		return;
 	}
 }
-#else
-void
-vp_play_util_set_lock_power_key()
-{
-}
 
-void
-vp_play_util_set_unlock_power_key()
-{
-}
-#endif
 void vp_play_util_focus_next_object_set(Evas_Object *obj,
                                         Evas_Object *next,
                                         Elm_Focus_Direction dir)
