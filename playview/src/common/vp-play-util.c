@@ -1285,6 +1285,7 @@ void vp_play_util_set_object_offset(Evas_Object *obj, int left, int top,
 
 static int __vp_play_util_append_variant(GDBusMessage *msg, const char *sig, const char *param[])
 {
+/*
 	char *ch;
 	int i;
 	int int_type;
@@ -1293,12 +1294,23 @@ static int __vp_play_util_append_variant(GDBusMessage *msg, const char *sig, con
 	GVariant *result_uint32;
 	GVariant *result_uint64;
 	GVariant *result_string;
+*/
+	GVariant *var;
 
 	if (!sig || !param) {
 		VideoLogInfo("!sig || !param");
 		return 0;
 	}
 
+	if(strcmp(sig, "sssi") == 0) {
+		VideoLogError("Signature is sssi type");
+		var =  g_variant_new("(sssi)", param[0], param[1], param[2], atoi(param[3]));
+	} else if(strcmp(sig, "ss") == 0)  {
+		VideoLogError("Signature is ss type");
+		var =  g_variant_new("(ss)", param[0], param[1]);
+	}
+	g_dbus_message_set_body(msg, var);
+/*
 	for (ch = (char*)sig, i = 0; *ch != '\0'; ++i, ++ch) {
 		VideoLogInfo("i=%d, ch = %c param = %s", i, *ch, param[i]);
 
@@ -1326,7 +1338,7 @@ static int __vp_play_util_append_variant(GDBusMessage *msg, const char *sig, con
 			return -EINVAL;
 		}
 	}
-
+*/
 	return 0;
 }
 
