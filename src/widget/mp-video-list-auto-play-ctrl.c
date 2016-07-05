@@ -53,7 +53,6 @@ static void __mp_auto_play_ctrl_rotate_cb(void *data, Evas_Object *obj, void *ev
 static void __mp_auto_play_ctrl_mouse_up_cb(void *pUserData, Evas *pEvas, Evas_Object *pObject, void *pEventInfo);
 static void __mp_auto_play_ctrl_cancel_btn_cb(void *pUserData, Evas_Object *pObject, void *pEventInfo);
 static void __mp_auto_play_ctrl_select_item_cb(void *pUserData, Evas_Object *pObject, void *pEventInfo);
-static void  __mp_auto_play_ctrl_select_radio_cb(void *pUserData, Evas_Object *pObject, void *pEventInfo);
 
 /*void mp_auto_play_config_set_auto_play_status(bool bMultiPlay)
 {
@@ -172,7 +171,6 @@ static Evas_Object *__mp_auto_play_ctrl_get_icon_of_genlsit_item_cb(const void *
 			mp_auto_play_ctrl_set_type(g_pAutoPlayHandle->nAutoPlaySelect);
 		}
 
-		evas_object_smart_callback_add(pTmpRadio, "changed", __mp_auto_play_ctrl_select_radio_cb, (void *)pUserData);
 		//elm_layout_content_set(pLayout, "elm.swallow.content", pTmpRadio);
 
 		evas_object_show(pTmpRadio);
@@ -246,29 +244,6 @@ static void __mp_auto_play_ctrl_select_item_cb(void *pUserData, Evas_Object *pOb
 			fFunc();
 		}*/
 	}
-}
-
-static void  __mp_auto_play_ctrl_select_radio_cb(void *pUserData, Evas_Object *pObject, void *pEventInfo)
-{
-
-	if (!g_pAutoPlayHandle)
-	{
-		VideoLogError("");
-		return;
-	}
-
-	int nIndex = (int)pUserData;
-
-	g_pAutoPlayHandle->nAutoPlaySelect = nIndex;
-	mp_auto_play_ctrl_set_type(g_pAutoPlayHandle->nAutoPlaySelect);
-
-	/*ListAutoPlayCtrlCbFunc fFunc = g_pAutoPlayHandle->ListAutoPlayCtrlUserCbFunc;*/
-	mp_auto_play_ctrl_hide();
-
-	/*if (fFunc)
-	{
-		fFunc();
-	}*/
 }
 
 static void __mp_auto_play_ctrl_mouse_up_cb(void *pUserData, Evas *pEvas, Evas_Object *pObject, void *pEventInfo)
