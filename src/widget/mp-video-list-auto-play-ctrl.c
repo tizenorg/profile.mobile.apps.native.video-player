@@ -259,16 +259,33 @@ static void  __mp_auto_play_ctrl_select_radio_cb(void *pUserData, Evas_Object *p
 
 	int nIndex = (int)pUserData;
 
-	g_pAutoPlayHandle->nAutoPlaySelect = nIndex;
-	mp_auto_play_ctrl_set_type(g_pAutoPlayHandle->nAutoPlaySelect);
-
-	/*ListAutoPlayCtrlCbFunc fFunc = g_pAutoPlayHandle->ListAutoPlayCtrlUserCbFunc;*/
-	mp_auto_play_ctrl_hide();
-
-	/*if (fFunc)
+	VideoLogError("====================nindex=%d",nIndex);
+	if(nIndex == 1) {
+		VideoLogError("====================vp_set_auto_play=true");
+		vp_set_auto_play(true);
+	}
+	else
 	{
-		fFunc();
-	}*/
+		VideoLogError("====================vp_set_auto_play=false");
+		vp_set_auto_play(false);
+	}
+	if(vp_is_auto_play_on())
+	{
+		VideoLogError("====================found vp_set_auto_play=true");
+	}
+	if (nIndex == g_pAutoPlayHandle->nAutoPlaySelect) {
+		VideoLogInfo("Current state");
+		mp_auto_play_ctrl_hide();
+	} else {
+		g_pAutoPlayHandle->nAutoPlaySelect = nIndex;
+		elm_radio_value_set(g_pAutoPlayHandle->pGroupRadio, g_pAutoPlayHandle->nAutoPlaySelect);
+
+		mp_auto_play_ctrl_set_type(g_pAutoPlayHandle->nAutoPlaySelect);
+
+		/*ListAutoPlayCtrlCbFunc fFunc = g_pAutoPlayHandle->ListAutoPlayCtrlUserCbFunc;*/
+		mp_auto_play_ctrl_hide();
+	}
+
 }
 
 static void __mp_auto_play_ctrl_mouse_up_cb(void *pUserData, Evas *pEvas, Evas_Object *pObject, void *pEventInfo)
