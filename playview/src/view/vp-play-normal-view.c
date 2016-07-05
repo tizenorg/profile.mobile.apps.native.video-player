@@ -7866,6 +7866,7 @@ static void _vp_play_normal_view_on_share_popup(NormalView *pNormalView)
 	if (!vp_mm_player_get_state(pNormalView->pPlayerHandle, &nState)) {
 		VideoLogWarning("vp_mm_player_get_state is fail");
 	}
+	pPlayView->bIsSharePopup = TRUE;
 	if(nState != VP_MM_PLAYER_STATE_PLAYING)
 	{
 		pPlayView->bIsPlayBeforeShare = false;

@@ -2171,8 +2171,10 @@ bool vp_play_view_unrealize(play_view_handle pViewHandle)
 		//vp_play_normal_view_get_subtitle(pPlayView->pNormalView, &(pPlayView->szSubtitleURL));
 
 		VideoLogInfo("vp_play_normal_view_unrealize START");
+		if(!pPlayView->bIsSharePopup) {
 		if (!vp_play_normal_view_unrealize(pPlayView->pNormalView)) {
 			VideoLogError("vp_play_normal_view_unrealize fail");
+		}
 		}
 	}
 
