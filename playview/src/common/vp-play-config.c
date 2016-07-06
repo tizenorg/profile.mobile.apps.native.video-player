@@ -184,7 +184,7 @@ bool vp_play_config_get_call_state(bool *bCallOn)
 {
 	VideoLogInfo("start");
 	telephony_call_h *call_list_sim1, *call_list_sim2;
-	unsigned int count_sim1, count_sim2;
+	unsigned int count_sim1 = 0, count_sim2 = 0;
 	telephony_handle_list_s tel_list;
 	telephony_error_e ret_sim1, ret_sim2;
 
@@ -199,13 +199,16 @@ bool vp_play_config_get_call_state(bool *bCallOn)
 		VideoLogError("Cannot get call list information for primary sim");
 	}
 
-	ret_sim2 = telephony_call_get_call_list(tel_list.handle[1], &count_sim2, &call_list_sim2);
-	if (ret_sim2 != TELEPHONY_ERROR_NONE) {
-		VideoLogError("Cannot get call list information for secondey sim");
+	telephony_call_release_call_list(count_sim1, &call_list_sim1);
+
+	if(tel_list.count > 1) {
+		ret_sim2 = telephony_call_get_call_list(tel_list.handle[1], &count_sim2, &call_list_sim2);
+		if (ret_sim2 != TELEPHONY_ERROR_NONE) {
+			VideoLogError("Cannot get call list information for secondey sim");
+		}
+		telephony_call_release_call_list(count_sim2, &call_list_sim2);
 	}
 
-	telephony_call_release_call_list(count_sim1, &call_list_sim1);
-	telephony_call_release_call_list(count_sim2, &call_list_sim2);
 	telephony_deinit(&tel_list);
 
 	if (count_sim1 == 0 && count_sim2 == 0) {
