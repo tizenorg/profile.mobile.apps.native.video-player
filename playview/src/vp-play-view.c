@@ -2072,7 +2072,7 @@ bool vp_play_view_unrealize(play_view_handle pViewHandle)
 
 	if (pPlayView->bRealized == FALSE) {
 		VideoLogInfo("Already unrealized : playview");
-//		return TRUE;
+		return TRUE;
 	}
 
 	if (pPlayView->nPlayMode == VIDEO_PLAY_MODE_NORMAL_VIEW) {
