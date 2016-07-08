@@ -6931,8 +6931,9 @@ static bool _vp_play_normal_view_play_start(NormalView *pNormalView, bool bCheck
 		VideoLogError("vp_mm_player_create fail");
 		return FALSE;
 	}
+	MMPlayer *handle = (MMPlayer *)pNormalView->pPlayerHandle;
 	int nRet;
-	nRet = player_set_audio_policy_info(pNormalView->pPlayerHandle, pNormalView->pPlayView->stream_info);
+	nRet = player_set_audio_policy_info(handle->pPlayer, pNormalView->pPlayView->stream_info);
 	if (nRet != PLAYER_ERROR_NONE) {
 	        VideoLogError("unable to set sound policy [%x]", nRet);
 	}

@@ -90,17 +90,24 @@ bool vp_sound_init_session(play_view_handle pViewHandle)
 bool vp_sound_deinit_session(play_view_handle pViewHandle)
 {
 	int nRet = SOUND_MANAGER_ERROR_NONE;
-        PlayView *pPlayView = (PlayView *)pViewHandle;
+    if(!pViewHandle)
+    {
+    	VideoLogError("pViewHandle is NULL");
+    	return true;
+    }
+	PlayView *pPlayView = (PlayView *)pViewHandle;
+
 //      nRet = sound_manager_unset_safety_volume();
 //      if (nRet != SOUND_MANAGER_ERROR_NONE) {
 //              VideoLogError("sound_manager_unset_safety_volume fail");
 //              return FALSE;
 //      }
-
-	nRet = sound_manager_destroy_stream_information(pPlayView->stream_info);
-	if (nRet != SOUND_MANAGER_ERROR_NONE) {
-		VideoLogError("sound_manager_unset_current_sound_type fail");
-		return FALSE;
+	if (pPlayView->stream_info) {
+		nRet = sound_manager_destroy_stream_information(pPlayView->stream_info);
+		if (nRet != SOUND_MANAGER_ERROR_NONE) {
+			VideoLogError("sound_manager_unset_current_sound_type fail");
+			return FALSE;
+		}
 	}
 //      sound_manager_unset_available_route_changed_cb();
 	sound_manager_unset_volume_changed_cb();
