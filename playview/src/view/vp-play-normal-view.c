@@ -6002,7 +6002,11 @@ static void __vp_normal_naviframe_back_btn_cb(void *pUserData, Evas_Object *obj,
 	NormalView *pNormalView = (NormalView *)pUserData;
 
 	_vp_play_normal_view_set_played_time(pNormalView);
-	vp_play_view_destroy(pNormalView);
+
+	pNormalView->pExitWaitTimer = ecore_timer_add(VP_NORMAL_EXIT_WAIT_TIMER_INTERVAL,
+				                              __vp_normal_exit_wait_timer_cb, (void *)pNormalView);
+
+	elm_naviframe_item_pop(pNormalView->pNaviFrame);
 
 	return;
 }
