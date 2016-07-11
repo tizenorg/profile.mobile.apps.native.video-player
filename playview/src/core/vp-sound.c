@@ -50,6 +50,9 @@ void vp_player_focus_callback(sound_stream_info_h stream_info, sound_stream_focu
 			if (pPlayView->reacquire_state == EINA_TRUE) {
 				sound_manager_set_focus_reacquisition(pPlayView->stream_info, EINA_FALSE);
 			}
+			if ((reason_for_change == SOUND_STREAM_FOCUS_CHANGED_BY_MEDIA) && (!strcmp(additional_info, "music_playing"))) {
+				vp_play_normal_view_pause_player(pPlayView);
+			}
 		}
 	} else {
 		vp_play_normal_view_play_player(pPlayView);
