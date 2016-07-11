@@ -554,6 +554,20 @@ static void __vp_normal_subtitle_set_caption_window(NormalView *pNormalView)
 
 /* callback functions */
 
+static Eina_Bool __vp_normal_exit_wait_timer_cb(void *pUserData)
+{
+	if (!pUserData) {
+		VideoLogError("pUserData is NULL");
+		return EINA_FALSE;
+	}
+
+	NormalView *pNormalView = (NormalView *)pUserData;
+
+	pNormalView->pExitWaitTimer = NULL;
+
+	return EINA_FALSE;
+}
+
 static void _vp_play_normal_view_set_volume_state(NormalView *pNormalView)
 {
 	if (!pNormalView) {
@@ -682,6 +696,10 @@ static void __vp_normal_popup_time_out_cb(void *pUserData, Evas_Object *pObj, vo
 
 	VP_EVAS_DEL(pNormalView->pPopup);
 	pNormalView->bIsPopupShow = FALSE;
+	pNormalView->pExitWaitTimer = ecore_timer_add(VP_NORMAL_EXIT_WAIT_TIMER_INTERVAL,
+					                              __vp_normal_exit_wait_timer_cb, (void *)pNormalView);
+
+	elm_naviframe_item_pop(pNormalView->pNaviFrame);
 }
 
 static void __vp_normal_prepare_error_popup_time_out_cb(void *pUserData, Evas_Object *pObj, void *pEventInfo)
@@ -3749,21 +3767,6 @@ static Eina_Bool __vp_normal_lockscreen_timer_cb(void *pUserData)
 	return EINA_FALSE;
 }
 
-static Eina_Bool __vp_normal_exit_wait_timer_cb(void *pUserData)
-{
-	if (!pUserData) {
-		VideoLogError("pUserData is NULL");
-		return EINA_FALSE;
-	}
-
-	NormalView *pNormalView = (NormalView *)pUserData;
-
-	pNormalView->pExitWaitTimer = NULL;
-
-	return EINA_FALSE;
-}
-
-
 static void __vp_normal_prepare_cb(void *pUserData)
 {
 	if (!pUserData) {
@@ -6325,7 +6328,7 @@ static bool _vp_play_normal_view_check_during_call(NormalView *pNormalView)
 		                                      POPUP_STYLE_DEFAULT_NO_CANCEL_BTN,
 		                                      NULL,
 		                                      VP_PLAY_STRING_UNABLE_TO_PLAY_VIDEO_DURING_CALL,
-		                                      3.0, __vp_normal_popup_time_out_cb,
+		                                      2.0, __vp_normal_popup_time_out_cb,
 		                                      __vp_normal_popup_key_event_cb,
 		                                      __vp_normal_popup_mouse_event_cb,
 		                                      pNormalView);
