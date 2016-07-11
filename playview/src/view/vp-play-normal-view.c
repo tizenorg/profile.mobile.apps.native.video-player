@@ -12499,6 +12499,11 @@ bool vp_play_normal_view_set_share_panel_state(normal_view_handle pViewHandle)
 	pNormalView->bSharepopup = FALSE;
 	pNormalView->bSharePanelFocusIn = TRUE;
 
+	PlayView *pPlayView = pNormalView->pPlayView;
+	if(pPlayView->bIsPlayBeforeShare) {
+		vp_play_normal_view_resume_or_pause(pPlayView->pNormalView);
+	}
+
 	return TRUE;
 }
 
