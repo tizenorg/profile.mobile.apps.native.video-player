@@ -62,14 +62,12 @@ bool vp_sound_init_session(play_view_handle pViewHandle)
 
         PlayView *pPlayView = (PlayView *)pViewHandle;
 	int nRet = SOUND_MANAGER_ERROR_NONE;
-	if (!pPlayView->stream_info) {
 		nRet = sound_manager_create_stream_information(SOUND_STREAM_TYPE_MEDIA, vp_player_focus_callback, pPlayView, &pPlayView->stream_info);
 
 		if (nRet != SOUND_MANAGER_ERROR_NONE) {
 			VideoLogError("failed to create_stream_information %x", nRet);
 			return FALSE;
 		}
-	}
 
 	nRet = sound_manager_set_current_sound_type(SOUND_TYPE_MEDIA);
 	if (nRet != SOUND_MANAGER_ERROR_NONE) {
