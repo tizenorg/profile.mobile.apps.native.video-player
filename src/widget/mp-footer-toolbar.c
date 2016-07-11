@@ -307,7 +307,7 @@ void mp_ft_ctrl_create_more_btn_of_personal(void *pUserData,
 	if (nVideoListSize > 0 && g_pToolbarWidget->ToolbarCbFunc.AutoPlayCb) {
 			item =
 				elm_ctxpopup_item_append(g_pToolbarWidget->pMoreCtxPopup,
-						"Auto play next", NULL,
+						VIDEOS_CTXPOP_MENU_AUTO_PLAY_NEXT_IDS, NULL,
 							 g_pToolbarWidget->ToolbarCbFunc.
 							 AutoPlayCb,
 							 (void *) FOOTER_TAB_TYPE_PERSONAL);

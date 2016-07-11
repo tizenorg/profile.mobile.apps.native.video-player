@@ -1375,6 +1375,7 @@ void mp_list_view_change_language(void)
 	mp_view_as_ctrl_change_language();
 	mp_option_ctrl_change_language();
 	mp_list_view_update_count_layout();
+	mp_auto_play_ctrl_change_language();
 }
 
 void mp_list_view_change_color(void)

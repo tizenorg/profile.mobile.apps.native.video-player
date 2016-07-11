@@ -136,8 +136,8 @@ static char *__mp_auto_play_ctrl_get_label_of_genlsit_item_cb(const void *pUserD
 	{
 		switch (nIndex)
 		{
-			case MP_LIST_AUTO_PLAY_ON:	return strdup("ON");
-			case MP_LIST_AUTO_PLAY_OFF:		return strdup("OFF");
+			case MP_LIST_AUTO_PLAY_ON:	return strdup(VIDEOS_STRING_COM_ON);
+			case MP_LIST_AUTO_PLAY_OFF:		return strdup(VIDEOS_STRING_COM_OFF);
 		}
 	}
 	return NULL;
@@ -356,7 +356,7 @@ bool mp_auto_play_ctrl_show()
 
 	//elm_object_style_set(pListAutoPlayPopUpHandle, "content_no_vhpad"); //menustyle
 	elm_object_style_set(g_pAutoPlayHandle->pPopUpHandle, "default"); //menustyle
-	elm_object_domain_translatable_part_text_set(g_pAutoPlayHandle->pPopUpHandle, "title,text", PACKAGE, "Auto play next");
+	elm_object_domain_translatable_part_text_set(g_pAutoPlayHandle->pPopUpHandle, "title,text", PACKAGE, VIDEOS_MENU_AUTO_PLAY_NEXT_POP_HEADER);
 	evas_object_size_hint_weight_set(g_pAutoPlayHandle->pPopUpHandle, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
 
 	eext_object_event_callback_add(g_pAutoPlayHandle->pPopUpHandle, EEXT_CALLBACK_BACK, __mp_auto_play_ctrl_cancel_btn_cb, NULL);
@@ -455,7 +455,7 @@ void mp_auto_play_ctrl_change_language(void)
 
 	VideoLogInfo("");
 
-	elm_object_domain_translatable_part_text_set(g_pAutoPlayHandle->pPopUpHandle, "title,text", PACKAGE, VIDEOS_VIEWASPOP_HEADER_VIEW_AS);
+	elm_object_domain_translatable_part_text_set(g_pAutoPlayHandle->pPopUpHandle, "title,text", PACKAGE, VIDEOS_MENU_AUTO_PLAY_NEXT_POP_HEADER);
 	elm_genlist_realized_items_update(g_pAutoPlayHandle->pGenList);
 
 }
