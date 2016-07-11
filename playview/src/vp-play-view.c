@@ -1934,7 +1934,7 @@ bool vp_play_view_realize(play_view_handle pViewHandle)
 	pPlayView->bVisible = TRUE;
 	vp_play_normal_view_key_create(pPlayView, pPlayView->pNormalView);
 	vp_play_normal_view_set_share_panel_state(pPlayView->pNormalView);
-
+	vp_sound_init_session(pViewHandle);
 	sound_stream_focus_state_e state_for_playback;
 	sound_stream_focus_state_e state_for_recording;
 	int ret = -1;
@@ -1967,7 +1967,7 @@ bool vp_play_view_realize(play_view_handle pViewHandle)
 #ifdef OLD_SENSOR_API
 	vp_sensor_realize(pPlayView->pSensorHandle);
 #endif
-	vp_sound_init_session(pViewHandle);
+	//vp_sound_init_session(pViewHandle);
 
 	vp_sound_set_route_change_cb(__vp_play_sound_route_change_cb, (void *)pPlayView);
 	vp_sound_set_volume_change_cb(__vp_play_sound_volume_change_cb, (void *)pPlayView);
