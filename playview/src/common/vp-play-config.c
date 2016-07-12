@@ -21,15 +21,19 @@
 #include <wifi-direct.h>
 #include <device/display.h>
 #include "vp-play-config.h"
+#include "vp-mm-player.h"
 
 /* check temp */
 #include "vp-play-log.h"
 #include "vp-play-type-define.h"
+#include "vp-play-view-priv.h"
+#include "vp-play-normal-view.h"
 
 #define PREF_VP_VIDEO_PREVIEW_URL_VIDEOS "preference/org.tizen.videos/preview_url_videos"
 #define PREF_VP_SORT_TYPE  "preference/org.tizen.videos/sort_type"
 #define PREF_VP_MULTI_PLAY_FLAG  "preference/org.tizen.videos/multi_play"
 
+telephony_handle_list_s tel_list;
 
 bool vp_play_config_set_multi_play_status(bool bMultiPlay)
 {
@@ -185,14 +189,7 @@ bool vp_play_config_get_call_state(bool *bCallOn)
 	VideoLogInfo("start");
 	telephony_call_h *call_list_sim1, *call_list_sim2;
 	unsigned int count_sim1 = 0, count_sim2 = 0;
-	telephony_handle_list_s tel_list;
 	telephony_error_e ret_sim1, ret_sim2;
-
-	int tel_valid = telephony_init(&tel_list);
-	if (tel_valid != 0) {
-		VideoLogError("telephony is not initialized. ERROR Code is %d", tel_valid);
-		return false;
-	}
 
 	ret_sim1 = telephony_call_get_call_list(tel_list.handle[0], &count_sim1, &call_list_sim1);
 	if (ret_sim1 != TELEPHONY_ERROR_NONE) {
@@ -209,8 +206,6 @@ bool vp_play_config_get_call_state(bool *bCallOn)
 		telephony_call_release_call_list(count_sim2, &call_list_sim2);
 	}
 
-	telephony_deinit(&tel_list);
-
 	if (count_sim1 == 0 && count_sim2 == 0) {
 		*bCallOn = FALSE;
 		return false;
@@ -220,6 +215,96 @@ bool vp_play_config_get_call_state(bool *bCallOn)
 	}
 
 	return false;
+}
+
+static void _call_async_event_callback(telephony_h handle, telephony_noti_e noti_id, void *data, void *user_data)
+{
+	VideoLogDebug("call interrupt cb called");
+
+	PlayView *pPlayView = (PlayView *)user_data;
+	int status = 0;
+	telephony_call_state_e voice_status;
+	telephony_call_state_e video_status;
+
+	VideoLogDebug("getting call status");
+
+	status = telephony_call_get_voice_call_state(handle, &voice_status);
+
+	if(status != TELEPHONY_ERROR_NONE) {
+		VideoLogError("getting call status failed");
+		return;
+	}
+
+	status = telephony_call_get_video_call_state(handle, &video_status);
+
+	if(status != TELEPHONY_ERROR_NONE) {
+		VideoLogError("getting video call status failed");
+		return;
+	}
+	VideoLogDebug("voice_status = %d", voice_status);
+	VideoLogDebug("video_status = %d", video_status);
+
+	if(voice_status != TELEPHONY_CALL_STATE_IDLE || video_status != TELEPHONY_CALL_STATE_IDLE) {
+		if (!vp_play_normal_view_pause(pPlayView->pNormalView)) {
+			VideoLogError("vp_play_normal_view_pause fail");
+		}
+	} else if(voice_status == TELEPHONY_CALL_STATE_IDLE && video_status == TELEPHONY_CALL_STATE_IDLE){
+		bool bManualPause = FALSE;
+		vp_play_normal_view_get_manual_pause(pPlayView->pNormalView, &bManualPause);
+		if(!bManualPause)
+			vp_play_normal_view_set_resume_or_pause(pPlayView->pNormalView);
+	}
+	return;
+}
+
+bool vp_play_telephony_initialize(void *pUserData)
+{
+	if(pUserData == NULL){
+		VideoLogError("User Data is NULL hence telephony not initialized");
+		return FALSE;
+	}
+
+	int tel_valid = telephony_init(&tel_list);
+	if (tel_valid != TELEPHONY_ERROR_NONE) {
+		VideoLogError("telephony is not initialized. ERROR Code is %d", tel_valid);
+		return FALSE;
+	}
+
+	/*setting callbacks*/
+	telephony_h *newhandle = tel_list.handle;
+	int api_err = telephony_set_noti_cb(*newhandle, TELEPHONY_NOTI_VOICE_CALL_STATE, (telephony_noti_cb)_call_async_event_callback,  (void *)pUserData);
+	if (api_err != TELEPHONY_ERROR_NONE) {
+		VideoLogError("tel_register_noti_event for voice call failed ( api_err : %d ) !!", api_err);
+	}
+
+	api_err = telephony_set_noti_cb(*newhandle, TELEPHONY_NOTI_VIDEO_CALL_STATE, (telephony_noti_cb)_call_async_event_callback,  (void *)pUserData);
+	if (api_err != TELEPHONY_ERROR_NONE) {
+		VideoLogError("tel_register_noti_event for video call failed ( api_err : %d ) !!", api_err);
+	}
+
+	return TRUE;
+}
+
+bool vp_play_telephony_deinitialize(void)
+{
+	telephony_h *newhandle = tel_list.handle;
+	int nErr = -1;
+
+	nErr = telephony_unset_noti_cb(*newhandle, TELEPHONY_NOTI_VOICE_CALL_STATE);
+	if (nErr != TELEPHONY_ERROR_NONE) {
+		VideoLogError("telephony_unset_noti_cb is fail [0x%x]", nErr);
+	}
+	nErr = telephony_unset_noti_cb(*newhandle, TELEPHONY_NOTI_VIDEO_CALL_STATE);
+	if (nErr != TELEPHONY_ERROR_NONE) {
+		VideoLogError("telephony_unset_noti_cb is fail [0x%x]", nErr);
+	}
+	nErr = telephony_deinit(&tel_list);
+	if (nErr != TELEPHONY_ERROR_NONE) {
+		VideoLogError("telephony_deinit is fail [0x%x]", nErr);
+		return FALSE;
+	}
+
+	return TRUE;
 }
 
 bool vp_play_config_get_battery_charge_state(bool *bChargeState)

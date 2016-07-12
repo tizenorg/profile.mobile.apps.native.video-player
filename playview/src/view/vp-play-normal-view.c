@@ -696,10 +696,6 @@ static void __vp_normal_popup_time_out_cb(void *pUserData, Evas_Object *pObj, vo
 
 	VP_EVAS_DEL(pNormalView->pPopup);
 	pNormalView->bIsPopupShow = FALSE;
-	pNormalView->pExitWaitTimer = ecore_timer_add(VP_NORMAL_EXIT_WAIT_TIMER_INTERVAL,
-					                              __vp_normal_exit_wait_timer_cb, (void *)pNormalView);
-
-	elm_naviframe_item_pop(pNormalView->pNaviFrame);
 }
 
 static void __vp_normal_prepare_error_popup_time_out_cb(void *pUserData, Evas_Object *pObj, void *pEventInfo)
@@ -5273,7 +5269,9 @@ static void __vp_normal_control_btn_clicked_cb(void *pUserData, Evas_Object *pOb
 	} else if (pObj == pNormalView->pResumeBtn) {
 		VideoLogWarning("Resume button");
 		vp_util_lock_cpu();
-		_vp_play_normal_view_check_during_call(pNormalView);
+		if(_vp_play_normal_view_check_during_call(pNormalView)) {
+			return;
+		}
 
 		VP_EVAS_TIMER_DEL(pNormalView->pSpeedTimer);
 		pNormalView->nSpeedValue = 1;
@@ -5305,7 +5303,9 @@ static void __vp_normal_control_btn_clicked_cb(void *pUserData, Evas_Object *pOb
 
 			pNormalView->bManualPause = TRUE;
 		} else {
-			_vp_play_normal_view_check_during_call(pNormalView);
+			if(_vp_play_normal_view_check_during_call(pNormalView)) {
+				return;
+			}
 
 			if (!vp_mm_player_play(pNormalView->pPlayerHandle)) {
 				VideoLogWarning("Resume Fail");
@@ -6312,11 +6312,15 @@ static bool _vp_play_normal_view_check_during_call(NormalView *pNormalView)
 		return FALSE;
 	}
 
+	PlayView *pPlayView = pNormalView->pPlayView;
 	bool bCallOn = FALSE;
-	vp_play_config_get_call_state(&bCallOn);
-	if (bCallOn) {
-		PlayView *pPlayView = pNormalView->pPlayView;
 
+	if(pPlayView->telinit) {
+		vp_play_config_get_call_state(&bCallOn);
+	} else {
+		VideoLogError("telephony was not initialised hence returning call state as default =  FALSE");
+	}
+	if (bCallOn) {
 		VP_EVAS_DEL(pNormalView->pPopup);
 		pNormalView->pPopup = NULL;
 
@@ -6337,7 +6341,7 @@ static bool _vp_play_normal_view_check_during_call(NormalView *pNormalView)
 		pNormalView->bIsPopupShow = TRUE;
 	}
 
-	return TRUE;
+	return bCallOn;
 }
 
 static void _vp_play_normal_view_show_audio_only_popup(NormalView *pNormalView)
@@ -11329,8 +11333,6 @@ static void _vp_play_normal_view_prepare_pipe_cb(void *data, void *pipeData, uns
 		return;
 	}
 
-	_vp_play_normal_view_check_during_call(pNormalView);
-
 	int nDuration = 0;
 	if (!vp_mm_player_get_duration(pNormalView->pPlayerHandle, &nDuration)) {
 		VideoLogError("vp_mm_player_get_duration is fail");
@@ -11396,7 +11398,7 @@ static void _vp_play_normal_view_prepare_pipe_cb(void *data, void *pipeData, uns
 		bXwincheck = FALSE;
 	}
 
-	if (pNormalView->bManualPause || bXwincheck == FALSE) {
+	if (pNormalView->bManualPause || bXwincheck == FALSE || _vp_play_normal_view_check_during_call(pNormalView)) {
 		vp_mm_player_set_visible(pNormalView->pPlayerHandle, TRUE);
 		vp_mm_player_pause(pNormalView->pPlayerHandle);
 	} else {
@@ -11409,6 +11411,7 @@ static void _vp_play_normal_view_prepare_pipe_cb(void *data, void *pipeData, uns
 
 	_vp_play_normal_view_set_play_state(pNormalView);
 	_vp_play_normal_view_on_capture_mode(pNormalView);
+
 }
 
 normal_view_handle vp_play_normal_view_create(PlayView *pPlayView, video_play_launching_type_t nLaunchingType)
@@ -11704,11 +11707,13 @@ bool vp_play_normal_view_resume(normal_view_handle pViewHandle)
 		if (!vp_mm_player_get_state(pNormalView->pPlayerHandle, &nState)) {
 			VideoLogWarning("vp_mm_player_get_state is fail");
 		}
-		if (nState != VP_MM_PLAYER_STATE_PLAYING) {
-			if (vp_mm_player_play(pNormalView->pPlayerHandle)) {
-				_vp_play_normal_view_check_during_call(pNormalView);
+		if(!_vp_play_normal_view_check_during_call(pNormalView)) {
+			if (nState != VP_MM_PLAYER_STATE_PLAYING) {
+				if (!vp_mm_player_play(pNormalView->pPlayerHandle)) {
+					VideoLogError("Unable to play!");
+				}
+				_vp_play_normal_view_set_play_state(pNormalView);
 			}
-			_vp_play_normal_view_set_play_state(pNormalView);
 		}
 	}
 
@@ -11736,7 +11741,8 @@ bool vp_play_normal_view_resume_or_pause(normal_view_handle pViewHandle)
 	case VP_MM_PLAYER_STATE_READY:
 	case VP_MM_PLAYER_STATE_PAUSED:
 		_vp_play_normal_view_all_close_popup(pNormalView);
-		vp_mm_player_play(pNormalView->pPlayerHandle);
+		if(!_vp_play_normal_view_check_during_call(pNormalView))
+			vp_mm_player_play(pNormalView->pPlayerHandle);
 		break;
 	case VP_MM_PLAYER_STATE_PLAYING:
 		vp_mm_player_pause(pNormalView->pPlayerHandle);
@@ -11746,7 +11752,6 @@ bool vp_play_normal_view_resume_or_pause(normal_view_handle pViewHandle)
 	}
 
 	_vp_play_normal_view_set_play_state(pNormalView);
-	_vp_play_normal_view_check_during_call(pNormalView);
 
 	return TRUE;
 }
@@ -12473,11 +12478,13 @@ bool vp_play_normal_view_update(normal_view_handle pViewHandle)
 		if (!vp_mm_player_get_state(pNormalView->pPlayerHandle, &nState)) {
 			VideoLogWarning("vp_mm_player_get_state is fail");
 		}
-		if (nState != VP_MM_PLAYER_STATE_PLAYING) {
-			if (vp_mm_player_play(pNormalView->pPlayerHandle)) {
-				_vp_play_normal_view_check_during_call(pNormalView);
+		if(!_vp_play_normal_view_check_during_call(pNormalView)) {
+			if (nState != VP_MM_PLAYER_STATE_PLAYING) {
+				if (!vp_mm_player_play(pNormalView->pPlayerHandle)) {
+					VideoLogError("Unable to play");
+				}
+				_vp_play_normal_view_set_play_state(pNormalView);
 			}
-			_vp_play_normal_view_set_play_state(pNormalView);
 		}
 	}
 
@@ -12886,8 +12893,9 @@ bool vp_controller_play_normal_view_resume(normal_view_handle pViewHandle)
 		VideoLogError("pViewHandle is NULL");
 		return FALSE;
 	}
-
-	_vp_play_normal_view_check_during_call(pNormalView);
+	if(_vp_play_normal_view_check_during_call(pNormalView)) {
+		return FALSE;
+	}
 
 	if (!vp_mm_player_play(pNormalView->pPlayerHandle)) {
 		VideoLogWarning("Resume Fail");
