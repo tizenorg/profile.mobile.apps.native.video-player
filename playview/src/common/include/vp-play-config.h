@@ -72,6 +72,8 @@ bool vp_play_config_get_preview_url_records(char **szMediaURL);
 bool vp_play_config_set_preview_audio_track(int nAudioTrack);
 bool vp_play_config_get_preview_audio_track(int *nAudioTrack);
 
+bool vp_play_telephony_initialize(void *pUserData);
+bool vp_play_telephony_deinitialize(void);
 bool vp_play_config_get_call_state(bool *bCallOn);
 bool vp_play_config_get_battery_charge_state(bool *bCharge);
 bool vp_play_config_get_wifi_direct_connect_status(bool *bConnect);

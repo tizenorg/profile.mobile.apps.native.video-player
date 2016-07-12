@@ -1830,6 +1830,7 @@ play_view_handle vp_play_view_create(Evas_Object *pParent, Ecore_X_Window nParen
 
 	pPlayView->bAVRCP = vp_avrcp_initialize();
 	pPlayView->bWifi = vp_play_wifi_initialize();
+	pPlayView->telinit = vp_play_telephony_initialize((void *)pPlayView);
 
 	bool bWifiConnect = FALSE;
 	vp_play_config_get_wifi_direct_connect_status(&bWifiConnect);
@@ -2148,6 +2149,9 @@ bool vp_play_view_unrealize(play_view_handle pViewHandle)
 	if (pPlayView->bWifi) {
 		vp_play_wifi_deinitialize();
 		pPlayView->bWifi = FALSE;
+	}
+	if(pPlayView->telinit) {
+		vp_play_telephony_deinitialize();
 	}
 
 	if (pPlayView->nPlayMode == VIDEO_PLAY_MODE_NORMAL_VIEW) {
