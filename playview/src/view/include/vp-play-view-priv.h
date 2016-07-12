@@ -48,6 +48,7 @@ typedef struct _PlayView {
 	bool				bWifi;
 	bool				bIsPlayBeforeShare;
 	bool				bIsSharePopup;
+	bool				telinit;
 
 	bool				bStoreDownload;
 	bool				bStopAfterRepeat;
