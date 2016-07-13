@@ -2654,7 +2654,7 @@ unsigned long long mp_util_get_disk_available_space(const char
 		}
 	}
 
-	return (info.f_bsize) * info.f_bavail;
+	return (info.f_bsize) * ((unsigned long long)info.f_bavail);
 }
 
 void mp_util_virtual_keypad_disabled_set(Eina_Bool bDisabled)

@@ -9313,6 +9313,7 @@ static void _vp_play_normal_view_on_detail_popup(NormalView *pNormalView)
 		VP_FREE(pDetailInfo->szLatitude);
 		VP_FREE(pDetailInfo->szLongitude);
 		VP_FREE(pDetailInfo->szLocation);
+		VP_FREE(pDetailInfo->szLastModified);
 		VP_FREE(pDetailInfo);
 		return;
 	}
@@ -9333,6 +9334,7 @@ static void _vp_play_normal_view_on_detail_popup(NormalView *pNormalView)
 	VP_FREE(pDetailInfo->szLatitude);
 	VP_FREE(pDetailInfo->szLongitude);
 	VP_FREE(pDetailInfo->szLocation);
+	VP_FREE(pDetailInfo->szLastModified);
 	VP_FREE(pDetailInfo);
 
 	VP_EVAS_TIMER_DEL(pNormalView->pHideTimer);

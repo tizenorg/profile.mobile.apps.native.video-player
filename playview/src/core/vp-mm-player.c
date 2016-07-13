@@ -1238,7 +1238,7 @@ mm_player_handle vp_mm_player_create()
 		}
 
 		sound_manager_get_focus_reacquisition(pMMPlayer->stream_info, &pMMPlayer->reacquire_state);
-		if (&pMMPlayer->reacquire_state == EINA_FALSE) {
+		if (pMMPlayer->reacquire_state == EINA_FALSE) {
 			sound_manager_set_focus_reacquisition(pMMPlayer->stream_info, EINA_TRUE);
 		}
 	}

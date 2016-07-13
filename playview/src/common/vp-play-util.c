@@ -1134,7 +1134,7 @@ unsigned long long vp_play_util_get_disk_available_space(const char
 		}
 	}
 
-	return (info.f_bsize) * info.f_bavail;
+	return (info.f_bsize) * ((unsigned long long)info.f_bavail);
 }
 
 unsigned long long vp_play_util_get_file_size(const char *szFilePath)
