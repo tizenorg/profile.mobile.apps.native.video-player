@@ -397,11 +397,6 @@ static Eina_Bool __appControl_idler_cb(void *data)
 		return ECORE_CALLBACK_DONE;
 	}
 
-	if (!vp_play_view_realize(pAppData->pPlayView)) {
-		VideoLogError("vp_play_view_realize is fail");
-		return ECORE_CALLBACK_DONE;
-	}
-
 	VideoLogPerfE("============================== RESET =============================");
 
 	if (pAppData->pAppSvcIdler) {

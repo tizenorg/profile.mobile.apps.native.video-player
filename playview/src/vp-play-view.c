@@ -1972,7 +1972,7 @@ bool vp_play_view_realize(play_view_handle pViewHandle)
 	vp_sound_set_route_change_cb(__vp_play_sound_route_change_cb, (void *)pPlayView);
 	vp_sound_set_volume_change_cb(__vp_play_sound_volume_change_cb, (void *)pPlayView);
 	if (!pPlayView->connection) {
-		int ret = connection_create(pPlayView->connection);
+		int ret = connection_create(&pPlayView->connection);
 		if (ret != CONNECTION_ERROR_NONE || !pPlayView->connection) {
 			VideoLogWarning("Fail to create connection handle [%d]\n", ret);
 		}
