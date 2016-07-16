@@ -739,7 +739,7 @@ styles {
             scale: 1; \
             description { state: "default" 0.0; \
                align: 0.5 0.5; \
-               color: 0 0 0 0; \
+               color: 248 248 248 255; \
             } \
          } \
          GENLIST_PART_PERSPECTIVE_POINT
