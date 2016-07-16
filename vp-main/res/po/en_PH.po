@@ -487,3 +487,5 @@ msgstr "Personal storage"
 msgid "IDS_ACCS_BODY_CAPTIONS_WILL_LOOK_LIKE_THIS"
 msgstr "Captions will look like this"
 
+msgid "IDS_COM_POP_FILE_NOT_EXIST"
+msgstr "This file does not exist."

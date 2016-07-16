@@ -487,3 +487,5 @@ msgstr "퍼스널 저장공간"
 msgid "IDS_ACCS_BODY_CAPTIONS_WILL_LOOK_LIKE_THIS"
 msgstr "자막은 지금 보이는 것처럼 표시됩니다."
 
+msgid "IDS_COM_POP_FILE_NOT_EXIST"
+msgstr "파일이 존재하지 않습니다."

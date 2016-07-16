@@ -487,3 +487,5 @@ msgstr "パーソナルストレージ"
 msgid "IDS_ACCS_BODY_CAPTIONS_WILL_LOOK_LIKE_THIS"
 msgstr "字幕はこのように表示されます。"
 
+msgid "IDS_COM_POP_FILE_NOT_EXIST"
+msgstr "このファイルは存在しません。"

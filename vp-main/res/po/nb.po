@@ -487,3 +487,5 @@ msgstr "Personlig lagring"
 msgid "IDS_ACCS_BODY_CAPTIONS_WILL_LOOK_LIKE_THIS"
 msgstr "Teksten vil se slik ut."
 
+msgid "IDS_COM_POP_FILE_NOT_EXIST"
+msgstr "Filen eksisterer ikke."

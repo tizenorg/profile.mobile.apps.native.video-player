@@ -487,3 +487,5 @@ msgstr "Osebna shramba"
 msgid "IDS_ACCS_BODY_CAPTIONS_WILL_LOOK_LIKE_THIS"
 msgstr "Napisi bodo videti tako"
 
+msgid "IDS_COM_POP_FILE_NOT_EXIST"
+msgstr "Ta datoteka ne obstaja."

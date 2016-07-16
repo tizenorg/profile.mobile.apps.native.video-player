@@ -487,3 +487,5 @@ msgstr "Osobna memorija"
 msgid "IDS_ACCS_BODY_CAPTIONS_WILL_LOOK_LIKE_THIS"
 msgstr "Naslov će ovako izgledati."
 
+msgid "IDS_COM_POP_FILE_NOT_EXIST"
+msgstr "Datoteka ne postoji."

@@ -487,3 +487,5 @@ msgstr "Personiskā krātuve"
 msgid "IDS_ACCS_BODY_CAPTIONS_WILL_LOOK_LIKE_THIS"
 msgstr "Titri izskatīsies šādi"
 
+msgid "IDS_COM_POP_FILE_NOT_EXIST"
+msgstr "Šāda faila nav."

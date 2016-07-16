@@ -487,3 +487,5 @@ msgstr "Almacenamiento personal"
 msgid "IDS_ACCS_BODY_CAPTIONS_WILL_LOOK_LIKE_THIS"
 msgstr "Los subtítulos se verán así"
 
+msgid "IDS_COM_POP_FILE_NOT_EXIST"
+msgstr "El archivo no existe"

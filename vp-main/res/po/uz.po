@@ -487,3 +487,5 @@ msgstr "Shaxsiy ombor"
 msgid "IDS_ACCS_BODY_CAPTIONS_WILL_LOOK_LIKE_THIS"
 msgstr "Sarlavhalar quyidagi ko‘rinishda bo‘ladi"
 
+msgid "IDS_COM_POP_FILE_NOT_EXIST"
+msgstr "Ushbu fayl mavjud emas."

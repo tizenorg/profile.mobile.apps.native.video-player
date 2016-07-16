@@ -487,3 +487,5 @@ msgstr "Особисте місце збереження"
 msgid "IDS_ACCS_BODY_CAPTIONS_WILL_LOOK_LIKE_THIS"
 msgstr "Субтитри матимуть такий вигляд"
 
+msgid "IDS_COM_POP_FILE_NOT_EXIST"
+msgstr "Файл не існує."

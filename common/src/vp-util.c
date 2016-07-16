@@ -73,12 +73,7 @@ typedef struct _transform {
 
 static char *__vp_util_get_string(const char *ID)
 {
-	char *str;
-	if (strstr(ID, "IDS_COM") || strstr(ID, "IDS_IDLE")) {
-		str = dgettext("sys_string", ID);
-	} else {
-		str = dgettext("video-player", ID);
-	}
+	char *str = dgettext("video-player", ID);
 	return str;
 }
 

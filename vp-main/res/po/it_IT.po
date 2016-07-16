@@ -487,3 +487,5 @@ msgstr "Memoria personale"
 msgid "IDS_ACCS_BODY_CAPTIONS_WILL_LOOK_LIKE_THIS"
 msgstr "Aspetto dei sottotitoli"
 
+msgid "IDS_COM_POP_FILE_NOT_EXIST"
+msgstr "File inesistente."

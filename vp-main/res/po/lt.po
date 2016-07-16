@@ -487,3 +487,5 @@ msgstr "Asmeninė saugykla"
 msgid "IDS_ACCS_BODY_CAPTIONS_WILL_LOOK_LIKE_THIS"
 msgstr "Antraštės atrodys taip"
 
+msgid "IDS_COM_POP_FILE_NOT_EXIST"
+msgstr "Tokio failo nėra."

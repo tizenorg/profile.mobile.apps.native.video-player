@@ -487,3 +487,5 @@ msgstr "Persoonlijke opslag"
 msgid "IDS_ACCS_BODY_CAPTIONS_WILL_LOOK_LIKE_THIS"
 msgstr "Ondertiteling ziet er zo uit."
 
+msgid "IDS_COM_POP_FILE_NOT_EXIST"
+msgstr "Dit bestand bestaat niet."

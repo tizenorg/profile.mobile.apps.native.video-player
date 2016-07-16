@@ -487,3 +487,5 @@ msgstr "व्यक्तिगत स्टोरेज"
 msgid "IDS_ACCS_BODY_CAPTIONS_WILL_LOOK_LIKE_THIS"
 msgstr "शीर्षक इस तरह दिखाई देंगे।"
 
+msgid "IDS_COM_POP_FILE_NOT_EXIST"
+msgstr "यह फाइल मौजूद नहीं है।"
