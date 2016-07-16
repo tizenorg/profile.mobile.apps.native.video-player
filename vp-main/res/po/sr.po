@@ -487,3 +487,5 @@ msgstr "Lična memorija"
 msgid "IDS_ACCS_BODY_CAPTIONS_WILL_LOOK_LIKE_THIS"
 msgstr "Titlovi će izgledati ovako"
 
+msgid "IDS_COM_POP_FILE_NOT_EXIST"
+msgstr "Fajl ne postoji."

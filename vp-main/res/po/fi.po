@@ -487,3 +487,5 @@ msgstr "Henkilökohtainen tallennustila"
 msgid "IDS_ACCS_BODY_CAPTIONS_WILL_LOOK_LIKE_THIS"
 msgstr "Kuvatekstit näyttävät tältä."
 
+msgid "IDS_COM_POP_FILE_NOT_EXIST"
+msgstr "Tiedostoa ei ole."

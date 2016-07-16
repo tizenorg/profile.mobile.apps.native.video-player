@@ -487,3 +487,5 @@ msgstr "个人存储空间"
 msgid "IDS_ACCS_BODY_CAPTIONS_WILL_LOOK_LIKE_THIS"
 msgstr "字幕效果"
 
+msgid "IDS_COM_POP_FILE_NOT_EXIST"
+msgstr "此文件不存在"

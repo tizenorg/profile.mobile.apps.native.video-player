@@ -487,3 +487,5 @@ msgstr "個人儲存空間"
 msgid "IDS_ACCS_BODY_CAPTIONS_WILL_LOOK_LIKE_THIS"
 msgstr "字幕將依此顯示"
 
+msgid "IDS_COM_POP_FILE_NOT_EXIST"
+msgstr "此檔案不存在。"

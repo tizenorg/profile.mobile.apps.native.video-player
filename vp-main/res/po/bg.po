@@ -487,3 +487,5 @@ msgstr "Лично място за съхранение"
 msgid "IDS_ACCS_BODY_CAPTIONS_WILL_LOOK_LIKE_THIS"
 msgstr "Надписите ще изглеждат така"
 
+msgid "IDS_COM_POP_FILE_NOT_EXIST"
+msgstr "Файлът не съществува."

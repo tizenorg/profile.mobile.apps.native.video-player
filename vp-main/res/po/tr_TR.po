@@ -487,3 +487,5 @@ msgstr "Kişisel bellek"
 msgid "IDS_ACCS_BODY_CAPTIONS_WILL_LOOK_LIKE_THIS"
 msgstr "Altyazılar bu şekilde görünecek."
 
+msgid "IDS_COM_POP_FILE_NOT_EXIST"
+msgstr "Dosya yok."

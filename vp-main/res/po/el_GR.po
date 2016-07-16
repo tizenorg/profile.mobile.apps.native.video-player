@@ -487,3 +487,5 @@ msgstr "Προσωπικός χώρος αποθήκευσης"
 msgid "IDS_ACCS_BODY_CAPTIONS_WILL_LOOK_LIKE_THIS"
 msgstr "Οι λεζάντες θα έχουν την εξής μορφή"
 
+msgid "IDS_COM_POP_FILE_NOT_EXIST"
+msgstr "Δεν υπάρχει αρχείο."
