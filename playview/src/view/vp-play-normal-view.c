@@ -6920,6 +6920,14 @@ static bool _vp_play_normal_view_play_start(NormalView *pNormalView, bool bCheck
 		}
 		VP_FREE(szMediaID);
 	}
+	char *szSubtitle = NULL;
+	vp_mm_player_get_subtitle_url(pNormalView->pPlayerHandle, &szSubtitle);
+
+	if (szSubtitle) {
+		VideoLogWarning("subtitle value : %s", szSubtitle);
+		VP_STRDUP(pNormalView->szSubtitleURL, szSubtitle);
+		VP_FREE(szSubtitle);
+	}
 	if (pNormalView->pPlayerHandle) {
 		vp_mm_player_destroy(pNormalView->pPlayerHandle);
 		pNormalView->pPlayerHandle = NULL;
@@ -7002,6 +7010,18 @@ static bool _vp_play_normal_view_play_start(NormalView *pNormalView, bool bCheck
 
 	if (pNormalView->pBookmarkHandle) {
 		vp_play_bookmark_set_media_url(pNormalView->pBookmarkHandle, pNormalView->szMediaURL);
+	}
+
+	if (pNormalView->szSubtitleURL) {
+		pNormalView->bIsExistSubtitle = vp_mm_player_set_subtitle_url(pNormalView->pPlayerHandle, pNormalView->szSubtitleURL);
+		bool bOn = FALSE;
+		vp_play_preference_get_subtitle_show_key(&bOn);
+		if (bOn) {
+			elm_object_signal_emit(pNormalView->pMainLayout, VP_NORMAL_SIGNAL_MAIN_SUBTITLE_PORTRAIT, "*");
+			pNormalView->bIsExistSubtitle = TRUE;
+			vp_mm_player_set_deactivate_subtitle(pNormalView->pPlayerHandle, FALSE);
+		}
+
 	}
 
 #ifdef _NATIVE_BUFFER_SYNC

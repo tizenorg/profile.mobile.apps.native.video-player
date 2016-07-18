@@ -1830,7 +1830,6 @@ play_view_handle vp_play_view_create(Evas_Object *pParent, Ecore_X_Window nParen
 
 	pPlayView->bAVRCP = vp_avrcp_initialize();
 	pPlayView->bWifi = vp_play_wifi_initialize();
-	pPlayView->telinit = vp_play_telephony_initialize((void *)pPlayView);
 
 	bool bWifiConnect = FALSE;
 	vp_play_config_get_wifi_direct_connect_status(&bWifiConnect);
@@ -1992,6 +1991,7 @@ bool vp_play_view_realize(play_view_handle pViewHandle)
 		vp_play_config_set_wifi_state_key_changed_cb(__vp_play_view_wifi_key_changed_cb, (void *)pPlayView);
 	}
 
+	pPlayView->telinit = vp_play_telephony_initialize((void *)pPlayView);
 //	int nColorTone = 0;
 //	bool bOutdoor = FALSE;
 
