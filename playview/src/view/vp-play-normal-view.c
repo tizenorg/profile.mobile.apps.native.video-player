@@ -4849,6 +4849,13 @@ static void __vp_normal_more_btn_clicked_cb(void *pUserData, Evas_Object *pObj, 
 		VideoLogInfo("hidden file not suport menu.");
 		return;
 	}
+
+	int val = 0;
+	system_settings_get_value_int(SYSTEM_SETTINGS_KEY_LOCK_STATE, &val);
+	if (val == SYSTEM_SETTINGS_LOCK_STATE_LOCK) {
+		return;
+	}
+
 	pNormalView->pCtxPopup = elm_ctxpopup_add(pPlayView->pWin);
 
 	if (!pNormalView->pCtxPopup) {
