@@ -2004,6 +2004,8 @@ bool mp_util_check_video_file(const char *szFullPath)
 		bVideo = TRUE;
 	} else if (!strcasecmp("DIVX", szExt)) {
 		bVideo = TRUE;
+	} else if (!strcasecmp("CRDOWNLOAD", szExt)) {
+		bVideo = TRUE;
 	} else {
 		bVideo = FALSE;
 	}
