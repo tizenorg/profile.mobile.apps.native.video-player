@@ -1932,6 +1932,8 @@ bool vp_play_view_realize(play_view_handle pViewHandle)
 
 	pPlayView->bActivate = TRUE;
 	pPlayView->bVisible = TRUE;
+	pPlayView->telinit = vp_play_telephony_initialize((void *)pPlayView);
+
 	vp_play_normal_view_key_create(pPlayView, pPlayView->pNormalView);
 	vp_play_normal_view_set_share_panel_state(pPlayView->pNormalView);
 	vp_sound_init_session(pViewHandle);
@@ -1991,7 +1993,6 @@ bool vp_play_view_realize(play_view_handle pViewHandle)
 		vp_play_config_set_wifi_state_key_changed_cb(__vp_play_view_wifi_key_changed_cb, (void *)pPlayView);
 	}
 
-	pPlayView->telinit = vp_play_telephony_initialize((void *)pPlayView);
 //	int nColorTone = 0;
 //	bool bOutdoor = FALSE;
 

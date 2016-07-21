@@ -3882,6 +3882,7 @@ static void __vp_play_normal_view_seek_pipe_cb(void *pUserData, void *pBuf, int 
 
 static void __vp_normal_seek_completed_cb(void *pUserData)
 {
+	VideoLogDebug("#################START####################");
 	if (!pUserData) {
 		VideoLogError("pUserData is NULL");
 		return;
@@ -3901,6 +3902,7 @@ static void __vp_normal_seek_completed_cb(void *pUserData)
 	}
 
 	pNormalView->bSeekComplete = TRUE;
+	vp_mm_player_set_visible(pNormalView->pPlayerHandle, TRUE);
 
 	if (vp_play_util_check_streaming(pNormalView->szMediaURL)) {
 		if (pNormalView->bBufferingComplete == FALSE) {
@@ -3944,7 +3946,7 @@ static void __vp_normal_seek_completed_cb(void *pUserData)
 			return;
 		}
 
-		if (pNormalView->bManualPause || pNormalView->bSharepopup) {
+		if (pNormalView->bManualPause || pNormalView->bSharepopup || _vp_play_normal_view_check_during_call(pNormalView)) {
 			vp_mm_player_pause(pNormalView->pPlayerHandle);
 		} else {
 			vp_mm_player_play(pNormalView->pPlayerHandle);
@@ -3991,11 +3993,12 @@ static void __vp_normal_seek_completed_cb(void *pUserData)
 
 	if (pNormalView->bManualPause == FALSE &&
 	        pNormalView->bProgressDown == FALSE &&
-	        !pNormalView->pSpeedTimer) {
+	        !pNormalView->pSpeedTimer &&  !_vp_play_normal_view_check_during_call(pNormalView)) {
 		vp_mm_player_play(pNormalView->pPlayerHandle);
 		_vp_play_normal_view_set_play_state(pNormalView);
 		_vp_play_normal_view_on_capture_mode(pNormalView);
 	}
+	VideoLogDebug("#################END####################");
 
 }
 static void __vp_normal_interrupted_cb(vp_mm_player_interrupt_t nCode, void *pUserData)
@@ -11404,7 +11407,7 @@ static void _vp_play_normal_view_prepare_pipe_cb(void *data, void *pipeData, uns
 	}
 
 	pNormalView->bIsRealize = TRUE;
-	pNormalView->bSeekComplete = TRUE;
+	//pNormalView->bSeekComplete = TRUE;
 #if 1
 	if (vp_play_util_check_streaming(pNormalView->szMediaURL)) {
 		if (pNormalView->bBufferingComplete == FALSE) {
@@ -11425,11 +11428,13 @@ static void _vp_play_normal_view_prepare_pipe_cb(void *data, void *pipeData, uns
 		bXwincheck = FALSE;
 	}
 
-	if (pNormalView->bManualPause || bXwincheck == FALSE || _vp_play_normal_view_check_during_call(pNormalView)) {
-		vp_mm_player_set_visible(pNormalView->pPlayerHandle, TRUE);
-		vp_mm_player_pause(pNormalView->pPlayerHandle);
-	} else {
-		vp_mm_player_play(pNormalView->pPlayerHandle);
+	if (pNormalView->nStartPosition <= 0) {
+		if (pNormalView->bManualPause || bXwincheck == FALSE || _vp_play_normal_view_check_during_call(pNormalView)) {
+			vp_mm_player_set_visible(pNormalView->pPlayerHandle, TRUE);
+			vp_mm_player_pause(pNormalView->pPlayerHandle);
+		} else {
+			vp_mm_player_play(pNormalView->pPlayerHandle);
+		}
 	}
 
 	if (!vp_mm_player_set_subtitle_position(pNormalView->pPlayerHandle, pNormalView->fSubtitleSyncValue * 1000)) {
